@@ -29,7 +29,7 @@ body {
 .banner__bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/banner-pc.jpg");
+  background-image: url("/images/banner-pc.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -136,7 +136,7 @@ body {
   height: 140px;
   border-radius: 8px;
   overflow: hidden;
-  background-image: url("images/before-pc.jpg");
+  background-image: url("/images/before-pc.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.36), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
@@ -189,7 +189,7 @@ body {
 .is-mobile .banner__top-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/before-mo.jpg");
+  background-image: url("/images/before-mo.jpg");
   background-size: cover;
   background-position: center top;
 }
@@ -292,7 +292,7 @@ body {
 .is-mobile .banner__bottom-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/banner-mo.jpg");
+  background-image: url("/images/banner-mo.jpg");
   background-size: cover;
   background-position: center bottom;
 }
