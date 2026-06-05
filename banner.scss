@@ -1,0 +1,393 @@
+// ================================
+// Variables
+// ================================
+
+// -- Colors
+$color-white:        #fff;
+$color-dark-overlay: rgba(45, 38, 33, 0.88);
+$color-brand-tag:    #e8371e;
+$color-label-bg:     rgba(20, 20, 20, 0.75);
+
+// -- Fonts
+$font-primary: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+$font-en:      "Libre Baskerville", serif;
+
+// -- Desktop dimensions
+$banner-desktop-width:  1380px;
+$banner-desktop-height: 469px;
+$banner-desktop-radius: 8px;
+
+// -- Mobile dimensions (Figma 기준 350px → 실제 375px 풀블리드)
+$banner-mobile-radius: 8px;
+
+// ================================
+// Mixins
+// ================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin label-pill($font-size: 14px, $padding: 8px 18px 8px 16px) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-label-bg;
+  color: #F8F9F9;
+  font-size: $font-size;
+  font-weight: 500;
+  padding: $padding;
+  border-radius: 1000px 0 0 1000px;
+  line-height: 1.4;
+}
+
+// ================================
+// Reset
+// ================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ================================
+// Page Layout
+// ================================
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+// ================================
+// Desktop: 1380px 고정, 이하 가로 스크롤
+// ================================
+.is-desktop {
+  html,
+  body {
+    min-width: $banner-desktop-width;
+  }
+
+  .banner {
+    width: $banner-desktop-width;
+    height: $banner-desktop-height;
+    border-radius: $banner-desktop-radius;
+    flex-shrink: 0;
+  }
+}
+
+// ================================
+// Banner – 공통
+// ================================
+.banner {
+  position: relative;
+  overflow: hidden;
+  font-family: $font-primary;
+
+  // ---- 배경 이미지 ----
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/banner-pc.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// ================================
+// Banner – Desktop
+// ================================
+.is-desktop .banner {
+  width: $banner-desktop-width;
+  height: $banner-desktop-height;
+  border-radius: $banner-desktop-radius;
+  flex-shrink: 0;
+
+  // 좌측 어두운 그라디언트 오버레이
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 327px;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(0deg, rgba(99, 80, 65, 0.00) 0%, #635041 100%);
+  }
+
+  // 텍스트 콘텐츠
+  &__content {
+    position: absolute;
+    width: 247px;
+    left: 40px;
+    top: 48px;
+    color: $color-white;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 4px;
+
+    &-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: $color-white;
+    }
+
+    &-tag {
+      display: block;
+      width: 34px;
+      height: 21px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    font-family: $font-en;
+  }
+
+  &__quote {
+    margin-bottom: 24px;
+    position: relative;
+    &-mark {
+      position: absolute;
+      top: 0;
+      right: 28px;
+      display: block;
+      img {
+        display: block;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.4;
+    color: $color-white;
+    font-weight: 300;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 13px;
+    border: 1px solid $color-white;
+    border-radius: 4px;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.2s;
+    &:hover {
+      background: rgba($color-white, 0.15);
+    }
+  }
+
+  // Before 썸네일 (좌하단)
+  &__before-wrap {
+    position: absolute;
+    bottom: 32px;
+    left: 40px;
+    
+    .banner__label {
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      z-index: 2;
+      border-radius: 0 1000px 1000px 0;
+    }
+
+    &-img {
+      width: 247px;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-image: url('images/before-pc.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.36), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__label {
+    @include label-pill;
+  }
+
+  // After 라벨 (우상단)
+  &__after {
+    @include label-pill;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+  }
+
+  // 모바일 전용 요소 숨김
+  &__top,
+  &__bottom {
+    display: none;
+  }
+}
+
+// ================================
+// Banner – Mobile
+// ================================
+.is-mobile .banner {
+  width: 100%;
+  border-radius: $banner-mobile-radius;
+
+  // 데스크톱 전용 요소 숨김
+  &__bg,
+  &__overlay,
+  &__content,
+  &__before-wrap,
+  &__after {
+    display: none;
+  }
+
+  // 세로 2단 레이아웃
+  &__top {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 350 / 175; // Figma 모바일 상단 비율
+    border-radius: $banner-mobile-radius $banner-mobile-radius 0 0;
+    // 배경 이미지 (오버레이용 흐릿한 bg)
+    &-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/before-mo.jpg');
+      background-size: cover;
+      background-position: center top;
+
+      &::after {
+        width: 240px;
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(270deg, rgba(99, 80, 65, 0.00) 0%, #635041 60%);
+        opacity: 0.8;
+      }
+    }
+
+    // 텍스트 콘텐츠
+    &-content {
+      position: relative;
+      z-index: 1;
+      color: $color-white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 9.14vw 0 0 5.71vw;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+    &-name {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: $color-white;
+      line-height: 1.66;
+    }
+    &-tag {
+      display: block;
+      width: 34px;
+      height: 21px;
+      flex-shrink: 0;
+    }
+  }
+
+  // 모바일에서는 타이틀 숨김 (Figma 디자인 기준)
+  &__title {
+    display: none;
+  }
+
+  &__quote {
+    margin-bottom: 27px;
+
+    &-mark {
+      display: none; // 모바일 디자인에 없음
+    }
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 1.3;
+    color: $color-white;
+    font-weight: 400;
+  }
+
+  &__btn {
+    width: fit-content;
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    color: $color-white;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.2s;
+
+    &:hover {
+      background: rgba($color-white, 0.15);
+    }
+  }
+
+  // Before 라벨 (상단 우상단)
+  &__mo-before {
+    @include label-pill(12px, 6px 13px);
+    position: absolute;
+    top: auto;
+    bottom: 15px;
+    right: 0px;
+    z-index: 2;
+    line-height: 1.6;
+  }
+
+  // 하단 After 이미지 영역
+  &__bottom {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 350 / 175; // Figma 모바일 하단 비율
+    border-radius: 0 0 $banner-mobile-radius $banner-mobile-radius;
+    overflow: hidden;
+    &-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/banner-mo.jpg');
+      background-size: cover;
+      background-position: center bottom;
+    }
+
+    // After 라벨 (좌하단)
+    &-label {
+      @include label-pill(12px, 6px 14px);
+      position: absolute;
+      line-height: 1.6;
+      bottom: 15px;
+      left: 0px;
+      z-index: 2;
+      border-radius: 0 1000px 1000px 0;
+    }
+  }
+}
