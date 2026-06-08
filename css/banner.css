@@ -29,7 +29,6 @@ body {
 .banner__bg {
   position: absolute;
   inset: 0;
-  background-image: url("https://www.lge.co.kr/home_style_pages/community/images/no20/banner-pc.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -48,7 +47,7 @@ body {
   height: 100%;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: linear-gradient(0deg, rgba(99, 80, 65, 0) 0%, #635041 100%);
+  background: linear-gradient(0deg, transparent 0%, var(--banner-overlay-color) var(--banner-overlay-stop, 100%));
 }
 .is-desktop .banner__content {
   position: absolute;
@@ -136,7 +135,6 @@ body {
   height: 140px;
   border-radius: 8px;
   overflow: hidden;
-  background-image: url("/images/no20/before-pc.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.36), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
@@ -189,7 +187,6 @@ body {
 .is-mobile .banner__top-bg {
   position: absolute;
   inset: 0;
-  background-image: url("/images/no20/before-mo.jpg");
   background-size: cover;
   background-position: center top;
 }
@@ -198,7 +195,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, rgba(99, 80, 65, 0) 0%, #635041 60%);
+  background: linear-gradient(270deg, transparent 0%, var(--banner-overlay-color, #635041) 60%);
   opacity: 0.8;
 }
 .is-mobile .banner__top-content {
@@ -292,7 +289,6 @@ body {
 .is-mobile .banner__bottom-bg {
   position: absolute;
   inset: 0;
-  background-image: url("/images/no20/banner-mo.jpg");
   background-size: cover;
   background-position: center bottom;
 }
