@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1.3px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.kny_myq_container {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 15rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.2rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.kny_myq_container ::-webkit-scrollbar {
+  display: none;
+}
+.kny_myq_container ::placeholder {
+  color: #d6d6d6;
+}
+.kny_myq_container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.kny_myq_container h1,
+.kny_myq_container h2,
+.kny_myq_container h3,
+.kny_myq_container h4,
+.kny_myq_container h5,
+.kny_myq_container h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.kny_myq_container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.kny_myq_container ol,
+.kny_myq_container ul {
+  list-style: none;
+}
+.kny_myq_container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.kny_myq_container button,
+.kny_myq_container input,
+.kny_myq_container select,
+.kny_myq_container textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.kny_myq_container input[type=checkbox], .kny_myq_container input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.kny_myq_container label {
+  cursor: pointer;
+}
+.kny_myq_container img,
+.kny_myq_container video,
+.kny_myq_container svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.kny_myq_container option {
+  color: inherit;
+}
+.kny_myq_container section {
+  position: relative;
+}
+.kny_myq_container picture {
+  display: block;
+  width: 100%;
+}

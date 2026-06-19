@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.lexon_jeffkoons_container {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
+  max-width: unset;
+}
+
+.lexon_jeffkoons_container abbr, .lexon_jeffkoons_container acronym, .lexon_jeffkoons_container address, .lexon_jeffkoons_container applet, .lexon_jeffkoons_container article, .lexon_jeffkoons_container aside, .lexon_jeffkoons_container audio, .lexon_jeffkoons_container big, .lexon_jeffkoons_container blockquote, .lexon_jeffkoons_container body, .lexon_jeffkoons_container canvas, .lexon_jeffkoons_container caption, .lexon_jeffkoons_container center, .lexon_jeffkoons_container cite, .lexon_jeffkoons_container code, .lexon_jeffkoons_container dd, .lexon_jeffkoons_container details, .lexon_jeffkoons_container dfn, .lexon_jeffkoons_container div, .lexon_jeffkoons_container dl, .lexon_jeffkoons_container dt, .lexon_jeffkoons_container embed, .lexon_jeffkoons_container fieldset, .lexon_jeffkoons_container figcaption, .lexon_jeffkoons_container figure, .lexon_jeffkoons_container footer, .lexon_jeffkoons_container form, .lexon_jeffkoons_container h1, .lexon_jeffkoons_container h2, .lexon_jeffkoons_container h3, .lexon_jeffkoons_container h4, .lexon_jeffkoons_container h5, .lexon_jeffkoons_container h6, .lexon_jeffkoons_container header, .lexon_jeffkoons_container hgroup, .lexon_jeffkoons_container html, .lexon_jeffkoons_container iframe, .lexon_jeffkoons_container img, .lexon_jeffkoons_container ins, .lexon_jeffkoons_container kbd, .lexon_jeffkoons_container label, .lexon_jeffkoons_container legend, .lexon_jeffkoons_container li, .lexon_jeffkoons_container mark, .lexon_jeffkoons_container menu, .lexon_jeffkoons_container nav, .lexon_jeffkoons_container object, .lexon_jeffkoons_container ol, .lexon_jeffkoons_container output, .lexon_jeffkoons_container p, .lexon_jeffkoons_container pre, .lexon_jeffkoons_container q, .lexon_jeffkoons_container ruby, .lexon_jeffkoons_container samp, .lexon_jeffkoons_container section, .lexon_jeffkoons_container small, .lexon_jeffkoons_container strike, .lexon_jeffkoons_container summary, .lexon_jeffkoons_container table, .lexon_jeffkoons_container tbody, .lexon_jeffkoons_container td, .lexon_jeffkoons_container textarea, .lexon_jeffkoons_container tfoot, .lexon_jeffkoons_container th, .lexon_jeffkoons_container thead, .lexon_jeffkoons_container time, .lexon_jeffkoons_container tr, .lexon_jeffkoons_container tt, .lexon_jeffkoons_container ul, .lexon_jeffkoons_container var, .lexon_jeffkoons_container video {
+  color: inherit;
+  line-height: 1.4;
+  font-size: inherit;
+}
+.lexon_jeffkoons_container {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.lexon_jeffkoons_container .pd_both {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+.lexon_jeffkoons_container .inner {
+  width: 100%;
+  position: relative;
+}
+.lexon_jeffkoons_container .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.lexon_jeffkoons_container .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lexon_jeffkoons_container .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lexon_jeffkoons_container .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.lexon_jeffkoons_container .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lexon_jeffkoons_container .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.lexon_jeffkoons_container .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (min-width: 781px) {
+  .lexon_jeffkoons_container .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .lexon_jeffkoons_container .pc {
+    display: none !important;
+  }
+}
+.lexon_jeffkoons_container .pps {
+  font-family: "Poppins", sans-serif;
+}
+.lexon_jeffkoons_container {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.lexon_jeffkoons_container section {
+  position: relative;
+  overflow: hidden;
+  padding: 60rem 0;
+}
+.lexon_jeffkoons_container section#introduce {
+  color: #fff;
+  text-align: center;
+  background-color: #111;
+}
+.lexon_jeffkoons_container section#introduce .txt_box h3 {
+  font-size: clamp(8px, 26rem, 9999rem);
+  font-weight: 700;
+  margin-bottom: 12rem;
+}
+.lexon_jeffkoons_container section#introduce .txt_box p {
+  line-height: 1.6;
+}
+.lexon_jeffkoons_container section#introduce .info_txt {
+  letter-spacing: -0.2rem;
+}
+.lexon_jeffkoons_container section#introduce .info_txt .name {
+  font-weight: 600;
+  margin: 20rem 0 12rem;
+}
+.lexon_jeffkoons_container section#introduce .info_txt .name span {
+  font-size: clamp(8px, 13rem, 9999rem);
+}
+.lexon_jeffkoons_container section#introduce .info_txt .name h3 {
+  font-size: clamp(8px, 20rem, 9999rem);
+  line-height: 1.1;
+  margin-top: 4rem;
+}
+.lexon_jeffkoons_container section#product_details article + article {
+  margin-top: 60rem;
+}
+.lexon_jeffkoons_container section#product_details article .img_box {
+  position: relative;
+}
+.lexon_jeffkoons_container section#product_details article .img_box input {
+  position: fixed;
+  top: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+.lexon_jeffkoons_container section#product_details article .img_box img {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.lexon_jeffkoons_container section#product_details article .img_box img:not(.first_img) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.lexon_jeffkoons_container section#product_details article .img_box input:checked + img {
+  opacity: 1;
+}
+.lexon_jeffkoons_container section#product_details article .info_box {
+  text-align: center;
+}
+.lexon_jeffkoons_container section#product_details article .info_box .tit {
+  border-top: 1px solid #ddd;
+  padding-top: 12rem;
+}
+.lexon_jeffkoons_container section#product_details article .info_box .tit span {
+  font-size: clamp(8px, 13rem, 9999rem);
+  color: #666;
+}
+.lexon_jeffkoons_container section#product_details article .info_box .tit h3 {
+  font-size: clamp(8px, 20rem, 9999rem);
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.lexon_jeffkoons_container section#product_details article .info_box ul {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 18rem;
+}
+.lexon_jeffkoons_container section#product_details article .info_box ul li {
+  width: 56rem;
+  background-color: #e7e7e7;
+  cursor: pointer;
+}
+.lexon_jeffkoons_container section#product_details article .info_box ul li img {
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+.lexon_jeffkoons_container section#product_details article .info_box ul li:hover {
+  box-shadow: 10rem 10rem 20rem rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+.lexon_jeffkoons_container section#product_details article .info_box ul li:hover img {
+  opacity: 1;
+}
+.lexon_jeffkoons_container section#product_info article + article {
+  margin-top: 60rem;
+}
+.lexon_jeffkoons_container section#product_info article + article .txt_box {
+  padding-left: 136rem;
+}
+@media (max-width: 780px) {
+  .lexon_jeffkoons_container section#product_info article + article .txt_box {
+    padding-left: 86rem;
+  }
+}
+.lexon_jeffkoons_container section#product_info article .txt_box {
+  padding: 30rem 0;
+  letter-spacing: -0.2rem;
+}
+.lexon_jeffkoons_container section#product_info article .txt_box span {
+  font-size: clamp(8px, 13rem, 9999rem);
+  color: #666;
+  font-weight: 600;
+}
+.lexon_jeffkoons_container section#product_info article .txt_box h3 {
+  font-size: clamp(8px, 32rem, 9999rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 4rem 0 12rem;
+}
+.lexon_jeffkoons_container section#product_info article .txt_box p {
+  color: #444;
+}
+.lexon_jeffkoons_container section#check_point {
+  background-color: #EBE9F8;
+}
+.lexon_jeffkoons_container section#check_point .swiper {
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 10rem;
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper {
+  counter-reset: check_point;
+  display: flex;
+  gap: 20rem;
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20rem 35rem;
+  z-index: 1;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.2rem;
+}
+@media (min-width: 781px) {
+  .lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box {
+    padding-top: 40rem;
+  }
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box::before, .lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box h3 {
+  transform: translateY(30rem);
+  opacity: 0;
+  transition: 1s ease;
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box::before {
+  content: "CHECK POINT" counter(check_point);
+  counter-increment: check_point;
+  display: block;
+  font-size: clamp(8px, 13rem, 9999rem);
+  opacity: 0.3;
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box h3 {
+  margin-top: 8rem;
+  padding-top: 8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: clamp(8px, 20rem, 9999rem);
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box::before,
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box > h3 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box > h3 {
+  transition-duration: 1.2s;
+}
+.lexon_jeffkoons_container section#check_point .swiper .pagi {
+  position: absolute;
+  bottom: 25rem;
+  text-align: center;
+  font-size: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.lexon_jeffkoons_container section#check_point .swiper .pagi span {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 999rem;
+  margin: 0 3rem !important;
+  transition: 0.3s ease;
+  background-color: #ddd;
+  opacity: 1;
+}
+.lexon_jeffkoons_container section#check_point .swiper .pagi span.swiper-pagination-bullet-active {
+  width: 20rem;
+  background-color: #fff;
+}
+.lexon_jeffkoons_container .floating_btn {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20rem;
+  z-index: 10;
+  width: max-content;
+  border: 1px solid #fff;
+  border-radius: 999rem;
+  padding: 4rem 12rem 4rem 4rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: clamp(8px, 14rem, 9999rem);
+  white-space: nowrap;
+  background-color: #111;
+  transition: 0.5s ease;
+}
+.lexon_jeffkoons_container .floating_btn .pd_img {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  margin-right: 8rem;
+}
+.lexon_jeffkoons_container .floating_btn .arr {
+  width: 20rem;
+  margin-left: 4rem;
+}
+.lexon_jeffkoons_container .floating_btn:hover {
+  background-color: rgba(17, 17, 17, 0.9);
+}
+.lexon_jeffkoons_container .floating_btn:hover .pd_img {
+  transform: rotate(5deg);
+}

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 2px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.rareraw_container {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.2rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.rareraw_container ::-webkit-scrollbar {
+  display: none;
+}
+.rareraw_container ::placeholder {
+  color: #d6d6d6;
+}
+.rareraw_container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.rareraw_container h1,
+.rareraw_container h2,
+.rareraw_container h3,
+.rareraw_container h4,
+.rareraw_container h5,
+.rareraw_container h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.rareraw_container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.rareraw_container ol,
+.rareraw_container ul {
+  list-style: none;
+}
+.rareraw_container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.rareraw_container button,
+.rareraw_container input,
+.rareraw_container select,
+.rareraw_container textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.rareraw_container input[type=checkbox], .rareraw_container input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rareraw_container label {
+  cursor: pointer;
+}
+.rareraw_container img,
+.rareraw_container video,
+.rareraw_container svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.rareraw_container option {
+  color: inherit;
+}
+.rareraw_container section {
+  position: relative;
+}
+.rareraw_container picture {
+  display: block;
+  width: 100%;
+}
+.rareraw_container span {
+  display: block;
+}

@@ -1,0 +1,469 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.combined_discount {
+  max-width: 780px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media (min-width: 0px) {
+  .combined_discount {
+    padding-bottom: 60rem;
+  }
+}
+.combined_discount {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
+  max-width: unset;
+}
+
+.combined_discount abbr, .combined_discount acronym, .combined_discount address, .combined_discount applet, .combined_discount article, .combined_discount aside, .combined_discount audio, .combined_discount big, .combined_discount blockquote, .combined_discount body, .combined_discount canvas, .combined_discount caption, .combined_discount center, .combined_discount cite, .combined_discount code, .combined_discount dd, .combined_discount details, .combined_discount dfn, .combined_discount div, .combined_discount dl, .combined_discount dt, .combined_discount embed, .combined_discount fieldset, .combined_discount figcaption, .combined_discount figure, .combined_discount footer, .combined_discount form, .combined_discount h1, .combined_discount h2, .combined_discount h3, .combined_discount h4, .combined_discount h5, .combined_discount h6, .combined_discount header, .combined_discount hgroup, .combined_discount html, .combined_discount iframe, .combined_discount img, .combined_discount ins, .combined_discount kbd, .combined_discount label, .combined_discount legend, .combined_discount li, .combined_discount mark, .combined_discount menu, .combined_discount nav, .combined_discount object, .combined_discount ol, .combined_discount output, .combined_discount p, .combined_discount pre, .combined_discount q, .combined_discount ruby, .combined_discount samp, .combined_discount section, .combined_discount small, .combined_discount strike, .combined_discount summary, .combined_discount table, .combined_discount tbody, .combined_discount td, .combined_discount textarea, .combined_discount tfoot, .combined_discount th, .combined_discount thead, .combined_discount time, .combined_discount tr, .combined_discount tt, .combined_discount ul, .combined_discount var, .combined_discount video {
+  color: inherit;
+  font-size: inherit;
+}
+.combined_discount {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.combined_discount .layout_inner {
+  position: relative;
+  max-width: 100%;
+  width: 1420rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20rem !important;
+  padding-right: 20rem !important;
+}
+.combined_discount .inner {
+  width: 100%;
+  position: relative;
+}
+.combined_discount .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.combined_discount .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.combined_discount .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.combined_discount .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.combined_discount .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.combined_discount .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.combined_discount .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 0px) {
+  .combined_discount .mo {
+    display: none !important;
+  }
+}
+@media (min-width: 0px) {
+  .combined_discount .pc {
+    display: none !important;
+  }
+}
+.combined_discount {
+  /* SWIPER */
+}
+.combined_discount .pagi {
+  bottom: 0;
+  text-align: center;
+  font-size: 0;
+  width: 80rem;
+  margin: 27rem auto 0;
+  display: flex;
+}
+.combined_discount .pagi span {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0;
+  margin: 0 !important;
+  transition: 0.3s ease;
+  background-color: #ddd;
+  opacity: 1;
+}
+.combined_discount .pagi span.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+.combined_discount {
+  /* //SWIPER */
+}
+.combined_discount .tit_box {
+  margin-bottom: 32rem;
+  text-align: center;
+}
+@media (min-width: 0px) {
+  .combined_discount .tit_box {
+    margin-bottom: 28rem;
+  }
+}
+.combined_discount .tit_box .cd_tit {
+  font-weight: 700;
+  font-size: 28rem;
+  letter-spacing: -1rem;
+}
+.combined_discount .tit_box .cd_tit em {
+  color: #F14333;
+}
+@media (min-width: 0px) {
+  .combined_discount .tit_box .cd_tit {
+    font-size: 22rem;
+  }
+}
+.combined_discount .tit_box .cd_info {
+  letter-spacing: -0.5rem;
+  margin-top: 4rem;
+  color: #444;
+  font-size: 18rem;
+}
+@media (min-width: 0px) {
+  .combined_discount .tit_box .cd_info {
+    margin-bottom: 2rem;
+    font-size: 12rem;
+  }
+  .combined_discount .tit_box .cd_info br:not(.mo, .both) {
+    display: none;
+  }
+}
+.combined_discount {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.combined_discount section {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 0px) {
+  .combined_discount section.key_visual {
+    padding: 0 !important;
+  }
+}
+.combined_discount section.cd_cont {
+  padding-top: 100rem;
+}
+@media (min-width: 0px) {
+  .combined_discount section.cd_cont {
+    padding-top: 60rem;
+  }
+}
+.combined_discount section.how_to_apply .process {
+  background-color: #FCF7F3;
+  border-radius: 8rem;
+  padding: 72rem 155rem;
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process {
+    padding: 36rem 27rem 42rem;
+  }
+}
+.combined_discount section.how_to_apply .process ol {
+  counter-reset: service;
+}
+@media (max-width: 0px) {
+  .combined_discount section.how_to_apply .process ol {
+    justify-content: center;
+  }
+  .combined_discount section.how_to_apply .process ol .swiper-slide {
+    width: 33.3333%;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide:nth-child(2)::before {
+    content: "";
+    display: block;
+    width: 770rem;
+    border-top: 1px dotted #70654E;
+    position: absolute;
+    left: 50%;
+    top: 11rem;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide.swiper-slide-active .img_box .point {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .txt_box {
+  text-align: center;
+  letter-spacing: -0.5rem;
+  margin-bottom: 18rem;
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide .txt_box {
+    margin-bottom: 20rem;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .txt_box::before {
+  display: inline-block;
+  counter-increment: service;
+  content: "STEP 0" counter(service);
+  font-size: 12rem;
+  font-weight: 600;
+  padding: 3rem 8rem 2rem;
+  color: #fff;
+  background-color: #C0A284;
+  border-radius: 999rem;
+  box-sizing: border-box;
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .txt_box h3 {
+  margin: 12rem 0 4rem;
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide .txt_box h3 {
+    margin: 8rem 0 0;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .txt_box h3 strong {
+  color: #F14333;
+  font-weight: 700;
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .txt_box span {
+  font-size: 14rem;
+  color: #666;
+  white-space: nowrap;
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide .txt_box span {
+    font-size: 12rem;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .img_box {
+  position: relative;
+}
+@media (max-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide .img_box {
+    width: 270px;
+    margin: 0 auto;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .img_box .point {
+  width: 337rem;
+  filter: drop-shadow(15rem 15rem 30rem rgba(0, 0, 0, 0.1));
+  position: absolute;
+  z-index: 1;
+  left: -33rem;
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide .img_box .point {
+    width: 297rem;
+    left: 0;
+    transform: translateY(50rem);
+    transition: 1s ease;
+    opacity: 0;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .img_box .point.point1 {
+  width: 100rem;
+  left: -30rem;
+  top: calc(50% - 30rem);
+}
+@media (min-width: 0px) {
+  .combined_discount section.how_to_apply .process ol .swiper-slide .img_box .point.point1 {
+    width: 72rem;
+    left: -13rem;
+    top: 223rem;
+  }
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .img_box .point.point2 {
+  top: 174rem;
+}
+.combined_discount section.how_to_apply .process ol .swiper-slide .img_box .point.point3 {
+  top: 181rem;
+}
+.combined_discount section.review .swiper .swiper-slide {
+  background-color: #F5F3EF;
+  color: #444;
+  border-radius: 8rem;
+  overflow: hidden;
+  text-align: center;
+  padding: 16rem 16rem 20rem;
+}
+.combined_discount section.review .swiper .swiper-slide .txt_box {
+  padding: 30rem 0;
+}
+.combined_discount section.review .swiper .swiper-slide .txt_box p {
+  font-size: clamp(10px, 13rem, 9999rem);
+}
+.combined_discount section.review .swiper .swiper-slide .txt_box h3 {
+  font-size: clamp(10px, 18rem, 9999rem);
+  margin-top: 4rem;
+  font-weight: 600;
+  color: #111;
+}
+.combined_discount section.review .swiper .swiper-slide .txt_box h3 em {
+  color: #F14333;
+}
+.combined_discount section.review .swiper .swiper-slide ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+}
+.combined_discount section.review .swiper .swiper-slide ul li + li {
+  padding-top: 20rem;
+  margin-top: 20rem;
+  border-top: 1px dashed #a9a9a9;
+}
+.combined_discount section.review .swiper .swiper-slide ul li img {
+  width: 48rem;
+}
+.combined_discount section.review .swiper .tag_pagi {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 26.5%;
+  z-index: 1;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  padding: 8rem;
+  background-color: #fff;
+}
+@media (min-width: 0px) {
+  .combined_discount section.review .swiper .tag_pagi {
+    padding: 4rem;
+    bottom: auto;
+    top: 285rem;
+  }
+}
+.combined_discount section.review .swiper .tag_pagi span {
+  padding: 10rem 16rem;
+  border-radius: 999rem;
+  color: #999;
+  font-size: 16rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+@media (min-width: 0px) {
+  .combined_discount section.review .swiper .tag_pagi span {
+    padding: 8rem 12rem;
+    font-size: 14rem;
+  }
+}
+.combined_discount section.review .swiper .tag_pagi span.on {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+}
+.combined_discount section.review .slide_nav {
+  justify-content: center;
+  gap: 8rem;
+  margin-top: 30rem;
+}
+.combined_discount section.review .slide_nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36rem;
+  height: 32rem;
+  border-radius: 6rem;
+  background: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #DEE1E5;
+}
+.combined_discount section.review .slide_nav span::after {
+  content: "";
+  width: 16rem;
+  height: 16rem;
+  background: url(../images/arr.svg) no-repeat center center/contain;
+  transition: 0.3s ease;
+}
+.combined_discount section.review .slide_nav span.nxt::after {
+  transform: rotate(180deg);
+}
+.combined_discount section.review .slide_nav span:hover::after {
+  transform: translateX(-3rem);
+}
+.combined_discount section.review .slide_nav span:hover.nxt::after {
+  transform: rotate(180deg) translateX(-3rem);
+}
+.combined_discount section.review .slide_nav span.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.combined_discount section.review .slide_nav .total_crnt {
+  font-size: 14rem;
+}
+.combined_discount section.review .slide_nav .total_crnt .total {
+  color: #727780;
+}
+.combined_discount section.review .slide_nav .total_crnt .total::before {
+  content: "/ ";
+}
+.combined_discount section.review .slide_nav .total_crnt .crnt {
+  font-weight: 600;
+}
+.combined_discount section.review .pagi {
+  bottom: 0;
+  text-align: center;
+  font-size: 0;
+  width: 80rem;
+  margin: 27rem auto 0;
+  display: flex;
+}
+.combined_discount section.review .pagi span {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0;
+  margin: 0 !important;
+  transition: 0.3s ease;
+  background-color: #ddd;
+  opacity: 1;
+}
+.combined_discount section.review .pagi span.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+.combined_discount section.review .info_box {
+  margin-top: 16rem;
+  font-size: 14rem;
+  color: #666;
+}
+@media (min-width: 0px) {
+  .combined_discount section.review .info_box {
+    font-size: 12rem;
+    margin-top: 30rem;
+  }
+}
+.combined_discount section.review .info_box ul {
+  margin-top: 8rem;
+}
+.combined_discount section.review .info_box ul li {
+  display: flex;
+}
+.combined_discount section.review .info_box ul li::before {
+  content: "⦁";
+  margin-right: 11rem;
+  transform: translateY(-1rem);
+}

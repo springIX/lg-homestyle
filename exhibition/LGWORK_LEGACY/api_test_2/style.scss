@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+@import "var";
+
+html {
+  height: 100%;
+  background-color: #F6F4F5;
+  font-size: 1px;
+}
+@media (max-width: 1420px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.event-benefit-template{
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 14rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  @include screen("mo") {
+    @include font-size(12rem);
+  }
+
+  ::-webkit-scrollbar{ display: none;}
+  ::placeholder{ color: $gray;}
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    outline: none !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: 0 none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  input[type=checkbox], input[type=radio]{ width: 0; height: 0; overflow: hidden; position: absolute; left: 0; top: 0;}
+  label{ cursor: pointer;}
+  img,
+  video,
+  svg {
+    display: block;
+    border: none;
+    width: 100%;
+    max-width: unset;
+  }
+  option {
+    color: inherit;
+  }
+  section {
+    position: relative;
+  }
+  picture {
+    display: block;
+    width: 100%;
+  }
+
+  @include screen("mo") {
+    .pc{display: none !important;}
+  }
+  @include screen("pc") {
+    .mo{display: none !important;}
+  }
+  
+  .blind{position: absolute; z-index: -10; width: 1px !important; height: 1px !important; overflow: hidden !important; font-size: inherit; line-height: inherit; word-break: break-all; clip: rect(0, 0, 0, 0); clip-path: polygon(0 0, 0 0, 0 0); white-space: nowrap; transform: scale(.01);}
+
+  .key_visual{ display: block; margin-bottom:40rem; width:100%;
+    img{ max-width: unset !important; width: 100%;}
+  }
+
+  .c-product{ width: 1420rem; max-width: 100%; margin: 80px auto; padding: 40rem 20rem;
+    .c-product__list{ display: grid; gap: 16rem;  grid-template-columns: 1fr 1fr; grid-template-rows: auto;
+      @include screen("mo") { display: flex; flex-wrap: wrap;}
+      .c-product__item{ background-color: #fff;border-radius: 16rem; overflow: hidden; position: relative; height: 180rem;
+        @include screen("mo") { width: 100%; height: auto !important;}
+        &:first-child{grid-column: 1 / span 2; height: 364rem;
+          > span{
+            @include screen("mo") { display: block;}
+             > a{ width: 801rem;
+              @include screen("mo") { width: 100%; height: 90vw;}
+            } 
+          }
+          .c-product__info-container{ padding: 40rem;
+            @include screen("mo") { padding: 16rem 20rem;}
+            .inner{
+              .c-product__info{
+                .c-product__brand-name, .c-product__name.home__app-lge__title{ font-size: 20rem; margin-bottom: 8rem;
+                  @include screen("mo") { font-size: 16rem; margin-bottom: 0;}
+                  &::after{ content: ''; display: inline-block; width: 7rem; height: 7rem; border: 1px solid #000; border-width: 0 2px 2px 0; transform: rotate(-45deg) translate(11rem, 7rem);
+                    @include screen("mo") { width: 5rem; height: 5rem; transform: rotate(-45deg) translate(5rem, 2rem);}
+                  }
+                }
+                .c-product__name, .c-product__model-id{font-size: 17rem;
+                  @include screen("mo") { font-size: 16rem;}
+                }
+              }
+            }
+          }
+          .c-product__price-value--original{ font-size: 20rem;
+            @include screen("mo") { font-size: 13rem;}
+          }
+          .c-product__price-value--member{ font-size: 30rem;
+            @include screen("mo") { font-size: 20rem;}
+          }
+          .discount_rate{ font-size: 28rem;
+            @include screen("mo") { font-size: 20rem;}
+            &::after{ font-size: 21rem;
+              @include screen("mo") { font-size: 15rem;}
+            }
+          }
+        }
+        .c-product__sold-out-hidden-txt{ display: none !important; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba($color: #000000, $alpha: .2); display: flex; align-items: center; justify-content: center;
+        }
+        > span {display: flex; height: 100%;
+          > a{ width: 180rem; height: 100%; flex-shrink: 0;
+            @include screen("mo") { height: 100%; width: 132rem;}
+            *{ width: 100%; height: 100%; object-fit: cover;}
+          }
+        }
+        .c-product__info-container{ padding: 28rem; width: 100%; text-align: right; 
+          @include screen("mo") { padding: 16rem;}
+          .inner{ width: 100%; height: 100%; position: relative;  display: flex; align-items: flex-end; flex-direction: column; justify-content: flex-end; 
+            @include screen("mo") { display: block;}
+            > a{
+              .c-product__info{ position: absolute; left: 0; top: 0; text-align: left;
+                @include screen("mo") { position: relative; margin-bottom: 19rem;}
+                .c-product__brand-name, .c-product__name.home__app-lge__title{ font-size: 14rem; font-weight: 600;
+                  @include screen("mo") { font-size: 10rem;}
+                }
+                .c-product__name{ font-weight: 400;}
+              }
+            }
+          }
+        }
+        
+        .c-product__price-value--original{ color: #727780; line-height: 1;}
+        .c-product__price-value--member{ font-weight: 700; font-size: 18rem; line-height: 1;
+          @include screen("mo") { font-size: 14rem;}
+        }
+        .discount_rate{ color: #EA1917; font-weight: 600;
+          &::after{ content: '%'; font-size: 12rem;
+            @include screen("mo") { font-size: 11rem;}
+          }
+        }
+        .c-product__badge-container{ margin-top: 4rem;
+          span{ font-size: 11rem; padding: 3rem 4rem; background-color: #FEF3F3; color:#EA1917; margin-left: 2rem;
+            @include screen("mo") { font-size: 9rem;}
+            &:nth-child(2){ color: #747474; background-color: #EFEFEF;}
+          }
+        }
+
+        @at-root .lge__item .c-product__price-area .c-product__price-item--final{ display: inline-block;  padding: 3rem 4rem; background-color: #FEF3F3; color:#EA1917; }
+      }
+    }
+  }
+
+  .homeCoupon{ border: 1px solid #000; padding: 6px 8px; margin-right: 10px;}
+}

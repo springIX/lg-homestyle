@@ -1,0 +1,73 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* SC - Black */
+@font-face {
+  font-family: 'STSongti SC';
+  font-weight: 900;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-SC-Black-01.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* SC - Bold */
+@font-face {
+  font-family: 'STSongti SC';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-SC-Bold-02.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* TC - Bold */
+@font-face {
+  font-family: 'STSongti TC';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-TC-Bold-03.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* SC - Light */
+@font-face {
+  font-family: 'STSongti SC';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-SC-Light-04.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Original STSong (weight unknown → Regular 가정) */
+@font-face {
+  font-family: 'STSong';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSong-05.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* TC - Light */
+@font-face {
+  font-family: 'STSongti TC';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-TC-Light-06.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* SC - Regular */
+@font-face {
+  font-family: 'STSongti SC';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-SC-Regular-07.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* TC - Regular */
+@font-face {
+  font-family: 'STSongti TC';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://www.lge.co.kr/home_style_pages/2025/11/holiday/src/fonts/STSongti-TC-Regular-08.ttf') format('truetype');
+  font-display: swap;
+}

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+@media (max-width: 1420px) {
+  html {
+    font-size: 0.0704vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #FEFAF2;
+}
+
+.show_off_my_space {
+  background-color: #FEFAF2;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(8px, 17rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .show_off_my_space {
+    font-size: clamp(10px, 13rem, 9999rem);
+  }
+}
+.show_off_my_space ::-webkit-scrollbar {
+  display: none;
+}
+.show_off_my_space ::placeholder {
+  color: #444;
+}
+.show_off_my_space div,
+.show_off_my_space p,
+.show_off_my_space span,
+.show_off_my_space a,
+.show_off_my_space section,
+.show_off_my_space label,
+.show_off_my_space input,
+.show_off_my_space button,
+.show_off_my_space h1,
+.show_off_my_space h2,
+.show_off_my_space h3,
+.show_off_my_space h4,
+.show_off_my_space h5,
+.show_off_my_space h6,
+.show_off_my_space ul,
+.show_off_my_space ol,
+.show_off_my_space li,
+.show_off_my_space header,
+.show_off_my_space footer,
+.show_off_my_space main,
+.show_off_my_space b,
+.show_off_my_space i,
+.show_off_my_space em,
+.show_off_my_space strong,
+.show_off_my_space select,
+.show_off_my_space article,
+.show_off_my_space aside,
+.show_off_my_space details,
+.show_off_my_space figcaption,
+.show_off_my_space figure,
+.show_off_my_space footer,
+.show_off_my_space header,
+.show_off_my_space hgroup,
+.show_off_my_space menu,
+.show_off_my_space nav,
+.show_off_my_space section,
+.show_off_my_space object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.show_off_my_space h1,
+.show_off_my_space h2,
+.show_off_my_space h3,
+.show_off_my_space h4,
+.show_off_my_space h5,
+.show_off_my_space h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.show_off_my_space table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.show_off_my_space ol,
+.show_off_my_space ul {
+  list-style: none;
+}
+.show_off_my_space a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.show_off_my_space button,
+.show_off_my_space input,
+.show_off_my_space select,
+.show_off_my_space textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.show_off_my_space input[type=checkbox], .show_off_my_space input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.show_off_my_space label {
+  cursor: pointer;
+}
+.show_off_my_space img,
+.show_off_my_space video,
+.show_off_my_space svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.show_off_my_space option {
+  color: inherit;
+}
+.show_off_my_space section {
+  position: relative;
+}
+.show_off_my_space picture {
+  display: block;
+  width: 100%;
+}

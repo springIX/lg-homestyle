@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* SCSS VAR */
+$ci : #F31E11;
+$gray : #c2c2c2;
+$mo : 780px;
+$pd : 20px;
+
+@mixin screen($size) {
+  @if $size == "pc" {
+    @media (min-width: $mo + 1) {
+      @content;
+    }
+  } @else if $size == "mo" {
+    @media (max-width: $mo) {
+      @content;
+    }
+  } 
+}
+
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+@mixin m_full_layout($grid: null) {
+  margin-left: -$pd !important;
+  width: calc(100% + #{$pd * 2}) !important;
+
+  @if $grid == grid {
+    padding-left: $pd !important;
+    padding-right: $pd !important;
+  }
+}
+
+/* Ellipsis */
+@mixin ellip($col: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($col == 1) {
+    white-space: nowrap;
+  } @else {
+    white-space: unset;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: $col;
+  }
+}
+/* SCSS VAR */
+
+html { scroll-behavior: smooth;}
+main { background-color: #F9F9F9;}
+
+.brandstory_container{
+  /* COMMON */
+  word-break: keep-all; background-color: #fff; color: #111; font-family: 'Pretendard', sans-serif; font-size: 15px; font-weight: 400; position: relative; text-align: left; max-width: $mo; margin: 0 auto; line-height: 1.5;
+  *{display: block; margin: 0; padding: 0; border: 0; font: inherit; box-sizing: border-box;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video, a{ color: inherit;}
+  img,video{ display: block; width: 100%;}
+  ol, ul { list-style: none;}
+  a{ text-decoration: unset;}
+  @include screen("pc") { .mo{ display: none !important;}}
+  @include screen("mo") { .pc{ display: none !important;}}
+  .layout_inner{ padding-left: $pd; padding-right: $pd; position: relative;}
+  .bg_gray{ background-color: #F5F5F5;}
+  .square_btn{ width: 100%; padding: 17px; border: 1px solid #999; text-align: center; font-size:16px; font-weight: 500; color: #444; display: flex; justify-content: center; align-items: center; gap: 2px;
+    &::after{ content: ''; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png)no-repeat center center / contain; display: block; width: 20px; height: 20px;}
+    &.ty_white{ border-color: #fff; color: #fff;
+      &::after{ filter: invert(1);}
+    }
+  }
+  .gap_40{display: flex; gap: 40px;
+    &.ty_col{flex-direction: column;}
+  }
+  .gap_20{display: flex; gap: 20px;
+    &.ty_col{flex-direction: column;}
+  }
+  .gap_2{ display: flex; gap: 2px;
+    &.ty_col{flex-direction: column;}
+  }
+  .black_cont{ color: #fff; background-color: #000;}
+  .oswald{ font-family: "Oswald", sans-serif;}
+  .tit_box{line-height: 1.2;  text-align: center; margin-bottom: 16px;
+    p{ font-weight: 500; font-size: 16px; color: $gray;}
+    h2{ font-family: "Oswald", sans-serif; font-weight: 600; font-size: 40px;}
+  }
+  .tit_box_ty2{ margin-bottom: 20px;
+    p{ color: #000; opacity: .7; font-weight: 500; font-size: 14px; margin-bottom: 2px;} 
+    h2{ font-size: 24px; font-weight: 600; color: #000;}
+  }
+  .black_cont{
+    .tit_box{
+      p,h2{ color: #fff; opacity: 1;}
+    }
+    .tit_box_ty2{
+      p{ color: #c7c7cc;  opacity: 1;}
+      h2{ color: #fff;}
+    }
+  }
+  .gallery_box{ display: grid; gap: 2px; grid-template-columns: 1fr 1fr;
+    img.col2{ grid-column: span 2;}
+  }
+  #oms_module_anchor{ position: absolute; left: 0; bottom: 56px; height: 1px; width: 100%;}
+  /* //COMMON */
+  
+  /* //CONTENTS */
+  #key_visual{ padding: 40px $pd $pd; overflow: hidden; position: relative;
+    .kv_tit{ font-weight: 500; line-height: 1; margin-bottom: 16px;
+      p{ font-size: 16px; margin-bottom: 4px;}
+      h1{ font-family: "Oswald", sans-serif; font-size: 60px;}
+    }
+  }
+
+  .contents_tabbar{ width: 100%; overflow: hidden; display: flex; justify-content:space-between; white-space: nowrap; background-color: #000; font-size:13px; padding: 0 20px; position: sticky; left: 0; top: 56px; z-index: 10; gap: 20px; overflow-x: auto;
+    @include screen("pc") { top: 0; justify-content: center; }
+    li a{ padding: 16px 0 14px; border-bottom: 2px solid transparent; color: #fff; 
+      &:hover{ color: $ci; font-weight: 600; border-bottom-color: $ci;}
+    }
+  }
+  
+  section{ overflow: hidden; position: relative; padding: 60px $pd; scroll-margin-top: 50px;
+    @include screen("mo") { scroll-margin-top: 107px;}
+    &.normal_contents{
+      .img_box{ margin-bottom: 16px;}
+      a{ margin-top: 24px;}
+    }
+
+    /* BRANS STORY */
+    &#about_story{ padding-bottom: 0;
+      img{ margin: 16px 0;}
+    }
+
+    /* COLLECTION */
+    &#collection{
+      article{
+        + article{ padding-top: 40px; margin-top: 40px; border-top: 1px solid #ddd;}
+        .txt_box{margin-top: 20px;
+          h3{ text-transform:capitalize;
+            span{ font-family: "Oswald", sans-serif;
+              line-height: 1.2; margin-bottom: 4px; display: block; font-size:12px; font-weight: 500; color: $gray;}
+            a{ font-size: 18px; font-weight: 600; display: flex; align-items: flex-end;
+              &::after{ content: ''; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png)no-repeat center center / contain; display: block; width: 20px; height: 20px; transform: translateY(-3px);}
+            }
+          }
+          p{ margin-top: 8px;  letter-spacing: -.1px; color: #444;}
+        }
+      }
+    }
+
+    /* OFFLINE PLACE */
+    &#offline_place{
+      .tit_box p{ opacity: .6;}
+      .intro_txt_box{ margin: 12px 0 32px; font-size: 12px; text-align: center; 
+        h3{ display: flex; align-items: center; gap: 12px;font-weight: 700; white-space: nowrap; 
+          &::before,
+          &::after{ content: ''; width: 100%; height: 1px; background-color: #fff;}
+        }
+        p{ margin: 16px 0 12px; font-size: 14px;}
+        ul{ color: #8F8F8F;}
+      }
+      .info_box{ background-color: #fff; padding: 12px 12px 16px; color: #444;
+        .txt_box{ margin-top: 16px;
+          ol{
+            li{
+              + li{ margin-top: 4px;}
+              strong{ font-weight: 600; color: #111;}
+            }
+          }
+          .dsc{ color: #8f8f8f; font-size: 12px; margin-top: 8px;}
+          span{ display: block; text-align: right; color: #999; font-size: 12px; margin-top: 26px;}
+        }
+      }
+    }
+
+    /* BRAND_FEATURES */
+    &#brand_features{
+      ol { counter-reset: brand_features;
+        li{ display: flex; align-items: flex-start; gap: 8px; color: #444;
+          + li{ margin-top: 6px;}
+          &:before { counter-increment: brand_features;
+            content: counter(brand_features); width: 20px; height: 20px; border-radius: 50%; text-align: center; line-height: 20px; background-color: #0e0e0e; color: #fff; flex-shrink: 0; font-size: 10px; font-weight: 500;}
+        }
+      }
+    }
+
+    /* DESIGNER */
+    &#designer{ padding: 0;
+      article{ padding: 60px $pd 0;
+        &:nth-child(even){ text-align: right; background-color: #444;}
+
+        .tit_box_ty2 h2{ text-transform: uppercase;}
+        .designer_img{ margin-top: 20px;
+          &.ty_full{ @include m_full_layout;}
+        }
+      }
+
+    }
+
+    /* FAQ */
+    &#faq{
+      .faq_list{ counter-reset:faq; border-top: 2px solid #000;
+        li{ padding-top: 20px;position: relative; padding-left: 36px;
+          + li{ margin-top: 20px; border-top: 1px dashed #BBBBBB;}
+          &:before { counter-increment:faq; content: "0"counter(faq)"."; font-weight: 600; position: absolute; left: 0;}
+          strong{ font-weight: 600;}
+          p{ margin-top: 6px; font-size: 14px; line-height: 1.4; color: #444;}
+        }
+      }
+    }
+
+  }
+  /* //CONTENTS */
+}

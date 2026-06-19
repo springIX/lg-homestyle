@@ -1,0 +1,430 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+/* SCSS VAR */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+/* SCSS VAR */
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.construction_case_casecontainer {
+  /* COMMON */
+  word-break: keep-all;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  text-align: left;
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.4;
+  background-color: #fff;
+}
+.construction_case_casecontainer * {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+.construction_case_casecontainer img, .construction_case_casecontainer video {
+  display: block;
+  width: 100%;
+}
+.construction_case_casecontainer ol, .construction_case_casecontainer ul {
+  list-style: none;
+}
+.construction_case_casecontainer a {
+  text-decoration: unset;
+  color: inherit;
+}
+@media (min-width: 781px) {
+  .construction_case_casecontainer .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .construction_case_casecontainer .pc {
+    display: none !important;
+  }
+}
+.construction_case_casecontainer h2 {
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 26px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.construction_case_casecontainer h2 span {
+  font-size: 20px;
+  display: block;
+  line-height: 1.6;
+}
+.construction_case_casecontainer h2 strong {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+.construction_case_casecontainer .font_cg {
+  font-family: "Cormorant Garamond", "Pretendard", serif;
+}
+.construction_case_casecontainer .layout_inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.construction_case_casecontainer .square_btn {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(17, 17, 17, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.construction_case_casecontainer .square_btn::after {
+  content: "";
+  background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.construction_case_casecontainer .square_btn.ty_white {
+  border-color: #fff;
+  color: #fff;
+}
+.construction_case_casecontainer .square_btn.ty_white::after {
+  filter: invert(1);
+}
+.construction_case_casecontainer .square_btn.ty_black {
+  background-color: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.construction_case_casecontainer .square_btn.not_arr::after {
+  display: none;
+}
+.construction_case_casecontainer .txt {
+  color: #444;
+  line-height: 20px;
+}
+.construction_case_casecontainer .pd_txt {
+  padding: 20px 20px 0;
+}
+.construction_case_casecontainer .pd_txt h3 {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.construction_case_casecontainer .pd_txt h3 a {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+.construction_case_casecontainer .pd_txt h3 a::after {
+  content: "";
+  background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-1px);
+}
+.construction_case_casecontainer .pd_txt h3 span {
+  line-height: 18px;
+  margin-top: 4px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+.construction_case_casecontainer .pd_txt p {
+  margin-top: 12px;
+}
+.construction_case_casecontainer .pd_l {
+  padding-left: 80px;
+}
+.construction_case_casecontainer .pd_r {
+  padding-right: 80px;
+}
+.construction_case_casecontainer .gap_40 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.construction_case_casecontainer .gap_40.ty_row {
+  flex-direction: row;
+}
+.construction_case_casecontainer .gap_20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.construction_case_casecontainer .gap_20.ty_row {
+  flex-direction: row;
+}
+.construction_case_casecontainer .gap_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.construction_case_casecontainer .gap_2.ty_row {
+  flex-direction: row;
+}
+.construction_case_casecontainer #oms_module_anchor {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+}
+.construction_case_casecontainer {
+  /* COMMON */
+  /* <img src="https://static-store.lge.co.kr/editor/549/2605080018549.png" alt="x" class="icon_x"> */
+}
+.construction_case_casecontainer .icon_x {
+  display: inline-block;
+  width: 16px;
+  margin: 0 4px;
+  transform: translateY(1px);
+}
+.construction_case_casecontainer .icon_x.ty2 {
+  transform: translateY(9px);
+}
+.construction_case_casecontainer .contents_tabbar {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  background-color: #111;
+  font-size: 13px;
+  padding: 0 20px;
+  position: sticky;
+  left: 0;
+  top: 56px;
+  z-index: 10;
+}
+@media (min-width: 781px) {
+  .construction_case_casecontainer .contents_tabbar {
+    top: 0;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.construction_case_casecontainer .contents_tabbar li a {
+  padding: 16px 0 14px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+}
+.construction_case_casecontainer .contents_tabbar li a:hover {
+  color: #F31E11;
+  font-weight: 600;
+  border-bottom-color: #F31E11;
+}
+.construction_case_casecontainer section {
+  overflow: hidden;
+  position: relative;
+  padding: 60px 0;
+  /* ABOUT STORY */
+}
+.construction_case_casecontainer section#about_story {
+  padding: 50px 20px 60px;
+  text-align: center;
+  background-color: #F5EEE8;
+}
+.construction_case_casecontainer section#about_story h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.construction_case_casecontainer section#about_story p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #444;
+}
+.construction_case_casecontainer section#about_story .square_btn {
+  display: inline-flex;
+  width: 200px;
+  margin-top: 24px;
+}
+.construction_case_casecontainer section#showroom .txt_box {
+  padding: 20px 20px 32px;
+}
+.construction_case_casecontainer section#showroom .txt_box h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.construction_case_casecontainer section#showroom .txt_box .txt2 {
+  color: #444;
+  margin-top: 8px;
+}
+.construction_case_casecontainer section#showroom .txt_box.ty_intro {
+  text-align: center;
+  padding: 24px 0 60px;
+}
+.construction_case_casecontainer section#showroom .txt_box.ty_intro .txt2 {
+  color: #8f8f8f;
+}
+.construction_case_casecontainer section#showroom .txt_box .dsc {
+  font-size: 10px;
+  color: #8F8F8F;
+  margin-top: 8px;
+}
+.construction_case_casecontainer section#process {
+  background-color: #EBEFF3;
+}
+.construction_case_casecontainer section#process .process_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  counter-reset: process;
+}
+.construction_case_casecontainer section#process .process_list li {
+  position: relative;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  letter-spacing: -0.02em;
+}
+.construction_case_casecontainer section#process .process_list li input {
+  display: none;
+}
+.construction_case_casecontainer section#process .process_list li input:checked ~ .info {
+  display: block;
+}
+.construction_case_casecontainer section#process .process_list li input:checked + .tit {
+  cursor: default;
+}
+.construction_case_casecontainer section#process .process_list li input:checked + .tit::after {
+  transform: rotate(-180deg);
+}
+.construction_case_casecontainer section#process .process_list li .tit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+.construction_case_casecontainer section#process .process_list li .tit span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  display: block;
+}
+.construction_case_casecontainer section#process .process_list li .tit span::before {
+  display: inline-block;
+  counter-increment: process;
+  content: "0" counter(process);
+  font-size: 20px;
+  font-weight: 600;
+  color: #D0C8C8;
+  min-width: 30px;
+}
+.construction_case_casecontainer section#process .process_list li:nth-child(n+10) .tit span::before {
+  content: counter(process);
+}
+.construction_case_casecontainer section#process .process_list li label.tit {
+  cursor: pointer;
+}
+.construction_case_casecontainer section#process .process_list li label.tit::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(https://www.lge.co.kr/home_style_pages/2026/05/construction_case/src/images/arr.png) no-repeat center center/contain;
+}
+.construction_case_casecontainer section#process .process_list li .info {
+  display: none;
+  padding: 0 20px 16px;
+  font-size: 14px;
+  color: #444;
+}
+.construction_case_casecontainer section#const_case_list {
+  padding-bottom: 0;
+  background-color: #F9F9F9;
+}
+.construction_case_casecontainer section#const_case_list article h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+.construction_case_casecontainer section#const_case_list article .case_info {
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 20px;
+}
+.construction_case_casecontainer section#const_case_list article .case_info li {
+  width: 76px;
+}
+.construction_case_casecontainer section#const_case_list article .case_info li + li {
+  border-left: 1px solid #DDDDDD;
+}
+.construction_case_casecontainer section#const_case_list article .case_info li img {
+  width: 24px;
+  margin: 0 auto 4px;
+}
+.construction_case_casecontainer section#const_case_list article .case_info li p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #666;
+  height: 37px;
+}
+.construction_case_casecontainer section#const_case_list article .img_box {
+  width: 100%;
+}
+.construction_case_casecontainer section#const_case_list article .img_box img {
+  width: calc(50% - 1px);
+}
+.construction_case_casecontainer section#const_case_list a {
+  margin-bottom: 60px;
+}
+.construction_case_casecontainer section#ending {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+}
+.construction_case_casecontainer section#ending * {
+  color: inherit;
+}
+.construction_case_casecontainer section#ending h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px 0 12px;
+}
+.construction_case_casecontainer section#ending ul {
+  margin: 20px 0 24px;
+  list-style-type: disc;
+}
+.construction_case_casecontainer section#ending ul li + li {
+  margin-top: 2px;
+}
+.construction_case_casecontainer section#ending ul li::before {
+  content: "·";
+  padding: 0 8px;
+}
+.construction_case_casecontainer section#ending a {
+  border-radius: 8px;
+  background-color: #fff;
+  color: #111;
+  text-align: center;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+}

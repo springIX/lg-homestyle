@@ -1,0 +1,157 @@
+@import "var";
+
+.lil_square{
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .lil_square img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* WAVE */
+  .wave{ width: 100%; display: flex; overflow: hidden; 
+    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
+    @keyframes wave {
+      0%{ transform: translateX(0);}
+      100%{ transform: translateX(-100%);}
+    }
+
+    &.reverse > *{ animation-direction: reverse;}
+  }
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  
+  /* SWIPER */
+  .scr_bar{ width: 210rem; height: 3rem; margin: 38rem auto 0; background-color: #ddd;
+    @include screen("mo") { width: 80rem;}
+    .swiper-scrollbar-drag{ background-color: #000; }
+  }
+  /* //SWIPER */
+  .ls_cont{ padding: 100rem 0;
+    @include screen("mo") { padding: 60rem 0;}
+  }
+  .square_btn{ display: block; font-weight: 600; padding: 17rem 0; width: 340rem; border-radius: 8rem; background-color: #000; text-align: center; margin-top: 40rem; transition: .5s ease; color: #fff; margin: 40rem auto 0;
+    @include screen("mo") { margin-top: 20rem;} 
+    &:hover{ background-color: rgba($color: #000, $alpha: .7);}
+  }
+
+  section{ position: relative; overflow: hidden;
+    &#key_visual{ background-color: #F6EFE8;
+      .txt_box{ display: flex; gap: 40rem; padding:34rem 0 60rem;
+        @include screen("mo") { display: block; padding: 18rem 0 40rem;}
+        ul{ width: 100%; 
+          li{ border-top: 1px solid #ccc; display: flex; align-items: center; justify-content: space-between; padding: 20rem 0;
+            @include screen("mo") { padding: 16rem 0;}
+            &:first-child{ border-color: #000;}
+            span{ color: #666;}
+            p{ font-weight: 500; font-size: 18rem;
+              @include screen("mo") { font-size: 16rem;}
+            }
+          }
+          @include screen("mo") { 
+            + ul li:first-child{ border-color: #ccc;}
+          }
+        }
+      }
+    }
+
+    &#life_makes_sense{ 
+      .txt_box{ display: flex; align-items: flex-start; 
+        @include screen("mo") { display: block;}
+        > *{ width: 100%;}
+        h2{font-weight: 700; font-size: 40rem;
+          @include screen("mo") { font-size: 26rem;}
+        }
+        p{ padding-left: 52rem; border-left: 1px solid #ccc; font-weight: 500;
+          @include screen("mo") { padding: 52rem 0 0; border: none; font-size: 18rem;}
+        }
+      }
+
+      &.ty_hongye{
+        .ls_cont{
+          .txt_box{
+            p{
+              @include screen("pc") { min-height: 154rem;}
+            }
+          }
+        }
+      }
+    }
+    &#portfolio{ background-color: #F5F5F5;
+      h2{ font-size: 36rem; font-weight: 600; text-align: center; margin-bottom: 32rem;
+        @include screen("mo") { font-size: 28rem;}
+      }
+      .swiper{
+        @include screen("mo") { overflow: visible;
+          &.ty_m_one { 
+            .swiper-slide{ width: 100% !important; margin-right: 0 !important;}
+          }
+        }
+        .swiper-wrapper{align-items: stretch;}
+        .portfolio_grid_page { display: grid; gap:32rem 12rem;
+          &.cols-2{   grid-template-columns: repeat(2, minmax(0, 1fr));}
+          &.cols-3{  grid-template-columns: repeat(3, minmax(0, 1fr));}
+          .swiper-slide {  width: 100% !important; min-width: 0; margin: 0 !important; display: block;}
+        }
+        .txt_box{ font-size: 18rem; margin-top: 18rem;
+          @include screen("mo") { font-size: 16rem; margin-top: 12rem;}
+          span{ font-weight: 500; display: block; @include ellip();}
+          p{ color: #444444; margin-top: 6rem;
+            @include screen("mo") { font-size: 14rem;}
+          }
+        }
+      }
+      @include screen("mo") { 
+        .square_btn{ margin-top: 38rem;}
+      }
+    }
+  }
+}

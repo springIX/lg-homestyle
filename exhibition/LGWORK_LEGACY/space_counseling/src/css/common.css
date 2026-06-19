@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+@media (max-width: 1420px) {
+  html {
+    font-size: 0.0704vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.space_counseling {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 18rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .space_counseling {
+    font-size: clamp(10px, 14rem, 9999rem);
+  }
+}
+.space_counseling ::-webkit-scrollbar {
+  display: none;
+}
+.space_counseling ::placeholder {
+  color: #444;
+}
+.space_counseling div,
+.space_counseling p,
+.space_counseling span,
+.space_counseling a,
+.space_counseling section,
+.space_counseling label,
+.space_counseling input,
+.space_counseling button,
+.space_counseling h1,
+.space_counseling h2,
+.space_counseling h3,
+.space_counseling h4,
+.space_counseling h5,
+.space_counseling h6,
+.space_counseling ul,
+.space_counseling ol,
+.space_counseling li,
+.space_counseling header,
+.space_counseling footer,
+.space_counseling main,
+.space_counseling b,
+.space_counseling i,
+.space_counseling em,
+.space_counseling strong,
+.space_counseling select,
+.space_counseling article,
+.space_counseling aside,
+.space_counseling details,
+.space_counseling figcaption,
+.space_counseling figure,
+.space_counseling footer,
+.space_counseling header,
+.space_counseling hgroup,
+.space_counseling menu,
+.space_counseling nav,
+.space_counseling section,
+.space_counseling object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.space_counseling h1,
+.space_counseling h2,
+.space_counseling h3,
+.space_counseling h4,
+.space_counseling h5,
+.space_counseling h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.space_counseling table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.space_counseling ol,
+.space_counseling ul {
+  list-style: none;
+}
+.space_counseling a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.space_counseling button,
+.space_counseling input,
+.space_counseling select,
+.space_counseling textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.space_counseling input[type=checkbox], .space_counseling input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.space_counseling label {
+  cursor: pointer;
+}
+.space_counseling img,
+.space_counseling video,
+.space_counseling svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.space_counseling option {
+  color: inherit;
+}
+.space_counseling section {
+  position: relative;
+}
+.space_counseling picture {
+  display: block;
+  width: 100%;
+}

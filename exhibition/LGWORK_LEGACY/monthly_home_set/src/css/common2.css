@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("main2.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+
+@media (max-width: 1380px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+.monthly_home_set {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 14rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .monthly_home_set {
+    font-size: clamp(10px, 12rem, 9999rem);
+  }
+}
+.monthly_home_set ::-webkit-scrollbar {
+  display: none;
+}
+.monthly_home_set ::placeholder {
+  color: #666;
+}
+.monthly_home_set div,
+.monthly_home_set p,
+.monthly_home_set span,
+.monthly_home_set a,
+.monthly_home_set section,
+.monthly_home_set label,
+.monthly_home_set input,
+.monthly_home_set button,
+.monthly_home_set h1,
+.monthly_home_set h2,
+.monthly_home_set h3,
+.monthly_home_set h4,
+.monthly_home_set h5,
+.monthly_home_set h6,
+.monthly_home_set ul,
+.monthly_home_set ol,
+.monthly_home_set li,
+.monthly_home_set header,
+.monthly_home_set footer,
+.monthly_home_set main,
+.monthly_home_set b,
+.monthly_home_set i,
+.monthly_home_set em,
+.monthly_home_set strong,
+.monthly_home_set select,
+.monthly_home_set article,
+.monthly_home_set aside,
+.monthly_home_set details,
+.monthly_home_set figcaption,
+.monthly_home_set figure,
+.monthly_home_set footer,
+.monthly_home_set header,
+.monthly_home_set hgroup,
+.monthly_home_set menu,
+.monthly_home_set nav,
+.monthly_home_set section,
+.monthly_home_set object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.monthly_home_set h1,
+.monthly_home_set h2,
+.monthly_home_set h3,
+.monthly_home_set h4,
+.monthly_home_set h5,
+.monthly_home_set h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.monthly_home_set table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.monthly_home_set ol,
+.monthly_home_set ul {
+  list-style: none;
+}
+.monthly_home_set a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.monthly_home_set button,
+.monthly_home_set input,
+.monthly_home_set select,
+.monthly_home_set textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.monthly_home_set input[type=checkbox], .monthly_home_set input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.monthly_home_set label {
+  cursor: pointer;
+}
+.monthly_home_set img,
+.monthly_home_set video,
+.monthly_home_set svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.monthly_home_set option {
+  color: inherit;
+}
+.monthly_home_set section {
+  position: relative;
+}
+.monthly_home_set picture {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+@media (max-width: 1420px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.lil_square {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .lil_square {
+    font-size: clamp(10px, 14rem, 9999rem);
+  }
+}
+.lil_square ::-webkit-scrollbar {
+  display: none;
+}
+.lil_square ::placeholder {
+  color: #444;
+}
+.lil_square div,
+.lil_square p,
+.lil_square span,
+.lil_square a,
+.lil_square section,
+.lil_square label,
+.lil_square input,
+.lil_square button,
+.lil_square h1,
+.lil_square h2,
+.lil_square h3,
+.lil_square h4,
+.lil_square h5,
+.lil_square h6,
+.lil_square ul,
+.lil_square ol,
+.lil_square li,
+.lil_square header,
+.lil_square footer,
+.lil_square main,
+.lil_square b,
+.lil_square i,
+.lil_square em,
+.lil_square strong,
+.lil_square select,
+.lil_square article,
+.lil_square aside,
+.lil_square details,
+.lil_square figcaption,
+.lil_square figure,
+.lil_square footer,
+.lil_square header,
+.lil_square hgroup,
+.lil_square menu,
+.lil_square nav,
+.lil_square section,
+.lil_square object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.lil_square h1,
+.lil_square h2,
+.lil_square h3,
+.lil_square h4,
+.lil_square h5,
+.lil_square h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.lil_square table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.lil_square ol,
+.lil_square ul {
+  list-style: none;
+}
+.lil_square a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.lil_square button,
+.lil_square input,
+.lil_square select,
+.lil_square textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.lil_square input[type=checkbox], .lil_square input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.lil_square label {
+  cursor: pointer;
+}
+.lil_square img,
+.lil_square video,
+.lil_square svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.lil_square option {
+  color: inherit;
+}
+.lil_square section {
+  position: relative;
+}
+.lil_square picture {
+  display: block;
+  width: 100%;
+}

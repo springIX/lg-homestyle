@@ -1,0 +1,229 @@
+@import "var";
+
+.customer_promotion{  max-width: 780px; margin: 0 auto;
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .customer_promotion img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit;}
+  .swiper-wrapper{ height: auto;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* WAVE */
+  .wave{ width: 100%; display: flex; overflow: hidden; 
+    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
+    @keyframes wave {
+      0%{ transform: translateX(0);}
+      100%{ transform: translateX(-100%);}
+    }
+
+    &.reverse > *{ animation-direction: reverse;}
+  }
+
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  
+  /* SWIPER */
+  .nav{
+    span{ display: flex; align-items: center; justify-content: center; width: 48rem; height: 48rem; border-radius: 50%; background: #fff; z-index: 1; cursor: pointer; transition: .3s ease;
+      &::after{ content: ''; width: 20rem; height: 20rem; background: url(../images/arr.svg)no-repeat center center / contain; transition: .3s ease;} 
+      &.nxt::after{ transform: rotate(180deg);}
+      &:hover{
+        &::after{ transform: translateX(-3rem);}
+        &.nxt::after{ transform: rotate(180deg) translateX(-3rem);}
+      }
+      &.swiper-button-disabled{ opacity: .5; cursor: default;}
+    }
+  }
+  .pagi{ bottom: 0; margin-top: 25rem; text-align: center; font-size: 0;
+    span{display: inline-block; width: 8rem; height: 8rem; border-radius: 999rem;  margin: 0 3rem !important; transition: .3s ease; background-color: #ddd; opacity: 1;
+      &.swiper-pagination-bullet-active{ width: 20rem; background-color: #000;}
+    }
+  }
+  /* //SWIPER */
+  .tit_box{ margin-bottom: 32rem; text-align: center;
+    @include screen("mo") { margin-bottom: 28rem;}
+    span{ letter-spacing: -.5rem; color: $ci; font-weight: 500;}
+    h3{ margin-top: 6rem; font-weight: 600; font-size: 28rem; letter-spacing: -1rem;
+      @include screen("mo") { font-size: 22rem; margin-top: 4rem;}
+    }
+  }
+  .pk_btn{border-radius: 8rem; font-weight: 600; width: 362rem; padding: 16rem; margin: 40rem auto 0; text-align: center; font-size: 20rem; background-color: #000; color: #fff;
+    @include screen("mo") { width: 100%; padding: 14rem; font-size: 15rem; margin-top: 29rem;}
+  } 
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden;
+    &.pk_cont{ padding: 100rem 0;
+      @include screen("mo") { padding: 60rem 0;}
+    }
+
+    &.premium_Kitchen_brand{
+      .brand_list{
+        ul{ display: flex; flex-wrap: wrap; gap: 28rem 0;
+          @include screen("mo") { justify-content: space-between; gap: 32rem 0;}
+          li{ width: 50%;
+            @include screen("mo") { width: calc(50% - 5rem); }
+            @include screen("pc") { 
+              &:nth-child(odd) a{ padding-right: 16rem;}
+              &:nth-child(even) a{ padding-left: 16rem;}
+              &:not(.last_line){  border-bottom: 1px solid #d9dde1; padding-bottom: 28rem; }
+            }
+            a{ width: 100%;  display: flex; align-items: center; 
+              @include screen("mo") { flex-direction: column-reverse; justify-content: flex-end;}
+              &:nth-last-child(-n+2){ margin-bottom: 0; padding-bottom: 0; border: none;}
+              &:hover .txt_box p{ text-decoration: underline;}
+
+              .txt_box{ width: 100%;
+                @include screen("mo") { margin-top: 8rem;}
+                span{ color: #444; font-size: 14rem;
+                  @include screen("mo") { font-size: 12rem;}
+                }
+                p{ margin-top: 2rem; font-size: 18rem; font-weight: 500;
+                  @include screen("mo") { font-size: 14rem; letter-spacing: -.4rem;}
+                }
+              }
+              .img_box{ width: 240rem; flex-shrink: 0;
+                @include screen("mo") { width: 100%;}
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.kitchen_renovation_reviews{ background-color: #f5f5f5;
+      .swiper{ 
+        @include screen("mo") { overflow: visible;}
+        .nav{
+          span{ position: absolute; left: 32rem; top: 50%; transform: translateY(-50%);
+            &.nxt{ left: auto; right: 32rem;}
+          }
+        }
+      }
+    }
+
+    &.all_about_kitchen{
+      .swiper{ border-radius: 8rem; overflow: hidden; padding: 1px;
+        .swiper-slide{ display: flex;
+          @include screen("mo") { display: block;}
+          >*{ width: 100%; position: relative; overflow: hidden;}
+          .interior_box{ border: 1px solid #DFDFDF; border-width: 1px 0 1px 1px; border-radius: 8rem 0 0 8rem;
+            @include screen("mo") { border-radius: 8rem 8rem 0 0; border-width: 1px 1px 0 1px;}
+            .txt_box{ position: absolute; left: 0; bottom: 0; padding: 40rem; width: 100%; color: #fff;
+              @include screen("mo") { padding: 24rem;}
+              span{ font-weight: 500; font-size: 14rem;
+                @include screen("mo") { font-size: 13rem;}
+              }
+              p{ font-size: 24rem; font-weight: 600; margin-top: 4rem;
+                @include screen("mo") { font-size: 20rem;
+                  br:not(.both){ display: none;}
+                }
+              }
+            }
+          }
+          .pd_list{ display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; 
+            a{ padding-top: 20rem; border: 1px solid #dfdfdf; position: relative;
+              &:nth-child(4){ border-bottom-right-radius: 8rem;}
+              @include screen("mo") { height: 170rem; padding-top: 8rem;
+                &:nth-child(3){ border-bottom-left-radius: 8rem;}
+              }
+              @include screen("pc") { 
+                &:nth-child(2){ border-top-right-radius: 8rem;}
+              }
+              img{ width: 247rem; margin: 0 auto;
+                @include screen("mo") { width: 110rem;}
+                &.full{ width: 100%; height: 100%; position: absolute; left: 0; top: 0;
+                  @include screen("mo") { position: relative; width: 110rem; height: 110rem; border-radius: 8rem; object-fit: cover;}
+                }
+              }
+              .txt_box{ width: 100%; font-size: 14rem; color: #444; z-index: 1; position: absolute; left: 0; bottom: 0; padding: 20rem;
+                @include screen("mo") { padding-bottom: 12rem; font-size: 12rem;}
+                span{  font-weight: 600;
+                  @include screen("mo") { font-size: 11rem;}
+                }
+                p{
+                  @include screen("mo") { @include ellip();}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.kitchen_curation{ background-color: #F2F0EB;
+      .kitchen_curation_cont{ margin-top: 32rem;
+        .pd_list{
+          .pd_list_slot{
+            ul{ position: relative; display: flex; gap: 18px;
+              @include screen("mo") { gap: 10rem; flex-wrap: wrap; 
+                li{ width: calc(50% - 5rem);}
+              }
+              li{ display: flex; flex-direction: column; gap: 18rem;
+                @include screen("mo") { gap: 10rem;
+                  &:last-child{flex-direction: row; flex-wrap: wrap; width: 100%; gap: 10rem;
+                    a{ width: calc(50% - 5rem);
+                      &:first-child{ order: 2;}
+                      &:nth-child(2){ order: 1;}
+                      &:last-child{ order: 3; width: 100%;}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

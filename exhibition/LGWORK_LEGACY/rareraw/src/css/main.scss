@@ -1,0 +1,159 @@
+@import "var";
+
+.rareraw_container{ 
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; line-height: 1.4;}
+  p{ font-size: inherit !important;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden;
+    .tit_box{ margin-bottom: 40rem; 
+      @include screen("mo") { margin-bottom: 32rem;}
+      p{ display: block; color: #C8261C; font-weight: 500; margin-bottom: 17rem;
+        @include screen("mo") { font-size: 16rem; margin-bottom: 10rem;}
+      }
+      h2{ font-size: 32rem; font-weight: 600;
+        @include screen("mo") { font-size: 24rem;}
+        span{ font-style: normal; font-weight: 400;}
+      }
+    }
+    .link_btn{ padding: 17rem 0; width: 260rem; font-weight: 600; border-radius: 8rem; border: 1px solid #111; text-align: center; transition: .3s ease;
+      @include screen("mo") { padding: 14rem; width: 100%;}
+      &:hover{ background: rgba($color: #000000, $alpha: .05);}
+    }
+    &.key_visual img{ width: 100%; max-width: 100%;}
+    &.benefit{ padding-top: 140rem;
+      @include screen("mo") { padding-top: 60rem;}
+      ol{ display: flex; gap: 12rem; counter-reset: benefit;
+        @include screen("mo") { flex-wrap: wrap;}
+        li{ border-radius: 8rem; background-color: #F9F9F9; padding: 38rem 24rem; width: 100%; display: flex; justify-content: space-between; align-items: center;
+          @include screen("mo") { padding: 25rem 28rem;}
+          .txt_box{
+            &::before{ font-size: 12rem; font-weight: 500; color: #512c08; padding: 3rem 10rem; border-radius: 2rem; background-color: #f3f0eb; counter-increment: benefit; content:  "혜택"counter(benefit);
+              @include screen("mo") { font-size: 11rem; padding: 1rem 6rem;}
+            }
+            strong{font-size: 24rem; display: block; margin: 8rem 0 2rem;
+              @include screen("mo") { font-size: 18rem; margin-top: 6rem;}
+              em{ color: #774A1C;}
+            }
+            p{ color: #444;}
+          }
+          img{width: 80rem;
+            @include screen("mo") { width: 64rem;}
+          }
+        }
+      }
+    }
+    &.product{ padding: 100rem 0;
+      @include screen("mo") { padding: 60rem 0;}
+      .homeclean{
+        ul{ display: flex; gap: 20rem;
+          @include screen("mo") { gap: 12rem; flex-wrap: wrap;}
+          li{ width: 100%; border-radius: 8rem; border: 1px solid #ddd; text-align: center; padding: 40rem 40rem 32rem;
+            @include screen("mo") { width: calc(50% - 6rem); padding: 7rem 20rem 20rem;}
+            .txt_box{ margin-top: 8rem;
+              @include screen("mo") { margin-top: 12rem;}
+              strong{ display: block; font-size: 20rem; margin-bottom: 4rem;
+                @include screen("mo") { font-size: 16rem; margin-bottom: 3rem;}
+              }
+            }
+          }
+        }
+        .link_btn{ margin: 32rem auto 0;
+          @include screen("mo") {  margin-top: 24rem;}
+        }
+      }
+      .roboking{ margin-top: 100rem; display: flex; align-items: center; background-color: #F9F9F9; border-radius: 8rem; overflow: hidden;
+        @include screen("mo") {flex-direction: column-reverse; margin-top: 60rem; text-align: center;}
+        > *{ width: 100%;}
+        .txt_box{ padding-left : 70rem;
+          @include screen("mo") { padding: 32rem 20rem 40rem;}
+          strong{ font-size: 32rem; font-weight: 700; margin-bottom: 36rem; display: block; line-height: 1.4;
+            @include screen("mo") { font-size: 20rem; margin-bottom: 24rem; font-weight: 600;}
+          }
+        } 
+      }
+    }
+
+    &.check_point{ background-color: #F7F3F0; padding: 100rem 0;
+      @include screen("mo") { padding: 60rem 0;}
+      ol{ display: flex; flex-wrap: wrap; gap: 12rem; counter-reset: benefit;
+        li{ width: calc(50% - 6rem); border-radius: 8rem; padding: 32rem 36rem; background-color: #fff; position: relative; min-height: 164rem; display: flex; align-items: center;
+          @include screen("mo") { width: 100%; padding: 23rem 28rem; min-height: 140rem;}
+          .txt_box{
+            p{ color: #444;}
+            strong{ display: block; margin-top: 4rem; font-size: 20rem;
+              @include screen("mo") { font-size: 18rem;}
+            }
+            span{ display: block; font-size: 14rem; opacity: .5; white-space: nowrap; margin-top: 8rem;
+              @include screen("mo") { font-size: 12rem; margin-top: 2rem;}
+            }
+          }
+          .img_box{ width: 100rem; position: absolute; right: 24rem; top: 50%; transform: translateY(-50%);
+            @include screen("mo") { width: 85rem; right: 10rem;}
+          }
+        }
+      }
+    }
+
+    &.gallery{ padding: 140rem 0;
+      @include screen("mo") { padding: 60rem 0;}
+    }
+  }
+}

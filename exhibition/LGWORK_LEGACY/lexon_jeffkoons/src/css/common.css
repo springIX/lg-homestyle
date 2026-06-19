@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("fonts.css");
+@import url("main.css");
+html {
+  height: 100%;
+  background-color: #F6F4F5;
+  font-size: 1px;
+}
+
+@media (max-width: 1360px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+.lexon_jeffkoons {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 17rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .lexon_jeffkoons {
+    font-size: clamp(10px, 13rem, 9999rem);
+  }
+}
+.lexon_jeffkoons ::-webkit-scrollbar {
+  display: none;
+}
+.lexon_jeffkoons ::placeholder {
+  color: #666;
+}
+.lexon_jeffkoons div,
+.lexon_jeffkoons p,
+.lexon_jeffkoons span,
+.lexon_jeffkoons a,
+.lexon_jeffkoons section,
+.lexon_jeffkoons label,
+.lexon_jeffkoons input,
+.lexon_jeffkoons button,
+.lexon_jeffkoons h1,
+.lexon_jeffkoons h2,
+.lexon_jeffkoons h3,
+.lexon_jeffkoons h4,
+.lexon_jeffkoons h5,
+.lexon_jeffkoons h6,
+.lexon_jeffkoons ul,
+.lexon_jeffkoons ol,
+.lexon_jeffkoons li,
+.lexon_jeffkoons header,
+.lexon_jeffkoons footer,
+.lexon_jeffkoons main,
+.lexon_jeffkoons b,
+.lexon_jeffkoons i,
+.lexon_jeffkoons em,
+.lexon_jeffkoons strong,
+.lexon_jeffkoons select,
+.lexon_jeffkoons article,
+.lexon_jeffkoons aside,
+.lexon_jeffkoons details,
+.lexon_jeffkoons figcaption,
+.lexon_jeffkoons figure,
+.lexon_jeffkoons footer,
+.lexon_jeffkoons header,
+.lexon_jeffkoons hgroup,
+.lexon_jeffkoons menu,
+.lexon_jeffkoons nav,
+.lexon_jeffkoons section,
+.lexon_jeffkoons object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.lexon_jeffkoons h1,
+.lexon_jeffkoons h2,
+.lexon_jeffkoons h3,
+.lexon_jeffkoons h4,
+.lexon_jeffkoons h5,
+.lexon_jeffkoons h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.lexon_jeffkoons table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.lexon_jeffkoons ol,
+.lexon_jeffkoons ul {
+  list-style: none;
+}
+.lexon_jeffkoons a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.lexon_jeffkoons button,
+.lexon_jeffkoons input,
+.lexon_jeffkoons select,
+.lexon_jeffkoons textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.lexon_jeffkoons input[type=checkbox], .lexon_jeffkoons input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.lexon_jeffkoons label {
+  cursor: pointer;
+}
+.lexon_jeffkoons img,
+.lexon_jeffkoons video,
+.lexon_jeffkoons svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.lexon_jeffkoons option {
+  color: inherit;
+}
+.lexon_jeffkoons section {
+  position: relative;
+}
+.lexon_jeffkoons picture {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,495 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+/* SCSS VAR */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+/* SCSS VAR */
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.brandstory_container {
+  /* COMMON */
+  word-break: keep-all;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  text-align: left;
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+.brandstory_container * {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+.brandstory_container img, .brandstory_container video {
+  display: block;
+  width: 100%;
+}
+.brandstory_container ol, .brandstory_container ul {
+  list-style: none;
+}
+.brandstory_container a {
+  text-decoration: unset;
+  color: inherit;
+}
+@media (min-width: 781px) {
+  .brandstory_container .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .brandstory_container .pc {
+    display: none !important;
+  }
+}
+.brandstory_container h2 {
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+}
+.brandstory_container h2.font_cg {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.brandstory_container h2 span {
+  font-size: 20px;
+  display: block;
+  line-height: 1.6;
+}
+.brandstory_container h2 strong {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+.brandstory_container .font_cg {
+  font-family: "Cormorant Garamond", "Pretendard", serif;
+}
+.brandstory_container .layout_inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.brandstory_container .square_btn {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(17, 17, 17, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.brandstory_container .square_btn::after {
+  content: "";
+  background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.brandstory_container .square_btn.ty_white {
+  border-color: #fff;
+  color: #fff;
+}
+.brandstory_container .square_btn.ty_white::after {
+  filter: invert(1);
+}
+.brandstory_container .txt {
+  color: #444;
+  line-height: 20px;
+}
+.brandstory_container .pd_txt {
+  padding: 20px 20px 0;
+}
+.brandstory_container .pd_txt h3 {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.brandstory_container .pd_txt h3 a {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+.brandstory_container .pd_txt h3 a::after {
+  content: "";
+  background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-1px);
+}
+.brandstory_container .pd_txt h3 span {
+  line-height: 18px;
+  margin-top: 4px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+.brandstory_container .pd_txt p {
+  margin-top: 12px;
+}
+.brandstory_container .pd_l {
+  padding-left: 80px;
+}
+.brandstory_container .pd_r {
+  padding-right: 80px;
+}
+.brandstory_container .gap_40 * + * {
+  margin-top: 40px;
+}
+.brandstory_container .gap_20 * + * {
+  margin-top: 20px;
+}
+.brandstory_container .gap_2 * + * {
+  margin-top: 2px;
+}
+.brandstory_container #oms_module_anchor {
+  position: absolute;
+  left: 0;
+  bottom: 56px;
+  height: 1px;
+  width: 100%;
+}
+.brandstory_container {
+  /* COMMON */
+  /* <img src="https://static-store.lge.co.kr/editor/549/2605080018549.png" alt="x" class="icon_x"> */
+}
+.brandstory_container .icon_x {
+  display: inline-block;
+  width: 16px;
+  margin: 0 4px;
+  transform: translateY(1px);
+}
+.brandstory_container .icon_x.ty2 {
+  transform: translateY(9px);
+}
+.brandstory_container .contents_tabbar {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  background-color: #111;
+  font-size: 13px;
+  padding: 0 20px;
+  position: sticky;
+  left: 0;
+  top: 56px;
+  z-index: 10;
+}
+@media (min-width: 781px) {
+  .brandstory_container .contents_tabbar {
+    top: 0;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.brandstory_container .contents_tabbar li a {
+  padding: 16px 0 14px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+}
+.brandstory_container .contents_tabbar li a:hover {
+  color: #F31E11;
+  font-weight: 600;
+  border-bottom-color: #F31E11;
+}
+.brandstory_container section {
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0;
+  /* ABOUT STORY */
+}
+.brandstory_container section#about_story {
+  padding: 50px 20px 60px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #F4F0EA;
+}
+.brandstory_container section#about_story h2 {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+.brandstory_container section#about_story p {
+  font-size: 16px;
+  line-height: 30px;
+}
+.brandstory_container section#about_story .square_btn {
+  display: inline-flex;
+  width: 200px;
+  margin-top: 24px;
+}
+.brandstory_container section {
+  /* LGE ONLY */
+}
+.brandstory_container section#lge_only {
+  text-align: center;
+}
+.brandstory_container section#lge_only h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+.brandstory_container section#lge_only h3 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+.brandstory_container section#lge_only h3.collabo_logo {
+  max-width: 308px;
+  margin: 0 auto;
+}
+.brandstory_container section#lge_only .img {
+  margin-top: 20px;
+}
+.brandstory_container section#lge_only .exclusive_product {
+  margin-bottom: 40px;
+}
+.brandstory_container section#lge_only .exclusive_product p {
+  margin-top: 12px;
+}
+.brandstory_container section#lge_only .square_btn {
+  margin-top: 20px;
+}
+.brandstory_container section {
+  /* COLLECTIONS */
+}
+.brandstory_container section#collections h2 + article {
+  margin-top: 40px !important;
+}
+.brandstory_container section#collections article {
+  margin-top: 80px;
+}
+.brandstory_container section#collections article .img_box {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr;
+}
+.brandstory_container section#collections article .img_box img.col2 {
+  grid-column: span 2;
+}
+.brandstory_container section {
+  /* DIRECTOR */
+}
+.brandstory_container section#director {
+  color: #000;
+  padding-bottom: 80px;
+}
+.brandstory_container section#director h2 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 40px;
+}
+.brandstory_container section#director img {
+  margin: 20px 0;
+}
+.brandstory_container section#director strong {
+  font-size: 26px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
+}
+.brandstory_container section {
+  /* OFFLINE SHOWROOM */
+}
+.brandstory_container section#offline_showroom {
+  background-color: #E7DAD0;
+  text-align: center;
+  padding-bottom: 0;
+}
+.brandstory_container section#offline_showroom .layout_inner {
+  padding-bottom: 100px;
+}
+.brandstory_container section#offline_showroom h2 .logo_box img {
+  width: auto;
+  height: 48px;
+  margin: 8px auto 0;
+}
+.brandstory_container section#offline_showroom p {
+  font-size: 17px;
+  color: #444;
+}
+.brandstory_container section#offline_showroom .showroom_intro .txt_box {
+  margin-top: 32px;
+}
+.brandstory_container section#offline_showroom .showroom_intro .txt_box strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.brandstory_container section#offline_showroom .showroom_intro .txt_box span {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.brandstory_container section#offline_showroom .showroom_info {
+  padding-top: 40px;
+}
+.brandstory_container section#offline_showroom .showroom_info video {
+  width: 60%;
+  margin: 0 auto;
+}
+.brandstory_container section#offline_showroom .showroom_info p {
+  margin-top: 20px;
+}
+.brandstory_container section#offline_showroom .showroom_info a {
+  margin-top: 40px;
+}
+.brandstory_container section#offline_showroom .category {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1px;
+  background-color: #111;
+  gap: 1px;
+}
+.brandstory_container section#offline_showroom .category a:hover {
+  opacity: 0.95;
+}
+.brandstory_container section {
+  /* COLLECTION LINE UP */
+}
+.brandstory_container section#collection_line_up {
+  text-align: center;
+}
+.brandstory_container section#collection_line_up ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #111;
+  border-width: 1px 0;
+}
+.brandstory_container section#collection_line_up ul li {
+  padding: 32px 10px 22px;
+}
+.brandstory_container section#collection_line_up ul li:nth-child(odd) {
+  border-right: 1px solid #111;
+}
+.brandstory_container section#collection_line_up ul li .tit_box {
+  letter-spacing: -0.5px;
+  height: 62px;
+}
+.brandstory_container section#collection_line_up ul li .tit_box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.brandstory_container section#collection_line_up ul li .tit_box span {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 3px;
+  color: #444;
+  display: block;
+}
+.brandstory_container section#collection_line_up ul li img {
+  width: auto;
+  height: 126px;
+  margin: 19px auto 17px;
+}
+.brandstory_container section#collection_line_up ul li p {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  line-height: 1.2;
+  font-size: 11px;
+  color: #8f8f8f;
+}
+.brandstory_container section {
+  /* STYLE & TIP */
+}
+.brandstory_container section#style_tip {
+  background-color: #C28542;
+  padding-bottom: 0;
+}
+.brandstory_container section#style_tip .img_box {
+  position: relative;
+}
+.brandstory_container section#style_tip .img_box a.link_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 92px;
+}
+.brandstory_container section#style_tip .img_box .txt_box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.brandstory_container section#style_tip .img_box .txt_box strong {
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background-color: #9F9282;
+  display: inline-block;
+}
+.brandstory_container section#style_tip .img_box .txt_box p {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.brandstory_container section#style_tip .img_box .txt_box p.ty_w {
+  color: #fff;
+}
+.brandstory_container section#style_tip .square_btn {
+  margin-top: 10px;
+}
+.brandstory_container section#style_tip h3 {
+  color: #fff;
+  font-size: 136px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 0.7;
+  margin-top: 30px;
+}
+@media (max-width: 780px) {
+  .brandstory_container section#style_tip h3 {
+    font-size: 17.436vw;
+  }
+}
+.brandstory_container section {
+  /* EPILOGUE */
+}
+.brandstory_container section#epilogue {
+  background-color: #EFEFE9;
+}
+.brandstory_container section#epilogue .txt_box {
+  text-align: center;
+  padding: 32px 0;
+}
+.brandstory_container section#epilogue .txt_box .tit {
+  font-weight: 600;
+}
+.brandstory_container section#epilogue .txt_box .tit h3 {
+  font-size: 20px;
+}
+.brandstory_container section#epilogue .txt_box .tit strong {
+  display: block;
+  margin: 12px 0;
+}
+.brandstory_container section#epilogue .txt_box .info {
+  color: #444;
+  font-size: 17px;
+}

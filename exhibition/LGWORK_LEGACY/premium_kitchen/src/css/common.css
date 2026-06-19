@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("fonts.css");
+@import url("main.css");
+html {
+  font-size: 1px;
+}
+
+.customer_promotion {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .customer_promotion {
+    font-size: clamp(10px, 13rem, 9999rem);
+  }
+}
+.customer_promotion ::-webkit-scrollbar {
+  display: none;
+}
+.customer_promotion ::placeholder {
+  color: #444;
+}
+.customer_promotion div,
+.customer_promotion p,
+.customer_promotion span,
+.customer_promotion a,
+.customer_promotion section,
+.customer_promotion label,
+.customer_promotion input,
+.customer_promotion button,
+.customer_promotion h1,
+.customer_promotion h2,
+.customer_promotion h3,
+.customer_promotion h4,
+.customer_promotion h5,
+.customer_promotion h6,
+.customer_promotion ul,
+.customer_promotion ol,
+.customer_promotion li,
+.customer_promotion header,
+.customer_promotion footer,
+.customer_promotion main,
+.customer_promotion b,
+.customer_promotion i,
+.customer_promotion em,
+.customer_promotion strong,
+.customer_promotion select,
+.customer_promotion article,
+.customer_promotion aside,
+.customer_promotion details,
+.customer_promotion figcaption,
+.customer_promotion figure,
+.customer_promotion footer,
+.customer_promotion header,
+.customer_promotion hgroup,
+.customer_promotion menu,
+.customer_promotion nav,
+.customer_promotion section,
+.customer_promotion object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.customer_promotion h1,
+.customer_promotion h2,
+.customer_promotion h3,
+.customer_promotion h4,
+.customer_promotion h5,
+.customer_promotion h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.customer_promotion table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.customer_promotion ol,
+.customer_promotion ul {
+  list-style: none;
+}
+.customer_promotion a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.customer_promotion button,
+.customer_promotion input,
+.customer_promotion select,
+.customer_promotion textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.customer_promotion input[type=checkbox], .customer_promotion input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.customer_promotion label {
+  cursor: pointer;
+}
+.customer_promotion img,
+.customer_promotion video,
+.customer_promotion svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.customer_promotion option {
+  color: inherit;
+}
+.customer_promotion section {
+  position: relative;
+}
+.customer_promotion picture {
+  display: block;
+  width: 100%;
+}

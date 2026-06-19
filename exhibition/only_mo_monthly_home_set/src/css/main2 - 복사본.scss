@@ -1,0 +1,136 @@
+
+.c-product__list:not(.ty_row){ margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
+  @include screen("mo") { margin-top: 8rem; gap:28rem 8rem; grid-template-columns: repeat(2, 1fr);}
+  .c-product__item{ min-width: 0; position: relative;
+    // 품절상품 & 제품조회실패는 SOLD OUT 처리
+    &.c-product__item--error{ touch-action: none; pointer-events: none;
+      &::after{ content: 'SOLD OUT'; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #efedeb; border-radius: 8rem; display: flex; align-items: center; justify-content: center; color: #000;}
+    }
+    // 품절상품 & 제품조회실패는 SOLD OUT 처리
+    
+    .c-product__visual{ border-radius: 8rem; overflow: hidden;}
+    .c-product__info-container{ padding: 12rem 8rem 0;
+      .c-product__info{ margin-bottom: 12rem;
+        @include screen("mo") { margin-bottom: 6rem;}
+        .c-product__name{ display: block; font-weight: 400; @include ellip();
+          @include screen("mo") { @include ellip(2); height: 35rem;}
+        }
+      }
+      .c-product__price-area{ margin-top: 12rem;
+        @include screen("mo") { margin-top: 0;}
+        .c-product__price-item--original{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem; display: none;
+          @include screen("mo") { margin-bottom: 0;}
+          &::before{ content: '정상가'; font-weight: 500; font-size: 11rem; color: #444;}
+          .c-product__price-value--original{ color: #888; font-size: 14rem;
+            @include screen("mo") { font-size: 13rem;}
+          }
+        }
+        .c-product__price-item--member{ display: flex; align-items: center; color: #ea1917; flex-wrap: wrap;
+          &::before{ content: '최대혜택가'; font-weight: 500; margin-right: auto; display: none;}
+          .discount_rate{ font-size: 16rem; font-weight: 600; margin-right:4rem;
+            @include screen("mo") { font-size: 15rem;}
+            &::after{ content: '%'; }
+          }
+          .c-product__price-value--member{ font-weight: 600; font-size: 16rem; color: #000;
+            @include screen("mo") { font-size: 14rem;}
+          }
+        }
+      }
+      .c-product__badge-container{ margin-left: 0; display: flex; gap: 4rem; white-space: nowrap; padding-top: 2rem; width: 100%;
+        > span{ display: inline-block; font-size: 11rem; padding: 3rem 4rem; background-color: #F3F5F7; color: #444444;
+          @include screen("mo") { font-size: 10rem;}
+        }
+      }
+    }
+  }
+}
+
+.c-product__list.ty_row{ display: grid; gap: 12rem;  grid-template-columns: 1fr 1fr; grid-template-rows: auto;
+  @include screen("mo") { display: flex; flex-wrap: wrap; gap: 8rem;}
+  .c-product__item{ background-color: #fff;border-radius: 8rem; overflow: hidden; position: relative; height: 180rem;
+    @include screen("mo") { width: 100%; height: auto !important;}
+    .c-product__sold-out-hidden-txt{ display: none !important; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba($color: #000000, $alpha: .2); display: flex; align-items: center; justify-content: center;
+    }
+    > span {display: flex; height: 100%; align-items: center;
+      > a{ width: 88rem; height: 88rem; flex-shrink: 0;
+        @include screen("mo") { height: 80rem; width: 80rem;}
+        *{ width: 100%; height: 100%; object-fit: cover;}
+      }
+    }
+    .c-product__info-container{ padding: 0 0 0 8rem; width: calc(100% - 88rem); text-align: right; 
+      @include screen("mo") { padding: 10rem; width: calc(100% - 80rem);}
+      .inner{ width: 100%; height: 100%; position: relative;  display: flex; align-items: flex-end; flex-direction: column; justify-content: flex-end; 
+        @include screen("mo") { display: block;}
+        > a{ width: 100%;
+          .c-product__info{ position: absolute; left: 0; top: 0; text-align: left;
+            @include screen("mo") { position: relative;}
+            .c-product__brand-name{ font-size: 12rem;}
+            .c-product__name{ font-weight: 400; @include ellip(); margin-bottom: 6rem;
+              @include screen("mo") { font-size: 12rem;}
+            }
+          }
+          .c-product__price-area{
+            .c-product__price-item--original{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;
+              @include screen("mo") { margin-bottom: 0;}
+              &::before{ content: '정상가'; font-weight: 500; font-size: 12rem; color: #727780;
+                @include screen("mo") { font-size: 9rem;}
+              }
+            }
+            .c-product__price-item--member{ display: flex; align-items: center; line-height: 1.1; letter-spacing: -0.2rem;
+              &::before{ content: '최대혜택가'; font-weight: 500; margin-right: auto; font-size: 12rem; color: #FD312E; 
+                @include screen("mo") { font-size: 9rem; font-weight: 600;}
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .c-product__price-value--original{ color: #727780; line-height: 1;}
+    .c-product__price-value--member{ font-weight: 600; font-size: 16rem;
+      strong{font-weight: inherit;}
+      @include screen("mo") { font-size: 14rem;}
+    }
+    .discount_rate{ color: #FD312E; font-weight: 600; font-size: 16rem; margin-right: 4rem;
+      @include screen("mo") { font-size: 14rem;}
+      &::after{ content: '%';}
+    }
+    .c-product__badge-container{ display: flex; gap: 4rem; white-space: nowrap;margin-left: 8rem;
+      span{ font-size: 11rem; padding: 3rem 4rem; background-color: #F3F5F7; color:#444; font-weight: 500;
+        @include screen("mo") { font-size: 10rem;}
+        &:nth-child(2){ color: #747474; background-color: #EFEFEF;}
+      }
+    }
+    @at-root .monthly_home_set .lge__item{
+      .c-product__price-area{
+        .c-product__price-item--member{ margin: 3rem 0;
+          &::before{ content: '혜택가' !important; color: #727780 !important;}
+        }
+        .c-product__price-item--final{display: flex; align-items: center; letter-spacing: -.2rem;
+          .c-product__price-label--final{content: "최대혜택가"; font-weight: 600; margin-right: 4rem; font-size: 12rem; color: #FD312E; }
+          .c-product__price-value--final{  font-size: 16rem;
+            strong{ font-weight: 600;}
+            @include screen("mo") { font-size: 14rem; }
+          }
+        }
+      }
+    } 
+  }
+}
+
+@at-root .monthly_home_set .lge__item .c-product__info .c-product__model-id,
+.c-product__list .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__brand-name{ font-weight: 600; color: #444; font-size: 12rem;
+  @include screen("mo") { font-size: 11rem;}
+}
+.lge__item .c-product__info{ display: flex; flex-direction: column-reverse;}
+.c-product__item{
+  .blind{ display: none;}
+}
+  
+/* 품절 */
+.c-product__item.c-product__item--sold-out{ touch-action: none; pointer-events: none;
+  > span > a{ position: relative;
+    &::after{ content: '일시품절'; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: #0005; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: 8rem; white-space: nowrap; @include font-size(12rem); z-index: 1;}
+  }
+  .c-product__info-container{ opacity: .5;}
+}

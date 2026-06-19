@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("fonts.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+@media (max-width: 1420px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.combined_discount {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+.combined_discount ::-webkit-scrollbar {
+  display: none;
+}
+.combined_discount ::placeholder {
+  color: #444;
+}
+.combined_discount div,
+.combined_discount p,
+.combined_discount span,
+.combined_discount a,
+.combined_discount section,
+.combined_discount label,
+.combined_discount input,
+.combined_discount button,
+.combined_discount h1,
+.combined_discount h2,
+.combined_discount h3,
+.combined_discount h4,
+.combined_discount h5,
+.combined_discount h6,
+.combined_discount ul,
+.combined_discount ol,
+.combined_discount li,
+.combined_discount header,
+.combined_discount footer,
+.combined_discount main,
+.combined_discount b,
+.combined_discount i,
+.combined_discount em,
+.combined_discount strong,
+.combined_discount select,
+.combined_discount article,
+.combined_discount aside,
+.combined_discount details,
+.combined_discount figcaption,
+.combined_discount figure,
+.combined_discount footer,
+.combined_discount header,
+.combined_discount hgroup,
+.combined_discount menu,
+.combined_discount nav,
+.combined_discount section,
+.combined_discount object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.combined_discount h1,
+.combined_discount h2,
+.combined_discount h3,
+.combined_discount h4,
+.combined_discount h5,
+.combined_discount h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.combined_discount table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.combined_discount ol,
+.combined_discount ul {
+  list-style: none;
+}
+.combined_discount a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.combined_discount button,
+.combined_discount input,
+.combined_discount select,
+.combined_discount textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.combined_discount input[type=checkbox], .combined_discount input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.combined_discount label {
+  cursor: pointer;
+}
+.combined_discount img,
+.combined_discount video,
+.combined_discount svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.combined_discount option {
+  color: inherit;
+}
+.combined_discount section {
+  position: relative;
+}
+.combined_discount picture {
+  display: block;
+  width: 100%;
+}

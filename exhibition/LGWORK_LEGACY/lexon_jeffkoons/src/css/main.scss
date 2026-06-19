@@ -1,0 +1,250 @@
+@import "var";
+
+.lexon_jeffkoons{
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .lexon_jeffkoons img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; font-size: inherit;}
+  .swiper-wrapper{ height: auto;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* WAVE */
+  .wave{ width: 100%; display: flex; overflow: hidden; 
+    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
+    @keyframes wave {
+      0%{ transform: translateX(0);}
+      100%{ transform: translateX(-100%);}
+    }
+
+    &.reverse > *{ animation-direction: reverse;}
+  }
+
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  
+  /* SWIPER */
+  .nav{
+    span{ display: flex; align-items: center; justify-content: center; width: 48rem; height: 48rem; border-radius: 50%; background: #fff; z-index: 1; cursor: pointer; transition: .3s ease;
+      &::after{ content: ''; width: 20rem; height: 20rem; background: url(https://www.lge.co.kr/home_style_pages/2026/01/lexon_jeffkoons/src/images/arr.svg)no-repeat center center / contain; transition: .3s ease;} 
+      &.nxt::after{ transform: rotate(180deg);}
+      &:hover{
+        &::after{ transform: translateX(-3rem);}
+        &.nxt::after{ transform: rotate(180deg) translateX(-3rem);}
+      }
+      &.swiper-button-disabled{ opacity: .5; cursor: default;}
+    }
+  }
+  .pagi{ bottom: 0;  text-align: center; font-size: 0;
+    span{display: inline-block; width: 8rem; height: 8rem; border-radius: 999rem;  margin: 0 3rem !important; transition: .3s ease; background-color: #ddd; opacity: 1;
+      @include screen("mo") { width: 6rem; height: 6rem;}
+      &.swiper-pagination-bullet-active{ width: 20rem; background-color: #fff;}
+    }
+  }
+  /* //SWIPER */
+
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden;
+    &.key_visual{ max-width: 1420rem; padding: 0 20rem; margin: 0 auto;
+      @include screen("mo") { padding: 0;}
+    }
+    &.limited_edition{ background: url(https://www.lge.co.kr/home_style_pages/2026/01/lexon_jeffkoons/src/images/bg_limited_edition.jpg) no-repeat center bottom/ auto 100%; padding: 100rem 0 90rem; text-align: center;
+      @include screen("mo") { background-image: url(https://www.lge.co.kr/home_style_pages/2026/01/lexon_jeffkoons/src/images/bg_limited_edition_mo.jpg); padding: 60rem 0 80rem;}
+      .tit{ font-size: 36rem; font-weight: 600;
+        @include screen("mo") { font-size: 20rem;}
+        strong{ color: #fff; font-weight: 700;}
+      }
+      .products{ margin-top: 40rem; display: flex; justify-content: center; gap: 20rem; text-align: left; font-size: 16rem; counter-reset: limited_edition;
+        @include screen("mo") { margin-top: 20rem; gap: 8rem; flex-direction: column; padding: 0 20rem; font-size: 13rem;}
+        li{ padding: 32rem 32rem 62rem; background-color: #fff; width: 520rem;
+          @include screen("mo") { width: 100%; padding: 20rem 20rem 30rem;}
+          p{ margin-top: 16rem;
+            @include screen("mo") { margin-top: 12rem;}
+            &::before{ display: inline-block; counter-increment: limited_edition; content: "0"counter(limited_edition); font-weight: 700; margin-right: 10rem;
+              @include screen("mo") { margin-right: 6rem;}
+            }
+          }
+        }
+      } 
+      .info{ color: #fff; font-weight: 500; line-height: 1.7; margin-top: 881rem;
+        @include screen("mo") { margin-top: 444rem;}
+      }
+    }
+    &.products_detail{
+      article{
+        + article{ margin: 76rem 0 150rem;
+          @include screen("mo") { margin: 80rem 0;}
+        }
+        .tit{ font-weight: 700; font-size: 36rem; text-align: center; text-transform: uppercase; margin-bottom: 56rem;
+          @include screen("mo") { font-size: 20rem; margin-bottom: 20rem;}
+          &::before{ content: ''; display: block; width: 1px; height: 114rem; background-color: #000; margin: 0 auto 36rem;
+            @include screen("mo") { height: 60rem; margin-bottom: 20rem;}
+          }
+        }
+        .img_box{ display: flex; gap: 20rem;
+          @include screen("mo") { gap: 12rem;}
+          > *{ width: calc(50% - 10rem); position: relative;
+            @include screen("mo") { width: calc(50% - 6rem);}
+          } 
+          .lamp_box{
+            .lamp_off{ position: absolute; left: 0; top: 0; width: 100%; opacity: 0; transition: .3s ease;}
+            .power_btn{ position: absolute; left: 50%; bottom: 60rem; transform: translateX(-50%); background-color: #fff; border-radius: 999rem; padding: 8rem; font-size: 24rem; cursor: pointer;
+              @include screen("mo") { bottom: 29rem; padding: 4rem; font-size: 15rem;}
+              .inner{ display: flex; position: relative;
+                &::before{ content: ''; width: 50%; height: 100%; border-radius: 999rem; background-color: #47AF0C; position: absolute; left: 50%; top: 0; transition: .5s $expo;}
+                span{ padding: 8rem 0; width: 76rem; border-radius: 999rem; text-align: center; position: relative; color: #fff;
+                  @include screen("mo") { width: 43rem; padding: 6rem 0 5rem;}
+                  &.btn_on{ font-weight: 700;}
+                }
+              }
+            }
+
+            &.off{
+              .lamp_off{ opacity: 1;}
+              .power_btn{ 
+                .inner{
+                  &::before{ left: 0%; background-color: #000;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.designer_masterpiece_chkpoint{
+      h2{ font-size: 64rem; font-weight: 700; line-height: 1.3;
+        @include screen("mo") { font-size: 36rem;}
+      }
+      .designer_masterpiece{ padding: 150rem 0;
+        @include screen("mo") { padding: 120rem 0 80rem;}
+        ul{
+          li{ display: flex; align-items: center;
+            @include screen("mo") { display: block;}
+            &:nth-child(even){ flex-direction: row-reverse;}
+            + li{ margin-top: 80rem;
+              @include screen("mo") { margin-top: 110rem;}
+            }
+            >*{ width: 50%; position: relative;
+              @include screen("mo") { width: 100%;}
+            }
+            .img_box{
+              @include screen("mo") { padding: 0 45rem;
+                .bg{ height: 250rem;}
+              }
+              .char{ position: absolute; right: 11rem; bottom: 0; width: 610rem;
+                @include screen("mo") { width: 320rem; right: 6rem;}
+              }
+            }
+            .txt_box{ padding-left: 81rem; 
+              @include screen("mo") { padding: 32rem 0 0; text-align: center;}
+              span{ font-weight: 700; font-size: 17rem; color: #727780;
+                @include screen("mo") { font-size: 13rem;}
+                &.lao{ font-family: 'Lao MN'; text-transform: uppercase; letter-spacing: -1rem;}
+              }
+              p{margin-top: 27rem; color: #666; line-height: 1.7;
+                @include screen("mo") { margin-top: 12rem;}
+              }
+            }
+
+            &.master_piece{
+              .img_box .char{ width: 584rem;
+                @include screen("mo") { width: 270rem; height: 302rem; object-fit: cover; object-position: left top; right: 45rem;}
+              }
+            }
+          }
+        }
+      }
+      .check_point{
+        .check_point_cont{ display: flex;
+          @include screen("mo") { display: block;}
+          >*{ width: 50%; position: relative;
+            @include screen("mo") { width: 100%;}
+          }
+          .swiper{ height: 870rem;
+            @include screen("mo") { height: 400rem;}
+            .swiper-wrapper{ width: 100%; height: 100%;
+              *{ width: 100%; height: 100%; object-fit: cover;}
+            }
+            .pagi{ position: absolute; left: 0; bottom: 38rem; width: 100%; z-index: 1;
+              @include screen("mo") { bottom: 20rem;}
+            }
+          }
+          .tit_box{ display: flex; flex-direction: column; justify-content: space-between; padding: 86rem 80rem; background-color: #EBE9F8; transition: .5s ease;
+            @include screen("mo") { padding: 20rem 16rem;}
+            ol{ counter-reset: check_point;
+              li{ opacity: .3; line-height: 1.7;  transition: .3s ease; cursor: pointer;
+                @include screen("mo") { letter-spacing: -.7rem;}
+                &::before{  display: inline-block; counter-increment: check_point; content: "0"counter(check_point)"."; margin-right: 8rem;
+                  @include screen("mo") { margin-right: 2rem;}
+                }
+                &.active{ opacity: 1; font-size: 20rem; font-weight: 600; cursor: default;
+                  @include screen("mo") { font-size: 15rem; font-weight: 500;}
+                  &::before{ font-weight: 600;}
+                }
+              }
+            }
+          }
+        }
+        .info{ margin: 40rem 0; padding-top: 16rem; border-top: 1px solid #bbb; font-size: 14rem; color: #666;
+          @include screen("mo") { margin: 20rem 0 40rem; padding-top: 16rem; font-size: 12rem;}
+          p{font-weight: 500;
+            @include screen("mo") { margin-bottom: 2rem;}
+          }
+          ul{ opacity: .6;
+            li::before{ content: '·'; display: inline-block; margin-right: 5rem; transform: scale(1.5) translateY(-1rem);}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "var";
+
+.advertisement_onair_container{ 
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; line-height: 1.4;}
+  p{ font-size: inherit !important;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; 
+    .tit_box{ margin-bottom: 28rem; 
+      @include screen("mo") { margin-bottom: 20rem;}
+      h2{ font-size: 30rem; font-weight: 400;
+        @include screen("mo") { font-size: 16rem;}
+        strong{display: block; font-weight: 600;}
+      }
+    }
+    .link_btn{ cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 17rem 0; width: 260rem; font-weight: 600; border-radius: 8rem; border: 1px solid #DEE1E5; text-align: center; transition: .3s ease; margin: 30rem auto;
+      @include screen("mo") { padding: 13rem; width: 100%;}
+      &::after{ content: ''; display: block; width: 7rem; height: 7rem; border: 1px solid #111; border-width: 0 2px 2px 0; transform: rotate(45deg) translate(4rem, -8rem);}
+      &:hover{ background: rgba($color: #000000, $alpha: .05);}
+    }
+    &.key_visual img{ width: 100%; max-width: 100%;}
+    &.onair_video{ padding-top: 100rem;
+      @include screen("mo") { padding-top: 60rem;}
+
+    }
+  }
+}

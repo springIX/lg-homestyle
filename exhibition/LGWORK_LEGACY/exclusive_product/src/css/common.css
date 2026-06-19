@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("fonts.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+@media (max-width: 1377px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.exclusive_product {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .exclusive_product {
+    font-size: clamp(10px, 14rem, 9999rem);
+  }
+}
+.exclusive_product ::-webkit-scrollbar {
+  display: none;
+}
+.exclusive_product ::placeholder {
+  color: #727780;
+}
+.exclusive_product div,
+.exclusive_product p,
+.exclusive_product span,
+.exclusive_product a,
+.exclusive_product section,
+.exclusive_product label,
+.exclusive_product input,
+.exclusive_product button,
+.exclusive_product h1,
+.exclusive_product h2,
+.exclusive_product h3,
+.exclusive_product h4,
+.exclusive_product h5,
+.exclusive_product h6,
+.exclusive_product ul,
+.exclusive_product ol,
+.exclusive_product li,
+.exclusive_product header,
+.exclusive_product footer,
+.exclusive_product main,
+.exclusive_product b,
+.exclusive_product i,
+.exclusive_product em,
+.exclusive_product strong,
+.exclusive_product select,
+.exclusive_product article,
+.exclusive_product aside,
+.exclusive_product details,
+.exclusive_product figcaption,
+.exclusive_product figure,
+.exclusive_product footer,
+.exclusive_product header,
+.exclusive_product hgroup,
+.exclusive_product menu,
+.exclusive_product nav,
+.exclusive_product section,
+.exclusive_product object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.exclusive_product h1,
+.exclusive_product h2,
+.exclusive_product h3,
+.exclusive_product h4,
+.exclusive_product h5,
+.exclusive_product h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.exclusive_product table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.exclusive_product ol,
+.exclusive_product ul {
+  list-style: none;
+}
+.exclusive_product a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.exclusive_product button,
+.exclusive_product input,
+.exclusive_product select,
+.exclusive_product textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.exclusive_product input[type=checkbox], .exclusive_product input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.exclusive_product label {
+  cursor: pointer;
+}
+.exclusive_product img,
+.exclusive_product video,
+.exclusive_product svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.exclusive_product option {
+  color: inherit;
+}
+.exclusive_product section {
+  position: relative;
+}
+.exclusive_product picture {
+  display: block;
+  width: 100%;
+}

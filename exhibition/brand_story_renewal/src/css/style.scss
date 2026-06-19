@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* SCSS VAR */
+$ci : #F31E11;
+$pd : 20px;
+
+@mixin screen($size) {
+  @if $size == "pc" {
+    @media (min-width: 781px) {
+      @content;
+    }
+  } @else if $size == "mo" {
+    @media (max-width: 780px) {
+      @content;
+    }
+  } 
+}
+
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+@mixin m_full_layout($pd: null) {
+  margin-left: -$layout_pd !important;
+  width: calc(100% + #{$layout_pd * 2}) !important;
+
+  @if $pd == pd {
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+}
+
+/* Ellipsis */
+@mixin ellip($col: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($col == 1) {
+    white-space: nowrap;
+  } @else {
+    white-space: unset;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: $col;
+  }
+}
+/* SCSS VAR */
+
+html { scroll-behavior: smooth;}
+main { background-color: #F9F9F9;}
+
+.brandstory_container{
+  /* COMMON */
+  word-break: keep-all; color: #111; font-family: 'Pretendard', sans-serif; font-size: 14px; font-weight: 400; position: relative; text-align: left; max-width: 780px; margin: 0 auto; line-height: 1.4;
+  *{display: block; margin: 0; padding: 0; border: 0; font: inherit; box-sizing: border-box;}
+  img,video{ display: block; width: 100%;}
+  ol, ul { list-style: none;}
+  a{ text-decoration: unset; color: inherit;}
+  @include screen("pc") { .mo{ display: none !important;}}
+  @include screen("mo") { .pc{ display: none !important;}}
+  h2{ color: #000; text-align: center; line-height: 1.2;
+    &.font_cg{ font-size:40px; margin-bottom: 40px;
+    } 
+    span{ font-size: 20px; display: block; line-height: 1.6;}
+    strong{ font-family: 'Pretendard', sans-serif; font-weight: 600; font-size: 20px; margin-top: 4px; line-height: 1.6;}
+  }
+  .font_cg { font-family: "Cormorant Garamond", 'Pretendard',serif;}
+  .layout_inner{ padding-left: $pd; padding-right: $pd; position: relative;}
+  .square_btn{ width: 100%; padding: 14px; border: 1px solid rgba($color: #111, $alpha: .5); text-align: center; font-size:16px; font-weight: 600; color: #111; display: flex; justify-content: center; align-items: center; gap: 6px;
+    &::after{ content: ''; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png)no-repeat center center / contain; display: block; width: 20px; height: 20px;}
+    &.ty_white{ border-color: #fff; color: #fff;
+      &::after{ filter: invert(1);}
+    }
+  }
+  .txt{color: #444; line-height: 20px;}
+  .pd_txt{ padding:$pd $pd 0;
+    h3{ font-size:26px; font-weight: 700; text-transform:capitalize;
+      a{ display: flex; align-items: flex-end; gap: 4px;
+        &::after{ content: ''; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png)no-repeat center center / contain; display: block; width: 24px; height: 24px; transform: translateY(-1px);}
+      }
+      span{ line-height: 18px; margin-top: 4px; display: block; font-size:14px; font-weight: 600; opacity: .5;}
+    }
+    p{ margin-top: 12px; }
+  }
+  .pd_l{ padding-left: 80px;}
+  .pd_r{ padding-right: 80px;}
+  .gap_40 * + *{ margin-top: 40px;}
+  .gap_20 * + *{ margin-top: 20px;}
+  .gap_2 * + *{ margin-top: 2px;}
+  #oms_module_anchor{ position: absolute; left: 0; bottom: 56px; height: 1px; width: 100%;}
+
+  /* COMMON */
+
+  /* <img src="https://static-store.lge.co.kr/editor/549/2605080018549.png" alt="x" class="icon_x"> */
+  .icon_x{ display: inline-block; width: 16px; margin: 0 4px; transform: translateY(1px);
+    &.ty2{ transform: translateY(9px);}
+  }
+  
+  .contents_tabbar{ width: 100%; overflow: hidden; display: flex; justify-content:space-between; white-space: nowrap; background-color: #111; font-size:13px; padding: 0 20px; position: sticky; left: 0; top: 56px; z-index: 10;
+    @include screen("pc") { top: 0; justify-content: center; gap: 40px;}
+    li a{ padding: 16px 0 14px; border-bottom: 2px solid transparent; color: #fff; 
+      &:hover{ color: $ci; font-weight: 600; border-bottom-color: $ci;}
+    }
+  }
+
+  section{ overflow: hidden; position: relative; padding: 100px 0;
+    /* ABOUT STORY */
+    &#about_story{ padding: 50px $pd 60px; text-align: center; font-weight: 600; background-color: #F4F0EA;
+      h2{ font-size:14px; opacity: .5; margin-bottom: 12px;}
+      p{ font-size:16px; line-height: 30px;}
+      .square_btn{ display: inline-flex; width: 200px; margin-top: 24px;}
+    }
+
+    /* LGE ONLY */
+    &#lge_only{ text-align: center;
+      h2{ font-weight: 600; font-size:32px; margin-bottom: 28px;} 
+      h3{ font-weight: 700; font-size:26px; margin-bottom: 4px;
+        &.collabo_logo{ max-width: 308px; margin: 0 auto;}
+      }
+      .img{ margin-top: 20px;}
+      .exclusive_product{ margin-bottom: 40px;
+        p{ margin-top: 12px; }
+      }
+      .square_btn{ margin-top: 20px;}
+    }
+
+    /* COLLECTIONS */
+    &#collections{
+      h2{ 
+        + article{ margin-top: 40px !important;}
+      }
+      article{ margin-top: 80px;
+        .img_box{ display: grid; gap: 2px; grid-template-columns: 1fr 1fr;
+          img.col2{ grid-column: span 2;}
+        }
+      }
+    }
+
+    /* DIRECTOR */
+    &#director{ color: #000; padding-bottom: 80px;
+      h2{ text-align: left; font-weight: 700; font-size: 40px;}
+      img{ margin: 20px 0;}
+      strong{ font-size: 26px; font-weight: 600; display: block; margin-bottom: 20px;}
+    }
+
+    /* OFFLINE SHOWROOM */
+    &#offline_showroom{ background-color: #E7DAD0; text-align: center; padding-bottom: 0;
+      .layout_inner{ padding-bottom: 100px;}
+      h2 .logo_box img{ width: auto; height: 48px; margin: 8px auto 0;}
+      p{ font-size: 17px; color: #444;}
+      .showroom_intro{
+        .txt_box{ margin-top: 32px;
+          strong{ display: block; font-size: 20px; font-weight: 600; margin-bottom: 12px;}
+          span{ font-weight: 600; margin-bottom: 12px;}
+        }
+      }
+      .showroom_info{ padding-top: 40px;
+        video{ width: 60%; margin: 0 auto;}
+        p{ margin-top: 20px;}
+        a{ margin-top: 40px;}
+      }
+      .category{ display: grid; grid-template-columns: 1fr 1fr; padding: 1px; background-color: #111; gap: 1px;
+        a:hover{ opacity: .95;}
+      }
+    }
+    
+    /* COLLECTION LINE UP */
+    &#collection_line_up{ text-align: center;
+      ul{ display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #111; border-width: 1px 0;
+        li{ padding: 32px 10px 22px;
+          &:nth-child(odd){ border-right:1px solid #111;}
+          .tit_box{ letter-spacing: -.5px; height: 62px;
+            h3{ font-size: 16px; font-weight: 700; line-height: 1.25;}
+            span{ font-size: 13px; font-weight: 500; margin-top: 3px; color: #444; display: block;}
+          }
+          img{ width: auto; height: 126px; margin: 19px auto 17px;}
+          p{ border-top: 1px solid #ddd; padding-top: 10px; line-height: 1.2; font-size: 11px; color: #8f8f8f;}
+        }
+      }
+    }
+
+    /* STYLE & TIP */
+    &#style_tip{ background-color: #C28542; padding-bottom: 0;
+      .img_box{ position: relative;
+        a.link_btn{ position: absolute; right: 0; top: 0; width: 92px;} 
+        .txt_box{ position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; padding: 20px;
+          strong{ font-weight: 600; font-size: 15px; color: #fff; padding: 4px 8px; border-radius: 999px; background-color: #9F9282; display: inline-block;}
+          p{ font-size: 13px; font-weight: 500;  margin-top: 12px;
+            &.ty_w{ color: #fff;}
+          }
+        }
+      }
+      .square_btn{ margin-top: 10px;}
+      h3{ color: #fff; font-size: 136px; letter-spacing: -2px; font-weight: 700; white-space: nowrap; text-align: center;line-height: .7; margin-top: 30px; 
+        @include screen("mo") { font-size: 17.436vw;}
+      }
+    }
+    
+    /* EPILOGUE */
+    &#epilogue{ background-color: #EFEFE9;
+      .txt_box{ text-align: center; padding: 32px 0;
+        .tit{ font-weight: 600;
+          h3{ font-size: 20px;}
+          strong{ display: block; margin: 12px 0;}
+        }
+        .info{ color: #444; font-size: 17px;}
+      }
+    }
+  }
+}

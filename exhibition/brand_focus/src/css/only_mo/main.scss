@@ -1,0 +1,397 @@
+@import "var";
+
+.brand_focus{ max-width: 780px; margin: 0 auto;
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .brand_focus img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; font-size: inherit;}
+  .swiper-wrapper{ height: auto;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* WAVE */
+  .wave{ width: 100%; display: flex; overflow: hidden; 
+    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
+    @keyframes wave {
+      0%{ transform: translateX(0);}
+      100%{ transform: translateX(-100%);}
+    }
+
+    &.reverse > *{ animation-direction: reverse;}
+  }
+
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+
+  /* 품절 */
+  .c-product__item.c-product__item--sold-out{ touch-action: none; pointer-events: none;
+    > span > a{ position: relative;
+      &::after{ content: '일시품절'; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: #0005; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: 8rem; white-space: nowrap; @include font-size(12rem); z-index: 1;}
+    }
+    .c-product__info-container{ opacity: .5;}
+  }
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden;
+    .notice_box{ margin-top: 60rem; padding-top: 16rem; border-top: 1px solid #e7e7e7; text-align: left;
+      @include screen("mo") { margin-top: 32rem; padding-top: 16rem;}
+      + .notice_box{ margin-top: 40rem; padding-top: 0; border-top: none;
+        @include screen("mo") { margin-top: 20rem;}
+      }
+      button{ font-size: 17rem;  color: #666;
+        @include screen("mo") { font-size: 13rem; width: 100%; display: flex; align-items: baseline; justify-content: center; gap: 10rem;}
+        &::after{ content: ''; display: inline-block; width: 8rem; height: 8rem; border: 1px solid #111; border-width:0 2px 2px 0; transform: rotate(45deg) translate(4rem, -10rem); opacity: .5;
+          @include screen("mo") { border-width: 0 1px 1px 0; transform: rotate(45deg) translate(-4rem, -1rem); width: 5rem; height: 5rem;}
+        }  
+      }
+      .notice_cont{ display: none; color: $gray; font-size: 14rem;  margin-top: 15rem;
+        @include screen("mo") {  font-size: 12rem;}
+        strong{ display: block; margin-bottom: 4rem; font-weight: 600;}
+        ul{ line-height: 1.5;
+          + strong{ margin-top: 10rem;}
+          li{ padding-left: 10rem; position: relative;
+            &.bold{ font-weight: 600;}
+            @include screen("mo") { padding-left: 7rem;}
+            &::before{ content: '∙'; position: absolute; left: 0; top: 0;
+              @include screen("mo") { top: -1rem;}
+            }
+          }
+        }
+      }
+      &.on{
+        button::after{ transform: rotate(225deg) translate(-8rem, 7rem);
+          @include screen("mo") { transform: rotate(225deg) translate(2rem, -1rem);}
+        }
+        .notice_cont{ display: block;}
+      }
+      @include screen("pc") { 
+        &.ty_cnt{ text-align: center; 
+          ul li{ display: flex; justify-content: center; padding: 0; gap: 4rem;
+            &::before{ position: relative;}
+          }
+        }
+      }
+      @include screen("mo") { 
+        &.ty_mo_cnt{ text-align: center;
+          button{ justify-content: center; gap: 8rem;}
+          ul li{ padding: 0; gap: 4rem;
+            &::before{ position: relative; top: -1rem; left: -3rem;}
+          }
+        }
+      }
+      &.ty_not_line{ padding-top: 0; border: none; margin-top: 20rem;
+        @include screen("mo") { margin-top: 10rem;}
+      }
+      &.ty_left{ text-align: left;}
+    }
+
+    &.navigation_tab { position: sticky; top: 0; background-color: #111111; color: #fff; font-size: 20rem; font-weight: 500; z-index: 5;
+      @include screen("mo2") { font-size: 14rem; white-space: nowrap; font-weight: 400; top: 56px;}
+      nav{
+        ul{ display: flex; justify-content: center; gap: 103rem; padding: 0 20rem;
+          @include screen("mo") { gap: 30rem; justify-content: flex-start; overflow-x: auto; scroll-behavior: smooth;}
+          li{
+            a{ padding:  14rem 0 12rem; border-bottom: 2px solid transparent;}
+            &.on a{ color: $ci;
+              border-bottom-color: $ci;
+            }
+          }
+        }
+      }
+      &.ty_cnt nav ul{ justify-content: center;}
+      &.ty2{ background-color: #fff; color: #666; font-size: 13rem;
+        nav{
+          ul{ padding: 12rem 20rem; gap: 8rem;
+            li{
+              a{ border: 1px solid #ddd; border-radius: 999rem; padding: 8rem 14rem; }
+              &.on a{ color: #fff; background-color: #111; border-color: #111;}
+            }
+          }
+        }
+      }
+    }
+
+    &.brand_benefit{ padding: 100rem 0; text-align: center;
+      @include screen("mo") { padding: 60rem 0;}
+      .txt_box{ margin-bottom: 32rem;
+        h2{ font-size: 36rem; font-weight: 700; color: #000;
+          @include screen("mo") { font-size: 26rem;}
+        }
+        p{ font-size: 20rem;
+          @include screen("mo") { font-size: 15rem;}
+          strong{ font-weight: 600; color: #000;}
+        }
+      }
+      .coupon_btn{ width: 350rem;
+        @include screen("mo") { width: 100%;}
+      }
+    }
+
+    &.brand_focus_list{ background-color: #F5F3F1; padding: 100rem 0;
+      @include screen("mo") { padding: 60rem 0;}
+      article{
+        + article{ margin-top: 200rem;
+          @include screen("mo") { margin-top: 60rem;}
+        }
+        .tit_box{  margin-bottom: 16rem;
+          @include screen("mo") { margin-bottom: 12rem;}
+          a{ font-size: 24rem; font-weight: 700; color: #111; display: flex; align-items: center; gap: 10rem; line-height: 1.4;
+            @include screen("mo") { font-size: 22rem; gap: 7rem; margin-bottom: 2rem;}
+            &::after{ content: ''; width: 10rem; height: 10rem; border: 1px solid #111; border-width: 0 2px 2px 0; transform: rotate(-45deg); transition: .3s ease;
+              @include screen("mo") { border-width: 0 1px 1px 0;}
+            }
+            &:hover::after{ margin-left: 5rem;}
+          }
+          .hashtag{ font-size: 18rem;
+            @include screen("mo") { font-size: 14rem;}
+          }
+        }
+        .products_box{
+          .pd_banner{}
+
+          .c-product__list{ margin-top: 16rem; display: grid; gap: 16rem; grid-template-columns: repeat(4, 1fr);
+            @include screen("mo") { margin-top: 8rem; gap:28rem 8rem; grid-template-columns: repeat(2, 1fr);}
+            .c-product__item{ min-width: 0; position: relative;
+              // 품절상품 & 제품조회실패는 SOLD OUT 처리
+              &.c-product__item--error{ touch-action: none; pointer-events: none;
+                &::after{ content: 'SOLD OUT'; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #efedeb; border-radius: 8rem; display: flex; align-items: center; justify-content: center; color: #000;}
+              }
+              // 품절상품 & 제품조회실패는 SOLD OUT 처리
+              
+              .c-product__visual{ border-radius: 8rem; overflow: hidden;}
+              .c-product__info-container{ padding: 12rem 8rem 0;
+                .c-product__info{ margin-bottom: 12rem;
+                  @include screen("mo") { margin-bottom: 14rem;}
+                  .c-product__brand-name{ font-weight: 600;}
+                  .c-product__name{ display: block; font-weight: 400; @include ellip;
+                    @include screen("mo") { @include ellip(2); height: 36.5rem;}
+                  }
+                }
+                .c-product__price-area{ margin-top: 12rem;
+                  @include screen("mo") { margin-top: 14rem;}
+                  .c-product__price-item--original{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem;
+                    @include screen("mo") { margin-bottom: 0;}
+                    &::before{ content: '정상가'; font-weight: 500; font-size: 11rem;}
+                  }
+                  .c-product__price-item--member{ display: flex; align-items: center; color: #FD312E;
+                    &::before{ content: '최대혜택가'; font-weight: 500; margin-right: auto;
+                      @include screen("mo") { font-size: 11rem;}
+                    }
+                    .discount_rate{ font-size: 16rem; font-weight: 600; margin-right:4rem;
+                      @include screen("mo") { font-size: 15rem;}
+                      &::after{ content: '%'; }
+                    }
+                    .c-product__price-value--member{ font-weight: 700; color: #000;
+                      @include screen("mo") { font-size: 15rem;}
+                    }
+                  }
+                }
+                .c-product__badge-container{  margin-top: 7rem;
+                  > span{ font-size: 11rem; padding: 3rem 4rem; background-color: #FEF3F3; color: #FD312E; margin-right: 2rem;}
+                  .maximum_benefit_price::before{ content: '카드 ';}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.brand_focus_list_ty2{ padding: 100rem 0;
+      @include screen("mo") { padding: 0 0 60rem; margin-top: -60rem;}
+      .pd_list_wrap{display: grid; grid-template-columns: 1fr 1fr; gap: 100rem 28rem;
+        @include screen("mo") {display: block;  padding-bottom: 20rem;}
+        article{
+          @include screen("mo") { padding-top: 60rem;}
+          .banner_box{ margin-bottom: 24rem;
+            @include screen("mo") { margin-bottom: 16rem; margin-left: -$layout_pd; width: calc(100% + $layout_pd*2);}
+          }
+          .pd_list{
+            .tit_box{
+              a{ font-weight: 600; font-size: 24rem; color: #000; display: flex; align-items: center; gap: 5rem; line-height: 1.4;
+                @include screen("mo") { font-size: 18rem; gap: 3rem;}
+                &::after{ content: ''; width: 10rem; height: 10rem; border: 1px solid #000; border-width: 0 1px 1px 0; transform: rotate(-45deg);
+                  @include screen("mo") { width: 8rem; height: 8rem;}
+                }
+              }
+              .hashtag{ color: #444; margin-top: 2rem; @include font-size(18rem);
+                @include screen("mo") { font-size: 14rem;}
+              }
+            }
+            .c-product{ border-top: 1px solid #000; margin-top: 28rem;
+              @include screen("mo") { margin-top: 16rem;}
+              .blind{ display: none;}
+              .c-product__list{
+                .c-product__item{padding: 16rem 0; 
+                  @include screen("mo") { padding: 4rem 0;} 
+                  + .c-product__item{ border-top: 1px solid #DDD;}
+                  > span{ display: flex;
+                    > a{ width: 88rem; height: 88rem; overflow: hidden; border-radius: 8rem; margin-right: 16rem; flex-shrink: 0;
+                      @include screen("mo") { margin-right: 12rem;}
+                      *{ width: 100%; height: 100%; object-fit: cover;}
+                    }
+                    .c-product__info-container{ width: calc(100% - 88rem);
+                      @include screen("mo") { width: calc(100% - 80rem);}
+                      .inner{ height: 100%; padding: 10rem 0;
+                        > a{ height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+                          .c-product__info{font-size: 14rem; color: #444;
+                            .c-product__brand-name{ font-weight: 600; font-size: 12rem;
+                              @include screen("mo") { font-size: 11rem;}
+                            } 
+                            .c-product__name{@include ellip();
+                              @include screen("mo") { font-size: 12rem;}
+                            }
+                          }
+                          .c-product__price-area{
+                            .c-product__price-list{
+                              .c-product__price-item{
+                                &.c-product__price-item--original{ display: none;}
+                                &.c-product__price-item--member{ font-size: 16rem;
+                                  @include screen("mo") { font-size: 14rem;}
+                                  .discount_rate{font-weight: 600; color:#FD312E;
+                                    &::after{ content: '%';}
+                                  }
+                                  .c-product__price-value--member{ font-weight: 600; color: #000;}
+                                }
+                              }
+                            }
+                          }
+                        }
+                        .c-product__badge-container{position: absolute; right: 0; bottom: 0;
+                          > *{ font-size: 11rem; font-weight: 500; color: #444; padding: 3rem 5rem; background: #F3F5F7; border-radius: 2rem;}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.ty3{
+        section{
+          @include screen("pc") { 
+            &.brand_focus_list_ty2 .pd_list_wrap{ gap: 100rem 48rem;}
+            &.more_promotion{ padding-bottom: 0;
+              .promotion_list li a strong{ margin-bottom: 6rem;}
+            }
+          }
+        }
+
+        .pd_list_wrap article .pd_list .c-product .c-product__list .c-product__item > span{
+          > a{
+            @include screen("mo") {  width: 80rem; height: 80rem;}
+          }
+          .c-product__info-container .inner .c-product__badge-container{ display: inline-block; position: relative; bottom: 2rem; left: 5rem;}
+        }
+      }
+    } 
+
+    &.introduce{ padding: 80rem 0; background-color: #000000; color: #fff; text-align: center;
+      @include screen("mo") { padding: 30rem 0;}
+      h2{ font-weight: 700; font-size: 36rem; margin-bottom: 16rem;
+        @include screen("mo") { font-size: 26rem; margin-bottom: 4rem;}
+        &.kor{ font-size: 22rem; font-weight: 600;}
+      }
+      p{ font-size: 20rem; font-weight: 500; color: #ccc;
+        @include screen("mo") { font-size: 16rem;}
+      }
+    }
+
+    &.more_promotion{ padding-bottom: 100rem;
+      @include screen("mo") { padding-bottom: 60rem;}
+      h2{font-weight: 700; font-size: 36rem; text-align: center; color: #000;
+        @include screen("mo") { font-size: 26rem;}
+      }
+      .promotion_list{ margin-top: 32rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20rem;
+        @include screen("mo") { margin-top: 28rem; grid-template-columns: 1fr 1fr; gap: 32rem 12rem;}
+        li{
+          a{
+            .img_box{
+              img{ width: 100%;}
+            }
+            strong{ display: block; margin: 12rem 0 6rem; font-size: 19rem; font-weight: 600; color: #000;
+              @include screen("mo") { margin-bottom: 2rem; font-size: 15rem;}
+            }
+            p{ font-size: 16rem; color: #666;
+              @include screen("mo") { font-size: 14rem;}
+            }
+          }
+        }
+        @include screen("pc") { 
+          &.ty_under_4{ display: flex; justify-content: center;
+            li{ width: 330rem;}
+          }
+        }
+      }
+    }
+  }
+
+  &.brand_focus_0209{
+    .notice_box{ padding-top: 32rem;
+      @include screen("mo") { padding-top: 16rem;}
+      button{ color: #666; font-weight: 400;
+      &::after{ opacity: .5;}
+      @include screen("mo") { justify-content: center; gap: 9rem;}
+    }
+    }
+    .brand_benefit{ background-color: #F8F6F4;
+      .txt_box h2{ color: #000;}
+      .coupon_btn{ width: 563rem;
+        @include screen("mo") { width: 100%;}
+      }
+      .notice_box{ margin-top: 0; border:none;}
+    }
+  }
+}

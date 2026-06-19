@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.lil_square {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .lil_square img {
+  max-width: unset;
+}
+
+.lil_square abbr, .lil_square acronym, .lil_square address, .lil_square applet, .lil_square article, .lil_square aside, .lil_square audio, .lil_square big, .lil_square blockquote, .lil_square body, .lil_square canvas, .lil_square caption, .lil_square center, .lil_square cite, .lil_square code, .lil_square dd, .lil_square details, .lil_square dfn, .lil_square div, .lil_square dl, .lil_square dt, .lil_square embed, .lil_square fieldset, .lil_square figcaption, .lil_square figure, .lil_square footer, .lil_square form, .lil_square h1, .lil_square h2, .lil_square h3, .lil_square h4, .lil_square h5, .lil_square h6, .lil_square header, .lil_square hgroup, .lil_square html, .lil_square iframe, .lil_square img, .lil_square ins, .lil_square kbd, .lil_square label, .lil_square legend, .lil_square li, .lil_square mark, .lil_square menu, .lil_square nav, .lil_square object, .lil_square ol, .lil_square output, .lil_square p, .lil_square pre, .lil_square q, .lil_square ruby, .lil_square samp, .lil_square section, .lil_square small, .lil_square strike, .lil_square summary, .lil_square table, .lil_square tbody, .lil_square td, .lil_square textarea, .lil_square tfoot, .lil_square th, .lil_square thead, .lil_square time, .lil_square tr, .lil_square tt, .lil_square ul, .lil_square var, .lil_square video {
+  color: inherit;
+}
+.lil_square {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.lil_square .layout_inner {
+  position: relative;
+  max-width: 100%;
+  width: 1420rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20rem !important;
+  padding-right: 20rem !important;
+}
+.lil_square .inner {
+  width: 100%;
+  position: relative;
+}
+.lil_square .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.lil_square .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lil_square .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lil_square .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.lil_square .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lil_square .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.lil_square .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.lil_square {
+  /* WAVE */
+}
+.lil_square .wave {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.lil_square .wave > * {
+  flex-shrink: 0;
+  animation: wave 100s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.lil_square .wave.reverse > * {
+  animation-direction: reverse;
+}
+@media (min-width: 781px) {
+  .lil_square .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .lil_square .pc {
+    display: none !important;
+  }
+}
+.lil_square {
+  /* SWIPER */
+}
+.lil_square .scr_bar {
+  width: 210rem;
+  height: 3rem;
+  margin: 38rem auto 0;
+  background-color: #ddd;
+}
+@media (max-width: 780px) {
+  .lil_square .scr_bar {
+    width: 80rem;
+  }
+}
+.lil_square .scr_bar .swiper-scrollbar-drag {
+  background-color: #000;
+}
+.lil_square {
+  /* //SWIPER */
+}
+.lil_square .ls_cont {
+  padding: 100rem 0;
+}
+@media (max-width: 780px) {
+  .lil_square .ls_cont {
+    padding: 60rem 0;
+  }
+}
+.lil_square .square_btn {
+  display: block;
+  font-weight: 600;
+  padding: 17rem 0;
+  width: 340rem;
+  border-radius: 8rem;
+  background-color: #000;
+  text-align: center;
+  margin-top: 40rem;
+  transition: 0.5s ease;
+  color: #fff;
+  margin: 40rem auto 0;
+}
+@media (max-width: 780px) {
+  .lil_square .square_btn {
+    margin-top: 20rem;
+  }
+}
+.lil_square .square_btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.lil_square section {
+  position: relative;
+  overflow: hidden;
+}
+.lil_square section#key_visual {
+  background-color: #F6EFE8;
+}
+.lil_square section#key_visual .txt_box {
+  display: flex;
+  gap: 40rem;
+  padding: 34rem 0 60rem;
+}
+@media (max-width: 780px) {
+  .lil_square section#key_visual .txt_box {
+    display: block;
+    padding: 18rem 0 40rem;
+  }
+}
+.lil_square section#key_visual .txt_box ul {
+  width: 100%;
+}
+.lil_square section#key_visual .txt_box ul li {
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rem 0;
+}
+@media (max-width: 780px) {
+  .lil_square section#key_visual .txt_box ul li {
+    padding: 16rem 0;
+  }
+}
+.lil_square section#key_visual .txt_box ul li:first-child {
+  border-color: #000;
+}
+.lil_square section#key_visual .txt_box ul li span {
+  color: #666;
+}
+.lil_square section#key_visual .txt_box ul li p {
+  font-weight: 500;
+  font-size: 18rem;
+}
+@media (max-width: 780px) {
+  .lil_square section#key_visual .txt_box ul li p {
+    font-size: 16rem;
+  }
+}
+@media (max-width: 780px) {
+  .lil_square section#key_visual .txt_box ul + ul li:first-child {
+    border-color: #ccc;
+  }
+}
+.lil_square section#life_makes_sense .txt_box {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 780px) {
+  .lil_square section#life_makes_sense .txt_box {
+    display: block;
+  }
+}
+.lil_square section#life_makes_sense .txt_box > * {
+  width: 100%;
+}
+.lil_square section#life_makes_sense .txt_box h2 {
+  font-weight: 700;
+  font-size: 40rem;
+}
+@media (max-width: 780px) {
+  .lil_square section#life_makes_sense .txt_box h2 {
+    font-size: 26rem;
+  }
+}
+.lil_square section#life_makes_sense .txt_box p {
+  padding-left: 52rem;
+  border-left: 1px solid #ccc;
+  font-weight: 500;
+}
+@media (max-width: 780px) {
+  .lil_square section#life_makes_sense .txt_box p {
+    padding: 52rem 0 0;
+    border: none;
+    font-size: 18rem;
+  }
+}
+@media (min-width: 781px) {
+  .lil_square section#life_makes_sense.ty_hongye .ls_cont .txt_box p {
+    min-height: 154rem;
+  }
+}
+.lil_square section#portfolio {
+  background-color: #F5F5F5;
+}
+.lil_square section#portfolio h2 {
+  font-size: 36rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 32rem;
+}
+@media (max-width: 780px) {
+  .lil_square section#portfolio h2 {
+    font-size: 28rem;
+  }
+}
+@media (max-width: 780px) {
+  .lil_square section#portfolio .swiper {
+    overflow: visible;
+  }
+  .lil_square section#portfolio .swiper.ty_m_one .swiper-slide {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+}
+.lil_square section#portfolio .swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.lil_square section#portfolio .swiper .portfolio_grid_page {
+  display: grid;
+  gap: 32rem 12rem;
+}
+.lil_square section#portfolio .swiper .portfolio_grid_page.cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.lil_square section#portfolio .swiper .portfolio_grid_page.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.lil_square section#portfolio .swiper .portfolio_grid_page .swiper-slide {
+  width: 100% !important;
+  min-width: 0;
+  margin: 0 !important;
+  display: block;
+}
+.lil_square section#portfolio .swiper .txt_box {
+  font-size: 18rem;
+  margin-top: 18rem;
+}
+@media (max-width: 780px) {
+  .lil_square section#portfolio .swiper .txt_box {
+    font-size: 16rem;
+    margin-top: 12rem;
+  }
+}
+.lil_square section#portfolio .swiper .txt_box span {
+  font-weight: 500;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lil_square section#portfolio .swiper .txt_box p {
+  color: #444444;
+  margin-top: 6rem;
+}
+@media (max-width: 780px) {
+  .lil_square section#portfolio .swiper .txt_box p {
+    font-size: 14rem;
+  }
+}
+@media (max-width: 780px) {
+  .lil_square section#portfolio .square_btn {
+    margin-top: 38rem;
+  }
+}

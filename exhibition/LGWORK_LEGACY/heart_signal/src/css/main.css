@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.heart_signal_container {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
+  max-width: unset;
+}
+
+.heart_signal_container abbr, .heart_signal_container acronym, .heart_signal_container address, .heart_signal_container applet, .heart_signal_container article, .heart_signal_container aside, .heart_signal_container audio, .heart_signal_container big, .heart_signal_container blockquote, .heart_signal_container body, .heart_signal_container canvas, .heart_signal_container caption, .heart_signal_container center, .heart_signal_container cite, .heart_signal_container code, .heart_signal_container dd, .heart_signal_container details, .heart_signal_container dfn, .heart_signal_container div, .heart_signal_container dl, .heart_signal_container dt, .heart_signal_container embed, .heart_signal_container fieldset, .heart_signal_container figcaption, .heart_signal_container figure, .heart_signal_container footer, .heart_signal_container form, .heart_signal_container h1, .heart_signal_container h2, .heart_signal_container h3, .heart_signal_container h4, .heart_signal_container h5, .heart_signal_container h6, .heart_signal_container header, .heart_signal_container hgroup, .heart_signal_container html, .heart_signal_container iframe, .heart_signal_container img, .heart_signal_container ins, .heart_signal_container kbd, .heart_signal_container label, .heart_signal_container legend, .heart_signal_container li, .heart_signal_container mark, .heart_signal_container menu, .heart_signal_container nav, .heart_signal_container object, .heart_signal_container ol, .heart_signal_container output, .heart_signal_container p, .heart_signal_container pre, .heart_signal_container q, .heart_signal_container ruby, .heart_signal_container samp, .heart_signal_container section, .heart_signal_container small, .heart_signal_container strike, .heart_signal_container summary, .heart_signal_container table, .heart_signal_container tbody, .heart_signal_container td, .heart_signal_container textarea, .heart_signal_container tfoot, .heart_signal_container th, .heart_signal_container thead, .heart_signal_container time, .heart_signal_container tr, .heart_signal_container tt, .heart_signal_container ul, .heart_signal_container var, .heart_signal_container video {
+  color: inherit;
+  line-height: 1.4;
+  font-size: inherit;
+}
+.heart_signal_container {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.heart_signal_container .inner {
+  width: 100%;
+  position: relative;
+}
+.heart_signal_container .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heart_signal_container .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heart_signal_container .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heart_signal_container .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.heart_signal_container .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heart_signal_container .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.heart_signal_container .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (min-width: 781px) {
+  .heart_signal_container .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .heart_signal_container .pc {
+    display: none !important;
+  }
+}
+.heart_signal_container .pd_btm {
+  padding-bottom: 60rem;
+}
+.heart_signal_container {
+  /* 제품 */
+}
+.heart_signal_container .c-product__item .blind {
+  display: none !important;
+}
+.heart_signal_container .c-product__item {
+  /* 품절 */
+}
+.heart_signal_container .c-product__item.c-product__item--sold-out > span > a {
+  position: relative;
+}
+.heart_signal_container .c-product__item.c-product__item--sold-out > span > a::after {
+  content: "일시품절";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8rem;
+  white-space: nowrap;
+  font-size: clamp(8px, 12rem, 9999rem);
+  z-index: 1;
+}
+.heart_signal_container .c-product__item.c-product__item--sold-out .c-product__info-container {
+  opacity: 0.5;
+}
+.heart_signal_container .c-product__item {
+  /* 일반 */
+}
+.heart_signal_container .c-product__item .c-product__info-container {
+  margin-top: 16rem;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__info {
+  margin-bottom: 8rem;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__info .c-product__brand-name {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__info .c-product__name {
+  width: 300rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--original,
+.heart_signal_container .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--sale {
+  display: none;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  font-size: clamp(8px, 15rem, 9999rem);
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member * {
+  font-weight: 600;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .discount_rate {
+  color: #EA1917;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .discount_rate.c-product__price-label--member {
+  font-size: clamp(8px, 14rem, 9999rem);
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__badge-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__badge-container::before {
+  content: "결합할인";
+}
+.heart_signal_container .c-product__item .c-product__info-container .c-product__badge-container span, .heart_signal_container .c-product__item .c-product__info-container .c-product__badge-container::before {
+  display: block;
+  font-weight: 500;
+  font-size: 10rem;
+  padding: 3rem 5rem;
+  border-radius: 2rem;
+  background: #f6f6f6;
+  color: #444;
+}
+.heart_signal_container .banner_box {
+  margin-top: 20rem;
+}
+.heart_signal_container .banner_box a + a {
+  margin-top: 20rem;
+}
+.heart_signal_container {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.heart_signal_container section {
+  position: relative;
+  overflow: hidden;
+  padding: 60rem 20rem;
+}
+.heart_signal_container section#heart_signal_products {
+  text-align: center;
+}
+.heart_signal_container section#heart_signal_products .tit_box strong {
+  display: inline-block;
+  font-weight: 600;
+  padding: 3rem 10rem;
+  color: #E1FA7C;
+  background-color: #111;
+  border-radius: 999rem;
+}
+.heart_signal_container section#heart_signal_products .tit_box h2 {
+  font-weight: 700;
+  font-size: 26rem;
+  margin-top: 6rem;
+}
+.heart_signal_container section#heart_signal_products article {
+  margin-top: 20rem;
+  border-radius: 12rem;
+  overflow: hidden;
+}
+.heart_signal_container section#heart_signal_products article .pd_list {
+  padding: 30rem 0 35rem;
+  background-color: #fff;
+}
+.heart_signal_container section#heart_signal_products article .pd_list h3 {
+  font-weight: 600;
+  font-size: 18rem;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide {
+  width: 200rem;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide > span > a {
+  transform: scale(0.6);
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide .c-product__info-container {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+@media (max-width: 780px) {
+  .heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide.swiper-slide-prev > span > a {
+    transform-origin: 80% center;
+  }
+  .heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide.swiper-slide-next > span > a {
+    transform-origin: 20% center;
+  }
+}
+.heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide.swiper-slide-active > span > a {
+  transform: scale(1);
+  opacity: 1;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .swiper .swiper-slide.swiper-slide-active .c-product__info-container {
+  opacity: 1;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .pagi {
+  font-size: 0;
+  margin-top: 20rem;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .pagi span {
+  display: inline-block;
+  margin: 0 3rem;
+  background-color: #ddd;
+  opacity: 1;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 999rem;
+  transition: 0.3s ease;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .pagi span.swiper-pagination-bullet-active {
+  background-color: #111;
+  width: 20rem;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .nav span {
+  position: absolute;
+  left: calc(50% + 110rem);
+  transform: translateX(-50%);
+  top: 85rem;
+  width: 24rem;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+.heart_signal_container section#heart_signal_products article .pd_list .nav span.prv {
+  left: calc(50% - 110rem);
+}
+.heart_signal_container section#heart_signal_products article .pd_list .nav span.prv img {
+  transform: rotate(180deg);
+}
+.heart_signal_container section#heart_signal_products article .pd_list .nav span.swiper-button-disabled {
+  opacity: 0.3;
+}

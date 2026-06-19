@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.customer_promotion {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  /* WAVE */
+  /* SWIPER */
+  /* //SWIPER */
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .customer_promotion img {
+  max-width: unset;
+}
+
+.customer_promotion abbr, .customer_promotion acronym, .customer_promotion address, .customer_promotion applet, .customer_promotion article, .customer_promotion aside, .customer_promotion audio, .customer_promotion big, .customer_promotion blockquote, .customer_promotion body, .customer_promotion canvas, .customer_promotion caption, .customer_promotion center, .customer_promotion cite, .customer_promotion code, .customer_promotion dd, .customer_promotion details, .customer_promotion dfn, .customer_promotion div, .customer_promotion dl, .customer_promotion dt, .customer_promotion embed, .customer_promotion fieldset, .customer_promotion figcaption, .customer_promotion figure, .customer_promotion footer, .customer_promotion form, .customer_promotion h1, .customer_promotion h2, .customer_promotion h3, .customer_promotion h4, .customer_promotion h5, .customer_promotion h6, .customer_promotion header, .customer_promotion hgroup, .customer_promotion html, .customer_promotion iframe, .customer_promotion img, .customer_promotion ins, .customer_promotion kbd, .customer_promotion label, .customer_promotion legend, .customer_promotion li, .customer_promotion mark, .customer_promotion menu, .customer_promotion nav, .customer_promotion object, .customer_promotion ol, .customer_promotion output, .customer_promotion p, .customer_promotion pre, .customer_promotion q, .customer_promotion ruby, .customer_promotion samp, .customer_promotion section, .customer_promotion small, .customer_promotion strike, .customer_promotion summary, .customer_promotion table, .customer_promotion tbody, .customer_promotion td, .customer_promotion textarea, .customer_promotion tfoot, .customer_promotion th, .customer_promotion thead, .customer_promotion time, .customer_promotion tr, .customer_promotion tt, .customer_promotion ul, .customer_promotion var, .customer_promotion video {
+  color: inherit;
+}
+.customer_promotion .swiper-wrapper {
+  height: auto;
+}
+.customer_promotion .layout_inner {
+  position: relative;
+  max-width: 100%;
+  width: 1420rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20rem !important;
+  padding-right: 20rem !important;
+}
+.customer_promotion .inner {
+  width: 100%;
+  position: relative;
+}
+.customer_promotion .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.customer_promotion .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.customer_promotion .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.customer_promotion .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.customer_promotion .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customer_promotion .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.customer_promotion .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.customer_promotion .wave {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.customer_promotion .wave > * {
+  flex-shrink: 0;
+  animation: wave 100s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.customer_promotion .wave.reverse > * {
+  animation-direction: reverse;
+}
+@media (min-width: 781px) {
+  .customer_promotion .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .customer_promotion .pc {
+    display: none !important;
+  }
+}
+.customer_promotion .nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48rem;
+  height: 48rem;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.customer_promotion .nav span::after {
+  content: "";
+  width: 20rem;
+  height: 20rem;
+  background: url(../images/arr.svg) no-repeat center center/contain;
+  transition: 0.3s ease;
+}
+.customer_promotion .nav span.nxt::after {
+  transform: rotate(180deg);
+}
+.customer_promotion .nav span:hover::after {
+  transform: translateX(-3rem);
+}
+.customer_promotion .nav span:hover.nxt::after {
+  transform: rotate(180deg) translateX(-3rem);
+}
+.customer_promotion .nav span.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.customer_promotion .pagi {
+  bottom: 0;
+  margin-top: 25rem;
+  text-align: center;
+  font-size: 0;
+}
+.customer_promotion .pagi span {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999rem;
+  margin: 0 3rem !important;
+  transition: 0.3s ease;
+  background-color: #ddd;
+  opacity: 1;
+}
+.customer_promotion .pagi span.swiper-pagination-bullet-active {
+  width: 20rem;
+  background-color: #000;
+}
+.customer_promotion .tit_box {
+  margin-bottom: 32rem;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .customer_promotion .tit_box {
+    margin-bottom: 28rem;
+  }
+}
+.customer_promotion .tit_box span {
+  letter-spacing: -0.5rem;
+  color: #d9520e;
+  font-weight: 500;
+}
+.customer_promotion .tit_box h3 {
+  margin-top: 6rem;
+  font-weight: 600;
+  font-size: 28rem;
+  letter-spacing: -1rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion .tit_box h3 {
+    font-size: 22rem;
+    margin-top: 4rem;
+  }
+}
+.customer_promotion .pk_btn {
+  border-radius: 8rem;
+  font-weight: 600;
+  width: 362rem;
+  padding: 16rem;
+  margin: 40rem auto 0;
+  text-align: center;
+  font-size: 20rem;
+  background-color: #000;
+  color: #fff;
+}
+@media (max-width: 780px) {
+  .customer_promotion .pk_btn {
+    width: 100%;
+    padding: 14rem;
+    font-size: 15rem;
+    margin-top: 29rem;
+  }
+}
+.customer_promotion section {
+  position: relative;
+  overflow: hidden;
+}
+.customer_promotion section.pk_cont {
+  padding: 100rem 0;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.pk_cont {
+    padding: 60rem 0;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28rem 0;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul {
+    justify-content: space-between;
+    gap: 32rem 0;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li {
+  width: 50%;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li {
+    width: calc(50% - 5rem);
+  }
+}
+@media (min-width: 781px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li:nth-child(odd) a {
+    padding-right: 16rem;
+  }
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li:nth-child(even) a {
+    padding-left: 16rem;
+  }
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li:not(.last_line) {
+    border-bottom: 1px solid #d9dde1;
+    padding-bottom: 28rem;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li a {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a:nth-last-child(-n+2) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a:hover .txt_box p {
+  text-decoration: underline;
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a .txt_box {
+  width: 100%;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li a .txt_box {
+    margin-top: 8rem;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a .txt_box span {
+  color: #444;
+  font-size: 14rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li a .txt_box span {
+    font-size: 12rem;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a .txt_box p {
+  margin-top: 2rem;
+  font-size: 18rem;
+  font-weight: 500;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li a .txt_box p {
+    font-size: 14rem;
+    letter-spacing: -0.4rem;
+  }
+}
+.customer_promotion section.premium_Kitchen_brand .brand_list ul li a .img_box {
+  width: 240rem;
+  flex-shrink: 0;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.premium_Kitchen_brand .brand_list ul li a .img_box {
+    width: 100%;
+  }
+}
+.customer_promotion section.kitchen_renovation_reviews {
+  background-color: #f5f5f5;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.kitchen_renovation_reviews .swiper {
+    overflow: visible;
+  }
+}
+.customer_promotion section.kitchen_renovation_reviews .swiper .nav span {
+  position: absolute;
+  left: 32rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.customer_promotion section.kitchen_renovation_reviews .swiper .nav span.nxt {
+  left: auto;
+  right: 32rem;
+}
+.customer_promotion section.all_about_kitchen .swiper {
+  border-radius: 8rem;
+  overflow: hidden;
+  padding: 1px;
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide {
+  display: flex;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide {
+    display: block;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide > * {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box {
+  border: 1px solid #DFDFDF;
+  border-width: 1px 0 1px 1px;
+  border-radius: 8rem 0 0 8rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box {
+    border-radius: 8rem 8rem 0 0;
+    border-width: 1px 1px 0 1px;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 40rem;
+  width: 100%;
+  color: #fff;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box {
+    padding: 24rem;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box span {
+  font-weight: 500;
+  font-size: 14rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box span {
+    font-size: 13rem;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box p {
+  font-size: 24rem;
+  font-weight: 600;
+  margin-top: 4rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box p {
+    font-size: 20rem;
+  }
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .interior_box .txt_box p br:not(.both) {
+    display: none;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a {
+  padding-top: 20rem;
+  border: 1px solid #dfdfdf;
+  position: relative;
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a:nth-child(4) {
+  border-bottom-right-radius: 8rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a {
+    height: 170rem;
+    padding-top: 8rem;
+  }
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a:nth-child(3) {
+    border-bottom-left-radius: 8rem;
+  }
+}
+@media (min-width: 781px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a:nth-child(2) {
+    border-top-right-radius: 8rem;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a img {
+  width: 247rem;
+  margin: 0 auto;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a img {
+    width: 110rem;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a img.full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a img.full {
+    position: relative;
+    width: 110rem;
+    height: 110rem;
+    border-radius: 8rem;
+    object-fit: cover;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a .txt_box {
+  width: 100%;
+  font-size: 14rem;
+  color: #444;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a .txt_box {
+    padding-bottom: 12rem;
+    font-size: 12rem;
+  }
+}
+.customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a .txt_box span {
+  font-weight: 600;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a .txt_box span {
+    font-size: 11rem;
+  }
+}
+@media (max-width: 780px) {
+  .customer_promotion section.all_about_kitchen .swiper .swiper-slide .pd_list a .txt_box p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.customer_promotion section.kitchen_curation {
+  background-color: #F2F0EB;
+}
+.customer_promotion section.kitchen_curation .kitchen_curation_cont {
+  margin-top: 32rem;
+}
+.customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul {
+  position: relative;
+  display: flex;
+  gap: 18px;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul {
+    gap: 10rem;
+    flex-wrap: wrap;
+  }
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li {
+    width: calc(50% - 5rem);
+  }
+}
+.customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 18rem;
+}
+@media (max-width: 780px) {
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li {
+    gap: 10rem;
+  }
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li:last-child {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10rem;
+  }
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li:last-child a {
+    width: calc(50% - 5rem);
+  }
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li:last-child a:first-child {
+    order: 2;
+  }
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li:last-child a:nth-child(2) {
+    order: 1;
+  }
+  .customer_promotion section.kitchen_curation .kitchen_curation_cont .pd_list .pd_list_slot ul li:last-child a:last-child {
+    order: 3;
+    width: 100%;
+  }
+}

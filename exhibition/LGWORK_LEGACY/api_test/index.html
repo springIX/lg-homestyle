@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <title>대고객 프로모션</title>
+
+  <!-- Preload critical hero images for faster LCP (Largest Contentful Paint) -->
+  <link rel="preload" as="image"
+    href="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/images/kv.jpg"
+    media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" as="image"
+    href="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/images/kv_mo.jpg"
+    media="(max-width: 768px)" fetchpriority="high">
+
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="https://www.lge.co.kr/home_style_pages/2025/11/api_test/src/css/common.css" as="style">
+  <link rel="stylesheet" href="https://www.lge.co.kr/home_style_pages/2025/11/api_test/src/css/common.css">
+
+</head>
+
+<body>
+  <div class="customer_promotion">
+    <section class="key_visual">
+      <picture>
+        <source media="(min-width: 769px)"
+          srcset="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/images/kv.jpg"
+          type="image/jpeg">
+        <source media="(max-width: 768px)"
+          srcset="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/images/kv_mo.jpg"
+          type="image/jpeg">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/images/kv_mo.jpg" alt=""
+          style="width: 100%; display: block;">
+      </picture>
+    </section>
+    <section class="api_products cp_cont">
+      <div class="layout_inner">
+        <div class="txt_box">
+          <h2>신제품 구매하기</h2>
+          <div class="products_tab">
+            <button type="button" data-type="standalone" class="on">닷컴 단독 제품</button>
+            <button type="button" data-type="recommended">추천 제품</button>
+          </div>
+        </div>
+        <div id="products"></div>
+      </div>
+    </section>
+    <section>
+      <button type="button" class="infBigCoupon" data-evt-gubun="brandWeek" style="font-size:30px">쿠폰 다운로드 TEST</button>
+    </section>
+
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/js/jquery-ui.js"></script>
+  <!-- <script src="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/js/swiper.min.js"></script>
+  <script src="https://www.lge.co.kr/home_style_pages/2025/10/customer-promotion/src/js/main.js"></script> -->
+  <script src="src/js/api.js"></script>
+
+  <!-- 쿠폰 다운로드 관련 .js 시작 -->
+  <script type="text/javascript" src="https://www.lge.co.kr/kr/event/common/event_validation.js"></script>
+  <script type="text/javascript" src="https://www.lge.co.kr/kr/event/common/event_common.js"></script>
+  <script type="text/javascript" src="https://www.lge.co.kr/kr/event/2025/11/17_big_coupon/js/event_layer.js"></script>
+  <!-- 쿠폰 다운로드 .js 끝 -->
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1.5px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.brand_focus {
+  background-color: #ffffff;
+  color: #444;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 14rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (min-width: 0px) {
+  .brand_focus {
+    font-size: clamp(10px, 13rem, 9999rem);
+  }
+}
+.brand_focus ::-webkit-scrollbar {
+  display: none;
+}
+.brand_focus ::placeholder {
+  color: #666;
+}
+.brand_focus div,
+.brand_focus p,
+.brand_focus span,
+.brand_focus a,
+.brand_focus section,
+.brand_focus label,
+.brand_focus input,
+.brand_focus button,
+.brand_focus h1,
+.brand_focus h2,
+.brand_focus h3,
+.brand_focus h4,
+.brand_focus h5,
+.brand_focus h6,
+.brand_focus ul,
+.brand_focus ol,
+.brand_focus li,
+.brand_focus header,
+.brand_focus footer,
+.brand_focus main,
+.brand_focus b,
+.brand_focus i,
+.brand_focus em,
+.brand_focus strong,
+.brand_focus select,
+.brand_focus article,
+.brand_focus aside,
+.brand_focus details,
+.brand_focus figcaption,
+.brand_focus figure,
+.brand_focus footer,
+.brand_focus header,
+.brand_focus hgroup,
+.brand_focus menu,
+.brand_focus nav,
+.brand_focus section,
+.brand_focus object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.brand_focus h1,
+.brand_focus h2,
+.brand_focus h3,
+.brand_focus h4,
+.brand_focus h5,
+.brand_focus h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.brand_focus table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.brand_focus ol,
+.brand_focus ul {
+  list-style: none;
+}
+.brand_focus a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.brand_focus button,
+.brand_focus input,
+.brand_focus select,
+.brand_focus textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.brand_focus input[type=checkbox], .brand_focus input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.brand_focus label {
+  cursor: pointer;
+}
+.brand_focus img,
+.brand_focus video,
+.brand_focus svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.brand_focus option {
+  color: inherit;
+}
+.brand_focus section {
+  position: relative;
+}
+.brand_focus picture {
+  display: block;
+  width: 100%;
+}

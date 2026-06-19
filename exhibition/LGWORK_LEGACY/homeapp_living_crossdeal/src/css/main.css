@@ -1,0 +1,1234 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.homeapp_living_crossdeal {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  /* WAVE */
+  /* SWIPER */
+  /* //SWIPER */
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .homeapp_living_crossdeal img {
+  max-width: unset;
+}
+
+.homeapp_living_crossdeal abbr, .homeapp_living_crossdeal acronym, .homeapp_living_crossdeal address, .homeapp_living_crossdeal applet, .homeapp_living_crossdeal article, .homeapp_living_crossdeal aside, .homeapp_living_crossdeal audio, .homeapp_living_crossdeal big, .homeapp_living_crossdeal blockquote, .homeapp_living_crossdeal body, .homeapp_living_crossdeal canvas, .homeapp_living_crossdeal caption, .homeapp_living_crossdeal center, .homeapp_living_crossdeal cite, .homeapp_living_crossdeal code, .homeapp_living_crossdeal dd, .homeapp_living_crossdeal details, .homeapp_living_crossdeal dfn, .homeapp_living_crossdeal div, .homeapp_living_crossdeal dl, .homeapp_living_crossdeal dt, .homeapp_living_crossdeal embed, .homeapp_living_crossdeal fieldset, .homeapp_living_crossdeal figcaption, .homeapp_living_crossdeal figure, .homeapp_living_crossdeal footer, .homeapp_living_crossdeal form, .homeapp_living_crossdeal h1, .homeapp_living_crossdeal h2, .homeapp_living_crossdeal h3, .homeapp_living_crossdeal h4, .homeapp_living_crossdeal h5, .homeapp_living_crossdeal h6, .homeapp_living_crossdeal header, .homeapp_living_crossdeal hgroup, .homeapp_living_crossdeal html, .homeapp_living_crossdeal iframe, .homeapp_living_crossdeal img, .homeapp_living_crossdeal ins, .homeapp_living_crossdeal kbd, .homeapp_living_crossdeal label, .homeapp_living_crossdeal legend, .homeapp_living_crossdeal li, .homeapp_living_crossdeal mark, .homeapp_living_crossdeal menu, .homeapp_living_crossdeal nav, .homeapp_living_crossdeal object, .homeapp_living_crossdeal ol, .homeapp_living_crossdeal output, .homeapp_living_crossdeal p, .homeapp_living_crossdeal pre, .homeapp_living_crossdeal q, .homeapp_living_crossdeal ruby, .homeapp_living_crossdeal samp, .homeapp_living_crossdeal section, .homeapp_living_crossdeal small, .homeapp_living_crossdeal strike, .homeapp_living_crossdeal summary, .homeapp_living_crossdeal table, .homeapp_living_crossdeal tbody, .homeapp_living_crossdeal td, .homeapp_living_crossdeal textarea, .homeapp_living_crossdeal tfoot, .homeapp_living_crossdeal th, .homeapp_living_crossdeal thead, .homeapp_living_crossdeal time, .homeapp_living_crossdeal tr, .homeapp_living_crossdeal tt, .homeapp_living_crossdeal ul, .homeapp_living_crossdeal var, .homeapp_living_crossdeal video {
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.4;
+}
+.homeapp_living_crossdeal .swiper-wrapper {
+  height: auto;
+}
+.homeapp_living_crossdeal .layout_inner {
+  position: relative;
+  max-width: 100%;
+  width: 1420rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20rem !important;
+  padding-right: 20rem !important;
+}
+.homeapp_living_crossdeal .inner {
+  width: 100%;
+  position: relative;
+}
+.homeapp_living_crossdeal .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homeapp_living_crossdeal .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.homeapp_living_crossdeal .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.homeapp_living_crossdeal .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.homeapp_living_crossdeal .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.homeapp_living_crossdeal .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.homeapp_living_crossdeal .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.homeapp_living_crossdeal .wave {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.homeapp_living_crossdeal .wave > * {
+  flex-shrink: 0;
+  animation: wave 100s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.homeapp_living_crossdeal .wave.reverse > * {
+  animation-direction: reverse;
+}
+@media (min-width: 781px) {
+  .homeapp_living_crossdeal .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .pc {
+    display: none !important;
+  }
+}
+.homeapp_living_crossdeal .nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48rem;
+  height: 48rem;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.homeapp_living_crossdeal .nav span::after {
+  content: "";
+  width: 20rem;
+  height: 20rem;
+  background: url(https://www.lge.co.kr/home_style_pages/2026/01/homeapp_living_crossdeal/src/images/arr.svg) no-repeat center center/contain;
+  transition: 0.3s ease;
+}
+.homeapp_living_crossdeal .nav span.nxt::after {
+  transform: rotate(180deg);
+}
+.homeapp_living_crossdeal .nav span:hover::after {
+  transform: translateX(-3rem);
+}
+.homeapp_living_crossdeal .nav span:hover.nxt::after {
+  transform: rotate(180deg) translateX(-3rem);
+}
+.homeapp_living_crossdeal .nav span.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.homeapp_living_crossdeal .pagi {
+  bottom: 0;
+  margin-top: 25rem;
+  text-align: center;
+  font-size: 0;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .pagi {
+    margin-top: 20rem;
+  }
+}
+.homeapp_living_crossdeal .pagi span {
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999rem;
+  margin: 0 3rem !important;
+  transition: 0.3s ease;
+  background-color: #ddd;
+  opacity: 1;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .pagi span {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.homeapp_living_crossdeal .pagi span.swiper-pagination-bullet-active {
+  width: 20rem;
+  background-color: #000;
+}
+.homeapp_living_crossdeal .scr_bar {
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 80rem;
+  height: 3rem;
+  margin: 27rem auto 0;
+}
+.homeapp_living_crossdeal .scr_bar .swiper-scrollbar-drag {
+  background-color: #000;
+}
+.homeapp_living_crossdeal .slide_nav {
+  justify-content: center;
+  gap: 8rem;
+  margin-top: 30rem;
+}
+.homeapp_living_crossdeal .slide_nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36rem;
+  height: 32rem;
+  border-radius: 6rem;
+  background: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid #DEE1E5;
+}
+.homeapp_living_crossdeal .slide_nav span::after {
+  content: "";
+  width: 16rem;
+  height: 16rem;
+  background: url(https://www.lge.co.kr/home_style_pages/2026/01/homeapp_living_crossdeal/src/images/arr.svg) no-repeat center center/contain;
+  transition: 0.3s ease;
+}
+.homeapp_living_crossdeal .slide_nav span.nxt::after {
+  transform: rotate(180deg);
+}
+.homeapp_living_crossdeal .slide_nav span:hover::after {
+  transform: translateX(-3rem);
+}
+.homeapp_living_crossdeal .slide_nav span:hover.nxt::after {
+  transform: rotate(180deg) translateX(-3rem);
+}
+.homeapp_living_crossdeal .slide_nav span.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.homeapp_living_crossdeal .slide_nav .total_crnt {
+  font-size: 14rem;
+}
+.homeapp_living_crossdeal .slide_nav .total_crnt .total {
+  color: #727780;
+}
+.homeapp_living_crossdeal .slide_nav .total_crnt .total::before {
+  content: "/ ";
+}
+.homeapp_living_crossdeal .slide_nav .total_crnt .crnt {
+  font-weight: 600;
+}
+.homeapp_living_crossdeal .notice_box {
+  margin-top: 60rem;
+  padding-top: 16rem;
+  border-top: 1px solid #e7e7e7;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box {
+    margin-top: 32rem;
+    padding-top: 16rem;
+  }
+}
+.homeapp_living_crossdeal .notice_box button {
+  font-size: 17rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 15rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box button {
+    font-size: 13rem;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.homeapp_living_crossdeal .notice_box button::after {
+  content: "";
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid #111;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(2rem, -8rem);
+  filter: invert(0.5);
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box button::after {
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg) translate(-4rem, -2rem);
+  }
+}
+.homeapp_living_crossdeal .notice_box .notice_cont {
+  display: none;
+  color: #888;
+  font-size: 14rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box .notice_cont {
+    font-size: 12rem;
+  }
+}
+.homeapp_living_crossdeal .notice_box .notice_cont strong {
+  display: block;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+.homeapp_living_crossdeal .notice_box .notice_cont ul {
+  line-height: 1.5;
+}
+.homeapp_living_crossdeal .notice_box .notice_cont ul + strong {
+  margin-top: 10rem;
+}
+.homeapp_living_crossdeal .notice_box .notice_cont ul li {
+  padding-left: 10rem;
+  position: relative;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box .notice_cont ul li {
+    padding-left: 7rem;
+  }
+}
+.homeapp_living_crossdeal .notice_box .notice_cont ul li::before {
+  content: "∙";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box .notice_cont ul li::before {
+    top: -2rem;
+  }
+}
+.homeapp_living_crossdeal .notice_box.on button::after {
+  transform: rotate(225deg) translate(-5rem, 5rem);
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .notice_box.on button::after {
+    transform: rotate(225deg);
+  }
+}
+.homeapp_living_crossdeal .notice_box.on .notice_cont {
+  display: block;
+}
+.homeapp_living_crossdeal .notice_box.ty_black {
+  border-top-color: #666;
+}
+@media (min-width: 781px) {
+  .homeapp_living_crossdeal .notice_box.ty_cnt {
+    text-align: center;
+  }
+  .homeapp_living_crossdeal .notice_box.ty_cnt .notice_cont ul li {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 4rem;
+  }
+  .homeapp_living_crossdeal .notice_box.ty_cnt .notice_cont ul li::before {
+    position: relative;
+  }
+}
+.homeapp_living_crossdeal .pd_b {
+  padding-bottom: 100rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .pd_b {
+    padding-bottom: 60rem;
+  }
+}
+.homeapp_living_crossdeal .cont_bg {
+  background-color: #DCD3C6;
+}
+.homeapp_living_crossdeal .home_set_tit {
+  text-align: center;
+  padding: 100rem 0 32rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .home_set_tit {
+    padding: 60rem 0 28rem;
+  }
+}
+.homeapp_living_crossdeal .home_set_tit h2 {
+  font-size: 28rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .home_set_tit h2 {
+    font-size: 22rem;
+  }
+}
+.homeapp_living_crossdeal .home_set_tit h2 em {
+  color: #ea1917;
+}
+.homeapp_living_crossdeal .home_set_tit p {
+  font-size: 18rem;
+  color: #444;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .home_set_tit p {
+    font-size: 15rem;
+    margin-top: 2rem;
+  }
+}
+.homeapp_living_crossdeal .home_set_btn {
+  display: block;
+  font-size: 16rem;
+  font-weight: 600;
+  padding: 17rem 0 15rem;
+  width: 260rem;
+  border-radius: 8rem;
+  border: 1px solid #D9DDE1;
+  text-align: center;
+  margin: 32rem auto 0;
+  transition: 0.5s ease;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .home_set_btn {
+    font-size: 15rem;
+    padding: 14rem 0;
+    width: 100%;
+    margin-top: 20rem;
+  }
+}
+.homeapp_living_crossdeal .home_set_btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.homeapp_living_crossdeal .home_set_btn.ty_black {
+  background-color: #111;
+  color: #fff;
+}
+.homeapp_living_crossdeal .home_set_tab {
+  display: flex;
+  justify-content: center;
+  gap: 16rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .home_set_tab {
+    margin-bottom: 12rem;
+    gap: 8rem;
+  }
+  .homeapp_living_crossdeal .home_set_tab.m_scr {
+    justify-content: flex-start;
+    padding: 0 20rem;
+    overflow-x: auto;
+  }
+}
+.homeapp_living_crossdeal .home_set_tab button {
+  padding: 8rem 24rem;
+  background-color: #fff;
+  border-radius: 999rem;
+  font-size: 18rem;
+  color: #666;
+  transition: 0.3s ease;
+  border: 1px solid #DEE1E5;
+  white-space: nowrap;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .home_set_tab button {
+    padding: 8rem 14rem;
+    font-size: 13rem;
+  }
+}
+.homeapp_living_crossdeal .home_set_tab button.on {
+  background-color: #111;
+  color: #fff;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) {
+  margin-top: 16rem;
+  display: grid;
+  gap: 32rem 12rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) {
+    margin-top: 8rem;
+    gap: 32rem 8rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item {
+  min-width: 0;
+  position: relative;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item.c-product__item--error {
+  touch-action: none;
+  pointer-events: none;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item.c-product__item--error::after {
+  content: "SOLD OUT";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #efedeb;
+  border-radius: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__visual {
+  border-radius: 8rem;
+  overflow: hidden;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container {
+  padding: 12rem 8rem 0;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__info {
+  margin-bottom: 12rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__info {
+    margin-bottom: 14rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__info .c-product__brand-name {
+  font-weight: 600;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__info .c-product__name {
+  display: block;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__info .c-product__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: unset;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: 2;
+    height: 36.5rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area {
+  margin-top: 12rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area {
+    margin-top: 14rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--original {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--original {
+    margin-bottom: 0;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--original::before {
+  content: "정상가";
+  font-weight: 500;
+  font-size: 11rem;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member {
+  display: flex;
+  align-items: center;
+  color: #ea1917;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member::before {
+  content: "최대혜택가";
+  font-weight: 500;
+  margin-right: auto;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member::before {
+    content: "혜택가";
+    font-size: 11rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .discount_rate {
+  font-size: 16rem;
+  font-weight: 600;
+  margin-right: 4rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .discount_rate {
+    font-size: 15rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .discount_rate::after {
+  content: "%";
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .c-product__price-value--member {
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member .c-product__price-value--member {
+    font-size: 15rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__badge-container {
+  margin-top: 7rem;
+  padding-top: 8rem;
+  border-top: 1px solid #ddd;
+}
+.homeapp_living_crossdeal .c-product__list:not(.ty_row) .c-product__item .c-product__info-container .c-product__badge-container > span {
+  font-size: 11rem;
+  padding: 3rem 4rem;
+  background-color: #FEF3F3;
+  color: #EA1917;
+  margin-right: 2rem;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row {
+  display: grid;
+  gap: 12rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item {
+  background-color: #fff;
+  border-radius: 8rem;
+  overflow: hidden;
+  position: relative;
+  height: 180rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item {
+    width: 100%;
+    height: auto !important;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__sold-out-hidden-txt {
+  display: none !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item > span {
+  display: flex;
+  height: 100%;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item > span > a {
+  width: 180rem;
+  height: 100%;
+  flex-shrink: 0;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item > span > a {
+    height: 100%;
+    width: 132rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item > span > a * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container {
+  padding: 28rem;
+  width: 100%;
+  text-align: right;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container {
+    padding: 10rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner {
+    display: block;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a {
+  width: 100%;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info {
+    position: relative;
+    margin-bottom: 18rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__brand-name, .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__name.home__app-lge__title {
+  font-size: 14rem;
+  font-weight: 600;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__brand-name, .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__name.home__app-lge__title {
+    font-size: 10rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__name {
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: unset;
+  display: -webkit-box;
+  /* autoprefixer: off */
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: 2;
+  min-height: 40rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__name {
+    min-height: 34rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--original {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--original {
+    margin-bottom: 0;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--original::before {
+  content: "정상가";
+  font-weight: 500;
+  font-size: 12rem;
+  color: #727780;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--original::before {
+    font-size: 9rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--member {
+  display: flex;
+  align-items: center;
+  line-height: 1.1;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--member::before {
+  content: "최대혜택가";
+  font-weight: 500;
+  margin-right: auto;
+  font-size: 12rem;
+  color: #EA1917;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container .inner > a .c-product__price-area .c-product__price-item--member::before {
+    font-size: 9rem;
+    font-weight: 600;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__price-value--original {
+  color: #727780;
+  line-height: 1;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__price-value--member {
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 1;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__price-value--member {
+    font-size: 14rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .discount_rate {
+  color: #EA1917;
+  font-weight: 600;
+  font-size: 18rem;
+  margin-right: 4rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .discount_rate {
+    font-size: 13rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .discount_rate::after {
+  content: "%";
+  font-size: 12rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .discount_rate::after {
+    font-size: 11rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__badge-container {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__badge-container span {
+  font-size: 10rem;
+  padding: 3rem 4rem;
+  background-color: #FEF3F3;
+  color: #EA1917;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__badge-container span {
+    font-size: 9rem;
+  }
+}
+.homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__badge-container span:nth-child(2) {
+  color: #747474;
+  background-color: #EFEFEF;
+}
+.homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--member {
+  margin: 3rem 0;
+}
+.homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--member::before {
+  content: "혜택가" !important;
+  color: #727780 !important;
+}
+.homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--final {
+  display: flex;
+  justify-content: space-between;
+}
+.homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--final .c-product__price-label--final {
+  content: "최대혜택가";
+  font-weight: 500;
+  margin-right: auto;
+  font-size: 12rem;
+  color: #EA1917;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--final .c-product__price-label--final {
+    font-size: 9rem;
+    font-weight: 600;
+  }
+}
+.homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--final .c-product__price-value--fianl {
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 1;
+  color: #EA1917;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal .lge__item .c-product__price-area .c-product__price-item--final .c-product__price-value--fianl {
+    font-size: 14rem;
+  }
+}
+
+.homeapp_living_crossdeal .lge__item .c-product__info {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.homeapp_living_crossdeal section {
+  position: relative;
+  overflow: hidden;
+}
+.homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box {
+  width: 682rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box button, .homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box a {
+  width: 100%;
+  display: block;
+}
+.homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box button + *, .homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box a + * {
+  margin-top: 12rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box button + *, .homeapp_living_crossdeal section#benefits .benefits_coupon .coupon_box a + * {
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_info .swiper {
+    overflow: visible;
+  }
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li {
+  border-radius: 8rem;
+  background-color: #F6F4F5;
+  padding: 21rem 36rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li {
+    padding: 20rem 20rem 20rem 32rem;
+  }
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box span {
+  color: #444;
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box strong, .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box a {
+  display: block;
+  font-weight: 600;
+  font-size: 20rem;
+  margin: 4rem 0 8rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box strong, .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box a {
+    font-size: 16rem;
+    margin: 2rem 0;
+  }
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box a::after {
+  content: "";
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid #111;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg) translate(5rem, 1rem);
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box a::after {
+    width: 6rem;
+    height: 6rem;
+    transform: rotate(-45deg) translate(5rem, 2rem);
+  }
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box p {
+  opacity: 0.5;
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box p.txt2 {
+  font-size: 12rem;
+  margin-top: 8rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li .txt_box p.txt2 {
+    font-size: 11rem;
+    margin-top: 6rem;
+  }
+}
+.homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li img {
+  width: 100rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#benefits .benefits_info .swiper ul li img {
+    width: 64rem;
+  }
+}
+.homeapp_living_crossdeal section#specialbrand .special_brand_cont .special_brand_pd article {
+  display: none;
+}
+.homeapp_living_crossdeal section#specialbrand .special_brand_cont .special_brand_pd article.on {
+  display: block;
+}
+.homeapp_living_crossdeal section#specialbrand .special_brand_cont .special_brand_pd article .c-product--home-style {
+  margin-top: 12rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#specialbrand .special_brand_cont .special_brand_pd article .c-product--home-style {
+    margin-top: 8rem;
+  }
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab {
+  display: flex;
+  justify-content: center;
+  gap: 26rem;
+  margin-bottom: 24rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab {
+    margin-bottom: 12rem;
+    gap: 0;
+  }
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button {
+  opacity: 0.4;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button {
+    width: 100%;
+  }
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button.on {
+  opacity: 1;
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button.on .img_box {
+  border-color: #000;
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button .img_box {
+  border: 2px solid transparent;
+  border-radius: 16rem;
+  overflow: hidden;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button .img_box {
+    width: 56rem;
+    margin: 0 auto;
+  }
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_tab button p {
+  margin-top: 6rem;
+  color: #000;
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_pd_list article {
+  display: none;
+}
+.homeapp_living_crossdeal section#categorybest .category_pd_box .category_pd_list article.on {
+  display: block;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper {
+    overflow: visible;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide {
+  border-radius: 8rem;
+  overflow: hidden;
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product {
+  position: absolute;
+  right: 32rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product {
+    right: 10rem;
+    left: 10rem;
+    transform: none;
+    top: auto;
+    bottom: 16rem;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list {
+  grid-template-columns: 1fr;
+  gap: 8rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list {
+    gap: 6rem;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item {
+  width: 595rem;
+  height: 170rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item {
+    width: 100%;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item > span > a {
+  width: 157rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item > span > a {
+    width: 106rem;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__visual {
+  padding: 15rem;
+  padding-right: 0 !important;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__visual {
+    padding: 10rem;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__visual .c-product__image-wrapper {
+  border-radius: 4rem;
+  overflow: hidden;
+}
+.homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__info-container {
+  padding-left: 18rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__info-container {
+    padding-left: 12rem;
+  }
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__info-container .inner > a .c-product__info {
+    margin-bottom: 3rem;
+  }
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__name {
+    font-size: 13rem;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 780px) and (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .swiper .swiper-slide .c-product .c-product__list > .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__name {
+    font-size: 12rem;
+  }
+}
+.homeapp_living_crossdeal section#crosssale .banner_box {
+  margin-top: 32rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#crosssale .banner_box {
+    margin-top: 42rem;
+  }
+}
+.homeapp_living_crossdeal section#weeklysale .c-product--home-style .c-product__list .c-product__item:nth-child(n+13) {
+  display: none;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper {
+    overflow: visible;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide {
+  border-radius: 8rem;
+  background-color: #EEE0E0;
+  overflow: hidden;
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box {
+  padding: 20rem 28rem;
+  color: #444;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box {
+    padding: 20rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box span {
+  font-size: 14rem;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box span {
+    font-size: 11rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box strong {
+  display: block;
+  font-size: 22rem;
+  font-weight: 600;
+  margin: 6rem 0 8rem;
+  line-height: 1.3;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box strong {
+    font-size: 20rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box a {
+  color: #727780;
+  font-size: 13rem;
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .txt_box a::after {
+  content: "";
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #111;
+  border-width: 0 1px 1px 0;
+  transform: rotate(-45deg) translate(5rem, 2rem);
+  filter: invert(0.5);
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .pd_box {
+  display: flex;
+  gap: 8rem;
+  padding: 0 28rem 24rem;
+  overflow-x: auto;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .pd_box {
+    padding: 0 20rem 20rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .pd_box img {
+  border-radius: 8rem;
+  overflow: hidden;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide .cont_box .pd_box img {
+    width: 96rem;
+    flex-shrink: 0;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld {
+  color: #fff;
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld .txt_box {
+  position: absolute;
+  left: 0;
+  bottom: 74rem;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld .txt_box {
+    bottom: 32rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld .txt_box p {
+  font-size: 22rem;
+  font-weight: 600;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld .txt_box p {
+    font-size: 20rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld .txt_box .arr {
+  display: block;
+  width: 24rem;
+  height: 24rem;
+  background: #fff url(../images/arr.svg) no-repeat center center/14rem auto;
+  border-radius: 999rem;
+  margin: 16rem auto 0;
+  transform: rotate(180deg);
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal section#homestyling .swiper .swiper-slide.ending_sld .txt_box .arr {
+    width: 20rem;
+    height: 20rem;
+    background-size: 12rem auto;
+    margin-top: 3rem;
+  }
+}
+.homeapp_living_crossdeal section#homestyling .swiper .nav span {
+  position: absolute;
+  left: 12rem;
+  top: 192rem;
+}
+.homeapp_living_crossdeal section#homestyling .swiper .nav span.nxt {
+  left: auto;
+  right: 12rem;
+}
+.homeapp_living_crossdeal section#interior .swiper .nav span {
+  position: absolute;
+  left: 32rem;
+  top: 295rem;
+}
+.homeapp_living_crossdeal section#interior .swiper .nav span.nxt {
+  left: auto;
+  right: 32rem;
+}

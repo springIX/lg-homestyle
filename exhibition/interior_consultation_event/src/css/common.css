@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+
+html {
+  height: 100%;
+  font-size: 1.3px;
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.interior_consultation_event {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 13rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.2rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.interior_consultation_event ::-webkit-scrollbar {
+  display: none;
+}
+
+.interior_consultation_event ::placeholder {
+  color: #d6d6d6;
+}
+
+.interior_consultation_event * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+
+.interior_consultation_event h1,
+.interior_consultation_event h2,
+.interior_consultation_event h3,
+.interior_consultation_event h4,
+.interior_consultation_event h5,
+.interior_consultation_event h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.interior_consultation_event table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.interior_consultation_event ol,
+.interior_consultation_event ul {
+  list-style: none;
+}
+
+.interior_consultation_event a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.interior_consultation_event button,
+.interior_consultation_event input,
+.interior_consultation_event select,
+.interior_consultation_event textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.interior_consultation_event input[type=checkbox],
+.interior_consultation_event input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.interior_consultation_event label {
+  cursor: pointer;
+}
+
+.interior_consultation_event img,
+.interior_consultation_event video,
+.interior_consultation_event svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+
+.interior_consultation_event option {
+  color: inherit;
+}
+
+.interior_consultation_event section {
+  position: relative;
+}
+
+.interior_consultation_event picture {
+  display: block;
+  width: 100%;
+}
+
+.interior_consultation_event span {
+  display: block;
+}

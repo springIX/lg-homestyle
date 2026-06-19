@@ -1,0 +1,445 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+/* SCSS VAR */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+/* SCSS VAR */
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.brandstory_container {
+  /* COMMON */
+  word-break: keep-all;
+  background-color: #fff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  text-align: left;
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.brandstory_container * {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+.brandstory_container abbr, .brandstory_container acronym, .brandstory_container address, .brandstory_container applet, .brandstory_container article, .brandstory_container aside, .brandstory_container audio, .brandstory_container big, .brandstory_container blockquote, .brandstory_container body, .brandstory_container canvas, .brandstory_container caption, .brandstory_container center, .brandstory_container cite, .brandstory_container code, .brandstory_container dd, .brandstory_container details, .brandstory_container dfn, .brandstory_container div, .brandstory_container dl, .brandstory_container dt, .brandstory_container embed, .brandstory_container fieldset, .brandstory_container figcaption, .brandstory_container figure, .brandstory_container footer, .brandstory_container form, .brandstory_container h1, .brandstory_container h2, .brandstory_container h3, .brandstory_container h4, .brandstory_container h5, .brandstory_container h6, .brandstory_container header, .brandstory_container hgroup, .brandstory_container html, .brandstory_container iframe, .brandstory_container img, .brandstory_container ins, .brandstory_container kbd, .brandstory_container label, .brandstory_container legend, .brandstory_container li, .brandstory_container mark, .brandstory_container menu, .brandstory_container nav, .brandstory_container object, .brandstory_container ol, .brandstory_container output, .brandstory_container p, .brandstory_container pre, .brandstory_container q, .brandstory_container ruby, .brandstory_container samp, .brandstory_container section, .brandstory_container small, .brandstory_container strike, .brandstory_container summary, .brandstory_container table, .brandstory_container tbody, .brandstory_container td, .brandstory_container textarea, .brandstory_container tfoot, .brandstory_container th, .brandstory_container thead, .brandstory_container time, .brandstory_container tr, .brandstory_container tt, .brandstory_container ul, .brandstory_container var, .brandstory_container video, .brandstory_container a {
+  color: inherit;
+}
+.brandstory_container img, .brandstory_container video {
+  display: block;
+  width: 100%;
+}
+.brandstory_container ol, .brandstory_container ul {
+  list-style: none;
+}
+.brandstory_container a {
+  text-decoration: unset;
+}
+@media (min-width: 781px) {
+  .brandstory_container .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .brandstory_container .pc {
+    display: none !important;
+  }
+}
+.brandstory_container .layout_inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.brandstory_container .bg_gray {
+  background-color: #F5F5F5;
+}
+.brandstory_container .square_btn {
+  width: 100%;
+  padding: 17px;
+  border: 1px solid #999;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.brandstory_container .square_btn::after {
+  content: "";
+  background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.brandstory_container .square_btn.ty_white {
+  border-color: #fff;
+  color: #fff;
+}
+.brandstory_container .square_btn.ty_white::after {
+  filter: invert(1);
+}
+.brandstory_container .gap_40 {
+  display: flex;
+  gap: 40px;
+}
+.brandstory_container .gap_40.ty_col {
+  flex-direction: column;
+}
+.brandstory_container .gap_20 {
+  display: flex;
+  gap: 20px;
+}
+.brandstory_container .gap_20.ty_col {
+  flex-direction: column;
+}
+.brandstory_container .gap_2 {
+  display: flex;
+  gap: 2px;
+}
+.brandstory_container .gap_2.ty_col {
+  flex-direction: column;
+}
+.brandstory_container .black_cont {
+  color: #fff;
+  background-color: #000;
+}
+.brandstory_container .oswald {
+  font-family: "Oswald", sans-serif;
+}
+.brandstory_container .tit_box {
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.brandstory_container .tit_box p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #c2c2c2;
+}
+.brandstory_container .tit_box h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.brandstory_container .tit_box_ty2 {
+  margin-bottom: 20px;
+}
+.brandstory_container .tit_box_ty2 p {
+  color: #000;
+  opacity: 0.7;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.brandstory_container .tit_box_ty2 h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+.brandstory_container .black_cont .tit_box p, .brandstory_container .black_cont .tit_box h2 {
+  color: #fff;
+  opacity: 1;
+}
+.brandstory_container .black_cont .tit_box_ty2 p {
+  color: #c7c7cc;
+  opacity: 1;
+}
+.brandstory_container .black_cont .tit_box_ty2 h2 {
+  color: #fff;
+}
+.brandstory_container .gallery_box {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr;
+}
+.brandstory_container .gallery_box img.col2 {
+  grid-column: span 2;
+}
+.brandstory_container #oms_module_anchor {
+  position: absolute;
+  left: 0;
+  bottom: 56px;
+  height: 1px;
+  width: 100%;
+}
+.brandstory_container {
+  /* //COMMON */
+  /* //CONTENTS */
+}
+.brandstory_container #key_visual {
+  padding: 40px 20px 20px;
+  overflow: hidden;
+  position: relative;
+}
+.brandstory_container #key_visual .kv_tit {
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.brandstory_container #key_visual .kv_tit p {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.brandstory_container #key_visual .kv_tit h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+}
+.brandstory_container .contents_tabbar {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  background-color: #000;
+  font-size: 13px;
+  padding: 0 20px;
+  position: sticky;
+  left: 0;
+  top: 56px;
+  z-index: 10;
+  gap: 20px;
+  overflow-x: auto;
+}
+@media (min-width: 781px) {
+  .brandstory_container .contents_tabbar {
+    top: 0;
+    justify-content: center;
+  }
+}
+.brandstory_container .contents_tabbar li a {
+  padding: 16px 0 14px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+}
+.brandstory_container .contents_tabbar li a:hover {
+  color: #F31E11;
+  font-weight: 600;
+  border-bottom-color: #F31E11;
+}
+.brandstory_container section {
+  overflow: hidden;
+  position: relative;
+  padding: 60px 20px;
+  scroll-margin-top: 50px;
+}
+@media (max-width: 780px) {
+  .brandstory_container section {
+    scroll-margin-top: 107px;
+  }
+}
+.brandstory_container section.normal_contents .img_box {
+  margin-bottom: 16px;
+}
+.brandstory_container section.normal_contents a {
+  margin-top: 24px;
+}
+.brandstory_container section {
+  /* BRANS STORY */
+}
+.brandstory_container section#about_story {
+  padding-bottom: 0;
+}
+.brandstory_container section#about_story img {
+  margin: 16px 0;
+}
+.brandstory_container section {
+  /* COLLECTION */
+}
+.brandstory_container section#collection article + article {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+.brandstory_container section#collection article .txt_box {
+  margin-top: 20px;
+}
+.brandstory_container section#collection article .txt_box h3 {
+  text-transform: capitalize;
+}
+.brandstory_container section#collection article .txt_box h3 span {
+  font-family: "Oswald", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #c2c2c2;
+}
+.brandstory_container section#collection article .txt_box h3 a {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+}
+.brandstory_container section#collection article .txt_box h3 a::after {
+  content: "";
+  background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-3px);
+}
+.brandstory_container section#collection article .txt_box p {
+  margin-top: 8px;
+  letter-spacing: -0.1px;
+  color: #444;
+}
+.brandstory_container section {
+  /* OFFLINE PLACE */
+}
+.brandstory_container section#offline_place .tit_box p {
+  opacity: 0.6;
+}
+.brandstory_container section#offline_place .intro_txt_box {
+  margin: 12px 0 32px;
+  font-size: 12px;
+  text-align: center;
+}
+.brandstory_container section#offline_place .intro_txt_box h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.brandstory_container section#offline_place .intro_txt_box h3::before, .brandstory_container section#offline_place .intro_txt_box h3::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.brandstory_container section#offline_place .intro_txt_box p {
+  margin: 16px 0 12px;
+  font-size: 14px;
+}
+.brandstory_container section#offline_place .intro_txt_box ul {
+  color: #8F8F8F;
+}
+.brandstory_container section#offline_place .info_box {
+  background-color: #fff;
+  padding: 12px 12px 16px;
+  color: #444;
+}
+.brandstory_container section#offline_place .info_box .txt_box {
+  margin-top: 16px;
+}
+.brandstory_container section#offline_place .info_box .txt_box ol li + li {
+  margin-top: 4px;
+}
+.brandstory_container section#offline_place .info_box .txt_box ol li strong {
+  font-weight: 600;
+  color: #111;
+}
+.brandstory_container section#offline_place .info_box .txt_box .dsc {
+  color: #8f8f8f;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.brandstory_container section#offline_place .info_box .txt_box span {
+  display: block;
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  margin-top: 26px;
+}
+.brandstory_container section {
+  /* BRAND_FEATURES */
+}
+.brandstory_container section#brand_features ol {
+  counter-reset: brand_features;
+}
+.brandstory_container section#brand_features ol li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #444;
+}
+.brandstory_container section#brand_features ol li + li {
+  margin-top: 6px;
+}
+.brandstory_container section#brand_features ol li:before {
+  counter-increment: brand_features;
+  content: counter(brand_features);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  background-color: #0e0e0e;
+  color: #fff;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 500;
+}
+.brandstory_container section {
+  /* DESIGNER */
+}
+.brandstory_container section#designer {
+  padding: 0;
+}
+.brandstory_container section#designer article {
+  padding: 60px 20px 0;
+}
+.brandstory_container section#designer article:nth-child(even) {
+  text-align: right;
+  background-color: #444;
+}
+.brandstory_container section#designer article .tit_box_ty2 h2 {
+  text-transform: uppercase;
+}
+.brandstory_container section#designer article .designer_img {
+  margin-top: 20px;
+}
+.brandstory_container section#designer article .designer_img.ty_full {
+  margin-left: -20px !important;
+  width: calc(100% + 40px) !important;
+}
+.brandstory_container section {
+  /* FAQ */
+}
+.brandstory_container section#faq .faq_list {
+  counter-reset: faq;
+  border-top: 2px solid #000;
+}
+.brandstory_container section#faq .faq_list li {
+  padding-top: 20px;
+  position: relative;
+  padding-left: 36px;
+}
+.brandstory_container section#faq .faq_list li + li {
+  margin-top: 20px;
+  border-top: 1px dashed #BBBBBB;
+}
+.brandstory_container section#faq .faq_list li:before {
+  counter-increment: faq;
+  content: "0" counter(faq) ".";
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+}
+.brandstory_container section#faq .faq_list li strong {
+  font-weight: 600;
+}
+.brandstory_container section#faq .faq_list li p {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #444;
+}
+.brandstory_container {
+  /* //CONTENTS */
+}

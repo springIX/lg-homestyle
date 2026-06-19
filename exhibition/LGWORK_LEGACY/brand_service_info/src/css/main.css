@@ -1,0 +1,706 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.brand_service_info {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  /* WAVE */
+  /* SWIPER */
+  /* //SWIPER */
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .brand_service_info img {
+  max-width: unset;
+}
+
+.brand_service_info abbr, .brand_service_info acronym, .brand_service_info address, .brand_service_info applet, .brand_service_info article, .brand_service_info aside, .brand_service_info audio, .brand_service_info big, .brand_service_info blockquote, .brand_service_info body, .brand_service_info canvas, .brand_service_info caption, .brand_service_info center, .brand_service_info cite, .brand_service_info code, .brand_service_info dd, .brand_service_info details, .brand_service_info dfn, .brand_service_info div, .brand_service_info dl, .brand_service_info dt, .brand_service_info embed, .brand_service_info fieldset, .brand_service_info figcaption, .brand_service_info figure, .brand_service_info footer, .brand_service_info form, .brand_service_info h1, .brand_service_info h2, .brand_service_info h3, .brand_service_info h4, .brand_service_info h5, .brand_service_info h6, .brand_service_info header, .brand_service_info hgroup, .brand_service_info html, .brand_service_info iframe, .brand_service_info img, .brand_service_info ins, .brand_service_info kbd, .brand_service_info label, .brand_service_info legend, .brand_service_info li, .brand_service_info mark, .brand_service_info menu, .brand_service_info nav, .brand_service_info object, .brand_service_info ol, .brand_service_info output, .brand_service_info p, .brand_service_info pre, .brand_service_info q, .brand_service_info ruby, .brand_service_info samp, .brand_service_info section, .brand_service_info small, .brand_service_info strike, .brand_service_info summary, .brand_service_info table, .brand_service_info tbody, .brand_service_info td, .brand_service_info textarea, .brand_service_info tfoot, .brand_service_info th, .brand_service_info thead, .brand_service_info time, .brand_service_info tr, .brand_service_info tt, .brand_service_info ul, .brand_service_info var, .brand_service_info video {
+  color: inherit;
+}
+.brand_service_info .layout_inner {
+  position: relative;
+  max-width: 100%;
+  width: 1420rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20rem !important;
+  padding-right: 20rem !important;
+}
+.brand_service_info .inner {
+  width: 100%;
+  position: relative;
+}
+.brand_service_info .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.brand_service_info .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.brand_service_info .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.brand_service_info .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.brand_service_info .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand_service_info .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.brand_service_info .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.brand_service_info .wave {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.brand_service_info .wave > * {
+  flex-shrink: 0;
+  animation: wave 100s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.brand_service_info .wave.reverse > * {
+  animation-direction: reverse;
+}
+@media (min-width: 781px) {
+  .brand_service_info .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .brand_service_info .pc {
+    display: none !important;
+  }
+}
+.brand_service_info .nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48rem;
+  height: 48rem;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.brand_service_info .nav span::after {
+  content: "";
+  width: 20rem;
+  height: 20rem;
+  background: url(../images/arr.svg) no-repeat center center/contain;
+  transition: 0.3s ease;
+}
+.brand_service_info .nav span.nxt::after {
+  transform: rotate(180deg);
+}
+.brand_service_info .nav span:hover::after {
+  transform: translateX(-3rem);
+}
+.brand_service_info .nav span:hover.nxt::after {
+  transform: rotate(180deg) translateX(-3rem);
+}
+.brand_service_info .nav span.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.brand_service_info .pagi {
+  bottom: 0;
+  margin-top: 25rem;
+  text-align: center;
+  font-size: 0;
+}
+.brand_service_info .pagi span {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 999rem;
+  margin: 0 3rem !important;
+  transition: 0.3s ease;
+  background-color: #ddd;
+  opacity: 1;
+}
+.brand_service_info .pagi span.swiper-pagination-bullet-active {
+  width: 20rem;
+  background-color: #000;
+}
+.brand_service_info .lao {
+  font-family: "Lao MN";
+}
+.brand_service_info .bsi_dsc {
+  font-family: "Lao MN", sans-serif;
+  color: #ea1917;
+  letter-spacing: -0.5rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info .bsi_dsc {
+    font-size: 14rem;
+    margin-bottom: 2rem;
+  }
+}
+.brand_service_info .bsi_tit {
+  font-weight: 700;
+  font-size: 30rem;
+  letter-spacing: -1rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info .bsi_tit {
+    font-size: 24rem;
+  }
+}
+.brand_service_info .bsi_info {
+  letter-spacing: -0.5rem;
+  margin-top: 8rem;
+  color: #727780;
+}
+@media (max-width: 780px) {
+  .brand_service_info .bsi_info {
+    margin-bottom: 6rem;
+  }
+  .brand_service_info .bsi_info br:not(.mo, .both) {
+    display: none;
+  }
+}
+.brand_service_info section {
+  position: relative;
+  overflow: hidden;
+}
+.brand_service_info section.origin_story {
+  background-color: #F5F5F5;
+  padding: 100rem 0 80rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.origin_story {
+    padding: 60rem 0 30rem;
+  }
+}
+.brand_service_info section.origin_story ul li {
+  display: flex;
+  gap: 20rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.origin_story ul li {
+    display: block;
+  }
+}
+.brand_service_info section.origin_story ul li:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+@media (min-width: 781px) {
+  .brand_service_info section.origin_story ul li:nth-child(even) .txt_box {
+    padding-left: 80rem;
+  }
+}
+.brand_service_info section.origin_story ul li + li {
+  margin-top: 50rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.origin_story ul li + li {
+    margin-top: 30rem;
+  }
+}
+.brand_service_info section.origin_story ul li > div {
+  width: 100%;
+}
+.brand_service_info section.origin_story ul li .img_box {
+  border-radius: 8rem;
+  overflow: hidden;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.origin_story ul li .img_box {
+    margin-bottom: 20rem;
+  }
+}
+.brand_service_info section.origin_story ul li .txt_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.origin_story ul li .txt_box {
+    display: block;
+  }
+}
+.brand_service_info section.brand .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.brand_service_info section.brand .txt_box {
+  padding: 120rem 0 82rem;
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.brand .txt_box {
+    padding: 82rem 20rem 30rem;
+  }
+}
+.brand_service_info section.brand .products_box {
+  padding-bottom: 150rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.brand .products_box {
+    padding-bottom: 87rem;
+  }
+}
+.brand_service_info section.brand .products_box img {
+  width: 4186rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.brand .products_box img {
+    width: 2307rem;
+  }
+}
+.brand_service_info section.space .txt_box {
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.space .txt_box {
+    padding: 0 20rem;
+  }
+}
+.brand_service_info section.space .brand_box {
+  padding: 134rem 0 151rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.space .brand_box {
+    padding: 70rem 0 100rem;
+  }
+}
+.brand_service_info section.space .brand_box img {
+  width: 2647rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.space .brand_box img {
+    width: 1600rem;
+  }
+}
+.brand_service_info section.home_styling {
+  padding: 100rem 0;
+  background-color: #F5F5F5;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.home_styling {
+    padding: 60rem 0;
+  }
+}
+.brand_service_info section.home_styling .tit_box {
+  text-align: center;
+  margin-bottom: 32rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.home_styling .tit_box {
+    margin-bottom: 28rem;
+  }
+}
+.brand_service_info section.home_styling .swiper {
+  color: #fff;
+  overflow: hidden;
+  border-radius: 8rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.home_styling .swiper {
+    overflow: visible;
+  }
+}
+.brand_service_info section.home_styling .swiper .swiper-slide {
+  overflow: hidden;
+  border-radius: 8rem;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide::after {
+  content: "";
+  width: 100%;
+  height: 134rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide.swiper-slide-active img {
+  transform: scale(1);
+}
+.brand_service_info section.home_styling .swiper .swiper-slide.swiper-slide-active .txt_box > * {
+  transform: translateY(0);
+  opacity: 1;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide.swiper-slide-active .txt_box p {
+  transition-duration: 1.2s;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide img {
+  transform: scale(1.05);
+  transition: 1s ease;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide .txt_box {
+  position: absolute;
+  left: 0;
+  bottom: 16rem;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.home_styling .swiper .swiper-slide .txt_box {
+    bottom: 30rem;
+  }
+}
+.brand_service_info section.home_styling .swiper .swiper-slide .txt_box > * {
+  transform: translateY(50rem);
+  opacity: 0;
+  transition: 1s ease;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide .txt_box span {
+  display: block;
+  font-family: "Lao MN", sans-serif;
+  font-size: 24rem;
+  line-height: 1.08;
+  text-transform: uppercase;
+  letter-spacing: -1rem;
+}
+.brand_service_info section.home_styling .swiper .swiper-slide .txt_box p {
+  margin-top: 8rem;
+  min-height: 45rem;
+  font-weight: 500;
+  letter-spacing: -0.8rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.home_styling .swiper .swiper-slide .txt_box p {
+    margin-top: 2rem;
+    min-height: 32rem;
+    letter-spacing: -0.4rem;
+  }
+  .brand_service_info section.home_styling .swiper .swiper-slide .txt_box p br {
+    display: block;
+  }
+}
+.brand_service_info section.home_styling .swiper .nav span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.brand_service_info section.home_styling .swiper .nav span.prv {
+  left: 32rem;
+}
+.brand_service_info section.home_styling .swiper .nav span.nxt {
+  left: auto;
+  right: 32rem;
+}
+.brand_service_info section.service {
+  padding: 100rem 0;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.service {
+    padding: 60rem 0;
+  }
+}
+.brand_service_info section.service .txt_box {
+  text-align: center;
+  margin-bottom: 32rem;
+}
+.brand_service_info section.service .txt_box ol {
+  position: relative;
+  counter-reset: service;
+}
+.brand_service_info section.service .txt_box ol li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.brand_service_info section.service .txt_box ol li:first-child {
+  position: relative;
+}
+.brand_service_info section.service .txt_box ol li::before {
+  display: inline-block;
+  counter-increment: service;
+  content: "0" counter(service);
+  font-size: 12rem;
+  font-weight: 900;
+  padding: 4rem;
+  width: 38rem;
+  color: #fff;
+  background-color: #ea1917;
+  border-radius: 999rem;
+  box-sizing: border-box;
+  margin-bottom: 8rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.service .txt_box ol li .bsi_info br {
+    display: block;
+  }
+}
+.brand_service_info section.service .txt_box ol li::before, .brand_service_info section.service .txt_box ol li > * {
+  transform: translateY(50rem);
+  opacity: 0;
+  transition: 0.5s ease;
+  touch-action: none;
+  pointer-events: none;
+}
+.brand_service_info section.service .txt_box ol li.on::before, .brand_service_info section.service .txt_box ol li.on > * {
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+.brand_service_info section.service .txt_box ol li.on::before {
+  transition-duration: 1.2s;
+}
+.brand_service_info section.service .txt_box ol li.on .bsi_tit {
+  transition-duration: 1.4s;
+}
+.brand_service_info section.service .txt_box ol li.on .bsi_info {
+  transition-duration: 1.6s;
+}
+.brand_service_info section.service .swiper_box {
+  position: relative;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.service .swiper_box {
+    overflow: hidden;
+  }
+  .brand_service_info section.service .swiper_box::after {
+    content: "";
+    width: 100%;
+    height: 150rem;
+    background: linear-gradient(to bottom, transparent, #fff 70%);
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    touch-action: none;
+    pointer-events: none;
+  }
+}
+.brand_service_info section.service .swiper_box .swiper.main_slide {
+  width: 320rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 6px solid #000;
+  background: #FFF;
+  box-shadow: 0 8px 120px 0 rgba(0, 0, 0, 0.12), 0 3.385px 10.154px 0 rgba(0, 0, 0, 0.08), 0 13.538px 30.462px 0 rgba(49, 47, 45, 0.2);
+  overflow: hidden;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.service .swiper_box .swiper.main_slide {
+    width: 260rem;
+    box-shadow: none;
+  }
+  .brand_service_info section.service .swiper_box .swiper.main_slide .swiper-slide {
+    height: 410rem;
+  }
+}
+.brand_service_info section.service .swiper_box .swiper.sub_slide {
+  width: 1680rem;
+  opacity: 0.2;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 780px) {
+  .brand_service_info section.service .swiper_box .swiper.sub_slide {
+    width: 1300rem;
+    top: 63%;
+  }
+}
+.brand_service_info section.service .swiper_box .swiper.sub_slide::after {
+  content: "";
+  width: 100%;
+  height: 240rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #fff);
+  z-index: 1;
+}
+.brand_service_info section.service .swiper_box .swiper.sub_slide .swiper-slide {
+  border-radius: 20rem;
+  overflow: hidden;
+}
+.brand_service_info section.service .swiper_box .nav {
+  width: 455rem;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand_service_info section.service .swiper_box .pagi {
+  z-index: 11;
+  position: relative;
+}
+.brand_service_info section.benefit .benefit_box {
+  background-color: #727780;
+  background-color: #EDE9E5;
+  border-radius: 8rem;
+  overflow: hidden;
+  padding: 42rem 80rem;
+  position: relative;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.benefit .benefit_box {
+    padding: 20rem;
+  }
+}
+.brand_service_info section.benefit .benefit_box p {
+  font-size: 20rem;
+  font-weight: 500;
+  color: #000;
+  margin: 4rem 0 32rem;
+}
+.brand_service_info section.benefit .benefit_box p em {
+  color: #ea1917;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.benefit .benefit_box p {
+    font-size: 15rem;
+    margin: 8rem 0 5rem;
+    letter-spacing: -1rem;
+  }
+  .brand_service_info section.benefit .benefit_box p br {
+    display: none;
+  }
+}
+.brand_service_info section.benefit .benefit_box img {
+  width: 561rem;
+  position: absolute;
+  right: 80rem;
+  top: 0;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.benefit .benefit_box img {
+    width: 100%;
+    position: static;
+  }
+}
+.brand_service_info section.benefit .benefit_box span {
+  color: #727780;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.brand_service_info section.benefit .benefit_box span::before {
+  content: "*";
+}
+@media (max-width: 780px) {
+  .brand_service_info section.benefit .benefit_box span {
+    font-size: 12rem;
+  }
+}
+.brand_service_info section.download {
+  padding: 50rem 0;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.download {
+    padding: 30rem 0;
+  }
+}
+.brand_service_info section.download .download_wrap {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 8rem;
+}
+.brand_service_info section.download .download_wrap .txt_box {
+  z-index: 1;
+  position: absolute;
+  left: 120rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 780px) {
+  .brand_service_info section.download .download_wrap .txt_box {
+    transform: none;
+    left: 20rem;
+    top: 20rem;
+  }
+}
+.brand_service_info section.download .download_wrap .txt_box span {
+  font-weight: 600;
+  font-size: 16rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.download .download_wrap .txt_box span {
+    font-size: 15rem;
+  }
+}
+.brand_service_info section.download .download_wrap .txt_box h3 {
+  font-weight: 700;
+  font-size: 30rem;
+  margin-top: 8rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.download .download_wrap .txt_box h3 {
+    font-size: 24rem;
+    margin-top: 6rem;
+  }
+}
+.brand_service_info section.download .download_wrap .vid_box {
+  width: 221rem;
+  height: 472rem;
+  top: 50%;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.download .download_wrap .vid_box {
+    width: 148rem;
+    height: 313rem;
+    top: 55%;
+  }
+}
+.brand_service_info section.download .download_wrap .vid_box .hand {
+  width: 540rem;
+  position: absolute;
+  left: -49rem;
+  top: -4rem;
+}
+@media (max-width: 780px) {
+  .brand_service_info section.download .download_wrap .vid_box .hand {
+    width: 356rem;
+    left: -31rem;
+    top: -2rem;
+  }
+}
+.brand_service_info section.download .download_wrap .vid_box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20rem;
+}
+.brand_service_info section.download .download_wrap a {
+  position: absolute;
+  left: 20rem;
+  bottom: 20rem;
+  right: 20rem;
+  padding: 14rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8rem;
+  text-align: center;
+}

@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1380px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+.homeapp_living_crossdeal {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 14rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .homeapp_living_crossdeal {
+    font-size: clamp(10px, 12rem, 9999rem);
+  }
+}
+.homeapp_living_crossdeal ::-webkit-scrollbar {
+  display: none;
+}
+.homeapp_living_crossdeal ::placeholder {
+  color: #666;
+}
+.homeapp_living_crossdeal div,
+.homeapp_living_crossdeal p,
+.homeapp_living_crossdeal span,
+.homeapp_living_crossdeal a,
+.homeapp_living_crossdeal section,
+.homeapp_living_crossdeal label,
+.homeapp_living_crossdeal input,
+.homeapp_living_crossdeal button,
+.homeapp_living_crossdeal h1,
+.homeapp_living_crossdeal h2,
+.homeapp_living_crossdeal h3,
+.homeapp_living_crossdeal h4,
+.homeapp_living_crossdeal h5,
+.homeapp_living_crossdeal h6,
+.homeapp_living_crossdeal ul,
+.homeapp_living_crossdeal ol,
+.homeapp_living_crossdeal li,
+.homeapp_living_crossdeal header,
+.homeapp_living_crossdeal footer,
+.homeapp_living_crossdeal main,
+.homeapp_living_crossdeal b,
+.homeapp_living_crossdeal i,
+.homeapp_living_crossdeal em,
+.homeapp_living_crossdeal strong,
+.homeapp_living_crossdeal select,
+.homeapp_living_crossdeal article,
+.homeapp_living_crossdeal aside,
+.homeapp_living_crossdeal details,
+.homeapp_living_crossdeal figcaption,
+.homeapp_living_crossdeal figure,
+.homeapp_living_crossdeal footer,
+.homeapp_living_crossdeal header,
+.homeapp_living_crossdeal hgroup,
+.homeapp_living_crossdeal menu,
+.homeapp_living_crossdeal nav,
+.homeapp_living_crossdeal section,
+.homeapp_living_crossdeal object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.homeapp_living_crossdeal h1,
+.homeapp_living_crossdeal h2,
+.homeapp_living_crossdeal h3,
+.homeapp_living_crossdeal h4,
+.homeapp_living_crossdeal h5,
+.homeapp_living_crossdeal h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.homeapp_living_crossdeal table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.homeapp_living_crossdeal ol,
+.homeapp_living_crossdeal ul {
+  list-style: none;
+}
+.homeapp_living_crossdeal a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.homeapp_living_crossdeal button,
+.homeapp_living_crossdeal input,
+.homeapp_living_crossdeal select,
+.homeapp_living_crossdeal textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.homeapp_living_crossdeal input[type=checkbox], .homeapp_living_crossdeal input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.homeapp_living_crossdeal label {
+  cursor: pointer;
+}
+.homeapp_living_crossdeal img,
+.homeapp_living_crossdeal video,
+.homeapp_living_crossdeal svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.homeapp_living_crossdeal option {
+  color: inherit;
+}
+.homeapp_living_crossdeal section {
+  position: relative;
+}
+.homeapp_living_crossdeal picture {
+  display: block;
+  width: 100%;
+}

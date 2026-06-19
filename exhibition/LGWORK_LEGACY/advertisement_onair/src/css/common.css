@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+  scroll-behavior: smooth;
+}
+@media (max-width: 1420px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.advertisement_onair_container {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .advertisement_onair_container {
+    font-size: clamp(10px, 13rem, 9999rem);
+  }
+}
+.advertisement_onair_container ::-webkit-scrollbar {
+  display: none;
+}
+.advertisement_onair_container ::placeholder {
+  color: #444;
+}
+.advertisement_onair_container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.advertisement_onair_container h1,
+.advertisement_onair_container h2,
+.advertisement_onair_container h3,
+.advertisement_onair_container h4,
+.advertisement_onair_container h5,
+.advertisement_onair_container h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.advertisement_onair_container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.advertisement_onair_container ol,
+.advertisement_onair_container ul {
+  list-style: none;
+}
+.advertisement_onair_container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.advertisement_onair_container button,
+.advertisement_onair_container input,
+.advertisement_onair_container select,
+.advertisement_onair_container textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.advertisement_onair_container input[type=checkbox], .advertisement_onair_container input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.advertisement_onair_container label {
+  cursor: pointer;
+}
+.advertisement_onair_container img,
+.advertisement_onair_container video,
+.advertisement_onair_container svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.advertisement_onair_container option {
+  color: inherit;
+}
+.advertisement_onair_container picture {
+  display: block;
+  width: 100%;
+}

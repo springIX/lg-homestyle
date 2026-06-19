@@ -1,0 +1,528 @@
+@import "var";
+
+.homeapp_living_crossdeal{
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .homeapp_living_crossdeal img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; font-size: inherit; line-height: 1.4;}
+  .swiper-wrapper{ height: auto;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  // LAYOUT INNER
+  .layout_inner {
+    position: relative;
+    max-width: 100%;
+    width: calc($layout_inner + $layout_pd*2) !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* WAVE */
+  .wave{ width: 100%; display: flex; overflow: hidden; 
+    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
+    @keyframes wave {
+      0%{ transform: translateX(0);}
+      100%{ transform: translateX(-100%);}
+    }
+
+    &.reverse > *{ animation-direction: reverse;}
+  }
+
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+
+  /* SWIPER */
+  .nav{
+    span{ display: flex; align-items: center; justify-content: center; width: 48rem; height: 48rem; border-radius: 50%; background: #fff; z-index: 1; cursor: pointer; transition: .3s ease;
+      &::after{ content: ''; width: 20rem; height: 20rem; background: url(https://www.lge.co.kr/home_style_pages/2026/01/homeapp_living_crossdeal/src/images/arr.svg)no-repeat center center / contain; transition: .3s ease;} 
+      &.nxt::after{ transform: rotate(180deg);}
+      &:hover{
+        &::after{ transform: translateX(-3rem);}
+        &.nxt::after{ transform: rotate(180deg) translateX(-3rem);}
+      }
+      &.swiper-button-disabled{ opacity: .5; cursor: default;}
+    }
+  }
+  .pagi{ bottom: 0; margin-top: 25rem; text-align: center; font-size: 0;
+    @include screen("mo") { margin-top: 20rem;}
+    span{display: inline-block; width: 8rem; height: 8rem; border-radius: 999rem;  margin: 0 3rem !important; transition: .3s ease; background-color: #ddd; opacity: 1;
+      @include screen("mo") { width: 6rem; height: 6rem;}
+      &.swiper-pagination-bullet-active{ width: 20rem; background-color: #000;}
+    }
+  }
+  .scr_bar{ background-color: rgba($color: #000, $alpha: .08); width: 80rem; height: 3rem; margin: 27rem auto 0;
+    .swiper-scrollbar-drag{ background-color: #000;}
+  }
+  .slide_nav{ justify-content: center; gap: 8rem; margin-top: 30rem;
+    span{ display: flex; align-items: center; justify-content: center; width: 36rem; height: 32rem; border-radius: 6rem; background: #fff; z-index: 1; cursor: pointer; transition: .3s ease; border: 1px solid #DEE1E5;
+      &::after{ content: ''; width: 16rem; height: 16rem; background: url(https://www.lge.co.kr/home_style_pages/2026/01/homeapp_living_crossdeal/src/images/arr.svg)no-repeat center center / contain; transition: .3s ease;} 
+      &.nxt::after{ transform: rotate(180deg);}
+      &:hover{
+        &::after{ transform: translateX(-3rem);}
+        &.nxt::after{ transform: rotate(180deg) translateX(-3rem);}
+      }
+      &.swiper-button-disabled{ opacity: .5; cursor: default;}
+    }
+
+    .total_crnt{ font-size: 14rem;
+      .total{  color: #727780;
+        &::before{ content: '/ ';}
+      }
+      .crnt{ font-weight: 600;}
+    }
+  }
+  /* //SWIPER */
+
+  .notice_box{ margin-top: 60rem; padding-top: 16rem; border-top: 1px solid #e7e7e7; text-align: left;
+    @include screen("mo") { margin-top: 32rem; padding-top: 16rem;}
+    button{ font-size: 17rem; font-weight: 600; color: #666; margin-bottom: 15rem;
+      @include screen("mo") { font-size: 13rem; width: 100%; display: flex; align-items: baseline; justify-content: space-between;}
+      &::after{ content: ''; display: inline-block; width: 6rem; height: 6rem; border: 1px solid #111; border-width:0 2px 2px 0; transform: rotate(45deg) translate(2rem, -8rem); filter: invert(.5); 
+        @include screen("mo") { border-width: 0 1px 1px 0; transform: rotate(45deg) translate(-4rem, -2rem);}
+      }  
+    }
+    .notice_cont{ display: none; color: $gray; font-size: 14rem; 
+      @include screen("mo") {  font-size: 12rem;}
+      strong{ display: block; margin-bottom: 4rem; font-weight: 600;}
+      ul{ line-height: 1.5;
+        + strong{ margin-top: 10rem;}
+        li{ padding-left: 10rem; position: relative;
+          @include screen("mo") { padding-left: 7rem;}
+          &::before{ content: '∙'; position: absolute; left: 0; top: 0;
+            @include screen("mo") { top: -2rem;}
+          }
+        }
+      }
+    }
+    &.on{
+      button::after{ transform: rotate(225deg) translate(-5rem, 5rem);
+        @include screen("mo") { transform:rotate(225deg);}
+      }
+      .notice_cont{ display: block;}
+    }
+    &.ty_black{ border-top-color: #666;}
+    @include screen("pc") { 
+      &.ty_cnt{ text-align: center;
+        .notice_cont{
+          ul li{ display: flex; justify-content: center; padding: 0; gap: 4rem;
+            &::before{ position: relative;}
+          }
+        }
+      }
+    }
+  }
+
+  .pd_b{ padding-bottom: 100rem;
+    @include screen("mo") { padding-bottom: 60rem;}
+  }
+
+  .cont_bg{ background-color: $brown;}
+
+  .home_set_tit{ text-align: center; padding: 100rem 0 32rem; 
+    @include screen("mo") { padding: 60rem 0 28rem;}
+    h2{ font-size: 28rem; font-weight: 700; letter-spacing: -.1rem;
+      @include screen("mo") { font-size: 22rem;}
+      em{ color: #ea1917;}
+    }
+    p{font-size: 18rem; color: #444;
+      @include screen("mo") { font-size: 15rem; margin-top: 2rem;}
+    }
+  }
+
+  .home_set_btn{ display: block; font-size: 16rem; font-weight: 600; padding: 17rem 0 15rem; width: 260rem; border-radius: 8rem; border: 1px solid #D9DDE1; text-align: center; margin: 32rem auto 0; transition: .5s ease;
+    @include screen("mo") { font-size: 15rem; padding: 14rem 0; width: 100%; margin-top: 20rem;}
+    &:hover{ background-color: rgba($color: #000000, $alpha: .05);}
+    &.ty_black{ background-color: #111; color: #fff;}
+  }
+
+  .home_set_tab{ display: flex; justify-content: center; gap: 16rem; margin-bottom: 20rem;
+    @include screen("mo") { margin-bottom: 12rem; gap: 8rem;
+      &.m_scr{ justify-content: flex-start; padding:0 20rem; overflow-x: auto;}
+    }
+    button{ padding: 8rem 24rem; background-color: #fff; border-radius: 999rem; font-size: 18rem; color: #666; transition: .3s ease; border: 1px solid #DEE1E5; white-space: nowrap;
+      @include screen("mo") { padding: 8rem 14rem; font-size: 13rem;}
+      &.on{ background-color: #111; color: #fff;}
+    }
+  }
+
+  .c-product__list:not(.ty_row){ margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
+    @include screen("mo") { margin-top: 8rem; gap:32rem 8rem; grid-template-columns: repeat(2, 1fr);}
+    .c-product__item{ min-width: 0; position: relative;
+      // 품절상품 & 제품조회실패는 SOLD OUT 처리
+      &.c-product__item--error{ touch-action: none; pointer-events: none;
+        &::after{ content: 'SOLD OUT'; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #efedeb; border-radius: 8rem; display: flex; align-items: center; justify-content: center; color: #000;}
+      }
+      // 품절상품 & 제품조회실패는 SOLD OUT 처리
+      
+      .c-product__visual{ border-radius: 8rem; overflow: hidden;}
+      .c-product__info-container{ padding: 12rem 8rem 0;
+        .c-product__info{ margin-bottom: 12rem;
+          @include screen("mo") { margin-bottom: 14rem;}
+          .c-product__brand-name{ font-weight: 600;}
+          .c-product__name{ display: block; font-weight: 400; @include ellip;
+            @include screen("mo") { @include ellip(2); height: 36.5rem;}
+          }
+        }
+        .c-product__price-area{ margin-top: 12rem;
+          @include screen("mo") { margin-top: 14rem;}
+          .c-product__price-item--original{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem;
+            @include screen("mo") { margin-bottom: 0;}
+            &::before{ content: '정상가'; font-weight: 500; font-size: 11rem;}
+          }
+          .c-product__price-item--member{ display: flex; align-items: center; color: #ea1917;
+            &::before{ content: '최대혜택가'; font-weight: 500; margin-right: auto;
+              @include screen("mo") { content: '혜택가'; font-size: 11rem;}
+            }
+            .discount_rate{ font-size: 16rem; font-weight: 600; margin-right:4rem;
+              @include screen("mo") { font-size: 15rem;}
+              &::after{ content: '%'; }
+            }
+            .c-product__price-value--member{ font-weight: 700; color: #000;
+              @include screen("mo") { font-size: 15rem;}
+            }
+          }
+        }
+        .c-product__badge-container{  margin-top: 7rem; padding-top: 8rem; border-top: 1px solid #ddd;
+          > span{ font-size: 11rem; padding: 3rem 4rem; background-color: #FEF3F3; color: #EA1917; margin-right: 2rem;}
+        }
+      }
+    }
+  }
+
+  .c-product__list.ty_row{ display: grid; gap: 12rem;  grid-template-columns: 1fr 1fr; grid-template-rows: auto;
+    @include screen("mo") { display: flex; flex-wrap: wrap; gap: 8rem;}
+    .c-product__item{ background-color: #fff;border-radius: 8rem; overflow: hidden; position: relative; height: 180rem;
+      @include screen("mo") { width: 100%; height: auto !important;}
+      // &:first-child{grid-column: 1 / span 2; height: 364rem;
+      //   > span{
+      //     @include screen("mo") { display: block;}
+      //       > a{ width: 801rem;
+      //       @include screen("mo") { width: 100%; height: 90vw;}
+      //     } 
+      //   }
+      //   .c-product__info-container{ padding: 40rem;
+      //     @include screen("mo") { padding: 16rem 20rem;}
+      //     .inner{
+      //       .c-product__info{
+      //         .c-product__brand-name, .c-product__name.home__app-lge__title{ font-size: 20rem; margin-bottom: 8rem;
+      //           @include screen("mo") { font-size: 16rem; margin-bottom: 0;}
+      //           &::after{ content: ''; display: inline-block; width: 7rem; height: 7rem; border: 1px solid #000; border-width: 0 2px 2px 0; transform: rotate(-45deg) translate(11rem, 7rem);
+      //             @include screen("mo") { width: 5rem; height: 5rem; transform: rotate(-45deg) translate(5rem, 2rem);}
+      //           }
+      //         }
+      //         .c-product__name, .c-product__model-id{font-size: 17rem;
+      //           @include screen("mo") { font-size: 16rem;}
+      //         }
+      //       }
+      //     }
+      //   }
+      //   .c-product__price-value--original{ font-size: 20rem;
+      //     @include screen("mo") { font-size: 13rem;}
+      //   }
+      //   .c-product__price-value--member{ font-size: 30rem;
+      //     @include screen("mo") { font-size: 20rem;}
+      //   }
+      //   .discount_rate{ font-size: 28rem;
+      //     @include screen("mo") { font-size: 20rem;}
+      //     &::after{ font-size: 21rem;
+      //       @include screen("mo") { font-size: 15rem;}
+      //     }
+      //   }
+      // }
+      .c-product__sold-out-hidden-txt{ display: none !important; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba($color: #000000, $alpha: .2); display: flex; align-items: center; justify-content: center;
+      }
+      > span {display: flex; height: 100%;
+        > a{ width: 180rem; height: 100%; flex-shrink: 0;
+          @include screen("mo") { height: 100%; width: 132rem;}
+          *{ width: 100%; height: 100%; object-fit: cover;}
+        }
+      }
+      .c-product__info-container{ padding: 28rem; width: 100%; text-align: right; 
+        @include screen("mo") { padding: 10rem;}
+        .inner{ width: 100%; height: 100%; position: relative;  display: flex; align-items: flex-end; flex-direction: column; justify-content: flex-end; 
+          @include screen("mo") { display: block;}
+          > a{ width: 100%;
+            .c-product__info{ position: absolute; left: 0; top: 0; text-align: left;
+              @include screen("mo") { position: relative; margin-bottom: 18rem;}
+              .c-product__brand-name, .c-product__name.home__app-lge__title{ font-size: 14rem; font-weight: 600;
+                @include screen("mo") { font-size: 10rem;}
+              }
+              .c-product__name{ font-weight: 400; @include ellip(2); min-height: 40rem;
+                @include screen("mo") { min-height: 34rem;}
+              }
+            }
+            .c-product__price-area{
+              .c-product__price-item--original{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;
+                @include screen("mo") { margin-bottom: 0;}
+                &::before{ content: '정상가'; font-weight: 500; font-size: 12rem; color: #727780;
+                  @include screen("mo") { font-size: 9rem;}
+                }
+              }
+              .c-product__price-item--member{ display: flex; align-items: center; line-height: 1.1;
+                &::before{ content: '최대혜택가'; font-weight: 500; margin-right: auto; font-size: 12rem; color: #EA1917; 
+                  @include screen("mo") { font-size: 9rem; font-weight: 600;}
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .c-product__price-value--original{ color: #727780; line-height: 1;}
+      .c-product__price-value--member{ font-weight: 700; font-size: 18rem; line-height: 1;
+        @include screen("mo") { font-size: 14rem;}
+      }
+      .discount_rate{ color: #EA1917; font-weight: 600; font-size: 18rem; margin-right: 4rem;
+        @include screen("mo") { font-size: 13rem;}
+        &::after{ content: '%'; font-size: 12rem;
+          @include screen("mo") { font-size: 11rem;}
+        }
+      }
+      .c-product__badge-container{ margin-top: 4rem; display: flex; gap: 1rem; flex-wrap: wrap;
+        span{ font-size: 10rem; padding: 3rem 4rem; background-color: #FEF3F3; color:#EA1917; 
+          @include screen("mo") { font-size: 9rem;}
+          &:nth-child(2){ color: #747474; background-color: #EFEFEF;}
+        }
+      }
+
+      @at-root .homeapp_living_crossdeal .lge__item .c-product__price-area{
+        .c-product__price-item--member{ margin: 3rem 0;
+          &::before{ content: '혜택가' !important; color: #727780 !important;}
+        }
+        .c-product__price-item--final{display: flex; justify-content: space-between;
+          .c-product__price-label--final{content: "최대혜택가"; font-weight: 500; margin-right: auto; font-size: 12rem; color: #EA1917;
+            @include screen("mo") { font-size: 9rem; font-weight: 600;}
+          }
+          .c-product__price-value--fianl{ font-weight: 700; font-size: 18rem; line-height: 1; color: #EA1917;
+            @include screen("mo") { font-size: 14rem; }
+          }
+        }
+      }
+    }
+  }
+
+  .lge__item .c-product__info{ display: flex; flex-direction: column-reverse;}
+
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden;
+
+    &#benefits{
+      .benefits_coupon{
+        .coupon_box{ width: 682rem; max-width: 100%; margin: 0 auto;
+          button, a{ width: 100%; display: block;
+            + *{ margin-top: 12rem;
+              @include screen("mo") { margin-top: 8rem;}
+            }
+          }
+        }
+      }
+      .benefits_info{
+        .swiper{
+          @include screen("mo") { overflow: visible;}
+          ul{ 
+            li{ border-radius: 8rem; background-color: #F6F4F5; padding: 21rem 36rem; display: flex; align-items: center; justify-content: space-between;
+              @include screen("mo") { padding: 20rem 20rem 20rem 32rem;}
+              .txt_box{
+                span{ color: #444;}
+                strong,a{ display: block; font-weight: 600; font-size: 20rem; margin: 4rem 0 8rem;
+                  @include screen("mo") { font-size: 16rem; margin: 2rem 0;}
+                }
+                a::after{ content: ''; display: inline-block; width: 7rem; height: 7rem; border: 1px solid #111; border-width:0 2px 2px 0; transform: rotate(-45deg) translate(5rem, 1rem);
+                  @include screen("mo") { width: 6rem; height: 6rem; transform: rotate(-45deg) translate(5rem, 2rem);}
+                } 
+                p{opacity: .5;
+                  &.txt2{ font-size: 12rem; margin-top: 8rem;
+                    @include screen("mo") { font-size: 11rem; margin-top: 6rem;}
+                  }
+                }
+              }
+              img{width: 100rem;
+                @include screen("mo") { width: 64rem;}
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &#specialbrand{
+      .special_brand_cont{
+        .special_brand_pd{
+          article{ display: none;
+            &.on{ display: block;}
+            .c-product--home-style{ margin-top: 12rem;
+              @include screen("mo") { margin-top: 8rem;}
+            }
+          }
+        }
+      }
+    }
+
+    &#categorybest{
+      .category_pd_box{
+        .category_tab{ display: flex; justify-content: center; gap: 26rem; margin-bottom: 24rem;
+          @include screen("mo") { margin-bottom: 12rem; gap: 0;}
+          button{ opacity: .4;
+            @include screen("mo") { width: 100%;} 
+            &.on { opacity: 1;
+              .img_box{ border-color: #000;}
+            }
+            .img_box{border: 2px solid transparent; border-radius: 16rem; overflow: hidden;
+              @include screen("mo") { width: 56rem; margin: 0 auto;}
+            }
+            p{ margin-top: 6rem; color: #000;}
+          }
+        }
+        .category_pd_list{
+          article{ display: none;
+            &.on{ display: block;}
+          }
+        }
+      }
+    }
+    
+    &#crosssale{
+      .swiper{ 
+        @include screen("mo") { overflow: visible;}
+        .swiper-slide{ border-radius: 8rem; overflow: hidden;
+          .c-product{ position: absolute; right: 32rem; top: 50%; transform: translateY(-50%);
+            @include screen("mo") { right: 10rem; left: 10rem; transform: none; top: auto; bottom: 16rem;}
+            .c-product__list{ grid-template-columns:1fr; gap: 8rem;
+              @include screen("mo") { gap: 6rem;}
+              > .c-product__item{ width: 595rem; height: 170rem;
+                @include screen("mo") { width: 100%;}
+                > span > a{ width: 157rem;
+                  @include screen("mo") { width: 106rem;}
+                }
+
+                .c-product__visual{ padding: 15rem; padding-right: 0 !important;
+                  @include screen("mo") { padding: 10rem;}
+                  .c-product__image-wrapper{ border-radius: 4rem; overflow: hidden;}
+                }
+                .c-product__info-container{ padding-left: 18rem;
+                  @include screen("mo") { padding-left: 12rem;
+                    .inner > a .c-product__info{ margin-bottom: 3rem;
+                      .c-product__name{ font-size: 13rem; line-height: 1.3;
+                        @include screen("mo") { font-size: 12rem;}
+                      }
+                    }
+                  }
+                
+                }
+              }
+            }
+          }
+        }
+      }
+      .banner_box{ margin-top: 32rem;
+        @include screen("mo") { margin-top: 42rem;}
+      }
+    }
+    
+    &#weeklysale{
+      .c-product--home-style{
+        .c-product__list{
+          .c-product__item:nth-child(n+13){ display: none;}
+        } 
+      }
+    }
+    
+    &#homestyling{
+      .swiper{ 
+        @include screen("mo") { overflow: visible;}
+        .swiper-slide{ border-radius: 8rem; background-color: #EEE0E0; overflow: hidden;
+          .cont_box{
+            .txt_box{ padding: 20rem 28rem; color: #444;
+              @include screen("mo") { padding: 20rem;}
+              span{ font-size: 14rem;
+                @include screen("mo") { font-size: 11rem;}
+              }
+              strong{ display: block; font-size: 22rem; font-weight: 600; margin: 6rem 0 8rem; line-height: 1.3;
+                @include screen("mo") { font-size: 20rem;}
+              }
+              a{ color: #727780; font-size: 13rem;
+                &::after{ content: ''; display: inline-block; width: 4rem; height: 4rem; border: 1px solid #111; border-width:0 1px 1px 0; transform: rotate(-45deg) translate(5rem, 2rem); filter: invert(.5);} 
+              }
+            }
+            .pd_box{ display: flex; gap: 8rem; padding: 0 28rem 24rem; overflow-x: auto;
+              @include screen("mo") { padding: 0 20rem 20rem;}
+              img{ border-radius: 8rem; overflow: hidden;
+                @include screen("mo") { width: 96rem; flex-shrink: 0;}
+              }
+            }
+          }
+
+          &.ending_sld{ color: #fff;
+            .txt_box{ position: absolute; left: 0; bottom: 74rem; width: 100%; text-align: center;
+              @include screen("mo") { bottom: 32rem;}
+              p{font-size: 22rem; font-weight: 600; 
+                @include screen("mo") { font-size: 20rem;}
+              }
+              .arr{ display: block; width: 24rem; height: 24rem; background: #fff url(../images/arr.svg)no-repeat center center / 14rem auto; border-radius: 999rem; margin: 16rem auto 0; transform: rotate(180deg);
+                @include screen("mo") { width: 20rem; height: 20rem; background-size: 12rem auto; margin-top: 3rem;}
+              }
+            }
+          }
+        }
+
+        .nav{
+          span{ position: absolute; left: 12rem; top: 192rem;
+            &.nxt{ left: auto; right: 12rem;}
+          }
+        }
+      }
+    }
+
+    &#interior{
+      .swiper{
+        .nav{
+          span{ position: absolute; left: 32rem; top: 295rem;
+            &.nxt{ left: auto; right: 32rem;}
+          }
+        }
+      }
+    }
+  }
+}

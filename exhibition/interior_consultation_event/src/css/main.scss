@@ -1,0 +1,95 @@
+@import "var";
+
+.interior_consultation_event{ 
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; line-height: 1.4; font-size: inherit;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  .pd_btm{padding-bottom: 60rem;}
+  .tit{ text-align: center; margin-bottom: 28rem;
+    h2{ @include font-size(26rem); font-weight: 700;}
+    p{ @include font-size(15rem); color: #444; margin-top: 2rem;}
+  }
+  .btn{ width: 100%; height: 48rem; line-height: 48rem; background-color: #111; border-radius: 8rem; color: #fff; text-align: center; font-weight: 600; @include font-size(15rem);}
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden; padding: 60rem $layout_pd 0;
+    &#benefit{ background-color: #F1F3F2;
+      .benefit_step{ background-color: #fff; border-radius: 12rem; padding: 0 20rem 20rem;}
+      li{ display: flex; align-items: center; gap: 12rem; padding: 20rem 0;
+        + li{ border-top: 1px dashed #ddd;}
+        &:last-child{ padding-bottom: 32rem;}
+        img{ width: 54rem; flex-shrink: 0;}
+        h3{ @include font-size(17rem); font-weight: 600;
+          b{ color: #FD312E; margin-right: 6rem;}
+        }
+        p{ @include font-size(14rem); color: #444; margin-top: 6rem;}
+      }
+    }
+
+    &#partner{
+      ul{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 32rem 10rem;
+        img{ border-radius: 8rem;}
+        span{ display: flex; align-items: center; @include font-size(18rem); font-weight: 600; margin-top: 8rem;
+          &::after{ content: ""; width: 8rem; height: 8rem; border-top: 2rem solid #111; border-right: 2rem solid #111; transform: rotate(45deg); margin-left: 6rem;}
+        }
+      }
+    }
+
+    &#notice{ background-color: #F1F3F2; padding-top: 40rem; padding-bottom: 40rem;
+      ul{ background-color: #fff; border-radius: 12rem; box-shadow: 0 0 10rem rgba(0,0,0,.06); padding: 30rem 20rem;}
+      li{ position: relative; padding-left: 6rem; color: #666; line-height: 18rem; letter-spacing: 0;
+        + li{ margin-top: 2rem;}
+        &::before{ content: "·"; position: absolute; left: 0; top: 0;}
+      }
+    }
+
+    &#end{ padding: 0;
+      .cover{ display: flex; flex-direction: column; justify-content: space-between; padding: 40rem $layout_pd;}
+      .tit{ margin-bottom: 0;}
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+@import "var";
+@import url("swiper.min.css");
+@import url("fonts.css");
+@import url("aos.css");
+@import url("main.css");
+
+html {
+  height: 100%;
+  font-size: 1px;
+  @include screen("inner") {
+    font-size: 0.07479432vw;
+  }
+  @include screen("mo") {
+    font-size: 0.25641vw;
+  }
+}
+.brand_service_info{
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  @include screen("mo") {
+    @include font-size(15rem);
+  }
+
+  ::-webkit-scrollbar{ display: none;}
+  ::placeholder{ color: $gray;}
+  div,
+  p,
+  span,
+  a,
+  section,
+  label,
+  input,
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  li,
+  header,
+  footer,
+  main,
+  b,
+  i,
+  em,
+  strong,
+  select,
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section,
+  object {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    outline: none !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: 0 none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  input[type=checkbox], input[type=radio]{ width: 0; height: 0; overflow: hidden; position: absolute; left: 0; top: 0;}
+  label{ cursor: pointer;}
+  img,
+  video,
+  svg {
+    display: block;
+    border: none;
+    width: 100%;
+    max-width: unset;
+  }
+  option {
+    color: inherit;
+  }
+  section {
+    position: relative;
+  }
+  picture {
+    display: block;
+    width: 100%;
+  }
+}

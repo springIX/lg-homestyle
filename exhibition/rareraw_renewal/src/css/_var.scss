@@ -1,0 +1,48 @@
+// SCSS의 'VAR, MIXIN, FUNCTION을 공통으로 사용하기 위한 목적
+@mixin font-size($size) {
+  font-size: clamp(8px, $size, 9999rem);
+}
+
+// Layout inner
+$layout_pd: 20rem;
+
+/* Responsive */
+@mixin screen($size) {
+  @if $size == "pc" {
+    @media (min-width: 781px) {
+      @content;
+    }
+  } @else if $size == "mo" {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+}
+
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+@mixin m_full_layout($pd: null) {
+  margin-left: -$layout_pd !important;
+  width: calc(100% + #{$layout_pd * 2}) !important;
+
+  @if $pd == pd {
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+}
+
+/* Ellipsis */
+@mixin ellip($col: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($col == 1) {
+    white-space: nowrap;
+  } @else {
+    white-space: unset;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: $col;
+  }
+}

@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("swiper.min.css");
+@import url("fonts.css");
+@import url("aos.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1px;
+}
+@media (max-width: 1377px) {
+  html {
+    font-size: 0.07479432vw;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+.brand_service_info {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 16rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .brand_service_info {
+    font-size: clamp(10px, 15rem, 9999rem);
+  }
+}
+.brand_service_info ::-webkit-scrollbar {
+  display: none;
+}
+.brand_service_info ::placeholder {
+  color: #727780;
+}
+.brand_service_info div,
+.brand_service_info p,
+.brand_service_info span,
+.brand_service_info a,
+.brand_service_info section,
+.brand_service_info label,
+.brand_service_info input,
+.brand_service_info button,
+.brand_service_info h1,
+.brand_service_info h2,
+.brand_service_info h3,
+.brand_service_info h4,
+.brand_service_info h5,
+.brand_service_info h6,
+.brand_service_info ul,
+.brand_service_info ol,
+.brand_service_info li,
+.brand_service_info header,
+.brand_service_info footer,
+.brand_service_info main,
+.brand_service_info b,
+.brand_service_info i,
+.brand_service_info em,
+.brand_service_info strong,
+.brand_service_info select,
+.brand_service_info article,
+.brand_service_info aside,
+.brand_service_info details,
+.brand_service_info figcaption,
+.brand_service_info figure,
+.brand_service_info footer,
+.brand_service_info header,
+.brand_service_info hgroup,
+.brand_service_info menu,
+.brand_service_info nav,
+.brand_service_info section,
+.brand_service_info object {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.brand_service_info h1,
+.brand_service_info h2,
+.brand_service_info h3,
+.brand_service_info h4,
+.brand_service_info h5,
+.brand_service_info h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.brand_service_info table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.brand_service_info ol,
+.brand_service_info ul {
+  list-style: none;
+}
+.brand_service_info a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.brand_service_info button,
+.brand_service_info input,
+.brand_service_info select,
+.brand_service_info textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.brand_service_info input[type=checkbox], .brand_service_info input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.brand_service_info label {
+  cursor: pointer;
+}
+.brand_service_info img,
+.brand_service_info video,
+.brand_service_info svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.brand_service_info option {
+  color: inherit;
+}
+.brand_service_info section {
+  position: relative;
+}
+.brand_service_info picture {
+  display: block;
+  width: 100%;
+}

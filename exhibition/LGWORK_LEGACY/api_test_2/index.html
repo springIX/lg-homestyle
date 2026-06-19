@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <title>API TEST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="event-benefit-template">
+    <div class="key_visual">
+      <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/kv.jpg" alt="" class="pc">
+      <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/kv_mo.jpg" alt="" class="mo">
+    </div>
+
+    <div class="c-product c-product--home-style">
+      <ul class="c-product__list">
+        <li class="c-product__item">
+          <span data-home-style-product="G25070000656"></span>
+        </li>
+        <li class="c-product__item">
+          <span data-home-style-product="G25070005743"></span>
+        </li>
+        <li class="c-product__item">
+          <span data-home-style-product="G25070005743"></span>
+        </li>
+        <li class="c-product__item">
+          <span data-home-style-product="G25070001706"></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- LG 가전 영역 -->
+    <div class="c-product">
+      <ul class="c-product__list">
+        <li class="c-product__item lge__item">
+          <span data-prdvalue="G25070000656"></span>
+        </li>
+        <li class="c-product__item lge__item">
+          <span data-prdvalue="G25070005743"></span>
+        </li>
+        <li class="c-product__item lge__item">
+          <span data-prdvalue="G25070001706"></span>
+        </li>
+        <li class="c-product__item lge__item">
+          <span data-prdvalue="G25070001706"></span>
+        </li>
+        <li class="c-product__item lge__item">
+          <span data-prdvalue="G25070005743"></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- LG 리빙 / 가전 섞어서 영역 -->
+    <div class="c-product c-product--home-style mixed__list test_test_test">
+      <ul class="c-product__list">
+        <li class="c-product__item">
+          <span data-home-style-product="G25070001813"></span>
+        </li>
+        <li class="c-product__item">
+          <span data-home-style-product="G25070001813"></span>
+        </li>
+        <li class="c-product__item">
+          <span data-home-style-product="G25070000656"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="c-product lge_mixed__list">
+      <ul class="c-product__list">
+        <li class="c-product__item lge__item" data-lge-index="2">
+          <span data-prdvalue="MD10319945"></span>
+        </li>
+        <li class="c-product__item lge__item" data-lge-index="4">
+          <span data-prdvalue="MD10558884"></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 쿠폰 테스트 -->
+    <div class="c-product">
+      <button id="cp1" type="button" class="homeCoupon" data-coupons="PR260106006379">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon.png" alt="쿠폰 다운받기">
+      </button>
+
+      <button id="cp2" type="button" class="homeCoupon" data-coupons="PR260106006380">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon.png" alt="쿠폰 다운받기">
+      </button>
+
+      <button id="cpAll" type="button" class="homeCoupon" data-coupons="PR260106006379,PR260106006380">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon.png" alt="쿠폰 다운받기">
+      </button>
+    </div>
+
+    <div class="c-product">
+      <button id="cp1" type="button" class="homeCoupon" data-coupons="PR260107006398">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon.png" alt="쿠폰 다운받기">
+      </button>
+
+      <button id="cp2" type="button" class="homeCoupon" data-coupons="PR260107006399">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon.png" alt="쿠폰 다운받기">
+      </button>
+
+      <button id="cpAll" type="button" class="homeCoupon" data-coupons="PR260107006398,PR260107006399">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon.png" alt="쿠폰 다운받기">
+      </button>
+    </div>
+
+    <div class="c-product">
+      <button id="testCp" type="button" class="couponPE" data-evt-gubun="testCp">
+        <img src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/src/images/coupon2.png" alt="쿠폰 다운받기">
+      </button>
+    </div>
+
+  </div>
+
+  <!-- 1. jQuery (이미 사이트 공통에서 쓰는 버전이면 유지) -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+  <!-- 2. LG 공통 UI 스크립트 -->
+  <script src="https://www.lge.co.kr/lg5-common/js/vcui.min.js"></script>
+  <script src="https://www.lge.co.kr/lg5-common/js/vcui.common-ui.min.js"></script>
+  <script src="https://www.lge.co.kr/lg5-common/js/lg.common.min.js"></script>
+  <script src="https://www.lge.co.kr/lg5-common/js/app.common.min.js"></script>
+
+  <!-- 3. 홈스타일 페이지 전용 스크립트 (기존 유지) -->
+  <script src="https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/product-api.js" defer></script>
+  <script src="home-style-api.js" defer></script>
+
+  <!-- 4. 이벤트 공통 스크립트 (dblBtnChk, focusAlert 등) -->
+  <script type="text/javascript" src="https://www.lge.co.kr/kr/event/common/event_validation.js"></script>
+  <script type="text/javascript" src="https://www.lge.co.kr/kr/event/common/event_common.js"></script>
+
+  <!-- 5. ✅ event_layer.js (ES module) -->
+  <script type="module">
+    const dt = Date.now();
+    import(`https://www.lge.co.kr/home_style_pages/2025/11/api_test_2/event_layer.js?dt=${dt}`);
+  </script>
+
+</body>
+
+</html>

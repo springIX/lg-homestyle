@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.kny_myq_container {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
+  max-width: unset;
+}
+
+.kny_myq_container abbr, .kny_myq_container acronym, .kny_myq_container address, .kny_myq_container applet, .kny_myq_container article, .kny_myq_container aside, .kny_myq_container audio, .kny_myq_container big, .kny_myq_container blockquote, .kny_myq_container body, .kny_myq_container canvas, .kny_myq_container caption, .kny_myq_container center, .kny_myq_container cite, .kny_myq_container code, .kny_myq_container dd, .kny_myq_container details, .kny_myq_container dfn, .kny_myq_container div, .kny_myq_container dl, .kny_myq_container dt, .kny_myq_container embed, .kny_myq_container fieldset, .kny_myq_container figcaption, .kny_myq_container figure, .kny_myq_container footer, .kny_myq_container form, .kny_myq_container h1, .kny_myq_container h2, .kny_myq_container h3, .kny_myq_container h4, .kny_myq_container h5, .kny_myq_container h6, .kny_myq_container header, .kny_myq_container hgroup, .kny_myq_container html, .kny_myq_container iframe, .kny_myq_container img, .kny_myq_container ins, .kny_myq_container kbd, .kny_myq_container label, .kny_myq_container legend, .kny_myq_container li, .kny_myq_container mark, .kny_myq_container menu, .kny_myq_container nav, .kny_myq_container object, .kny_myq_container ol, .kny_myq_container output, .kny_myq_container p, .kny_myq_container pre, .kny_myq_container q, .kny_myq_container ruby, .kny_myq_container samp, .kny_myq_container section, .kny_myq_container small, .kny_myq_container strike, .kny_myq_container summary, .kny_myq_container table, .kny_myq_container tbody, .kny_myq_container td, .kny_myq_container textarea, .kny_myq_container tfoot, .kny_myq_container th, .kny_myq_container thead, .kny_myq_container time, .kny_myq_container tr, .kny_myq_container tt, .kny_myq_container ul, .kny_myq_container var, .kny_myq_container video {
+  color: inherit;
+  line-height: 1.4;
+  font-size: inherit;
+}
+.kny_myq_container {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.kny_myq_container .inner {
+  width: 100%;
+  position: relative;
+}
+.kny_myq_container .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.kny_myq_container .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.kny_myq_container .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kny_myq_container .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.kny_myq_container .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kny_myq_container .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.kny_myq_container .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (min-width: 781px) {
+  .kny_myq_container .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .kny_myq_container .pc {
+    display: none !important;
+  }
+}
+.kny_myq_container .pd_btm {
+  padding-bottom: 60rem;
+}
+.kny_myq_container {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.kny_myq_container section {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 20rem !important;
+  padding: 60rem 20rem;
+}
+.kny_myq_container section h2 {
+  font-size: clamp(8px, 26rem, 9999rem);
+  font-weight: 700;
+}
+.kny_myq_container section#commercial_film video {
+  width: 65%;
+  margin: 20rem auto 0;
+}
+.kny_myq_container section#event {
+  background-color: #F6F6F6;
+}
+.kny_myq_container section#event p {
+  margin: 2rem 0 16rem;
+}
+.kny_myq_container section#event span {
+  font-size: clamp(8px, 12rem, 9999rem);
+  font-weight: 500;
+  color: #666;
+}
+.kny_myq_container section#event a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 8rem;
+  padding: 18rem;
+  margin: 20rem auto 0;
+  transition: 0.3s ease;
+  width: 320rem;
+  background-color: #111;
+  color: #fff;
+}
+.kny_myq_container section#event a img {
+  width: 20rem;
+  filter: invert(1);
+  transform: rotate(-45deg);
+}

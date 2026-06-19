@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* SCSS VAR */
+$ci : #F31E11;
+$pd : 20px;
+
+@mixin screen($size) {
+  @if $size == "pc" {
+    @media (min-width: 781px) {
+      @content;
+    }
+  } @else if $size == "mo" {
+    @media (max-width: 780px) {
+      @content;
+    }
+  } 
+}
+
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+@mixin m_full_layout($pd: null) {
+  margin-left: -$layout_pd !important;
+  width: calc(100% + #{$layout_pd * 2}) !important;
+
+  @if $pd == pd {
+    padding-left: $layout_pd !important;
+    padding-right: $layout_pd !important;
+  }
+}
+
+/* Ellipsis */
+@mixin ellip($col: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($col == 1) {
+    white-space: nowrap;
+  } @else {
+    white-space: unset;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: $col;
+  }
+}
+/* SCSS VAR */
+
+html { scroll-behavior: smooth;}
+main { background-color: #F9F9F9;}
+
+.construction_case_casecontainer{
+  /* COMMON */
+  word-break: keep-all; color: #111; font-family: 'Pretendard', sans-serif; font-size: 14px; font-weight: 400; position: relative; text-align: left; max-width: 780px; margin: 0 auto; line-height: 1.4; background-color: #fff;
+  *{display: block; margin: 0; padding: 0; border: 0; font: inherit; box-sizing: border-box;}
+  img,video{ display: block; width: 100%;}
+  ol, ul { list-style: none;}
+  a{ text-decoration: unset; color: inherit;}
+  @include screen("pc") { .mo{ display: none !important;}}
+  @include screen("mo") { .pc{ display: none !important;}}
+  h2{ color: #000; text-align: center; line-height: 1.2; font-size: 26px; margin-bottom: 18px; font-weight: 500;
+    span{ font-size: 20px; display: block; line-height: 1.6;}
+    strong{ font-family: 'Pretendard', sans-serif; font-weight: 600; font-size: 20px; margin-top: 4px; line-height: 1.6;}
+  }
+  .font_cg { font-family: "Cormorant Garamond", 'Pretendard',serif;}
+  .layout_inner{ padding-left: $pd; padding-right: $pd; position: relative;}
+  .square_btn{ width: 100%; padding: 14px; border: 1px solid rgba($color: #111, $alpha: .5); text-align: center; font-size:16px; font-weight: 600; color: #111; display: flex; justify-content: center; align-items: center; gap: 6px;
+    &::after{ content: ''; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png)no-repeat center center / contain; display: block; width: 20px; height: 20px;}
+    &.ty_white{ border-color: #fff; color: #fff;
+      &::after{ filter: invert(1);}
+    }
+    &.ty_black{ background-color: #111; color: #fff; font-size: 15px; font-weight: 500; border-radius: 8px;}
+    &.not_arr::after{ display: none;}
+  }
+  .txt{color: #444; line-height: 20px;}
+  .pd_txt{ padding:$pd $pd 0;
+    h3{ font-size:26px; font-weight: 700; text-transform:capitalize;
+      a{ display: flex; align-items: flex-end; gap: 4px;
+        &::after{ content: ''; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png)no-repeat center center / contain; display: block; width: 24px; height: 24px; transform: translateY(-1px);}
+      }
+      span{ line-height: 18px; margin-top: 4px; display: block; font-size:14px; font-weight: 600; opacity: .5;}
+    }
+    p{ margin-top: 12px; }
+  }
+  .pd_l{ padding-left: 80px;}
+  .pd_r{ padding-right: 80px;}
+  .gap_40{ display: flex; flex-direction: column; gap: 40px;
+    &.ty_row{ flex-direction: row;}
+  }
+  .gap_20{ display: flex; flex-direction: column; gap: 20px;
+    &.ty_row{ flex-direction: row;}
+  }
+  .gap_2{  display: flex; flex-direction: column; gap: 2px;
+    &.ty_row{ flex-direction: row;}
+  }
+  #oms_module_anchor{ position: absolute; left: 0; bottom: 0; height: 1px; width: 100%;}
+
+  /* COMMON */
+
+  /* <img src="https://static-store.lge.co.kr/editor/549/2605080018549.png" alt="x" class="icon_x"> */
+  .icon_x{ display: inline-block; width: 16px; margin: 0 4px; transform: translateY(1px);
+    &.ty2{ transform: translateY(9px);}
+  }
+  
+  .contents_tabbar{ width: 100%; overflow: hidden; display: flex; justify-content:space-between; white-space: nowrap; background-color: #111; font-size:13px; padding: 0 20px; position: sticky; left: 0; top: 56px; z-index: 10;
+    @include screen("pc") { top: 0; justify-content: center; gap: 40px;}
+    li a{ padding: 16px 0 14px; border-bottom: 2px solid transparent; color: #fff; 
+      &:hover{ color: $ci; font-weight: 600; border-bottom-color: $ci;}
+    }
+  }
+
+  section{ overflow: hidden; position: relative; padding: 60px 0;
+
+    /* ABOUT STORY */
+    &#about_story{ padding: 50px $pd 60px; text-align: center;background-color: #F5EEE8;
+      h2{ font-size:14px;font-weight: 600; margin-bottom: 12px;}
+      p{ font-size:16px; line-height: 30px; color: #444;}
+      .square_btn{ display: inline-flex; width: 200px; margin-top: 24px;}
+    }
+
+    &#showroom{
+      .txt_box{ padding: 20px $pd 32px;
+        h3{ font-size: 24px; font-weight: 600;}
+        .txt1{}
+        .txt2{ color: #444; margin-top: 8px;}
+        &.ty_intro{ text-align: center; padding: 24px 0 60px;
+          .txt2{ color: #8f8f8f;}
+        }
+        .dsc{ font-size: 10px; color: #8F8F8F; margin-top: 8px;}
+      }
+    }
+
+    &#process{ background-color: #EBEFF3;
+      .process_list { display: flex; flex-direction: column; gap: 8px; counter-reset: process;
+        li{ position: relative; background: #fff; border-radius: 4px; overflow: hidden; letter-spacing: -0.02em;
+          input { display: none;
+            &:checked {
+              ~ .info { display: block;}
+              + .tit { cursor: default;
+                &::after { transform: rotate(-180deg);}
+              }
+            }
+          }
+          .tit {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 20px;
+            span{ font-size: 18px; font-weight: 500; color: #222; display: block;
+              &::before { display: inline-block; counter-increment: process; content: "0"counter(process); font-size: 20px; font-weight: 600; color: #D0C8C8; min-width: 30px;}
+            }
+          }
+          &:nth-child(n+10) .tit span::before{ content: counter(process);}
+
+          label.tit{ cursor: pointer;
+            &::after{ content: ''; width: 20px; height: 20px; background: url(https://www.lge.co.kr/home_style_pages/2026/05/construction_case/src/images/arr.png)no-repeat center center / contain;}
+          }
+
+          .info { display: none; padding: 0 20px 16px; font-size: 14px; color: #444;}
+        }
+      }
+    }
+
+    &#const_case_list{ padding-bottom: 0; background-color: #F9F9F9;
+      article{
+        h2{ font-size: 26px; font-weight: 600;}
+        .case_info{ display: flex; justify-content: center; margin: 16px auto 20px;
+          li{ width: 76px;
+            + li{ border-left: 1px solid #DDDDDD;}
+            img{ width: 24px; margin: 0 auto 4px;}
+            p{ display: flex; align-items: center; text-align: center; justify-content: center; font-size: 13px; color: #666; height: 37px;}
+          }
+        }
+        .img_box{ width: 100%;
+          img{ width: calc(50% - 1px);}
+        }
+      }
+      a{ margin-bottom: 60px;}
+    }
+
+    &#ending{ background-color: #111; color: #fff; padding: 60px 20px;
+      *{ color: inherit;}
+      h3{ font-weight: 700; font-size: 20px; margin: 20px 0 12px;}
+      ul{ margin: 20px 0 24px; list-style-type: disc;
+        li{
+          + li{margin-top: 2px;}
+          &::before{ content: '·'; padding: 0 8px;}
+        }
+      }
+      a{ border-radius: 8px; background-color: #fff; color: #111; text-align: center; padding: 14px; font-size: 15px; font-weight: 600;}
+    }
+  }
+}

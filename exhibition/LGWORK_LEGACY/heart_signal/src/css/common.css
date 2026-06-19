@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+@import url("swiper.min.css");
+html {
+  height: 100%;
+  font-size: 1.3px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.heart_signal_container {
+  background-color: #F1F3F2;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 14rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.2rem;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.2rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.heart_signal_container ::-webkit-scrollbar {
+  display: none;
+}
+.heart_signal_container ::placeholder {
+  color: #d6d6d6;
+}
+.heart_signal_container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.heart_signal_container h1,
+.heart_signal_container h2,
+.heart_signal_container h3,
+.heart_signal_container h4,
+.heart_signal_container h5,
+.heart_signal_container h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.heart_signal_container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.heart_signal_container ol,
+.heart_signal_container ul {
+  list-style: none;
+}
+.heart_signal_container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.heart_signal_container button,
+.heart_signal_container input,
+.heart_signal_container select,
+.heart_signal_container textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.heart_signal_container input[type=checkbox], .heart_signal_container input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.heart_signal_container label {
+  cursor: pointer;
+}
+.heart_signal_container img,
+.heart_signal_container video,
+.heart_signal_container svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.heart_signal_container option {
+  color: inherit;
+}
+.heart_signal_container section {
+  position: relative;
+}
+.heart_signal_container picture {
+  display: block;
+  width: 100%;
+}
+.heart_signal_container span {
+  display: block;
+}
