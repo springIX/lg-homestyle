@@ -1,0 +1,63 @@
+.promotion-container, .tab-container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+  /* HTML5 display-role reset for older browsers */
+}
+.promotion-container div, .promotion-container span, .promotion-container applet, .promotion-container object, .promotion-container iframe,
+.promotion-container h1, .promotion-container h2, .promotion-container h3, .promotion-container h4, .promotion-container h5, .promotion-container h6, .promotion-container p, .promotion-container blockquote, .promotion-container pre,
+.promotion-container a, .promotion-container abbr, .promotion-container acronym, .promotion-container address, .promotion-container big, .promotion-container cite, .promotion-container code,
+.promotion-container del, .promotion-container dfn, .promotion-container em, .promotion-container img, .promotion-container ins, .promotion-container kbd, .promotion-container q, .promotion-container s, .promotion-container samp,
+.promotion-container small, .promotion-container strike, .promotion-container strong, .promotion-container sub, .promotion-container sup, .promotion-container tt, .promotion-container var,
+.promotion-container b, .promotion-container u, .promotion-container i, .promotion-container center,
+.promotion-container dl, .promotion-container dt, .promotion-container dd, .promotion-container ol, .promotion-container ul, .promotion-container li,
+.promotion-container fieldset, .promotion-container form, .promotion-container label, .promotion-container legend,
+.promotion-container table, .promotion-container caption, .promotion-container tbody, .promotion-container tfoot, .promotion-container thead, .promotion-container tr, .promotion-container th, .promotion-container td,
+.promotion-container article, .promotion-container aside, .promotion-container canvas, .promotion-container details, .promotion-container embed,
+.promotion-container figure, .promotion-container figcaption, .promotion-container footer, .promotion-container header, .promotion-container hgroup,
+.promotion-container menu, .promotion-container nav, .promotion-container output, .promotion-container ruby, .promotion-container section, .promotion-container summary,
+.promotion-container time, .promotion-container mark, .promotion-container audio, .promotion-container video, .tab-container div, .tab-container span, .tab-container applet, .tab-container object, .tab-container iframe,
+.tab-container h1, .tab-container h2, .tab-container h3, .tab-container h4, .tab-container h5, .tab-container h6, .tab-container p, .tab-container blockquote, .tab-container pre,
+.tab-container a, .tab-container abbr, .tab-container acronym, .tab-container address, .tab-container big, .tab-container cite, .tab-container code,
+.tab-container del, .tab-container dfn, .tab-container em, .tab-container img, .tab-container ins, .tab-container kbd, .tab-container q, .tab-container s, .tab-container samp,
+.tab-container small, .tab-container strike, .tab-container strong, .tab-container sub, .tab-container sup, .tab-container tt, .tab-container var,
+.tab-container b, .tab-container u, .tab-container i, .tab-container center,
+.tab-container dl, .tab-container dt, .tab-container dd, .tab-container ol, .tab-container ul, .tab-container li,
+.tab-container fieldset, .tab-container form, .tab-container label, .tab-container legend,
+.tab-container table, .tab-container caption, .tab-container tbody, .tab-container tfoot, .tab-container thead, .tab-container tr, .tab-container th, .tab-container td,
+.tab-container article, .tab-container aside, .tab-container canvas, .tab-container details, .tab-container embed,
+.tab-container figure, .tab-container figcaption, .tab-container footer, .tab-container header, .tab-container hgroup,
+.tab-container menu, .tab-container nav, .tab-container output, .tab-container ruby, .tab-container section, .tab-container summary,
+.tab-container time, .tab-container mark, .tab-container audio, .tab-container video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.promotion-container article, .promotion-container aside, .promotion-container details, .promotion-container figcaption, .promotion-container figure,
+.promotion-container footer, .promotion-container header, .promotion-container hgroup, .promotion-container menu, .promotion-container nav, .promotion-container section, .tab-container article, .tab-container aside, .tab-container details, .tab-container figcaption, .tab-container figure,
+.tab-container footer, .tab-container header, .tab-container hgroup, .tab-container menu, .tab-container nav, .tab-container section {
+  display: block;
+}
+.promotion-container ol, .promotion-container ul, .tab-container ol, .tab-container ul {
+  list-style: none;
+}
+.promotion-container blockquote, .promotion-container q, .tab-container blockquote, .tab-container q {
+  quotes: none;
+}
+.promotion-container blockquote:before, .promotion-container blockquote:after,
+.promotion-container q:before, .promotion-container q:after, .tab-container blockquote:before, .tab-container blockquote:after,
+.tab-container q:before, .tab-container q:after {
+  content: "";
+  content: none;
+}
+.promotion-container table, .tab-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

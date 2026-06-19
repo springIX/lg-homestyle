@@ -1,0 +1,52 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+.brand-story-banner-container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+}
+.brand-story-banner-container div, .brand-story-banner-container span, .brand-story-banner-container applet, .brand-story-banner-container object, .brand-story-banner-container iframe,
+.brand-story-banner-container h1, .brand-story-banner-container h2, .brand-story-banner-container h3, .brand-story-banner-container h4, .brand-story-banner-container h5, .brand-story-banner-container h6, .brand-story-banner-container p, .brand-story-banner-container blockquote, .brand-story-banner-container pre,
+.brand-story-banner-container a, .brand-story-banner-container abbr, .brand-story-banner-container acronym, .brand-story-banner-container address, .brand-story-banner-container big, .brand-story-banner-container cite, .brand-story-banner-container code,
+.brand-story-banner-container del, .brand-story-banner-container dfn, .brand-story-banner-container em, .brand-story-banner-container img, .brand-story-banner-container ins, .brand-story-banner-container kbd, .brand-story-banner-container q, .brand-story-banner-container s, .brand-story-banner-container samp,
+.brand-story-banner-container small, .brand-story-banner-container strike, .brand-story-banner-container strong, .brand-story-banner-container sub, .brand-story-banner-container sup, .brand-story-banner-container tt, .brand-story-banner-container var,
+.brand-story-banner-container b, .brand-story-banner-container u, .brand-story-banner-container i, .brand-story-banner-container center,
+.brand-story-banner-container dl, .brand-story-banner-container dt, .brand-story-banner-container dd, .brand-story-banner-container ol, .brand-story-banner-container ul, .brand-story-banner-container li,
+.brand-story-banner-container fieldset, .brand-story-banner-container form, .brand-story-banner-container label, .brand-story-banner-container legend,
+.brand-story-banner-container table, .brand-story-banner-container caption, .brand-story-banner-container tbody, .brand-story-banner-container tfoot, .brand-story-banner-container thead, .brand-story-banner-container tr, .brand-story-banner-container th, .brand-story-banner-container td,
+.brand-story-banner-container article, .brand-story-banner-container aside, .brand-story-banner-container canvas, .brand-story-banner-container details, .brand-story-banner-container embed,
+.brand-story-banner-container figure, .brand-story-banner-container figcaption, .brand-story-banner-container footer, .brand-story-banner-container header, .brand-story-banner-container hgroup,
+.brand-story-banner-container menu, .brand-story-banner-container nav, .brand-story-banner-container output, .brand-story-banner-container ruby, .brand-story-banner-container section, .brand-story-banner-container summary,
+.brand-story-banner-container time, .brand-story-banner-container mark, .brand-story-banner-container audio, .brand-story-banner-container video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.brand-story-banner-container {
+  /* HTML5 display-role reset for older browsers */
+}
+.brand-story-banner-container article, .brand-story-banner-container aside, .brand-story-banner-container details, .brand-story-banner-container figcaption, .brand-story-banner-container figure,
+.brand-story-banner-container footer, .brand-story-banner-container header, .brand-story-banner-container hgroup, .brand-story-banner-container menu, .brand-story-banner-container nav, .brand-story-banner-container section {
+  display: block;
+}
+.brand-story-banner-container ol, .brand-story-banner-container ul {
+  list-style: none;
+}
+.brand-story-banner-container blockquote, .brand-story-banner-container q {
+  quotes: none;
+}
+.brand-story-banner-container blockquote:before, .brand-story-banner-container blockquote:after,
+.brand-story-banner-container q:before, .brand-story-banner-container q:after {
+  content: "";
+  content: none;
+}
+.brand-story-banner-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

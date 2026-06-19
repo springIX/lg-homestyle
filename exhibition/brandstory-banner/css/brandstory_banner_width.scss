@@ -1,0 +1,710 @@
+
+$mo-width: 390;
+
+@function mo($px) {
+  @return calc(#{$px} / #{$mo-width} * 100vw);
+}
+
+.brand-story-banner-container {
+  word-break: keep-all;
+  color: #111;
+  font-family: 'Pretendard', sans-serif;
+  position: relative;
+  background: #ebebeb;
+  text-align: left;
+  width: 100%;
+  min-height: 600px;
+  &.mo{ min-height: mo(696);}
+
+  /* PUBLIC */
+  &.pc br.mo,
+  &.mo br.pc{ display: none;}
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  > section{ width: max-content; position: absolute;
+    &.reverse a{ flex-direction: row-reverse; text-align: right;}
+    a{ display: flex; align-items: center;
+      img{ mix-blend-mode: multiply; position: relative; flex-shrink: 0;}
+      .txt-box{ position: relative; line-height: 1.4; white-space: nowrap;
+        > *{ display: block;}
+        .txt1{color: #727780; font-size: 12px; font-weight: 400;}
+        .txt2{ font-size: 20px; font-weight: 600; letter-spacing: -0.4px; margin-top: 2px;}
+        .txt3{ font-size: 15px; font-weight: 600; letter-spacing: -0.4px; margin-top: 8px;
+          em{ display: inline-block; margin-right: 4px; color: #ff0000;}
+        }
+      }
+    }
+  }
+  &.mo > section{ position: relative; width: 100%;
+    a{
+      .txt-box{
+        .txt1{ font-size: mo(12);}
+        .txt2{ font-size: mo(20); margin-top: mo(2);}
+        .txt3{ font-size: mo(15); margin-right: mo(4);
+          em{ margin-right: mo(4);}
+        }
+      }
+    }
+  }
+  /* //PUBLIC */
+
+  /* HERMAN */
+  &.herman_miller {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 0; top: 10px;
+          a .txt-box{ left: -58px; top: -50px}
+        }
+        &:nth-child(2){ left: 591px; top: 222px;
+          a .txt-box{ right: -108px; top: -20px;}
+        }
+        &:nth-child(3){ left: 0; top: 342px;
+          a .txt-box{ margin-left: 9px; top: 35px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ left: mo(-81); margin-top: mo(64);
+          a{
+            img{ width: mo(409);}
+            .txt-box{  position: absolute; top: mo(-20); left: mo(249);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(25) 0 mo(15);
+          a{
+            img{ width: mo(207); right: mo(26);}
+            .txt-box{ top: mo(-25); text-align: left; left: mo(14);}
+          } 
+        }
+        &:nth-child(3){ left: mo(-20);
+          a{
+            img{ width: mo(221);}
+            .txt-box{ left: mo(10);}
+          } 
+        }
+      }
+    }
+  }
+  /* //HERMAN */
+
+  /* DE_BEJARRY */
+  &.de_bejarry {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 187px; top: 41px;
+          a .txt-box{ left: 50px; top: -40px}
+        }
+        &:nth-child(2){ left: 86px; top: 358px;
+          a .txt-box{ left: 9px; top: 20px;}
+        }
+        &:nth-child(3){ left: 582px; top: 302px;
+          a .txt-box{ left: 94px; top: 0px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(63);
+          a{
+            img{ width: mo(306); right: mo(27);}
+            .txt-box{ text-align: right; position: absolute; left: mo(38); top: mo(40);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(32) 0 mo(6);
+          a{
+            img{ width: mo(152); margin-left: mo(18);}
+            .txt-box{ top: mo(-10); left: mo(32);}
+          } 
+        }
+        &:nth-child(3){
+          a{
+            img{ width: mo(273); margin-right: mo(-14);}
+            .txt-box{ right: mo(-64); top: mo(-5);}
+          } 
+        }
+      }
+    }
+  }
+  /* //DE_BEJARRY */
+
+  /* LEMNOS */
+  &.lemnos {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 69px; top: 0;
+          a .txt-box{ left: -30px; top: 0px}
+        }
+        &:nth-child(2){ left: 693px; top: 229px;
+          a .txt-box{ top: -10px;}
+        }
+        &:nth-child(3){ left: 203px; top: 416px;
+          a .txt-box{ margin-right: -10px; top: -5px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(45);
+          a{
+            img{ width: mo(262); margin-left: mo(-21);}
+            .txt-box{ left: mo(-22);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(31) 0;
+          a{
+            img{ width: mo(201); }
+            .txt-box{ top: mo(-10); left: mo(-12);}
+          } 
+        }
+        &:nth-child(3){
+          a{ flex-direction: row;
+            img{ width: mo(303); margin-left: mo(-57);}
+            .txt-box{ left: mo(-30); text-align: left;}
+          } 
+        }
+      }
+    }
+  }
+  /* //LEMNOS */
+
+  /* KNOLL */
+  &.knoll {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 36px; top: -41px;
+          a .txt-box{ left: -16px; top: -35px}
+        }
+        &:nth-child(2){ left: 680px; top: 130px;
+          a .txt-box{ right: -40px;}
+        }
+        &:nth-child(3){ left: 226px; top: 393px;
+          a .txt-box{ right: -22px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(21);
+          a{
+            img{ width: mo(300); margin-left: mo(-31);}
+            .txt-box{ left: mo(-35); }
+          } 
+        }
+        &:nth-child(2){ margin: mo(-35) 0 mo(10);
+          a{
+            img{ width: mo(247); }
+            .txt-box{}
+          } 
+        }
+        &:nth-child(3){
+          a{ flex-direction: row;
+            img{ width: mo(250); margin-left: mo(-48);}
+            .txt-box{ left: mo(15); top: mo(-10); text-align: left;}
+          } 
+        }
+      }
+    }
+  }
+  /* //KNOLL */
+
+   /* FLOS */
+  &.flos {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 349px; top: 87px;
+          a .txt-box{ margin-right: 37px; top: -35px}
+        }
+        &:nth-child(2){ left: 59px; top: 169px;
+          a .txt-box{ margin-left: 9px; top: 60px;}
+        }
+        &:nth-child(3){ left: 646px; top: 329px;
+          a .txt-box{ margin-right: 13px; top: 40px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(50); right: mo(26);
+          a{
+            img{ width: mo(201);}
+            .txt-box{ text-align: left;top: mo(25); }
+          } 
+        }
+        &:nth-child(2){ margin: mo(32) 0 mo(26); left: mo(19);
+          a{
+            img{ width: mo(152);}
+            .txt-box{ margin-left: mo(24);}
+          } 
+        }
+        &:nth-child(3){ right: mo(53);
+          a{
+            img{ width: mo(83);}
+            .txt-box{ right: mo(54); top: mo(5);}
+          } 
+        }
+      }
+    }
+  }
+  /* //FLOS */ 
+
+  /* PAPPELINA */
+  &.pappelina {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 154px; top: 76px;
+          a .txt-box{ top: -30px;}
+        }
+        &:nth-child(2){ left: 531px; top: 236px;
+          a .txt-box{ margin-right: 20px;}
+        }
+        &:nth-child(3){ left: 164px; top: 333px;
+          a .txt-box{ margin-left: 25px; top: 30px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(69);
+          a{
+            img{ width: mo(344); margin-left: mo(-105);}
+            .txt-box{ top: mo(-35);}
+          } 
+        }
+        &:nth-child(2){ left: mo(40); margin: mo(44) 0 mo(30);
+          a{
+            img{ width: mo(140);}
+            .txt-box{ top: mo(-10); margin-right: mo(20);}
+          } 
+        }
+        &:nth-child(3){ left: mo(40);
+          a{
+            img{ width: mo(130);}
+            .txt-box{ margin-left: mo(30); top: mo(-5);}
+          } 
+        }
+      }
+    }
+  }
+  /* //PAPPELINA */
+
+  /* VILLEROY */
+  &.villeroy {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 60px; top: 63px;
+          a .txt-box{ top: -25px}
+        }
+        &:nth-child(2){ left: 554px; top: 227px;
+          a .txt-box{ margin-left: 9px; top: 20px;}
+        }
+        &:nth-child(3){ left: 112px; top: 349px;
+          a .txt-box{ margin-left: 20px; top: 20px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(70); left: mo(-96);
+          a{
+            img{ width: mo(383);}
+            .txt-box{ text-align: right; left: mo(-30); }
+          } 
+        }
+        &:nth-child(2){ margin: mo(24) 0 mo(21); right: mo(30);
+          a{
+            img{ width: mo(200);}
+            .txt-box{ margin-right: mo(20); text-align: left;}
+          } 
+        }
+        &:nth-child(3){ left: mo(-25);
+          a{
+            img{ width: mo(180);}
+            .txt-box{ margin-left: mo(50); top: mo(-10);}
+          } 
+        }
+      }
+    }
+  }
+  /* //VILLEROY */ 
+  
+  /* DE SEDE */
+  &.de_sede {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 130px; top: -11px;
+          a .txt-box{ top: -40px; margin-left: 8px;}
+        }
+        &:nth-child(2){ left: 487px; top: 175px;
+          a .txt-box{ margin-right: -50px; top: 20px;}
+        }
+        &:nth-child(3){ left: 58px; top: 309px;
+          a .txt-box{ margin-left: -10px; top: 10px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(50); left: mo(-7);
+          a{
+            img{ width: mo(257);}
+            .txt-box{ text-align: left; }
+          } 
+        }
+        &:nth-child(2){ margin: mo(-36) 0 mo(-21); right: mo(-51);
+          a{
+            img{ width: mo(321);}
+            .txt-box{ right: mo(-40); top: mo(15);}
+          } 
+        }
+        &:nth-child(3){ left: mo(-27);
+          a{
+            img{ width: mo(272);}
+            .txt-box{ margin-left: mo(-23); top: mo(-15);}
+          } 
+        }
+      }
+    }
+  }
+  /* //DE SEDE */ 
+
+  /* ZANOTTA */
+  &.zanotta {
+    img{ mix-blend-mode:normal;}
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 281px; top: 4px;
+          a .txt-box{ top: -50px; margin-left: -125px; text-align: right;}
+        }
+        &:nth-child(2){ left: 61px; top: 314px;
+          a .txt-box{ margin-left: 32px; top: -20px;}
+        }
+        &:nth-child(3){ left: 522px; top: 310px;
+          a .txt-box{ top: 10px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(15);
+          a{
+            img{ width: mo(434); margin-left: mo(-60);}
+            .txt-box{ position: absolute; left: mo(172); top: mo(52); text-align: right;}
+          } 
+        }
+        &:nth-child(2){ margin: mo(-8) 0 mo(-45); left: mo(12);
+          a{
+            img{ width: mo(150);}
+            .txt-box{ left: mo(18); top: mo(-20);}
+          } 
+        }
+        &:nth-child(3){ right: mo(0);
+          a{
+            img{ width: mo(231);}
+            .txt-box{ text-align: left; margin-right: mo(-35);}
+          } 
+        }
+      }
+    }
+  }
+  /* //ZANOTTA */ 
+
+  /* FERM_LIVING */
+  &.ferm_living {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 164px; top: -22px;
+          a .txt-box{ margin-left: -30px;}
+        }
+        &:nth-child(2){ left: 567px; top: 267px;
+          a .txt-box{ top: -20px; margin-right: -30px;}
+        }
+        &:nth-child(3){ left: 65px; top: 351px;
+          a .txt-box{ top: 20px; margin-left: 10px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(14);
+          a{
+            img{ width: mo(309); margin-left: mo(-38);}
+            .txt-box{ left: mo(-35); top: mo(12);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(-8) 0 mo(-45); 
+          a{
+            img{ width: mo(179); margin-right: mo(8);}
+            .txt-box{ left: mo(18); top: mo(-10);}
+          } 
+        }
+        &:nth-child(3){ 
+          a{
+            img{ width: mo(189); margin-left: mo(-19);}
+            .txt-box{ text-align: left; margin-left: mo(22);}
+          } 
+        }
+      }
+    }
+  }
+  /* //FERM_LIVING */ 
+
+  /* POLTRONA FRAU */
+  &.poltrona_frau {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 163px; top: 58px;
+          a .txt-box{ margin-right: 23px; top: -60px;}
+        }
+        &:nth-child(2){ left: 107px; top: 276px;
+          a .txt-box{ top: -25px; margin-left: 6px;}
+        }
+        &:nth-child(3){ left: 562px; top:330px;
+          a .txt-box{ top: -10px; margin-right: 14px; }
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(98);
+          a{
+            img{ width: mo(534); margin-right: mo(-199);}
+            .txt-box{ position: absolute; left: mo(32); top: mo(32); text-align: left;}
+          } 
+        }
+        &:nth-child(2){ margin: mo(-33) 0 mo(21); 
+          a{
+            img{ width: mo(120); margin:0 mo(18) 0 mo(44);}
+            .txt-box{ left: mo(-10); top: mo(-5);}
+          } 
+        }
+        &:nth-child(3){ 
+          a{
+            img{ width: mo(181); margin-right: mo(-19);}
+            .txt-box{  margin-right: mo(21); top: mo(-7);}
+          } 
+        }
+      }
+    }
+  }
+  /* //POLTRONA FRAU */ 
+
+  /* GINORI */
+  &.ginori {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 216px; top: 46px;
+          a .txt-box{ margin-left: 29px;}
+        }
+        &:nth-child(2){ left: 566px; top: 259px;
+          a .txt-box{  margin-right: -10px;}
+        }
+        &:nth-child(3){ left: 127px; top:323px;
+          a .txt-box{ top: 10px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(32);
+          a{
+            img{ width: mo(300); margin-left: mo(-70);}
+            .txt-box{ margin-left: mo(12);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(9) 0 0; 
+          a{
+            img{ width: mo(190); margin:0 mo(17) 0 mo(47);}
+            .txt-box{ left: mo(18); top: mo(-5); text-align: left;}
+          } 
+        }
+        &:nth-child(3){ 
+          a{
+            img{ width: mo(160); margin: 0 mo(11) 0 mo(31);}
+            .txt-box{}
+          } 
+        }
+      }
+    }
+  }
+  /* //GINORI */ 
+
+  /* DONNA WILSON */
+  &.donna_wilson {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 353px; top: 33px;
+          a .txt-box{ margin-right: 23px; top: 45px;}
+        }
+        &:nth-child(2){ left: 89px; top: 282px;
+          a .txt-box{  margin-left: 28px; top: 18px;}
+        }
+        &:nth-child(3){ left: 576px; top:349px;
+          a .txt-box{ margin-right: 31px; top: 20px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(27);
+          a{
+            img{ width: mo(304); margin-right: mo(-87);}
+            .txt-box{ margin-right: mo(-5); top: mo(60);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(10) 0 mo(40); 
+          a{
+            img{ width: mo(160); margin:0 mo(17) 0 mo(28);}
+            .txt-box{ top: mo(8);}
+          } 
+        }
+        &:nth-child(3){ 
+          a{
+            img{ width: mo(112); margin: 0 mo(55) 0 mo(52);}
+            .txt-box{}
+          } 
+        }
+      }
+    }
+  }
+  /* //DONNA WILSON */ 
+
+  /* MAGIS */
+  &.magis {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 270px; top: 58px;
+          img{ mix-blend-mode: darken;}
+          a .txt-box{ margin-right: 35px; top: 25px;}
+        }
+        &:nth-child(2){ left: 91px; top: 242px;
+          a .txt-box{  margin-left: 8px; top: 50px;}
+        }
+        &:nth-child(3){ left: 562px; top:324px;
+          img{ mix-blend-mode: darken;}
+          a .txt-box{ top: 20px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(34);
+          img{ mix-blend-mode: darken;}
+          a{
+            img{ width: mo(299); margin-right: mo(-87);}
+            .txt-box{ margin-right: mo(14); top: mo(15);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(10) 0 mo(40); 
+          a{
+            img{ width: mo(119); margin:0 mo(20) 0 mo(49);}
+            .txt-box{ top: mo(-5);}
+          } 
+        }
+        &:nth-child(3){ 
+          img{ mix-blend-mode: darken;}
+          a{
+            img{ width: mo(149); margin: 0 mo(11) 0 mo(18);}
+            .txt-box{}
+          } 
+        }
+      }
+    }
+  }
+  /* //MAGIS */ 
+
+  /* NEVA */
+  &.neva {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 270px; top: 15px;
+          a .txt-box{ margin-right: 0; top: 35px;}
+        }
+        &:nth-child(2){ left: 92px; top: 300px;
+          a .txt-box{  margin-left: -3px; top: 40px;}
+        }
+        &:nth-child(3){ left: 556px; top: 357px;
+          img{ mix-blend-mode: darken;}
+          a .txt-box{ top: 28px;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(14);
+          a{
+            img{ width: mo(269); margin-right: mo(-9);}
+            .txt-box{ margin-right: mo(-15); top: mo(35);}
+          } 
+        }
+        &:nth-child(2){ margin: mo(-15) 0 mo(12); 
+          a{
+            img{ width: mo(185); margin:0 mo(7) 0 mo(11);}
+            .txt-box{ top: mo(7);}
+          } 
+        }
+        &:nth-child(3){ 
+          img{ mix-blend-mode: darken;}
+          a{
+            img{ width: mo(170); margin: 0 mo(17) 0 mo(21);}
+            .txt-box{ top: mo(5);}
+          } 
+        }
+      }
+    }
+  }
+  /* //NEVA */ 
+
+  /* PERCEVAL */
+  &.perceval {
+    &.pc{
+      > section{
+        img{ mix-blend-mode:darken;}
+        &:nth-child(1){ left: 132px; top: 67px;
+          a .txt-box{ margin-right: 15px; top:140px; text-align: left;}
+        }
+        &:nth-child(2){ left: 575px; top: 81px;
+          a .txt-box{  margin-right: 23px; top: 60px; text-align: left;}
+        }
+      }
+    }
+
+    &.mo{
+      > section{
+        &:nth-child(1){ padding-top: mo(41);
+          a{ flex-direction: row;
+            img{ width: mo(294); margin-left: mo(41);}
+            .txt-box{ position: absolute; left: mo(201); top: mo(143); text-align: left;}
+          } 
+        }
+        &:nth-child(2){ margin-top: mo(6); 
+          a{
+            img{ width: mo(263); margin:0 mo(-84) 0 mo(14);}
+            .txt-box{ text-align: left;}
+          } 
+        }
+      }
+    }
+  }
+  /* //PERCEVAL */ 
+
+
+}

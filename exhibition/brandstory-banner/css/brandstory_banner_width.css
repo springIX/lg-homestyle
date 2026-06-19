@@ -1,0 +1,1020 @@
+.brand-story-banner-container {
+  word-break: keep-all;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  position: relative;
+  background: #ebebeb;
+  text-align: left;
+  width: 100%;
+  min-height: 600px;
+}
+.brand-story-banner-container.mo {
+  min-height: calc(696 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* PUBLIC */
+}
+.brand-story-banner-container.pc br.mo, .brand-story-banner-container.mo br.pc {
+  display: none;
+}
+.brand-story-banner-container a {
+  color: inherit;
+  text-decoration: none;
+}
+.brand-story-banner-container > section {
+  width: max-content;
+  position: absolute;
+}
+.brand-story-banner-container > section.reverse a {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.brand-story-banner-container > section a {
+  display: flex;
+  align-items: center;
+}
+.brand-story-banner-container > section a img {
+  mix-blend-mode: multiply;
+  position: relative;
+  flex-shrink: 0;
+}
+.brand-story-banner-container > section a .txt-box {
+  position: relative;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.brand-story-banner-container > section a .txt-box > * {
+  display: block;
+}
+.brand-story-banner-container > section a .txt-box .txt1 {
+  color: #727780;
+  font-size: 12px;
+  font-weight: 400;
+}
+.brand-story-banner-container > section a .txt-box .txt2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  margin-top: 2px;
+}
+.brand-story-banner-container > section a .txt-box .txt3 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  margin-top: 8px;
+}
+.brand-story-banner-container > section a .txt-box .txt3 em {
+  display: inline-block;
+  margin-right: 4px;
+  color: #ff0000;
+}
+.brand-story-banner-container.mo > section {
+  position: relative;
+  width: 100%;
+}
+.brand-story-banner-container.mo > section a .txt-box .txt1 {
+  font-size: calc(12 / 390 * 100vw);
+}
+.brand-story-banner-container.mo > section a .txt-box .txt2 {
+  font-size: calc(20 / 390 * 100vw);
+  margin-top: calc(2 / 390 * 100vw);
+}
+.brand-story-banner-container.mo > section a .txt-box .txt3 {
+  font-size: calc(15 / 390 * 100vw);
+  margin-right: calc(4 / 390 * 100vw);
+}
+.brand-story-banner-container.mo > section a .txt-box .txt3 em {
+  margin-right: calc(4 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //PUBLIC */
+  /* HERMAN */
+}
+.brand-story-banner-container.herman_miller.pc > section:nth-child(1) {
+  left: 0;
+  top: 10px;
+}
+.brand-story-banner-container.herman_miller.pc > section:nth-child(1) a .txt-box {
+  left: -58px;
+  top: -50px;
+}
+.brand-story-banner-container.herman_miller.pc > section:nth-child(2) {
+  left: 591px;
+  top: 222px;
+}
+.brand-story-banner-container.herman_miller.pc > section:nth-child(2) a .txt-box {
+  right: -108px;
+  top: -20px;
+}
+.brand-story-banner-container.herman_miller.pc > section:nth-child(3) {
+  left: 0;
+  top: 342px;
+}
+.brand-story-banner-container.herman_miller.pc > section:nth-child(3) a .txt-box {
+  margin-left: 9px;
+  top: 35px;
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(1) {
+  left: calc(-81 / 390 * 100vw);
+  margin-top: calc(64 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(1) a img {
+  width: calc(409 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  top: calc(-20 / 390 * 100vw);
+  left: calc(249 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(2) {
+  margin: calc(25 / 390 * 100vw) 0 calc(15 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(2) a img {
+  width: calc(207 / 390 * 100vw);
+  right: calc(26 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(2) a .txt-box {
+  top: calc(-25 / 390 * 100vw);
+  text-align: left;
+  left: calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(3) {
+  left: calc(-20 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(3) a img {
+  width: calc(221 / 390 * 100vw);
+}
+.brand-story-banner-container.herman_miller.mo > section:nth-child(3) a .txt-box {
+  left: calc(10 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //HERMAN */
+  /* DE_BEJARRY */
+}
+.brand-story-banner-container.de_bejarry.pc > section:nth-child(1) {
+  left: 187px;
+  top: 41px;
+}
+.brand-story-banner-container.de_bejarry.pc > section:nth-child(1) a .txt-box {
+  left: 50px;
+  top: -40px;
+}
+.brand-story-banner-container.de_bejarry.pc > section:nth-child(2) {
+  left: 86px;
+  top: 358px;
+}
+.brand-story-banner-container.de_bejarry.pc > section:nth-child(2) a .txt-box {
+  left: 9px;
+  top: 20px;
+}
+.brand-story-banner-container.de_bejarry.pc > section:nth-child(3) {
+  left: 582px;
+  top: 302px;
+}
+.brand-story-banner-container.de_bejarry.pc > section:nth-child(3) a .txt-box {
+  left: 94px;
+  top: 0px;
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(1) {
+  padding-top: calc(63 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(1) a img {
+  width: calc(306 / 390 * 100vw);
+  right: calc(27 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(1) a .txt-box {
+  text-align: right;
+  position: absolute;
+  left: calc(38 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(2) {
+  margin: calc(32 / 390 * 100vw) 0 calc(6 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(2) a img {
+  width: calc(152 / 390 * 100vw);
+  margin-left: calc(18 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(2) a .txt-box {
+  top: calc(-10 / 390 * 100vw);
+  left: calc(32 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(3) a img {
+  width: calc(273 / 390 * 100vw);
+  margin-right: calc(-14 / 390 * 100vw);
+}
+.brand-story-banner-container.de_bejarry.mo > section:nth-child(3) a .txt-box {
+  right: calc(-64 / 390 * 100vw);
+  top: calc(-5 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //DE_BEJARRY */
+  /* LEMNOS */
+}
+.brand-story-banner-container.lemnos.pc > section:nth-child(1) {
+  left: 69px;
+  top: 0;
+}
+.brand-story-banner-container.lemnos.pc > section:nth-child(1) a .txt-box {
+  left: -30px;
+  top: 0px;
+}
+.brand-story-banner-container.lemnos.pc > section:nth-child(2) {
+  left: 693px;
+  top: 229px;
+}
+.brand-story-banner-container.lemnos.pc > section:nth-child(2) a .txt-box {
+  top: -10px;
+}
+.brand-story-banner-container.lemnos.pc > section:nth-child(3) {
+  left: 203px;
+  top: 416px;
+}
+.brand-story-banner-container.lemnos.pc > section:nth-child(3) a .txt-box {
+  margin-right: -10px;
+  top: -5px;
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(1) {
+  padding-top: calc(45 / 390 * 100vw);
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(1) a img {
+  width: calc(262 / 390 * 100vw);
+  margin-left: calc(-21 / 390 * 100vw);
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(1) a .txt-box {
+  left: calc(-22 / 390 * 100vw);
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(2) {
+  margin: calc(31 / 390 * 100vw) 0;
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(2) a img {
+  width: calc(201 / 390 * 100vw);
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(2) a .txt-box {
+  top: calc(-10 / 390 * 100vw);
+  left: calc(-12 / 390 * 100vw);
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(3) a {
+  flex-direction: row;
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(3) a img {
+  width: calc(303 / 390 * 100vw);
+  margin-left: calc(-57 / 390 * 100vw);
+}
+.brand-story-banner-container.lemnos.mo > section:nth-child(3) a .txt-box {
+  left: calc(-30 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container {
+  /* //LEMNOS */
+  /* KNOLL */
+}
+.brand-story-banner-container.knoll.pc > section:nth-child(1) {
+  left: 36px;
+  top: -41px;
+}
+.brand-story-banner-container.knoll.pc > section:nth-child(1) a .txt-box {
+  left: -16px;
+  top: -35px;
+}
+.brand-story-banner-container.knoll.pc > section:nth-child(2) {
+  left: 680px;
+  top: 130px;
+}
+.brand-story-banner-container.knoll.pc > section:nth-child(2) a .txt-box {
+  right: -40px;
+}
+.brand-story-banner-container.knoll.pc > section:nth-child(3) {
+  left: 226px;
+  top: 393px;
+}
+.brand-story-banner-container.knoll.pc > section:nth-child(3) a .txt-box {
+  right: -22px;
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(1) {
+  padding-top: calc(21 / 390 * 100vw);
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(1) a img {
+  width: calc(300 / 390 * 100vw);
+  margin-left: calc(-31 / 390 * 100vw);
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(1) a .txt-box {
+  left: calc(-35 / 390 * 100vw);
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(2) {
+  margin: calc(-35 / 390 * 100vw) 0 calc(10 / 390 * 100vw);
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(2) a img {
+  width: calc(247 / 390 * 100vw);
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(3) a {
+  flex-direction: row;
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(3) a img {
+  width: calc(250 / 390 * 100vw);
+  margin-left: calc(-48 / 390 * 100vw);
+}
+.brand-story-banner-container.knoll.mo > section:nth-child(3) a .txt-box {
+  left: calc(15 / 390 * 100vw);
+  top: calc(-10 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container {
+  /* //KNOLL */
+  /* FLOS */
+}
+.brand-story-banner-container.flos.pc > section:nth-child(1) {
+  left: 349px;
+  top: 87px;
+}
+.brand-story-banner-container.flos.pc > section:nth-child(1) a .txt-box {
+  margin-right: 37px;
+  top: -35px;
+}
+.brand-story-banner-container.flos.pc > section:nth-child(2) {
+  left: 59px;
+  top: 169px;
+}
+.brand-story-banner-container.flos.pc > section:nth-child(2) a .txt-box {
+  margin-left: 9px;
+  top: 60px;
+}
+.brand-story-banner-container.flos.pc > section:nth-child(3) {
+  left: 646px;
+  top: 329px;
+}
+.brand-story-banner-container.flos.pc > section:nth-child(3) a .txt-box {
+  margin-right: 13px;
+  top: 40px;
+}
+.brand-story-banner-container.flos.mo > section:nth-child(1) {
+  padding-top: calc(50 / 390 * 100vw);
+  right: calc(26 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(1) a img {
+  width: calc(201 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(1) a .txt-box {
+  text-align: left;
+  top: calc(25 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(2) {
+  margin: calc(32 / 390 * 100vw) 0 calc(26 / 390 * 100vw);
+  left: calc(19 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(2) a img {
+  width: calc(152 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(2) a .txt-box {
+  margin-left: calc(24 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(3) {
+  right: calc(53 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(3) a img {
+  width: calc(83 / 390 * 100vw);
+}
+.brand-story-banner-container.flos.mo > section:nth-child(3) a .txt-box {
+  right: calc(54 / 390 * 100vw);
+  top: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //FLOS */
+  /* PAPPELINA */
+}
+.brand-story-banner-container.pappelina.pc > section:nth-child(1) {
+  left: 154px;
+  top: 76px;
+}
+.brand-story-banner-container.pappelina.pc > section:nth-child(1) a .txt-box {
+  top: -30px;
+}
+.brand-story-banner-container.pappelina.pc > section:nth-child(2) {
+  left: 531px;
+  top: 236px;
+}
+.brand-story-banner-container.pappelina.pc > section:nth-child(2) a .txt-box {
+  margin-right: 20px;
+}
+.brand-story-banner-container.pappelina.pc > section:nth-child(3) {
+  left: 164px;
+  top: 333px;
+}
+.brand-story-banner-container.pappelina.pc > section:nth-child(3) a .txt-box {
+  margin-left: 25px;
+  top: 30px;
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(1) {
+  padding-top: calc(69 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(1) a img {
+  width: calc(344 / 390 * 100vw);
+  margin-left: calc(-105 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(1) a .txt-box {
+  top: calc(-35 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(2) {
+  left: calc(40 / 390 * 100vw);
+  margin: calc(44 / 390 * 100vw) 0 calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(2) a img {
+  width: calc(140 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(2) a .txt-box {
+  top: calc(-10 / 390 * 100vw);
+  margin-right: calc(20 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(3) {
+  left: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(3) a img {
+  width: calc(130 / 390 * 100vw);
+}
+.brand-story-banner-container.pappelina.mo > section:nth-child(3) a .txt-box {
+  margin-left: calc(30 / 390 * 100vw);
+  top: calc(-5 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //PAPPELINA */
+  /* VILLEROY */
+}
+.brand-story-banner-container.villeroy.pc > section:nth-child(1) {
+  left: 60px;
+  top: 63px;
+}
+.brand-story-banner-container.villeroy.pc > section:nth-child(1) a .txt-box {
+  top: -25px;
+}
+.brand-story-banner-container.villeroy.pc > section:nth-child(2) {
+  left: 554px;
+  top: 227px;
+}
+.brand-story-banner-container.villeroy.pc > section:nth-child(2) a .txt-box {
+  margin-left: 9px;
+  top: 20px;
+}
+.brand-story-banner-container.villeroy.pc > section:nth-child(3) {
+  left: 112px;
+  top: 349px;
+}
+.brand-story-banner-container.villeroy.pc > section:nth-child(3) a .txt-box {
+  margin-left: 20px;
+  top: 20px;
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(1) {
+  padding-top: calc(70 / 390 * 100vw);
+  left: calc(-96 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(1) a img {
+  width: calc(383 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(1) a .txt-box {
+  text-align: right;
+  left: calc(-30 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(2) {
+  margin: calc(24 / 390 * 100vw) 0 calc(21 / 390 * 100vw);
+  right: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(2) a img {
+  width: calc(200 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(2) a .txt-box {
+  margin-right: calc(20 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(3) {
+  left: calc(-25 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(3) a img {
+  width: calc(180 / 390 * 100vw);
+}
+.brand-story-banner-container.villeroy.mo > section:nth-child(3) a .txt-box {
+  margin-left: calc(50 / 390 * 100vw);
+  top: calc(-10 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //VILLEROY */
+  /* DE SEDE */
+}
+.brand-story-banner-container.de_sede.pc > section:nth-child(1) {
+  left: 130px;
+  top: -11px;
+}
+.brand-story-banner-container.de_sede.pc > section:nth-child(1) a .txt-box {
+  top: -40px;
+  margin-left: 8px;
+}
+.brand-story-banner-container.de_sede.pc > section:nth-child(2) {
+  left: 487px;
+  top: 175px;
+}
+.brand-story-banner-container.de_sede.pc > section:nth-child(2) a .txt-box {
+  margin-right: -50px;
+  top: 20px;
+}
+.brand-story-banner-container.de_sede.pc > section:nth-child(3) {
+  left: 58px;
+  top: 309px;
+}
+.brand-story-banner-container.de_sede.pc > section:nth-child(3) a .txt-box {
+  margin-left: -10px;
+  top: 10px;
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(1) {
+  padding-top: calc(50 / 390 * 100vw);
+  left: calc(-7 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(1) a img {
+  width: calc(257 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(1) a .txt-box {
+  text-align: left;
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(2) {
+  margin: calc(-36 / 390 * 100vw) 0 calc(-21 / 390 * 100vw);
+  right: calc(-51 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(2) a img {
+  width: calc(321 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(2) a .txt-box {
+  right: calc(-40 / 390 * 100vw);
+  top: calc(15 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(3) {
+  left: calc(-27 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(3) a img {
+  width: calc(272 / 390 * 100vw);
+}
+.brand-story-banner-container.de_sede.mo > section:nth-child(3) a .txt-box {
+  margin-left: calc(-23 / 390 * 100vw);
+  top: calc(-15 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //DE SEDE */
+  /* ZANOTTA */
+}
+.brand-story-banner-container.zanotta img {
+  mix-blend-mode: normal;
+}
+.brand-story-banner-container.zanotta.pc > section:nth-child(1) {
+  left: 281px;
+  top: 4px;
+}
+.brand-story-banner-container.zanotta.pc > section:nth-child(1) a .txt-box {
+  top: -50px;
+  margin-left: -125px;
+  text-align: right;
+}
+.brand-story-banner-container.zanotta.pc > section:nth-child(2) {
+  left: 61px;
+  top: 314px;
+}
+.brand-story-banner-container.zanotta.pc > section:nth-child(2) a .txt-box {
+  margin-left: 32px;
+  top: -20px;
+}
+.brand-story-banner-container.zanotta.pc > section:nth-child(3) {
+  left: 522px;
+  top: 310px;
+}
+.brand-story-banner-container.zanotta.pc > section:nth-child(3) a .txt-box {
+  top: 10px;
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(1) {
+  padding-top: calc(15 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(1) a img {
+  width: calc(434 / 390 * 100vw);
+  margin-left: calc(-60 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(172 / 390 * 100vw);
+  top: calc(52 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(2) {
+  margin: calc(-8 / 390 * 100vw) 0 calc(-45 / 390 * 100vw);
+  left: calc(12 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(2) a img {
+  width: calc(150 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(2) a .txt-box {
+  left: calc(18 / 390 * 100vw);
+  top: calc(-20 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(3) {
+  right: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(3) a img {
+  width: calc(231 / 390 * 100vw);
+}
+.brand-story-banner-container.zanotta.mo > section:nth-child(3) a .txt-box {
+  text-align: left;
+  margin-right: calc(-35 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //ZANOTTA */
+  /* FERM_LIVING */
+}
+.brand-story-banner-container.ferm_living.pc > section:nth-child(1) {
+  left: 164px;
+  top: -22px;
+}
+.brand-story-banner-container.ferm_living.pc > section:nth-child(1) a .txt-box {
+  margin-left: -30px;
+}
+.brand-story-banner-container.ferm_living.pc > section:nth-child(2) {
+  left: 567px;
+  top: 267px;
+}
+.brand-story-banner-container.ferm_living.pc > section:nth-child(2) a .txt-box {
+  top: -20px;
+  margin-right: -30px;
+}
+.brand-story-banner-container.ferm_living.pc > section:nth-child(3) {
+  left: 65px;
+  top: 351px;
+}
+.brand-story-banner-container.ferm_living.pc > section:nth-child(3) a .txt-box {
+  top: 20px;
+  margin-left: 10px;
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(1) {
+  padding-top: calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(1) a img {
+  width: calc(309 / 390 * 100vw);
+  margin-left: calc(-38 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(1) a .txt-box {
+  left: calc(-35 / 390 * 100vw);
+  top: calc(12 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(2) {
+  margin: calc(-8 / 390 * 100vw) 0 calc(-45 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(2) a img {
+  width: calc(179 / 390 * 100vw);
+  margin-right: calc(8 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(2) a .txt-box {
+  left: calc(18 / 390 * 100vw);
+  top: calc(-10 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(3) a img {
+  width: calc(189 / 390 * 100vw);
+  margin-left: calc(-19 / 390 * 100vw);
+}
+.brand-story-banner-container.ferm_living.mo > section:nth-child(3) a .txt-box {
+  text-align: left;
+  margin-left: calc(22 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //FERM_LIVING */
+  /* POLTRONA FRAU */
+}
+.brand-story-banner-container.poltrona_frau.pc > section:nth-child(1) {
+  left: 163px;
+  top: 58px;
+}
+.brand-story-banner-container.poltrona_frau.pc > section:nth-child(1) a .txt-box {
+  margin-right: 23px;
+  top: -60px;
+}
+.brand-story-banner-container.poltrona_frau.pc > section:nth-child(2) {
+  left: 107px;
+  top: 276px;
+}
+.brand-story-banner-container.poltrona_frau.pc > section:nth-child(2) a .txt-box {
+  top: -25px;
+  margin-left: 6px;
+}
+.brand-story-banner-container.poltrona_frau.pc > section:nth-child(3) {
+  left: 562px;
+  top: 330px;
+}
+.brand-story-banner-container.poltrona_frau.pc > section:nth-child(3) a .txt-box {
+  top: -10px;
+  margin-right: 14px;
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(1) {
+  padding-top: calc(98 / 390 * 100vw);
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(1) a img {
+  width: calc(534 / 390 * 100vw);
+  margin-right: calc(-199 / 390 * 100vw);
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(32 / 390 * 100vw);
+  top: calc(32 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(2) {
+  margin: calc(-33 / 390 * 100vw) 0 calc(21 / 390 * 100vw);
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(2) a img {
+  width: calc(120 / 390 * 100vw);
+  margin: 0 calc(18 / 390 * 100vw) 0 calc(44 / 390 * 100vw);
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(2) a .txt-box {
+  left: calc(-10 / 390 * 100vw);
+  top: calc(-5 / 390 * 100vw);
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(3) a img {
+  width: calc(181 / 390 * 100vw);
+  margin-right: calc(-19 / 390 * 100vw);
+}
+.brand-story-banner-container.poltrona_frau.mo > section:nth-child(3) a .txt-box {
+  margin-right: calc(21 / 390 * 100vw);
+  top: calc(-7 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //POLTRONA FRAU */
+  /* GINORI */
+}
+.brand-story-banner-container.ginori.pc > section:nth-child(1) {
+  left: 216px;
+  top: 46px;
+}
+.brand-story-banner-container.ginori.pc > section:nth-child(1) a .txt-box {
+  margin-left: 29px;
+}
+.brand-story-banner-container.ginori.pc > section:nth-child(2) {
+  left: 566px;
+  top: 259px;
+}
+.brand-story-banner-container.ginori.pc > section:nth-child(2) a .txt-box {
+  margin-right: -10px;
+}
+.brand-story-banner-container.ginori.pc > section:nth-child(3) {
+  left: 127px;
+  top: 323px;
+}
+.brand-story-banner-container.ginori.pc > section:nth-child(3) a .txt-box {
+  top: 10px;
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(1) {
+  padding-top: calc(32 / 390 * 100vw);
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(1) a img {
+  width: calc(300 / 390 * 100vw);
+  margin-left: calc(-70 / 390 * 100vw);
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(1) a .txt-box {
+  margin-left: calc(12 / 390 * 100vw);
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(2) {
+  margin: calc(9 / 390 * 100vw) 0 0;
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(2) a img {
+  width: calc(190 / 390 * 100vw);
+  margin: 0 calc(17 / 390 * 100vw) 0 calc(47 / 390 * 100vw);
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(2) a .txt-box {
+  left: calc(18 / 390 * 100vw);
+  top: calc(-5 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container.ginori.mo > section:nth-child(3) a img {
+  width: calc(160 / 390 * 100vw);
+  margin: 0 calc(11 / 390 * 100vw) 0 calc(31 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //GINORI */
+  /* DONNA WILSON */
+}
+.brand-story-banner-container.donna_wilson.pc > section:nth-child(1) {
+  left: 353px;
+  top: 33px;
+}
+.brand-story-banner-container.donna_wilson.pc > section:nth-child(1) a .txt-box {
+  margin-right: 23px;
+  top: 45px;
+}
+.brand-story-banner-container.donna_wilson.pc > section:nth-child(2) {
+  left: 89px;
+  top: 282px;
+}
+.brand-story-banner-container.donna_wilson.pc > section:nth-child(2) a .txt-box {
+  margin-left: 28px;
+  top: 18px;
+}
+.brand-story-banner-container.donna_wilson.pc > section:nth-child(3) {
+  left: 576px;
+  top: 349px;
+}
+.brand-story-banner-container.donna_wilson.pc > section:nth-child(3) a .txt-box {
+  margin-right: 31px;
+  top: 20px;
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(1) {
+  padding-top: calc(27 / 390 * 100vw);
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(1) a img {
+  width: calc(304 / 390 * 100vw);
+  margin-right: calc(-87 / 390 * 100vw);
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(1) a .txt-box {
+  margin-right: calc(-5 / 390 * 100vw);
+  top: calc(60 / 390 * 100vw);
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(2) {
+  margin: calc(10 / 390 * 100vw) 0 calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(2) a img {
+  width: calc(160 / 390 * 100vw);
+  margin: 0 calc(17 / 390 * 100vw) 0 calc(28 / 390 * 100vw);
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(2) a .txt-box {
+  top: calc(8 / 390 * 100vw);
+}
+.brand-story-banner-container.donna_wilson.mo > section:nth-child(3) a img {
+  width: calc(112 / 390 * 100vw);
+  margin: 0 calc(55 / 390 * 100vw) 0 calc(52 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //DONNA WILSON */
+  /* MAGIS */
+}
+.brand-story-banner-container.magis.pc > section:nth-child(1) {
+  left: 270px;
+  top: 58px;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(1) img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(1) a .txt-box {
+  margin-right: 35px;
+  top: 25px;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(2) {
+  left: 91px;
+  top: 242px;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(2) a .txt-box {
+  margin-left: 8px;
+  top: 50px;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(3) {
+  left: 562px;
+  top: 324px;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(3) img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.magis.pc > section:nth-child(3) a .txt-box {
+  top: 20px;
+}
+.brand-story-banner-container.magis.mo > section:nth-child(1) {
+  padding-top: calc(34 / 390 * 100vw);
+}
+.brand-story-banner-container.magis.mo > section:nth-child(1) img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.magis.mo > section:nth-child(1) a img {
+  width: calc(299 / 390 * 100vw);
+  margin-right: calc(-87 / 390 * 100vw);
+}
+.brand-story-banner-container.magis.mo > section:nth-child(1) a .txt-box {
+  margin-right: calc(14 / 390 * 100vw);
+  top: calc(15 / 390 * 100vw);
+}
+.brand-story-banner-container.magis.mo > section:nth-child(2) {
+  margin: calc(10 / 390 * 100vw) 0 calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.magis.mo > section:nth-child(2) a img {
+  width: calc(119 / 390 * 100vw);
+  margin: 0 calc(20 / 390 * 100vw) 0 calc(49 / 390 * 100vw);
+}
+.brand-story-banner-container.magis.mo > section:nth-child(2) a .txt-box {
+  top: calc(-5 / 390 * 100vw);
+}
+.brand-story-banner-container.magis.mo > section:nth-child(3) img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.magis.mo > section:nth-child(3) a img {
+  width: calc(149 / 390 * 100vw);
+  margin: 0 calc(11 / 390 * 100vw) 0 calc(18 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //MAGIS */
+  /* NEVA */
+}
+.brand-story-banner-container.neva.pc > section:nth-child(1) {
+  left: 270px;
+  top: 15px;
+}
+.brand-story-banner-container.neva.pc > section:nth-child(1) a .txt-box {
+  margin-right: 0;
+  top: 35px;
+}
+.brand-story-banner-container.neva.pc > section:nth-child(2) {
+  left: 92px;
+  top: 300px;
+}
+.brand-story-banner-container.neva.pc > section:nth-child(2) a .txt-box {
+  margin-left: -3px;
+  top: 40px;
+}
+.brand-story-banner-container.neva.pc > section:nth-child(3) {
+  left: 556px;
+  top: 357px;
+}
+.brand-story-banner-container.neva.pc > section:nth-child(3) img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.neva.pc > section:nth-child(3) a .txt-box {
+  top: 28px;
+}
+.brand-story-banner-container.neva.mo > section:nth-child(1) {
+  padding-top: calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(1) a img {
+  width: calc(269 / 390 * 100vw);
+  margin-right: calc(-9 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(1) a .txt-box {
+  margin-right: calc(-15 / 390 * 100vw);
+  top: calc(35 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(2) {
+  margin: calc(-15 / 390 * 100vw) 0 calc(12 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(2) a img {
+  width: calc(185 / 390 * 100vw);
+  margin: 0 calc(7 / 390 * 100vw) 0 calc(11 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(2) a .txt-box {
+  top: calc(7 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(3) img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.neva.mo > section:nth-child(3) a img {
+  width: calc(170 / 390 * 100vw);
+  margin: 0 calc(17 / 390 * 100vw) 0 calc(21 / 390 * 100vw);
+}
+.brand-story-banner-container.neva.mo > section:nth-child(3) a .txt-box {
+  top: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container {
+  /* //NEVA */
+  /* PERCEVAL */
+}
+.brand-story-banner-container.perceval.pc > section img {
+  mix-blend-mode: darken;
+}
+.brand-story-banner-container.perceval.pc > section:nth-child(1) {
+  left: 132px;
+  top: 67px;
+}
+.brand-story-banner-container.perceval.pc > section:nth-child(1) a .txt-box {
+  margin-right: 15px;
+  top: 140px;
+  text-align: left;
+}
+.brand-story-banner-container.perceval.pc > section:nth-child(2) {
+  left: 575px;
+  top: 81px;
+}
+.brand-story-banner-container.perceval.pc > section:nth-child(2) a .txt-box {
+  margin-right: 23px;
+  top: 60px;
+  text-align: left;
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(1) {
+  padding-top: calc(41 / 390 * 100vw);
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(1) a {
+  flex-direction: row;
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(1) a img {
+  width: calc(294 / 390 * 100vw);
+  margin-left: calc(41 / 390 * 100vw);
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(201 / 390 * 100vw);
+  top: calc(143 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(2) {
+  margin-top: calc(6 / 390 * 100vw);
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(2) a img {
+  width: calc(263 / 390 * 100vw);
+  margin: 0 calc(-84 / 390 * 100vw) 0 calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.perceval.mo > section:nth-child(2) a .txt-box {
+  text-align: left;
+}
+.brand-story-banner-container {
+  /* //PERCEVAL */
+}

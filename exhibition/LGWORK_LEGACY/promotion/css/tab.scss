@@ -1,0 +1,156 @@
+/* 탭 전체 스타일 */
+.tab-container {
+    word-break: keep-all;
+    color: #000000;
+    font-family: 'Pretendard', sans-serif;
+    background: #FFFFFF;
+    text-align: left;
+    .content-wrapper {
+        width: 100%;
+        max-width: 1186px;
+        margin: 0 auto;
+        
+        nav {
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid #EFF0F2;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: auto;
+            @media (min-width: 768px) {
+                padding-left: 0;
+                gap: 40px;
+                border-bottom: 1px solid #8F8F8F;
+            }
+            label {
+                font-size: 14px;
+                padding: 14px 0;
+                color: #111111;
+                cursor: pointer;
+                @media (min-width: 768px) {
+                    font-size: 18px;
+                    color: #666666;
+                    padding: 17px 0 20px;
+                }
+            }
+            input:checked + label {
+                color: #111111;
+                border-bottom: 2px solid #111111;
+                font-weight: 700;
+            }
+            input {
+                display: none;
+            }
+        }
+
+        .tab-content-wrapper {
+            article {
+                display: none;
+                padding: 32px 0;
+                @media (min-width: 768px) {
+                    padding: 40px 0;
+                }
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 8px;
+                    @media (min-width: 768px) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+                    @media (min-width: 1024px) {
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                    }
+                    li {
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+    &:has(input:nth-of-type(1):checked) .tab-content-wrapper article:nth-child(1) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(2):checked) .tab-content-wrapper article:nth-child(2) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(3):checked) .tab-content-wrapper article:nth-child(3) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(4):checked) .tab-content-wrapper article:nth-child(4) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(5):checked) .tab-content-wrapper article:nth-child(5) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(6):checked) .tab-content-wrapper article:nth-child(6) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(7):checked) .tab-content-wrapper article:nth-child(7) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(8):checked) .tab-content-wrapper article:nth-child(8) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(9):checked) .tab-content-wrapper article:nth-child(9) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(10):checked) .tab-content-wrapper article:nth-child(10) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(11):checked) .tab-content-wrapper article:nth-child(11) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(12):checked) .tab-content-wrapper article:nth-child(12) {
+        display: block;
+    }
+    &:has(input:nth-of-type(13):checked) .tab-content-wrapper article:nth-child(13) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(14):checked) .tab-content-wrapper article:nth-child(14) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(15):checked) .tab-content-wrapper article:nth-child(15) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(16):checked) .tab-content-wrapper article:nth-child(16) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(17):checked) .tab-content-wrapper article:nth-child(17) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(18):checked) .tab-content-wrapper article:nth-child(18) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(19):checked) .tab-content-wrapper article:nth-child(19) {
+        display: block;
+    }
+
+    &:has(input:nth-of-type(20):checked) .tab-content-wrapper article:nth-child(20) {
+        display: block;
+    }
+
+}
+
+

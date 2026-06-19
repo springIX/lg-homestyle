@@ -1,0 +1,94 @@
+.bae {
+    
+    .sec_bnf {
+        .pt_bnf {
+            @include vw-pc(padding, 46 0 50);
+            .pt_bnf__title {
+                @include vw-pc(font-size, 42); text-align: center; @include vw-pc(min-height, 100);
+            }
+            .pt_bnf__wrap {
+                @include vw-pc(margin-top, 40); @include vw-pc(padding, 0 59);
+                .pt_bnf__list {
+                    display: flex; @include vw-pc(padding, 0 59);
+                    .pt_bnf__item {
+                        @include vw-pc(padding-top, 6);
+                        &:nth-child(2) {
+                            .pt_bnf__box {
+                                &::after {
+                                    border: 1px solid red;
+                                    // background-image: url("../../is/images/icon/bae_ico_coin_pc.png") !important;
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            .pt_bnf__box {
+                                &::after {
+                                    background-image: url("../../is/images/icon/bae_ico_bundle_pc.png");
+                                }
+                            }
+                        }
+                        &:nth-child(4) {
+                            .pt_bnf__box {
+                                &::after {
+                                    background-image: url("../../is/images/icon/bae_ico_card_pc.png");
+                                }
+                            }
+                        }
+                        &:nth-child(5) {
+                            .pt_bnf__box {
+                                &::after {
+                                    background-image: url("../../is/images/icon/bae_ico_paper_pc.png");
+                                }
+                            }
+                        }
+                        .pt_bnf__box {
+                            @include vw-pc(height, 465); position: relative; @include vw-pc(border-radius, 10); background-color: #F9F9F9; @include vw-pc(padding, 30 20); 
+                            &::after {
+                                content: ''; display: block; @include vw-pc(width, 76); @include vw-pc(height, 76); position: absolute; @include vw-pc(right, 30); @include vw-pc(bottom, 15); background: url("../../is/images/icon/bae_ico_samsung_card_pc.png") 0 0/100% no-repeat;
+                            }
+                            &.pt_bnf__box--point {
+                                background-color: #F2F8FF;
+                                .pt_bnf__num {
+                                    background-color: #2289FF; color: #fff; 
+                                }
+                            }
+                            .pt_bnf__tag {
+                                position: absolute; @include vw-pc(right, 16); @include vw-pc(top, -7); @include vw-pc(padding, 2 8); background-color: #2189FF; color: #fff; @include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(border-radius, 4);
+                                &::after {
+                                    content: ''; display: block; position: absolute; @include vw-pc(right, -4); @include vw-pc(top, 1.7); width: 0; height: 0; border-style: solid; @include vw-pc(border-width, 5 0 0 5); border-color: transparent transparent transparent #0A4455; 
+                                }
+                            }
+                            .pt_bnf__num {
+                                display: flex; width: fit-content; @include vw-pc(height, 28); @include vw-pc (padding, 4 7 3 6); align-items: center; @include vw-pc(border-radius, 5); background-color: #CEE1F6; color: #555; @include vw-pc(font-size, 16); font-weight: 700;  
+                            }
+                            .pt_bnf__tit {
+                                @include vw-pc(margin-top, 7); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(letter-spacing, -0.5); @include vw-pc(line-height, 34);
+                                .pt_bnf__blue {
+                                    color: #2289FF;
+                                }
+                            }
+                            .pt_bnf__disc {
+                                @include vw-pc(margin-top, 19);
+                                .pt_bnf__disc--item {
+                                    @include vw-pc(line-height, 26); @include vw-pc(font-size, 16); color: #666; display: flex; align-items: flex-start; font-weight: 400;
+                                    &::before {
+                                        content: ''; display: block; @include vw-pc(margin, 10 4 0 0); @include vw-pc(width, 7); @include vw-pc(height, 5); background: url("../../is/images/icon/bae_ico_check.png") 0 0/100% no-repeat;
+                                    }
+                                }
+                            }
+                            .pt_bnf__btn-wrap {
+                                position: absolute; @include vw-pc(left, 22); @include vw-pc(bottom, 30);
+                                .pt_bnf__btn {
+                                    display: flex; align-items: center; border-bottom: 1px solid #000; @include vw-pc(line-height, 21);
+                                    &::after {
+                                        content: ''; display: block; @include vw-pc(width, 13); @include vw-pc(height, 13); background: url("../../is/images/icon/bae_ico_right_arrow.png") 0 0/100% no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

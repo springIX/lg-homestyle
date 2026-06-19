@@ -1,0 +1,54 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.brandstory-container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+}
+.brandstory-container div, .brandstory-container span, .brandstory-container applet, .brandstory-container object, .brandstory-container iframe,
+.brandstory-container h1, .brandstory-container h2, .brandstory-container h3, .brandstory-container h4, .brandstory-container h5, .brandstory-container h6, .brandstory-container p, .brandstory-container blockquote, .brandstory-container pre,
+.brandstory-container a, .brandstory-container abbr, .brandstory-container acronym, .brandstory-container address, .brandstory-container big, .brandstory-container cite, .brandstory-container code,
+.brandstory-container del, .brandstory-container dfn, .brandstory-container em, .brandstory-container img, .brandstory-container ins, .brandstory-container kbd, .brandstory-container q, .brandstory-container s, .brandstory-container samp,
+.brandstory-container small, .brandstory-container strike, .brandstory-container strong, .brandstory-container sub, .brandstory-container sup, .brandstory-container tt, .brandstory-container var,
+.brandstory-container b, .brandstory-container u, .brandstory-container i, .brandstory-container center,
+.brandstory-container dl, .brandstory-container dt, .brandstory-container dd, .brandstory-container ol, .brandstory-container ul, .brandstory-container li,
+.brandstory-container fieldset, .brandstory-container form, .brandstory-container label, .brandstory-container legend,
+.brandstory-container table, .brandstory-container caption, .brandstory-container tbody, .brandstory-container tfoot, .brandstory-container thead, .brandstory-container tr, .brandstory-container th, .brandstory-container td,
+.brandstory-container article, .brandstory-container aside, .brandstory-container canvas, .brandstory-container details, .brandstory-container embed,
+.brandstory-container figure, .brandstory-container figcaption, .brandstory-container footer, .brandstory-container header, .brandstory-container hgroup,
+.brandstory-container menu, .brandstory-container nav, .brandstory-container output, .brandstory-container ruby, .brandstory-container section, .brandstory-container summary,
+.brandstory-container time, .brandstory-container mark, .brandstory-container audio, .brandstory-container video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.brandstory-container {
+  /* HTML5 display-role reset for older browsers */
+}
+.brandstory-container article, .brandstory-container aside, .brandstory-container details, .brandstory-container figcaption, .brandstory-container figure,
+.brandstory-container footer, .brandstory-container header, .brandstory-container hgroup, .brandstory-container menu, .brandstory-container nav, .brandstory-container section {
+  display: block;
+}
+.brandstory-container ol, .brandstory-container ul {
+  list-style: none;
+}
+.brandstory-container blockquote, .brandstory-container q {
+  quotes: none;
+}
+.brandstory-container blockquote:before, .brandstory-container blockquote:after,
+.brandstory-container q:before, .brandstory-container q:after {
+  content: "";
+  content: none;
+}
+.brandstory-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

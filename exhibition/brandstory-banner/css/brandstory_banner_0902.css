@@ -1,0 +1,1685 @@
+.brand-story-banner-container {
+  word-break: keep-all;
+  color: #ffffff;
+  font-family: "Pretendard", sans-serif;
+  position: relative;
+  background: #000000;
+  text-align: left;
+  width: 100%;
+}
+.brand-story-banner-container a {
+  color: inherit;
+  text-decoration: none;
+}
+.brand-story-banner-container > section header {
+  position: absolute;
+}
+.brand-story-banner-container > section header h2 {
+  font-weight: 400;
+  color: #727780;
+}
+.brand-story-banner-container > section header h3 {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.brand-story-banner-container > section .img-wrapper {
+  position: absolute;
+}
+.brand-story-banner-container > section .circle {
+  position: absolute;
+  aspect-ratio: 1/1;
+  border-radius: 99999px;
+}
+.brand-story-banner-container.pc {
+  min-height: 550px;
+  font-size: 14px;
+  line-height: 1.4285714286;
+}
+.brand-story-banner-container.pc > section header h3 {
+  margin-top: 2px;
+}
+.brand-story-banner-container.mobile {
+  min-height: 153.8461538462vw;
+}
+.brand-story-banner-container.mobile > section header h2 {
+  font-size: 3.0769230769vw;
+  line-height: 1.3333333333;
+}
+.brand-story-banner-container.mobile > section header h3 {
+  margin-top: 0.5128205128vw;
+  font-size: 3.3333333333vw;
+  line-height: 1.3846153846;
+}
+.brand-story-banner-container.herman-miller > section:nth-child(1) .circle {
+  background-color: #605E5D;
+}
+.brand-story-banner-container.herman-miller > section:nth-child(2) .circle {
+  background-color: #4D1212;
+}
+.brand-story-banner-container.herman-miller > section:nth-child(3) .circle {
+  background-color: #806B38;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(1) header {
+  text-align: right;
+  top: 87px;
+  left: 181px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(1) .img-wrapper {
+  top: 63px;
+  left: 338px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(1) .img-wrapper img {
+  width: 239px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(1) .circle {
+  width: 180px;
+  top: 26px;
+  left: 438px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(2) header {
+  text-align: right;
+  top: 277px;
+  left: 417px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(2) .img-wrapper {
+  top: 238px;
+  left: 604px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(2) .img-wrapper img {
+  width: 165.5px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(2) .circle {
+  width: 256px;
+  top: 200px;
+  left: 626px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(3) header {
+  top: 381px;
+  left: 310px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(3) .img-wrapper {
+  top: 329px;
+  left: 69px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(3) .img-wrapper img {
+  width: 210.5px;
+}
+.brand-story-banner-container.herman-miller.pc section:nth-child(3) .circle {
+  width: 246px;
+  top: 265px;
+  left: 0;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(1) header {
+  top: 21.0256410256vw;
+  left: 57.1794871795vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(1) .img-wrapper {
+  top: 19.2307692308vw;
+  left: 6.4102564103vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(1) .img-wrapper img {
+  width: 46.6666666667vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: -4.358974359vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(2) header {
+  text-align: right;
+  top: 66.1538461538vw;
+  left: 19.4871794872vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(2) .img-wrapper {
+  top: 55.3846153846vw;
+  left: 58.9743589744vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(2) .img-wrapper img {
+  width: 27.6923076923vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(2) .circle {
+  width: 46.1538461538vw;
+  top: 50.7692307692vw;
+  left: 61.5384615385vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(3) header {
+  top: 115.1282051282vw;
+  left: 51.0256410256vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(3) .img-wrapper {
+  top: 104.8717948718vw;
+  left: 5.8974358974vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(3) .img-wrapper img {
+  width: 40vw;
+}
+.brand-story-banner-container.herman-miller.mobile section:nth-child(3) .circle {
+  width: 46.1538461538vw;
+  top: 94.6153846154vw;
+  left: -9.2307692308vw;
+}
+.brand-story-banner-container.de-bejarry > section:nth-child(1) .circle {
+  background-color: #B96138;
+}
+.brand-story-banner-container.de-bejarry > section:nth-child(2) .circle {
+  background-color: #434A54;
+}
+.brand-story-banner-container.de-bejarry > section:nth-child(3) .circle {
+  background-color: #896A49;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(1) header {
+  top: 90px;
+  left: 484px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(1) .img-wrapper {
+  top: 51px;
+  left: 322px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(1) .img-wrapper img {
+  width: 161px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 24px;
+  left: 274px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(2) header {
+  text-align: right;
+  top: 287px;
+  left: 465px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(2) .img-wrapper {
+  top: 255px;
+  left: 519px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(2) .img-wrapper img {
+  width: 289px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(2) .circle {
+  width: 285px;
+  top: 221px;
+  left: 601px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(3) header {
+  top: 352px;
+  left: 255px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(3) .img-wrapper {
+  top: 275px;
+  left: 84px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(3) .img-wrapper img {
+  width: 179px;
+}
+.brand-story-banner-container.de-bejarry.pc section:nth-child(3) .circle {
+  width: 202px;
+  top: 228px;
+  left: 20px;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(1) header {
+  top: 23.5897435897vw;
+  left: 43.3333333333vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(1) .img-wrapper {
+  top: 13.3333333333vw;
+  left: 4.6153846154vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(1) .img-wrapper img {
+  width: 36.9230769231vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(1) .circle {
+  width: 36.9230769231vw;
+  top: 7.4358974359vw;
+  left: -4.358974359vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(2) header {
+  text-align: right;
+  top: 60vw;
+  left: 24.6153846154vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(2) .img-wrapper {
+  top: 56.1538461538vw;
+  left: 40.5128205128vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(2) .img-wrapper img {
+  width: 53.0769230769vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(2) .circle {
+  width: 63.8461538462vw;
+  top: 45.1282051282vw;
+  left: 56.6666666667vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(3) header {
+  top: 122.8205128205vw;
+  left: 44.358974359vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(3) .img-wrapper {
+  top: 104.6153846154vw;
+  left: 5.641025641vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(3) .img-wrapper img {
+  width: 37.6923076923vw;
+}
+.brand-story-banner-container.de-bejarry.mobile section:nth-child(3) .circle {
+  width: 47.1794871795vw;
+  top: 98.4615384615vw;
+  left: -12.3076923077vw;
+}
+.brand-story-banner-container.lemnos > section:nth-child(1) .circle {
+  background-color: #6C1D1A;
+}
+.brand-story-banner-container.lemnos > section:nth-child(2) .circle {
+  background-color: #844C32;
+}
+.brand-story-banner-container.lemnos > section:nth-child(3) .circle {
+  background-color: #865D32;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(1) header {
+  text-align: right;
+  top: 96px;
+  left: 498px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(1) .img-wrapper {
+  top: 57px;
+  left: 727px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(1) .img-wrapper img {
+  width: 159px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 41px;
+  left: 682px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(2) header {
+  top: 188px;
+  left: 310px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(2) .img-wrapper {
+  top: 117px;
+  left: 67px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(2) .img-wrapper img {
+  width: 215px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 101px;
+  left: 0;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(3) header {
+  text-align: right;
+  top: 320px;
+  left: 648px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(3) .img-wrapper {
+  top: 369px;
+  left: 391px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(3) .img-wrapper img {
+  width: 356px;
+}
+.brand-story-banner-container.lemnos.pc section:nth-child(3) .circle {
+  width: 237px;
+  top: 313px;
+  left: 332px;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(1) header {
+  top: 30.7692307692vw;
+  left: 55.8974358974vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(1) .img-wrapper {
+  top: 14.358974359vw;
+  left: 8.7179487179vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(1) .img-wrapper img {
+  width: 42.3076923077vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(1) .circle {
+  width: 55.3846153846vw;
+  top: 7.6923076923vw;
+  left: -16.9230769231vw;
+  background-color: #844C32;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(2) header {
+  top: 73.0769230769vw;
+  left: 20vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(2) .img-wrapper {
+  top: 62.3076923077vw;
+  left: 61.5384615385vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(2) .img-wrapper img {
+  width: 32.3076923077vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(2) .circle {
+  width: 38.2051282051vw;
+  top: 56.4102564103vw;
+  left: 66.6666666667vw;
+  background-color: #6C1D1A;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 106.6666666667vw;
+  left: 47.1794871795vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(3) .img-wrapper {
+  top: 118.2051282051vw;
+  left: 8.2051282051vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(3) .img-wrapper img {
+  width: 62.0512820513vw;
+}
+.brand-story-banner-container.lemnos.mobile section:nth-child(3) .circle {
+  width: 41.7948717949vw;
+  top: 103.3333333333vw;
+  left: -10.5128205128vw;
+  background-color: #865D32;
+}
+.brand-story-banner-container.knoll > section:nth-child(1) .circle {
+  background-color: #554D3D;
+}
+.brand-story-banner-container.knoll > section:nth-child(2) .circle {
+  background-color: #4D1212;
+}
+.brand-story-banner-container.knoll > section:nth-child(3) .circle {
+  background-color: #3B453B;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(1) header {
+  text-align: right;
+  top: 97px;
+  left: 284px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(1) .img-wrapper {
+  top: 36px;
+  left: 373px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(1) .img-wrapper img {
+  width: 140px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 21px;
+  left: 393px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(2) header {
+  text-align: right;
+  top: 291px;
+  left: 408px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(2) .img-wrapper {
+  top: 242px;
+  left: 553px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(2) .img-wrapper img {
+  width: 239px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(2) .circle {
+  width: 293px;
+  top: 176px;
+  left: 593px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(3) header {
+  top: 414px;
+  left: 269px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(3) .img-wrapper {
+  top: 356px;
+  left: 38px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(3) .img-wrapper img {
+  width: 279px;
+}
+.brand-story-banner-container.knoll.pc section:nth-child(3) .circle {
+  width: 246px;
+  top: 286px;
+  left: 0px;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(1) header {
+  top: 23.5897435897vw;
+  left: 43.3333333333vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(1) .img-wrapper {
+  top: 10.2564102564vw;
+  left: 9.4871794872vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(1) .img-wrapper img {
+  width: 30.2564102564vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: -4.358974359vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(2) header {
+  text-align: right;
+  top: 67.1794871795vw;
+  left: 20vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(2) .img-wrapper {
+  top: 56.9230769231vw;
+  left: 53.3333333333vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(2) .img-wrapper img {
+  width: 38.2051282051vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(2) .circle {
+  width: 47.1794871795vw;
+  top: 49.2307692308vw;
+  left: 60.5128205128vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(3) header {
+  top: 122.3076923077vw;
+  left: 49.7435897436vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(3) .img-wrapper {
+  top: 108.7179487179vw;
+  left: 2.5641025641vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(3) .img-wrapper img {
+  width: 56.4102564103vw;
+}
+.brand-story-banner-container.knoll.mobile section:nth-child(3) .circle {
+  width: 49.7435897436vw;
+  top: 91.0256410256vw;
+  left: -9.4871794872vw;
+}
+.brand-story-banner-container.flos > section:nth-child(1) .circle {
+  background-color: #003969;
+}
+.brand-story-banner-container.flos > section:nth-child(2) .circle {
+  background-color: #64605E;
+}
+.brand-story-banner-container.flos > section:nth-child(3) .circle {
+  background-color: #570000;
+}
+.brand-story-banner-container.flos.pc section:nth-child(1) header {
+  text-align: right;
+  top: 84px;
+  left: 381px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(1) .img-wrapper {
+  top: 42px;
+  left: 562px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(1) .img-wrapper img {
+  width: 162px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 20px;
+  left: 588px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(2) header {
+  text-align: right;
+  top: 238px;
+  left: 273px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(2) .img-wrapper {
+  top: 131px;
+  left: 72px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(2) .img-wrapper img {
+  width: 171px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 142px;
+  left: 0;
+}
+.brand-story-banner-container.flos.pc section:nth-child(3) header {
+  top: 375px;
+  left: 493px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(3) .img-wrapper {
+  top: 302px;
+  left: 687px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(3) .img-wrapper img {
+  width: 146px;
+}
+.brand-story-banner-container.flos.pc section:nth-child(3) .circle {
+  width: 253px;
+  top: 248px;
+  left: 633px;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 25.1282051282vw;
+  left: 25.8974358974vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(1) .img-wrapper {
+  top: 18.9743589744vw;
+  left: 60vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(1) .img-wrapper img {
+  width: 36.1538461538vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 11.5384615385vw;
+  left: 64.1025641026vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(2) header {
+  top: 69.4871794872vw;
+  left: 47.4358974359vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(2) .img-wrapper {
+  top: 48.9743589744vw;
+  left: 5.641025641vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(2) .img-wrapper img {
+  width: 31.5384615385vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(2) .circle {
+  width: 46.1538461538vw;
+  top: 53.0769230769vw;
+  left: -6.6666666667vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(3) header {
+  top: 116.1538461538vw;
+  left: 25.8974358974vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(3) .img-wrapper {
+  top: 104.6153846154vw;
+  left: 67.6923076923vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(3) .img-wrapper img {
+  width: 26.4102564103vw;
+}
+.brand-story-banner-container.flos.mobile section:nth-child(3) .circle {
+  width: 46.1538461538vw;
+  top: 97.1794871795vw;
+  left: 57.6923076923vw;
+}
+.brand-story-banner-container.villeroy > section:nth-child(1) .circle {
+  background-color: #5C6A35;
+}
+.brand-story-banner-container.villeroy > section:nth-child(2) .circle {
+  background-color: #766C53;
+}
+.brand-story-banner-container.villeroy > section:nth-child(3) .circle {
+  background-color: #222E44;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(1) header {
+  text-align: right;
+  top: 73px;
+  left: 328px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(1) .img-wrapper {
+  top: 60px;
+  left: 443px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(1) .img-wrapper img {
+  width: 199px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 21px;
+  left: 499px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(2) header {
+  top: 259px;
+  left: 325px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(2) .img-wrapper {
+  top: 166px;
+  left: 70px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(2) .img-wrapper img {
+  width: 242px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(2) .circle {
+  width: 276px;
+  top: 148px;
+  left: 0;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(3) header {
+  text-align: right;
+  top: 367px;
+  left: 489px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(3) .img-wrapper {
+  top: 312px;
+  left: 591px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(3) .img-wrapper img {
+  width: 238px;
+}
+.brand-story-banner-container.villeroy.pc section:nth-child(3) .circle {
+  width: 270px;
+  top: 253px;
+  left: 616px;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 18.7179487179vw;
+  left: 22.5641025641vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(1) .img-wrapper {
+  top: 17.1794871795vw;
+  left: 49.7435897436vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(1) .img-wrapper img {
+  width: 45.1282051282vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 62.0512820513vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(2) header {
+  top: 62.5641025641vw;
+  left: 49.7435897436vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(2) .img-wrapper {
+  top: 47.9487179487vw;
+  left: 3.8461538462vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(2) .img-wrapper img {
+  width: 42.3076923077vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(2) .circle {
+  width: 49.7435897436vw;
+  top: 44.1025641026vw;
+  left: -6.9230769231vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 118.4615384615vw;
+  left: 26.1538461538vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(3) .img-wrapper {
+  top: 94.358974359vw;
+  left: 52.5641025641vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(3) .img-wrapper img {
+  width: 32.5641025641vw;
+}
+.brand-story-banner-container.villeroy.mobile section:nth-child(3) .circle {
+  width: 57.9487179487vw;
+  top: 86.6666666667vw;
+  left: 53.5897435897vw;
+}
+.brand-story-banner-container.de-sede > section:nth-child(1) .circle {
+  background-color: #4D2C1B;
+}
+.brand-story-banner-container.de-sede > section:nth-child(2) .circle {
+  background-color: #6B5E4A;
+}
+.brand-story-banner-container.de-sede > section:nth-child(3) .circle {
+  background-color: #193A25;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(1) header {
+  text-align: right;
+  top: 105px;
+  left: 339px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(1) .img-wrapper {
+  top: 85px;
+  left: 91px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(1) .img-wrapper img {
+  width: 230px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(1) .circle {
+  width: 274px;
+  top: 21px;
+  left: 16px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(2) header {
+  text-align: right;
+  top: 226px;
+  left: 375px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(2) .img-wrapper {
+  top: 179px;
+  left: 561px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(2) .img-wrapper img {
+  width: 274px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(2) .circle {
+  width: 237px;
+  top: 125px;
+  left: 649px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(3) header {
+  top: 406px;
+  left: 480px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(3) .img-wrapper {
+  top: 374px;
+  left: 224px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(3) .img-wrapper img {
+  width: 236px;
+}
+.brand-story-banner-container.de-sede.pc section:nth-child(3) .circle {
+  width: 224px;
+  top: 324px;
+  left: 230px;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(1) header {
+  top: 28.4615384615vw;
+  left: 58.4615384615vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(1) .img-wrapper {
+  top: 18.4615384615vw;
+  left: 8.4615384615vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(1) .img-wrapper img {
+  width: 45.3846153846vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(1) .circle {
+  width: 52.8205128205vw;
+  top: 7.4358974359vw;
+  left: -10vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(2) header {
+  text-align: right;
+  top: 70.2564102564vw;
+  left: 10vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(2) .img-wrapper {
+  top: 66.9230769231vw;
+  left: 52.0512820513vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(2) .img-wrapper img {
+  width: 49.2307692308vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(2) .circle {
+  width: 47.1794871795vw;
+  top: 54.358974359vw;
+  left: 61.2820512821vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(3) header {
+  top: 110.5128205128vw;
+  left: 50vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(3) .img-wrapper {
+  top: 101.7948717949vw;
+  left: -6.9230769231vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(3) .img-wrapper img {
+  width: 53.3333333333vw;
+}
+.brand-story-banner-container.de-sede.mobile section:nth-child(3) .circle {
+  width: 54.1025641026vw;
+  top: 89.4871794872vw;
+  left: -15.3846153846vw;
+}
+.brand-story-banner-container.zanotta > section:nth-child(1) .circle {
+  background-color: #6A6A6A;
+}
+.brand-story-banner-container.zanotta > section:nth-child(2) .circle {
+  background-color: #4A3D26;
+}
+.brand-story-banner-container.zanotta > section:nth-child(3) .circle {
+  background-color: #513A2C;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(1) header {
+  top: 97px;
+  left: 271px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(1) .img-wrapper {
+  top: 71px;
+  left: 112px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(1) .img-wrapper img {
+  width: 137px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 21px;
+  left: 31px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(2) header {
+  text-align: right;
+  top: 169px;
+  left: 442px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(2) .img-wrapper {
+  top: 136px;
+  left: 364px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(2) .img-wrapper img {
+  width: 481px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(2) .circle {
+  width: 293px;
+  top: 84px;
+  left: 593px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(3) header {
+  top: 414px;
+  left: 271px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(3) .img-wrapper {
+  top: 359px;
+  left: 66px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(3) .img-wrapper img {
+  width: 228px;
+}
+.brand-story-banner-container.zanotta.pc section:nth-child(3) .circle {
+  width: 176px;
+  top: 321px;
+  left: 35px;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(1) header {
+  top: 23.5897435897vw;
+  left: 45.3846153846vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(1) .img-wrapper {
+  top: 17.6923076923vw;
+  left: 10.5128205128vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(1) .img-wrapper img {
+  width: 30vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: -4.358974359vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(2) header {
+  text-align: right;
+  top: 59.7435897436vw;
+  left: 21.2820512821vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(2) .img-wrapper {
+  top: 46.1538461538vw;
+  left: 28.9743589744vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(2) .img-wrapper img {
+  width: 79.2307692308vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(2) .circle {
+  width: 47.1794871795vw;
+  top: 47.9487179487vw;
+  left: 60.5128205128vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(3) header {
+  top: 119.2307692308vw;
+  left: 45.8974358974vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(3) .img-wrapper {
+  top: 104.358974359vw;
+  left: -0.5128205128vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(3) .img-wrapper img {
+  width: 52.3076923077vw;
+}
+.brand-story-banner-container.zanotta.mobile section:nth-child(3) .circle {
+  width: 41.0256410256vw;
+  top: 94.8717948718vw;
+  left: -7.6923076923vw;
+}
+.brand-story-banner-container.ferm-living > section:nth-child(1) .circle {
+  background-color: #A98D71;
+}
+.brand-story-banner-container.ferm-living > section:nth-child(2) .circle {
+  background-color: #68191F;
+}
+.brand-story-banner-container.ferm-living > section:nth-child(3) .circle {
+  background-color: #214031;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(1) header {
+  top: 62px;
+  left: 496px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(1) .img-wrapper {
+  top: 62px;
+  left: 313px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(1) .img-wrapper img {
+  width: 231px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(1) .circle {
+  width: 169px;
+  top: 36px;
+  left: 228px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(2) header {
+  text-align: right;
+  top: 217px;
+  left: 675px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(2) .img-wrapper {
+  top: 324px;
+  left: 522px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(2) .img-wrapper img {
+  width: 258px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(2) .circle {
+  width: 254px;
+  top: 281px;
+  left: 627px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(3) header {
+  top: 390px;
+  left: 268px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(3) .img-wrapper {
+  top: 227px;
+  left: 82px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(3) .img-wrapper img {
+  width: 124px;
+}
+.brand-story-banner-container.ferm-living.pc section:nth-child(3) .circle {
+  width: 219px;
+  top: 316px;
+  left: 34px;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(1) header {
+  top: 33.3333333333vw;
+  left: 50vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(1) .img-wrapper {
+  top: 16.9230769231vw;
+  left: 7.9487179487vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(1) .img-wrapper img {
+  width: 37.6923076923vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(1) .circle {
+  width: 49.7435897436vw;
+  top: 7.4358974359vw;
+  left: -9.4871794872vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(2) header {
+  text-align: right;
+  top: 68.4615384615vw;
+  left: 19.4871794872vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(2) .img-wrapper {
+  top: 61.7948717949vw;
+  left: 51.0256410256vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(2) .img-wrapper img {
+  width: 43.5897435897vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(2) .circle {
+  width: 47.1794871795vw;
+  top: 53.0769230769vw;
+  left: 60.5128205128vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(3) header {
+  top: 112.3076923077vw;
+  left: 43.3333333333vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(3) .img-wrapper {
+  top: 101.0256410256vw;
+  left: 9.7435897436vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(3) .img-wrapper img {
+  width: 22.5641025641vw;
+}
+.brand-story-banner-container.ferm-living.mobile section:nth-child(3) .circle {
+  width: 41.0256410256vw;
+  top: 96.1538461538vw;
+  left: -4.358974359vw;
+}
+.brand-story-banner-container.poltrona-frau > section:nth-child(1) .circle {
+  background-color: #413A18;
+}
+.brand-story-banner-container.poltrona-frau > section:nth-child(2) .circle {
+  background-color: #4A3F37;
+}
+.brand-story-banner-container.poltrona-frau > section:nth-child(3) .circle {
+  background-color: #123548;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(1) header {
+  text-align: right;
+  top: 87px;
+  left: 556px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(1) .img-wrapper {
+  top: 53px;
+  left: 682px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(1) .img-wrapper img {
+  width: 127px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(1) .circle {
+  width: 172px;
+  top: 30px;
+  left: 696px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(2) header {
+  text-align: left;
+  top: 281px;
+  left: 270px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(2) .img-wrapper {
+  top: 141px;
+  left: 28px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(2) .img-wrapper img {
+  width: 447px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(2) .circle {
+  width: 270px;
+  top: 82px;
+  left: 0;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(3) header {
+  text-align: right;
+  top: 384px;
+  left: 402px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(3) .img-wrapper {
+  top: 314px;
+  left: 542px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(3) .img-wrapper img {
+  width: 246px;
+}
+.brand-story-banner-container.poltrona-frau.pc section:nth-child(3) .circle {
+  width: 246px;
+  top: 286px;
+  left: 603px;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 21.2820512821vw;
+  left: 29.2307692308vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(1) .img-wrapper {
+  top: 13.8461538462vw;
+  left: 58.4615384615vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(1) .img-wrapper img {
+  width: 28.4615384615vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 61.7948717949vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(2) header {
+  top: 84.358974359vw;
+  left: 36.9230769231vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(2) .img-wrapper {
+  top: 58.4615384615vw;
+  left: -5.641025641vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(2) .img-wrapper img {
+  width: 78.9743589744vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(2) .circle {
+  width: 47.1794871795vw;
+  top: 47.4358974359vw;
+  left: -9.2307692308vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 115.3846153846vw;
+  left: 16.4102564103vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(3) .img-wrapper {
+  top: 102.5641025641vw;
+  left: 48.2051282051vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(3) .img-wrapper img {
+  width: 46.1538461538vw;
+}
+.brand-story-banner-container.poltrona-frau.mobile section:nth-child(3) .circle {
+  width: 44.358974359vw;
+  top: 96.4102564103vw;
+  left: 64.1025641026vw;
+}
+.brand-story-banner-container.ginori > section:nth-child(1) .circle {
+  background-color: #243E72;
+}
+.brand-story-banner-container.ginori > section:nth-child(2) .circle {
+  background-color: #6A2F19;
+}
+.brand-story-banner-container.ginori > section:nth-child(3) .circle {
+  background-color: #685615;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(1) header {
+  text-align: right;
+  top: 107px;
+  left: 333px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(1) .img-wrapper {
+  top: 65px;
+  left: 482px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(1) .img-wrapper img {
+  width: 156px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(1) .circle {
+  width: 180px;
+  top: 26px;
+  left: 496px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(2) header {
+  text-align: left;
+  top: 289px;
+  left: 346px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(2) .img-wrapper {
+  top: 186px;
+  left: 63px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(2) .img-wrapper img {
+  width: 266px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 198px;
+  left: 20px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(3) header {
+  text-align: right;
+  top: 382px;
+  left: 489px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(3) .img-wrapper {
+  top: 278px;
+  left: 602px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(3) .img-wrapper img {
+  width: 190px;
+}
+.brand-story-banner-container.ginori.pc section:nth-child(3) .circle {
+  width: 256px;
+  top: 272px;
+  left: 630px;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 23.3333333333vw;
+  left: 18.9743589744vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(1) .img-wrapper {
+  top: 13.0769230769vw;
+  left: 56.4102564103vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(1) .img-wrapper img {
+  width: 37.9487179487vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 61.7948717949vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(2) header {
+  top: 66.4102564103vw;
+  left: 58.4615384615vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(2) .img-wrapper {
+  top: 44.8717948718vw;
+  left: 3.8461538462vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(2) .img-wrapper img {
+  width: 51.5384615385vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(2) .circle {
+  width: 47.1794871795vw;
+  top: 47.4358974359vw;
+  left: -9.2307692308vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 115.3846153846vw;
+  left: 25.1282051282vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(3) .img-wrapper {
+  top: 96.1538461538vw;
+  left: 52.8205128205vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(3) .img-wrapper img {
+  width: 36.9230769231vw;
+}
+.brand-story-banner-container.ginori.mobile section:nth-child(3) .circle {
+  width: 47.1794871795vw;
+  top: 93.5897435897vw;
+  left: 62.5641025641vw;
+}
+.brand-story-banner-container.donna-wilson > section:nth-child(1) .circle {
+  background-color: #5E1B1B;
+}
+.brand-story-banner-container.donna-wilson > section:nth-child(2) .circle {
+  background-color: #004C34;
+}
+.brand-story-banner-container.donna-wilson > section:nth-child(3) .circle {
+  background-color: #A5A19A;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(1) header {
+  text-align: right;
+  top: 97px;
+  left: 346px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(1) .img-wrapper {
+  top: 4px;
+  left: 452px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(1) .img-wrapper img {
+  width: 217px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(1) .circle {
+  width: 203px;
+  top: 17px;
+  left: 459px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(2) header {
+  text-align: left;
+  top: 281px;
+  left: 296px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(2) .img-wrapper {
+  top: 178px;
+  left: 65px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(2) .img-wrapper img {
+  width: 224px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 190px;
+  left: 20px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(3) header {
+  text-align: right;
+  top: 401px;
+  left: 492px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(3) .img-wrapper {
+  top: 302px;
+  left: 629px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(3) .img-wrapper img {
+  width: 171px;
+}
+.brand-story-banner-container.donna-wilson.pc section:nth-child(3) .circle {
+  width: 217px;
+  top: 285px;
+  left: 669px;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 23.3333333333vw;
+  left: 31.7948717949vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(1) .img-wrapper {
+  top: 5.8974358974vw;
+  left: 53.5897435897vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(1) .img-wrapper img {
+  width: 43.3333333333vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 61.7948717949vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(2) header {
+  top: 66.4102564103vw;
+  left: 51.5384615385vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(2) .img-wrapper {
+  top: 49.7435897436vw;
+  left: 7.9487179487vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(2) .img-wrapper img {
+  width: 40.5128205128vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(2) .circle {
+  width: 47.4358974359vw;
+  top: 47.4358974359vw;
+  left: -6.6666666667vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 117.1794871795vw;
+  left: 21.5384615385vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(3) .img-wrapper {
+  top: 94.358974359vw;
+  left: 53.5897435897vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(3) .img-wrapper img {
+  width: 34.6153846154vw;
+}
+.brand-story-banner-container.donna-wilson.mobile section:nth-child(3) .circle {
+  width: 47.1794871795vw;
+  top: 93.5897435897vw;
+  left: 62.5641025641vw;
+}
+.brand-story-banner-container.pappelina > section:nth-child(1) .circle {
+  background-color: #534535;
+}
+.brand-story-banner-container.pappelina > section:nth-child(2) .circle {
+  background-color: #446877;
+}
+.brand-story-banner-container.pappelina > section:nth-child(3) .circle {
+  background-color: #7C0F19;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(1) header {
+  text-align: right;
+  top: 89px;
+  left: 509px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(1) .img-wrapper {
+  top: 66px;
+  left: 703px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(1) .img-wrapper img {
+  width: 140px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(1) .circle {
+  width: 203px;
+  top: 17px;
+  left: 673px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(2) header {
+  text-align: left;
+  top: 197px;
+  left: 294px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(2) .img-wrapper {
+  top: 142px;
+  left: 96px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(2) .img-wrapper img {
+  width: 182px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 112px;
+  left: 20px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(3) header {
+  text-align: right;
+  top: 380px;
+  left: 315px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(3) .img-wrapper {
+  top: 333px;
+  left: 493px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(3) .img-wrapper img {
+  width: 235px;
+}
+.brand-story-banner-container.pappelina.pc section:nth-child(3) .circle {
+  width: 217px;
+  top: 285px;
+  left: 551px;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 22.8205128205vw;
+  left: 20.2564102564vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(1) .img-wrapper {
+  top: 16.9230769231vw;
+  left: 67.9487179487vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(1) .img-wrapper img {
+  width: 28.4615384615vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 61.7948717949vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(2) header {
+  top: 70.5128205128vw;
+  left: 43.3333333333vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(2) .img-wrapper {
+  top: 57.4358974359vw;
+  left: 4.8717948718vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(2) .img-wrapper img {
+  width: 34.1025641026vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(2) .circle {
+  width: 44.1025641026vw;
+  top: 51.5384615385vw;
+  left: -6.6666666667vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 115.641025641vw;
+  left: 17.1794871795vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(3) .img-wrapper {
+  top: 107.6923076923vw;
+  left: 58.7179487179vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(3) .img-wrapper img {
+  width: 44.1025641026vw;
+}
+.brand-story-banner-container.pappelina.mobile section:nth-child(3) .circle {
+  width: 41.0256410256vw;
+  top: 99.7435897436vw;
+  left: 65.641025641vw;
+}
+.brand-story-banner-container.neva > section:nth-child(1) .circle {
+  background-color: #554F49;
+}
+.brand-story-banner-container.neva > section:nth-child(2) .circle {
+  background-color: #4F0103;
+}
+.brand-story-banner-container.neva > section:nth-child(3) .circle {
+  background-color: #2C262A;
+}
+.brand-story-banner-container.neva.pc section:nth-child(1) header {
+  text-align: right;
+  top: 92px;
+  left: 501px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(1) .img-wrapper {
+  top: -8px;
+  left: 608px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(1) .img-wrapper img {
+  width: 253px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(1) .circle {
+  width: 203px;
+  top: 17px;
+  left: 673px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(2) header {
+  text-align: left;
+  top: 230px;
+  left: 323px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(2) .img-wrapper {
+  top: 97px;
+  left: 54px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(2) .img-wrapper img {
+  width: 284px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 112px;
+  left: 20px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(3) header {
+  text-align: right;
+  top: 376px;
+  left: 364px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(3) .img-wrapper {
+  top: 285px;
+  left: 491px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(3) .img-wrapper img {
+  width: 268px;
+}
+.brand-story-banner-container.neva.pc section:nth-child(3) .circle {
+  width: 217px;
+  top: 285px;
+  left: 551px;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 22.8205128205vw;
+  left: 24.1025641026vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(1) .img-wrapper {
+  top: 9.7435897436vw;
+  left: 53.5897435897vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(1) .img-wrapper img {
+  width: 39.2307692308vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 61.7948717949vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(2) header {
+  top: 70.5128205128vw;
+  left: 44.6153846154vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(2) .img-wrapper {
+  top: 51.2820512821vw;
+  left: 1.0256410256vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(2) .img-wrapper img {
+  width: 45.3846153846vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(2) .circle {
+  width: 44.1025641026vw;
+  top: 51.5384615385vw;
+  left: -6.6666666667vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 115.641025641vw;
+  left: 21.5384615385vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(3) .img-wrapper {
+  top: 97.9487179487vw;
+  left: 51.0256410256vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(3) .img-wrapper img {
+  width: 45.1282051282vw;
+}
+.brand-story-banner-container.neva.mobile section:nth-child(3) .circle {
+  width: 41.0256410256vw;
+  top: 99.7435897436vw;
+  left: 65.641025641vw;
+}
+.brand-story-banner-container.magis > section:nth-child(1) .circle {
+  background-color: #554F49;
+}
+.brand-story-banner-container.magis > section:nth-child(2) .circle {
+  background-color: #25565E;
+}
+.brand-story-banner-container.magis > section:nth-child(3) .circle {
+  background-color: #4F0103;
+}
+.brand-story-banner-container.magis.pc section:nth-child(1) header {
+  text-align: right;
+  top: 89px;
+  left: 500px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(1) .img-wrapper {
+  top: 41px;
+  left: 702px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(1) .img-wrapper img {
+  width: 157px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(1) .circle {
+  width: 203px;
+  top: 17px;
+  left: 673px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(2) header {
+  text-align: left;
+  top: 197px;
+  left: 294px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(2) .img-wrapper {
+  top: 121px;
+  left: 38px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(2) .img-wrapper img {
+  width: 265px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(2) .circle {
+  width: 246px;
+  top: 112px;
+  left: 20px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(3) header {
+  text-align: right;
+  top: 376px;
+  left: 372px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(3) .img-wrapper {
+  top: 257px;
+  left: 564px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(3) .img-wrapper img {
+  width: 192px;
+}
+.brand-story-banner-container.magis.pc section:nth-child(3) .circle {
+  width: 217px;
+  top: 285px;
+  left: 551px;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(1) header {
+  text-align: right;
+  top: 20.2564102564vw;
+  left: 16.4102564103vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(1) .img-wrapper {
+  top: 12.0512820513vw;
+  left: 67.4358974359vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(1) .img-wrapper img {
+  width: 31.5384615385vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(1) .circle {
+  width: 41.0256410256vw;
+  top: 7.4358974359vw;
+  left: 61.7948717949vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(2) header {
+  top: 70.5128205128vw;
+  left: 44.8717948718vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(2) .img-wrapper {
+  top: 54.8717948718vw;
+  left: -1.5384615385vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(2) .img-wrapper img {
+  width: 47.9487179487vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(2) .circle {
+  width: 44.1025641026vw;
+  top: 51.5384615385vw;
+  left: -6.6666666667vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(3) header {
+  text-align: right;
+  top: 113.3333333333vw;
+  left: 25.641025641vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(3) .img-wrapper {
+  top: 93.8461538462vw;
+  left: 58.7179487179vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(3) .img-wrapper img {
+  width: 37.4358974359vw;
+}
+.brand-story-banner-container.magis.mobile section:nth-child(3) .circle {
+  width: 41.0256410256vw;
+  top: 99.7435897436vw;
+  left: 65.641025641vw;
+}
