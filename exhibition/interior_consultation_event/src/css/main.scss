@@ -63,8 +63,8 @@
         + li{ border-top: 1px dashed #ddd;}
         &:last-child{ padding-bottom: 32rem;}
         img{ width: 54rem; flex-shrink: 0;}
-        h3{ @include font-size(17rem); font-weight: 600;
-          b{ color: #FD312E; margin-right: 6rem;}
+        h3{ @include font-size(17rem);font-weight: 600;
+          b{ color: #FD312E; margin-right: 6rem; font-weight: 600;}
         }
         p{ @include font-size(14rem); color: #444; margin-top: 6rem;}
       }
@@ -72,7 +72,7 @@
 
     &#partner{
       ul{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 32rem 10rem;
-        img{ border-radius: 8rem;}
+        img{ border-radius: 8rem; transition: .3s ease;}
         span{ display: flex; align-items: center; @include font-size(18rem); font-weight: 600; margin-top: 8rem;
           &::after{ content: ""; width: 8rem; height: 8rem; border-top: 2rem solid #111; border-right: 2rem solid #111; transform: rotate(45deg); margin-left: 6rem;}
         }

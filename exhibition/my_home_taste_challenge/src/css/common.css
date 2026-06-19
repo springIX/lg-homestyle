@@ -5,7 +5,7 @@
 @import url("main.css");
 html {
   height: 100%;
-  font-size: 1.3px;
+  font-size: 2px;
 }
 @media (max-width: 780px) {
   html {
@@ -17,11 +17,11 @@ main {
   background-color: #F9F9F9;
 }
 
-.interior_consultation_event {
+.my_home_taste_challenge {
   background-color: #ffffff;
-  color: #000;
+  color: #111;
   font-family: "Pretendard", sans-serif;
-  font-size: clamp(10px, 13rem, 9999rem);
+  font-size: clamp(10px, 16rem, 9999rem);
   font-weight: 400;
   line-height: 1.4;
   word-wrap: break-word;
@@ -36,45 +36,45 @@ main {
   max-width: 780px;
   margin: 0 auto;
 }
-.interior_consultation_event ::-webkit-scrollbar {
+.my_home_taste_challenge ::-webkit-scrollbar {
   display: none;
 }
-.interior_consultation_event ::placeholder {
+.my_home_taste_challenge ::placeholder {
   color: #d6d6d6;
 }
-.interior_consultation_event * {
+.my_home_taste_challenge * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-style: normal;
   outline: none !important;
 }
-.interior_consultation_event h1,
-.interior_consultation_event h2,
-.interior_consultation_event h3,
-.interior_consultation_event h4,
-.interior_consultation_event h5,
-.interior_consultation_event h6 {
+.my_home_taste_challenge h1,
+.my_home_taste_challenge h2,
+.my_home_taste_challenge h3,
+.my_home_taste_challenge h4,
+.my_home_taste_challenge h5,
+.my_home_taste_challenge h6 {
   font-weight: inherit;
   font-size: inherit;
 }
-.interior_consultation_event table {
+.my_home_taste_challenge table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.interior_consultation_event ol,
-.interior_consultation_event ul {
+.my_home_taste_challenge ol,
+.my_home_taste_challenge ul {
   list-style: none;
 }
-.interior_consultation_event a {
+.my_home_taste_challenge a {
   display: block;
   text-decoration: none;
   color: inherit;
 }
-.interior_consultation_event button,
-.interior_consultation_event input,
-.interior_consultation_event select,
-.interior_consultation_event textarea {
+.my_home_taste_challenge button,
+.my_home_taste_challenge input,
+.my_home_taste_challenge select,
+.my_home_taste_challenge textarea {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -86,7 +86,7 @@ main {
   -moz-appearance: none;
   cursor: pointer;
 }
-.interior_consultation_event input[type=checkbox], .interior_consultation_event input[type=radio] {
+.my_home_taste_challenge input[type=checkbox], .my_home_taste_challenge input[type=radio] {
   width: 0;
   height: 0;
   overflow: hidden;
@@ -94,27 +94,27 @@ main {
   left: 0;
   top: 0;
 }
-.interior_consultation_event label {
+.my_home_taste_challenge label {
   cursor: pointer;
 }
-.interior_consultation_event img,
-.interior_consultation_event video,
-.interior_consultation_event svg {
+.my_home_taste_challenge img,
+.my_home_taste_challenge video,
+.my_home_taste_challenge svg {
   display: block;
   border: none;
   width: 100%;
   max-width: unset;
 }
-.interior_consultation_event option {
+.my_home_taste_challenge option {
   color: inherit;
 }
-.interior_consultation_event section {
+.my_home_taste_challenge section {
   position: relative;
 }
-.interior_consultation_event picture {
+.my_home_taste_challenge picture {
   display: block;
   width: 100%;
 }
-.interior_consultation_event span {
+.my_home_taste_challenge span {
   display: block;
 }

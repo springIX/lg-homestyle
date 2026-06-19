@@ -1,0 +1,146 @@
+@import "var";
+
+.my_home_taste_challenge{ 
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; line-height: 1.4; font-size: inherit;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  .pd_btm{padding-bottom: 60rem;}
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden; padding: 60rem 20rem 0;
+    &#benefit{ background-color: #f3eee9; @include font-size(10rem);
+      @include screen("mo") { @include font-size(16rem);}
+      h2{font-weight: 700; @include font-size(17rem); text-align: center;
+        @include screen("mo") { @include font-size(26rem);}
+      }
+      ol{ border-top: 2rem solid #111; margin-top: 28rem; counter-reset: benefit; 
+        li{ padding: 24rem 0;
+          &::before{ counter-increment: benefit; content: "BENEFIT 0"counter(benefit); padding: 3rem 10rem; background-color: #BB9D77; border-radius: 999rem; color: #fff; font-weight: 500; @include font-size(8rem); display: inline-block;
+            @include screen("mo") { @include font-size(10rem);}
+          }
+          + li{ border-top: 1px solid #ddd}
+          &:last-child{ padding-bottom: 0;}
+          h3{ @include font-size(12rem); font-weight: 600; margin-top: 4rem;
+            @include screen("mo") { @include font-size(18rem);}
+            b{ color: #AA6E20; font-weight: inherit;}
+          }
+          p{ margin-top: 4rem;
+            @include screen("mo") { margin-top: 8rem;}
+          }
+        }
+      }
+      
+      &.home_bar{ background-color: #EAEBE5;
+        ol li{
+          &::before{ background-color: #ADB298;}
+          h3 b{ color: #67781E;}
+        }
+      }
+    }
+
+    &#product_option{ text-align: center;
+      h3{ @include font-size(20rem); width: 100%; padding-bottom: 16rem; border-bottom: 1px solid #000; margin-bottom: 20rem;
+        strong{ font-weight: 600;}
+      }
+      ul{ display: grid; grid-template-columns: 1fr 1fr; gap: 12rem 0;
+        &.ty2{ display: flex; gap: 10rem;
+          li img{ width: 100%;}
+        }
+        &.ty3{ display: flex; justify-content: center; flex-wrap: wrap;
+          li{ width: 50%;}
+        }
+        &.txt_ty2{
+          li{
+            p{ @include font-size(16rem); font-weight: 600;}
+          }
+        }
+        li{
+          img{ width: 140rem; margin: 0 auto 4rem;}
+          span{ @include font-size(12rem); color: #666;}
+        }
+      }
+    }
+
+    &#product_features{
+      ol{counter-reset: feature; 
+        li{
+          + li{ margin-top: 40rem;}
+          .txt_box{ margin-bottom: 16rem;
+            span{ @include font-size(12rem); color: #444;
+              &::before{ counter-increment: feature; content: "0"counter(feature)". "; }
+            }
+            h2{ font-weight: 600; margin-top: 4rem;}
+            p{ @include font-size(12rem); color: #8f8f8f; margin-top: 2rem;}
+          }
+        }
+      }
+    }
+
+    &#ending{ padding-left: 0; padding-right: 0;
+      .ending_slot{ text-align: center; position: relative;
+        .txt_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: space-between; flex-direction: column; padding: 40rem $layout_pd 28rem;
+          h2{ text-align: center; font-weight: 600; @include font-size(22rem);}
+          a{ width: 100%; background-color: #111; border-radius: 8rem; color: #fff; height: 68px; line-height: 68px; font-size: 16px;border-radius: 8px;
+            @include screen("mo") { width: 100%; height: 48rem; line-height: 48rem; font-size: 15rem; border-radius: 8rem;}
+          }
+        }
+        &.ty_white{
+          .txt_box{
+            h2{color: #fff;}
+            a{ color: #444; background-color: #fff;}
+          }
+        }
+      }
+
+      .swiper{ padding: 0 $layout_pd; overflow: visible;
+        .scr_bar{ width: 80rem; height: 3rem; margin: 19rem auto 0; background-color: #ddd;
+          .swiper-scrollbar-drag{border-radius: 0; background-color: #000; }
+        }
+      }
+    }
+  }
+}
