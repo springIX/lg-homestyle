@@ -14,6 +14,7 @@
       margin: 0 !important;
       padding: 0 !important;
     }
+
     .pdp,
     .pdp * {
       margin: 0 !important;
@@ -27,14 +28,11 @@
       container-type: inline-size !important;
       font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif !important;
     }
-
-    /* 모바일(터치) 기기에서만 비율대로 축소. PC는 780px 고정 → 좁히면 가로 스크롤 */
     @media (hover: none) and (pointer: coarse) {
       .pdp {
         width: 100% !important;
       }
     }
-
     .pdp .pdp__kv {
       background: var(--pdp-kv-bg, #000) !important;
       padding: 9.23cqw 0 5.13cqw !important;
@@ -65,7 +63,7 @@
       position: relative !important;
       margin: 0 5.13cqw !important;
       width: 89.74cqw !important;
-      aspect-ratio: 700 / 520 !important;
+      aspect-ratio: 700/520 !important;
       overflow: hidden !important;
       line-height: 0 !important;
     }
@@ -73,9 +71,9 @@
       display: block !important;
       width: 100% !important;
       height: 100% !important;
-      object-fit: cover !important;
+      -o-object-fit: cover !important;
+         object-fit: cover !important;
     }
-
     .pdp .pdp__info {
       background: var(--pdp-info-bg, #daebcc) !important;
       padding: 7.69cqw 5.13cqw !important;
@@ -131,7 +129,7 @@
       line-height: 1 !important;
     }
     .pdp .pdp__info-row-title {
-      font-size: 4.10cqw !important;
+      font-size: 4.1cqw !important;
       font-weight: 600 !important;
       line-height: 1.5 !important;
       letter-spacing: -0.5px !important;
