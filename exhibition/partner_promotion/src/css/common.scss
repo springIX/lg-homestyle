@@ -5,14 +5,14 @@
 
 html {
   height: 100%;
-  font-size: 1.3px;
+  font-size: 1.2px;
   @include screen("mo") {
     font-size: 0.25641vw;
   }
 }
 main{background-color: #F9F9F9;}
 
-.my_home_taste_challenge{
+.partner_promotion{
   background-color: #ffffff;
   color: #111;
   font-family: "Pretendard", sans-serif;
@@ -27,7 +27,7 @@ main{background-color: #F9F9F9;}
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   text-align: left;
-  letter-spacing: 0;
+  letter-spacing: -.2rem;
   max-width: 780px; 
   margin: 0 auto;
 

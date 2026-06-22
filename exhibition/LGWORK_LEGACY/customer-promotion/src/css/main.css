@@ -1,96 +1,21 @@
 @charset "UTF-8";
-
 /* Responsive */
 /* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
 /* Ellipsis */
 .customer_promotion {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
-
 .PcPdpExhibitionDetailView_bannerArea__btHpF .customer_promotion img {
   max-width: unset;
 }
 
-.customer_promotion abbr,
-.customer_promotion acronym,
-.customer_promotion address,
-.customer_promotion applet,
-.customer_promotion article,
-.customer_promotion aside,
-.customer_promotion audio,
-.customer_promotion big,
-.customer_promotion blockquote,
-.customer_promotion body,
-.customer_promotion canvas,
-.customer_promotion caption,
-.customer_promotion center,
-.customer_promotion cite,
-.customer_promotion code,
-.customer_promotion dd,
-.customer_promotion details,
-.customer_promotion dfn,
-.customer_promotion div,
-.customer_promotion dl,
-.customer_promotion dt,
-.customer_promotion embed,
-.customer_promotion fieldset,
-.customer_promotion figcaption,
-.customer_promotion figure,
-.customer_promotion footer,
-.customer_promotion form,
-.customer_promotion h1,
-.customer_promotion h2,
-.customer_promotion h3,
-.customer_promotion h4,
-.customer_promotion h5,
-.customer_promotion h6,
-.customer_promotion header,
-.customer_promotion hgroup,
-.customer_promotion html,
-.customer_promotion iframe,
-.customer_promotion img,
-.customer_promotion ins,
-.customer_promotion kbd,
-.customer_promotion label,
-.customer_promotion legend,
-.customer_promotion li,
-.customer_promotion mark,
-.customer_promotion menu,
-.customer_promotion nav,
-.customer_promotion object,
-.customer_promotion ol,
-.customer_promotion output,
-.customer_promotion p,
-.customer_promotion pre,
-.customer_promotion q,
-.customer_promotion ruby,
-.customer_promotion samp,
-.customer_promotion section,
-.customer_promotion small,
-.customer_promotion strike,
-.customer_promotion summary,
-.customer_promotion table,
-.customer_promotion tbody,
-.customer_promotion td,
-.customer_promotion textarea,
-.customer_promotion tfoot,
-.customer_promotion th,
-.customer_promotion thead,
-.customer_promotion time,
-.customer_promotion tr,
-.customer_promotion tt,
-.customer_promotion ul,
-.customer_promotion var,
-.customer_promotion video {
+.customer_promotion abbr, .customer_promotion acronym, .customer_promotion address, .customer_promotion applet, .customer_promotion article, .customer_promotion aside, .customer_promotion audio, .customer_promotion big, .customer_promotion blockquote, .customer_promotion body, .customer_promotion canvas, .customer_promotion caption, .customer_promotion center, .customer_promotion cite, .customer_promotion code, .customer_promotion dd, .customer_promotion details, .customer_promotion dfn, .customer_promotion div, .customer_promotion dl, .customer_promotion dt, .customer_promotion embed, .customer_promotion fieldset, .customer_promotion figcaption, .customer_promotion figure, .customer_promotion footer, .customer_promotion form, .customer_promotion h1, .customer_promotion h2, .customer_promotion h3, .customer_promotion h4, .customer_promotion h5, .customer_promotion h6, .customer_promotion header, .customer_promotion hgroup, .customer_promotion html, .customer_promotion iframe, .customer_promotion img, .customer_promotion ins, .customer_promotion kbd, .customer_promotion label, .customer_promotion legend, .customer_promotion li, .customer_promotion mark, .customer_promotion menu, .customer_promotion nav, .customer_promotion object, .customer_promotion ol, .customer_promotion output, .customer_promotion p, .customer_promotion pre, .customer_promotion q, .customer_promotion ruby, .customer_promotion samp, .customer_promotion section, .customer_promotion small, .customer_promotion strike, .customer_promotion summary, .customer_promotion table, .customer_promotion tbody, .customer_promotion td, .customer_promotion textarea, .customer_promotion tfoot, .customer_promotion th, .customer_promotion thead, .customer_promotion time, .customer_promotion tr, .customer_promotion tt, .customer_promotion ul, .customer_promotion var, .customer_promotion video {
   color: inherit;
 }
-
+.customer_promotion {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
 .customer_promotion .layout_inner {
   position: relative;
   max-width: 100%;
@@ -100,26 +25,22 @@
   padding-left: 20rem !important;
   padding-right: 20rem !important;
 }
-
 .customer_promotion .inner {
   width: 100%;
   position: relative;
 }
-
 .customer_promotion .f_center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 .customer_promotion .p_center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .customer_promotion .cover {
   position: absolute;
   left: 0;
@@ -128,73 +49,66 @@
   height: 100%;
   object-fit: cover;
 }
-
 .customer_promotion .flex {
   display: flex;
   justify-content: space-between;
 }
-
 .customer_promotion .flex_cnt {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .customer_promotion .flex_top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-
 .customer_promotion .flex_btm {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-
+.customer_promotion {
+  /* WAVE */
+}
 .customer_promotion .wave {
   width: 100%;
   display: flex;
   overflow: hidden;
 }
-
-.customer_promotion .wave>* {
+.customer_promotion .wave > * {
   flex-shrink: 0;
   animation: wave 100s linear infinite;
 }
-
 @keyframes wave {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-100%);
   }
 }
-
-.customer_promotion .wave.reverse>* {
+.customer_promotion .wave.reverse > * {
   animation-direction: reverse;
 }
-
 @media (min-width: 781px) {
   .customer_promotion .mo {
     display: none !important;
   }
 }
-
 @media (max-width: 780px) {
   .customer_promotion .pc {
     display: none !important;
   }
 }
-
+.customer_promotion {
+  /* SWIPER */
+}
 .customer_promotion .slide_nav {
   justify-content: center;
   gap: 8rem;
   margin-top: 30rem;
 }
-
 .customer_promotion .slide_nav span {
   display: flex;
   align-items: center;
@@ -208,7 +122,6 @@
   transition: 0.3s ease;
   border: 1px solid #DEE1E5;
 }
-
 .customer_promotion .slide_nav span::after {
   content: "";
   width: 16rem;
@@ -216,40 +129,31 @@
   background: url(../images/arr.svg) no-repeat center center/contain;
   transition: 0.3s ease;
 }
-
 .customer_promotion .slide_nav span.nxt::after {
   transform: rotate(180deg);
 }
-
 .customer_promotion .slide_nav span:hover::after {
   transform: translateX(-3rem);
 }
-
 .customer_promotion .slide_nav span:hover.nxt::after {
   transform: rotate(180deg) translateX(-3rem);
 }
-
 .customer_promotion .slide_nav span.swiper-button-disabled {
   opacity: 0.5;
   cursor: default;
 }
-
 .customer_promotion .slide_nav .total_crnt {
   font-size: 14rem;
 }
-
 .customer_promotion .slide_nav .total_crnt .total {
   color: #727780;
 }
-
 .customer_promotion .slide_nav .total_crnt .total::before {
   content: "/ ";
 }
-
 .customer_promotion .slide_nav .total_crnt .crnt {
   font-weight: 600;
 }
-
 .customer_promotion .pagi {
   bottom: 0;
   text-align: center;
@@ -258,7 +162,6 @@
   margin: 27rem auto 0;
   display: flex;
 }
-
 .customer_promotion .pagi span {
   width: 100%;
   height: 3rem;
@@ -268,41 +171,37 @@
   background-color: #ddd;
   opacity: 1;
 }
-
 .customer_promotion .pagi span.swiper-pagination-bullet-active {
   background-color: #000;
 }
-
+.customer_promotion {
+  /* //SWIPER */
+}
 .customer_promotion .cp_tit {
   font-weight: 700;
   font-size: 28rem;
   letter-spacing: -1rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion .cp_tit {
     font-size: 22rem;
   }
 }
-
 .customer_promotion .cp_info {
   letter-spacing: -0.5rem;
   margin-top: 4rem;
   color: #444;
   font-size: 18rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion .cp_info {
     margin-bottom: 2rem;
     font-size: 15rem;
   }
-
   .customer_promotion .cp_info br:not(.mo, .both) {
     display: none;
   }
 }
-
 .customer_promotion .cp_btn {
   border-radius: 8rem;
   border: 1px solid #DEE1E5;
@@ -313,13 +212,11 @@
   margin: 30rem auto 0;
   text-align: center;
 }
-
 .customer_promotion .cp_btn::after {
   content: "→";
   display: inline-block;
   margin-left: 8rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion .cp_btn {
     width: 100%;
@@ -327,7 +224,6 @@
     font-size: 15rem;
   }
 }
-
 .customer_promotion .nav span {
   width: 36rem;
   height: 36rem;
@@ -339,7 +235,6 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-
 .customer_promotion .nav span::after {
   content: "";
   display: block;
@@ -347,31 +242,25 @@
   height: 100%;
   background: url(../images/arr.svg) no-repeat center center/16rem auto;
 }
-
 .customer_promotion .nav span.nxt {
   left: auto;
   right: -18rem;
 }
-
 .customer_promotion .nav span.nxt::after {
   transform: rotate(180deg);
 }
-
 .customer_promotion .nav span.disabled {
   cursor: default;
   opacity: 0;
 }
-
 .customer_promotion .cp_tab.ty_img {
   position: relative;
 }
-
 .customer_promotion .cp_tab.ty_img ul {
   display: flex;
   gap: 30rem;
   overflow-x: auto;
 }
-
 @media (max-width: 780px) {
   .customer_promotion .cp_tab.ty_img ul {
     gap: 24rem;
@@ -381,7 +270,6 @@
     padding-right: 20rem !important;
   }
 }
-
 .customer_promotion .cp_tab.ty_img ul li {
   flex-shrink: 0;
   text-align: center;
@@ -389,16 +277,13 @@
   transition: 0.3s ease;
   cursor: pointer;
 }
-
 .customer_promotion .cp_tab.ty_img ul li.on {
   opacity: 1;
   cursor: default;
 }
-
 .customer_promotion .cp_tab.ty_img ul li.on .img_box {
   border: 2px solid #000;
 }
-
 .customer_promotion .cp_tab.ty_img ul li .img_box {
   width: 80rem;
   height: 80rem;
@@ -406,72 +291,62 @@
   overflow: hidden;
   margin-bottom: 6rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion .cp_tab.ty_img ul li .img_box {
     width: 56rem;
     height: 56rem;
   }
 }
-
 .customer_promotion .cp_tab.ty_img ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .customer_promotion .cp_tab.ty_img .nav span {
   top: 21rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion .cp_tab.ty_img .nav span {
     top: 10rem;
   }
 }
-
+.customer_promotion {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
 .customer_promotion section {
   position: relative;
   overflow: hidden;
 }
-
 .customer_promotion section.cp_cont {
   padding-top: 100rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.cp_cont {
     padding-top: 60rem;
   }
 }
-
 .customer_promotion section.cp_cont.pd_btm {
   padding-bottom: 100rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.cp_cont.pd_btm {
     padding-bottom: 60rem;
   }
 }
-
 .customer_promotion section.cp_cont .tit_box {
   text-align: center;
   margin-bottom: 40rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.cp_cont .tit_box {
     margin-bottom: 28rem;
   }
 }
-
 .customer_promotion section.navigation nav {
   position: relative;
   background-color: #000;
   color: #fff;
 }
-
 .customer_promotion section.navigation nav::after {
   content: "";
   width: 25%;
@@ -484,12 +359,10 @@
   touch-action: none;
   pointer-events: none;
 }
-
 .customer_promotion section.navigation nav ul {
   display: flex;
   justify-content: center;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.navigation nav ul {
     gap: 25rem;
@@ -498,26 +371,22 @@
     overflow-x: auto;
   }
 }
-
 .customer_promotion section.navigation nav ul li {
   width: 180rem;
   display: flex;
   align-items: center;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.navigation nav ul li {
     width: auto;
     font-size: 14rem;
   }
 }
-
 .customer_promotion section.navigation nav ul li a {
   position: relative;
   height: 100%;
   padding: 15rem 0;
 }
-
 .customer_promotion section.navigation nav ul li a::after {
   content: "";
   width: 100%;
@@ -529,32 +398,25 @@
   transform: translateX(-50%) scaleX(0);
   transition: 0.3s ease;
 }
-
 .customer_promotion section.navigation nav ul li a:hover {
   color: #ea1917;
 }
-
 .customer_promotion section.navigation nav ul li a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
-
 .customer_promotion section.signature_deal .swiper {
   overflow: visible;
 }
-
 .customer_promotion section.signature_deal .swiper-slide {
   border-radius: 8rem;
   overflow: hidden;
 }
-
 .customer_promotion section.signature_deal .swiper-slide a:hover img {
   transform: scale(1.03);
 }
-
 .customer_promotion section.signature_deal .swiper-slide img {
   transition: 0.3s ease;
 }
-
 .customer_promotion section.signature_deal .swiper-slide .txt_box {
   position: absolute;
   left: 12rem;
@@ -565,7 +427,6 @@
   padding: 16rem;
   color: #444;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.signature_deal .swiper-slide .txt_box {
     left: 8rem;
@@ -574,27 +435,22 @@
     padding: 8rem;
   }
 }
-
 .customer_promotion section.signature_deal .swiper-slide .txt_box .pd {
   margin-bottom: 12rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.signature_deal .swiper-slide .txt_box .pd {
     margin-bottom: 8rem;
   }
 }
-
 .customer_promotion section.signature_deal .swiper-slide .txt_box .pd .tit {
   font-weight: 700;
 }
-
 .customer_promotion section.signature_deal .swiper-slide .txt_box .pd .info {
   font-size: 14rem;
   margin-top: 5rem;
   min-height: 40rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.signature_deal .swiper-slide .txt_box .pd .info {
     font-size: 12rem;
@@ -602,120 +458,98 @@
     letter-spacing: -0.3rem;
     margin-top: 2rem;
   }
-
   .customer_promotion section.signature_deal .swiper-slide .txt_box .pd .info br {
     display: none;
   }
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.signature_deal .swiper-slide .txt_box .price {
     font-size: 14rem;
   }
 }
-
 .customer_promotion section.signature_deal .swiper-slide .txt_box .price span {
   color: #ea1917;
   font-weight: 700;
 }
-
 .customer_promotion section.signature_deal .swiper-slide .txt_box .price p {
   font-weight: 600;
 }
-
 .customer_promotion section.special_brand_relay {
   overflow: visible;
 }
-
 .customer_promotion section.special_brand_relay .sbr_cont .count_down {
   padding-bottom: 17rem;
   margin-bottom: 25rem;
   border-bottom: 1px solid #e6e6e6;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .sbr_cont .count_down {
     padding-bottom: 10rem;
     margin-bottom: 20rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .sbr_cont .count_down .info {
   font-size: 18rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .sbr_cont .count_down .info {
     font-size: 14rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .sbr_cont .count_down .time {
   font-size: 20rem;
   color: #ea1917;
   font-weight: 600;
   gap: 8rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .sbr_cont .count_down .time {
     font-size: 16rem;
     gap: 6rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .sbr_cont .count_down .time img {
   width: 24rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .sbr_cont .count_down .time img {
     width: 16rem;
     transform: translateY(-1rem);
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .cp_tab {
   margin-bottom: 32rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .cp_tab {
     margin-bottom: 20rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper {
   border-radius: 8rem;
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide {
   display: flex;
   gap: 20rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide {
     display: block;
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .banner_box {
   width: 820rem;
   flex-shrink: 0;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .banner_box {
     width: 100%;
     margin-bottom: 8rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box {
   width: 100%;
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a {
   display: flex;
   align-items: center;
@@ -725,80 +559,65 @@
   width: 100%;
   padding: 12rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a {
     padding: 16rem;
   }
 }
-
-.customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a+a {
+.customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a + a {
   margin-top: 20rem;
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a+a {
+  .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a + a {
     margin-top: 8rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a .txt_box {
   padding-left: 28rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a .txt_box {
     padding-left: 12rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a .txt_box p {
   color: #444;
   margin-bottom: 4rem;
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a .txt_box span {
   font-weight: 600;
   font-size: 18rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a .txt_box span {
     font-size: 15rem;
   }
 }
-
 .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a img {
   width: 112rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.special_brand_relay .swiper_cont .swiper-slide .pd_box a img {
     width: 72rem;
   }
 }
-
 .customer_promotion section.premium_selection {
   background-color: #F2F2F2;
 }
-
 .customer_promotion section.premium_selection .cp_tab {
   position: relative;
   margin-bottom: 20rem;
   padding: 4rem 0;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .cp_tab {
     margin-bottom: 26rem;
   }
 }
-
 .customer_promotion section.premium_selection .cp_tab ul {
   display: flex;
   overflow-x: auto;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .cp_tab ul {
     margin-left: -20rem !important;
@@ -807,66 +626,54 @@
     padding-right: 20rem !important;
   }
 }
-
 .customer_promotion section.premium_selection .cp_tab ul li {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   cursor: pointer;
 }
-
-.customer_promotion section.premium_selection .cp_tab ul li+li::before {
+.customer_promotion section.premium_selection .cp_tab ul li + li::before {
   content: "";
   width: 2rem;
   height: 2rem;
   background-color: #acacac;
   margin: 0 20rem;
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.premium_selection .cp_tab ul li+li::before {
+  .customer_promotion section.premium_selection .cp_tab ul li + li::before {
     margin: 0 16rem;
   }
 }
-
 .customer_promotion section.premium_selection .cp_tab ul li.on {
   cursor: default;
 }
-
 .customer_promotion section.premium_selection .cp_tab ul li.on img {
   opacity: 1;
 }
-
 .customer_promotion section.premium_selection .cp_tab ul li img {
   width: auto;
   height: 44rem;
   opacity: 0.3;
   transition: 0.3s ease;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .cp_tab ul li img {
     height: 40rem;
   }
 }
-
 .customer_promotion section.premium_selection .cp_tab .nav span {
   top: 8rem;
 }
-
 .customer_promotion section.premium_selection .swiper {
   border-radius: 8rem;
 }
-
 .customer_promotion section.premium_selection .swiper .price::before {
   content: "최대혜택가";
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide {
   display: flex;
   align-items: flex-end;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide {
     display: block;
@@ -874,32 +681,27 @@
     border-radius: 8rem;
   }
 }
-
-.customer_promotion section.premium_selection .swiper .swiper-slide>* {
+.customer_promotion section.premium_selection .swiper .swiper-slide > * {
   width: 50%;
   position: relative;
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.premium_selection .swiper .swiper-slide>* {
+  .customer_promotion section.premium_selection .swiper .swiper-slide > * {
     width: 100%;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box {
   position: absolute;
   right: 0;
   top: 0;
   padding: 50rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box {
     position: relative;
     padding: 0;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .tit a {
   display: flex;
   align-items: center;
@@ -908,14 +710,12 @@
   font-size: 32rem;
   margin-bottom: 6rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .tit a {
     gap: 6rem;
     font-size: 24rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .tit a::after {
   content: "";
   width: 32rem;
@@ -925,7 +725,6 @@
   transform: rotate(180deg);
   filter: invert(1);
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .tit a::after {
     width: 24rem;
@@ -933,47 +732,39 @@
     background-size: 12rem auto;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .tit p {
   color: #767980;
   font-size: 14rem;
   text-transform: uppercase;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .tit p {
     font-size: 12rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .info {
   margin-top: 24rem;
   font-size: 18rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .info {
     margin-top: 12rem;
     font-size: 14rem;
     min-height: 100rem;
   }
-
   .customer_promotion section.premium_selection .swiper .swiper-slide .txt_box .info br {
     display: none;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box {
   color: #fff;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box {
     border-radius: 8rem;
     overflow: hidden;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box::after {
   content: "";
   width: 100%;
@@ -983,7 +774,6 @@
   top: 0;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt {
   display: flex;
   justify-content: space-between;
@@ -994,31 +784,26 @@
   padding: 40rem 30rem;
   z-index: 1;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt {
     display: block;
     padding: 20rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt strong {
   font-weight: 600;
   font-size: 24rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt strong {
     font-size: 13rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price {
   display: flex;
   align-items: flex-end;
   gap: 10rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price {
     margin-top: 16rem;
@@ -1027,22 +812,18 @@
     padding-top: 6rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price::before {
   color: #FFE760;
   font-size: 22rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price::before {
     font-size: 14rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price .price_box {
   text-align: right;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price .price_box {
     display: flex;
@@ -1050,64 +831,53 @@
     gap: 8rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price .price_box .cost {
   font-size: 20rem;
   opacity: 0.8;
   text-decoration: line-through;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price .price_box .cost {
     font-size: 13rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price .price_box .discount {
   font-size: 24rem;
   font-weight: 700;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .banner_box .txt .price .price_box .discount {
     font-size: 15rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box {
   display: flex;
   gap: 16rem;
   padding: 50rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box {
     display: block;
     padding: 8rem 0 0;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a {
   background-color: #fff;
   border-radius: 8rem;
   position: relative;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a {
     display: flex;
   }
-
-  .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a+a {
+  .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a + a {
     margin-top: 8rem;
   }
-
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a img {
     width: 100rem;
     flex-shrink: 0;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box {
   padding: 20rem 30rem;
   position: absolute;
@@ -1119,7 +889,6 @@
   justify-content: space-between;
   flex-direction: column;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box {
     display: block;
@@ -1127,12 +896,10 @@
     padding: 12rem 20rem 12rem 10rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .name {
   display: block;
   font-size: 14rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .name {
     font-size: 13rem;
@@ -1140,64 +907,53 @@
     letter-spacing: -0.1rem;
     margin-bottom: 4rem;
   }
-
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .name br {
     display: none;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .price {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   text-align: right;
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .price::before {
   color: #A9302F;
   font-weight: 600;
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .price .cost {
   font-size: 14rem;
   text-decoration: line-through;
   color: #727780;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .price .cost {
     font-size: 12rem;
   }
 }
-
 .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .price .discount {
   font-size: 17rem;
   font-weight: 600;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.premium_selection .swiper .swiper-slide .pd_box a .pd_txt_box .price .discount {
     font-size: 15rem;
   }
 }
-
 .customer_promotion section .pd_swiper {
   margin-top: 24rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section .pd_swiper {
     margin-top: 16rem;
   }
 }
-
 .customer_promotion section .pd_swiper .swiper-slide {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 32rem 22rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section .pd_swiper .swiper-slide {
     grid-template-columns: repeat(2, 1fr);
@@ -1205,88 +961,72 @@
     gap: 32rem 8rem;
   }
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .img_box {
   position: relative;
   border-radius: 8rem;
   overflow: hidden;
   background-color: #f8f8f8;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section .pd_swiper .swiper-slide .img_box {
     height: 171rem;
   }
-
   .customer_promotion section .pd_swiper .swiper-slide .img_box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .img_box .like_btn {
   position: absolute;
   right: 6rem;
   bottom: 6rem;
   width: 32rem;
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .txt_box {
   margin-top: 12rem;
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .txt_box .tit {
   color: #444;
   font-size: 14rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section .pd_swiper .swiper-slide .txt_box .tit {
     font-size: 12rem;
   }
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .txt_box .tit span {
   display: block;
   font-weight: 600;
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .txt_box .tit p {
   margin: 4rem 0 6rem;
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .txt_box .price {
   display: flex;
   align-items: center;
   font-weight: 600;
   gap: 4rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section .pd_swiper .swiper-slide .txt_box .price {
     font-size: 15rem;
   }
 }
-
 .customer_promotion section .pd_swiper .swiper-slide .txt_box .price span {
   color: #ea1917;
 }
-
 .customer_promotion section.curation_by_space .cp_tab ul {
   justify-content: center;
 }
-
 .customer_promotion section.payment_benefits {
   background-color: #F4F0EC;
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont {
     display: flex;
@@ -1294,27 +1034,22 @@
     gap: 8rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont em {
   color: #ea1917;
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box strong {
   font-size: 20rem;
   font-weight: 600;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box strong {
     font-size: 16rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box p {
   margin-top: 6rem;
   color: #444;
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box .more_btn {
   margin-top: 24rem;
   font-size: 13rem;
@@ -1323,7 +1058,6 @@
   align-items: center;
   gap: 5rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box .more_btn {
     margin-top: 8rem;
@@ -1331,28 +1065,24 @@
     gap: 4rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box .more_btn::after {
   content: "";
   width: 8rem;
   height: 8rem;
   background: url(../images/arr_gray.svg) no-repeat center center/contain;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box .more_btn.benefit_pop_btn::after {
     transform: rotate(90deg);
   }
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .txt_box .more_btn.ty_big {
     font-size: 14rem;
     font-weight: 700;
   }
 }
-
-.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li {
+.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li {
   border-radius: 8rem;
   background-color: #fff;
   display: flex;
@@ -1360,50 +1090,41 @@
   gap: 20rem;
   padding: 24rem;
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li {
+  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li {
     gap: 16rem;
     padding: 20rem 22rem;
     flex-wrap: wrap;
   }
 }
-
-.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li+li {
+.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li + li {
   margin-top: 20rem;
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li+li {
+  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li + li {
     margin-top: 8rem;
   }
 }
-
-.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li img {
+.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li img {
   width: 100rem;
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li img {
+  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li img {
     width: 64rem;
   }
 }
-
 @media (max-width: 780px) {
-  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li .txt_box {
+  .customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li .txt_box {
     width: calc(100% - 81rem);
   }
 }
-
-.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li .benefit_cont_mo {
+.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li .benefit_cont_mo {
   width: 100%;
   display: none;
 }
-
-.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot>li .benefit_cont_mo.on {
+.customer_promotion section.payment_benefits .payment_benefits_cont .sub_slot > li .benefit_cont_mo.on {
   display: block;
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot {
   background-color: #CCBFA9;
   padding: 40rem;
@@ -1411,51 +1132,43 @@
   position: relative;
   border-radius: 8rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot {
     padding: 20rem;
     height: 400rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box {
   position: relative;
   z-index: 1;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box {
     font-size: 14rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box strong {
   font-size: 22rem;
   z-index: 1;
   position: relative;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box strong {
     font-size: 16rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box .more_btn {
   font-size: 20rem;
   font-weight: 600;
   color: #ea1917;
   gap: 6rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box .more_btn {
     font-size: 14rem;
     gap: 3rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box .more_btn::after {
   width: 8rem;
   height: 8rem;
@@ -1464,137 +1177,93 @@
   border-width: 2rem 2rem 0 0;
   transform: rotate(45deg);
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot .txt_box .more_btn::after {
     width: 5rem;
     height: 5rem;
   }
 }
-
 .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot img {
   width: 525rem;
   position: absolute;
   right: -17rem;
   bottom: -36rem;
 }
-
 @media (max-width: 780px) {
   .customer_promotion section.payment_benefits .payment_benefits_cont .main_slot img {
     width: 95%;
     bottom: -10rem;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont,
-.customer_promotion section.payment_benefits .benefit_cont_mo {
+.customer_promotion section.payment_benefits .benefit_cont, .customer_promotion section.payment_benefits .benefit_cont_mo {
   padding: 40rem;
 }
-
 @media (max-width: 780px) {
-
-  .customer_promotion section.payment_benefits .benefit_cont,
-  .customer_promotion section.payment_benefits .benefit_cont_mo {
+  .customer_promotion section.payment_benefits .benefit_cont, .customer_promotion section.payment_benefits .benefit_cont_mo {
     padding: 0;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont table,
-.customer_promotion section.payment_benefits .benefit_cont_mo table {
+.customer_promotion section.payment_benefits .benefit_cont table, .customer_promotion section.payment_benefits .benefit_cont_mo table {
   width: 100%;
   text-align: center;
 }
-
-.customer_promotion section.payment_benefits .benefit_cont table th,
-.customer_promotion section.payment_benefits .benefit_cont table td,
-.customer_promotion section.payment_benefits .benefit_cont_mo table th,
-.customer_promotion section.payment_benefits .benefit_cont_mo table td {
+.customer_promotion section.payment_benefits .benefit_cont table th, .customer_promotion section.payment_benefits .benefit_cont table td, .customer_promotion section.payment_benefits .benefit_cont_mo table th, .customer_promotion section.payment_benefits .benefit_cont_mo table td {
   padding: 7rem 0;
 }
-
 @media (max-width: 780px) {
-
-  .customer_promotion section.payment_benefits .benefit_cont table th,
-  .customer_promotion section.payment_benefits .benefit_cont table td,
-  .customer_promotion section.payment_benefits .benefit_cont_mo table th,
-  .customer_promotion section.payment_benefits .benefit_cont_mo table td {
+  .customer_promotion section.payment_benefits .benefit_cont table th, .customer_promotion section.payment_benefits .benefit_cont table td, .customer_promotion section.payment_benefits .benefit_cont_mo table th, .customer_promotion section.payment_benefits .benefit_cont_mo table td {
     padding: 10rem 0;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont table th,
-.customer_promotion section.payment_benefits .benefit_cont_mo table th {
+.customer_promotion section.payment_benefits .benefit_cont table th, .customer_promotion section.payment_benefits .benefit_cont_mo table th {
   font-size: 15rem;
   font-weight: 700;
   border-bottom: 2px solid #000;
 }
-
 @media (max-width: 780px) {
-
-  .customer_promotion section.payment_benefits .benefit_cont table th,
-  .customer_promotion section.payment_benefits .benefit_cont_mo table th {
+  .customer_promotion section.payment_benefits .benefit_cont table th, .customer_promotion section.payment_benefits .benefit_cont_mo table th {
     font-size: 12rem;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont table td,
-.customer_promotion section.payment_benefits .benefit_cont_mo table td {
+.customer_promotion section.payment_benefits .benefit_cont table td, .customer_promotion section.payment_benefits .benefit_cont_mo table td {
   font-size: 14rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 @media (max-width: 780px) {
-
-  .customer_promotion section.payment_benefits .benefit_cont table td,
-  .customer_promotion section.payment_benefits .benefit_cont_mo table td {
+  .customer_promotion section.payment_benefits .benefit_cont table td, .customer_promotion section.payment_benefits .benefit_cont_mo table td {
     font-size: 12rem;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont .info_list,
-.customer_promotion section.payment_benefits .benefit_cont_mo .info_list {
+.customer_promotion section.payment_benefits .benefit_cont .info_list, .customer_promotion section.payment_benefits .benefit_cont_mo .info_list {
   color: #444;
   font-size: 13rem;
   margin-top: 20rem;
   line-height: 1.5;
 }
-
 @media (max-width: 780px) {
-
-  .customer_promotion section.payment_benefits .benefit_cont .info_list,
-  .customer_promotion section.payment_benefits .benefit_cont_mo .info_list {
+  .customer_promotion section.payment_benefits .benefit_cont .info_list, .customer_promotion section.payment_benefits .benefit_cont_mo .info_list {
     margin-top: 10rem;
     font-size: 12rem;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont .info_list li,
-.customer_promotion section.payment_benefits .benefit_cont_mo .info_list li {
+.customer_promotion section.payment_benefits .benefit_cont .info_list li, .customer_promotion section.payment_benefits .benefit_cont_mo .info_list li {
   position: relative;
   padding-left: 10rem;
 }
-
 @media (max-width: 780px) {
-
-  .customer_promotion section.payment_benefits .benefit_cont .info_list li,
-  .customer_promotion section.payment_benefits .benefit_cont_mo .info_list li {
+  .customer_promotion section.payment_benefits .benefit_cont .info_list li, .customer_promotion section.payment_benefits .benefit_cont_mo .info_list li {
     padding-left: 8rem;
   }
 }
-
-.customer_promotion section.payment_benefits .benefit_cont .info_list li::before,
-.customer_promotion section.payment_benefits .benefit_cont_mo .info_list li::before {
+.customer_promotion section.payment_benefits .benefit_cont .info_list li::before, .customer_promotion section.payment_benefits .benefit_cont_mo .info_list li::before {
   content: "*";
   position: absolute;
   left: 0;
   top: 0;
 }
-
-.customer_promotion section.payment_benefits .benefit_cont .info_list li.ty_bar::before,
-.customer_promotion section.payment_benefits .benefit_cont_mo .info_list li.ty_bar::before {
+.customer_promotion section.payment_benefits .benefit_cont .info_list li.ty_bar::before, .customer_promotion section.payment_benefits .benefit_cont_mo .info_list li.ty_bar::before {
   content: "-";
 }
-
 .customer_promotion section.payment_benefits .popup_wrap {
   width: 100%;
   height: 100dvh;
@@ -1605,18 +1274,15 @@
   touch-action: none;
   display: none;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap.on {
   display: block;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap.on .popup {
   top: 50%;
   opacity: 1;
   touch-action: auto;
   pointer-events: auto;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap .dim {
   position: absolute;
   left: 0;
@@ -1626,7 +1292,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap .popup {
   position: absolute;
   left: 50%;
@@ -1640,18 +1305,15 @@
   width: 912rem;
   background-color: #fff;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap .popup .benefit_tit {
   height: 78rem;
   padding: 0 40rem;
   border-bottom: 1px solid #EFF0F2;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap .popup .benefit_tit strong {
   font-size: 22rem;
   width: 100%;
 }
-
 .customer_promotion section.payment_benefits .popup_wrap .popup .benefit_tit .close_btn {
   width: 28rem;
   height: 28rem;

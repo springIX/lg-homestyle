@@ -5,7 +5,7 @@
 @import url("main.css");
 html {
   height: 100%;
-  font-size: 1.3px;
+  font-size: 1.2px;
 }
 @media (max-width: 780px) {
   html {
@@ -17,7 +17,7 @@ main {
   background-color: #F9F9F9;
 }
 
-.my_home_taste_challenge {
+.partner_promotion {
   background-color: #ffffff;
   color: #111;
   font-family: "Pretendard", sans-serif;
@@ -32,49 +32,49 @@ main {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   text-align: left;
-  letter-spacing: 0;
+  letter-spacing: -0.2rem;
   max-width: 780px;
   margin: 0 auto;
 }
-.my_home_taste_challenge ::-webkit-scrollbar {
+.partner_promotion ::-webkit-scrollbar {
   display: none;
 }
-.my_home_taste_challenge ::placeholder {
+.partner_promotion ::placeholder {
   color: #d6d6d6;
 }
-.my_home_taste_challenge * {
+.partner_promotion * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-style: normal;
   outline: none !important;
 }
-.my_home_taste_challenge h1,
-.my_home_taste_challenge h2,
-.my_home_taste_challenge h3,
-.my_home_taste_challenge h4,
-.my_home_taste_challenge h5,
-.my_home_taste_challenge h6 {
+.partner_promotion h1,
+.partner_promotion h2,
+.partner_promotion h3,
+.partner_promotion h4,
+.partner_promotion h5,
+.partner_promotion h6 {
   font-weight: inherit;
   font-size: inherit;
 }
-.my_home_taste_challenge table {
+.partner_promotion table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.my_home_taste_challenge ol,
-.my_home_taste_challenge ul {
+.partner_promotion ol,
+.partner_promotion ul {
   list-style: none;
 }
-.my_home_taste_challenge a {
+.partner_promotion a {
   display: block;
   text-decoration: none;
   color: inherit;
 }
-.my_home_taste_challenge button,
-.my_home_taste_challenge input,
-.my_home_taste_challenge select,
-.my_home_taste_challenge textarea {
+.partner_promotion button,
+.partner_promotion input,
+.partner_promotion select,
+.partner_promotion textarea {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -86,7 +86,7 @@ main {
   -moz-appearance: none;
   cursor: pointer;
 }
-.my_home_taste_challenge input[type=checkbox], .my_home_taste_challenge input[type=radio] {
+.partner_promotion input[type=checkbox], .partner_promotion input[type=radio] {
   width: 0;
   height: 0;
   overflow: hidden;
@@ -94,27 +94,27 @@ main {
   left: 0;
   top: 0;
 }
-.my_home_taste_challenge label {
+.partner_promotion label {
   cursor: pointer;
 }
-.my_home_taste_challenge img,
-.my_home_taste_challenge video,
-.my_home_taste_challenge svg {
+.partner_promotion img,
+.partner_promotion video,
+.partner_promotion svg {
   display: block;
   border: none;
   width: 100%;
   max-width: unset;
 }
-.my_home_taste_challenge option {
+.partner_promotion option {
   color: inherit;
 }
-.my_home_taste_challenge section {
+.partner_promotion section {
   position: relative;
 }
-.my_home_taste_challenge picture {
+.partner_promotion picture {
   display: block;
   width: 100%;
 }
-.my_home_taste_challenge span {
+.partner_promotion span {
   display: block;
 }

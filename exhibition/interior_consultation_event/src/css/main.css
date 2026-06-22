@@ -149,21 +149,18 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 32rem 10rem;
 }
-.interior_consultation_event section#partner ul a:hover img {
-  transform: scale(1.05);
-}
-.interior_consultation_event section#partner ul a img {
+.interior_consultation_event section#partner ul img {
   border-radius: 8rem;
   transition: 0.3s ease;
 }
-.interior_consultation_event section#partner ul a span {
+.interior_consultation_event section#partner ul span {
   display: flex;
   align-items: center;
   font-size: clamp(8px, 18rem, 9999rem);
   font-weight: 600;
   margin-top: 8rem;
 }
-.interior_consultation_event section#partner ul a span::after {
+.interior_consultation_event section#partner ul span::after {
   content: "";
   width: 8rem;
   height: 8rem;

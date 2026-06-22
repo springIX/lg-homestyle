@@ -4,12 +4,6 @@
 /* Ellipsis */
 .customer_promotion {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .customer_promotion img {
   max-width: unset;
@@ -20,6 +14,10 @@
 }
 .customer_promotion .swiper-wrapper {
   height: auto;
+}
+.customer_promotion {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .customer_promotion .layout_inner {
   position: relative;
@@ -73,6 +71,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.customer_promotion {
+  /* WAVE */
+}
 .customer_promotion .wave {
   width: 100%;
   display: flex;
@@ -102,6 +103,9 @@
   .customer_promotion .pc {
     display: none !important;
   }
+}
+.customer_promotion {
+  /* SWIPER */
 }
 .customer_promotion .nav span {
   display: flex;
@@ -155,6 +159,9 @@
   width: 20rem;
   background-color: #000;
 }
+.customer_promotion {
+  /* //SWIPER */
+}
 .customer_promotion .tit_box {
   margin-bottom: 32rem;
   text-align: center;
@@ -199,6 +206,9 @@
     font-size: 15rem;
     margin-top: 29rem;
   }
+}
+.customer_promotion {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .customer_promotion section {
   position: relative;
