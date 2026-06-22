@@ -4,9 +4,6 @@
 /* Ellipsis */
 .holiday_container {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
   max-width: unset;
@@ -14,6 +11,10 @@
 
 .holiday_container abbr, .holiday_container acronym, .holiday_container address, .holiday_container applet, .holiday_container article, .holiday_container aside, .holiday_container audio, .holiday_container big, .holiday_container blockquote, .holiday_container body, .holiday_container canvas, .holiday_container caption, .holiday_container center, .holiday_container cite, .holiday_container code, .holiday_container dd, .holiday_container details, .holiday_container dfn, .holiday_container div, .holiday_container dl, .holiday_container dt, .holiday_container embed, .holiday_container fieldset, .holiday_container figcaption, .holiday_container figure, .holiday_container footer, .holiday_container form, .holiday_container h1, .holiday_container h2, .holiday_container h3, .holiday_container h4, .holiday_container h5, .holiday_container h6, .holiday_container header, .holiday_container hgroup, .holiday_container html, .holiday_container iframe, .holiday_container img, .holiday_container ins, .holiday_container kbd, .holiday_container label, .holiday_container legend, .holiday_container li, .holiday_container mark, .holiday_container menu, .holiday_container nav, .holiday_container object, .holiday_container ol, .holiday_container output, .holiday_container p, .holiday_container pre, .holiday_container q, .holiday_container ruby, .holiday_container samp, .holiday_container section, .holiday_container small, .holiday_container strike, .holiday_container summary, .holiday_container table, .holiday_container tbody, .holiday_container td, .holiday_container textarea, .holiday_container tfoot, .holiday_container th, .holiday_container thead, .holiday_container time, .holiday_container tr, .holiday_container tt, .holiday_container ul, .holiday_container var, .holiday_container video {
   color: inherit;
+}
+.holiday_container {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .holiday_container .layout_inner {
   position: relative;
@@ -76,6 +77,9 @@
   .holiday_container .pc {
     display: none !important;
   }
+}
+.holiday_container {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .holiday_container section {
   position: relative;

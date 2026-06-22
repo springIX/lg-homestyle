@@ -92,7 +92,7 @@
   background-color: #111;
 }
 .lexon_jeffkoons_container section#introduce .txt_box h3 {
-  font-size: clamp(8px, 26rem, 9999rem);
+  font-size: clamp(10px, 26rem, 9999rem);
   font-weight: 700;
   margin-bottom: 12rem;
 }
@@ -107,10 +107,10 @@
   margin: 20rem 0 12rem;
 }
 .lexon_jeffkoons_container section#introduce .info_txt .name span {
-  font-size: clamp(8px, 13rem, 9999rem);
+  font-size: clamp(10px, 13rem, 9999rem);
 }
 .lexon_jeffkoons_container section#introduce .info_txt .name h3 {
-  font-size: clamp(8px, 20rem, 9999rem);
+  font-size: clamp(10px, 20rem, 9999rem);
   line-height: 1.1;
   margin-top: 4rem;
 }
@@ -147,11 +147,11 @@
   padding-top: 12rem;
 }
 .lexon_jeffkoons_container section#product_details article .info_box .tit span {
-  font-size: clamp(8px, 13rem, 9999rem);
+  font-size: clamp(10px, 13rem, 9999rem);
   color: #666;
 }
 .lexon_jeffkoons_container section#product_details article .info_box .tit h3 {
-  font-size: clamp(8px, 20rem, 9999rem);
+  font-size: clamp(10px, 20rem, 9999rem);
   font-weight: 600;
   margin-top: 2rem;
 }
@@ -193,12 +193,12 @@
   letter-spacing: -0.2rem;
 }
 .lexon_jeffkoons_container section#product_info article .txt_box span {
-  font-size: clamp(8px, 13rem, 9999rem);
+  font-size: clamp(10px, 13rem, 9999rem);
   color: #666;
   font-weight: 600;
 }
 .lexon_jeffkoons_container section#product_info article .txt_box h3 {
-  font-size: clamp(8px, 32rem, 9999rem);
+  font-size: clamp(10px, 32rem, 9999rem);
   font-weight: 600;
   line-height: 1.1;
   margin: 4rem 0 12rem;
@@ -250,14 +250,14 @@
   content: "CHECK POINT" counter(check_point);
   counter-increment: check_point;
   display: block;
-  font-size: clamp(8px, 13rem, 9999rem);
+  font-size: clamp(10px, 13rem, 9999rem);
   opacity: 0.3;
 }
 .lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box h3 {
   margin-top: 8rem;
   padding-top: 8rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: clamp(8px, 20rem, 9999rem);
+  font-size: clamp(10px, 20rem, 9999rem);
 }
 .lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box::before,
 .lexon_jeffkoons_container section#check_point .swiper .swiper-wrapper .swiper-slide .txt_box > h3 {
@@ -303,7 +303,7 @@
   display: flex;
   align-items: center;
   color: #fff;
-  font-size: clamp(8px, 14rem, 9999rem);
+  font-size: clamp(10px, 14rem, 9999rem);
   white-space: nowrap;
   background-color: #111;
   transition: 0.5s ease;

@@ -2,21 +2,13 @@
 /* Responsive */
 /* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
 /* Ellipsis */
-.monthly_home_set {
-  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* COMBINED DISCOUNT */
-  /* COMBINED DISCOUNT */
-}
 @media (max-width: 780px) {
   .monthly_home_set {
     padding-bottom: 60rem;
   }
+}
+.monthly_home_set {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .monthly_home_set img {
   max-width: unset;
@@ -30,6 +22,10 @@
 }
 .monthly_home_set .swiper-wrapper {
   height: auto;
+}
+.monthly_home_set {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .monthly_home_set .layout_inner {
   position: relative;
@@ -83,6 +79,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.monthly_home_set {
+  /* WAVE */
+}
 .monthly_home_set .wave {
   width: 100%;
   display: flex;
@@ -112,6 +111,9 @@
   .monthly_home_set .pc {
     display: none !important;
   }
+}
+.monthly_home_set {
+  /* SWIPER */
 }
 .monthly_home_set .nav span {
   display: flex;
@@ -234,6 +236,9 @@
 }
 .monthly_home_set .slide_nav .total_crnt .crnt {
   font-weight: 600;
+}
+.monthly_home_set {
+  /* //SWIPER */
 }
 .monthly_home_set .notice_box {
   margin-top: 60rem;
@@ -900,6 +905,9 @@
 .monthly_home_set .banner_box a + a {
   margin-top: 20rem;
 }
+.monthly_home_set {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
 .monthly_home_set section {
   position: relative;
   overflow: hidden;
@@ -1528,6 +1536,9 @@
     right: 20rem;
   }
 }
+.monthly_home_set {
+  /* COMBINED DISCOUNT */
+}
 .monthly_home_set.combined_discount .cont_bg {
   background-color: #EAEAEA;
 }
@@ -1918,6 +1929,9 @@
   .monthly_home_set.combined_discount section.more_promotion .more_promotion_list.ty_under_4 li {
     width: 330rem;
   }
+}
+.monthly_home_set {
+  /* COMBINED DISCOUNT */
 }
 .monthly_home_set.combined_discount_2603 .notice_box {
   margin-top: 20rem;

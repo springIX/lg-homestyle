@@ -4,10 +4,6 @@
 /* Ellipsis */
 .wine_cellar {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .wine_cellar img {
   max-width: unset;
@@ -20,6 +16,10 @@
 }
 .wine_cellar .swiper-wrapper {
   height: auto;
+}
+.wine_cellar {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .wine_cellar .layout_inner {
   position: relative;
@@ -73,6 +73,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.wine_cellar {
+  /* WAVE */
+}
 .wine_cellar .wave {
   width: 100%;
   display: flex;
@@ -102,6 +105,9 @@
   .wine_cellar .pc {
     display: none !important;
   }
+}
+.wine_cellar {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .wine_cellar section {
   position: relative;

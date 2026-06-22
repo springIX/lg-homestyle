@@ -4,12 +4,6 @@
 /* Ellipsis */
 .homeapp_living_crossdeal {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .homeapp_living_crossdeal img {
   max-width: unset;
@@ -22,6 +16,10 @@
 }
 .homeapp_living_crossdeal .swiper-wrapper {
   height: auto;
+}
+.homeapp_living_crossdeal {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .homeapp_living_crossdeal .layout_inner {
   position: relative;
@@ -75,6 +73,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.homeapp_living_crossdeal {
+  /* WAVE */
+}
 .homeapp_living_crossdeal .wave {
   width: 100%;
   display: flex;
@@ -104,6 +105,9 @@
   .homeapp_living_crossdeal .pc {
     display: none !important;
   }
+}
+.homeapp_living_crossdeal {
+  /* SWIPER */
 }
 .homeapp_living_crossdeal .nav span {
   display: flex;
@@ -226,6 +230,9 @@
 }
 .homeapp_living_crossdeal .slide_nav .total_crnt .crnt {
   font-weight: 600;
+}
+.homeapp_living_crossdeal {
+  /* //SWIPER */
 }
 .homeapp_living_crossdeal .notice_box {
   margin-top: 60rem;
@@ -852,6 +859,9 @@
 .homeapp_living_crossdeal .lge__item .c-product__info {
   display: flex;
   flex-direction: column-reverse;
+}
+.homeapp_living_crossdeal {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .homeapp_living_crossdeal section {
   position: relative;

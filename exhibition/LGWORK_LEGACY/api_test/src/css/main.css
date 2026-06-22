@@ -4,12 +4,6 @@
 /* Ellipsis */
 .customer_promotion {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .customer_promotion img {
   max-width: unset;
@@ -17,6 +11,10 @@
 
 .customer_promotion abbr, .customer_promotion acronym, .customer_promotion address, .customer_promotion applet, .customer_promotion article, .customer_promotion aside, .customer_promotion audio, .customer_promotion big, .customer_promotion blockquote, .customer_promotion body, .customer_promotion canvas, .customer_promotion caption, .customer_promotion center, .customer_promotion cite, .customer_promotion code, .customer_promotion dd, .customer_promotion details, .customer_promotion dfn, .customer_promotion div, .customer_promotion dl, .customer_promotion dt, .customer_promotion embed, .customer_promotion fieldset, .customer_promotion figcaption, .customer_promotion figure, .customer_promotion footer, .customer_promotion form, .customer_promotion h1, .customer_promotion h2, .customer_promotion h3, .customer_promotion h4, .customer_promotion h5, .customer_promotion h6, .customer_promotion header, .customer_promotion hgroup, .customer_promotion html, .customer_promotion iframe, .customer_promotion img, .customer_promotion ins, .customer_promotion kbd, .customer_promotion label, .customer_promotion legend, .customer_promotion li, .customer_promotion mark, .customer_promotion menu, .customer_promotion nav, .customer_promotion object, .customer_promotion ol, .customer_promotion output, .customer_promotion p, .customer_promotion pre, .customer_promotion q, .customer_promotion ruby, .customer_promotion samp, .customer_promotion section, .customer_promotion small, .customer_promotion strike, .customer_promotion summary, .customer_promotion table, .customer_promotion tbody, .customer_promotion td, .customer_promotion textarea, .customer_promotion tfoot, .customer_promotion th, .customer_promotion thead, .customer_promotion time, .customer_promotion tr, .customer_promotion tt, .customer_promotion ul, .customer_promotion var, .customer_promotion video {
   color: inherit;
+}
+.customer_promotion {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .customer_promotion .layout_inner {
   position: relative;
@@ -70,6 +68,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.customer_promotion {
+  /* WAVE */
+}
 .customer_promotion .wave {
   width: 100%;
   display: flex;
@@ -99,6 +100,9 @@
   .customer_promotion .pc {
     display: none !important;
   }
+}
+.customer_promotion {
+  /* SWIPER */
 }
 .customer_promotion .slide_nav {
   justify-content: center;
@@ -169,6 +173,9 @@
 }
 .customer_promotion .pagi span.swiper-pagination-bullet-active {
   background-color: #000;
+}
+.customer_promotion {
+  /* //SWIPER */
 }
 .customer_promotion .cp_tit {
   font-weight: 700;
@@ -302,6 +309,9 @@
   .customer_promotion .cp_tab.ty_img .nav span {
     top: 10rem;
   }
+}
+.customer_promotion {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .customer_promotion section {
   position: relative;

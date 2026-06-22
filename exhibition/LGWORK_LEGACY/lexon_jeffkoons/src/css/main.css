@@ -4,12 +4,6 @@
 /* Ellipsis */
 .lexon_jeffkoons {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .lexon_jeffkoons img {
   max-width: unset;
@@ -21,6 +15,10 @@
 }
 .lexon_jeffkoons .swiper-wrapper {
   height: auto;
+}
+.lexon_jeffkoons {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .lexon_jeffkoons .layout_inner {
   position: relative;
@@ -74,6 +72,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.lexon_jeffkoons {
+  /* WAVE */
+}
 .lexon_jeffkoons .wave {
   width: 100%;
   display: flex;
@@ -103,6 +104,9 @@
   .lexon_jeffkoons .pc {
     display: none !important;
   }
+}
+.lexon_jeffkoons {
+  /* SWIPER */
 }
 .lexon_jeffkoons .nav span {
   display: flex;
@@ -160,6 +164,10 @@
 .lexon_jeffkoons .pagi span.swiper-pagination-bullet-active {
   width: 20rem;
   background-color: #fff;
+}
+.lexon_jeffkoons {
+  /* //SWIPER */
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .lexon_jeffkoons section {
   position: relative;

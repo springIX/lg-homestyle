@@ -4,9 +4,6 @@
 /* Ellipsis */
 .advertisement_onair_container {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
   max-width: unset;
@@ -18,6 +15,10 @@
 }
 .advertisement_onair_container p {
   font-size: inherit !important;
+}
+.advertisement_onair_container {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .advertisement_onair_container .layout_inner {
   position: relative;
@@ -80,6 +81,9 @@
   .advertisement_onair_container .pc {
     display: none !important;
   }
+}
+.advertisement_onair_container {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .advertisement_onair_container section {
   position: relative;

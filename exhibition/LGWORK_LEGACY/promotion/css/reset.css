@@ -6,7 +6,6 @@
   font: inherit;
   vertical-align: baseline;
   line-height: 1;
-  /* HTML5 display-role reset for older browsers */
 }
 .promotion-container div, .promotion-container span, .promotion-container applet, .promotion-container object, .promotion-container iframe,
 .promotion-container h1, .promotion-container h2, .promotion-container h3, .promotion-container h4, .promotion-container h5, .promotion-container h6, .promotion-container p, .promotion-container blockquote, .promotion-container pre,
@@ -39,6 +38,9 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+.promotion-container, .tab-container {
+  /* HTML5 display-role reset for older browsers */
 }
 .promotion-container article, .promotion-container aside, .promotion-container details, .promotion-container figcaption, .promotion-container figure,
 .promotion-container footer, .promotion-container header, .promotion-container hgroup, .promotion-container menu, .promotion-container nav, .promotion-container section, .tab-container article, .tab-container aside, .tab-container details, .tab-container figcaption, .tab-container figure,

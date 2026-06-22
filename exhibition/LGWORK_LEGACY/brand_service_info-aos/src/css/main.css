@@ -4,12 +4,6 @@
 /* Ellipsis */
 .brand_service_info {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .brand_service_info img {
   max-width: unset;
@@ -17,6 +11,10 @@
 
 .brand_service_info abbr, .brand_service_info acronym, .brand_service_info address, .brand_service_info applet, .brand_service_info article, .brand_service_info aside, .brand_service_info audio, .brand_service_info big, .brand_service_info blockquote, .brand_service_info body, .brand_service_info canvas, .brand_service_info caption, .brand_service_info center, .brand_service_info cite, .brand_service_info code, .brand_service_info dd, .brand_service_info details, .brand_service_info dfn, .brand_service_info div, .brand_service_info dl, .brand_service_info dt, .brand_service_info embed, .brand_service_info fieldset, .brand_service_info figcaption, .brand_service_info figure, .brand_service_info footer, .brand_service_info form, .brand_service_info h1, .brand_service_info h2, .brand_service_info h3, .brand_service_info h4, .brand_service_info h5, .brand_service_info h6, .brand_service_info header, .brand_service_info hgroup, .brand_service_info html, .brand_service_info iframe, .brand_service_info img, .brand_service_info ins, .brand_service_info kbd, .brand_service_info label, .brand_service_info legend, .brand_service_info li, .brand_service_info mark, .brand_service_info menu, .brand_service_info nav, .brand_service_info object, .brand_service_info ol, .brand_service_info output, .brand_service_info p, .brand_service_info pre, .brand_service_info q, .brand_service_info ruby, .brand_service_info samp, .brand_service_info section, .brand_service_info small, .brand_service_info strike, .brand_service_info summary, .brand_service_info table, .brand_service_info tbody, .brand_service_info td, .brand_service_info textarea, .brand_service_info tfoot, .brand_service_info th, .brand_service_info thead, .brand_service_info time, .brand_service_info tr, .brand_service_info tt, .brand_service_info ul, .brand_service_info var, .brand_service_info video {
   color: inherit;
+}
+.brand_service_info {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .brand_service_info .layout_inner {
   position: relative;
@@ -70,6 +68,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.brand_service_info {
+  /* WAVE */
+}
 .brand_service_info .wave {
   width: 100%;
   display: flex;
@@ -99,6 +100,9 @@
   .brand_service_info .pc {
     display: none !important;
   }
+}
+.brand_service_info {
+  /* SWIPER */
 }
 .brand_service_info .nav span {
   display: flex;
@@ -182,6 +186,9 @@
 .brand_service_info .pagi.aos-animate span:nth-child(10) {
   transition: 0.5s ease, 0.5s ease 0.9s opacity, 0.5s ease 0.9s transform;
 }
+.brand_service_info {
+  /* //SWIPER */
+}
 .brand_service_info .lao {
   font-family: "Lao MN";
 }
@@ -219,6 +226,9 @@
   .brand_service_info .bsi_info br:not(.mo, .both) {
     display: none;
   }
+}
+.brand_service_info {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .brand_service_info section {
   position: relative;

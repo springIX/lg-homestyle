@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+.partner_promotion {
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
+  max-width: unset;
+}
+
+.partner_promotion abbr, .partner_promotion acronym, .partner_promotion address, .partner_promotion applet, .partner_promotion article, .partner_promotion aside, .partner_promotion audio, .partner_promotion big, .partner_promotion blockquote, .partner_promotion body, .partner_promotion canvas, .partner_promotion caption, .partner_promotion center, .partner_promotion cite, .partner_promotion code, .partner_promotion dd, .partner_promotion details, .partner_promotion dfn, .partner_promotion div, .partner_promotion dl, .partner_promotion dt, .partner_promotion embed, .partner_promotion fieldset, .partner_promotion figcaption, .partner_promotion figure, .partner_promotion footer, .partner_promotion form, .partner_promotion h1, .partner_promotion h2, .partner_promotion h3, .partner_promotion h4, .partner_promotion h5, .partner_promotion h6, .partner_promotion header, .partner_promotion hgroup, .partner_promotion html, .partner_promotion iframe, .partner_promotion img, .partner_promotion ins, .partner_promotion kbd, .partner_promotion label, .partner_promotion legend, .partner_promotion li, .partner_promotion mark, .partner_promotion menu, .partner_promotion nav, .partner_promotion object, .partner_promotion ol, .partner_promotion output, .partner_promotion p, .partner_promotion pre, .partner_promotion q, .partner_promotion ruby, .partner_promotion samp, .partner_promotion section, .partner_promotion small, .partner_promotion strike, .partner_promotion summary, .partner_promotion table, .partner_promotion tbody, .partner_promotion td, .partner_promotion textarea, .partner_promotion tfoot, .partner_promotion th, .partner_promotion thead, .partner_promotion time, .partner_promotion tr, .partner_promotion tt, .partner_promotion ul, .partner_promotion var, .partner_promotion video {
+  color: inherit;
+  line-height: 1.4;
+  font-size: inherit;
+}
+.partner_promotion {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.partner_promotion .inner {
+  width: 100%;
+  position: relative;
+}
+.partner_promotion .f_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.partner_promotion .p_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.partner_promotion .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.partner_promotion .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.partner_promotion .flex_cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partner_promotion .flex_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.partner_promotion .flex_btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (min-width: 781px) {
+  .partner_promotion .mo {
+    display: none !important;
+  }
+}
+@media (max-width: 780px) {
+  .partner_promotion .pc {
+    display: none !important;
+  }
+}
+.partner_promotion .pd_btm {
+  padding-bottom: 60rem;
+}
+.partner_promotion {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+}
+.partner_promotion #contents {
+  padding: 40rem 20rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.partner_promotion #contents h2 {
+  font-size: clamp(8px, 22rem, 9999rem);
+  font-weight: 600;
+}
+.partner_promotion #contents p {
+  color: #444;
+  margin: 2rem 0 32rem;
+}
+.partner_promotion #contents a {
+  height: 48rem;
+  line-height: 48rem;
+  font-size: clamp(8px, 15rem, 9999rem);
+  font-weight: 600;
+  color: #fff;
+  background-color: #111;
+  border-radius: 8rem;
+}

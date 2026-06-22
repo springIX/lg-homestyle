@@ -4,12 +4,6 @@
 /* Ellipsis */
 .exclusive_product {
   /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
-  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
-  /* WAVE */
-  /* SWIPER */
-  /* //SWIPER */
-  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .PcPdpExhibitionDetailView_bannerArea__btHpF .exclusive_product img {
   max-width: unset;
@@ -17,6 +11,10 @@
 
 .exclusive_product abbr, .exclusive_product acronym, .exclusive_product address, .exclusive_product applet, .exclusive_product article, .exclusive_product aside, .exclusive_product audio, .exclusive_product big, .exclusive_product blockquote, .exclusive_product body, .exclusive_product canvas, .exclusive_product caption, .exclusive_product center, .exclusive_product cite, .exclusive_product code, .exclusive_product dd, .exclusive_product details, .exclusive_product dfn, .exclusive_product div, .exclusive_product dl, .exclusive_product dt, .exclusive_product embed, .exclusive_product fieldset, .exclusive_product figcaption, .exclusive_product figure, .exclusive_product footer, .exclusive_product form, .exclusive_product h1, .exclusive_product h2, .exclusive_product h3, .exclusive_product h4, .exclusive_product h5, .exclusive_product h6, .exclusive_product header, .exclusive_product hgroup, .exclusive_product html, .exclusive_product iframe, .exclusive_product img, .exclusive_product ins, .exclusive_product kbd, .exclusive_product label, .exclusive_product legend, .exclusive_product li, .exclusive_product mark, .exclusive_product menu, .exclusive_product nav, .exclusive_product object, .exclusive_product ol, .exclusive_product output, .exclusive_product p, .exclusive_product pre, .exclusive_product q, .exclusive_product ruby, .exclusive_product samp, .exclusive_product section, .exclusive_product small, .exclusive_product strike, .exclusive_product summary, .exclusive_product table, .exclusive_product tbody, .exclusive_product td, .exclusive_product textarea, .exclusive_product tfoot, .exclusive_product th, .exclusive_product thead, .exclusive_product time, .exclusive_product tr, .exclusive_product tt, .exclusive_product ul, .exclusive_product var, .exclusive_product video {
   color: inherit;
+}
+.exclusive_product {
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .exclusive_product .layout_inner {
   position: relative;
@@ -70,6 +68,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.exclusive_product {
+  /* WAVE */
+}
 .exclusive_product .wave {
   width: 100%;
   display: flex;
@@ -99,6 +100,9 @@
   .exclusive_product .pc {
     display: none !important;
   }
+}
+.exclusive_product {
+  /* SWIPER */
 }
 .exclusive_product .nav span {
   display: flex;
@@ -153,6 +157,9 @@
 .exclusive_product .pagi span.swiper-pagination-bullet-active {
   background-color: #000;
 }
+.exclusive_product {
+  /* //SWIPER */
+}
 .exclusive_product .tit_box {
   margin-bottom: 32rem;
   text-align: center;
@@ -178,6 +185,9 @@
     font-size: 22rem;
     margin-top: 4rem;
   }
+}
+.exclusive_product {
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
 .exclusive_product section {
   position: relative;
