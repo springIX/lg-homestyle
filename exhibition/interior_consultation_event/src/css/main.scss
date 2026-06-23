@@ -59,14 +59,16 @@
   section{ position: relative; overflow: hidden; padding: 60rem $layout_pd 0;
     &#benefit{ background-color: #F1F3F2;
       .benefit_step{ background-color: #fff; border-radius: 12rem; padding: 0 20rem 20rem;}
-      li{ display: flex; align-items: center; gap: 12rem; padding: 20rem 0;
+      li{ display: flex; align-items: center; gap: 12rem; padding: 20rem 0; text-align: right;
         + li{ border-top: 1px dashed #ddd;}
         &:last-child{ padding-bottom: 32rem;}
         img{ width: 54rem; flex-shrink: 0;}
-        h3{ @include font-size(17rem);font-weight: 600;
-          b{ color: #FD312E; margin-right: 6rem; font-weight: 600;}
+        div{ width: 100%;
+          h3{ @include font-size(17rem);font-weight: 600;
+            b{ color: #FD312E; margin-right: 6rem; font-weight: 600;}
+          }
+          p{ @include font-size(14rem); color: #444; margin-top: 6rem;}
         }
-        p{ @include font-size(14rem); color: #444; margin-top: 6rem;}
       }
     }
 

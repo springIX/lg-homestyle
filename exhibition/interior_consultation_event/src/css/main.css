@@ -119,6 +119,7 @@
   align-items: center;
   gap: 12rem;
   padding: 20rem 0;
+  text-align: right;
 }
 .interior_consultation_event section#benefit li + li {
   border-top: 1px dashed #ddd;
@@ -130,16 +131,19 @@
   width: 54rem;
   flex-shrink: 0;
 }
-.interior_consultation_event section#benefit li h3 {
+.interior_consultation_event section#benefit li div {
+  width: 100%;
+}
+.interior_consultation_event section#benefit li div h3 {
   font-size: clamp(8px, 17rem, 9999rem);
   font-weight: 600;
 }
-.interior_consultation_event section#benefit li h3 b {
+.interior_consultation_event section#benefit li div h3 b {
   color: #FD312E;
   margin-right: 6rem;
   font-weight: 600;
 }
-.interior_consultation_event section#benefit li p {
+.interior_consultation_event section#benefit li div p {
   font-size: clamp(8px, 14rem, 9999rem);
   color: #444;
   margin-top: 6rem;
