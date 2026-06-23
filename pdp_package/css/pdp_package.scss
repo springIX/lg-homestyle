@@ -43,6 +43,10 @@ body {
     & {
       width: 100% !important;
     }
+    // 모바일에서는 폭이 축소되므로 줄바꿈 허용
+    .pdp__info-row-desc {
+      white-space: normal !important;
+    }
   }
 
   // ================================
@@ -170,6 +174,8 @@ body {
         font-weight: 400 !important;
         line-height: 1.5 !important;
         letter-spacing: -0.5px !important;
+        // PC(고정 780px)에서는 공간이 줄어도 줄바꿈 안 됨
+        white-space: nowrap !important;
       }
     }
   }

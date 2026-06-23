@@ -20,6 +20,9 @@ body {
   .pdp {
     width: 100% !important;
   }
+  .pdp .pdp__info-row-desc {
+    white-space: normal !important;
+  }
 }
 .pdp .pdp__kv {
   background: var(--pdp-kv-bg, #000) !important;
@@ -127,4 +130,5 @@ body {
   font-weight: 400 !important;
   line-height: 1.5 !important;
   letter-spacing: -0.5px !important;
+  white-space: nowrap !important;
 }/*# sourceMappingURL=pdp_package.css.map */
