@@ -20,6 +20,9 @@ body {
   .pdp {
     width: 100% !important;
   }
+  .pdp .pdp__info-row-desc {
+    white-space: normal !important;
+  }
 }
 .pdp .pdp__kv {
   background: var(--pdp-kv-bg, #000) !important;
@@ -59,7 +62,8 @@ body {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 .pdp .pdp__info {
   background: var(--pdp-info-bg, #daebcc) !important;
@@ -126,4 +130,5 @@ body {
   font-weight: 400 !important;
   line-height: 1.5 !important;
   letter-spacing: -0.5px !important;
-}
+  white-space: nowrap !important;
+}/*# sourceMappingURL=pdp_package.css.map */
