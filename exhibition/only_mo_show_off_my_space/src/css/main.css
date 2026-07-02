@@ -215,7 +215,7 @@
 }
 .show_off_my_space .notice_box .notice_cont {
   display: none;
-  color: #444;
+  color: #666;
   font-size: 14rem;
   margin-top: 15rem;
 }
@@ -387,13 +387,17 @@
 }
 .show_off_my_space section#contents .tit_box {
   text-align: center;
-  padding: 60rem 0 28rem;
+  padding: 40rem 0 28rem;
 }
 .show_off_my_space section#contents .tit_box strong {
   font-size: 26rem;
+  display: block;
+  margin-bottom: 2rem;
+  line-height: 1.4;
 }
 .show_off_my_space section#contents .tit_box p {
   font-size: 15rem;
+  color: #444;
 }
 .show_off_my_space section#contents .cont_box {
   box-shadow: 0 0 20rem rgba(0, 0, 0, 0.06);
@@ -431,13 +435,26 @@
     padding: 20rem;
   }
 }
+.show_off_my_space section#contents .cont_box .dot_txt {
+  position: relative;
+  padding-left: 8rem;
+}
+.show_off_my_space section#contents .cont_box .dot_txt::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.show_off_my_space section#contents .cont_box .dot_txt + .dot_txt {
+  margin-top: 2rem;
+}
 .show_off_my_space section#contents .cont_box.how_to_apply ol {
   counter-reset: how_to_apply;
 }
 .show_off_my_space section#contents .cont_box.how_to_apply ol > li {
   position: relative;
   padding-left: 40rem;
-  margin-bottom: 24rem;
+  margin-bottom: 12rem;
 }
 @media (min-width: 0px) {
   .show_off_my_space section#contents .cont_box.how_to_apply ol > li {
@@ -486,9 +503,8 @@
   }
 }
 .show_off_my_space section#contents .cont_box.how_to_apply ol > li .info span {
-  color: #666;
+  color: #8f8f8f;
   display: block;
-  margin-top: 6rem;
   font-size: clamp(10px, 14rem, 9999rem);
 }
 @media (min-width: 0px) {
@@ -501,7 +517,7 @@
 }
 @media (min-width: 0px) {
   .show_off_my_space section#contents .cont_box.how_to_apply ol > li .info ul {
-    margin-bottom: 12rem;
+    margin-bottom: 4rem;
   }
 }
 .show_off_my_space section#contents .cont_box.how_to_apply ol > li .info ul li {
@@ -556,9 +572,12 @@
   margin-top: 8rem;
   color: #666;
 }
+.show_off_my_space section#contents .cont_box.how_to_apply .info_box ul li {
+  display: flex;
+  gap: 4rem;
+}
 .show_off_my_space section#contents .cont_box.how_to_apply .info_box ul li::before {
   content: "·";
-  margin-right: 4rem;
   flex-shrink: 0;
 }
 .show_off_my_space section#contents .cont_box.how_to_apply .info_box ul li + li {
@@ -896,7 +915,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  gap: 2rem;
   font-size: 15px;
   font-weight: 600;
   color: #fff;
@@ -909,7 +928,6 @@
 @media (max-width: 780px) {
   .show_off_my_space section#contents a {
     width: 100%;
-    gap: 4rem;
     margin-top: 20rem;
   }
 }
@@ -917,8 +935,21 @@
   background-color: #373737;
 }
 .show_off_my_space section#contents a img {
-  width: 15px;
+  width: 20px;
+}
+.show_off_my_space section#contents a.ty_line {
+  background-color: transparent;
+  border: 1px solid #DDDDDD;
+  color: #444;
+}
+.show_off_my_space section#contents a.ty_line img {
+  filter: invert(1);
 }
 .show_off_my_space section#contents .info_box2 {
   padding: 32rem 30rem;
+}
+.show_off_my_space section#contents .gallery_box {
+  background-color: #fff;
+  margin-top: 60rem;
+  padding: 20rem 0 60rem;
 }

@@ -520,6 +520,9 @@
   background-color: #111;
   color: #fff;
 }
+.monthly_home_set .home_set_tab.ty_cnt {
+  justify-content: center;
+}
 @media (min-width: 781px) {
   .monthly_home_set.combined_discount_2606 .home_set_tab {
     width: 100% !important;
@@ -940,7 +943,7 @@
 .monthly_home_set .c-product__list.ty_package .c-product__item {
   position: relative;
   width: 100%;
-  height: 422rem;
+  height: 480rem;
   border-radius: 12rem;
   overflow: hidden;
 }
@@ -1011,6 +1014,14 @@
   width: 100%;
   height: 100%;
   background: url(https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/package_tag.png) no-repeat left center/contain;
+}
+.monthly_home_set .c-product__list.ty_package .c-product__item .c-product__info-container > .inner .package_contents {
+  font-weight: 500;
+  font-size: 11rem;
+  color: #666666;
+  margin-top: 12rem;
+  padding-top: 12rem;
+  border-top: 1px solid #DDDDDD;
 }
 .monthly_home_set .c-product__list.ty_package .c-product__item .c-product__info-container > .inner .c-product__badge-container {
   display: none;
@@ -2338,9 +2349,6 @@
 }
 .monthly_home_set.combined_discount section#how_to_buy .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
-  height: 448rem;
-  object-fit: contain;
-  object-position: center bottom;
   transition: 1s ease;
   transform: translateY(30rem);
 }

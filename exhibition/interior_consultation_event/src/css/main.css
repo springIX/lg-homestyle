@@ -79,11 +79,11 @@
   margin-bottom: 28rem;
 }
 .interior_consultation_event .tit h2 {
-  font-size: clamp(8px, 26rem, 9999rem);
+  font-size: 26rem;
   font-weight: 700;
 }
 .interior_consultation_event .tit p {
-  font-size: clamp(8px, 15rem, 9999rem);
+  font-size: 15rem;
   color: #444;
   margin-top: 2rem;
 }
@@ -96,7 +96,7 @@
   color: #fff;
   text-align: center;
   font-weight: 600;
-  font-size: clamp(8px, 15rem, 9999rem);
+  font-size: 15rem;
 }
 .interior_consultation_event {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
@@ -134,7 +134,7 @@
   width: 100%;
 }
 .interior_consultation_event section#benefit li div h3 {
-  font-size: clamp(8px, 17rem, 9999rem);
+  font-size: 17rem;
   font-weight: 600;
 }
 .interior_consultation_event section#benefit li div h3 b {
@@ -143,7 +143,7 @@
   font-weight: 600;
 }
 .interior_consultation_event section#benefit li div p {
-  font-size: clamp(8px, 14rem, 9999rem);
+  font-size: 14rem;
   color: #444;
   margin-top: 6rem;
 }
@@ -165,7 +165,7 @@
 .interior_consultation_event section#partner ul li a span {
   display: flex;
   align-items: center;
-  font-size: clamp(8px, 18rem, 9999rem);
+  font-size: 18rem;
   font-weight: 600;
   margin-top: 8rem;
 }

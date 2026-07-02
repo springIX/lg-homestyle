@@ -202,6 +202,7 @@
       @include screen("mo") { padding: 8rem 14rem; font-size: 13rem;}
       &.on{ background-color: #111; color: #fff;}
     }
+    &.ty_cnt{ justify-content: center;}
   }
   &.combined_discount_2606 .home_set_tab{
     @include screen("pc2") { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;}
@@ -330,7 +331,7 @@
 
   /* 패키지 상품 */
   .c-product__list.ty_package{
-    .c-product__item{ position: relative; width: 100%; height: 422rem; border-radius: 12rem; overflow: hidden;
+    .c-product__item{ position: relative; width: 100%; height: 480rem; border-radius: 12rem; overflow: hidden;
       > span > a{ position: absolute; left: 0; top: 0; width: 100%; height: 100%;
         *{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
       }
@@ -355,6 +356,7 @@
               }
             }
           }
+          .package_contents{ font-weight: 500; font-size: 11rem; color: #666666; margin-top: 12rem; padding-top: 12rem; border-top: 1px solid #DDDDDD;}
           .c-product__badge-container{ display: none;}
         }
       }
@@ -940,7 +942,7 @@
                 h3{ margin: 12rem 0 2rem; font-weight: 600; font-size: 16rem;}
                 p{ color: #444; font-size: 14rem;}
               }
-              img{ width: 100%; height: 448rem; object-fit: contain; object-position: center bottom; transition: 1s ease; transform: translateY(30rem);}
+              img{ width: 100%; transition: 1s ease; transform: translateY(30rem);}
               &.swiper-slide-active img{ transform: translateY(0);}
             }
           }

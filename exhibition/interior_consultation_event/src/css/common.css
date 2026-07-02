@@ -9,7 +9,7 @@ html {
 }
 @media (max-width: 780px) {
   html {
-    font-size: 0.25641vw;
+    font-size: 1px;
   }
 }
 
@@ -21,7 +21,7 @@ main {
   background-color: #ffffff;
   color: #000;
   font-family: "Pretendard", sans-serif;
-  font-size: clamp(10px, 13rem, 9999rem);
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.4;
   word-wrap: break-word;
@@ -32,7 +32,7 @@ main {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   text-align: left;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.2px;
   max-width: 780px;
   margin: 0 auto;
 }

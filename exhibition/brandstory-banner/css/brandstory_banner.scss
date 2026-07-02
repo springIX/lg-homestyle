@@ -1071,4 +1071,169 @@ $mo-width: 390;
     }
   }
   /* //PYRENEX */ 
+
+  /* TEFAL */
+  &.tefal {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 48px; top: 68px;
+          a .txt-box{ left: -50px; top: 70px}
+        }
+        &:nth-child(2){ left: 306px; top: 127px;
+          a .txt-box{ right: -150px; top: -160px;}
+        }
+        &:nth-child(3){ left: 98px; top:333px;
+          a .txt-box{ top: 40px; }
+        }
+      }
+    }
+
+    &.mo{display: flex; flex-direction: column;
+      > section{ 
+        &:nth-child(1){ margin: mo(-25) 0 mo(40); order: 2; left: mo(17);
+          a{
+            img{ width: mo(212);}
+            .txt-box{ left: mo(-35); top: mo(45);}
+          } 
+        }
+        &:nth-child(2){ padding-top: mo(45);left: mo(30); order: 1;
+          a{ flex-direction: column-reverse; align-items: flex-start;
+            img{ width: mo(325); right: mo(-30); margin-top: mo(-37);}
+            .txt-box{ text-align: right; }
+          } 
+        }
+        &:nth-child(3){ order: 3;right: mo(27);
+          a{ flex-direction: row-reverse;
+            img{ width: mo(192);}
+            .txt-box{ top: mo(-15); left: mo(-10); text-align: right;}
+          } 
+        }
+      }
+    }
+  }
+  /* //TEFAL */
+ 
+  /* GINORI */
+  &.ginori2 {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 48px; top: 48px;
+          a .txt-box{ left: -30px; top: -40px}
+        }
+        &:nth-child(2){ left: 413px; top: 182px;
+          a .txt-box{ top: -140px; margin-right: -80px;}
+        }
+        &:nth-child(3){ left: 119px; top:333px;
+          a .txt-box{ top:  0px; }
+        }
+      }
+    }
+
+    &.mo{display: flex; flex-direction: column;
+      > section{ 
+        &:nth-child(1){ margin: mo(-30) 0 mo(-10); order: 2; left: mo(17);
+          a{
+            img{ width: mo(205);}
+            .txt-box{ left: mo(-20); top: mo(-30);}
+          } 
+        }
+        &:nth-child(2){ padding-top: mo(56);left: mo(40); order: 1;
+          a{ flex-direction: column-reverse; align-items: flex-start;
+            img{ width: mo(321); right: mo(-30); margin-top: mo(-45);}
+            .txt-box{ text-align: right; }
+          } 
+        }
+        &:nth-child(3){ order: 3;right: mo(35);
+          a{ flex-direction: row-reverse;
+            img{ width: mo(172);}
+            .txt-box{ top: mo(-5); left: mo(-20); text-align: left;}
+          } 
+        }
+      }
+    }
+  }
+  /* //GINORI */
+ 
+  /* DULTON */
+  &.dulton {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 78px; top: 39px;
+          a .txt-box{ left: -10px; top: -40px}
+        }
+        &:nth-child(2){ left: 455px; top: 56px;
+          a .txt-box{ top: -120px; margin-right: -40px;}
+        }
+        &:nth-child(3){ left: 117px; top:307px;
+          a .txt-box{ top:  25px; }
+        }
+      }
+    }
+
+    &.mo{display: flex; flex-direction: column;
+      > section{ 
+        &:nth-child(1){ margin: mo(-30) 0 0; order: 2; left: mo(47);
+          a{
+            img{ width: mo(147);}
+            .txt-box{ left: mo(31); top: mo(-20);}
+          } 
+        }
+        &:nth-child(2){ order: 1;
+          a{align-items: flex-start;
+            img{ width: mo(277);}
+            .txt-box{ text-align: right; top: mo(46); margin-right: mo(-20); }
+          } 
+        }
+        &:nth-child(3){ order: 3;right: mo(40);
+          a{ flex-direction: row-reverse;
+            img{ width: mo(143);}
+            .txt-box{ top: mo(-10);  text-align: left;}
+          } 
+        }
+      }
+    }
+  }
+  /* //DULTON */
+ 
+  /* ALTENBACH */
+  &.altenbach {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 55px; top: 13px;
+          a .txt-box{ left: -10px; top: -50px}
+        }
+        &:nth-child(2){ left: 345px; top: 178px;
+          a .txt-box{ top: -115px; left: 140px;}
+        }
+        &:nth-child(3){ left: 58px; top:297px;
+          a .txt-box{ top:  20px; left: -30px;}
+        }
+      }
+    }
+
+    &.mo{display: flex; flex-direction: column;
+      > section{ 
+        &:nth-child(1){ margin: mo(-30) 0 mo(-20); order: 2;
+          a{
+            img{ width: mo(253);}
+            .txt-box{ left: mo(0); top: mo(-30);}
+          } 
+        }
+        &:nth-child(2){ order: 1; left: mo(32); padding-top: mo(30);
+          a{flex-direction: column-reverse; align-items: flex-start;
+            img{ width: mo(363);}
+            .txt-box{ text-align: right; top: mo(20); left: mo(30);}
+          } 
+        }
+        &:nth-child(3){ order: 3;right: mo(33);
+          a{ flex-direction: row-reverse;
+            img{ width: mo(227);}
+            .txt-box{ top: mo(-30);  text-align: left;}
+          } 
+        }
+      }
+    }
+  }
+  /* //ALTENBACH */
+
 }

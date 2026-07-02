@@ -184,6 +184,7 @@
     #updateProductCard(elItem, data) {
       const elements = this.#getCardElements(elItem);
       if (!elements.mainSpan) return;
+      const packageDetail = elements.mainSpan.dataset.detail || '';
 
       const isCardSoldOut = this.#isSoldOut(data);
 
@@ -266,6 +267,19 @@
       elItem.classList.toggle(HomeStyleProductUIController.CLASSES.SOLD_OUT, isCardSoldOut);
       this.#toggleSoldOutAccessibilityText(elItem, isCardSoldOut);
       this.#ensurePriceVisible(elItem);
+
+      if (packageDetail) {
+        const infoContainer = elItem.querySelector('.c-product__info-container .inner > a');
+        let packageContents = elItem.querySelector('.package_contents');
+
+        if (!packageContents) {
+          packageContents = document.createElement('p');
+          packageContents.className = 'package_contents';
+          infoContainer.appendChild(packageContents); // 마지막에 추가
+        }
+
+        packageContents.textContent = packageDetail;
+      }
     }
 
     #createDiscountBadgeHTML(data) {
