@@ -49,9 +49,34 @@
     .pc{ display: none !important;}
   }
   .pd_btm{padding-bottom: 60rem;}
+  .notice_box{ margin-top: 32rem; padding-top: 16rem; border-top: 1px solid #e7e7e7; 
+    + .notice_box{ margin-top: 20rem; padding-top: 0; border-top: none;}
+    button{ font-size: 13rem; width: 100%; display: flex; align-items: center; justify-content: center; color: #666;
+      &::after{ content: ''; display: inline-block; border: 1px solid #111; opacity: .5; border-width: 0 1px 1px 0; transform: rotate(45deg) translate(2rem, -5rem); width: 5rem; height: 5rem;}  
+    }
+    .notice_cont{ display: none; color: #666; font-size: 12rem;  margin-top: 15rem;
+      strong{ display: block; margin-bottom: 4rem; font-weight: 600;}
+      ul{ line-height: 1.5;
+        + strong{ margin-top: 10rem;}
+        li{ padding-left: 7rem; position: relative;
+          &.bold{ font-weight: 600;}
+          &::before{ content: '∙'; position: absolute; left: 0; top: -1rem;}
+        }
+      }
+    }
+    &.on{
+      button::after{transform: rotate(225deg) translate(-5rem, 3rem);}
+      .notice_cont{ display: block;}
+    }
+  }
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   
   section{ position: relative; overflow: hidden; padding: 60rem 20rem 0;
+    
+    &#introduce{ padding: 60rem 0; background-color: #000000; color: #fff; text-align: center;
+      h2{ font-weight: 600; font-size: 18rem; margin-bottom: 8rem;}
+      p{ font-size: 14rem; color: #ccc;}
+    }
     &#benefit{ background-color: #f3eee9; @include font-size(10rem);
       @include screen("mo") { @include font-size(16rem);}
       h2{font-weight: 700; @include font-size(17rem); text-align: center;
@@ -71,6 +96,9 @@
           p{ margin-top: 4rem;
             @include screen("mo") { margin-top: 8rem;}
           }
+          span{ @include font-size(10rem); color: #666;
+            @include screen("mo") { @include font-size(13rem);}
+          }
         }
       }
       
@@ -78,6 +106,12 @@
         ol li{
           &::before{ background-color: #ADB298;}
           h3 b{ color: #67781E;}
+        }
+      }
+
+      &.ty_white{ background-color: #fff;
+        ol li{
+          &::before{ background-color: #AEA9A3;}
         }
       }
     }
@@ -141,6 +175,20 @@
           .swiper-scrollbar-drag{border-radius: 0; background-color: #000; }
         }
       }
+    }
+
+    &#member_benefits{ padding: 0; padding-bottom: 40rem;
+      .cont_box{ padding: 40rem 20rem; background-color: #F3F3F0;
+        .txt_box{ text-align: center; margin-bottom: 26rem;
+          @include screen("mo") {  margin-bottom: 32rem;}
+          h2{ @include font-size(22rem); font-weight: 600;}
+          p{ @include font-size(13rem); color: #444;}
+        }
+        a{ width: 100%; background-color: #111; border-radius: 8rem; color: #fff; height: 68px; line-height: 68px; font-size: 16px;border-radius: 8px; text-align: center;
+          @include screen("mo") { width: 100%; height: 48rem; line-height: 48rem; font-size: 15rem; border-radius: 8rem;}
+        }
+      }
+      .notice_box_wrap{ padding: 0 20rem;}
     }
   }
 }

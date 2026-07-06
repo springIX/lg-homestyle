@@ -74,6 +74,70 @@
 .rareraw_container .pd_btm {
   padding-bottom: 60rem;
 }
+.rareraw_container .notice_box {
+  margin-top: 32rem;
+  padding-top: 16rem;
+  border-top: 1px solid #e7e7e7;
+}
+.rareraw_container .notice_box + .notice_box {
+  margin-top: 20rem;
+  padding-top: 0;
+  border-top: none;
+}
+.rareraw_container .notice_box button {
+  font-size: 13rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+.rareraw_container .notice_box button::after {
+  content: "";
+  display: inline-block;
+  border: 1px solid #111;
+  opacity: 0.5;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg) translate(2rem, -5rem);
+  width: 5rem;
+  height: 5rem;
+}
+.rareraw_container .notice_box .notice_cont {
+  display: none;
+  color: #666;
+  font-size: 12rem;
+  margin-top: 15rem;
+}
+.rareraw_container .notice_box .notice_cont strong {
+  display: block;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+.rareraw_container .notice_box .notice_cont ul {
+  line-height: 1.5;
+}
+.rareraw_container .notice_box .notice_cont ul + strong {
+  margin-top: 10rem;
+}
+.rareraw_container .notice_box .notice_cont ul li {
+  padding-left: 7rem;
+  position: relative;
+}
+.rareraw_container .notice_box .notice_cont ul li.bold {
+  font-weight: 600;
+}
+.rareraw_container .notice_box .notice_cont ul li::before {
+  content: "∙";
+  position: absolute;
+  left: 0;
+  top: -1rem;
+}
+.rareraw_container .notice_box.on button::after {
+  transform: rotate(225deg) translate(-5rem, 3rem);
+}
+.rareraw_container .notice_box.on .notice_cont {
+  display: block;
+}
 .rareraw_container {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
@@ -81,6 +145,21 @@
   position: relative;
   overflow: hidden;
   padding: 60rem 20rem 0;
+}
+.rareraw_container section#introduce {
+  padding: 60rem 0;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+.rareraw_container section#introduce h2 {
+  font-weight: 600;
+  font-size: 18rem;
+  margin-bottom: 8rem;
+}
+.rareraw_container section#introduce p {
+  font-size: 14rem;
+  color: #ccc;
 }
 .rareraw_container section#benefit {
   background-color: #f3eee9;
@@ -153,6 +232,15 @@
     margin-top: 8rem;
   }
 }
+.rareraw_container section#benefit ol li span {
+  font-size: clamp(8px, 10rem, 9999rem);
+  color: #666;
+}
+@media (max-width: 780px) {
+  .rareraw_container section#benefit ol li span {
+    font-size: clamp(8px, 13rem, 9999rem);
+  }
+}
 .rareraw_container section#benefit.home_bar {
   background-color: #EAEBE5;
 }
@@ -161,6 +249,12 @@
 }
 .rareraw_container section#benefit.home_bar ol li h3 b {
   color: #67781E;
+}
+.rareraw_container section#benefit.ty_white {
+  background-color: #fff;
+}
+.rareraw_container section#benefit.ty_white ol li::before {
+  background-color: #AEA9A3;
 }
 .rareraw_container section#product_option {
   text-align: center;
@@ -296,4 +390,52 @@
 .rareraw_container section#ending .swiper .scr_bar .swiper-scrollbar-drag {
   border-radius: 0;
   background-color: #000;
+}
+.rareraw_container section#member_benefits {
+  padding: 0;
+  padding-bottom: 40rem;
+}
+.rareraw_container section#member_benefits .cont_box {
+  padding: 40rem 20rem;
+  background-color: #F3F3F0;
+}
+.rareraw_container section#member_benefits .cont_box .txt_box {
+  text-align: center;
+  margin-bottom: 26rem;
+}
+@media (max-width: 780px) {
+  .rareraw_container section#member_benefits .cont_box .txt_box {
+    margin-bottom: 32rem;
+  }
+}
+.rareraw_container section#member_benefits .cont_box .txt_box h2 {
+  font-size: clamp(8px, 22rem, 9999rem);
+  font-weight: 600;
+}
+.rareraw_container section#member_benefits .cont_box .txt_box p {
+  font-size: clamp(8px, 13rem, 9999rem);
+  color: #444;
+}
+.rareraw_container section#member_benefits .cont_box a {
+  width: 100%;
+  background-color: #111;
+  border-radius: 8rem;
+  color: #fff;
+  height: 68px;
+  line-height: 68px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .rareraw_container section#member_benefits .cont_box a {
+    width: 100%;
+    height: 48rem;
+    line-height: 48rem;
+    font-size: 15rem;
+    border-radius: 8rem;
+  }
+}
+.rareraw_container section#member_benefits .notice_box_wrap {
+  padding: 0 20rem;
 }

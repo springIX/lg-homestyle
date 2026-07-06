@@ -1,0 +1,1056 @@
+@import "var";
+
+abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color:inherit;}
+
+.construction-brand-container {
+
+  .display-mobile {
+      @include screen('pc'){
+          display: none !important;
+      }
+  }
+  .mo {
+      @include screen('pc2'){
+          display: none !important;
+      }
+  }
+  .pc {
+      @include screen('mo2'){
+          display: none !important;
+      }
+  }
+
+  .content-wrapper {
+    width: 100%;
+    max-width: 1500rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 60rem;
+    @include screen("mo") { padding: 0;}
+    &.full{ 
+      max-width: 1380rem;
+      padding: 0;
+      img{ width: 100%;}
+    }
+
+  }
+
+  .font-cg {
+      font-family: "Cormorant Garamond", serif;
+  }
+  .font-poppins {
+      font-family: "Poppins", sans-serif;
+  }
+
+  .kv-main { width: 100%; 
+    img { width: 100%; object-fit: cover; }  
+  }
+
+  .sticky-black-nav {
+      position: sticky;
+      top: 56rem;
+      background-color: #111111;
+      z-index: 6;
+      @media (min-width: 768px) {
+          top: 0;
+      }
+      nav {
+          padding: 0 20rem;
+          ul {
+              display: flex;
+              justify-content: space-between;
+              gap: 10rem;
+              @media (min-width: 768px) {
+                  justify-content: center;
+                  gap: 0;
+              }
+              li {
+                  @media (min-width: 768px) {
+                      width: 180rem;
+                      text-align: center;
+                  }
+                  a {
+                      position: relative;
+                      display: block;
+                      color: #FFFFFF;
+                      font-size: 14rem;
+                      font-weight: 400;
+                      line-height: calc(20/14);
+                      padding: 14rem 0;
+                      text-align: center;
+                      @media (min-width: 768px) {
+                          display: inline-flex;
+                          padding: 18rem 0;
+                          font-size: 15rem;
+                          line-height: calc(20/15);
+                      }
+                      &:hover {
+                          @media (min-width: 1280px) {
+                              color: #F31E11;
+                              font-weight: 600;
+                              &::after {
+                                  content: '';
+                                  position: absolute;
+                                  bottom: 0;
+                                  left: 0;
+                                  width: 100%;
+                                  height: 1.5rem;
+                                  background-color: #F31E11;
+                              }
+                          }   
+                      }
+                  }
+              }
+          }
+      }
+  }
+  
+  .about-brand { padding: 80rem 0;
+      @include screen('mo') {
+        padding: 50rem 0 60rem;
+      }
+
+      .content-wrapper {
+          padding: 0 20rem;
+          text-align: center;
+          h2 {
+            font-size: 20rem;
+            line-height: calc(28/20);
+            color: #000;
+            opacity: .5;
+            font-weight: 600;
+            @include screen('mo') {
+              font-size: 14rem;
+              line-height: calc(20/14);
+            }
+          }
+          p {
+              color: #000000;
+              margin-top: 30rem;
+              font-size: 20rem;
+              line-height: calc(32/20);
+              font-weight: 600;
+              @include screen('mo') {
+                margin-top: 17rem;
+                font-size: 16rem;
+                line-height: calc(30/16);
+              }
+              @include screen('mo2') {
+                br{ display: none;}
+              }
+          }
+      }
+      .gallery-box{ display: flex; gap: 40rem; justify-content: center; margin-top: 50rem;
+        li{ width: 100%;
+          img{ width: 100%;}
+          strong{ display: block;margin-top: 16rem; font-weight: 500; font-size: 18rem;}
+        }
+      }
+  }
+
+  .brand-point{ 
+    .logo{ max-width: 100%; margin: 0 auto;}
+  }
+
+  .showroom{ padding-top: 120rem; z-index: 1; position: relative;
+    @include screen("mo") { padding-top: 60rem;}
+    .tit-box{ text-align: center; padding: 0 20rem; margin-bottom: 60rem; font-weight: 400;
+      @include screen("mo") { margin-bottom: 40rem;}
+      h3{ font-size: 70rem; font-weight: 500;
+        @include screen("mo") { font-size: 40rem;}
+      }
+      p{ margin-top: 20rem; color: #111;
+        @include screen("mo") { margin-top: 16rem;}
+        strong{ display: block; color: #000; margin-bottom: 4rem; font-weight: 500;
+          @include screen("mo") { margin-bottom: 8rem;}
+        }
+      }
+    }
+    .txt-box{
+      h4{ font-size: 40rem; line-height: 1.4; font-weight: 700;
+        @include screen("mo") { font-size: 24rem;}
+      }
+      p{ margin-top: 20rem;
+        @include screen("mo") { margin-top: 28rem;}
+      }
+    }
+  }
+
+  .a-tempo{ background-color: #000; color: #fff; padding: 100rem 0; font-size: 20rem;
+    @include screen("tb") {
+      br{ display: none;}
+    }
+    @include screen("mo") { font-size: 14rem; padding: 80rem 20rem;}
+    .col2{ display: flex; justify-content: center; position: relative; align-items: center; gap: 111rem;
+      @include screen("tb") { gap: 60rem;}
+      @include screen("mo") { display: block; padding-top: 63rem;
+        .logo{ position: absolute; left: 0; top: 0; width: 180rem;}
+        .img-box img{ width: 100%;}
+      }
+      .txt-box{ padding: 53rem 0; width: 475rem;
+        @include screen("mo") { padding: 0; width: 100%;}
+        strong{ display: block; font-size: 30rem; font-weight: 700; padding: 40rem 0 20rem; letter-spacing: -.7rem;
+          @include screen("mo") { font-size: 20rem; padding: 20rem 0 12rem;}
+        }
+        .info{ color: #ccc; line-height: 1.6;
+          ul{ list-style-position: inside; padding: 40rem 0 0 10rem;
+            @include screen("mo") { padding: 20rem 0 0 5rem;}
+          }
+        }
+        .btn-wrap{ margin-top: 40rem;
+          @include screen("mo") { margin-top: 24rem;}
+          a{ display: flex; align-items: center; gap: 5rem; justify-content: center; padding: 13rem; background-color: #fff; border-radius: 8rem; color: #000;font-size: 20rem; font-weight: 500;
+            @include screen("mo") { font-size: 15rem;}
+            // &::after{ content: ''; background: url("https://static-store.lge.co.kr/editor/545/2510130006545.png")no-repeat center center / contain; width: 20rem; height: 20rem;}
+            + a{ margin-top: 16rem;
+              @include screen("mo") { margin-top: 12rem;}
+            }
+          }
+        }
+      }
+    }
+  }
+  .example{ padding: 160rem 0;
+    @include screen("mo") { padding: 60rem 0;}
+    .exmaple-cont + .exmaple-cont{ margin-top: 100rem;}
+    .txt-box{ text-align: center; margin-bottom: 50rem; letter-spacing: -1rem;
+      @include screen("mo") { margin-bottom: 40rem;}
+      h3{ font-weight: 500; font-size: 50rem;
+        @include screen("mo") { font-size: 40rem;}
+      }
+      ul{ display: flex; justify-content: center; margin-top: 45rem;
+        @include screen("mo") {  width: 100%; margin: 33rem auto 0; flex-wrap: wrap; gap: 20rem 0;}
+        @include screen("mo2") {  width: 328rem;
+          li{
+            &:nth-child(1){ margin-left: 30rem;}
+            &:nth-child(2){ margin-right: 30rem;}
+            &:nth-child(3){ border-left: none;}
+          }
+        }
+        li{ min-width: 170rem; 
+          @include screen("mo") { min-width: 90rem; padding: 0 12rem;}
+          + li{ border-left: 1rem solid #c9c9c9;}
+          img{ margin: 0 auto 10rem;} 
+        }
+      }
+    }
+  }
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+
+  &.pedini{
+    .showroom{
+      .img1{ width: 100%;}
+      @include screen("mo") { 
+        .img2{ margin: 32rem 0;}
+        .img3{ padding-left: 127rem; width: 100%;}
+      }
+      .col2{ display: flex; gap: 110rem; margin: 40rem 0;
+        @include screen("tb") { gap: 60rem;
+          br{ display: none;}
+        }
+        @include screen("mo") { display: block; margin: 140rem 0;}
+        .box1{ width: 54%;
+          img{ width: 100%;}
+        }
+        .box2{ width: 46%; display: flex; flex-direction: column-reverse;
+          @include screen("mo") { width: 100%; padding: 0 20rem;}
+          .txt-box{ padding: 32% 0 42%;
+            @include screen("mo") { padding: 0;}
+          }
+        }
+      }
+    }
+    .brand-point{ color: #fff; position: relative;
+      @include screen("mo") { padding-bottom: 163rem;}
+      &::before{ content: ''; background-color: #594834; width: 100%;position: absolute; left: 0; top: -30%; bottom: 155rem;
+        @include screen("tb") { top: -20%;}
+        @include screen("mo") { top: 0; bottom: 9%;}
+      }
+      > *{ z-index: 1; position: relative;}
+      .logo{ padding: 140rem 0; width: 970rem; max-width: 100%;
+        @include screen("mo") { padding: 45rem 20rem;}
+      }
+      .col2{ display: flex; gap: 40rem; position: relative; font-size: 24rem;
+        @include screen("mo") { display: block; font-size: 14rem;}
+        > div{ width: 100%;}
+        .box1{ display: flex; flex-direction: column; justify-content: space-between; font-size: 17rem;
+          @include screen("mo") { font-size: 14rem;
+            p{ padding: 0 20rem ;}
+          }
+          @include screen("mo2") {
+          br{ display: none;} 
+          }
+          img{ width: 357rem;  margin-top: 20rem;
+            @include screen("mo") { margin-top: 0; position: absolute; left: 0; top: 100%; width: 290rem;}
+          }
+        }
+        .box2 img{ width: 100%; height: 100%; object-fit: cover;
+          @include screen("mo") { padding: 32rem 0 73rem; margin-left: auto; width: 253rem;}
+        }
+      }
+    }
+    .brand-gallery{ padding: 120rem 0 160rem;
+      @include screen("mo") { padding: 213rem 0 80rem;}
+      .display-mobile{
+        img+img{ margin-top: 32rem;}
+      }
+    }
+  }
+
+  &.porcelanosa{
+    .showroom{
+      .showroom-box1{
+        .col2{ display: flex; flex-direction: row-reverse;
+          > *{ width: 50%;}
+          @include screen("mo") { display: block; 
+            > *{ width: 100%;}
+          }
+          .box1{}
+          .box2{ display: flex; justify-content: space-between; flex-direction: column; padding-right: 20rem;
+            @include screen("mo") { padding: 20rem 0 0;}
+            img{ width: 50%; margin-bottom: 20rem;
+              @include screen("mo") { width: 72%; margin-bottom: 100rem;}
+            }
+            .txt-box{
+              padding-bottom: 70rem;
+              @include screen("mo") { 
+                padding: 0 20rem;
+              }
+            }
+          }
+        }
+      } 
+      .showroom-box2{ margin: 40rem auto;
+        @include screen("mo") { margin: 60rem 0 20rem;}
+      }
+      .showroom-box3{ display: flex; justify-content: center; align-items: center; gap: 88rem;
+        @include screen("mo") { display: block; padding:0 0 100rem 60rem;}
+        img{ width: 37%;
+          @include screen("mo") { width: 100%;}
+        }
+        p{
+          @include screen("tb") { 
+            br{ display: none;}
+          }
+          @include screen("mo") { 
+            font-size: 14rem; margin-top: 35rem;
+          }
+        }
+      }
+    }
+    .brand-point{ position: relative; padding: 160rem 0 160rem; color: #fff;
+      @include screen("mo") { padding: 70rem 0 80rem;}
+      &::before{ content: ''; background-color: #8C8472; width: 100%;position: absolute; left: 0; top: -100rem; bottom:480rem;
+        @include screen("tb") { top:-42rem; bottom: 280rem;}
+        @include screen("mo") { top: 0; bottom: 410rem;}
+      }
+      @include screen("tb") { 
+        br{ display: none;}
+      }
+      >*{ position: relative; z-index: 1;}
+      .logo{ width: 1103rem; 
+        @include screen("mo") { 
+          padding: 0 40rem;
+        }
+      }
+      .col2{ display: flex; justify-content: space-between; gap: 60rem; margin-top: 140rem;
+        @include screen("mo") { display: block; margin-top: 60rem;}
+        .box1{ width: 63%; padding-top: 300rem; color: #000;
+          @include screen("mo") { width: 100%; padding-top: 0; color: #fff;
+            .txt-box{ padding: 0 20rem;
+            }
+          }
+        }
+        .box2{ width: 24%;
+          @include screen("mo") { color: #000; width: 100%; padding: 80rem 0 0 80rem;}
+        }
+        .txt-box{
+          li{ margin-top: 40rem;
+            @include screen("mo") { margin-top: 32rem;}
+          }
+          strong{ font-family: 'Poppins', sans-serif; font-size: 30rem; font-weight: 500;
+            @include screen("mo") { font-size: 24rem;}
+          }
+          p{ margin-top: 16rem; font-size: 17rem;
+            @include screen("mo") { margin-top: 6rem; font-size: 14rem;}
+          }
+        }
+      }
+    }
+    .example{ background-color: #e8e6e3;}
+  }
+
+  &.a-tempobibere{
+    .showroom{ 
+      img{ width: 100%;}
+      .showroom-box1{ display: grid; grid-template-columns: 1fr 1fr; direction: rtl; gap: 40rem;
+        @include screen("mo") { display: block;}
+        >*{ direction: ltr;}
+        .box1{order: 1;}
+        .box2{order: 2; display: flex; flex-direction: column; justify-content: space-between;
+          p{ padding-top: 373rem;font-size: 24rem; font-weight: 700;
+            @include screen("tb") { padding-top: 18vw;}
+            @include screen("mo") {font-size: 20rem; padding: 60rem 20rem;}
+          }
+          img{ width: 383rem; margin-left: auto;
+            @include screen("mo") { width: 100%; margin-left: 0; padding-right: 110rem;}
+          }
+        }
+        .box3{order: 4;
+          @include screen("mo") { margin-top: 20rem;}
+        }
+        .box4{order: 3; display: flex; align-items: center;
+          p{ padding-left: 164rem;
+            @include screen("tb") { padding-left: 0;
+              br{ display: none;}
+            }
+            @include screen("mo") { padding: 60rem 20rem;
+              br{ display: none;}
+            }
+          }
+        }
+        .box5{order: 5;
+          img{ width: 383rem;
+            @include screen("mo") { padding-left: 60rem; width: 100%;}
+          }
+        }
+        .box6{ order: 6; display: flex; align-items: center;
+          @include screen("mo") { padding: 60rem 20rem 0;}
+        }
+      }
+      .showroom-box2{ margin-top: 40rem;
+        @include screen("mo") { margin-top: 60rem;}
+        img{ width: 100%;}
+      }
+    }
+    .brand-point{ position: relative; padding: 40rem 0 140rem;
+      @include screen("mo") { padding: 20rem 0 60rem;}
+      // &::before{ content: ''; background-color: #F6EBE3; width: 100%; position: absolute; left: 0; top: -300rem; height: 1610rem;
+      //   @include screen("tb") { height: 123vw;}
+      //   @include screen("mo") { height: 340vw;}
+      // }
+      > *{ z-index: 1; position: relative;}
+      .brand-point-box1{ display: flex; align-items: flex-end; gap: 40rem; position: relative;
+        @include screen("mo") { display: block;}
+        .box2{
+          @include screen("mo") { padding-left: 60rem;}
+          p{width: 63%; padding-right: 20rem;
+            @include screen("tb") { 
+              br{ display: none;}
+            }
+            @include screen("mo") { width: 100%;
+              br{ display: none;}
+            }
+          }
+        }
+        .box1{ padding-bottom: 342rem;
+          @include screen("mo") { padding:0 60rem 20rem 0;}
+        }
+        p{ position: absolute; left: 0; bottom: 0;
+          @include screen("mo") { position: relative; margin-top: 60rem;}
+        }
+      }
+      .brand-point-box2{ display: flex; flex-direction: row-reverse; gap: 40rem; align-items: flex-end; margin-top: 60rem;
+        @include screen("mo") { display: block;}
+        img{ width: 100%;}
+        @include screen("pc") { 
+          .img1{ width: calc(67% - 20px);}
+          .img2{ width: calc(33% - 20px);}
+        }
+        @include screen("mo") { 
+          .img2{ padding: 20rem 60rem 0 0;}
+        }
+      }
+      .logo{ margin-top: 161rem; width: 883rem;
+        @include screen("mo") { margin-top: 60rem; padding: 0 37rem;}
+      }
+    }
+    .example{
+      .img-box img{ width: 100%;}
+    }
+  }
+
+  &.rastelli{
+    .rastelli-txt-box{
+      @include screen("mo") { padding: 20rem 20rem 0 !important; margin: 0 !important;}
+      strong{ display: block; font-size: 40rem; font-weight: 700; margin-bottom: 12rem;
+        @include screen("mo") { font-size: 26rem; margin-bottom: 8rem;}
+      }
+    }
+    .showroom{
+      &.ty2{ padding: 0 0 160rem;
+        @include screen("mo") { padding-bottom: 60rem;}
+      }
+      .showroom-box1{ display: flex; gap: 60rem; align-items: flex-end;
+        @include screen("mo") { display: block;}
+        .rastelli-txt-box{margin-bottom: 60rem;}
+        .box2{ padding-bottom: 239rem;}
+        &.ty2{
+          .box2{ padding-bottom: 100rem;}
+        }
+        &.ty3{ margin-top: 40rem;
+          .rastelli-txt-box{  margin-bottom: 140rem;}
+          .box2{ padding-bottom: 91rem;}
+        }
+      }
+      .showroom-box2{ display: flex; gap: 60rem; margin-top: 40rem;
+        @include screen("mo") { margin-top: 100rem;}
+        .box1{
+          @include screen("mo") { background-color: #F5F2EE;}
+          .rastelli-txt-box{ margin-left: auto; width: max-content; padding: 0 81rem 91rem 0;}
+        }
+      }
+    }
+    .brand-point{ position: relative;
+      &::before{ content: ''; background-color: #F5F2EE; width: 100%; position: absolute; left: 0; top: -200rem; bottom: -345rem;
+        @include screen("mo") { top: 0; bottom: 0;}
+      }
+      > *{ z-index: 1; position: relative;}
+      .logo{ padding: 140rem 0; width: 863rem;
+        @include screen("mo") { padding: 60rem 20rem;}
+      }
+    }
+    .example{ 
+      .info-box{
+        @include screen("mo") { padding: 20rem 20rem 40rem !important; margin: 0 !important; width: 100%;}
+        span{ font-size: 24rem; font-weight: 500;
+          @include screen("mo") { font-size: 20rem;}
+        }
+        p{ color: #444; margin-top: 16rem;
+          @include screen("mo") { margin-top: 8rem;
+            br{ display: none;}
+          }
+        }
+        b{ display: block; font-size: 24rem;
+          @include screen("mo") { font-size: 20rem;}
+        }
+      }
+      .img-box{ gap: 30rem;
+        + .img-box{ margin-top: 80rem;
+          @include screen("mo") { margin-top: 120rem;}
+        }
+        @include screen("mo") { display: block !important;
+          img.display-mobile + img.display-mobile{ margin-top: 40rem;}
+        }
+        &.ty1{display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto;
+          .box1{grid-column: 1 / 3;}
+          .box2{ display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+            .info-box{ margin-bottom: 20rem;}
+          }
+          .box3{}
+          &.reverse{
+            .box1{ order: 1;}
+            .box2{ order: 3;
+              img{ margin-left: auto;}
+            }
+            .box3{ order: 2;}
+          }
+        }
+        &.ty2{ display: flex;
+          .info-box{ margin-top: 30rem;}
+        }
+        &.ty3{ display: flex;
+          .info-box{ padding: 20rem 0;}
+          .box1{ display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+          }
+          &.reverse{ flex-direction: row-reverse;
+            .box1 > img{ margin-left: auto;}
+          }
+        }
+      }
+    }
+  }
+
+  &.cucine-lube{
+    .lube-txt-box{ line-height: 1;
+      @include screen("mo") { padding: 20rem 20rem 40rem !important; margin: 0 !important;}
+      strong{ font-size: 30rem; font-weight: 700;
+        @include screen("mo") { font-size: 26rem;}
+      }
+      p{ margin-top: 16rem;
+        @include screen("mo") { margin-top: 12rem;}
+      }
+    }
+    .showroom{
+      @include screen("mo") {
+        img.display-mobile + img.display-mobile{ margin-top: 40rem;}
+      }
+      &.ty2{ padding: 0 0 160rem;
+        @include screen("mo") { padding-bottom: 120rem;}
+      }
+      .showroom-box{ display: flex; gap: 40rem;
+        @include screen("mo") { display: block;}
+        + .showroom-box{ margin-top: 40rem;
+          @include screen("mo") { margin-top: 0;}
+        }
+        &.ty1{
+          .img2{ margin: 40rem 0 0 auto;}
+          .box2{ padding-top: 211rem;
+            @include screen("mo") { padding-top: 0;}
+            .lube-txt-box{ margin-bottom: 40rem;
+            }
+          }
+        }
+        
+        &.ty2{ display: block;
+          .box2{ margin-top: 40rem; display: flex; align-items: flex-end; justify-content: flex-end; position: relative; gap: 40rem;
+            @include screen("mo") { margin-top: 100rem; display: block;
+              img{ width: 100% !important;}
+            }
+            .lube-txt-box{ position: absolute; left: 0; top: 0;
+              @include screen("mo") { position: relative;}
+            }
+            .img1{ width: 42%;}
+            .img2{ width: 31%;}
+          }
+        }
+  
+        &.ty3{
+          .box1 .img2{ margin-top: 40rem;} 
+          .lube-txt-box{ margin-top: 40rem;}
+        }
+        &.ty4{ align-items: flex-end;
+          @include screen("mo") { margin-top: 100rem;}
+          .box2{
+            .img1{ margin-left: auto;}
+            .lube-txt-box{ margin: 68rem 0 40rem;}
+          }
+        }
+      }
+    }
+    .brand-point{ position: relative;
+      &::before{ content: ''; background-color: #e1ddd9; width: 100%; position: absolute; left: 0; top: -194rem; bottom: -200rem;
+        @include screen("mo") { top: -95rem; bottom: 0;}
+      }
+      > *{ z-index: 1; position: relative;}
+      .logo{ padding: 140rem 0; margin: 0 auto; width: 796rem;
+        @include screen("mo") { padding: 48rem 35rem 65rem;}
+      }
+    }
+    .example{
+      @include screen("mo") { padding:60rem 0 10rem;}
+      .img-box{ display: flex; gap: 40rem;
+        @include screen("mo") { display: block;}
+        + .img-box{ margin-top: 80rem;
+          @include screen("mo") { margin-top: 0 !important;}
+        }
+        p{ padding-top: 24rem; font-size: 24rem;
+          @include screen("mo") { font-size: 20rem; padding:20rem 20rem 50rem;}
+        }
+      }
+    }
+  }
+  &.kitchenbach {
+    .lube-txt-box{ line-height: 1;
+      @include screen("mo") { padding: 20rem 20rem 40rem !important; margin: 0 !important;}
+      strong{ font-size: 40rem; font-weight: 700;
+        @include screen("mo") { font-size: 26rem;}
+      }
+      p{ margin-top: 12rem;
+        line-height: 1.4;
+        @include screen("mo") { margin-top: 8rem;}
+      }
+    }
+    .brand-point{ position: relative;
+      &::before{ content: ''; background-color: #E7E4E1; width: 100%; position: absolute; left: 0; top: -194rem; bottom: -200rem;
+        @include screen("mo") { top: -95rem; bottom: 0;}
+      }
+      > *{ z-index: 1; position: relative;}
+      .logo{ padding: 140rem 0; margin: 0 auto; width: 796rem;
+        @include screen("mo") { padding: 48rem 35rem 65rem;}
+      }
+    }
+    .footer{
+      @include screen("mo") {padding: 130rem 20rem;}
+      .bg{ opacity:unset}
+    }
+    .showroom{
+      .showroom-box {
+        &.ty2 {
+          .box2 {
+            .img2 {@include screen("tb") {width: 37%;}}
+          }
+        }
+      }
+    }
+  }
+  &.sks {
+    .showroom {padding-top: 114rem;
+      @include screen("mo") {padding-top: 0;}
+      &.ty2{ 
+        @include screen("tb") {margin-top: -80rem !important;}
+        @include screen("mo") {margin-top: -144rem; padding-bottom: 60rem;}
+      }
+      .showroom-box{
+        &.ty2 {
+          .box2 {
+            @include screen("mo") {margin: 0;}
+            .img1 {width: 48%;}
+            .img2 {width: 49.3%;}
+            .flex_cloum {
+              @include screen("mo") {display: flex; flex-direction: column-reverse;}
+            }
+            img {
+              @include screen("mo") {margin: 0 !important;}
+            }
+          }
+        }
+        &.ty3 {
+          .lube-txt-box {margin-top: 32rem;}
+          .box2 {
+            p {margin: 0;}
+          }
+        }
+      }
+
+    }
+    
+    .lube-txt-box{ line-height: 1; margin-top: 139rem;
+      @include screen("tb") {margin-top: 0;}
+      @include screen("mo") { padding: 40rem 20rem 40rem !important; margin: 0 !important;}
+      strong{ font-size: 40rem; font-weight: 700;
+        @include screen("mo") { font-size: 26rem; }
+      }
+      p{ margin-top: 12rem;
+        line-height: 1.4;
+        @include screen("mo") { margin-top: 26rem;}
+      }
+    }
+    .brand-point{
+      &::before{background-color: #594F43;
+        @include screen("tb") {bottom: 0;}
+        @include screen("mo") { top: -57rem; bottom: 0;}
+      }
+      .logo {width: 686rem; 
+        @include screen("tb") {width: 450rem; padding: 80rem 0 180rem;}
+        @include screen("mo") {width: auto; padding: 40rem 53rem 184rem;}
+      
+      }
+    }
+    .example {
+      .exmaple-cont {
+        .content-wrapper {
+          .flex-cloum {display: flex; flex-direction: column;}
+          .flex_row {display: flex; flex-direction: row;}
+          .img-box {
+            &.flex-cloum {gap: 30rem;
+              @include screen("mo") {gap: 0;}
+              &.reverse {flex-direction: column-reverse;}
+              .flex_row.ty5.reverse {justify-content: space-between;
+                @include screen("mo") {flex-direction: column; padding-top: 20rem;}
+              }
+            }
+            .flex_row {
+              &.reverse {
+                flex-direction: row-reverse;
+                @include screen("mo") {flex-direction: column;}
+              }
+              &.ty5 {
+                gap: 30rem;
+                @include screen("mo") {gap: 20rem; flex-direction: column;}
+                .left-box {
+                  @include screen("mo") {display: flex; flex-direction: column-reverse;}
+                }
+                .lube-txt-box {margin-top: 30rem; line-height: 1.4;
+                  @include screen("mo") {padding: 20rem 20rem 30rem !important}
+                  .floor {font-size: 24rem; color: rgba(17, 17, 17, 0.4); padding-bottom: 12rem; font-weight: 400;
+                    @include screen("mo") {font-size: 20rem;}
+                  }
+                  strong {font-size: 40rem; color: #111; padding-bottom: 6rem;
+                    @include screen("mo") {font-size: 26rem;}
+                  }
+                  .sub-tit {font-size: 22rem; color: #111; padding-bottom: 24rem; font-weight: 500;
+                    @include screen("mo") {font-size: 16rem;}
+                  }
+                  p {font-size: 17rem; color: #111; font-weight: 400; padding: 0; margin: 0;
+                    @include screen("mo") {font-size: 14rem;}
+                  }
+                  .description {font-size: 14rem; color: #727780; font-weight: 400; padding-top: 16rem;
+                    @include screen("mo") {font-size: 12rem; padding-top: 8rem;}
+                  }
+                }
+                .right-box {
+                  .top {padding-bottom: 30rem;
+                    @include screen("mo") {padding-bottom: 20rem;}
+                  }
+                }
+                &.bottom-box {
+                  flex-direction: row-reverse; justify-content: space-between; padding-bottom: 60rem;
+                  @include screen("mo") {flex-direction: column-reverse;}
+                  > img {
+                    width: 48.8%; height: fit-content;
+                    @include screen("mo") {width: 100%; height: auto;}
+                  }
+                }
+              }
+            }
+            & + .img-box {margin-top: 30rem !important;
+              @include screen("mo") {margin-top: 60rem !important;}
+            }
+            &.ty5 {
+              .flex_row {
+                .left-box {
+                  @include screen("mo") {flex-direction: column;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer{
+      @include screen("mo") {padding: 130rem 20rem;}
+      .bg{ opacity:unset}
+    }
+  }
+
+  &.hanssem_rehouse{
+    .hs-txt-box{
+      @include screen("mo") { padding: 20rem 20rem 60rem !important; margin: 0 !important;}
+      span{ display: block; font-weight: 700; font-size: 20rem; margin-bottom: 10rem;
+        @include screen("mo") { margin-bottom: 4rem;}
+      }
+      strong{ font-size: 40rem; font-weight: 700;
+        @include screen("mo") { font-size: 26rem;}
+      }
+      p{ margin-top: 20rem;
+        @include screen("mo") { margin-top: 12rem;}
+        i{ display: block; font-size: 14rem; color: #727780; margin-top: 4rem;
+          @include screen("mo") { font-size: 12rem;}
+        }
+      }
+    }
+    .showroom{
+      @include screen("pc") { 
+        &.ty2{ padding: 0 0 160rem;}
+      }
+      .showroom-box{
+        &.ty1{ display: flex; align-items: flex-end; flex-direction: row-reverse; gap: 40rem;
+          @include screen("mo") { display: block;}
+          .img1{ padding-bottom: 216rem; width: 57%; flex-shrink: 0;
+            @include screen("mo") { padding-bottom: 0; width: 100%;}
+          }
+          .box1{
+            img{margin-top: 60rem; width: 100%;
+              @include screen("mo") { margin-top: 0;}
+            }
+          }
+        }
+        &.ty2{ margin-top: 40rem; display: grid; grid-template-columns: auto 57%; gap: 40rem; grid-template-rows: auto auto;
+          @include screen("mo") { display: block; margin-top: 0;}
+          .box2{ display: flex; flex-direction: column; justify-content: flex-end;
+            img{width:55%; margin-top: 66rem;
+              @include screen("mo") { margin-top: 0; width: 100%;}
+            }
+          }
+          .box3{ padding-top: 180rem;
+            @include screen("mo") { padding-top: 0;}
+            @include screen("tb") { padding-top: 10vw;}
+          }
+        }
+        &.ty3{ display: grid; grid-template-columns: 57% auto; gap: 40rem; 
+          @include screen("mo") { display: block;}
+          .box1{ display: flex; align-items: flex-end;
+            @include screen("mo") { display: block; padding: 0 30rem;}
+          }
+          .box2{ transform: translateY(381px);
+            @include screen("mo") { transform: none;}
+            img{ margin-top: 60rem;
+              @include screen("mo") { margin-top: 0;}
+            }
+          }
+          .box3{
+            .box3_inr{ width: 68%; margin-left: auto;
+              @include screen("mo") { width: 100%;}
+              img{ margin-bottom: 60rem;
+                @include screen("mo") { margin-bottom: 0;}
+              }
+            }
+          }
+        }
+      }
+    }
+    .brand-point{ color: #fff; position: relative;
+      &::before{ content: ''; background-color: #594834; width: 100%;position: absolute; left: 0; top: -78%; bottom: -75%;
+        @include screen("tb") { top: -20%;}
+        @include screen("mo") { top: 0; bottom: mo(-100);}
+      }
+      > *{ z-index: 1; position: relative;}
+      .logo{ padding: 140rem 0; width: 1102rem; max-width: 100%;
+        @include screen("mo") { padding: 60rem 30rem;}
+      }
+    }
+
+    .example{
+      @include screen("mo") { padding:60rem 0 10rem;
+        h3{ font-size: 26rem;}
+      }
+      .img-box{ display: flex; gap: 40rem;
+        @include screen("mo") { display: block;}
+        + .img-box{ margin-top: 80rem;
+          @include screen("mo") { margin-top: 0 !important;}
+        }
+        p{ padding-top: 24rem; font-size: 24rem;
+          @include screen("mo") { font-size: 20rem; padding:20rem 20rem 50rem;}
+        }
+      }
+    }
+  }
+
+  &.lx-housis{ font-size: 24rem;
+    @include screen("mo") { font-size: 20rem;
+      img{ width: 100%;}
+    }
+    .lx-cont{ padding: 120rem 0;
+      @include screen("mo") { padding: 60rem 0;}
+      &.bg{ background-color: #F5F4F2;}
+    }
+    .tit-box{ margin-bottom: 60rem; text-align: center;
+      @include screen("mo") { margin-bottom: 30rem;}
+      h3{ font-size: 40rem; font-weight: 400;
+        @include screen("mo") { font-size: 30rem;}
+        &.mid{ font-size: 50rem; font-weight: 500;
+          @include screen("mo") { font-size: 40rem;}
+        }
+        &.big{ font-size: 70rem;
+          @include screen("mo") { font-size: 40rem;}
+        }
+        strong{ font-weight: 700;}
+      }
+      p{ margin-top: 20rem; font-size: 22rem;
+        @include screen("mo") { margin-top: 12rem; font-size: 16rem;}
+      }
+    }
+    .col{ display: flex; gap: 30rem;
+      @include screen("mo") { 
+        flex-wrap: wrap;
+        li{ width: 100%;}
+      }
+    }
+
+    @include screen("mo") { 
+      .pl{ padding-left: 20rem;}
+      .pr{ padding-right: 20rem;}
+    }
+  
+    .lx-cont1{ 
+      @include screen("mo") { 
+        .content-wrapper{ padding: 0 20rem;}
+        
+      }
+      .col{ text-align: center; line-height: 1.2;
+        strong{display: block; font-weight: 600; margin: 20rem 0 10rem;
+          @include screen("mo") { font-size: 20rem; margin: 10rem 0 5rem;}
+        }
+        p{ font-size: 17rem;
+          @include screen("mo") { font-size: 14rem;}
+        }
+      }
+    }
+    .lx-cont2{
+      .col{ line-height: 1.2;
+        + .col{ margin-top: 55rem;
+          @include screen("mo") { margin-top: 30rem;}
+        }
+        p{ padding-top: 24rem;
+          @include screen("mo") { padding: 10rem 20rem 0;}
+        }
+      }
+      .info{ margin-top: 60rem; color: #727780; font-size: 16rem; text-align: center;
+        @include screen("mo") { padding:0 20rem; margin-top: 30rem; font-size: 14rem; text-align: left;}
+      }
+    }
+    .lx-cont3{ padding-bottom: 0;
+      .slot{
+        + .slot{ margin-top: 80rem;}
+        .col{ margin-top: 30rem;
+          p{padding-top: 24rem;
+            @include screen("mo") { padding: 10rem 20rem 0;}
+          }
+        }
+        h4{ font-size: 40rem; margin-bottom: 40rem; font-weight: 700; text-align: center;
+          @include screen("mo") { font-size: 26rem; margin-bottom: 20rem;}
+        }
+      }
+      .logo{  margin: 0 auto; padding: 230rem 0;
+        @include screen("mo") { padding: 60rem 40rem;}
+      }
+    }
+    .lx-cont4{
+      h3{ margin-bottom: 40rem;}
+      .lx-txt-box{ padding-top: 30rem;
+        @include screen("mo") { padding: 20rem 20rem 40rem !important; margin: 0 !important;}
+        span{ display: block; font-weight: 700; font-size: 20rem; margin-bottom: 10rem;
+          @include screen("mo") { margin-bottom: 4rem;}
+        }
+        strong{ font-size: 40rem; font-weight: 700;
+          @include screen("mo") { font-size: 26rem;}
+        }
+        p{ margin-top: 12rem; font-size: 17rem;
+          @include screen("mo") { margin-top: 12rem; font-size: 14rem;}
+          i{ display: block; font-size: 14rem; color: #727780; margin-top: 4rem;
+            @include screen("mo") { font-size: 12rem;}
+          }
+        }
+      }
+
+      .slot{
+        + .slot{ margin-top: 80rem;}
+        .col{ margin-top: 30rem;
+          @include screen("mo") { margin-top: 0; gap: 20rem;
+            &:not(.ty2){
+              li{ display: flex; flex-direction: column-reverse;}
+            }
+            &.ty2{ flex-direction: column-reverse; gap: 0;}
+          }
+        }
+      }
+    }
+
+    .lx-cont5{
+      .slot{ 
+        + .slot{ margin-top: 40rem;
+          @include screen("mo") { margin-top: 80rem;}
+        }
+        p{padding-top: 24rem; font-weight: 500; 
+          @include screen("mo") { padding: 10rem 20rem 30rem;}
+        }
+      }
+    }
+    .footer{  padding: 110rem 0;
+      @include screen("mo") { padding: 80rem 20rem;}
+      .content-wrapper{ display: flex; justify-content: space-between; align-items: center; z-index: 1; position: relative;
+        @include screen("mo") { display: block;}
+        .txt-box{color: #fff; text-align: left;
+          @include screen("mo") { text-align: center;}
+          p{ font-size: 20rem; opacity: .8;
+            @include screen("mo") { font-size: 16rem;}
+          }
+          h4{ font-size: 30rem; margin: 12rem 0 24rem; font-weight: 600;
+            @include screen("mo") { font-size: 22rem; margin: 8rem 0 20rem;}
+            img{ display: inline-block; margin-right: 10rem; transform: translateY(2px);
+              @include screen("mo") { width: 97rem; margin-right: 7rem;}
+            }
+          }
+          span{ display: block; opacity: .5; font-size: 16rem;
+            @include screen("mo") { font-size: 12rem; margin-bottom: 40rem;}
+          }
+        }
+      }
+    }
+  }
+
+  .footer{ text-align: center; padding: 120rem 0; position: relative; background-color: #111;
+    @include screen("mo") { padding: 166rem 20rem;}
+    .bg{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; opacity: .25;}
+    .btn-wrap{ display: inline-block; width: 475rem; position: relative;
+      @include screen("mo") { width: 100%;}
+      a{ display: block; padding: 21rem; font-size: 24rem; background-color: #fff; border-radius: 8rem;
+        @include screen("mo") { padding:14rem; font-size: 15rem;}
+        + a{ margin-top: 16rem;
+          @include screen("mo") { margin-top: 12rem;}
+        }
+      }
+    }
+  }
+}

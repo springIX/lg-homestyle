@@ -202,12 +202,13 @@
       @include screen("mo") { padding: 8rem 14rem; font-size: 13rem;}
       &.on{ background-color: #111; color: #fff;}
     }
+    &.ty_cnt{ justify-content: center;}
   }
   &.combined_discount_2606 .home_set_tab{
     @include screen("pc2") { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;}
   }
 
-  .c-product__list:not(.ty_row){ margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
+  .c-product__list:not(.ty_row, .ty_package){ margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
     @include screen("mo") { margin-top: 8rem; gap:28rem 8rem; grid-template-columns: repeat(2, 1fr);}
     .c-product__item{ min-width: 0; position: relative;
       // 품절상품 & 제품조회실패는 SOLD OUT 처리
@@ -240,6 +241,7 @@
               &::after{ content: '%'; }
             }
             .c-product__price-value--member{ font-weight: 600; font-size: 16rem; color: #000;
+              *{ font-weight: inherit;}
               @include screen("mo") { font-size: 14rem;}
             }
           }
@@ -327,6 +329,41 @@
     }
   }
 
+  /* 패키지 상품 */
+  .c-product__list.ty_package{
+    .c-product__item{ position: relative; width: 100%; height: 480rem; border-radius: 12rem; overflow: hidden;
+      > span > a{ position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+        *{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+      }
+      .c-product__info-container{ position: absolute; left: 0; bottom: 0; width: 100%; padding: 12rem;
+        > .inner{ padding: 12rem; background-color: #FFFFFF; border-radius: 8rem;
+          .c-product__info{
+            .c-product__name{ font-weight: 600; font-size: 18rem; margin-bottom: 12rem;}
+          } 
+          .c-product__price-area{ margin-top: 12rem;
+            .c-product__price-list{
+              .c-product__price-item--original{ display: block !important; font-size: 12rem; color: #8f8f8f;}
+              .c-product__price-item--member{ 
+                *{ font-size: 16rem; font-weight: 600;}
+                .discount_rate{ color: #FD312E; margin-right: 4rem;
+                  &::after{ content: '%';}
+                }
+                .c-product__price-value--member{ display: inline-flex; align-items: center;
+                  .c-product__unit{ display: inline-block; margin-left: 4rem; width: 125rem; height: 19rem;
+                    &::before{ content: ''; display: block; width: 100%; height: 100%; background: url(https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/package_tag.png)no-repeat left center / contain;}
+                  }
+                }
+              }
+            }
+          }
+          .package_contents{ font-weight: 500; font-size: 11rem; color: #666666; margin-top: 12rem; padding-top: 12rem; border-top: 1px solid #DDDDDD;}
+          .c-product__badge-container{ display: none;}
+        }
+      }
+    }
+  }
+  /* //패키지 상품 */
+
   @at-root .monthly_home_set .lge__item .c-product__info .c-product__model-id,
   .c-product__list .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__brand-name{ font-weight: 600; color: #444; font-size: 12rem;
     @include screen("mo") { font-size: 11rem;}
@@ -351,7 +388,7 @@
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   
   section{ position: relative; overflow: hidden;
-    &.navigation_tab { position: sticky; top: 0; background-color: #111111; color: #fff; font-size: 20rem; font-weight: 500; z-index: 5;
+    &.navigation_tab { position: sticky; top: 0; background-color: #111111; color: #fff; font-size: 20rem; font-weight: 500; z-index: 5; margin-bottom: -1px;
       @include screen("mo") { font-size: 14rem; white-space: nowrap; font-weight: 400;}
       @include screen("mo2") { top: 56px;}
       nav{
@@ -884,7 +921,9 @@
               h3{ font-weight: 600; @include font-size(16rem); display: flex; align-items: center; gap: 8rem; margin-bottom: 6rem;
                 span::after{ content: ''; width: 1px; height: 10.5rem; background-color: #ddd; display: inline-block; margin-left: 8rem;}
               }
-              p{ @include font-size(14rem); opacity: .8;}
+              p{ @include font-size(14rem); opacity: .8;
+                span{ color: #666;}
+              }
             }
           }
         }
@@ -892,7 +931,21 @@
 
       &#how_to_buy{
         .swiper{ overflow: visible;
-          .swiper-slide{ background-color: #fff; height: 500rem; border-radius: 12rem;}
+          .swiper-wrapper{  counter-reset: how_to_buy;
+            .swiper-slide{ background-color: #fff; border-radius: 12rem; overflow: hidden;
+              .txt_box{ text-align: center; padding: 36rem 0 20rem;
+                &:before {
+                  counter-increment: how_to_buy;
+                  content: "STEP 0"counter(how_to_buy);
+                  display: inline-block; font-size: 12rem; font-weight: 700; color: #666; border-radius: 999rem; padding: 2rem 8rem; background-color: #f3f3f0; margin: 0 auto; 
+                }
+                h3{ margin: 12rem 0 2rem; font-weight: 600; font-size: 16rem;}
+                p{ color: #444; font-size: 14rem;}
+              }
+              img{ width: 100%; transition: 1s ease; transform: translateY(30rem);}
+              &.swiper-slide-active img{ transform: translateY(0);}
+            }
+          }
         }
       }
     }

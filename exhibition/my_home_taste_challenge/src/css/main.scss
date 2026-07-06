@@ -74,16 +74,16 @@
       }
     }
     &#mission{
-      ul{
+      ul{ display: grid; grid-template-columns: 1fr 1fr; gap: 8rem;
+        @include screen("mo") { grid-template-columns: 1fr;}
         li{ position: relative; color: #fff; border-radius: 8rem; overflow: hidden;
-          + li{ margin-top: 8rem;}
-          @include screen("pc") { 
-            img{ object-fit: cover; object-position: center top; height: 578rem;}
+          img{ object-fit: cover; object-position: center top;
+            @include screen("mo") { height: 395rem;}
           }
           .txt_box{ position: absolute; left: 0; bottom: 0; padding: 16rem 20rem; width: 100%;
-            @include screen("mo") { padding-bottom: 45rem;}
-            h3{ padding: 2rem 10rem; border-radius: 4rem; background-color: #fff; color: #111; @include font-size(14rem); font-weight: 600;  display: inline-block;}
-            p{ margin-top: 8rem; @include font-size(12rem);}
+            @include screen("mo") { padding:16rem;}
+            h3{ padding: 2rem 10rem; border-radius: 4rem; background-color: #fff; color: #111; @include font-size(16rem); font-weight: 600;  display: inline-block;}
+            p{ margin-top: 10rem; @include font-size(13rem);}
           }
         }
       }
@@ -94,7 +94,7 @@
       .reward_list {
         padding: 0 28rem; border-radius: 12rem; background-color: #fff;
         li {
-          display: flex; align-items: center; gap: 8rem; min-height: 86rem; padding: 20rem 0;
+          display: flex; align-items: center; gap: 8rem; min-height: 86rem; padding: 20rem 0; 
           + li { border-top: 1px dashed #ddd; }
           img{ width: 54rem;}
           .txt_box { flex: 1; 

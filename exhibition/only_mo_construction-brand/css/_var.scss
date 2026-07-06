@@ -1,0 +1,27 @@
+
+$mo-width: 390;
+$mo-pd: calc(16 / $mo-width * 100vw);
+
+@mixin screen($size) {
+  @if $size == "pc" {
+    @media (max-width: 1px) {
+      @content;
+    }
+  } @else if $size == "tb" {
+    @media (max-width: 1px) {
+      @content;
+    }
+  } @else if $size == "mo" {
+    @media (min-width: 1px) {
+      @content;
+    }
+  } @else if $size == "pc2" {
+    @media (min-width: 781px) {
+      @content;
+    }
+  } @else if $size == "mo2" {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+}

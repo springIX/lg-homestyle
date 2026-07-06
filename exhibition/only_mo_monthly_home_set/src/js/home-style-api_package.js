@@ -184,6 +184,7 @@
     #updateProductCard(elItem, data) {
       const elements = this.#getCardElements(elItem);
       if (!elements.mainSpan) return;
+      const packageDetail = elements.mainSpan.dataset.detail || '';
 
       const isCardSoldOut = this.#isSoldOut(data);
 
@@ -266,6 +267,19 @@
       elItem.classList.toggle(HomeStyleProductUIController.CLASSES.SOLD_OUT, isCardSoldOut);
       this.#toggleSoldOutAccessibilityText(elItem, isCardSoldOut);
       this.#ensurePriceVisible(elItem);
+
+      if (packageDetail) {
+        const infoContainer = elItem.querySelector('.c-product__info-container .inner > a');
+        let packageContents = elItem.querySelector('.package_contents');
+
+        if (!packageContents) {
+          packageContents = document.createElement('p');
+          packageContents.className = 'package_contents';
+          infoContainer.appendChild(packageContents); // 마지막에 추가
+        }
+
+        packageContents.textContent = packageDetail;
+      }
     }
 
     #createDiscountBadgeHTML(data) {
@@ -539,7 +553,10 @@
         // 컨텐츠 on (직속자식 index 매칭)
         $contWrap.children().removeClass('on').eq(idx).addClass('on');
       });
-
+      $(document).off('click.dataToggle').on('click.dataToggle', '[data-toggle]', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('on');
+      });
     }
 
 
@@ -559,8 +576,10 @@
       const hasHomestyling = document.querySelector('#homestyling .swiper');
       const hasInterior = document.querySelector('#interior .swiper');
       const hasHowToApply = document.querySelector('#how_to_apply .swiper'); // ✅ 추가
+      const hasAiHomeStyling = document.querySelector('#ai_home_styling .swiper'); // ✅ 추가
+      const hasHowToBuy = document.querySelector('#how_to_buy .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy) return;
 
       swiperInited = true;
 
@@ -693,6 +712,35 @@
           navigation: {
             nextEl: '#interior .nxt',
             prevEl: '#interior .prv',
+          },
+        });
+      }
+
+      // 5) Ai Home Styling
+      if (hasAiHomeStyling) {
+        document.querySelectorAll('#ai_home_styling .swiper').forEach(swiperEl => {
+          if (!swiperEl.swiper) {
+            new Swiper(swiperEl, {
+              slidesPerView: 1,
+              speed: 800,
+              scrollbar: {
+                el: swiperEl.querySelector('.scr_bar'),
+                draggable: true,
+              },
+            });
+          }
+        });
+      }
+
+      // 6) How to buy
+      if (hasHowToBuy) {
+        new Swiper('#how_to_buy .swiper', {
+          speed: 800,
+          spaceBetween: remToPx(10),
+          slidesPerView: 1,
+          scrollbar: {
+            el: '#how_to_buy .scr_bar',
+            draggable: true,
           },
         });
       }

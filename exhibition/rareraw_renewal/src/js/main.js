@@ -12,4 +12,10 @@ $(function () {
       draggable: true,
     },
   });
+
+  // 새 인터렉션
+  $(document).on('click', '.notice_box button', function (e) {
+    e.preventDefault();
+    $(this).closest('.notice_box').toggleClass('on');
+  });
 });

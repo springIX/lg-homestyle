@@ -1,6 +1,6 @@
 // SCSS의 'VAR, MIXIN, FUNCTION을 공통으로 사용하기 위한 목적
 @mixin font-size($size) {
-  font-size: clamp(8px, $size, 9999rem);
+  font-size: $size;
 }
 
 // Layout inner
