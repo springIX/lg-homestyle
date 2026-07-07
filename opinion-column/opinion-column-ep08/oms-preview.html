@@ -1245,15 +1245,15 @@
     background-position: center;
 }
 #opinion-column-body .o-solution li:nth-child(1) article::before {
-    background-image: url('../opinion-column-ep08/src/images/solution-icon-01.png');
+    background-image: url('../opinion-column-ep08/src/images/solution-icon-01.webp');
 }
 
 #opinion-column-body .o-solution li:nth-child(2) article::before {
-    background-image: url('../opinion-column-ep08/src/images/solution-icon-02.png');
+    background-image: url('../opinion-column-ep08/src/images/solution-icon-02.webp');
 }
 
 #opinion-column-body .o-solution li:nth-child(3) article::before {
-    background-image: url('../opinion-column-ep08/src/images/solution-icon-03.png');
+    background-image: url('../opinion-column-ep08/src/images/solution-icon-03.webp');
 }
 
 #opinion-column-body .o-solution h4 {
@@ -1299,7 +1299,7 @@
     width: min(100%, 780px);
     height: auto;
     overflow: hidden;
-    background: #ebebeb url('../opinion-column-ep08/src/images/opinion-floor-plan-bg-top.jpg') no-repeat center top / cover;
+    background: #ebebeb url('../opinion-column-ep08/src/images/opinion-floor-plan-bg-top.webp') no-repeat center top / cover;
     aspect-ratio: 780 / 90;
 }
 #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner {
@@ -1735,6 +1735,16 @@ transform:  scale(1.05) !important;
 
 #opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body {
     position: absolute;
+    /* 위치는 각 .o-pop-body 인라인 style의 CSS 변수로 수동 지정 (data-direction 대체) */
+    top: var(--pop-top, auto);
+    right: var(--pop-right, auto);
+    bottom: var(--pop-bottom, auto);
+    left: var(--pop-left, auto);
+    transform: var(--pop-transform, none);
+    margin-top: var(--pop-mt, 0);
+    margin-right: var(--pop-mr, 0);
+    margin-bottom: var(--pop-mb, 0);
+    margin-left: var(--pop-ml, 0);
     background: #fff;
     padding: 8px;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
@@ -1751,45 +1761,6 @@ transform:  scale(1.05) !important;
     display: flex;
     align-items: center;
     gap: 12px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom"] .o-pop-body{
-  top: 100%;
-  left: 0;
-  margin-left: -53px;
-  margin-top: 11px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-center"] .o-pop-body{
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 11px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-left"] .o-pop-body{
-    top: 0;
-    left: auto;
-    right: 120%;
-    margin-top: 11px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="left"] .o-pop-body{
-  bottom: 100%;
-  right: 0;
-  margin-bottom: 14px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-left"] .o-pop-body{
-  bottom: 100%;
-  left: 0;
-  margin-bottom: 14px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-right"] .o-pop-body{
-  bottom: 100%;
-  right: 0;
-  margin-bottom: 14px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="right"] .o-pop-body{
-  top: 0;
-  left: 100%;
-  margin-left: 15px;
-  margin-bottom: 14px;
 }
 #opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body img{
   width: 76px;
@@ -1867,62 +1838,39 @@ transform:  scale(1.05) !important;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
     top: 38%;
-    left: 74%;
+    left: 58%;
     right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
     top: 38%;
-    left: 38%;
+    left: 74%;
     right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(3) .o-detail-spot:nth-child(1) {
-    top: 30%;
-    left: 50%;
+    top: 45%;
+    left: 36%;
     right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(2) .o-detail-spot {
-    top: 24%;
+    top: 27%;
     left: 12%;
     right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(3) .o-detail-spot {
-    top: 24%;
-    left: 12%;
+    top: 11%;
+    left: 46%;
+    right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(4) article .o-detail-images:nth-child(1) .o-detail-spot {
     top: 26%;
     left: 52%;
   }
 
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom"] .o-pop-body{
-    bottom: 100%;
-    margin-bottom: 8px;
-    margin-top: 0;
-    left: auto;
-    top: auto;
-    right: 7px;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="left"] .o-pop-body{
-    right: auto;
-    left: 7px;
-    margin-bottom: 8px;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="right"] .o-pop-body{
-    top: auto;
-    left: auto;
-    margin-left: 0;
-    margin-bottom: 8px;
-    right: 0;
-    bottom: 100%;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-left"] .o-pop-body,
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-center"] .o-pop-body {
-    margin-top:5px;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-left"] .o-pop-body,
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-right"] .o-pop-body {
-    margin-bottom:5px;
-  }
 
 }
 
@@ -2746,7 +2694,7 @@ transform:  scale(1.05) !important;
             <div class="o-wrapper">
                 <div class="o-inner">
                     <div class="o-content">
-                        <h3 id="main-heading"><img src="../opinion-column-ep08/src/images/kv-title.png" alt="Opinion Column Ep.8"></h3>
+                        <h3 id="main-heading"><img src="../opinion-column-ep08/src/images/kv-title.webp" alt="Opinion Column Ep.8"></h3>
                         <p>
                             <strong>오피니언 칼럼</strong>은 공간을 단순히 아름답게 꾸미는 것을<br class="o-br-m">
                             넘어 실제 삶의 방식과 동선, 가전의 조화를 함께 설계하는<br class="o-br-m">
@@ -2758,7 +2706,7 @@ transform:  scale(1.05) !important;
                     <div class="o-bg o-parallax">
                         <picture>
                             <!-- <source media="(max-width: 768px)" srcset="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/opinion-kv_m.webp"> -->
-                            <img src="../opinion-column-ep08/src/images/opinion-kv.jpg" alt="" role="img">
+                            <img src="../opinion-column-ep08/src/images/opinion-kv.webp" alt="" role="img">
                         </picture>
                     </div>
                 </div>
@@ -2781,7 +2729,7 @@ transform:  scale(1.05) !important;
                       </div>
                       <div class="profile-info">
                         <div class="profile-image">
-                            <img src="../opinion-column-ep08/src/images/designer-profile_new.png" alt="" loading="lazy" role="img">
+                            <img src="../opinion-column-ep08/src/images/designer-profile_new.webp" alt="" loading="lazy" role="img">
                         </div>
                         <p class="profile-name">릴스퀘어</p>
                       </div>
@@ -2824,7 +2772,7 @@ transform:  scale(1.05) !important;
                         <div class="o-request">
                             <div class="o-comparison-slider" id="comparisonSlider">
                                 <div class="o-comp-layer-static">
-                                    <img src="../opinion-column-ep08/src/images/layout-after_01.jpg" alt="">
+                                    <img src="../opinion-column-ep08/src/images/layout-after_01.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -2928,9 +2876,9 @@ transform:  scale(1.05) !important;
                                                 <div class="fp-detail-view">
                                                 <div class="fp-detail-mask">
                                                     <div class="fp-detail-images-wrapper">
-                                                        <img src="../opinion-column-ep08/src/images/detail-map-01.jpg" alt="" class="fp-detail-img active" data-index="0">
-                                                        <img src="../opinion-column-ep08/src/images/detail-map-02.jpg" alt="" class="fp-detail-img" data-index="1">
-                                                        <img src="../opinion-column-ep08/src/images/detail-map-03.jpg" alt="" class="fp-detail-img" data-index="2">
+                                                        <img src="../opinion-column-ep08/src/images/detail-map-01.webp" alt="" class="fp-detail-img active" data-index="0">
+                                                        <img src="../opinion-column-ep08/src/images/detail-map-02.webp" alt="" class="fp-detail-img" data-index="1">
+                                                        <img src="../opinion-column-ep08/src/images/detail-map-03.webp" alt="" class="fp-detail-img" data-index="2">
                                                     </div>
                                                 </div>
                                                 <button type="button" class="fp-nav-btn prev" aria-label="이전">
@@ -2969,19 +2917,19 @@ transform:  scale(1.05) !important;
                                         <div class="fp-spot-info-container">
                                             <h5 class="fp-label">Detail</h5>
                                             <div class="fp-spot-info-item active" data-index="0">
-                                                <img src="../opinion-column-ep08/src/images/detail-spot-01.jpg" alt="">
+                                                <img src="../opinion-column-ep08/src/images/detail-spot-01.webp" alt="">
                                             </div>
                                             <div class="fp-spot-info-item" data-index="1">
-                                                <img src="../opinion-column-ep08/src/images/detail-spot-02.jpg" alt="">
+                                                <img src="../opinion-column-ep08/src/images/detail-spot-02.webp" alt="">
                                             </div>
                                             <div class="fp-spot-info-item" data-index="2">
-                                                <img src="../opinion-column-ep08/src/images/detail-spot-03.jpg" alt="">
+                                                <img src="../opinion-column-ep08/src/images/detail-spot-03.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="fp-small-map">
                                         <h5 class="fp-label">Before</h5>
                                         <div class="fp-map-nav">
-                                            <img src="../opinion-column-ep08/src/images/detail-map-small.png" alt="평면도 맵" class="fp-map-bg">
+                                            <img src="../opinion-column-ep08/src/images/detail-map-small.webp" alt="평면도 맵" class="fp-map-bg">
                                             <button type="button" class="fp-point active" style="left: 58%; top: 71%;" data-index="0" aria-label="1번 공간 위치 보기">1</button>
                                             <button type="button" class="fp-point" style="left: 55%; top: 40%;" data-index="1" aria-label="2번 공간 위치 보기">2</button>
                                             <button type="button" class="fp-point" style="left: 90%; top: 40%;" data-index="2" aria-label="3번 공간 위치 보기">3</button>
@@ -3009,27 +2957,27 @@ transform:  scale(1.05) !important;
                             <article>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-01-1.jpg" alt="맞춤 수납장 안에 숨겨진 피아노를 여는 흰색 도어" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-01-1.webp" alt="맞춤 수납장 안에 숨겨진 피아노를 여는 흰색 도어" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="top-right">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/tvs/oled97g6kna-wall2" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-01-1_pop-1.jpg" alt="LG 올레드 evo AI (벽걸이형) 245cm" loading="lazy">
+                                            <a href="https://www.lge.co.kr/tvs/oled97g6kna-wall2" class="o-pop-body" style="--pop-bottom:100%; --pop-right:0; --pop-mb:14px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-01-1_pop-1.webp" alt="LG 올레드 evo AI (벽걸이형) 245cm" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">LG</span>
                                                 <p>LG 올레드 evo AI (벽걸이형) 245cm</p>
                                             </div>
                                             </a>
                                         </div>
-                                        <div class="o-detail-spot" data-direction="bottom-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/home-audio/s95ar" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-01-1_pop-2.jpg" alt="LG 사운드바 9.1.5 채널" loading="lazy">
+                                            <a href="https://www.lge.co.kr/home-audio/s95ar" class="o-pop-body" style="--pop-top:0; --pop-right:120%; --pop-mt:11px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-01-1_pop-2.webp" alt="LG 사운드바 9.1.5 채널" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">LG</span>
                                                 <p>LG 사운드바 9.1.5 채널</p>
@@ -3040,27 +2988,27 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-01-2.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-01-2.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-center">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25080007133" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-01-2_pop-1.jpg" alt="코뮨 리츄얼스 거실 소파 테이블" loading="lazy">
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25080007133" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-01-2_pop-1.webp" alt="코뮨 리츄얼스 거실 소파 테이블" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">코뮨</span>
                                                 <p>리츄얼스 거실 소파 테이블</p>
                                             </div>
                                             </a>
                                         </div>
-                                        <div class="o-detail-spot" data-direction="top-right">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070001820" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-01-2_pop-2.jpg" alt="알로소 알로소 보눔 3인소파 가죽소파" loading="lazy">
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070001820" class="o-pop-body" style="--pop-bottom:100%; --pop-right:0; --pop-mb:14px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-01-2_pop-2.webp" alt="알로소 알로소 보눔 3인소파 가죽소파" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">알로소</span>
                                                 <p>알로소 보눔 3인소파 가죽소파</p>
@@ -3071,15 +3019,15 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-01-3.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-01-3.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070003824" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-01-3_pop-1.jpg" alt="플로스 Luminator _5colors" loading="lazy">
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070003824" class="o-pop-body" style="--pop-top:100%; --pop-left: -80%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-01-3_pop-1.webp" alt="플로스 Luminator _5colors" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">플로스</span>
                                                 <p>Luminator _5colors</p>
@@ -3117,15 +3065,15 @@ transform:  scale(1.05) !important;
                             <article>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-02-1.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-02-1.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25120026271" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-02-1_pop-1.jpg" alt="이스턴에디션 삼발이 의자_2 Colors " loading="lazy">
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25120026275" class="o-pop-body" style="--pop-top: 75%; --pop-right: 15%; --pop-mt:11px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-02-1_pop-1.webp" alt="이스턴에디션 삼발이 의자_2 Colors " loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">이스턴에디션</span>
                                                 <p>삼발이 의자_2 Colors </p>
@@ -3136,46 +3084,46 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-02-2.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-02-2.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/refrigerators/g646gbb031" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-02-2_pop-1.jpg" alt="LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급" loading="lazy">
-                                            <div class="desc">
-                                                <span class="tit">LG</span>
-                                                <p>LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급</p>
-                                            </div>
+                                            <a href="https://www.lge.co.kr/refrigerators/g646gbb031" class="o-pop-body" style="--pop-top:100%; --pop-left: -80%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                                <img src="../opinion-column-ep08/src/images/detail-02-2_pop-1.webp" alt="LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급" loading="lazy">
+                                                <div class="desc">
+                                                    <span class="tit">LG</span>
+                                                    <p>LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급</p>
+                                                </div>
                                             </a>
                                         </div>
-                                        <div class="o-detail-spot" data-direction="bottom-center">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/kimchi-refrigerators/z334gbb171" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-02-2_pop-2.jpg" alt="LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급" loading="lazy">
-                                            <div class="desc">
-                                                <span class="tit">LG</span>
-                                                <p>LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급</p>
-                                            </div>
+                                            <a href="https://www.lge.co.kr/kimchi-refrigerators/z334gbb171" class="o-pop-body" style="--pop-top:100%; --pop-left:-200%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                                <img src="../opinion-column-ep08/src/images/detail-02-2_pop-2.webp" alt="LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급" loading="lazy">
+                                                <div class="desc">
+                                                    <span class="tit">LG</span>
+                                                    <p>LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급</p>
+                                                </div>
                                             </a>
                                         </div>
                                     </div>
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-02-3.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-02-3.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-center">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/water-purifiers/wu923as" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-02-3_pop-1.jpg" alt="LG 퓨리케어 정수기(듀얼, 냉온정)" loading="lazy">
+                                            <a href="https://www.lge.co.kr/water-purifiers/wu923as" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-02-3_pop-1.webp" alt="LG 퓨리케어 정수기(듀얼, 냉온정)" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">LG</span>
                                                 <p>퓨리케어 정수기(듀얼, 냉온정)</p>
@@ -3210,20 +3158,20 @@ transform:  scale(1.05) !important;
                             <article>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-03-1.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-03-1.webp" alt="" loading="lazy">
                                     </picture>
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-03-2.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-03-2.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="right">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-03-1_pop-1.jpg" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
+                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body" style="--pop-top: 120%; --pop-left: -52%; --pop-ml:15px; --pop-mb:14px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-03-1_pop-1.webp" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">LG</span>
                                                 <p>LG 퓨리케어 바스에어시스템 <br>프리미엄 듀얼</p>
@@ -3234,15 +3182,15 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="../opinion-column-ep08/src/images/detail-03-3.jpg" alt="" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/detail-03-3.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-center">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body">
-                                            <img src="../opinion-column-ep08/src/images/detail-03-1_pop-1.jpg" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
+                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="../opinion-column-ep08/src/images/detail-03-1_pop-1.webp" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
                                             <div class="desc">
                                                 <span class="tit">LG</span>
                                                 <p>LG 퓨리케어 바스에어시스템 <br>프리미엄 듀얼</p>
@@ -3295,7 +3243,7 @@ transform:  scale(1.05) !important;
                                         열어주는 거울
                                     </h4>
                                     <div class="tip-img-wrap">
-                                        <img src="../opinion-column-ep08/src/images/tip-01_1.jpg" alt="벽으로 분리된 다이닝 공간과 긴 식탁" loading="lazy">
+                                        <img src="../opinion-column-ep08/src/images/tip-01_1.webp" alt="벽으로 분리된 다이닝 공간과 긴 식탁" loading="lazy">
                                     </div>
                                     <p>
                                         거울은 현관이나 욕실에만 사용하는 소품이 아닙니다. 거실과 주방처럼 이어진 공간에 넓은 면으로 적용하면, 반사된 장면을 통해 시야가 확장되어 공간이 더 넓게 느껴집니다.
