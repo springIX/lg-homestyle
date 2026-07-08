@@ -596,10 +596,15 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 16px;
     font-weight: 500;
     color: #37261A;
+}
+@media (max-width: 768px) {
+    #opinion-column-body > main > section.opinion-result .fp-small-map p {
+        font-size: 11px;
+    }
 }
 
 #opinion-column-body > main > section.opinion-result .fp-label span:first-child {
@@ -1881,7 +1886,7 @@ transform:  scale(1.05) !important;
 #opinion-column-body > main > section.opinion-tip {
     background-color: #FFFFFF;
     transition: background-color 1.2s ease-in-out;
-    padding: 120px 40px 130px;
+    padding: 120px 40px 60px;
 }
 #opinion-column-body > main > section.opinion-tip.o-on {
     background-color: #AB9985;
@@ -2110,7 +2115,7 @@ transform:  scale(1.05) !important;
 @media (max-width: 768px) { 
     #opinion-column-body > main > section.opinion-tip {
         margin-top: 24px;
-        padding: 60px 20px;
+        padding: 60px 20px 40px;
     }
     #opinion-column-body > main > section.opinion-tip > .o-wrapper {
         max-width: 100%;
