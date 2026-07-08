@@ -484,7 +484,7 @@
     display: block;
     position: relative;
     padding: 100px 32px 48px;
-    background-color: #5D6A4E;
+    background-color: #544133;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     min-height: 0;
 }
@@ -572,7 +572,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #99A988;
+    background: rgba(0, 0, 0, 0.06);;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -723,8 +723,8 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: #23291B;
-      color: #C3D4B0 !important;
+      background: #37261A !important;
+      color: #C3AB97 !important;
       font-weight: 400;
       font-size: 16px;
       line-height: 1.4;
@@ -739,7 +739,7 @@
   }
   #opinion-column-body .fp-point.active {
       font-weight: 700 !important;
-      background: #FFD700;
+      background: #FFD400 !important;
       color: #000 !important;
       /* transform: translate(-50%, -50%) scale(1.1); */
   }
@@ -984,7 +984,7 @@
 #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title h4 {
     font-size: 15.6px;
     font-weight: 600;
-    color: #5D6A4E;
+    color: #544133;
     line-height: 22px;
     letter-spacing: -0.55px;
     padding: 0 0 8px 0;
@@ -1027,6 +1027,10 @@
     width: 100%;
     height: auto;
     padding: 0 0 80px;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request:has(.o-comparison-slider) {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request blockquote {
     width: 50%;
@@ -1229,15 +1233,15 @@
     background-position: center;
 }
 #opinion-column-body .o-solution li:nth-child(1) article::before {
-    background-image: url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/solution-icon-01.webp');
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/solution-icon-01.webp');
 }
 
 #opinion-column-body .o-solution li:nth-child(2) article::before {
-    background-image: url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/solution-icon-02.webp');
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/solution-icon-02.webp');
 }
 
 #opinion-column-body .o-solution li:nth-child(3) article::before {
-    background-image: url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/solution-icon-03.webp');
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/solution-icon-03.webp');
 }
 
 #opinion-column-body .o-solution h4 {
@@ -1271,7 +1275,7 @@
     max-width: 780px;
     height: 100%;
     padding-bottom: 0;
-    background-color: #9FAF8D;
+    background-color: #AB9985;
 }
 #opinion-column-body > main > section.opinion-result::after {
     content: "";
@@ -1283,7 +1287,7 @@
     width: min(100%, 780px);
     height: auto;
     overflow: hidden;
-    background: #ebebeb url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/opinion-floor-plan-bg-top.webp') no-repeat center top / cover;
+    background: #ebebeb url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/opinion-floor-plan-bg-top.webp') no-repeat center top / cover;
     aspect-ratio: 780 / 90;
 }
 #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner {
@@ -1502,17 +1506,42 @@
     margin-bottom:24px;
 }
 
-#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot {
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
   top: auto;
-  bottom: 20%;
-  left: 21%;
+  bottom: 42%;
+  transform: translate(0, 0);
+  right: 20%;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
+  bottom: 23%;
+  right: 9%;
+  transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
+  top: auto;
+  bottom: 34%;
+  left: 36%;
+  right: auto;
+  transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+  top: auto;
+  bottom: 53%;
+  left: 68%;
+  right: auto;
+  transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(3) .o-detail-spot {
+  bottom: 75%;
+  right: 33%;
   transform: translate(0, 0);
 }
 
 #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
-    top: 25%;
-    left: 18%;
+    top: 61%;
+    left: 76%;
     transform: translate(0, 0);
+    bottom: auto;
 }
 #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
     top: 25%;
@@ -1520,18 +1549,28 @@
     transform: translate(0, 0);
 }
 #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
-    top: 65%;
-    left: 71%;
+    bottom: 55%;
+    right: 33%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+    bottom: 55%;
+    right: 19%;
     transform: translate(0, 0);
 }
 #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(3) .o-detail-spot:nth-child(1) {
-    top: 33%;
-    left: 51%;
+    top: 49%;
+    left: 38%;
     transform: translate(0, 0);
 }
-#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(1) .o-detail-spot {
-    top: 26%;
-    left: 15%;
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(2) .o-detail-spot {
+    bottom: 68%;
+    right: 70%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(3) .o-detail-spot {
+    bottom: 81%;
+    right: 46%;
     transform: translate(0, 0);
 }
 #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(4) article .o-detail-images:nth-child(1) .o-detail-spot {
@@ -1609,8 +1648,10 @@ transform:  scale(1.05) !important;
 #opinion-column-body > main > section.opinion-detail .o-detail-spot {
     position: absolute;
     pointer-events: auto;
-    top: 50%;
-    left: 50%;
+    top: auto;
+    bottom: 42%;
+    left: auto;
+    right: 73%;
     transform: translate(-50%, -50%);
     z-index: 30;
 }
@@ -1682,6 +1723,16 @@ transform:  scale(1.05) !important;
 
 #opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body {
     position: absolute;
+    /* 위치는 각 .o-pop-body 인라인 style의 CSS 변수로 수동 지정 (data-direction 대체) */
+    top: var(--pop-top, auto);
+    right: var(--pop-right, auto);
+    bottom: var(--pop-bottom, auto);
+    left: var(--pop-left, auto);
+    transform: var(--pop-transform, none);
+    margin-top: var(--pop-mt, 0);
+    margin-right: var(--pop-mr, 0);
+    margin-bottom: var(--pop-mb, 0);
+    margin-left: var(--pop-ml, 0);
     background: #fff;
     padding: 8px;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
@@ -1698,44 +1749,6 @@ transform:  scale(1.05) !important;
     display: flex;
     align-items: center;
     gap: 12px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom"] .o-pop-body{
-  top: 100%;
-  left: 0;
-  margin-left: -53px;
-  margin-top: 11px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-center"] .o-pop-body{
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 11px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-left"] .o-pop-body{
-    top: 100%;
-    left: 0;
-    margin-top: 11px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="left"] .o-pop-body{
-  bottom: 100%;
-  right: 0;
-  margin-bottom: 14px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-left"] .o-pop-body{
-  bottom: 100%;
-  left: 0;
-  margin-bottom: 14px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-right"] .o-pop-body{
-  bottom: 100%;
-  right: 0;
-  margin-bottom: 14px;
-}
-#opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="right"] .o-pop-body{
-  top: 0;
-  left: 100%;
-  margin-left: 15px;
-  margin-bottom: 14px;
 }
 #opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body img{
   width: 76px;
@@ -1776,65 +1789,76 @@ transform:  scale(1.05) !important;
     height: 24px;
   }
 
-  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot {
-    bottom: 16%;
-    left: 16%;
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
+    bottom: 40%;
+    left: 72%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
+    bottom: 22%;
+    left: 84%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
+    bottom: 31%;
+    left: 39%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+    bottom: 50%;
+    left: 63%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(3) .o-detail-spot {
+    bottom: 74%;
+    left: 60%;
+    right: auto;
   }
 
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
-    top: 22%;
-    left: 15%;
+    top: 58%;
+    left: 74%;
+    right: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
     top: 22%;
     left: 43%;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
-    top: 61%;
-    left: 68.5%;
+    top: 38%;
+    left: 58%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+    top: 38%;
+    left: 74%;
+    right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(3) .o-detail-spot:nth-child(1) {
-    top: 30%;
-    left: 50%;
+    top: 45%;
+    left: 36%;
+    right: auto;
+    bottom: auto;
   }
-  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(1) .o-detail-spot {
-    top: 24%;
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(2) .o-detail-spot {
+    top: 27%;
     left: 12%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(3) .o-detail-spot {
+    top: 11%;
+    left: 46%;
+    right: auto;
+    bottom: auto;
   }
   #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(4) article .o-detail-images:nth-child(1) .o-detail-spot {
     top: 26%;
     left: 52%;
   }
 
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom"] .o-pop-body{
-    bottom: 100%;
-    margin-bottom: 8px;
-    margin-top: 0;
-    left: auto;
-    top: auto;
-    right: 7px;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="left"] .o-pop-body{
-    right: auto;
-    left: 7px;
-    margin-bottom: 8px;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="right"] .o-pop-body{
-    top: auto;
-    left: auto;
-    margin-left: 0;
-    margin-bottom: 8px;
-    right: 0;
-    bottom: 100%;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-left"] .o-pop-body,
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="bottom-center"] .o-pop-body {
-    margin-top:5px;
-  }
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-left"] .o-pop-body,
-  #opinion-column-body > main > section.opinion-detail .o-detail-spot[data-direction="top-right"] .o-pop-body {
-    margin-bottom:5px;
-  }
 
 }
 
@@ -1848,7 +1872,7 @@ transform:  scale(1.05) !important;
     padding: 120px 40px 130px;
 }
 #opinion-column-body > main > section.opinion-tip.o-on {
-    background-color: #B6C5A5;
+    background-color: #AB9985;
 }
 #opinion-column-body > main > section.opinion-tip > .o-wrapper {
     max-width: 1920px;
@@ -1885,7 +1909,7 @@ transform:  scale(1.05) !important;
     background-repeat: no-repeat;
     background-position: right center;
     right: 0;
-    bottom: 0;
+    bottom: 1px;
 }
 #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content:before{
     position: absolute;
@@ -1935,7 +1959,7 @@ transform:  scale(1.05) !important;
     color: #111;
     line-height: 1.33;
     letter-spacing: -0.05em;
-    padding: 16px 0 48px 0;
+    padding: 16px 0 0 0;
     text-align: center;
 }
 #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h4 .highlight{
@@ -1949,8 +1973,8 @@ transform:  scale(1.05) !important;
     transform: translate(-50%, -50%);
 }
 #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content #tip-panel-1 h4 .highlight svg{
-    width: 131px;
-    height: 71px;
+    width: 100px;
+    height: 54px;
     margin:5px 0 0 -2px;
 }
 #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content #tip-panel-2 h4 .highlight svg{
@@ -2005,32 +2029,6 @@ transform:  scale(1.05) !important;
     font-weight: 600;
     color: #111;
     letter-spacing: 0;
-}
-#opinion-column-body > main > section.opinion-tip .o-tip-tabs {
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    background: #8A9F72;
-    border-radius: 50px;
-    margin-bottom: 24px;
-    position: relative;
-}
-#opinion-column-body > main > section.opinion-tip .o-tip-tabs:after{
-    content: "";
-    position: absolute;
-    top: 8px;
-    width: calc(50% - 8px);
-    height: calc(100% - 16px);
-    background: #000;
-    border-radius: 50px;
-    box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.12);
-    transition: left 0.25s ease;
-}
-#opinion-column-body > main > section.opinion-tip .o-tip-tabs[data-active="1"]:after{
-    left: 8px;
-}
-#opinion-column-body > main > section.opinion-tip .o-tip-tabs[data-active="2"]:after{
-    left: 50%;
 }
 #opinion-column-body > main > section.opinion-tip .o-tip-tab {
     border: none;
@@ -2364,15 +2362,17 @@ transform:  scale(1.05) !important;
   #opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content {
       width: 300px;
       height: 240px;
-      padding: 28px 20px;
-      gap: 39px;
+      padding: 28px 18px;
+      gap: 48px;
       margin-top: -18px;
   }
   #opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content h3 {
       width: 181px;
+      margin: 0;
   }
   #opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content p {
       font-size: 12px;
+      margin-top: 0;
   }
 
   #opinion-column-body > main > section.opinion-profile {
@@ -2428,7 +2428,7 @@ transform:  scale(1.05) !important;
       width: 48px;
   }
   #opinion-column-body .o-profile .profile-caption .profile-etc p{
-      font-size: 14px;
+      font-size: 12px;
   }
   #opinion-column-body .o-profile .profile-caption .profile-etc1{
       text-align: right;
@@ -2456,6 +2456,7 @@ transform:  scale(1.05) !important;
 
   #opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(1) {
       padding: 60px 20px 40px 20px;
+      gap: 0;
   }
   #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title h4{
     font-size: 12px;
@@ -2488,6 +2489,10 @@ transform:  scale(1.05) !important;
       width: 100%;
       height: auto;
       padding: 0 0 0 0;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request:has(.o-comparison-slider) {
+      padding-left: 20px;
+      padding-right: 20px;
   }
   #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request > figure > figcaption, #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request .o-request-image > figcaption{
     font-size: 13px;
@@ -2677,7 +2682,7 @@ transform:  scale(1.05) !important;
             <div class="o-wrapper">
                 <div class="o-inner">
                     <div class="o-content">
-                        <h3 id="main-heading"><img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/kv-title.webp" alt="Opinion Column Ep.7"></h3>
+                        <h3 id="main-heading"><img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/kv-title.webp" alt="Opinion Column Ep.8"></h3>
                         <p>
                             <strong>오피니언 칼럼</strong>은 공간을 단순히 아름답게 꾸미는 것을<br class="o-br-m">
                             넘어 실제 삶의 방식과 동선, 가전의 조화를 함께 설계하는<br class="o-br-m">
@@ -2689,7 +2694,7 @@ transform:  scale(1.05) !important;
                     <div class="o-bg o-parallax">
                         <picture>
                             <!-- <source media="(max-width: 768px)" srcset="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/opinion-kv_m.webp"> -->
-                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/opinion-kv.webp" alt="크림색 소파와 원목 테이블의 밝은 거실" role="img">
+                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/opinion-kv.webp" alt="" role="img">
                         </picture>
                     </div>
                 </div>
@@ -2703,29 +2708,23 @@ transform:  scale(1.05) !important;
                   <div class="o-profile">
                     <div class="profile-content">
                       <div class="profile-copy">
-                          <h4>이사 대신 리모델링,<br> 단란한 7년의 추억이 담긴 공간</h4>
-                          
+                          <h4>맞벌이 부부를 위한 <br>김포 108㎡ (32평) 아파트</h4>
                           <p class="desc">
-                            두 자녀가 무럭무럭 자라고, 일정이 불규칙해지고,<br class="o-br-p"><br class="o-br-t">
-                            7년간 살아온 집이 조금씩 불편해질 무렵 배우 하도권은<br class="o-br-p"><br class="o-br-t">
-                            이사가 아닌 고쳐 사는 방법을 택했습니다. <br class="o-br-p"><br class="o-br-t">
-                            공간 디자이너 조희선과의 협업으로 완성된 이 집은<br class="o-br-p"><br class="o-br-t">
-                            가족의 라이프스타일을 분석하고 부부와 두 자녀의 <br class="o-br-p"><br class="o-br-t">
-                            니즈를 효율적으로 반영한 결과입니다. 홈스타일에서<br class="o-br-p"><br class="o-br-t">
-                            그 설계의 논리와 공간의 완성도를 들여다봅니다.
+                            남편은 재택근무가 많고, 아내는 불규칙한 일정으로 서울을  <br class="o-br-p"><br class="o-br-t">
+                            오갑니다. 생활 시간이 다른 두 사람이 집 안에서 함께 머무는 <br class="o-br-p"><br class="o-br-t">
+                            시간을 만들기 위해 거실과 주방을 하나의 개방형 구조로 재구성했습니다.
                         </p>
                       </div>
                       <div class="profile-info">
                         <div class="profile-image">
-                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/designer-profile_new.webp" alt="조희선 스튜디오 대표 조희선 프로필 사진" loading="lazy" role="img">
+                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/designer-profile_new.webp" alt="" loading="lazy" role="img">
                         </div>
-                        <p class="profile-name">조희선</p>
-                        <p class="profile-job">조희선 스튜디오 대표</p>
+                        <p class="profile-name">릴스퀘어</p>
                       </div>
                     </div>
                     <div class="profile-caption">
                       <div class="profile-etc">
-                        <p>‘공간의 스토리'를 말하는 리빙 크리에이티브 디렉터로서, <br>다양한 영역에서 독보적인 길을 걸으며 감각적이고도 <br>공감력 있는 공간을 연출합니다.</p>
+                        <p>릴스퀘어는 거주자의 생활 방식과 동선을 기준으로 집을 설계하는 주거 <br>공간 기획 그룹입니다. 가족 구성, 취향, 가전 사용 방식까지 고려해 실제 <br>생활에 맞는 인테리어를 제안합니다.</p>
                       </div>
                     </div>
                   </div>
@@ -2740,71 +2739,54 @@ transform:  scale(1.05) !important;
                     <article class="opinion-overview-head o-sub-set">
                         <h3 id="overview-heading" class="screen-reader-only">프로젝트 정보</h3>
                         <div class="o-title">
-                            <h4>의왕 아파트 101.55㎡</h4>
+                            <h4>김포 아파트 108㎡ (32평)</h4>
                             <blockquote>
                                 <p>
-                                    “이사 대신 우리 가족의 삶을<br>
-                                    돌아보는 시간이 됐어요.<br>
-                                    집을 고치면서 살아온 방식도 함께<br> 
-                                    정비했습니다.”
+                                    “바쁜 일상 속에서도<br>
+                                    함께 보내는 시간이 편안한 집을 <br>
+                                    만들고 싶었어요.”
                                 </p>
                             </blockquote>
                         </div>
                         <div class="o-desc">
-                            배우 하도권·성우 여민정 부부, 중고등학생 자녀 두 명이 7년째 거주하던 경기도 의왕의 아파트. 공간 효율은 점점 낮아졌고, 부부가 각자 쓸 수 있는 독립 공간은 없었습니다. 추억이 켜켜이 쌓인 집의 리모델링을 결심하며 찾은 공간 디자이너 조희선은 '수리'가 아닌 '가족의 라이프스타일 재설계'를 제안했습니다. 
+                            남편은 재택근무가 많고, 아내는 불규칙한 일정으로 서울을 오갑니다. 생활 시간이 다른 맞벌이 부부가 집 안에서 함께 머무는 시간을 만들기 위해, 거실과 주방을 개방형 구조로 재구성했습니다.
                             <br><br>
-                            4인 가족 각자의 라이프스타일을 반영해 레이아웃을 새롭게 구성했습니다. 이 집의 리뉴얼은 세 가지 전제를 바탕으로 진행됐습니다. <strong>첫째,</strong> 불규칙한 일정을 소화하는 부부가 서로의 생활 패턴을 침해하지 않을 것. <strong>둘째,</strong> 자녀가 독립한 뒤에도 두 사람이 오래 쓸 수 있는 구조일 것. <strong>셋째,</strong> 불필요한 것을 덜어낸 군더더기 없는 마감으로 시간이 지나도 질리지 않을 것.
+                            주방에는 대형 아일랜드와 제작 식탁을 연결해 조리, 식사, 대화가 한 자리에서 이어지도록 했고, 거실은 미디어 월을 기준으로 휴식과 취미를 즐길 수 있게 구성했습니다. 낮은 높이의 소파와 커피 테이블, 플로어 조명, 우드 의자는 거실과 주방의 차분한 분위기를 완성합니다.
+                            <br><br>
+                            채도를 낮춘 월넛 톤과 스톤, 브론즈 미러를 적용해 거실과 주방의 소재와 분위기를 통일하고, 가전과 수납은 벽면 빌트인 설계로 정리했습니다. 각자의 시간을 존중하면서도 함께 보내는 순간이 이어지는, 두 사람만의 랑데부 하우스입니다.
                         </div>
                     </article>
-
-                    <article class="opinion-overview-body">
-                        <h4 class="screen-reader-only">클라이언트 요구사항</h4>
+                    <article class="opinion-overview-body o-sub-on">
                         <div class="o-request">
                             <div class="o-comparison-slider" id="comparisonSlider">
-                              <div class="o-comp-layer-overlay">
-                                  <figure>
-                                      <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/layout-before.webp" alt="수납장과 책장이 빽빽한 기존 거실의 스케치 이미지">
-                                      <figcaption class="o-comp-caption">Before Layout</figcaption>
-                                  </figure>
-                              </div>
                                 <div class="o-comp-layer-static">
-                                    <figure>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/layout-after.webp" alt="화이트 수납장과 소파, 통창이 어우러진 리모델링 후 밝은 거실">
-                                        <figcaption class="o-comp-caption">After Layout</figcaption>
-                                    </figure>
-                                </div>
-                                <div class="o-comp-handle">
-                                    <div class="handle-btn">
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/layout-btn.svg" alt="평면도 비교 슬라이드 핸들">
-                                    </div>
-                                    <span class="handle-text">좌우로 슬라이드 해보세요</span>
+                                    <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/layout-after_01.webp" alt="">
                                 </div>
                             </div>
                         </div>
                     </article>
-                    
                     <article class="o-sub-set">
                         <h4 class="screen-reader-only">시공 정보</h4>
                         <ul class="o-info">
                             <li>
                                 <span class="label">공간 유형</span>
-                                <span class="value">아파트</span>
+                                <span class="value">아파트/김포</span>
                             </li>
                             <li>
-                                <span class="label">거주 기간</span>
-                                <span class="value">7년</span>
+                                <span class="label">공사기간</span>
+                                <span class="value">9주</span>
                             </li>
                             <li>
                                 <span class="label">공급 면적</span>
-                                <span class="value">101.55㎡ (약 30평대)</span>
-                            </li>
-                            <li>
-                                <span class="label">공사 유형</span>
-                                <span class="value">전체 레이아웃 개편</span>
+                                <span class="value">108㎡(32평)</span>
                             </li>
                             <li>
                                 <span class="label">주거 형태</span>
-                                <span class="value">부부, 자녀 2</span>
+                                <span class="value">2인가족(부부)</span>
+                            </li>
+                            <li>
+                                <span class="label">공사 유형</span>
+                                <span class="value">전체 공간 레이아웃 변경 및 <br>홈스타일링</span>
                             </li>
                         </ul>
                     </article>
@@ -2815,51 +2797,42 @@ transform:  scale(1.05) !important;
                             <li>
                                 <article>
                                     <h4>
-                                        거실의 노이즈를 지운<br>
-                                        히든 도어 수납과 차경 중심 설계
+                                        월넛과 브론즈 미러로 정리한 <br>
+                                        모던/미니멀 거실
                                     </h4>
                                     <p>
-                                        거실에서 시선을 분산시키는 모든 요소를 벽 안으로
-                                        과감히 숨겼습니다. 30년 된 피아노부터 커다란
-                                        책장, 자잘한 생활 수납품까지 맞춤형 <strong>히든 도어 뒤</strong>로 
-                                        깔끔하게 정돈해 <strong>문을 닫으면 갤러리처럼, 문을 열면
-                                        친근한 생활 공간</strong>으로 변하도록 연출했습니다.
+                                        거실은 미디어 월을 기준으로 시선의 중심을 잡았습니다. 우물천장, 벽면 분할, 간접조명을 활용해 구조를 단정하게 정리하고, 필요한 요소만 남겨 개방감을 확보했습니다.
                                     </p>
                                     <p>
-                                        시야를 방해하던 '노이즈'가 사라진 자리에는
-                                        사계절을 오롯이 느낄 수 있는 창밖 풍경만이
-                                        집 안 가득 스며듭니다.
+                                        소파와 커피 테이블은 낮고 안정적인 휴식 공간을 만들고, 플로어 조명은 거실 한쪽에 부드러운 빛의 포인트를 더합니다. 월넛 톤과 스톤, 브론즈 미러를 함께 적용해 30평대 아파트 안에서도 차분하고 넓어 보이는 공용부를 완성했습니다.
                                     </p>
                                 </article>
                             </li>
                             <li>
                                 <article>
                                     <h4>
-                                        침실을 쪼개 완성한<br>
-                                        멀티플 독립 스위트
+                                        대형 아일랜드와<br>
+                                        제작 식탁을 연결한 주방
                                     </h4>
                                     <p>
-                                        부부의 침실 면적을 타이트하게 줄이는 대신 <strong>아치형 중문 너머</strong>에 드레스룸·파우더룸·작은 업무 공간을 한데 묶었습니다. 문 하나로 <strong>취침 공간</strong>과 <strong>생활 공간</strong>이
-                                        나뉘어, 상대방의 수면을 방해하지 않고 <strong>각자의 생활 리듬에 맞춰 생활</strong>할 수 있습니다.
+                                        거실과 주방을 하나의 개방형 구조로 연결했습니다. 벽면 주방에는 조리, 세척, 수납 기능을 모으고, 중앙에는 대형 아일랜드와 제작 식탁을 배치했습니다.
                                     </p>
                                     <p>
-                                        불규칙한 스케줄을 소화하는 부부가 각자의 생활
-                                        리듬을 지킬 수 있도록, 침실과 생활 공간을 분리한
-                                        <strong>독립형 구조로 설계</strong>했습니다.
+                                        제작 식탁 주변에는 우드 의자를 더해 주방의 차분한 분위기를 완성했습니다. 조리와 식사, 대화가 한 자리에서 이루어지도록 구성해 두 사람이 함께 머무는 시간을 만들었습니다. 공간의 출입 방향도 조정해 주방 동선을 더 간결하게 정리했습니다.
                                     </p>
                                 </article>
                             </li>
                             <li>
                                 <article>
                                     <h4>
-                                        벽 한 줄을 늘려 이룬<br>
-                                        가족 소통의 아일랜드 키친
+                                        LG 퓨리케어 바스에어시스템을 <br>
+                                        적용한 욕실
                                     </h4>
                                     <p>
-                                        <strong>다이닝 공간의 가벽</strong>을 조금 더 길게 연장했습니다. 이 감각적인 한 끗 차이 덕분에 주방 중앙에 <strong>대면형 아일랜드</strong>를 안정적으로 배치할 수 있었고, <strong>가벽 너머의 다이닝 공간</strong>은 <strong>우아한 무드</strong>를 머금게 되었습니다.
+                                        침실과 연결된 욕실에는 천장형 공기순환기인 LG 퓨리케어 바스에어시스템을 적용했습니다. 샤워 후 습기와 냄새가 남기 쉬운 욕실에서 환기와 제습을 돕고, 온풍·송풍 기능으로 매일 사용하는 공간을 쾌적하게 관리할 수 있도록 했습니다.
                                     </p>
                                     <p>
-                                        특히 아일랜드 상판과 다이닝 식탁을 동일한 <strong>칸스톤 소재</strong>로 통일해, 두 영역이 분리되어 있으면서도 시각적으로는 매끄럽게 읽히도록 마감했습니다.
+                                        바스에어시스템이 욕실 분위기와 어우러지도록 설치 위치와 색상, 마감 디테일도 함께 조정했습니다.
                                     </p>
                                 </article>
                             </li>
@@ -2877,8 +2850,7 @@ transform:  scale(1.05) !important;
                         <div class="result-description">
                             <h4>
                                 <span>
-                                    불필요한 것은 감추고 공간은<br>
-                                    효율적으로 나눈 4인 가족의 아파트
+                                    거실과 주방을 연결한 30평대 아파트 인테리어
                                 </span>
                                 <strong>전문가의 디테일로 완성된 공간</strong>
                             </h4>
@@ -2892,11 +2864,9 @@ transform:  scale(1.05) !important;
                                                 <div class="fp-detail-view">
                                                 <div class="fp-detail-mask">
                                                     <div class="fp-detail-images-wrapper">
-                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-map-01.webp" alt="오렌지 조명 아래 소파와 원형 테이블, 수납장이 배치된 아늑한 거실" class="fp-detail-img active" data-index="0">
-                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-map-02.webp" alt="ㄱ자 주방과 식탁, 아일랜드 조명이 어우러진 주방·다이닝 공간" class="fp-detail-img" data-index="1">
-                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-map-03.webp" alt="침대와 붙박이장, 간접조명이 배치된 따뜻한 분위기의 안방" class="fp-detail-img" data-index="2">
-                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-map-04.webp" alt="침대와 책상, 수납장이 놓인 차분한 톤의 자녀 방" class="fp-detail-img" data-index="3">
-                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-map-05.webp" alt="침대와 책상, 벽면 수납장이 구성된 아늑한 자녀 방" class="fp-detail-img" data-index="4">
+                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-01.webp" alt="" class="fp-detail-img active" data-index="0">
+                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-02.webp" alt="" class="fp-detail-img" data-index="1">
+                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-03.webp" alt="" class="fp-detail-img" data-index="2">
                                                     </div>
                                                 </div>
                                                 <button type="button" class="fp-nav-btn prev" aria-label="이전">
@@ -2909,48 +2879,23 @@ transform:  scale(1.05) !important;
                                             <div class="fp-desc-container">
                                         <div class="fp-desc-item active">
                                             <span class="fp-num">01.</span>
-                                            <strong class="fp-title">Living Room</strong>
+                                            <strong class="fp-title">거실</strong>
                                             <p class="fp-text">
-                                                활용도가 낮은 벽면, 제자리를 찾지 못한 30년 된 피아노.<br>
-                                                벽 전체를 오픈·클로즈드 수납장으로 제작해 피아노를 자연스럽게 통합하고, 갤러리형 거실로 완성했습니다.
+                                                미디어 월을 기준으로 정돈한 개방형 거실
                                             </p>
                                         </div>
                                         <div class="fp-desc-item">
                                             <span class="fp-num">02.</span>
-                                            <strong class="fp-title">Kitchen &amp; Dining</strong>
+                                            <strong class="fp-title">주방</strong>
                                             <p class="fp-text">
-                                                키친과 다이닝이 분리된 구조로 요리 중 가족과의 <br class="o-br-m">
-                                                대화가 단절됐던 공간. 중앙 일자형 아일랜드와 <br class="o-br-m">
-                                                맞은편 식탁 배치로 요리와 소통이 동시에 이루어지는 <br class="o-br-m">
-                                                오픈 키친으로 전환했습니다.
+                                                대형 아일랜드와 제작 식탁을 연결한 주방
                                             </p>
                                         </div>
                                         <div class="fp-desc-item">
                                             <span class="fp-num">03.</span>
-                                            <strong class="fp-title">Master Bedroom</strong>
+                                            <strong class="fp-title">욕실</strong>
                                             <p class="fp-text">
-                                                넓은 면적에도 부부 각자의 독립 공간이 없었던 안방. <br>
-                                                침실을 줄이고 드레스룸을 확장해 파우더룸과 <br class="o-br-m">
-                                                홈 오피스를 함께 구성했습니다. 아치형 문 하나로 <br class="o-br-m">
-                                                휴식·준비·업무의 세 동선이 한 공간에서 가능합니다.
-                                            </p>
-                                        </div>
-                                        <div class="fp-desc-item">
-                                            <span class="fp-num">04.</span>
-                                            <strong class="fp-title">Daughter's Room</strong>
-                                            <p class="fp-text">
-                                                수면·학습·연주가 한 방에 혼재하던 딸의 방.<br>
-                                                슬림 파티션으로 각 영역을 나누고, <br class="o-br-m">
-                                                라인형 흡음 타공판으로 벽면을 마감해<br class="o-br-m">
-                                                음악 작업에 최적화된 감성 공간으로 바뀌었습니다.
-                                            </p>
-                                        </div>
-                                        <div class="fp-desc-item">
-                                            <span class="fp-num">05.</span>
-                                            <strong class="fp-title">Son's Room </strong>
-                                            <p class="fp-text">
-                                                수납 부족과 뒤엉킨 동선이 고민이었던 아들의 방.<br>
-                                                가벽과 시스템 월을 활용해 공간을 정돈하고, 성장에 맞춰 유연하게 쓸 수 있는 수납 중심의 방으로 구성했습니다. 
+                                                LG 퓨리케어 바스에어시스템을 적용한 욕실
                                             </p>
                                         </div>
                                     </div>
@@ -2960,58 +2905,30 @@ transform:  scale(1.05) !important;
                                         <div class="fp-spot-info-container">
                                             <h5 class="fp-label">Detail</h5>
                                             <div class="fp-spot-info-item active" data-index="0">
-                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-spot-01.webp" alt="오렌지 조명 아래 소파와 원형 테이블, 수납장이 배치된 아늑한 거실">
-                                                <ul class="fp-spot-desc">
-                                                    <li>벽면 전체 맞춤 수납장 제작</li>
-                                                    <li>우물 천정 형태의 간접조명 설치</li>
-                                                </ul>
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-spot-01.webp" alt="">
                                             </div>
                                             <div class="fp-spot-info-item" data-index="1">
-                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-spot-02.webp" alt="ㄱ자 주방과 식탁, 아일랜드 조명이 어우러진 주방·다이닝 공간">
-                                                <ul class="fp-spot-desc">
-                                                    <li>오픈형 공간으로 구조 변경</li>
-                                                    <li>다이닝 가벽 연장으로 독립 공간감 확보</li>
-                                                </ul>
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-spot-02.webp" alt="">
                                             </div>
                                             <div class="fp-spot-info-item" data-index="2">
-                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-spot-03.webp" alt="침대와 붙박이장, 간접조명이 배치된 따뜻한 분위기의 안방">
-                                                <ul class="fp-spot-desc">
-                                                    <li>드레스룸 레이아웃 전면 개편</li>
-                                                    <li>아치 도어로 침실·드레스룸 연결</li>
-                                                </ul>
-                                            </div>
-                                            <div class="fp-spot-info-item" data-index="3">
-                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-spot-04.webp" alt="침대와 책상, 수납장이 놓인 차분한 톤의 자녀 방">
-                                                <ul class="fp-spot-desc">
-                                                    <li>수면·학습·취미 영역을 파티션으로 구분</li>
-                                                    <li>홈 스튜디오 수준의 환경 구현</li>
-                                                </ul>
-                                            </div>
-                                            <div class="fp-spot-info-item" data-index="4">
-                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-spot-05.webp" alt="침대와 책상, 벽면 수납장이 구성된 아늑한 자녀 방">
-                                                <ul class="fp-spot-desc">
-                                                    <li>창틀 앞 가벽을 설치해 공간감 확보</li>
-                                                    <li>시스템 월 설치로 수납 해결</li>
-                                                </ul>
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-spot-03.webp" alt="">
                                             </div>
                                         </div>
                                         <div class="fp-small-map">
                                         <h5 class="fp-label">Before</h5>
                                         <div class="fp-map-nav">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-map-small.webp" alt="평면도 맵" class="fp-map-bg">
-                                            <button type="button" class="fp-point active" style="left: 42%; top: 26%;" data-index="0" aria-label="1번 공간 위치 보기">1</button>
-                                            <button type="button" class="fp-point" style="left: 42%; top: 75%;" data-index="1" aria-label="2번 공간 위치 보기">2</button>
-                                            <button type="button" class="fp-point" style="left: 13%; top: 56%;" data-index="2" aria-label="3번 공간 위치 보기">3</button>
-                                            <button type="button" class="fp-point" style="left: 88%; top: 26%;" data-index="3" aria-label="4번 공간 위치 보기">4</button>
-                                            <button type="button" class="fp-point" style="left: 69%; top: 26%;" data-index="4" aria-label="5번 공간 위치 보기">5</button>
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-small.webp" alt="평면도 맵" class="fp-map-bg">
+                                            <button type="button" class="fp-point active" style="left: 58%; top: 71%;" data-index="0" aria-label="1번 공간 위치 보기">1</button>
+                                            <button type="button" class="fp-point" style="left: 55%; top: 40%;" data-index="1" aria-label="2번 공간 위치 보기">2</button>
+                                            <button type="button" class="fp-point" style="left: 90%; top: 40%;" data-index="2" aria-label="3번 공간 위치 보기">3</button>
                                         </div>
                                         </div>
                                     </div><!-- .fp-mobile-bottom-wrapper -->
                                 </div>
                             </div>
                             <div class="plan-meta">
-                              <span class="meta-item">CCUMIM BY</span>
-                              <span class="meta-item">INTERIOR DIRECTION</span>
+                              <span class="meta-item">lilSQUARE</span>
+                              <span class="meta-item"> INTERIOR DIRECTION</span>
                             </div>
                         </figure>
                     </div>
@@ -3028,23 +2945,30 @@ transform:  scale(1.05) !important;
                             <article>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-01-1.webp" alt="TV 대신 피아노를 수납장 안에 숨긴 밝은 거실과 라운지체어" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-01-2.webp" alt="맞춤 수납장 안에 숨겨진 피아노를 여는 흰색 도어" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-1.webp" alt="맞춤 수납장 안에 숨겨진 피아노를 여는 흰색 도어" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="top-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070005891" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-01-1_pop-1.webp" alt="까사미아의 리브 네덜란드 사이잘룩 러그" loading="lazy">
+                                            <a href="https://www.lge.co.kr/tvs/oled97g6kna-wall2" class="o-pop-body" style="--pop-bottom:100%; --pop-right:0; --pop-mb:14px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-1_pop-1.webp" alt="LG 올레드 evo AI (벽걸이형) 245cm" loading="lazy">
                                             <div class="desc">
-                                                <span class="tit">까사미아</span>
-                                                <p>리브 네덜란드 사이잘룩 러그</p>
+                                                <span class="tit">LG</span>
+                                                <p>LG 올레드 evo AI (벽걸이형) 245cm</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/home-audio/s95ar" class="o-pop-body" style="--pop-top:0; --pop-right:120%; --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-1_pop-2.webp" alt="LG 사운드바 9.1.5 채널" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">LG</span>
+                                                <p>LG 사운드바 9.1.5 채널</p>
                                             </div>
                                             </a>
                                         </div>
@@ -3052,27 +2976,73 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-01-3.webp" alt="맞춤 수납장 안에 숨겨진 피아노와 앞에 앉아있는 하도권 배우" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-2.webp" alt="" loading="lazy">
                                     </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25080007133" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-2_pop-1.webp" alt="코뮨 리츄얼스 거실 소파 테이블" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">코뮨</span>
+                                                <p>리츄얼스 거실 소파 테이블</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070001820" class="o-pop-body" style="--pop-bottom:100%; --pop-right:0; --pop-mb:14px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-2_pop-2.webp" alt="알로소 알로소 보눔 3인소파 가죽소파" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">알로소</span>
+                                                <p>알로소 보눔 3인소파 가죽소파</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-3.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070003824" class="o-pop-body" style="--pop-top:100%; --pop-left: -80%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-3_pop-1.webp" alt="플로스 Luminator _5colors" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">플로스</span>
+                                                <p>Luminator _5colors</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </figure>
                                 <div class="o-detail-content">
                                     <h4>
-                                        <span>Point 01.</span>
+                                        <span>01. 거실</span>
                                         <strong>
-                                            TV 없는 거실,<br>
-                                            30년의 피아노가 숨은 벽
+                                            미디어 월을 기준으로<br>
+                                            정돈한 개방형 거실
                                         </strong>
                                     </h4>
                                     <div class="o-sub-text">
                                         <p>
-                                            거실 한쪽 벽면 전체를 <strong>맞춤 수납장</strong>으로 제작했습니다.<br>
-                                            TV 대신 추억이 깃든 피아노를 흰색으로 리폼해 벽 안에 들였고, 오랜 책과 아끼는 소품들 역시 <strong>히든 수납장</strong>에 함께 들였습니다. 
-                                            답답해 보이지 않도록 <strong>오픈형 수납공간</strong>도 마련했습니다. 
+                                            거실은 주방과 시야가 이어지는 개방형 구조로 계획했습니다. <br>
+                                            별도의 구획을 두지 않아 이동이 편하고, 30평대 아파트의 공용부가 더 넓게 느껴지도록 했습니다.
                                         </p>
                                         <p>
-                                            1층 창밖으로 펼쳐지는 수목의 풍경이 고스란히 시야에 
-                                            담기는 창가에는 <strong>루버셔터</strong>를 설치했으며, <strong>라운지체어</strong>에 앉아 책을 읽거나 대본 연습을 하는 시간은 배우가 가장 애정하는
-                                            시간입니다. 
+                                            거실 전면에는 미디어 월을 배치해 시선의 축을 잡았습니다. <br>
+                                            아늑한 알로소 소파는 휴식의 중심을 만들고, 코뮨 커피 테이블은 소파 앞 생활 동선을 간결하게 정리합니다.
+                                        </p>
+                                        <p>
+                                            플로스 플로어 조명은 미디어 월과 소파 주변에 부드러운 빛을 더합니다. 밝은 벽체와 바닥은 빛을 은은하게 확산시키고, 브론즈 미러는 주방의 월넛 톤을 반사해 두 공간의 소재가 이어지도록 합니다.
                                         </p>
                                     </div>
                                 </div>
@@ -3083,32 +3053,18 @@ transform:  scale(1.05) !important;
                             <article>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-1.webp" alt="아일랜드와 화이트 빌트인 수납장이 어우러진 개방형 주방" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-1.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/object-collection/t873mee111" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-1_pop-1.webp" alt="LG전자의 LG 디오스 오브제컬렉션 냉장고 (매직스페이스)" loading="lazy">
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25120026275" class="o-pop-body" style="--pop-top: 75%; --pop-right: 15%; --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-1_pop-1.webp" alt="이스턴에디션 삼발이 의자_2 Colors " loading="lazy">
                                             <div class="desc">
-                                                <span class="tit">LG전자</span>
-                                                <p>LG 디오스 오브제컬렉션 냉장고 
-                                                    (매직스페이스)</p>
-                                            </div>
-                                            </a>
-                                        </div>
-                                        <div class="o-detail-spot" data-direction="bottom-center">
-                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
-                                                <span class="o-spot-icon"></span>
-                                            </button>
-                                            <a href="https://www.lge.co.kr/object-collection/q343gic183s" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-1_pop-2.webp" alt="LG전자의 LG 모던엣지 냉장고 오브제컬렉션 노크온" loading="lazy">
-                                            <div class="desc">
-                                                <span class="tit">LG전자</span>
-                                                <p>LG 모던엣지 냉장고 오브제컬렉션 
-                                                    노크온</p>
+                                                <span class="tit">이스턴에디션</span>
+                                                <p>삼발이 의자_2 Colors </p>
                                             </div>
                                             </a>
                                         </div>
@@ -3116,37 +3072,49 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-2.webp" alt="넓은 아일랜드 조리대와 일자형 주방이 연결된 주방 공간" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-2.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="top-right">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://www.lge.co.kr/object-collection/due6bge" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-2_pop-1.webp" alt="LG전자의 디오스 오브제컬렉션 식기세척기" loading="lazy">
-                                            <div class="desc">
-                                                <span class="tit">LG전자</span>
-                                                <p>LG 디오스 오브제컬렉션 식기세척기</p>
-                                            </div>
+                                            <a href="https://www.lge.co.kr/refrigerators/g646gbb031" class="o-pop-body" style="--pop-top:100%; --pop-left: -80%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-2_pop-1.webp" alt="LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급" loading="lazy">
+                                                <div class="desc">
+                                                    <span class="tit">LG</span>
+                                                    <p>LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/kimchi-refrigerators/z334gbb171" class="o-pop-body" style="--pop-top:100%; --pop-left:-200%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-2_pop-2.webp" alt="LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급" loading="lazy">
+                                                <div class="desc">
+                                                    <span class="tit">LG</span>
+                                                    <p>LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급</p>
+                                                </div>
                                             </a>
                                         </div>
                                     </div>
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-3.webp" alt="펜던트 조명 아래 긴 식탁이 놓인 다이닝 공간" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-3.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-center">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25080009444" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-02-3_pop-1.webp" alt="마르티넬리 루체의 누볼레 바가본데 펜던트 조명" loading="lazy">
+                                            <a href="https://www.lge.co.kr/water-purifiers/wu923as" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-3_pop-1.webp" alt="LG 퓨리케어 정수기(듀얼, 냉온정)" loading="lazy">
                                             <div class="desc">
-                                                <span class="tit">마르티넬리 루체</span>
-                                                <p>누볼레 바가본데 펜던트 조명</p>
+                                                <span class="tit">LG</span>
+                                                <p>퓨리케어 정수기(듀얼, 냉온정)</p>
                                             </div>
                                             </a>
                                         </div>
@@ -3154,15 +3122,20 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <div class="o-detail-content">
                                     <h4>
-                                        <span>Point 02.</span>
+                                        <span>02. 주방</span>
                                         <strong>
-                                            아일랜드 중심의 소통하는 주방
+                                            대형 아일랜드와 <br>제작 식탁을 연결한 주방
                                         </strong>
                                     </h4>
                                     <div class="o-sub-text">
                                         <p>
-                                            조희선 디자이너가 레이아웃 변경에 가장 공들인 공간입니다.<br>
-                                            주방 중앙에 <strong>일자형 아일랜드</strong>를 설치하고 마주보는 앞쪽에 식탁을 배치해 요리와 대화가 이뤄지는 유쾌한 공간으로 거듭났습니다. <strong>다이닝 공간의 가벽</strong>을 연장해 <strong>독립적인 영역</strong>을 확보하면서도 <strong>개방감</strong>을 유지했습니다. 
+                                            주방은 벽면 조리 공간과 대형 아일랜드, 제작 식탁을 연결한 구조로 계획했습니다. 조리와 세척, 수납은 벽면 주방에 모으고, 식사와 대화는 아일랜드와 식탁에서 이어지도록 했습니다.
+                                        </p>
+                                        <p>
+                                            제작 식탁에는 이스턴에디션 의자를 배치해 차분한 소재감을 더했습니다. 한 사람이 조리하는 동안 다른 한 사람은 식탁에 앉아 대화할 수 있어, 생활 시간이 달라도 같은 공간에 머무는 시간이 생깁니다.
+                                        </p>
+                                        <p>
+                                            공간의 출입 방향도 조정해 주방 이동 동선을 정리했습니다. 필요한 기능은 벽면과 아일랜드에 집중시키고, 시야를 가로막는 요소를 줄여 여유로운 주방을 완성했습니다.
                                         </p>
                                     </div>
                                 </div>
@@ -3173,19 +3146,23 @@ transform:  scale(1.05) !important;
                             <article>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-03-1.webp" alt="그레이 침대와 흰 침구가 놓인 안방" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-1.webp" alt="" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-2.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-left">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G26040039302" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-03-1_pop-1.webp" alt="씰리의 씰리 브라이드 ET + 팀버 + N9007 패브릭 침대세트 칼킹(CK)" loading="lazy">
+                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body" style="--pop-top: 120%; --pop-left: -52%; --pop-ml:15px; --pop-mb:14px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-1_pop-1.webp" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
                                             <div class="desc">
-                                                <span class="tit">씰리</span>
-                                                <p>씰리 브라이드 ET + 팀버 +<br> 
-                                                    N9007 패브릭 침대세트 칼킹(CK)</p>
+                                                <span class="tit">LG</span>
+                                                <p>LG 퓨리케어 바스에어시스템 <br>프리미엄 듀얼</p>
                                             </div>
                                             </a>
                                         </div>
@@ -3193,108 +3170,39 @@ transform:  scale(1.05) !important;
                                 </figure>
                                 <figure class="o-detail-images o-hover-scale">
                                     <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-03-2.webp" alt="안방과 연결된 원형 거울과 화장대가 있는 공간" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-03-3.webp" alt="옷이 걸린 수납공간과 침실이 연결된 모습" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <div class="o-detail-content">
-                                    <h4>
-                                        <span>Point 03.</span>
-                                        <strong>
-                                            세 가지 역할을 담은 마스터 베드룸
-                                        </strong>
-                                    </h4>
-                                    <div class="o-sub-text">
-                                        <p>
-                                            이 집에서 가장 드라마틱한 구조 변경의 묘미는 <strong>마스터 베드룸 내부</strong>에서 찾아볼 수 있습니다. 침실 면적을 과감히 줄이는 대신, 드레스룸을 확장해 <strong>파우더룸</strong>과 <strong>컴팩트한 업무 공간</strong>을 유기적으로 구성했습니다. <strong>아치 문으로 연결되는 이 프라이빗한 공간</strong>은 외출을 준비하고, 메이크업을 정돈하며, 간단한 업무를 처리하는 
-                                            일련의 루틴이 한 동선에서  이루어집니다.
-                                        </p>
-                                        <p>
-                                            이 레이아웃은 불규칙한 스케줄을 소화하는 배우·성우 부부에게 특히 유용합니다. 생활 패턴이 어긋나는 이른 새벽이나 늦은 밤에도, 상대방의 단잠을 방해하지 않고 <strong>각자의 시간에 온전히 몰입</strong>할 수 있습니다.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </li>
-
-                        <li>
-                            <article>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-04-1.webp" alt="책상과 모니터, 책장이 놓인 작업 공간" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-3.webp" alt="" loading="lazy">
                                     </picture>
                                     <div class="o-detail-pop">
-                                        <div class="o-detail-spot" data-direction="bottom-center">
+                                        <div class="o-detail-spot">
                                             <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
                                                 <span class="o-spot-icon"></span>
                                             </button>
-                                            <a href="https://homestyle.lge.co.kr/item?productId=G25100020969" class="o-pop-body">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-04-1_pop-1.webp" alt="루밍의 [Danese milano] Timor Black" loading="lazy">
+                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-1_pop-1.webp" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
                                             <div class="desc">
-                                                <span class="tit">루밍</span>
-                                                <p>[Danese milano] Timor Black</p>
+                                                <span class="tit">LG</span>
+                                                <p>LG 퓨리케어 바스에어시스템 <br>프리미엄 듀얼</p>
                                             </div>
                                             </a>
                                         </div>
                                     </div>
                                 </figure>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-04-2.webp" alt="컴퓨터와 스피커, 기타가 있는 작업 공간" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-04-3.webp" alt="작업 공간과 침실을 파티션으로 나눈 방" loading="lazy">
-                                    </picture>
-                                </figure>
                                 <div class="o-detail-content">
                                     <h4>
-                                        <span>Point 04.</span>
+                                        <span>03. 욕실</span>
                                         <strong>
-                                            파티션으로 음악 작업 공간을 나눈 <br class="o-br-m">딸의 방
+                                            LG 퓨리케어 바스에어시스템을<br> 적용한 욕실
                                         </strong>
                                     </h4>
                                     <div class="o-sub-text">
                                         <p>
-                                            음악 작업을 하는 딸을 위해 벽 전체에 라인형 <strong>흡음 타공판</strong>을 시공했습니다. 실내 울림을 잡아주는 흡음 효과는 물론 우드 슬랫 패턴이 방 전체에 아늑한 감성을 더합니다. <strong>침대·학습 공간</strong>과 <strong>연주 영역</strong>을 나누는 <strong>슬림한 파티션을 설치</strong>해 좁은 면적 안에서도 두 영역의 시각적 분리가 명확합니다. 이 공간은 훗날 <strong>홈 레코딩 스튜디오나 홈시어터 룸</strong>으로 전환하기에도 좋습니다. 
+                                            침실과 연결된 욕실은 매일 사용하는 공간인 만큼 디자인뿐 아니라 습기 관리와 환기까지 고려했습니다. 마감재는 차분한 색상으로 정리하고, 불필요한 요소를 줄여 사용 후에도 깔끔한 인상이 유지되도록 했습니다.
                                         </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </li>
-
-                        <li>
-                            <article>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-05-1.webp" alt="창가 옆 책상과 선반이 있는 공부 공간" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-05-2.webp" alt="책상 위 모니터와 선반, 액자가 놓인 책상" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <figure class="o-detail-images o-hover-scale">
-                                    <picture>
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/detail-05-3.webp" alt="책장과 붙박이장이 이어진 아들 방" loading="lazy">
-                                    </picture>
-                                </figure>
-                                <div class="o-detail-content">
-                                    <h4>
-                                        <span>Point 05.</span>
-                                        <strong>
-                                            시스템 선반과 짜맞춤 책장 포인트의 <br class="o-br-m">아들 방
-                                        </strong>
-                                    </h4>
-                                    <div class="o-sub-text">
                                         <p>
-                                            오랫동안 사용해도 싫증 나지 않도록 <strong>그레이톤</strong>을 기본 팔레트로 삼은 아들의 방. 벽면에는 <strong>시스템 선반</strong>과 <strong>짜맞춤 책장</strong>을 두어 교재나 참고서, 개인 소품을 성장에 맞춰 유연하게 재구성할 수 있습니다. <strong>수납장을 길게 배치</strong>해 공간을 나누고, <strong>책상과 수납이 하나의 벽면 유닛으로 통합</strong>되어 데드 스페이스 없이 방 전체가 효율적으로 쓰입니다.
+                                            LG 퓨리케어 바스에어시스템은 욕실 천장에 설치하는 공기순환기입니다. 샤워 후 습기와 냄새가 남기 쉬운 욕실에서 환기와 제습을 돕고, 온풍·송풍 기능으로 욕실을 더 쾌적하게 사용할 수 있도록 했습니다.
+                                        </p>
+                                        <p>
+                                            바스에어시스템이 욕실 분위기와 어우러지도록 설치 위치와 색상, 마감 디테일도 함께 조정했습니다. 보이는 디자인과 보이지 않는 설비를 함께 고려한 욕실입니다.
                                         </p>
                                     </div>
                                 </div>
@@ -3308,59 +3216,31 @@ transform:  scale(1.05) !important;
         <section class="opinion-tip" aria-labelledby="tip-heading">
             <div class="o-wrapper">
                 <div class="o-inner">
-                    <div class="o-tip-tabs" role="tablist" aria-label="Expert's Tip 탭">
-                        <button class="o-tip-tab is-active" id="tip-tab-1" role="tab" aria-selected="true" aria-controls="tip-panel-1" data-tab="1">Tip.01</button>
-                        <button class="o-tip-tab" id="tip-tab-2" role="tab" aria-selected="false" aria-controls="tip-panel-2" data-tab="2">Tip.02</button>
-                    </div>
                     <div class="o-content">
                         <div class="swiper o-tip-swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide o-tip-panel" id="tip-panel-1" role="tabpanel" aria-labelledby="tip-tab-1">
                                     <h3 id="tip-heading"><span>Expert's Tip</span></h3>
                                     <h4>
-                                        <span class="highlight">공간 분할
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="99" height="43" viewBox="0 0 99 43" fill="none">
-                                            <path d="M85.4581 35.1857C84.017 35.2538 68.5904 34.2853 62.3721 34.0707C56.1538 33.8561 50.0799 33.8012 41.7586 33.0047C36.7646 32.5266 32.4116 32.295 28.0655 31.6782C20.4364 30.5955 8.87176 27.7296 4.43221 22.4084C-2.67895 13.8851 8.76818 6.44571 19.8869 4.1489M19.1768 4.28995C49.839 -1.8715 75.3033 2.91807 83.5286 4.8797C90.6184 6.57052 95.3851 9.68843 97.0444 13.8412C99.1994 19.3729 94.5066 23.4381 90.7813 25.4508C87.056 27.4634 79.3762 29.943 74.6485 31.1603C56.7061 35.7804 43.3448 36.5356 32.7527 38.2885C22.1606 40.0415 10.105 41.0871 1.25001 41.4649" stroke="#C93A3A" stroke-width="2.5" stroke-linecap="round"/>
+                                        공간의 숨겨진
+                                        <span class="highlight">가능성
+                                            <svg width="81" height="44" viewBox="0 0 81 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M69.1773 34.0545C68.0158 34.1547 55.62 33.548 50.6194 33.4772C45.6188 33.4065 40.7307 33.4906 34.0506 32.8922C30.0415 32.533 26.5427 32.403 23.0584 31.8918C16.9419 30.9946 7.69797 28.4231 4.24545 23.2609C-1.28472 14.9921 8.09916 7.37291 17.1016 4.84793M16.5268 5.00361C41.349 -1.78896 61.7377 2.36882 68.3142 4.12186C73.9827 5.63289 77.7487 8.6084 78.9899 12.6783C80.5986 18.1008 76.7285 22.2286 73.684 24.3042C70.6395 26.3798 64.401 29.0073 60.5677 30.319C46.0195 35.2973 35.247 36.3485 26.6809 38.3236C18.1147 40.2987 8.38661 41.6074 1.25004 42.1827" stroke="#C93A3A" stroke-width="2.5" stroke-linecap="round"/>
                                             </svg>
-                                        </span>의 미학<br>
-                                        "공간을 나누면 좁아진다"라는 <br>고정관념에서 벗어나기
+                                        </span>을<br>
+                                        열어주는 거울
                                     </h4>
                                     <div class="tip-img-wrap">
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/tip-01_1.webp" alt="벽으로 분리된 다이닝 공간과 긴 식탁" loading="lazy">
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/tip-01_2.webp" alt="옷 수납공간과 침실을 분리한 안방" loading="lazy">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/tip-01_1.webp" alt="벽으로 분리된 다이닝 공간과 긴 식탁" loading="lazy">
                                     </div>
                                     <p>
-                                        벽을 세우면 집이 좁아 보일 것이라는 생각은 흔한 오해입니다. <strong>잘 계획된 가벽</strong>은 오히려 그 반대의 마법을 부리죠. 레이아웃을 명확히 구획하면 <strong>공간의 기능이 살아나고 시선이 단정하게 정돈되어, 시각적으로 집이 한층 더 넓어 보이는 효과를 줍니다.</strong>
+                                        거울은 현관이나 욕실에만 사용하는 소품이 아닙니다. 거실과 주방처럼 이어진 공간에 넓은 면으로 적용하면, 반사된 장면을 통해 시야가 확장되어 공간이 더 넓게 느껴집니다.
                                     </p>
                                     <p>
-                                        배우 하도권 가족의 집은 <strong>공간 분할의 좋은 예</strong>입니다.
-                                        기존의 평범한 방 3개짜리 아파트였던 이 집은 리뉴얼을 거치며<strong> 실질적인 독립 공간</strong>이 훨씬 늘어났습니다.
-                                        부부의 침실 내부에 <strong>드레스룸</strong>과 <strong>파우더룸</strong>, <strong>프라이빗한 서재</strong>를 함께 밀도 있게 구성했고, 키친&다이닝 사이에는 의도적으로 <strong>가벽을 더 길게 연장</strong>했습니다. 벽을 연장한 효과 덕분에 <strong>키친 중앙에 아일랜드</strong>가 들어섰고 다이닝은 펜던트 조명 아래 온전히 <strong>독립된 영역</strong>이 되었습니다.
-                                        나누고 구획할수록 집은 더 입체적으로 쓰입니다.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide o-tip-panel" id="tip-panel-2" role="tabpanel" aria-labelledby="tip-tab-2">
-                                    <h3><span>Expert's Tip</span></h3>
-                                    <h4>적은 빛으로 최대의 효과 거두기<br>
-                                        <span class="highlight">브라켓 조명
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="126" height="46" viewBox="0 0 126 46" fill="none">
-                                            <path d="M109.392 37.6021C107.539 37.6715 87.6278 36.6 79.61 36.356C71.5922 36.112 63.7678 36.0391 53.0144 35.1681C46.5607 34.6454 40.944 34.3876 35.3182 33.7182C25.4425 32.543 10.4143 29.4529 4.44515 23.7555C-5.11606 14.6296 9.2726 6.70583 23.482 4.27739M22.5742 4.42646C61.7678 -2.08615 94.7864 3.0927 105.472 5.20857C114.682 7.03233 120.968 10.3758 123.301 14.818C126.338 20.7349 120.488 25.0685 115.786 27.2107C111.084 29.3529 101.312 31.9847 95.2811 33.2746C72.3945 38.1698 55.2243 38.9454 41.6673 40.7939C28.1103 42.6424 12.6352 43.7314 1.25001 44.1143" stroke="#C93A3A" stroke-width="2.5" stroke-linecap="round"/>
-                                            </svg>
-                                        </span> 하나로 달라지는 <br>공간 분위기
-                                    </h4>
-                                    <div class="tip-img-wrap">
-                                        <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/tip-02_1.webp" alt="침대 양쪽 벽에 조명이 설치된 침실" loading="lazy">
-                                        <div class="tip-img-wrap-2">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/tip-02_2.webp" alt="침대 한쪽 벽에 조명이 설치된 침실 1" loading="lazy">
-                                            <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/tip-02_3.webp" alt="침대 한쪽 벽에 조명이 설치된 침실 2" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <p>
-                                        이 집의 침실 세 곳에는 흥미로운 공통점이 있습니다.<br>
-                                        바로 침대 머리맡마다 <strong>감각적인 브라켓 조명</strong>이 자리한다는 것입니다. 설치는 간단하지만 공간에 미치는 시각적 연출력은 강력합니다. 메인 천장등을 끄고 브라켓 조명만 켜도, 좁고 밀도 높은 빛이 퍼지며 공간을 깊은 온기로 채웁니다.
+                                        특히 개방형 거실·주방 구조에서는 거울이 두 공간을 연결하는 역할을 합니다. 아일랜드와 제작 식탁, 조명, 식물이 거울에 비치면서 별도의 장식을 더하지 않아도 공간에 깊이감이 생깁니다.
                                     </p>
                                     <p>
-                                        <strong>브라켓 조명은 대대적인 인테리어 공사 없이 교체나 이동이 유연하다는 장점</strong>이 있습니다. 침대 헤드보드 위는 물론 서재 책상 옆 벽면, 드레스룸 입구, 혹은 밋밋한 복도 끝 등 <strong>시선과 온기가 머물길 원하는 곳이라면 어디든 훌륭한 포인트</strong>가 됩니다. 존재감 있는 브라켓 조명 하나를 더해 공간의 인상을 바꾸는 영리한 방법입니다.
+                                        랑데부 하우스에는 브론즈 미러를 적용해 월넛 톤과 스톤 소재가 이어져 보이도록 했습니다. 거울을 사용할 때는 크기뿐 아니라 무엇이 비치는지까지 함께 고려해야 공간을 더 정돈된 인상으로 연출할 수 있습니다.
                                     </p>
                                 </div>
                             </div>
@@ -3416,5 +3296,5 @@ transform:  scale(1.05) !important;
 
 </div>
 
-<script src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/js/opinion-column.js"></script>
+<script src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/js/opinion-column.js"></script>
 <!-- OMS 입력 부분 끝 -->
