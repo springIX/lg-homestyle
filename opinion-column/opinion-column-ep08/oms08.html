@@ -589,6 +589,18 @@
     display: flex;
     align-items: start;
 }
+#opinion-column-body > main > section.opinion-result .fp-small-map p {
+    position: absolute;
+    width: max-content;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #37261A;
+}
 
 #opinion-column-body > main > section.opinion-result .fp-label span:first-child {
     position: relative;
@@ -2326,7 +2338,32 @@ transform:  scale(1.05) !important;
 }
 /* RECOMMEND_605_END */
 
-@media (max-width: 1379px) { 
+#opinion-column-body > main > section.opinion-tip .fp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    padding: 17px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#opinion-column-body > main > section.opinion-tip .fp-btn::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/btn-arrow.svg') no-repeat center center / contain;
+    z-index: 999;
+}
+
+@media (max-width: 1379px) {
 
   #opinion-column-body .o-br-p {display: none;}
   #opinion-column-body .o-br-t {display: block;}
@@ -2810,7 +2847,7 @@ transform:  scale(1.05) !important;
                                         모던/미니멀 거실
                                     </h4>
                                     <p>
-                                        거실은 미디어 월을 기준으로 시선의 중심을 잡았습니습니다. 
+                                        거실은 미디어 월을 기준으로 시선의 중심을 잡았습니다. 
                                         우물천장, 벽면 분할, 간접조명을 활용해 구조를 
                                         단정하게 정리하고, 필요한 요소만 남겨 개방감을 
                                         확보했습니다.
@@ -2942,6 +2979,7 @@ transform:  scale(1.05) !important;
                                         </div>
                                         <div class="fp-small-map">
                                         <h5 class="fp-label">Before</h5>
+                                        <p>숫자를 눌러 공간을 확인해보세요.</p>
                                         <div class="fp-map-nav">
                                             <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-small.webp" alt="평면도 맵" class="fp-map-bg">
                                             <button type="button" class="fp-point active" style="left: 58%; top: 71%;" data-index="0" aria-label="1번 공간 위치 보기">1</button>
@@ -3302,6 +3340,7 @@ transform:  scale(1.05) !important;
                     <div class="swiper-pagination o-tip-pagination"></div>
                 </div>
             </div>
+            <a href="https://homestyle.lge.co.kr/profile/c3f57885-f8c4-4df9-8afc-09be9433affd" class="fp-btn fp-btn-primary">릴스퀘어의 다른 시공 사례 보러가기</a>
         </section>
 
         <section class="opinion-recommend" aria-labelledby="recommend-heading">
