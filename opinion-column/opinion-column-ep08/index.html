@@ -601,6 +601,18 @@
     display: flex;
     align-items: start;
 }
+#opinion-column-body > main > section.opinion-result .fp-small-map p {
+    position: absolute;
+    width: max-content;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #37261A;
+}
 
 #opinion-column-body > main > section.opinion-result .fp-label span:first-child {
     position: relative;
@@ -2338,7 +2350,32 @@ transform:  scale(1.05) !important;
 }
 /* RECOMMEND_605_END */
 
-@media (max-width: 1379px) { 
+#opinion-column-body > main > section.opinion-tip .fp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    padding: 17px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#opinion-column-body > main > section.opinion-tip .fp-btn::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/btn-arrow.svg') no-repeat center center / contain;
+    z-index: 999;
+}
+
+@media (max-width: 1379px) {
 
   #opinion-column-body .o-br-p {display: none;}
   #opinion-column-body .o-br-t {display: block;}
@@ -2791,10 +2828,10 @@ transform:  scale(1.05) !important;
                         <ul class="o-info">
                             <li>
                                 <span class="label">공간 유형</span>
-                                <span class="value">아파트/김포</span>
+                                <span class="value">아파트</span>
                             </li>
                             <li>
-                                <span class="label">공사기간</span>
+                                <span class="label">공사 기간</span>
                                 <span class="value">9주</span>
                             </li>
                             <li>
@@ -2822,8 +2859,8 @@ transform:  scale(1.05) !important;
                                         모던/미니멀 거실
                                     </h4>
                                     <p>
-                                        거실은 미디어 월을 기준으로 시선의 중심을 잡았습
-                                        니다. 우물천장, 벽면 분할, 간접조명을 활용해 구조를 
+                                        거실은 미디어 월을 기준으로 시선의 중심을 잡았습니습니다. 
+                                        우물천장, 벽면 분할, 간접조명을 활용해 구조를 
                                         단정하게 정리하고, 필요한 요소만 남겨 개방감을 
                                         확보했습니다.
                                     </p>
@@ -2844,13 +2881,11 @@ transform:  scale(1.05) !important;
                                     </h4>
                                     <p>
                                         거실과 주방을 하나의 개방형 구조로 연결했습니다. 
-                                        벽면 주방에는 조리, 세척, 수납 기능을 모으고, 중앙
-                                        에는 대형 아일랜드와 제작 식탁을 배치했습니다.
+                                        벽면 주방에는 조리, 세척, 수납 기능을 모으고, 중앙에는 대형 아일랜드와 제작 식탁을 배치했습니다.
                                     </p>
                                     <p>
                                         제작 식탁 주변에는 우드 의자를 더해 주방의 차분한 
-                                        분위기를 완성했습니다. 조리와 식사, 대화가 한 자리
-                                        에서 이루어지도록 구성해 두 사람이 함께 머무는 
+                                        분위기를 완성했습니다. 조리와 식사, 대화가 한 자리에서 이루어지도록 구성해 두 사람이 함께 머무는 
                                         시간을 만들었습니다. 공간의 출입 방향도 조정해 
                                         주방 동선을 더 간결하게 정리했습니다.
                                     </p>
@@ -2865,13 +2900,14 @@ transform:  scale(1.05) !important;
                                     <p>
                                         침실과 연결된 욕실에는 천장형 공기순환기인 LG 
                                         퓨리케어 바스에어시스템을 적용했습니다. 샤워 후 
-                                        습기와 냄새가 남기 쉬운 욕실에서 환기와 제습을 
-                                        돕고, 온풍·송풍 기능으로 매일 사용하는 공간을 쾌적
+                                        습기와 냄새가 남기 쉬운 욕실에서 환기와 제습을 돕고, <br>
+                                        온풍·송풍 기능으로 매일 사용하는 공간을 쾌적
                                         하게 관리할 수 있도록 했습니다.
                                     </p>
                                     <p>
                                         바스에어시스템이 욕실 분위기와 어우러지도록 설치 
-                                        위치와 색상, 마감 디테일도 함께 조정했습니다.
+                                        위치와 색상, 마감 디테일도 <br>
+                                        함께 조정했습니다.
                                     </p>
                                 </article>
                             </li>
@@ -2955,6 +2991,7 @@ transform:  scale(1.05) !important;
                                         </div>
                                         <div class="fp-small-map">
                                         <h5 class="fp-label">Before</h5>
+                                        <p>숫자를 눌러 공간을 확인해보세요.</p>
                                         <div class="fp-map-nav">
                                             <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-small.webp" alt="평면도 맵" class="fp-map-bg">
                                             <button type="button" class="fp-point active" style="left: 58%; top: 71%;" data-index="0" aria-label="1번 공간 위치 보기">1</button>
@@ -3174,8 +3211,8 @@ transform:  scale(1.05) !important;
                                     <div class="o-sub-text">
                                         <p>
                                             주방은 벽면 조리 공간과 대형 아일랜드, 제작 식탁을 연결한 
-                                            구조로 계획했습니다. 조리와 세척, 수납은 벽면 주방에 모으고, 
-                                            식사와 대화는 아일랜드와 식탁에서 이어지도록 했습니다.
+                                            구조로 계획했습니다. 조리와 세척, 수납은 <br>
+                                            벽면 주방에 모으고, 식사와 대화는 아일랜드와 식탁에서 이어지도록 했습니다.
                                         </p>
                                         <p>
                                             제작 식탁에는 이스턴에디션 의자를 배치해 차분한 소재감을 
@@ -3248,13 +3285,11 @@ transform:  scale(1.05) !important;
                                     <div class="o-sub-text">
                                         <p>
                                             침실과 연결된 욕실은 매일 사용하는 공간인 만큼 디자인뿐 
-                                            아니라 습기 관리와 환기까지 고려했습니다. 마감재는 차분한 색
-                                            상으로 정리하고, 불필요한 요소를 줄여 사용 후에도 깔끔한 
+                                            아니라 습기 관리와 환기까지 고려했습니다. 마감재는 차분한 색상으로 정리하고, 불필요한 요소를 줄여 사용 후에도 깔끔한 
                                             인상이 유지되도록 했습니다.
                                         </p>
                                         <p>
-                                            LG 퓨리케어 바스에어시스템은 욕실 천장에 설치하는 공기순환
-                                            기입니다. 샤워 후 습기와 냄새가 남기 쉬운 욕실에서 환기와 
+                                            LG 퓨리케어 바스에어시스템은 욕실 천장에 설치하는 공기순환기입니다. 샤워 후 습기와 냄새가 남기 쉬운 욕실에서 환기와 
                                             제습을 돕고, 온풍·송풍 기능으로 욕실을 더 쾌적하게 사용할 수 
                                             있도록 했습니다.
                                         </p>
@@ -3317,6 +3352,7 @@ transform:  scale(1.05) !important;
                     <div class="swiper-pagination o-tip-pagination"></div>
                 </div>
             </div>
+            <a href="https://homestyle.lge.co.kr/profile/c3f57885-f8c4-4df9-8afc-09be9433affd" class="fp-btn fp-btn-primary">릴스퀘어의 다른 시공 사례 보러가기</a>
         </section>
 
         <section class="opinion-recommend" aria-labelledby="recommend-heading">
