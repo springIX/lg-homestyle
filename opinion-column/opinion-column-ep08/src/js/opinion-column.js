@@ -551,7 +551,8 @@ var Swiper=function(){"use strict";function e(e){return null!==e&&"object"==type
     const nextBtn = container.querySelector('.fp-nav-btn.next');
     const detailView = container.querySelector('.fp-detail-view');
     const spotInfoItems = container.querySelectorAll('.fp-spot-info-item');
-    
+    const mapDesc = container.querySelector('.fp-small-map p');
+
     let currentIndex = 0;
     const totalSlides = detailImgs.length || 5;
 
@@ -574,6 +575,9 @@ var Swiper=function(){"use strict";function e(e){return null!==e&&"object"==type
             if (i === index) d.classList.add('active');
             else d.classList.remove('active');
         });
+
+        // 2-0. 안내 문구: 1번(index 0) 활성화일 때만 노출
+        if (mapDesc) mapDesc.classList.toggle('is-hidden', index !== 0);
 
         // 2-1. 모바일 하단 스팟 정보 패널 활성화
         spotInfoItems.forEach((item) => {
