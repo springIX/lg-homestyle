@@ -615,7 +615,7 @@
 }
 @media (max-width: 768px) {
     #opinion-column-body > main > section.opinion-result .fp-small-map p {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
@@ -2127,7 +2127,7 @@ transform:  scale(1.05) !important;
 @media (max-width: 768px) { 
     #opinion-column-body > main > section.opinion-tip {
         margin-top: 24px;
-        padding: 60px 20px;
+        padding: 60px 20px 40px;
     }
     #opinion-column-body > main > section.opinion-tip > .o-wrapper {
         max-width: 100%;
@@ -2378,6 +2378,21 @@ transform:  scale(1.05) !important;
     height: 20px;
     background: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/btn-arrow.svg') no-repeat center center / contain;
     z-index: 999;
+}
+#opinion-column-body > main > section.opinion-tip .o-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+#opinion-column-body > main > section.opinion-tip .o-btn-wrap .o-btn-desc {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #37261A;
+    text-align: center;
 }
 
 @media (max-width: 1379px) {
@@ -3357,7 +3372,11 @@ transform:  scale(1.05) !important;
                     <div class="swiper-pagination o-tip-pagination"></div>
                 </div>
             </div>
-            <a href="https://homestyle.lge.co.kr/profile/c3f57885-f8c4-4df9-8afc-09be9433affd" class="fp-btn fp-btn-primary">릴스퀘어의 다른 시공 사례 보러가기</a>
+            <div class="o-btn-wrap">
+                <a href="https://homestyle.lge.co.kr/profile/c3f57885-f8c4-4df9-8afc-09be9433affd" class="fp-btn fp-btn-primary">릴스퀘어의 다른 시공 사례 보러가기</a>
+                <a href="https://homestyle.lge.co.kr/profile/c3f57885-f8c4-4df9-8afc-09be9433affd" class="fp-btn fp-btn-primary">릴스퀘어 인테리어 상담 신청하기</a>
+                <p class="o-btn-desc">* 상담 신청 시, 전문가와 직접 상담 가능</p>
+            </div>
         </section>
 
         <section class="opinion-recommend" aria-labelledby="recommend-heading">
