@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homestyle Banner</title>
+
+  <!--
+    UA 감지 → <html>에 is-desktop / is-mobile 클래스 부여
+    - Desktop : min-width 1380px 고정, 이하 가로 스크롤
+    - Mobile  : 별도 세로형 레이아웃 적용
+  -->
+  <script>
+    (function () {
+      var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop');
+
+      if (!isMobile) {
+        var style = document.createElement('style');
+        style.textContent = 'html, body { min-width: 1380px; }';
+        document.head.appendChild(style);
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+</head>
+<body>
+  <!-- oms 등록 start -->
+  <style>
+    @font-face {
+      font-family: "Libre Baskerville";
+      src: url("https://www.lge.co.kr/home_style_pages/community/LibreBaskerville-VariableFont_wght.ttf") format("truetype");
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .is-desktop html,
+    .is-desktop body {
+      min-width: 1380px;
+    }
+    .is-desktop .banner {
+      width: 1380px;
+      height: 469px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .banner {
+      position: relative;
+      overflow: hidden;
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    }
+    .banner__bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .is-desktop .banner {
+      width: 1380px;
+      height: 469px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .is-desktop .banner__overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 327px;
+      height: 100%;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(0deg, transparent 0%, var(--banner-overlay-color) var(--banner-overlay-stop, 100%));
+    }
+    .is-desktop .banner__content {
+      position: absolute;
+      width: 247px;
+      left: 40px;
+      top: 48px;
+      color: #fff;
+    }
+    .is-desktop .banner__brand {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+    .is-desktop .banner__brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: #fff;
+    }
+    .is-desktop .banner__brand-tag {
+      display: block;
+      width: 34px;
+      height: 21px;
+      flex-shrink: 0;
+    }
+    .is-desktop .banner__title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 16px;
+      font-family: "Libre Baskerville", serif;
+    }
+    .is-desktop .banner__quote {
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .is-desktop .banner__quote-mark {
+      position: absolute;
+      top: 0;
+      right: 28px;
+      display: block;
+    }
+    .is-desktop .banner__quote-mark img {
+      display: block;
+    }
+    .is-desktop .banner__desc {
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+      font-weight: 400;
+    }
+    .is-desktop .banner__btn {
+      display: inline-block;
+      padding: 10px 13px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      background: transparent;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .is-desktop .banner__btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .is-desktop .banner__before-wrap {
+      position: absolute;
+      bottom: 32px;
+      left: 40px;
+    }
+    .is-desktop .banner__before-wrap .banner__label {
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      z-index: 2;
+      border-radius: 0 1000px 1000px 0;
+    }
+    .is-desktop .banner__before-wrap-img {
+      width: 247px;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.36), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    }
+    .is-desktop .banner__label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.75);
+      color: #F8F9F9;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 18px 8px 16px;
+      border-radius: 1000px 0 0 1000px;
+      line-height: 1.4;
+    }
+    .is-desktop .banner__after {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.75);
+      color: #F8F9F9;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 18px 8px 16px;
+      border-radius: 1000px 0 0 1000px;
+      line-height: 1.4;
+      position: absolute;
+      top: 40px;
+      right: 0px;
+    }
+    .is-desktop .banner__top, .is-desktop .banner__bottom {
+      display: none;
+    }
+
+    .is-mobile .banner {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .is-mobile .banner__bg, .is-mobile .banner__overlay, .is-mobile .banner__content, .is-mobile .banner__before-wrap, .is-mobile .banner__after {
+      display: none;
+    }
+    .is-mobile .banner__top {
+      display: block;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 350/175;
+      border-radius: 8px 8px 0 0;
+    }
+    .is-mobile .banner__top-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center top;
+    }
+    .is-mobile .banner__top-bg::after {
+      width: 240px;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(270deg, transparent 0%, var(--banner-overlay-color, #635041) 60%);
+      opacity: 0.8;
+    }
+    .is-mobile .banner__top-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 9.14vw 0 0 5.71vw;
+    }
+    .is-mobile .banner__brand {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .is-mobile .banner__brand-name {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #fff;
+      line-height: 1.66;
+    }
+    .is-mobile .banner__brand-tag {
+      display: block;
+      width: 34px;
+      height: 21px;
+      flex-shrink: 0;
+    }
+    .is-mobile .banner__title {
+      display: none;
+    }
+    .is-mobile .banner__quote {
+      margin-bottom: 27px;
+    }
+    .is-mobile .banner__quote-mark {
+      display: none;
+    }
+    .is-mobile .banner__desc {
+      font-size: 13px;
+      line-height: 1.3;
+      color: #fff;
+      font-weight: 400;
+    }
+    .is-mobile .banner__btn {
+      width: -moz-fit-content;
+      width: fit-content;
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      background: transparent;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .is-mobile .banner__btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .is-mobile .banner__mo-before {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.75);
+      color: #F8F9F9;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 13px;
+      border-radius: 1000px 0 0 1000px;
+      line-height: 1.4;
+      position: absolute;
+      top: auto;
+      bottom: 15px;
+      right: 0px;
+      z-index: 2;
+      line-height: 1.6;
+    }
+    .is-mobile .banner__bottom {
+      display: block;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 350/175;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+    }
+    .is-mobile .banner__bottom-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center bottom;
+    }
+    .is-mobile .banner__bottom-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.75);
+      color: #F8F9F9;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 1000px 0 0 1000px;
+      line-height: 1.4;
+      position: absolute;
+      line-height: 1.6;
+      bottom: 15px;
+      left: 0px;
+      z-index: 2;
+      border-radius: 0 1000px 1000px 0;
+    }
+  </style>
+  <div class="banner" style="--banner-overlay-color: #3B644B; --banner-overlay-stop: 100%;">
+    <!-- ===== 공통: PC 배경 이미지 (모바일에서는 SCSS로 숨김) ===== -->
+    <div class="banner__bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no28/banner-pc.jpg');"></div>
+
+    <!-- ===== Desktop 전용 ===== -->
+    <div class="banner__overlay"></div>
+
+    <div class="banner__content">
+      <div class="banner__brand">
+        <span class="banner__brand-name">HOMESTYLE</span>
+        <img src="https://www.lge.co.kr/home_style_pages/community/images/Homestyle_Logo.svg" alt="홈스타일" class="banner__brand-tag">
+      </div>
+      <h2 class="banner__title">SCENE NO.28</h2>
+      <div class="banner__quote">
+        <span class="banner__quote-mark"><img src="https://www.lge.co.kr/home_style_pages/community/images/double_quotation.svg" alt=""></span>
+        <p class="banner__desc">
+          벽면을 책장과 수납장으로<br>
+          두어 거실을 서재로<br>
+          꾸미고 싶어요
+        </p>
+      </div>
+      <a class="banner__btn" href="https://homestyle.lge.co.kr/interior/space-style/detail?exhibitionId=321cf7d7-95e7-4789-876c-25ca738f8e89">Scene No.28 상세보기</a>
+    </div>
+
+    <div class="banner__before-wrap">
+      <span class="banner__label">Before</span>
+      <div class="banner__before-wrap-img" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no28/before-pc.jpg');"></div>
+    </div>
+
+    <div class="banner__after">After</div>
+
+    <!-- ===== Mobile 전용 ===== -->
+
+    <!-- 상단: 텍스트 영역 -->
+    <div class="banner__top">
+      <div class="banner__top-bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no28/before-mo.jpg');"></div>
+      <span class="banner__mo-before">Before</span>
+      <div class="banner__top-content">
+        <div class="banner__brand">
+          <span class="banner__brand-name">HOMESTYLE</span>
+          <img src="https://www.lge.co.kr/home_style_pages/community/images/Homestyle_Logo.svg" alt="홈스타일" class="banner__brand-tag">
+        </div>
+        <div class="banner__quote">
+          <p class="banner__desc">
+            벽면을 책장과 수납장으로 두어 <br>
+            거실을 서재로 꾸미고 싶어요
+          </p>
+        </div>
+        <a class="banner__btn" href="https://homestyle.lge.co.kr/interior/space-style/detail?exhibitionId=321cf7d7-95e7-4789-876c-25ca738f8e89">Scene No.28 상세보기</a>
+      </div>
+    </div>
+
+    <!-- 하단: After 이미지 -->
+    <div class="banner__bottom">
+      <div class="banner__bottom-bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no28/banner-mo.jpg');"></div>
+      <span class="banner__bottom-label">After</span>
+    </div>
+
+  </div>
+  <!-- oms 등록 end -->
+</body>
+</html>
