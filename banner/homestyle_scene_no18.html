@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homestyle Banner</title>
+
+  <!--
+    UA 감지 → <html>에 is-desktop / is-mobile 클래스 부여
+    - Desktop : min-width 1380px 고정, 이하 가로 스크롤
+    - Mobile  : 별도 세로형 레이아웃 적용
+  -->
+  <script>
+    (function () {
+      var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop');
+
+      if (!isMobile) {
+        var style = document.createElement('style');
+        style.textContent = 'html, body { min-width: 1380px; }';
+        document.head.appendChild(style);
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/banner.css">
+</head>
+<body>
+  <link href="https://www.lge.co.kr/home_style_pages/community/LibreBaskerville-VariableFont_wght.ttf" rel="stylesheet">
+  <div class="banner" style="--banner-overlay-color: #987350; --banner-overlay-stop: 100%;">
+    <!-- ===== 공통: PC 배경 이미지 (모바일에서는 SCSS로 숨김) ===== -->
+    <div class="banner__bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no18/banner-pc.jpg');"></div>
+
+    <!-- ===== Desktop 전용 ===== -->
+    <div class="banner__overlay"></div>
+
+    <div class="banner__content">
+      <div class="banner__brand">
+        <span class="banner__brand-name">HOMESTYLE</span>
+        <img src="https://www.lge.co.kr/home_style_pages/community/images/Homestyle_Logo.svg" alt="홈스타일" class="banner__brand-tag">
+      </div>
+      <h2 class="banner__title">SCENE NO.18</h2>
+      <div class="banner__quote">
+        <span class="banner__quote-mark"><img src="https://www.lge.co.kr/home_style_pages/community/images/double_quotation.svg" alt=""></span>
+        <p class="banner__desc">
+          채광과 뷰를 살리면서도<br>
+          화이트&우드로 공간을<br>
+          따뜻하게 연출하고 싶어요
+        </p>
+      </div>
+      <a class="banner__btn" href="https://homestyle.lge.co.kr/interior/space-style/detail?exhibitionId=6dd409a4-c3cb-4e6e-b783-314da7225a28">Scene No.18 상세보기</a>
+    </div>
+
+    <div class="banner__before-wrap">
+      <span class="banner__label">Before</span>
+      <div class="banner__before-wrap-img" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no18/before-pc.jpg');"></div>
+    </div>
+
+    <div class="banner__after">After</div>
+
+    <!-- ===== Mobile 전용 ===== -->
+
+    <!-- 상단: 텍스트 영역 -->
+    <div class="banner__top">
+      <div class="banner__top-bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no18/before-mo.jpg');"></div>
+      <span class="banner__mo-before">Before</span>
+      <div class="banner__top-content">
+        <div class="banner__brand">
+          <span class="banner__brand-name">HOMESTYLE</span>
+          <img src="https://www.lge.co.kr/home_style_pages/community/images/Homestyle_Logo.svg" alt="홈스타일" class="banner__brand-tag">
+        </div>
+        <div class="banner__quote">
+          <p class="banner__desc">
+            채광과 뷰를 살리면서도 화이트&우드로<br>
+            공간을 따뜻하게 연출하고 싶어요
+          </p>
+        </div>
+        <a class="banner__btn" href="https://homestyle.lge.co.kr/interior/space-style/detail?exhibitionId=6dd409a4-c3cb-4e6e-b783-314da7225a28">Scene No.18 상세보기</a>
+      </div>
+    </div>
+
+    <!-- 하단: After 이미지 -->
+    <div class="banner__bottom">
+      <div class="banner__bottom-bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no18/banner-mo.jpg');"></div>
+      <span class="banner__bottom-label">After</span>
+    </div>
+
+  </div>
+</body>
+</html>

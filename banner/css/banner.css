@@ -65,7 +65,7 @@ body {
 .is-desktop .banner__brand-name {
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: -0.4px;
   color: #fff;
 }
 .is-desktop .banner__brand-tag {
@@ -75,10 +75,9 @@ body {
   flex-shrink: 0;
 }
 .is-desktop .banner__title {
-  font-size: 32px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 150%;
   margin-bottom: 16px;
   font-family: "Libre Baskerville", serif;
 }
@@ -96,10 +95,10 @@ body {
   display: block;
 }
 .is-desktop .banner__desc {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 150%;
   color: #fff;
-  font-weight: 300;
+  font-weight: 400;
 }
 .is-desktop .banner__btn {
   display: inline-block;
@@ -242,6 +241,7 @@ body {
   font-weight: 400;
 }
 .is-mobile .banner__btn {
+  width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
   padding: 7px 12px;

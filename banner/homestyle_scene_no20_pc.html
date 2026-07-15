@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homestyle Banner - Scene No.20 (PC)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+</head>
+<body>
+  <!-- oms 등록 start -->
+  <style>
+    @font-face {
+      font-family: "Libre Baskerville";
+      src: url("https://www.lge.co.kr/home_style_pages/community/LibreBaskerville-VariableFont_wght.ttf") format("truetype");
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    html,
+    body {
+      min-width: 1380px;
+    }
+
+    .banner {
+      position: relative;
+      overflow: hidden;
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      width: 1380px;
+      height: 469px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .banner__bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .banner__overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 327px;
+      height: 100%;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(0deg, transparent 0%, var(--banner-overlay-color) var(--banner-overlay-stop, 100%));
+    }
+    .banner__content {
+      position: absolute;
+      width: 247px;
+      left: 40px;
+      top: 48px;
+      color: #fff;
+    }
+    .banner__brand {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+    .banner__brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: #fff;
+    }
+    .banner__brand-tag {
+      display: block;
+      width: 34px;
+      height: 21px;
+      flex-shrink: 0;
+    }
+    .banner__title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      margin-bottom: 16px;
+      font-family: "Libre Baskerville", serif;
+    }
+    .banner__quote {
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .banner__quote-mark {
+      position: absolute;
+      top: 0;
+      right: 28px;
+      display: block;
+    }
+    .banner__quote-mark img {
+      display: block;
+    }
+    .banner__desc {
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+      font-weight: 400;
+    }
+    .banner__btn {
+      display: inline-block;
+      padding: 10px 13px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      background: transparent;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .banner__btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .banner__before-wrap {
+      position: absolute;
+      bottom: 32px;
+      left: 40px;
+    }
+    .banner__before-wrap .banner__label {
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      z-index: 2;
+      border-radius: 0 1000px 1000px 0;
+    }
+    .banner__before-wrap-img {
+      width: 247px;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.36), 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    }
+    .banner__label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.75);
+      color: #F8F9F9;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 18px 8px 16px;
+      border-radius: 1000px 0 0 1000px;
+      line-height: 1.4;
+    }
+    .banner__after {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.75);
+      color: #F8F9F9;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 18px 8px 16px;
+      border-radius: 1000px 0 0 1000px;
+      line-height: 1.4;
+      position: absolute;
+      top: 40px;
+      right: 0px;
+    }
+  </style>
+  <div class="banner" style="--banner-overlay-color: #AE5232; --banner-overlay-stop: 100%;">
+    <div class="banner__bg" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no20/banner-pc.jpg');"></div>
+
+    <div class="banner__overlay"></div>
+
+    <div class="banner__content">
+      <div class="banner__brand">
+        <span class="banner__brand-name">HOMESTYLE</span>
+        <img src="https://www.lge.co.kr/home_style_pages/community/images/no20/Homestyle_Logo.svg" alt="홈스타일" class="banner__brand-tag">
+      </div>
+      <h2 class="banner__title">SCENE NO.20</h2>
+      <div class="banner__quote">
+        <span class="banner__quote-mark"><img src="https://www.lge.co.kr/home_style_pages/community/images/double_quotation.svg" alt=""></span>
+        <p class="banner__desc">
+          밋밋한 거실 공간에<br>
+          포인트가 될 수 있는<br>
+          인테리어를 하고 싶어요
+        </p>
+      </div>
+      <a class="banner__btn" href="https://homestyle.lge.co.kr/interior/space-style/detail?exhibitionId=ece425c4-3eac-493a-b103-728aea2651ff">Scene No.20 상세보기</a>
+    </div>
+
+    <div class="banner__before-wrap">
+      <span class="banner__label">Before</span>
+      <div class="banner__before-wrap-img" style="background-image: url('https://www.lge.co.kr/home_style_pages/community/images/no20/before-pc.jpg');"></div>
+    </div>
+
+    <div class="banner__after">After</div>
+  </div>
+  <!-- oms 등록 end -->
+</body>
+</html>

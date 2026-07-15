@@ -1,0 +1,3423 @@
+<!-- OMS 입력 부분 시작 -->
+<style>
+
+/**
+    * Swiper 12.1.4
+    * Most modern mobile touch slider and framework with hardware accelerated transitions
+    * https://swiperjs.com
+    *
+    * Copyright 2014-2026 Vladimir Kharlampidi
+    *
+    * Released under the MIT License
+    *
+    * Released on: April 29, 2026
+    */
+
+    :root{--swiper-theme-color:#007aff}:host{display:block;margin-left:auto;margin-right:auto;position:relative;z-index:1}.swiper{display:block;list-style:none;margin-left:auto;margin-right:auto;overflow:hidden;padding:0;position:relative;z-index:1}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{box-sizing:initial;display:flex;height:100%;position:relative;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);width:100%;z-index:1}.swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper{transform:translateZ(0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}.swiper-slide{display:block;flex-shrink:0;height:100%;position:relative;transition-property:transform;width:100%}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{backface-visibility:hidden;transform:translateZ(0)}.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px;.swiper-cube-shadow,.swiper-slide{transform-style:preserve-3d}}.swiper-css-mode{>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none;&::-webkit-scrollbar{display:none}}>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}&.swiper-horizontal{>.swiper-wrapper{scroll-snap-type:x mandatory}>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-slides-offset-before);scroll-margin-inline-start:var(--swiper-slides-offset-before)}>.swiper-wrapper>.swiper-slide:last-child{margin-inline-end:var(--swiper-slides-offset-after)}}&.swiper-vertical{>.swiper-wrapper{scroll-snap-type:y mandatory}>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-slides-offset-before);scroll-margin-block-start:var(--swiper-slides-offset-before)}>.swiper-wrapper>.swiper-slide:last-child{margin-block-end:var(--swiper-slides-offset-after)}}&.swiper-free-mode{>.swiper-wrapper{scroll-snap-type:none}>.swiper-wrapper>.swiper-slide{scroll-snap-align:none}}&.swiper-centered{>.swiper-wrapper:before{content:"";flex-shrink:0;order:9999}>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}}&.swiper-centered.swiper-horizontal{>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}>.swiper-wrapper:before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}}&.swiper-centered.swiper-vertical{>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}>.swiper-wrapper:before{height:var(--swiper-centered-offset-after);min-width:1px;width:100%}}}.swiper-3d{.swiper-slide-shadow,.swiper-slide-shadow-bottom,.swiper-slide-shadow-left,.swiper-slide-shadow-right,.swiper-slide-shadow-top{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:10}.swiper-slide-shadow{background:#00000026}.swiper-slide-shadow-left{background-image:linear-gradient(270deg,#00000080,#0000)}.swiper-slide-shadow-right{background-image:linear-gradient(90deg,#00000080,#0000)}.swiper-slide-shadow-top{background-image:linear-gradient(0deg,#00000080,#0000)}.swiper-slide-shadow-bottom{background-image:linear-gradient(180deg,#00000080,#0000)}}.swiper-lazy-preloader{border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top:4px solid #0000;box-sizing:border-box;height:42px;left:50%;margin-left:-21px;margin-top:-21px;position:absolute;top:50%;transform-origin:50%;width:42px;z-index:10}.swiper-watch-progress .swiper-slide-visible,.swiper:not(.swiper-watch-progress){.swiper-lazy-preloader{animation:swiper-preloader-spin 1s linear infinite}}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.swiper-virtual .swiper-slide{-webkit-backface-visibility:hidden;transform:translateZ(0)}.swiper-virtual.swiper-css-mode{.swiper-wrapper:after{content:"";left:0;pointer-events:none;position:absolute;top:0}}.swiper-virtual.swiper-css-mode.swiper-horizontal{.swiper-wrapper:after{height:1px;width:var(--swiper-virtual-size)}}.swiper-virtual.swiper-css-mode.swiper-vertical{.swiper-wrapper:after{height:var(--swiper-virtual-size);width:1px}}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{align-items:center;color:var(--swiper-navigation-color,var(--swiper-theme-color));cursor:pointer;display:flex;height:var(--swiper-navigation-size);justify-content:center;position:absolute;width:var(--swiper-navigation-size);z-index:10;&.swiper-button-disabled{cursor:auto;opacity:.35;pointer-events:none}&.swiper-button-hidden{cursor:auto;opacity:0;pointer-events:none}.swiper-navigation-disabled &{display:none!important}::slotted(svg),svg{height:100%;object-fit:contain;transform-origin:center;width:100%;fill:currentColor;pointer-events:none}}.swiper-button-lock{display:none}.swiper-button-next,.swiper-button-prev{margin-top:calc(0px - var(--swiper-navigation-size)/2);top:var(--swiper-navigation-top-offset,50%)}.swiper-button-prev{left:var(--swiper-navigation-sides-offset,4px);right:auto;.swiper-navigation-icon,::slotted(.swiper-navigation-icon){transform:rotate(180deg)}}.swiper-button-next{left:auto;right:var(--swiper-navigation-sides-offset,4px)}.swiper-horizontal{.swiper-button-next,.swiper-button-prev,~.swiper-button-next,~.swiper-button-prev{margin-left:0;margin-top:calc(0px - var(--swiper-navigation-size)/2);top:var(--swiper-navigation-top-offset,50%)}&.swiper-rtl .swiper-button-next,&.swiper-rtl~.swiper-button-next,&~.swiper-button-prev,.swiper-button-prev{left:var(--swiper-navigation-sides-offset,4px);right:auto}&.swiper-rtl .swiper-button-prev,&.swiper-rtl~.swiper-button-prev,&~.swiper-button-next,.swiper-button-next{left:auto;right:var(--swiper-navigation-sides-offset,4px)}&.swiper-rtl .swiper-button-next,&.swiper-rtl~.swiper-button-next,&~.swiper-button-prev,.swiper-button-prev{.swiper-navigation-icon,::slotted(.swiper-navigation-icon){transform:rotate(180deg)}}&.swiper-rtl .swiper-button-prev,&.swiper-rtl~.swiper-button-prev{.swiper-navigation-icon,::slotted(.swiper-navigation-icon){transform:rotate(0deg)}}}.swiper-vertical{.swiper-button-next,.swiper-button-prev,~.swiper-button-next,~.swiper-button-prev{left:var(--swiper-navigation-top-offset,50%);margin-left:calc(0px - var(--swiper-navigation-size)/2);margin-top:0;right:auto}.swiper-button-prev,~.swiper-button-prev{bottom:auto;top:var(--swiper-navigation-sides-offset,4px);.swiper-navigation-icon,::slotted(.swiper-navigation-icon){transform:rotate(-90deg)}}.swiper-button-next,~.swiper-button-next{bottom:var(--swiper-navigation-sides-offset,4px);top:auto;.swiper-navigation-icon,::slotted(.swiper-navigation-icon){transform:rotate(90deg)}}}.swiper-pagination{position:absolute;text-align:center;transform:translateZ(0);transition:opacity .3s;z-index:10;&.swiper-pagination-hidden{opacity:0}&.swiper-pagination-disabled,.swiper-pagination-disabled>&{display:none!important}}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,8px);left:0;top:var(--swiper-pagination-top,auto);width:100%}.swiper-pagination-bullets-dynamic{font-size:0;overflow:hidden;.swiper-pagination-bullet{position:relative;transform:scale(.33)}.swiper-pagination-bullet-active,.swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullet-active-next-next{transform:scale(.33)}}.swiper-pagination-bullet{background:var(--swiper-pagination-bullet-inactive-color,#000);border-radius:var(--swiper-pagination-bullet-border-radius,50%);display:inline-block;height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));opacity:var(--swiper-pagination-bullet-inactive-opacity,.2);width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));button&{appearance:none;border:none;box-shadow:none;margin:0;padding:0}.swiper-pagination-clickable &{cursor:pointer}&:only-child{display:none!important}}.swiper-pagination-bullet-active{background:var(--swiper-pagination-color,var(--swiper-theme-color));opacity:var(--swiper-pagination-bullet-opacity,1)}.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{left:var(--swiper-pagination-left,auto);right:var(--swiper-pagination-right,8px);top:50%;transform:translate3d(0,-50%,0);.swiper-pagination-bullet{display:block;margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0}&.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px;.swiper-pagination-bullet{display:inline-block;transition:transform .2s,top .2s}}}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-horizontal.swiper-pagination-bullets{.swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}&.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap;.swiper-pagination-bullet{transition:transform .2s,left .2s}}}.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:transform .2s,right .2s}.swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,#00000040);position:absolute;.swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));height:100%;left:0;position:absolute;top:0;transform:scale(0);transform-origin:left top;width:100%}.swiper-rtl & .swiper-pagination-progressbar-fill{transform-origin:right top}&.swiper-pagination-horizontal,&.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-horizontal>&,.swiper-vertical>&.swiper-pagination-progressbar-opposite{height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0;width:100%}&.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,&.swiper-pagination-vertical,.swiper-horizontal>&.swiper-pagination-progressbar-opposite,.swiper-vertical>&{height:100%;left:0;top:0;width:var(--swiper-pagination-progressbar-size,4px)}}.swiper-pagination-lock{display:none}.swiper-scrollbar{background:var(--swiper-scrollbar-bg-color,#0000001a);border-radius:var(--swiper-scrollbar-border-radius,10px);position:relative;touch-action:none;&.swiper-scrollbar-disabled,.swiper-scrollbar-disabled>&{display:none!important}&.swiper-scrollbar-horizontal,.swiper-horizontal>&{bottom:var(--swiper-scrollbar-bottom,4px);height:var(--swiper-scrollbar-size,4px);left:var(--swiper-scrollbar-sides-offset,1%);position:absolute;top:var(--swiper-scrollbar-top,auto);width:calc(100% - var(--swiper-scrollbar-sides-offset, 1%)*2);z-index:50}&.swiper-scrollbar-vertical,.swiper-vertical>&{height:calc(100% - var(--swiper-scrollbar-sides-offset, 1%)*2);left:var(--swiper-scrollbar-left,auto);position:absolute;right:var(--swiper-scrollbar-right,4px);top:var(--swiper-scrollbar-sides-offset,1%);width:var(--swiper-scrollbar-size,4px);z-index:50}}.swiper-scrollbar-drag{background:var(--swiper-scrollbar-drag-bg-color,#00000080);border-radius:var(--swiper-scrollbar-border-radius,10px);height:100%;left:0;position:relative;top:0;width:100%}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{align-items:center;display:flex;height:100%;justify-content:center;text-align:center;width:100%;>canvas,>img,>svg{max-height:100%;max-width:100%;object-fit:contain}}.swiper-slide-zoomed{cursor:move;touch-action:none}.swiper .swiper-notification{left:0;opacity:0;pointer-events:none;position:absolute;top:0;z-index:-1000}.swiper-free-mode>.swiper-wrapper{margin:0 auto;transition-timing-function:ease-out}.swiper-grid>.swiper-wrapper{flex-wrap:wrap}.swiper-grid-column>.swiper-wrapper{flex-direction:column;flex-wrap:wrap}.swiper-fade{&.swiper-free-mode{.swiper-slide{transition-timing-function:ease-out}}.swiper-slide{pointer-events:none;transition-property:opacity;.swiper-slide{pointer-events:none}}.swiper-slide-active{pointer-events:auto;& .swiper-slide-active{pointer-events:auto}}}.swiper.swiper-cube{overflow:visible}.swiper-cube{.swiper-slide{backface-visibility:hidden;height:100%;pointer-events:none;transform-origin:0 0;visibility:hidden;width:100%;z-index:1;.swiper-slide{pointer-events:none}}&.swiper-rtl .swiper-slide{transform-origin:100% 0}.swiper-slide-active{&,& .swiper-slide-active{pointer-events:auto}}.swiper-slide-active,.swiper-slide-next,.swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-cube-shadow{bottom:0;height:100%;left:0;opacity:.6;position:absolute;width:100%;z-index:0;&:before{background:#000;bottom:0;content:"";filter:blur(50px);left:0;position:absolute;right:0;top:0}}}.swiper-cube{.swiper-slide-next+.swiper-slide{pointer-events:auto;visibility:visible}}.swiper-cube{.swiper-slide-shadow-cube.swiper-slide-shadow-bottom,.swiper-slide-shadow-cube.swiper-slide-shadow-left,.swiper-slide-shadow-cube.swiper-slide-shadow-right,.swiper-slide-shadow-cube.swiper-slide-shadow-top{backface-visibility:hidden;z-index:0}}.swiper.swiper-flip{overflow:visible}.swiper-flip{.swiper-slide{backface-visibility:hidden;pointer-events:none;z-index:1;.swiper-slide{pointer-events:none}}.swiper-slide-active{&,& .swiper-slide-active{pointer-events:auto}}}.swiper-flip{.swiper-slide-shadow-flip.swiper-slide-shadow-bottom,.swiper-slide-shadow-flip.swiper-slide-shadow-left,.swiper-slide-shadow-flip.swiper-slide-shadow-right,.swiper-slide-shadow-flip.swiper-slide-shadow-top{backface-visibility:hidden;z-index:0}}.swiper-creative{.swiper-slide{backface-visibility:hidden;overflow:hidden;transition-property:transform,opacity,height}}.swiper.swiper-cards{overflow:visible}.swiper-cards{.swiper-slide{backface-visibility:hidden;overflow:hidden;transform-origin:center bottom}}
+
+
+#opinion-column-body .screen-reader-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+#opinion-column-body .screen-reader-only:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: inherit !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: inherit !important;
+}
+
+
+#opinion-column-body {
+    display: block;
+    padding: 0 0 0 0;
+    width: 100%;
+    margin: 0 auto;
+    color: #111;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    position: relative;
+}
+
+#opinion-column-body > main {
+    display: block;
+    padding: 0 0 0 0;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+#opinion-column-body > main > section {
+    display: block;
+    padding: 0 0 0 0;
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#opinion-column-body > main > section > .o-wrapper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+#opinion-column-body > main > section article.o-sub-set{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.6s ease-in-out;
+}
+#opinion-column-body > main > section article.o-sub-set.o-sub-on{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#opinion-column-body [hidden] {
+    display: none !important;
+}
+
+#opinion-column-body, #opinion-column-body *{
+    font-family: "Pretendard Variable","Pretendard","맑은 고딕","malgun gothic","돋움","dotum",Arial,sans-serif;
+    letter-spacing: -0.5px;
+    word-break: keep-all;
+    color: #000;
+}
+#opinion-column-body picture,
+#opinion-column-body img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+#opinion-column-body .o-br-t {display: none;}
+#opinion-column-body .o-br-m {display: none;}
+#opinion-column-body .o-nowrap {white-space: nowrap;}
+
+
+#opinion-column-body > main > section.opinion-kv {
+    /* max-width: 1920px; */
+    height: 1000px;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper {
+    max-width: 1920px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 480px;
+    margin: 0 auto;
+    background: url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/kv-title-bg2.webp') no-repeat center / contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 36px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    transition-delay: 0.3s;
+    margin-top: -42px;
+}
+#opinion-column-body > main > section.opinion-kv.o-on > .o-wrapper > .o-inner > .o-content {
+    opacity: 1;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content h3 {
+    width: 362px;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content p {
+    font-size: 15.6px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content p strong{
+    font-weight: 700;
+    color: #fff;
+}
+#opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 780px;
+    height: 1000px;
+    will-change: transform, opacity;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+#opinion-column-body > main > section.opinion-kv.o-on > .o-wrapper > .o-inner > .o-bg {
+  opacity: 1;
+}
+
+
+
+#opinion-column-body > main > section.opinion-profile {
+    position: relative;
+    background-color: #F4F4F4;
+    padding-bottom: 48px;
+}
+#opinion-column-body > main > section.opinion-profile > .o-wrapper {
+    top:-64px;
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(50px);
+    will-change: transform, opacity;   
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition-delay: 0.5s;
+}
+#opinion-column-body > main > section.opinion-profile.o-on > .o-wrapper {
+    transform: translateY(0);
+    opacity: 1;
+}
+#opinion-column-body > main > section.opinion-profile > .o-wrapper > .o-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#opinion-column-body .o-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    justify-content: space-between;
+}
+#opinion-column-body .o-profile .profile-content{
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    text-align: center;
+}
+#opinion-column-body .o-profile .profile-content .profile-copy h4{
+    font-size: 31.2px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+    color: #111;
+}
+#opinion-column-body .o-profile .profile-content .profile-copy .desc{
+    font-size: 18.2px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    color: #111;
+}
+#opinion-column-body .o-profile .profile-info {
+    text-align: center;
+    margin: 0 auto;
+}
+#opinion-column-body .o-profile .profile-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+}
+#opinion-column-body .o-profile .profile-image img{
+    background: #0A0A08;
+    border-radius: 50%;
+}
+#opinion-column-body .o-profile .profile-info .profile-name {
+    font-size: 20.8px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+    font-weight: 700;
+    color: #111;
+}
+#opinion-column-body .o-profile .profile-info .profile-job{
+    font-size: 15.6px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.66;
+    letter-spacing: 0;
+}
+#opinion-column-body .o-profile .profile-caption {
+    padding: 44px 0 0;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+#opinion-column-body .o-profile .profile-caption .profile-logo{
+    width: 81px;
+}
+#opinion-column-body .o-profile .profile-caption .profile-etc p{
+    text-align: center;
+    font-size: 15.6px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    color: #444444;
+}
+#opinion-column-body .o-profile .profile-caption .profile-etc1{
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 700;
+    line-height: 1.2;
+    color: #444444;
+    margin-bottom: 4px;
+}
+#opinion-column-body .o-profile .profile-caption .profile-etc2{
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+
+
+
+
+/* Before/After Comparison Slider */
+#opinion-column-body .o-comparison-slider {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+}
+#opinion-column-body .o-comp-layer-static {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+#opinion-column-body .o-comp-layer-static figure, 
+#opinion-column-body .o-comp-layer-overlay figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 0; 
+}
+#opinion-column-body .o-comp-layer-static img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#opinion-column-body .o-comp-layer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%; 
+    overflow: hidden;
+    z-index: 20;
+    border-right: 1px solid #fff;
+    will-change: width;
+}
+#opinion-column-body .o-comp-layer-overlay img {
+    height: 100%;
+    width: auto; /* JS will override this to match container width */
+    max-width: none !important;
+    display: block;
+}
+#opinion-column-body .o-comp-caption {
+    position: absolute;
+    top: 32px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 6px 12px;
+    z-index: 5;
+    white-space: nowrap;
+}
+#opinion-column-body .o-comp-layer-static .o-comp-caption {
+    right: 32px;
+    background-color: #fff !important;
+    color: #A8907F !important;
+}
+#opinion-column-body .o-comp-layer-overlay .o-comp-caption {
+    left: 32px;
+    color: #fff !important;
+    background-color: #A8907F !important;
+}
+#opinion-column-body .o-comp-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 160px;
+    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    cursor: ew-resize;
+}
+#opinion-column-body .handle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: transparent;
+}
+#opinion-column-body .handle-btn img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#opinion-column-body .handle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30px);
+    background: rgba(0,0,0,0.7);
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff !important;
+    padding: 2px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#opinion-column-body .o-comparison-slider:hover .handle-text,
+#opinion-column-body .o-comp-handle:active .handle-text,
+#opinion-column-body .o-comp-handle:focus .handle-text {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    #opinion-column-body .o-comp-caption {
+        top: 16px;
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    #opinion-column-body .o-comp-layer-static .o-comp-caption { right: 16px; }
+    #opinion-column-body .o-comp-layer-overlay .o-comp-caption { left: 16px; }
+    #opinion-column-body .handle-btn { width: 32px; height: 32px; }
+
+    #opinion-column-body .o-comp-layer-static img {
+        min-height: 200px;
+        object-fit: cover;
+    }
+    #opinion-column-body .o-comp-layer-overlay img {
+        min-height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* Initial Wiggle Animation */
+@keyframes o-wiggle-overlay {
+    0%, 100% { width: 50%; }
+    25% { width: 54%; }
+    75% { width: 46%; }
+}
+@keyframes o-wiggle-handle {
+    0%, 100% { left: 50%; }
+    25% { left: 54%; }
+    75% { left: 46%; }
+}
+#opinion-column-body .o-wiggle .o-comp-layer-overlay {
+    animation: o-wiggle-overlay 2.5s ease-in-out 2;
+}
+#opinion-column-body .o-wiggle .o-comp-handle {
+    animation: o-wiggle-handle 2.5s ease-in-out 2;
+}
+#opinion-column-body .o-wiggle .handle-text {
+    opacity: 1 !important;
+}
+
+
+/* =========================================
+    Floor Plan Interactive Map (mobile layout, scales to 780px)
+========================================= */
+#opinion-column-body > main > section.opinion-result .fp-container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Pretendard', sans-serif;
+    background: #5d7e73;
+    height: auto;
+    max-height: none;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-mobile-top-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-mobile-bottom-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    background: #aa9484;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-info-container {
+    display: block;
+    position: relative;
+    padding: 100px 32px 48px;
+    background-color: #544133;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 0;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-info-container .fp-label {
+    top: 40px;
+    left: 32px;
+    font-size: 16.9px;
+    line-height: 20.8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-info-item {
+    display: none;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-info-item.active {
+    display: block;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-info-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-desc {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-desc li {
+    position: relative;
+    font-size: 15.6px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85) !important;
+    word-break: keep-all;
+    padding-left: 12px;
+    text-align: left;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-desc li::before {
+    content: '•';
+    margin-right: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#opinion-column-body > main > section.opinion-result .fp-spot-desc li + li {
+    margin-top: 4px;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-large-map {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #4C6B5F;
+    overflow: hidden;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-large-map .fp-desc-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+    display: block;
+    padding: 0 40px 40px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%);
+    border-top: none;
+    pointer-events: none;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-small-map {
+    width: 100%;
+    padding: 40px 33px 0 36px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.06);;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#opinion-column-body > main > section.opinion-result .fp-label {
+    position: absolute;
+    top: 40px;
+    left: 36px;
+    z-index: 10;
+    font-size: 16.9px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #23291B;
+    display: flex;
+    align-items: start;
+}
+#opinion-column-body > main > section.opinion-result .fp-small-map p {
+    position: absolute;
+    width: max-content;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #37261A;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+#opinion-column-body > main > section.opinion-result .fp-small-map p.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    #opinion-column-body > main > section.opinion-result .fp-small-map p {
+        font-size: 11px;
+    }
+}
+
+#opinion-column-body > main > section.opinion-result .fp-label span:first-child {
+    position: relative;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-label span:first-child::after {
+    content: '';
+    width: 2px;
+    height: 12px;
+    background-color: #221A0E;
+    position: absolute;
+    top: 3px;
+    right: -8px;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-large-map .fp-label {
+    z-index: 8;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-large-map .fp-label span {
+    color: #fff;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-large-map .fp-label span:first-child::after {
+    background-color: #fff;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-map-nav {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-point {
+    width: 26px;
+    height: 26px;
+    font-size: 15.6px;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-point.active {
+    font-weight: 700 !important;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-desc-item {
+    animation: none !important;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-num {
+    display: inline;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#opinion-column-body > main > section.opinion-result .fp-title {
+    display: inline;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#opinion-column-body > main > section.opinion-result .fp-text {
+    margin-top: 12px;
+    font-size: 18.2px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-detail-view {
+    aspect-ratio: 350 / 432;
+    height: auto;
+}
+
+#opinion-column-body > main > section.opinion-result img.fp-detail-img {
+    transition: none;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-nav-btn {
+    width: 61px;
+    height: 61px;
+    transition: none;
+    padding: 13px;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-nav-btn:hover {
+    transform: translateY(-50%);
+}
+
+#opinion-column-body > main > section.opinion-result .fp-nav-btn.is-disabled:hover,
+#opinion-column-body > main > section.opinion-result .fp-nav-btn:disabled:hover {
+    transform: translateY(-50%);
+}
+
+#opinion-column-body > main > section.opinion-result .fp-nav-btn.is-disabled img,
+#opinion-column-body > main > section.opinion-result .fp-nav-btn:disabled img {
+    opacity: 0.1 !important;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-nav-btn.prev {
+    left: 23px;
+}
+
+#opinion-column-body > main > section.opinion-result .fp-nav-btn.next {
+    right: 23px;
+}
+
+@media (max-width: 768px) {
+    #opinion-column-body > main > section.opinion-result .fp-large-map .fp-desc-container {
+        padding:0 20px 24px;
+    }
+}
+
+  /* Common Styles */
+  
+  /* Map Nav (Small Map) */
+  #opinion-column-body .fp-map-nav {
+      position: relative;
+  }
+  #opinion-column-body .fp-map-bg {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
+  #opinion-column-body .fp-point {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #37261A !important;
+      color: #C3AB97 !important;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+  }
+  #opinion-column-body .fp-point.active {
+      font-weight: 700 !important;
+      background: #FFD400 !important;
+      color: #000 !important;
+      /* transform: translate(-50%, -50%) scale(1.1); */
+  }
+
+
+  @media (max-width: 768px) {
+    
+    #opinion-column-body > main > section.opinion-result .fp-point {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 1.4;
+
+    }
+    #opinion-column-body .fp-point.active {
+        width: 20px;
+        height: 20px;
+        font-weight: 700 !important;
+    }
+  }
+  
+  /* Descriptions */
+  #opinion-column-body .fp-desc-item {
+      display: none; /* 기본 숨김 */
+      width: 100%;
+      animation: fadeUp 0.5s ease forwards;
+  }
+  #opinion-column-body .fp-desc-item.active {
+      display: block;
+  }
+  
+  @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* 모바일에서는 애니메이션 제거 */
+  @media (max-width: 768px) {
+      #opinion-column-body .fp-desc-item {
+          animation: none !important;
+      }
+  }
+  
+  #opinion-column-body .fp-num {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff !important;
+      line-height: 1.2;
+  }
+  #opinion-column-body .fp-title {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff !important;
+      line-height: 1.2;
+      text-transform: uppercase;
+  }
+  #opinion-column-body .fp-text {
+      font-size: 17px;
+      line-height: 24px;
+      letter-spacing: -0.3px;
+      color: #fff !important;
+      word-break: keep-all;
+      font-weight: 400;
+      text-align: left;
+  }
+
+  /* Mobile Font Sizes */
+  @media (max-width: 768px) {
+      #opinion-column-body > main > section.opinion-result .fp-num { display: inline; font-size: 20px; line-height: 1.2; margin-bottom: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+      #opinion-column-body > main > section.opinion-result .fp-title { display: inline;font-size: 20px; line-height: 1.2; margin-bottom: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+      #opinion-column-body > main > section.opinion-result .fp-text { margin-top: 6px;font-size: 14px; line-height: 1.4; color: rgba(255,255,255,0.95); text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  }
+
+  /* Detail View (Large Map) */
+  #opinion-column-body .fp-detail-view {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  }
+  #opinion-column-body .fp-detail-mask {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      background-color: #8b7260;
+  }
+
+  #opinion-column-body .fp-detail-images-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* Detail Map Images */
+  #opinion-column-body img.fp-detail-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+  }
+
+  #opinion-column-body img.fp-detail-img.active {
+      opacity: 1;
+      z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+      #opinion-column-body img.fp-detail-img {
+          transition: none;
+      }
+
+      #opinion-column-body .fp-detail-view {
+        aspect-ratio: 350 / 432;
+        height: auto;
+      }
+  }
+
+  /* Navigation Buttons */
+  #opinion-column-body .fp-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 64px;
+      height: 64px;
+      background: transparent; /* 배경 투명 */
+      border: none; /* 테두리 제거 */
+      cursor: pointer;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s; 
+      padding: 20px;
+      pointer-events: auto;
+  }
+  
+  #opinion-column-body .fp-nav-btn.is-disabled,
+  #opinion-column-body .fp-nav-btn:disabled {
+      pointer-events: none;
+      cursor: default;
+  }
+
+  #opinion-column-body .fp-nav-btn img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: contain;
+      opacity: 0.1;
+      transition: opacity 0.3s; 
+  }
+  
+  #opinion-column-body .fp-nav-btn:hover {
+      background: transparent;
+      border: none;
+      transform: translateY(-50%) scale(1.1); /* 약간 커짐 효과 */
+  }
+
+  #opinion-column-body .fp-nav-btn:hover img {
+      opacity: 1;
+  }
+
+  /* Mobile Nav Btn */
+  @media (max-width: 768px) {
+      #opinion-column-body .fp-nav-btn {
+          width: 50px !important;
+          height: 50px !important;
+          transition: none; /* 모바일에서 scale 애니메이션 제거 */
+          padding: 13px;
+      }
+      #opinion-column-body .fp-nav-btn:hover {
+          transform: translateY(-50%); /* 모바일에서 scale 효과 제거 */
+      }
+      #opinion-column-body .fp-nav-btn.is-disabled:hover,
+      #opinion-column-body .fp-nav-btn:disabled:hover {
+          transform: translateY(-50%);
+      }
+      #opinion-column-body .fp-nav-btn.is-disabled img,
+      #opinion-column-body .fp-nav-btn:disabled img {
+          opacity: 0.1 !important;
+      }
+      #opinion-column-body > main > section.opinion-result .fp-nav-btn.prev {
+        left:5px;
+      }
+      #opinion-column-body > main > section.opinion-result .fp-nav-btn.next {
+        right:5px;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#opinion-column-body > main > section.opinion-overview {
+    height: auto;
+    background-color: #ebebeb;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper {
+    height: 100%;
+    padding:0 0 80px
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(1) {
+    padding: 120px 40px 80px;
+    text-align:center;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(3) {
+    padding: 0 40px;
+    text-align:center;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(4) {
+    padding: 0 40px;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article {
+    width:100%;
+    height: auto;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article.opinion-overview-head{
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  
+  justify-content: space-between;
+}
+
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title h4 {
+    font-size: 15.6px;
+    font-weight: 600;
+    color: #544133;
+    line-height: 22px;
+    letter-spacing: -0.55px;
+    padding: 0 0 8px 0;
+    text-align: center;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title p {
+  font-weight: 600;
+  font-size: 31.2px;
+  line-height: 41.6px;
+  letter-spacing: -0.3px;
+  color: #111;
+  white-space: nowrap;
+  text-align: center;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-desc{
+  padding-top: 32px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #444;
+  text-align: center;
+  font-size: 18.2px;
+  line-height: 26px;
+  max-width: 455px;
+  margin: 0 auto;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-desc strong {
+    color:#111;
+    font-weight:600;
+}
+
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article.opinion-overview-body{
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+  transition-delay: 0.3s;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article.opinion-overview-body.o-sub-on{
+  opacity: 1;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request {
+    width: 100%;
+    height: auto;
+    padding: 0 0 80px;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request:has(.o-comparison-slider) {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request blockquote {
+    width: 50%;
+    height: auto;
+    float: left;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request blockquote > p {
+    font-size: 32px;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.5;
+    letter-spacing: -0.96px;
+    padding: 0 0 60px 0;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request > p {
+    width: 50%;
+    height: auto;
+    float: right;
+    font-size: 17px;
+    font-weight: 400;
+    color: #111;
+    line-height: 24px;
+    letter-spacing: 0;
+    padding: 0 0 60px 8.5px;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request > figure {
+    clear: both;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request .o-request-image {
+    clear: both;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request > figure > figcaption,
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request .o-request-image > figcaption {
+    position: absolute;
+    z-index: 1;
+    left: 32px;
+    top: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 24px;
+    letter-spacing: 0;
+    padding: 6px 12px;
+    background-color: #134B39;
+}
+
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-info {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(4) {
+        padding:0 20px;
+    }
+}
+
+#opinion-column-body .o-info {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 80px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 0;
+}
+
+
+#opinion-column-body .o-info li {
+    border-bottom: 1px solid #888888;
+    padding: 32px 0;
+    grid-column:auto / span 1;
+    grid-row:auto / span 1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 0;
+    text-align: left;
+}
+
+#opinion-column-body .o-info li:nth-child(1),
+#opinion-column-body .o-info li:nth-child(2) {
+    border-top: 2px solid #111;
+}
+
+#opinion-column-body .o-info .label {
+    grid-column: auto / span 1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    line-height: 20px;
+    letter-spacing: -0.48px;
+    white-space: nowrap;
+    display: block;
+    position: relative;
+}
+
+#opinion-column-body .o-info .label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+#opinion-column-body .o-info li:nth-child(1) .label::before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5002 3.70825H7.50016C5.29394 3.70825 4.8335 4.1687 4.8335 6.37492V17.5416H15.1668V6.37492C15.1668 4.1687 14.7064 3.70825 12.5002 3.70825Z" stroke="%23111111" stroke-linejoin="round"/><path d="M2.5 17.6252H17.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 17.5416V15.5416C12.5 14.4385 12.2698 14.2083 11.1667 14.2083H8.83333C7.73022 14.2083 7.5 14.4385 7.5 15.5416V17.5416" stroke="%23111111" stroke-linejoin="round"/><path d="M11.5 7.62524H8.5M11.5 10.6252H8.5" stroke="%23111111" stroke-linecap="round"/></svg>');
+}
+
+#opinion-column-body .o-info li:nth-child(2) .label::before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3.5C11.2856 3.5 12.5423 3.88122 13.6112 4.59545C14.6801 5.30968 15.5133 6.32484 16.0052 7.51256C16.4972 8.70028 16.6259 10.0072 16.3751 11.2681C16.1243 12.529 15.5052 13.6872 14.5962 14.5962C13.6872 15.5052 12.529 16.1243 11.2681 16.3751C10.0072 16.6259 8.70028 16.4972 7.51256 16.0052C6.32484 15.5132 5.30968 14.6801 4.59545 13.6112C3.88122 12.5423 3.5 11.2856 3.5 10C3.49794 8.13797 4.21436 6.34694 5.5 5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 5.5L5.5 5L6 7" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6.5V10.5L12.6 11.8" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+#opinion-column-body .o-info li:nth-child(3) .label::before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 8.5V11.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 10H8.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 10H14.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 10H3.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 3.5H4.5C3.94772 3.5 3.5 3.94772 3.5 4.5V15.5C3.5 16.0523 3.94772 16.5 4.5 16.5H15.5C16.0523 16.5 16.5 16.0523 16.5 15.5V4.5C16.5 3.94772 16.0523 3.5 15.5 3.5Z" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 3.5V5.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14.5V16.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+#opinion-column-body .o-info li:nth-child(5) .label::before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.05542 6.05615C5.05542 5.78001 4.83156 5.55615 4.55542 5.55615C4.27928 5.55615 4.05542 5.78001 4.05542 6.05615H4.55542H5.05542ZM4.05542 17.3335C4.05542 17.6096 4.27928 17.8335 4.55542 17.8335C4.83156 17.8335 5.05542 17.6096 5.05542 17.3335H4.55542H4.05542ZM4.55542 6.05615H4.05542V17.3335H4.55542H5.05542V6.05615H4.55542Z" fill="%23111111"/><path d="M8.36103 4.14014L8.17623 4.60474L8.36103 4.14014ZM10.8624 5.13509L10.6776 5.59969L10.8624 5.13509ZM10.8624 10.9355L11.0472 11.4001L10.8624 10.9355ZM4.55542 13.4442H4.05542C4.05542 13.6099 4.13755 13.7649 4.27471 13.858C4.41186 13.951 4.58621 13.9701 4.74022 13.9088L4.55542 13.4442ZM5.16976 3.48485L4.91194 3.05645L4.91194 3.05645L5.16976 3.48485ZM8.36103 4.14014L8.17623 4.60474L10.6776 5.59969L10.8624 5.13509L11.0472 4.67049L8.54583 3.67555L8.36103 4.14014ZM10.8624 10.9355L10.6776 10.4709L4.37062 12.9796L4.55542 13.4442L4.74022 13.9088L11.0472 11.4001L10.8624 10.9355ZM10.8624 5.13509L10.6776 5.59969C12.2209 6.21354 13.3252 6.65415 14.0502 7.07038C14.7912 7.49583 14.9447 7.78857 14.9447 8.03531H15.4447H15.9447C15.9447 7.20447 15.3344 6.65464 14.5481 6.20315C13.7456 5.74245 12.5588 5.27174 11.0472 4.67049L10.8624 5.13509ZM10.8624 10.9355L11.0472 11.4001C12.5588 10.7989 13.7456 10.3282 14.5481 9.86748C15.3344 9.41599 15.9447 8.86616 15.9447 8.03531H15.4447H14.9447C14.9447 8.28206 14.7912 8.57479 14.0502 9.00025C13.3252 9.41648 12.2209 9.85709 10.6776 10.4709L10.8624 10.9355ZM4.55542 6.43039H4.05542V13.4442H4.55542H5.05542V6.43039H4.55542ZM8.36103 4.14014L8.54583 3.67555C7.70103 3.33952 7.0188 3.06693 6.47104 2.9321C5.9168 2.79567 5.38768 2.77014 4.91194 3.05645L5.16976 3.48485L5.42757 3.91326C5.56617 3.82985 5.77371 3.7903 6.23203 3.90311C6.69683 4.01752 7.30307 4.25743 8.17623 4.60474L8.36103 4.14014ZM4.55542 6.43039H5.05542C5.05542 5.55379 5.05698 4.95828 5.12582 4.53202C5.19178 4.12354 5.30143 3.98917 5.42757 3.91326L5.16976 3.48485L4.91194 3.05645C4.42374 3.35025 4.22622 3.83004 4.13861 4.37259C4.05386 4.89737 4.05542 5.58977 4.05542 6.43039H4.55542Z" fill="%23111111"/></svg>');
+}
+
+#opinion-column-body .o-info li:nth-child(4) .label::before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.25 8.79179L9.82805 5.59346C10.7985 4.72598 11.2838 4.29224 11.875 4.29224C12.4662 4.29224 12.9515 4.72598 13.922 5.59346L17.5 8.79179" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.375 8.04199V17.0411M16.375 17.0411V8.04199" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="3.625" cy="11.0421" rx="1.125" ry="1.49985" stroke="%23111111"/><path d="M3.625 12.5408V17.0403" stroke="%23111111" stroke-linecap="round"/><path d="M2.5 17.0415H17.5" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 17.0403V14.0404C10 13.3335 10 12.9801 10.2197 12.7604C10.4393 12.5408 10.7929 12.5408 11.5 12.5408H12.25C12.9571 12.5408 13.3107 12.5408 13.5303 12.7604C13.75 12.9801 13.75 13.3336 13.75 14.0406V17.0403" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.125 10.2918H12.625M11.125 8.04199H12.625" stroke="%23111111" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+#opinion-column-body .o-info .value {
+    grid-column: auto / span 1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    line-height: 20px;
+    text-align: left;
+    padding: 12px 0 0;
+}
+
+
+
+#opinion-column-body .o-solution {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#opinion-column-body .o-solution li {
+  display: flex;
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article.o-sub-on .o-solution li:nth-child(2){
+  transition-delay: 0.2s;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article.o-sub-on .o-solution li:nth-child(3){
+  transition-delay: 0.3s;
+}
+#opinion-column-body > main > section.opinion-overview > .o-wrapper article.o-sub-on .o-solution li{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+#opinion-column-body .o-solution article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    position: relative;
+    padding-top: 76px;
+}
+
+#opinion-column-body .o-solution li article::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#opinion-column-body .o-solution li:nth-child(1) article::before {
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/solution-icon-01.webp');
+}
+
+#opinion-column-body .o-solution li:nth-child(2) article::before {
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/solution-icon-02.webp');
+}
+
+#opinion-column-body .o-solution li:nth-child(3) article::before {
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/solution-icon-03.webp');
+}
+
+#opinion-column-body .o-solution h4 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.4;
+    letter-spacing: -0.39px;
+    padding:0 0 24px 0;
+    text-align: left;
+}
+
+#opinion-column-body .o-solution p {
+    font-size: 18.2px;
+    font-weight: 400;
+    color: #444;
+    line-height: 26px;
+    letter-spacing: 0;
+    padding:10px 0 0 0;
+    text-align: left;
+}
+
+
+
+#opinion-column-body > main > section.opinion-result {
+    max-width: 100%;
+    position: relative;
+    padding-top: min(calc(90 / 780 * 100vw), 90px);
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper {
+    max-width: 780px;
+    height: 100%;
+    padding-bottom: 0;
+    background-color: #AB9985;
+}
+#opinion-column-body > main > section.opinion-result::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: min(100%, 780px);
+    height: auto;
+    overflow: hidden;
+    background: #ebebeb url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/opinion-floor-plan-bg-top.webp') no-repeat center top / cover;
+    aspect-ratio: 780 / 90;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner {
+    width: 100%;
+    max-width: 780px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner::before{
+  display: none;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description {
+    position: relative;
+    padding: 40px 0 56px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+#opinion-column-body > main > section.opinion-result.o-on > .o-wrapper > .o-inner .result-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description h4 {
+    display:block;
+    font-size: clamp(15px, 2.18vw, 17px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: -0.51px;
+    box-sizing: border-box;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description h4 > span{
+    font-size:22.1px;
+    line-height:1.5;
+    letter-spacing: -0.3px;
+    color: #fff;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description h4 > strong {
+    display:block;
+    font-size: 31.2px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    padding: 0;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description > span {
+    position: static;
+    display:block;
+    font-size: clamp(12px, 1.79vw, 14px);
+    font-weight: 500;
+    color: #fff;
+    line-height: 17px;
+    letter-spacing: 0;
+    padding: 32px 0 12px 0;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan {
+    position: relative;
+    border-top: 0;
+    padding-bottom: 45px;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan .plan-image{
+  padding: 0;
+  border-top: 0;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  contain: paint;
+  margin-top: 0;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan .plan-meta{
+  padding: 17px 0 0;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+#opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan .plan-meta span{
+  font-weight: 500;
+  font-size: 14.3px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: rgba(255,255,255,.4);
+}
+
+@media (max-width: 768px) { 
+    #opinion-column-body > main > section.opinion-result {
+        padding-top:45px;
+    }
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner {
+        padding:0 20px;
+    }
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description {
+        padding:20px 0 28px;
+    }
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description h4 > span {
+        font-size: 17px;
+    }
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .result-description h4 > strong {
+        font-size: 24px;
+    }
+    #opinion-column-body > main > section.opinion-result .fp-spot-info-container {
+        padding:50px 16px 24px;
+    }
+    #opinion-column-body > main > section.opinion-result .fp-small-map {
+        padding:20px 16px 0 18px;
+    }
+    #opinion-column-body > main > section.opinion-result .fp-spot-info-container .fp-label,
+    #opinion-column-body > main > section.opinion-result .fp-label {
+        top:18px;
+        left:18px;
+        font-size:13px;
+    }
+    #opinion-column-body > main > section.opinion-result .fp-spot-desc li {
+        font-size:12px;
+        padding-left:6px;
+    }
+    #opinion-column-body > main > section.opinion-result .fp-spot-info-item img {
+        margin-bottom:15px;
+    }
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan {
+        padding-bottom:60px;
+    } 
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan .plan-meta {
+        padding:8.5px 0 0;
+    }
+    #opinion-column-body > main > section.opinion-result > .o-wrapper > .o-inner .floor-plan .plan-meta span {
+        font-size: 11px;
+    }
+}
+
+
+#opinion-column-body > main > section.opinion-detail {
+    max-width: 1920px;
+    height: auto;
+    background-color: #fff;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper {
+    max-width: 780px;
+    height: 100%;
+    padding-top: 120px;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 0 120px 0;
+    overflow: hidden;
+}
+
+
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content {
+    padding: 12px 20px 0 20px;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content h4 {
+    display:block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.6;
+    letter-spacing: -0.48px;
+    padding: 0 0 0 0;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content h4 > span {
+    display:block;
+    font-size: 14px;
+    color: #C93A3A;
+    line-height: 1.6;
+    letter-spacing: -0.42px;
+    padding: 0 0 8px 0;
+    font-weight: 600;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content h4 > strong {
+    display:block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    padding: 2px 0 16px 0;
+    text-align: left;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content p {
+    display:block;
+    font-size: 17px;
+    font-weight: 400;
+    color: #444;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    padding: 12px 0 0 0;
+    text-align: left;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content p:nth-child(1) {
+    padding: 0 0 0 0;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article.o-sub-on .o-detail-content h4,
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article.o-sub-on .o-detail-content .o-sub-text{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images {
+    margin-bottom:24px;
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
+  top: auto;
+  bottom: 42%;
+  transform: translate(0, 0);
+  right: 20%;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
+  bottom: 23%;
+  right: 9%;
+  transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
+  top: auto;
+  bottom: 34%;
+  left: 36%;
+  right: auto;
+  transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+  top: auto;
+  bottom: 53%;
+  left: 68%;
+  right: auto;
+  transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(3) .o-detail-spot {
+  bottom: 75%;
+  right: 33%;
+  transform: translate(0, 0);
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
+    top: 61%;
+    left: 76%;
+    transform: translate(0, 0);
+    bottom: auto;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
+    top: 25%;
+    left: 45%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
+    bottom: 55%;
+    right: 33%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+    bottom: 55%;
+    right: 19%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(3) .o-detail-spot:nth-child(1) {
+    top: 49%;
+    left: 38%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(2) .o-detail-spot {
+    bottom: 68%;
+    right: 70%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(3) .o-detail-spot {
+    bottom: 81%;
+    right: 46%;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(4) article .o-detail-images:nth-child(1) .o-detail-spot {
+    top: 29%;
+    left: 53%;
+    transform: translate(0, 0);
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images picture{
+  height: 100%;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images picture img{
+  object-fit: cover;
+  height: 100%;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-content {
+  grid-column: 2;
+  grid-row: 3;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-content h4{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-content .o-sub-text{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article.o-sub-on .o-detail-content h4,
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article.o-sub-on .o-detail-content .o-sub-text{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images picture{
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images:nth-child(2) picture {
+  transition-delay: 0.25s;
+}
+
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article.o-sub-on .o-detail-images picture {
+  opacity: 1;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images {
+  position: relative;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol article .o-detail-images.o-hover-scale {
+  overflow: hidden;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol article .o-detail-images.o-hover-scale picture img{
+  transition: transform 3s ease-out;
+}
+#opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol article .o-detail-images.o-hover-scale:hover picture img{
+transform:  scale(1.05) !important;
+}
+
+
+/* 디테일 팝업 */
+#opinion-column-body > main > section.opinion-detail .o-detail-pop {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 20;
+}
+#opinion-column-body > main > section.opinion-detail .o-detail-images {
+    position: relative;
+    z-index: 1;
+}
+#opinion-column-body > main > section.opinion-detail .o-detail-spot {
+    position: absolute;
+    pointer-events: auto;
+    top: auto;
+    bottom: 42%;
+    left: auto;
+    right: 73%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+#opinion-column-body > main > section.opinion-detail .o-spot-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+#opinion-column-body > main > section.opinion-detail .o-spot-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #fff url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/btn-spot.svg') no-repeat center center / 12px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    position: relative;
+}
+
+#opinion-column-body > main > section.opinion-detail .o-spot-icon::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    animation: o-pulse 2s infinite;
+}
+
+
+#opinion-column-body > main > section.opinion-detail .o-spot-btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Active State */
+#opinion-column-body > main > section.opinion-detail .o-detail-spot.is-active .o-spot-icon {
+    /* background: #000 url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/btn-spot-close.svg') no-repeat center center / 12px; */
+    transform: rotate(135deg);
+}
+
+@keyframes o-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8),
+                    0 0 0 0 rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0),
+                    0 0 0 0 rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 0 16px rgba(255, 255, 255, 0),
+                    0 0 0 8px rgba(255, 255, 255, 0);
+    }
+}
+
+#opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body {
+    position: absolute;
+    /* 위치는 각 .o-pop-body 인라인 style의 CSS 변수로 수동 지정 (data-direction 대체) */
+    top: var(--pop-top, auto);
+    right: var(--pop-right, auto);
+    bottom: var(--pop-bottom, auto);
+    left: var(--pop-left, auto);
+    transform: var(--pop-transform, none);
+    margin-top: var(--pop-mt, 0);
+    margin-right: var(--pop-mr, 0);
+    margin-bottom: var(--pop-mb, 0);
+    margin-left: var(--pop-ml, 0);
+    background: #fff;
+    padding: 8px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    width: 243px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+    word-break: keep-all;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+#opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body img{
+  width: 76px;
+}
+#opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body .desc .tit{
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #111;
+  font-weight: 600;
+}
+#opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body .desc .tit:after{
+  position: relative;
+  content: '';
+  display: inline-block;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_22_53599)"><path d="M4.75 8.5L7.25 6L4.75 3.5" stroke="black" stroke-linecap="square"/></g><defs><clipPath id="clip0_22_53599"><rect width="12" height="12" fill="white"/></clipPath></defs></svg>');
+}
+
+#opinion-column-body > main > section.opinion-detail .o-detail-spot .o-pop-body .desc p{
+  font-size: 10px;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.5;
+}
+#opinion-column-body > main > section.opinion-detail .o-detail-spot.is-active .o-pop-body {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  #opinion-column-body > main > section.opinion-detail .o-spot-icon{
+    width: 24px;
+    height: 24px;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
+    bottom: 40%;
+    left: 72%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
+    bottom: 22%;
+    left: 84%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
+    bottom: 31%;
+    left: 39%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+    bottom: 50%;
+    left: 63%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) article .o-detail-images:nth-child(3) .o-detail-spot {
+    bottom: 74%;
+    left: 60%;
+    right: auto;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(1) {
+    top: 58%;
+    left: 74%;
+    right: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(1) .o-detail-spot:nth-child(2) {
+    top: 22%;
+    left: 43%;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(1) {
+    top: 38%;
+    left: 58%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(2) .o-detail-spot:nth-child(2) {
+    top: 38%;
+    left: 74%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(2) article .o-detail-images:nth-child(3) .o-detail-spot:nth-child(1) {
+    top: 45%;
+    left: 36%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(2) .o-detail-spot {
+    top: 27%;
+    left: 12%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(3) article .o-detail-images:nth-child(3) .o-detail-spot {
+    top: 11%;
+    left: 46%;
+    right: auto;
+    bottom: auto;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(4) article .o-detail-images:nth-child(1) .o-detail-spot {
+    top: 26%;
+    left: 52%;
+  }
+
+
+}
+
+/* TIP_605_START */
+/* =========================================
+    Expert's Tip
+========================================= */
+#opinion-column-body > main > section.opinion-tip {
+    background-color: #FFFFFF;
+    transition: background-color 1.2s ease-in-out;
+    padding: 120px 40px 60px;
+}
+#opinion-column-body > main > section.opinion-tip.o-on {
+    background-color: #AB9985;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper {
+    max-width: 1920px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+#opinion-column-body > main > section.opinion-tip.o-on > .o-wrapper > .o-inner {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 40px 120px;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 122px;
+    background-image: url('https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/expert-tip-memo-bg.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    right: 0;
+    bottom: 1px;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 122px);
+    background: #fff;
+    right: 0;
+    top: 0;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3 {
+    position: relative;
+    display: block;
+    width: 516px;
+    font-size: 16.9px;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.23;
+    letter-spacing: 0;
+    padding: 0 0 0 0;
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    display: block;
+    width: calc(50% - 66px);
+    height: 2px;
+    background-color: #D9D9D9;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7px;
+    display: block;
+    width: calc(50% - 66px);
+    height: 2px;
+    background-color: #D9D9D9;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h4 {
+    font-size: 31.2px;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.33;
+    letter-spacing: -0.05em;
+    padding: 16px 0 0 0;
+    text-align: center;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h4 .highlight{
+    position: relative;
+    display: inline-block;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h4 .highlight svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content #tip-panel-1 h4 .highlight svg{
+    width: 100px;
+    height: 54px;
+    margin:5px 0 0 -2px;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content #tip-panel-2 h4 .highlight svg{
+    width: 162px;
+    height: 124px;
+    margin:6px 0 0 -6px;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap > img + img,
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap > .tip-img-wrap-2 {
+    aspect-ratio: 1240 / 828;
+    overflow: hidden;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap > img + img {
+    object-fit: cover;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap .tip-img-wrap-2 {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap .tip-img-wrap-2 img {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content p {
+    font-size: 18.2px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.42;
+    letter-spacing: 0;
+    text-align: center;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content p + p{
+    margin-top: 24px;
+}
+#opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content p strong{
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 0;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-tab {
+    border: none;
+    border-radius: 100px;
+    background-color: transparent;
+    font-size: 18.2px;
+    font-weight: 400;
+    color: #5D5C47;
+    cursor: pointer;
+    transition: color 0.25s ease;
+    letter-spacing: 0;
+    line-height: 1;
+    flex: 1;
+    height: 72px;
+    position: relative;
+    z-index: 2;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-tab.is-active {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+/* Tip 슬라이더 */
+#opinion-column-body > main > section.opinion-tip .o-tip-swiper {
+    width: 100%;
+    overflow: hidden;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-panel {
+    box-sizing: border-box;
+    height: auto !important;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-pagination {
+    position: static;
+    padding: 40px 0 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-pagination.swiper-pagination-bullets {
+    bottom: auto;
+    left: auto;
+    width: auto;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-pagination .swiper-pagination-bullet {
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 !important;
+    transition: width 0.3s ease, border-radius 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+    flex-shrink: 0;
+    opacity: 1;
+}
+#opinion-column-body > main > section.opinion-tip .o-tip-pagination .swiper-pagination-bullet-active {
+    background: #111;
+    opacity: 1;
+    width: 40px;
+    border-radius: 6px;
+}
+
+
+@media (max-width: 768px) { 
+    #opinion-column-body > main > section.opinion-tip {
+        margin-top: 24px;
+        padding: 60px 20px 40px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper {
+        max-width: 100%;
+        padding: 0;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content {
+        top: auto;
+        transform: translate(0, 50px);
+        height: auto;
+        padding: 0 20px 60px;
+        box-sizing: border-box;
+    }
+    #opinion-column-body > main > section.opinion-tip.o-on > .o-wrapper > .o-inner > .o-content{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content:after{
+        height: 61px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content:before{
+        height: calc(100% - 61px);
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-tabs{
+        padding: 4px;
+        margin-bottom: 12px;
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-tab{
+        height: 36px;
+        font-size: 14px;
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-tabs:after{
+        top: 4px;
+        width: calc(50% - 4px);
+        height: calc(100% - 8px);
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-tabs[data-active="1"]:after{
+        left: 4px;
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-pagination {
+        padding-top: 20px;
+        gap: 6px;
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-pagination .swiper-pagination-bullet{
+        width: 6px;
+        height: 6px;
+    }
+    #opinion-column-body > main > section.opinion-tip .o-tip-pagination .swiper-pagination-bullet-active{
+        width: 20px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3 {
+        position: relative;
+        display: block;
+        padding: 0 26px;
+        font-size: 13px;
+        margin-top: 40px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3::before {
+        content: "";
+        position: relative;
+        top: 50%;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #D9D9D9;
+        transform: translateY(-50%);
+        flex: 1 1 0;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3::after {
+        content: "";
+        position: relative;
+        top: 50%;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #D9D9D9;
+        transform: translateY(-50%);
+        flex: 1 1 0;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h3 span{
+        display: block;
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content h4 {
+        padding: 8px 0 24px;
+        font-size: 24px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content p {
+        font-size: 14px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content p + p{
+        margin-top: 12px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap{
+        margin-bottom: 24px;
+        gap: 12px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content .tip-img-wrap .tip-img-wrap-2 {
+        gap: 12px;
+    }
+
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content #tip-panel-1 h4 .highlight svg{
+        width: 99px;
+        height: 43px;
+        margin:3px 0 0 -2px;
+    }
+    #opinion-column-body > main > section.opinion-tip > .o-wrapper > .o-inner > .o-content #tip-panel-2 h4 .highlight svg{
+        width: 126px;
+        height: 46px;
+        margin:5px 0 0 -2px;
+    }
+}
+/* TIP_605_END */
+
+/* =========================================
+    추천콘텐츠
+========================================= */
+#opinion-column-body > main > section.opinion-recommend{
+    padding: 80px 0;
+    overflow: hidden;
+}
+#opinion-column-body > main > section.opinion-recommend #recommend-heading{
+    text-align: center;
+    font-size: 28.6px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 56px;
+    line-height: 1.36;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-swiper{
+    max-width: 912px;
+    margin: 0 auto;
+    overflow: visible;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list > li{
+    width: calc(100% - 240px);
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list > li > a{
+    display: block;
+    text-decoration: none;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list picture{
+    display: block;
+    overflow: hidden;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list .o-recommend-content{
+    background-color: #FAFAFA;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list .o-recommend-content span{
+    font-size: 15.6px;
+    font-weight: 400;
+    color: #999;
+    display: block;
+    margin-bottom: 16px;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-list .o-recommend-content p{
+    font-size: 20.8px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-pagination{
+    position: relative;
+    width: 160px;
+    height: 6px;
+    background: #ddd;
+    margin: 40px auto 0;
+}
+#opinion-column-body > main > section.opinion-recommend .o-recommend-pagination-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #111;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+    #opinion-column-body > main > section.opinion-recommend{
+        padding: 40px 0;
+    }
+    #opinion-column-body > main > section.opinion-recommend > .o-wrapper{
+        padding: 0 20px;
+    }
+    #opinion-column-body > main > section.opinion-recommend #recommend-heading{
+        font-size: 22px;
+        margin-bottom: 28px;
+    }
+    #opinion-column-body > main > section.opinion-recommend .o-recommend-list > li{
+        width: calc(100% - 80px);
+    }
+    #opinion-column-body > main > section.opinion-recommend .o-recommend-list .o-recommend-content{
+        padding: 20px 16px;
+    }
+    #opinion-column-body > main > section.opinion-recommend .o-recommend-list .o-recommend-content span{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    #opinion-column-body > main > section.opinion-recommend .o-recommend-list .o-recommend-content p{
+        font-size: 16px;
+    }
+    #opinion-column-body > main > section.opinion-recommend .o-recommend-pagination{
+        width: 80px;
+        height: 3px;
+        background: #ddd;
+        margin: 20px auto 0;
+    }
+}
+/* RECOMMEND_605_END */
+
+#opinion-column-body > main > section.opinion-tip .fp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    padding: 17px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#opinion-column-body > main > section.opinion-tip .fp-btn::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/btn-arrow.svg') no-repeat center center / contain;
+    z-index: 999;
+}
+#opinion-column-body > main > section.opinion-tip .o-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+#opinion-column-body > main > section.opinion-tip .o-btn-wrap .o-btn-desc {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #37261A;
+    text-align: center;
+}
+
+@media (max-width: 1379px) {
+
+  #opinion-column-body .o-br-p {display: none;}
+  #opinion-column-body .o-br-t {display: block;}
+  #opinion-column-body .o-br-m {display: none;}
+
+
+
+
+
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request blockquote {
+      padding-right:30px;
+  }
+
+}
+
+@media (max-width: 768px) { 
+
+  #opinion-column-body .o-br-p {display: none;}
+  #opinion-column-body .o-br-t {display: none;}
+  #opinion-column-body .o-br-m {display: block !important;}
+
+  #opinion-column-body > main > section article.o-sub-set{
+    transform: translateY(30px);
+  }
+
+  #opinion-column-body > main > section.opinion-kv {
+      max-width: 100%;
+      height: 500px;
+  }
+  #opinion-column-body > main > section.opinion-kv > .o-wrapper {
+      max-width: 100%;
+  }
+  #opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content {
+      width: 300px;
+      height: 240px;
+      padding: 28px 18px;
+      gap: 48px;
+      margin-top: -18px;
+  }
+  #opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content h3 {
+      width: 181px;
+      margin: 0;
+  }
+  #opinion-column-body > main > section.opinion-kv > .o-wrapper > .o-inner > .o-content p {
+      font-size: 12px;
+      margin-top: 0;
+  }
+
+  #opinion-column-body > main > section.opinion-profile {
+      max-width: 100%;
+      padding-bottom: 23px;
+  }
+  #opinion-column-body > main > section.opinion-profile > .o-wrapper {
+      padding: 0 20px;
+      top: -32px;
+  }
+  #opinion-column-body > main > section.opinion-profile > .o-wrapper > .o-inner {
+      padding: 40px 20px;
+  }
+  #opinion-column-body .o-profile {
+      gap: 22px;
+  }
+  #opinion-column-body .o-profile .profile-content{
+      gap: 36px;
+  }
+  #opinion-column-body .o-profile .profile-content .profile-copy{
+      padding-top: 0;
+      max-width: 340px;
+      margin: 0 auto;
+  }
+  #opinion-column-body .o-profile .profile-content .profile-copy h4{
+      font-size: 24px;
+      margin-bottom: 12px;
+  }
+  #opinion-column-body .o-profile .profile-content .profile-copy .desc{
+      font-size: 14px;
+  }
+  #opinion-column-body .o-profile .profile-image {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 8px;
+  }
+  #opinion-column-body .o-profile .profile-info .profile-name{
+      font-size: 16px;
+      margin-bottom: 2px;
+  }
+  #opinion-column-body .o-profile .profile-info .profile-job{
+      font-size: 12px;
+  }
+  #opinion-column-body .o-profile .profile-caption{
+      padding-top: 22px;
+      display: block;
+      position: relative;
+  }
+  #opinion-column-body .o-profile .profile-caption .profile-logo{
+      position: absolute;
+      left: 0;
+      top: 19px;
+      width: 48px;
+  }
+  #opinion-column-body .o-profile .profile-caption .profile-etc p{
+      font-size: 12px;
+  }
+  #opinion-column-body .o-profile .profile-caption .profile-etc1{
+      text-align: right;
+      margin-bottom: 8px;
+      font-size: 12px;
+      width: calc(100% - 60px);
+      margin-left: auto;
+  }
+  #opinion-column-body .o-profile .profile-caption .profile-etc2{
+      font-size: 12px;
+      color: #444;
+  }
+
+  
+
+  #opinion-column-body > main > section.opinion-overview {
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper {
+      max-width: 100%;
+      padding: 0;
+  }
+
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(1) {
+      padding: 60px 20px 40px 20px;
+      gap: 0;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title h4{
+    font-size: 12px;
+    line-height: 22px;
+    padding-bottom: 4px;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title h4 > span{
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    margin: 0 0 0 16px;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title h4 > span::before{
+    left: -8px;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-title p{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.72px;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-desc{
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request {
+      width: 100%;
+      height: auto;
+      padding: 0 0 0 0;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request:has(.o-comparison-slider) {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request > figure > figcaption, #opinion-column-body > main > section.opinion-overview > .o-wrapper article .o-request .o-request-image > figcaption{
+    font-size: 13px;
+    line-height: 16px;
+    padding: 6px 8px;
+    top: 20px;
+    left: 20px;
+  }
+
+
+  #opinion-column-body > main > section.opinion-overview > .o-wrapper .opinion-overview-inner > article:nth-child(3) {
+      padding: 40px 20px;
+  }
+
+  #opinion-column-body .o-info {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1.5px solid #111;
+      column-gap: 20px;
+      row-gap: 32px;
+  }
+  #opinion-column-body .o-info li {
+      border-bottom: 0.5px solid #888888;
+      padding: 0 0 12px 0;
+      grid-template-columns: 1fr;
+  }
+
+  #opinion-column-body .o-info li:nth-child(1),
+  #opinion-column-body .o-info li:nth-child(2) {
+      border-top: none;
+      padding-top:36px;
+  }
+
+  #opinion-column-body .o-info .label {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.42px;
+      padding: 0 0 0 0;
+  }
+
+  #opinion-column-body .o-info .label::before {
+      margin-right: 4px;
+  }
+
+  #opinion-column-body .o-info .value {
+      font-size: 14px;
+      letter-spacing: 0;
+      text-align: left;
+      padding: 6px 0 0 0;
+  }
+
+  #opinion-column-body .o-solution {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 40px;
+      display: flex;
+      gap: 8px;
+  }
+
+  #opinion-column-body .o-solution li {
+      display: flex;
+      flex: 1;
+      padding: 20px 30px 20px 30px;
+  }
+
+  #opinion-column-body .o-solution article {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      position: relative;
+      padding-top: 54px;
+  }
+
+  #opinion-column-body .o-solution li article::before {
+      width: 42px;
+      height: 42px;
+  }
+
+  #opinion-column-body .o-solution h4 {
+      font-size: 20px;
+      letter-spacing: -0.6px;
+      padding:0 0 4px 0;
+  }
+
+  #opinion-column-body .o-solution p {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0;
+      padding:8px 0 0 0;
+  }
+
+
+
+  #opinion-column-body > main > section.opinion-detail {
+      max-width: 100%;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper {
+      max-width: 100%;
+      padding: 60px 20px 0 20px;
+
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li {
+      padding: 0 0 60px 0;
+      position: relative;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content {
+      padding: 24px 0 0 0;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content h4 {
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: -0.42px;
+      text-align: left;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content h4 > span {
+      font-size: 12px;
+      font-weight: 600;
+      color: #C93A3A;
+      line-height: 14px;
+      letter-spacing: 0;
+      padding: 0 0 8px 0;
+      text-align: left;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0;
+      padding: 12px 0 0 0;
+      text-align: left;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper.is-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images {
+    margin-bottom:12px;
+    aspect-ratio: auto !important;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images:last-of-type {
+    margin-bottom:0 !important;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li article .o-detail-images img{
+    height: auto;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) .o-detail-content .o-sub-text{
+    padding-left: 0;
+  }
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li .o-detail-content p:nth-child(1) {
+      padding: 0 0 0 0;
+  }
+
+  #opinion-column-body > main > section.opinion-detail .o-wrapper > .o-inner > ol > li:nth-child(1) .o-detail-content {
+      display: block !important;
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+</style>
+
+<div id="opinion-column-body">
+
+    <main>
+        <h2 class="screen-reader-only">오피니언 칼럼</h2>
+
+        <section class="opinion-kv" aria-labelledby="main-heading">
+            <div class="o-wrapper">
+                <div class="o-inner">
+                    <div class="o-content">
+                        <h3 id="main-heading"><img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/kv-title.webp" alt="Opinion Column Ep.8"></h3>
+                        <p>
+                            <strong>오피니언 칼럼</strong>은 공간을 단순히 아름답게 꾸미는 것을<br class="o-br-m">
+                            넘어 실제 삶의 방식과 동선, 가전의 조화를 함께 설계하는<br class="o-br-m">
+                            전문가의 시선을 담은 시리즈입니다. 각 프로젝트를 통해<br class="o-br-m">
+                            공간이 어떻게 라이프스타일을 풍요롭고 편안하게<br class="o-br-m">
+                            바꿀 수 있는지 소개합니다.
+                        </p>
+                    </div>
+                    <div class="o-bg o-parallax">
+                        <picture>
+                            <!-- <source media="(max-width: 768px)" srcset="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/opinion-kv_m.webp"> -->
+                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/opinion-kv.webp" alt="" role="img">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="opinion-profile" aria-labelledby="profile-heading">
+          <div class="o-wrapper">
+              <div class="o-inner">
+                  <h3 id="profile-heading" class="screen-reader-only">작성자 프로필</h3>
+                  <div class="o-profile">
+                    <div class="profile-content">
+                      <div class="profile-copy">
+                          <h4>맞벌이 부부를 위한 <br>김포 108㎡ (32평) 아파트</h4>
+                          <p class="desc">
+                            남편은 재택근무가 많고, 아내는 불규칙한 일정으로 서울을  <br class="o-br-p"><br class="o-br-t">
+                            오갑니다. 생활 시간이 다른 두 사람이 집 안에서 함께 머무는 <br class="o-br-p"><br class="o-br-t">
+                            시간을 만들기 위해 거실과 주방을 하나의 개방형 구조로 <br class="o-br-p"><br class="o-br-t">재구성했습니다.
+                        </p>
+                      </div>
+                      <div class="profile-info">
+                        <div class="profile-image">
+                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/designer-profile_new.webp" alt="" loading="lazy" role="img">
+                        </div>
+                        <p class="profile-name">릴스퀘어</p>
+                      </div>
+                    </div>
+                    <div class="profile-caption">
+                      <div class="profile-etc">
+                        <p>릴스퀘어는 거주자의 생활 방식과 동선을 기준으로 집을 설계하는 주거 <br>공간 기획 그룹입니다. 가족 구성, 취향, 가전 사용 방식까지 고려해 실제 <br>생활에 맞는 인테리어를 제안합니다.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        <section class="opinion-overview opinion-parallax-wrap" aria-labelledby="overview-heading">
+            <div class="o-wrapper">
+                <div class="opinion-overview-inner">
+
+                    <article class="opinion-overview-head o-sub-set">
+                        <h3 id="overview-heading" class="screen-reader-only">프로젝트 정보</h3>
+                        <div class="o-title">
+                            <h4>김포 아파트 108㎡ (32평)</h4>
+                            <blockquote>
+                                <p>
+                                    “바쁜 일상 속에서도<br>
+                                    함께 보내는 시간이 편안한 집을 <br>
+                                    만들고 싶었어요.”
+                                </p>
+                            </blockquote>
+                        </div>
+                        <div class="o-desc">
+                            남편은 재택근무가 많고, 아내는 불규칙한 일정으로 서울을 오갑
+                            니다. 생활 시간이 다른 맞벌이 부부가 집 안에서 함께 머무는 시
+                            간을 만들기 위해, 거실과 주방을 개방형 구조로 재구성했습니다.
+                            <br><br>
+                            주방에는 대형 아일랜드와 제작 식탁을 연결해 조리, 식사, 대화가 
+                            한 자리에서 이어지도록 했고, 거실은 미디어 월을 기준으로 
+                            휴식과 취미를 즐길 수 있게 구성했습니다. 낮은 높이의 소파와 
+                            커피 테이블, 플로어 조명, 우드 의자는 거실과 주방의 차분한 
+                            분위기를 완성합니다.
+                            <br><br>
+                            채도를 낮춘 월넛 톤과 스톤, 브론즈 미러를 적용해 거실과 주방의 
+                            소재와 분위기를 통일하고, 가전과 수납은 벽면 빌트인 설계로 
+                            정리했습니다. 각자의 시간을 존중하면서도 함께 보내는 순간이 
+                            이어지는, 두 사람만의 랑데부 하우스입니다.
+                        </div>
+                    </article>
+                    <article class="opinion-overview-body o-sub-on">
+                        <div class="o-request">
+                            <div class="o-comparison-slider" id="comparisonSlider">
+                                <div class="o-comp-layer-static">
+                                    <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/layout-after_01.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="o-sub-set">
+                        <h4 class="screen-reader-only">시공 정보</h4>
+                        <ul class="o-info">
+                            <li>
+                                <span class="label">공간 유형</span>
+                                <span class="value">아파트</span>
+                            </li>
+                            <li>
+                                <span class="label">공사 기간</span>
+                                <span class="value">9주</span>
+                            </li>
+                            <li>
+                                <span class="label">공급 면적</span>
+                                <span class="value">108㎡(32평)</span>
+                            </li>
+                            <li>
+                                <span class="label">주거 형태</span>
+                                <span class="value">2인가족(부부)</span>
+                            </li>
+                            <li>
+                                <span class="label">공사 유형</span>
+                                <span class="value">전체 공간 레이아웃 변경 및 <br>홈스타일링</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h4 class="screen-reader-only">해결방안 요약</h4>
+                        <ol class="o-solution" role="list">
+                            <li>
+                                <article>
+                                    <h4>
+                                        월넛과 브론즈 미러로 정리한 <br>
+                                        모던/미니멀 거실
+                                    </h4>
+                                    <p>
+                                        거실은 미디어 월을 기준으로 시선의 중심을 잡았습니다. 
+                                        우물천장, 벽면 분할, 간접조명을 활용해 구조를 
+                                        단정하게 정리하고, 필요한 요소만 남겨 개방감을 
+                                        확보했습니다.
+                                    </p>
+                                    <p>
+                                        소파와 커피 테이블은 낮고 안정적인 휴식 공간을 
+                                        만들고, 플로어 조명은 거실 한쪽에 부드러운 빛의 
+                                        포인트를 더합니다. 월넛 톤과 스톤, 브론즈 미러를 
+                                        함께 적용해 30평대 아파트 안에서도 차분하고 넓어 
+                                        보이는 공용부를 완성했습니다.
+                                    </p>
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h4>
+                                        대형 아일랜드와<br>
+                                        제작 식탁을 연결한 주방
+                                    </h4>
+                                    <p>
+                                        거실과 주방을 하나의 개방형 구조로 연결했습니다. 
+                                        벽면 주방에는 조리, 세척, 수납 기능을 모으고, 중앙에는 대형 아일랜드와 제작 식탁을 배치했습니다.
+                                    </p>
+                                    <p>
+                                        제작 식탁 주변에는 우드 의자를 더해 주방의 차분한 
+                                        분위기를 완성했습니다. 조리와 식사, 대화가 한 자리에서 이루어지도록 구성해 두 사람이 함께 머무는 
+                                        시간을 만들었습니다. 공간의 출입 방향도 조정해 
+                                        주방 동선을 더 간결하게 정리했습니다.
+                                    </p>
+                                </article>
+                            </li>
+                            <li>
+                                <article>
+                                    <h4>
+                                        LG 퓨리케어 바스에어시스템을 <br>
+                                        적용한 욕실
+                                    </h4>
+                                    <p>
+                                        침실과 연결된 욕실에는 천장형 공기순환기인 LG 
+                                        퓨리케어 바스에어시스템을 적용했습니다. 샤워 후 
+                                        습기와 냄새가 남기 쉬운 욕실에서 환기와 제습을 돕고, <br>
+                                        온풍·송풍 기능으로 매일 사용하는 공간을 쾌적
+                                        하게 관리할 수 있도록 했습니다.
+                                    </p>
+                                    <p>
+                                        바스에어시스템이 욕실 분위기와 어우러지도록 설치 
+                                        위치와 색상, 마감 디테일도 <br>
+                                        함께 조정했습니다.
+                                    </p>
+                                </article>
+                            </li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="opinion-result" aria-labelledby="result-heading">
+            <div class="o-wrapper">
+                <div class="o-inner">
+                    <h3 id="result-heading" class="screen-reader-only">프로젝트 결과</h3>
+                    <div class="o-content">
+                        <div class="result-description">
+                            <h4>
+                                <span>
+                                    거실과 주방을 연결한 30평대 아파트 인테리어
+                                </span>
+                                <strong>전문가의 디테일로 완성된 공간</strong>
+                            </h4>
+                        </div>
+                        <figure class="floor-plan">
+                            <div class="plan-image">
+                                <div class="fp-container">
+                                    <div class="fp-mobile-top-wrapper">
+                                        <div class="fp-large-map">
+                                            <h5 class="fp-label">After</h5>
+                                                <div class="fp-detail-view">
+                                                <div class="fp-detail-mask">
+                                                    <div class="fp-detail-images-wrapper">
+                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-01.webp" alt="" class="fp-detail-img active" data-index="0">
+                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-02.webp" alt="" class="fp-detail-img" data-index="1">
+                                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-03.webp" alt="" class="fp-detail-img" data-index="2">
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="fp-nav-btn prev" aria-label="이전">
+                                                    <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/btn-prev.webp" alt="이전">
+                                                </button>
+                                                <button type="button" class="fp-nav-btn next" aria-label="다음">
+                                                    <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/btn-next.webp" alt="다음">
+                                                </button>
+                                            </div>
+                                            <div class="fp-desc-container">
+                                        <div class="fp-desc-item active">
+                                            <span class="fp-num">01.</span>
+                                            <strong class="fp-title">거실</strong>
+                                            <p class="fp-text">
+                                                미디어 월을 기준으로 정돈한 개방형 거실
+                                            </p>
+                                        </div>
+                                        <div class="fp-desc-item">
+                                            <span class="fp-num">02.</span>
+                                            <strong class="fp-title">주방</strong>
+                                            <p class="fp-text">
+                                                대형 아일랜드와 제작 식탁을 연결한 주방
+                                            </p>
+                                        </div>
+                                        <div class="fp-desc-item">
+                                            <span class="fp-num">03.</span>
+                                            <strong class="fp-title">욕실</strong>
+                                            <p class="fp-text">
+                                                LG 퓨리케어 바스에어시스템을 적용한 욕실
+                                            </p>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div><!-- .fp-mobile-top-wrapper 닫기 -->
+                                    <div class="fp-mobile-bottom-wrapper">
+                                        <div class="fp-spot-info-container">
+                                            <h5 class="fp-label">Detail</h5>
+                                            <div class="fp-spot-info-item active" data-index="0">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-spot-01.webp" alt="">
+                                            </div>
+                                            <div class="fp-spot-info-item" data-index="1">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-spot-02.webp" alt="">
+                                            </div>
+                                            <div class="fp-spot-info-item" data-index="2">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-spot-03.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="fp-small-map">
+                                        <h5 class="fp-label">Before</h5>
+                                        <p>숫자를 눌러 공간을 확인해보세요.</p>
+                                        <div class="fp-map-nav">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-map-small.webp" alt="평면도 맵" class="fp-map-bg">
+                                            <button type="button" class="fp-point active" style="left: 58%; top: 71%;" data-index="0" aria-label="1번 공간 위치 보기">1</button>
+                                            <button type="button" class="fp-point" style="left: 55%; top: 40%;" data-index="1" aria-label="2번 공간 위치 보기">2</button>
+                                            <button type="button" class="fp-point" style="left: 90%; top: 40%;" data-index="2" aria-label="3번 공간 위치 보기">3</button>
+                                        </div>
+                                        </div>
+                                    </div><!-- .fp-mobile-bottom-wrapper -->
+                                </div>
+                            </div>
+                            <div class="plan-meta">
+                              <span class="meta-item">lilSQUARE</span>
+                              <span class="meta-item"> INTERIOR DIRECTION</span>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="opinion-detail opinion-parallax-wrap" aria-labelledby="detail-heading" data-alt-dir="alternate">
+            <div class="o-wrapper">
+                <div class="o-inner">
+                    <h3 id="detail-heading" class="screen-reader-only">프로젝트 결과 상세</h3>
+                    <ol class="o-content" role="list">
+                        <li>
+                            <article>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-1.webp" alt="맞춤 수납장 안에 숨겨진 피아노를 여는 흰색 도어" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/tvs/oled97g6kna-wall2" class="o-pop-body" style="--pop-bottom:100%; --pop-right:0; --pop-mb:14px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-1_pop-1.webp" alt="LG 올레드 evo AI (벽걸이형) 245cm" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">LG</span>
+                                                <p>LG 올레드 evo AI (벽걸이형) 245cm</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/home-audio/s95ar" class="o-pop-body" style="--pop-top:0; --pop-right:120%; --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-1_pop-2.webp" alt="LG 사운드바 9.1.5 채널" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">LG</span>
+                                                <p>LG 사운드바 9.1.5 채널</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-2.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25080007133" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-2_pop-1.webp" alt="코뮨 리츄얼스 거실 소파 테이블" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">코뮨</span>
+                                                <p>리츄얼스 거실 소파 테이블</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070000648" class="o-pop-body" style="--pop-bottom:100%; --pop-right:0; --pop-mb:14px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-2_pop-2.webp" alt="알로소 알로소 보눔 3인소파 가죽소파" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">알로소</span>
+                                                <p>알로소 보눔 3인소파 가죽소파</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-3.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25070003824" class="o-pop-body" style="--pop-top:100%; --pop-left: -80%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-01-3_pop-1.webp" alt="플로스 Luminator _5colors" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">플로스</span>
+                                                <p>Luminator _5colors</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="o-detail-content">
+                                    <h4>
+                                        <span>01. 거실</span>
+                                        <strong>
+                                            미디어 월을 기준으로<br>
+                                            정돈한 개방형 거실
+                                        </strong>
+                                    </h4>
+                                    <div class="o-sub-text">
+                                        <p>
+                                            거실은 주방과 시야가 이어지는 개방형 구조로 계획했습니다. <br>
+                                            별도의 구획을 두지 않아 이동이 편하고, 30평대 아파트의 
+                                            공용부가 더 넓게 느껴지도록 했습니다.
+                                        </p>
+                                        <p>
+                                            거실 전면에는 미디어 월을 배치해 시선의 축을 잡았습니다. <br>
+                                            아늑한 알로소 소파는 휴식의 중심을 만들고, 코뮨 커피 테이블은 
+                                            소파 앞 생활 동선을 간결하게 정리합니다.
+                                        </p>
+                                        <p>
+                                            플로스 플로어 조명은 미디어 월과 소파 주변에 부드러운 빛을 
+                                            더합니다. 밝은 벽체와 바닥은 빛을 은은하게 확산시키고, 브론즈 
+                                            미러는 주방의 월넛 톤을 반사해 두 공간의 소재가 이어지도록 
+                                            합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-1.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://homestyle.lge.co.kr/item?productId=G25120026275" class="o-pop-body" style="--pop-top: 75%; --pop-right: 15%; --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-1_pop-1.webp" alt="이스턴에디션 삼발이 의자_2 Colors " loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">이스턴에디션</span>
+                                                <p>삼발이 의자_2 Colors </p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-2.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/refrigerators/g646gbb031" class="o-pop-body" style="--pop-top:100%; --pop-left: -80%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-2_pop-1.webp" alt="LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급" loading="lazy">
+                                                <div class="desc">
+                                                    <span class="tit">LG</span>
+                                                    <p>LG 디오스 AI 오브제컬렉션 냉장고 Fit & Max 650L 1등급</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/kimchi-refrigerators/z334gbb171" class="o-pop-body" style="--pop-top:100%; --pop-left:-200%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-2_pop-2.webp" alt="LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급" loading="lazy">
+                                                <div class="desc">
+                                                    <span class="tit">LG</span>
+                                                    <p>LG 디오스 오브제컬렉션 김치톡톡 Fit & Max 324L 1등급</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-3.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/water-purifiers/wu923as" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-02-3_pop-1.webp" alt="LG 퓨리케어 정수기(듀얼, 냉온정)" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">LG</span>
+                                                <p>퓨리케어 정수기(듀얼, 냉온정)</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="o-detail-content">
+                                    <h4>
+                                        <span>02. 주방</span>
+                                        <strong>
+                                            대형 아일랜드와 <br>제작 식탁을 연결한 주방
+                                        </strong>
+                                    </h4>
+                                    <div class="o-sub-text">
+                                        <p>
+                                            주방은 벽면 조리 공간과 대형 아일랜드, 제작 식탁을 연결한 
+                                            구조로 계획했습니다. 조리와 세척, 수납은 <br>
+                                            벽면 주방에 모으고, 식사와 대화는 아일랜드와 식탁에서 이어지도록 했습니다.
+                                        </p>
+                                        <p>
+                                            제작 식탁에는 이스턴에디션 의자를 배치해 차분한 소재감을 
+                                            더했습니다. 한 사람이 조리하는 동안 다른 한 사람은 식탁에 앉아 
+                                            대화할 수 있어, 생활 시간이 달라도 같은 공간에 머무는 시간이 
+                                            생깁니다.
+                                        </p>
+                                        <p>
+                                            공간의 출입 방향도 조정해 주방 이동 동선을 정리했습니다. <br>
+                                            필요한 기능은 벽면과 아일랜드에 집중시키고, 시야를 가로막는 
+                                            요소를 줄여 여유로운 주방을 완성했습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-1.webp" alt="" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-2.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body" style="--pop-top: 120%; --pop-left: -52%; --pop-ml:15px; --pop-mb:14px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-1_pop-1.webp" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">LG</span>
+                                                <p>LG 퓨리케어 바스에어시스템 <br>프리미엄 듀얼</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <figure class="o-detail-images o-hover-scale">
+                                    <picture>
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-3.webp" alt="" loading="lazy">
+                                    </picture>
+                                    <div class="o-detail-pop">
+                                        <div class="o-detail-spot">
+                                            <button type="button" class="o-spot-btn o-pop-trigger" aria-label="상세 정보 보기">
+                                                <span class="o-spot-icon"></span>
+                                            </button>
+                                            <a href="https://www.lge.co.kr/bath-air-system/mx0120basv" class="o-pop-body" style="--pop-top:100%; --pop-left:50%; --pop-transform:translateX(-50%); --pop-mt:11px;">
+                                            <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/detail-03-1_pop-1.webp" alt="LG 퓨리케어 바스에어시스템 프리미엄 듀얼" loading="lazy">
+                                            <div class="desc">
+                                                <span class="tit">LG</span>
+                                                <p>LG 퓨리케어 바스에어시스템 <br>프리미엄 듀얼</p>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="o-detail-content">
+                                    <h4>
+                                        <span>03. 욕실</span>
+                                        <strong>
+                                            LG 퓨리케어 바스에어시스템을<br> 적용한 욕실
+                                        </strong>
+                                    </h4>
+                                    <div class="o-sub-text">
+                                        <p>
+                                            침실과 연결된 욕실은 매일 사용하는 공간인 만큼 디자인뿐 
+                                            아니라 습기 관리와 환기까지 고려했습니다. 마감재는 차분한 색상으로 정리하고, 불필요한 요소를 줄여 사용 후에도 깔끔한 
+                                            인상이 유지되도록 했습니다.
+                                        </p>
+                                        <p>
+                                            LG 퓨리케어 바스에어시스템은 욕실 천장에 설치하는 공기순환기입니다. 샤워 후 습기와 냄새가 남기 쉬운 욕실에서 환기와 
+                                            제습을 돕고, 온풍·송풍 기능으로 욕실을 더 쾌적하게 사용할 수 
+                                            있도록 했습니다.
+                                        </p>
+                                        <p>
+                                            바스에어시스템이 욕실 분위기와 어우러지도록 설치 위치와 
+                                            색상, 마감 디테일도 함께 조정했습니다. 보이는 디자인과 보이지 
+                                            않는 설비를 함께 고려한 욕실입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="opinion-tip" aria-labelledby="tip-heading">
+            <div class="o-wrapper">
+                <div class="o-inner">
+                    <div class="o-content">
+                        <div class="swiper o-tip-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide o-tip-panel" id="tip-panel-1" role="tabpanel" aria-labelledby="tip-tab-1">
+                                    <h3 id="tip-heading"><span>Expert's Tip</span></h3>
+                                    <h4>
+                                        공간의 숨겨진
+                                        <span class="highlight">가능성
+                                            <svg width="81" height="44" viewBox="0 0 81 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M69.1773 34.0545C68.0158 34.1547 55.62 33.548 50.6194 33.4772C45.6188 33.4065 40.7307 33.4906 34.0506 32.8922C30.0415 32.533 26.5427 32.403 23.0584 31.8918C16.9419 30.9946 7.69797 28.4231 4.24545 23.2609C-1.28472 14.9921 8.09916 7.37291 17.1016 4.84793M16.5268 5.00361C41.349 -1.78896 61.7377 2.36882 68.3142 4.12186C73.9827 5.63289 77.7487 8.6084 78.9899 12.6783C80.5986 18.1008 76.7285 22.2286 73.684 24.3042C70.6395 26.3798 64.401 29.0073 60.5677 30.319C46.0195 35.2973 35.247 36.3485 26.6809 38.3236C18.1147 40.2987 8.38661 41.6074 1.25004 42.1827" stroke="#C93A3A" stroke-width="2.5" stroke-linecap="round"/>
+                                            </svg>
+                                        </span>을<br>
+                                        열어주는 거울
+                                    </h4>
+                                    <div class="tip-img-wrap">
+                                        <img src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/images/tip-01_1.webp" alt="벽으로 분리된 다이닝 공간과 긴 식탁" loading="lazy">
+                                    </div>
+                                    <p>
+                                        거울은 현관이나 욕실에만 사용하는 소품이 아닙니다. <br>
+                                        거실과 주방처럼 이어진 공간에 넓은 면으로 적용하면, 
+                                        반사된 장면을 통해 시야가 확장되어 공간이 더 넓게 
+                                        느껴집니다.
+                                    </p>
+                                    <p>
+                                        특히 개방형 거실·주방 구조에서는 거울이 두 공간을 
+                                        연결하는 역할을 합니다. 아일랜드와 제작 식탁, 조명, 
+                                        식물이 거울에 비치면서 별도의 장식을 더하지 않아도 
+                                        공간에 깊이감이 생깁니다.
+                                    </p>
+                                    <p>
+                                        랑데부 하우스에는 브론즈 미러를 적용해 월넛 톤과 
+                                        스톤 소재가 이어져 보이도록 했습니다. 거울을 사용할 
+                                        때는 크기뿐 아니라 무엇이 비치는지까지 함께 고려해야 
+                                        공간을 더 정돈된 인상으로 연출할 수 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination o-tip-pagination"></div>
+                </div>
+            </div>
+            <div class="o-btn-wrap">
+                <a href="https://homestyle.lge.co.kr/interior/expert-style?attrs=grpCd9%3A2600000861" class="fp-btn fp-btn-primary">릴스퀘어 시공사례 더 보기</a>
+                <a href="https://homestyle.lge.co.kr/interior" class="fp-btn fp-btn-primary">릴스퀘어 인테리어 상담 신청하기</a>
+                <p class="o-btn-desc">* 상담 신청 시 LGE.COM 로그인이 필요합니다.</p>
+            </div>
+        </section>
+
+        <section class="opinion-recommend" aria-labelledby="recommend-heading">
+                    <div class="o-wrapper">
+                        <div class="o-inner">
+                            <h3 id="recommend-heading">추천 콘텐츠</h3>
+                            <div class="swiper o-recommend-swiper">
+                                <ul class="swiper-wrapper o-recommend-list">
+                                    <li class="swiper-slide">
+                                        <a href="https://homestyle.lge.co.kr/exhibition/detail?exhibitionId=2510000151">
+                                            <picture>
+                                                <source media="(max-width: 768px)" srcset="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/recommend-01_m.webp">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/recommend-01.webp" alt="" loading="lazy">
+                                            </picture>
+                                            <div class="o-recommend-content">
+                                                <span>인테리어 시공 상담</span>
+                                                <p>현대적 주방을 완성하는 이름, <br>페디니</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="https://homestyle.lge.co.kr/exhibition/detail?exhibitionId=2601000801">
+                                            <picture>
+                                                <source media="(max-width: 768px)" srcset="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/recommend-02_m.webp">
+                                                <img src="https://www.lge.co.kr/home_style_pages/2026/06/opinion-column/src/images/recommend-02.webp" alt="" loading="lazy">
+                                            </picture>
+                                            <div class="o-recommend-content">
+                                                <span>브랜드 스토리</span>
+                                                <p>전 세계가 사랑하는 프랑스 하이엔드 가구, <br class="o-br-p">리네로제</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="o-recommend-pagination" aria-hidden="true">
+                                    <span class="o-recommend-pagination-bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+    </main>
+
+</div>
+
+<script src="https://www.lge.co.kr/home_style_pages/2026/08/opinion-column/src/js/opinion-column.js"></script>
+<!-- OMS 입력 부분 끝 -->
