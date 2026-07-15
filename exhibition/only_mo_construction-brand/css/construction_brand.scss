@@ -45,6 +45,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   .kv-main { width: 100%; 
     img { width: 100%; object-fit: cover; }  
   }
+  .p_r{ padding-right: 80rem;}
+  .p_l{ padding-left: 80rem;}
 
   .sticky-black-nav {
       position: sticky;
@@ -234,6 +236,9 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
         }
       }
     }
+    .img_box{ display: flex; flex-direction: column; gap: 20rem;
+      img{ width: 100%;}
+    }
   }
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 
@@ -244,11 +249,11 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
         .img2{ margin: 32rem 0;}
         .img3{ padding-left: 127rem; width: 100%;}
       }
-      .col2{ display: flex; gap: 110rem; margin: 40rem 0;
+      .col2{ display: flex; gap: 110rem; margin: 40rem 0 60rem;
         @include screen("tb") { gap: 60rem;
           br{ display: none;}
         }
-        @include screen("mo") { display: block; margin: 140rem 0;}
+        @include screen("mo") { display: block;}
         .box1{ width: 54%;
           img{ width: 100%;}
         }
@@ -261,10 +266,10 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
       }
     }
     .brand-point{ color: #fff; position: relative;
-      @include screen("mo") { padding-bottom: 163rem;}
+      @include screen("mo") { padding-bottom: 60rem;}
       &::before{ content: ''; background-color: #594834; width: 100%;position: absolute; left: 0; top: -30%; bottom: 155rem;
         @include screen("tb") { top: -20%;}
-        @include screen("mo") { top: 0; bottom: 9%;}
+        @include screen("mo") { top: 0; bottom: 16%;}
       }
       > *{ z-index: 1; position: relative;}
       .logo{ padding: 140rem 0; width: 970rem; max-width: 100%;
@@ -280,20 +285,15 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
           @include screen("mo2") {
           br{ display: none;} 
           }
-          img{ width: 357rem;  margin-top: 20rem;
-            @include screen("mo") { margin-top: 0; position: absolute; left: 0; top: 100%; width: 290rem;}
-          }
+          img{ margin-top:32rem; padding-left: 137rem;}
         }
         .box2 img{ width: 100%; height: 100%; object-fit: cover;
-          @include screen("mo") { padding: 32rem 0 73rem; margin-left: auto; width: 253rem;}
+          @include screen("mo") { padding: 20rem 100rem 0 0;}
         }
       }
     }
     .brand-gallery{ padding: 120rem 0 160rem;
-      @include screen("mo") { padding: 213rem 0 80rem;}
-      .display-mobile{
-        img+img{ margin-top: 32rem;}
-      }
+      @include screen("mo") { padding: 0 0 80rem;}
     }
   }
 
@@ -309,7 +309,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
           .box2{ display: flex; justify-content: space-between; flex-direction: column; padding-right: 20rem;
             @include screen("mo") { padding: 20rem 0 0;}
             img{ width: 50%; margin-bottom: 20rem;
-              @include screen("mo") { width: 72%; margin-bottom: 100rem;}
+              @include screen("mo") { width: 72%; margin-bottom: 60rem;}
             }
             .txt-box{
               padding-bottom: 70rem;
@@ -363,6 +363,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
         }
         .box2{ width: 24%;
           @include screen("mo") { color: #000; width: 100%; padding: 80rem 0 0 80rem;}
+          img{ width: 100%;}
         }
         .txt-box{
           li{ margin-top: 40rem;
@@ -527,10 +528,10 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
       }
       .img-box{ gap: 30rem;
         + .img-box{ margin-top: 80rem;
-          @include screen("mo") { margin-top: 120rem;}
+          @include screen("mo") { margin-top: 40rem;}
         }
         @include screen("mo") { display: block !important;
-          img.display-mobile + img.display-mobile{ margin-top: 40rem;}
+          img.display-mobile + img.display-mobile{ margin-top: 20rem;}
         }
         &.ty1{display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto;
           .box1{grid-column: 1 / 3;}

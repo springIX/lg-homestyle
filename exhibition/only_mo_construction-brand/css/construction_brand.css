@@ -49,6 +49,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   width: 100%;
   object-fit: cover;
 }
+.construction-brand-container .p_r {
+  padding-right: 80rem;
+}
+.construction-brand-container .p_l {
+  padding-left: 80rem;
+}
 .construction-brand-container .sticky-black-nav {
   position: sticky;
   top: 56rem;
@@ -432,6 +438,14 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 .construction-brand-container .example .txt-box ul li img {
   margin: 0 auto 10rem;
 }
+.construction-brand-container .example .img_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+.construction-brand-container .example .img_box img {
+  width: 100%;
+}
 .construction-brand-container {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 }
@@ -450,7 +464,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 .construction-brand-container.pedini .showroom .col2 {
   display: flex;
   gap: 110rem;
-  margin: 40rem 0;
+  margin: 40rem 0 60rem;
 }
 @media (max-width: 1px) {
   .construction-brand-container.pedini .showroom .col2 {
@@ -463,7 +477,6 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 @media (min-width: 1px) {
   .construction-brand-container.pedini .showroom .col2 {
     display: block;
-    margin: 140rem 0;
   }
 }
 .construction-brand-container.pedini .showroom .col2 .box1 {
@@ -497,7 +510,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 @media (min-width: 1px) {
   .construction-brand-container.pedini .brand-point {
-    padding-bottom: 163rem;
+    padding-bottom: 60rem;
   }
 }
 .construction-brand-container.pedini .brand-point::before {
@@ -517,7 +530,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 @media (min-width: 1px) {
   .construction-brand-container.pedini .brand-point::before {
     top: 0;
-    bottom: 9%;
+    bottom: 16%;
   }
 }
 .construction-brand-container.pedini .brand-point > * {
@@ -569,17 +582,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   }
 }
 .construction-brand-container.pedini .brand-point .col2 .box1 img {
-  width: 357rem;
-  margin-top: 20rem;
-}
-@media (min-width: 1px) {
-  .construction-brand-container.pedini .brand-point .col2 .box1 img {
-    margin-top: 0;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 290rem;
-  }
+  margin-top: 32rem;
+  padding-left: 137rem;
 }
 .construction-brand-container.pedini .brand-point .col2 .box2 img {
   width: 100%;
@@ -588,9 +592,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 @media (min-width: 1px) {
   .construction-brand-container.pedini .brand-point .col2 .box2 img {
-    padding: 32rem 0 73rem;
-    margin-left: auto;
-    width: 253rem;
+    padding: 20rem 100rem 0 0;
   }
 }
 .construction-brand-container.pedini .brand-gallery {
@@ -598,11 +600,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 @media (min-width: 1px) {
   .construction-brand-container.pedini .brand-gallery {
-    padding: 213rem 0 80rem;
+    padding: 0 0 80rem;
   }
-}
-.construction-brand-container.pedini .brand-gallery .display-mobile img + img {
-  margin-top: 32rem;
 }
 .construction-brand-container.porcelanosa .showroom .showroom-box1 .col2 {
   display: flex;
@@ -637,7 +636,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 @media (min-width: 1px) {
   .construction-brand-container.porcelanosa .showroom .showroom-box1 .col2 .box2 img {
     width: 72%;
-    margin-bottom: 100rem;
+    margin-bottom: 60rem;
   }
 }
 .construction-brand-container.porcelanosa .showroom .showroom-box1 .col2 .box2 .txt-box {
@@ -771,6 +770,9 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     width: 100%;
     padding: 80rem 0 0 80rem;
   }
+}
+.construction-brand-container.porcelanosa .brand-point .col2 .box2 img {
+  width: 100%;
 }
 .construction-brand-container.porcelanosa .brand-point .col2 .txt-box li {
   margin-top: 40rem;
@@ -1177,7 +1179,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 @media (min-width: 1px) {
   .construction-brand-container.rastelli .example .img-box + .img-box {
-    margin-top: 120rem;
+    margin-top: 40rem;
   }
 }
 @media (min-width: 1px) {
@@ -1185,7 +1187,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     display: block !important;
   }
   .construction-brand-container.rastelli .example .img-box img.display-mobile + img.display-mobile {
-    margin-top: 40rem;
+    margin-top: 20rem;
   }
 }
 .construction-brand-container.rastelli .example .img-box.ty1 {

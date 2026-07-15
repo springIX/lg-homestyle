@@ -170,9 +170,20 @@
 
     &#contents{
       .tit_box{ text-align: center; padding: 40rem 0 28rem;
-        strong{ font-size: 26rem; display: block; margin-bottom: 2rem;     line-height: 1.4;}
+        strong{ font-size: 26rem; display: block; margin-bottom: 2rem; line-height: 1.4;}
         p{ font-size: 15rem; color: #444;}
       }
+      .schedule_info{ padding-bottom: 20rem; text-align: center;
+        .tit_box{ padding:60rem 0 10rem;}
+        ul{ 
+          li{ text-align: center; font-size: 14rem; letter-spacing: -.1rem;
+            + li{ margin-top: 6rem;}
+            strong{ color: #333;}
+            p{ color: #666;}
+          }
+        }
+      }
+
       .cont_box{ box-shadow: 0 0 20rem rgba($color: #000, $alpha: 6%); background-color: #fff; border-radius: 12rem; padding: 48rem 80rem; position: relative; overflow: hidden;
         @include screen("mo") { padding: 32rem 30rem;}
         + .cont_box{ margin-top: 12rem;}

@@ -62,8 +62,7 @@ body {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
+  object-fit: cover !important;
 }
 .pdp .pdp__info {
   background: var(--pdp-info-bg, #daebcc) !important;
@@ -131,4 +130,4 @@ body {
   line-height: 1.5 !important;
   letter-spacing: -0.5px !important;
   white-space: nowrap !important;
-}/*# sourceMappingURL=pdp_package.css.map */
+}

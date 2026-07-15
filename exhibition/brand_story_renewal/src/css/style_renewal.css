@@ -169,6 +169,23 @@ main {
 .brandstory_container .gallery_box img.col2 {
   grid-column: span 2;
 }
+.brandstory_container .line_tit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 16px;
+}
+.brandstory_container .line_tit::before, .brandstory_container .line_tit::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.brandstory_container .line_tit.ty_black::before, .brandstory_container .line_tit.ty_black::after {
+  background-color: #666;
+}
 .brandstory_container #oms_module_anchor {
   position: absolute;
   left: 0;
@@ -250,27 +267,56 @@ main {
 .brandstory_container section {
   /* BRANS STORY */
 }
-.brandstory_container section#about_story {
-  padding-bottom: 0;
-}
 .brandstory_container section#about_story img {
   margin: 16px 0;
 }
 .brandstory_container section {
   /* COLLECTION */
 }
-.brandstory_container section#collection article + article {
-  padding-top: 40px;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
+.brandstory_container section#collection.ty_series {
+  background-color: #B6C0C5;
 }
-.brandstory_container section#collection article .txt_box {
-  margin-top: 20px;
+.brandstory_container section#collection.ty_series .bg_series {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+  object-position: bottom center;
 }
-.brandstory_container section#collection article .txt_box h3 {
+@media (max-width: 780px) {
+  .brandstory_container section#collection.ty_series .bg_series {
+    height: 550px;
+    min-height: 93vw;
+  }
+}
+.brandstory_container section#collection.ty_series .series_txt {
+  text-align: center;
+  position: relative;
+  min-height: 450px;
+  padding-bottom: 20px;
+}
+@media (max-width: 780px) {
+  .brandstory_container section#collection.ty_series .series_txt {
+    min-height: 330px;
+  }
+}
+.brandstory_container section#collection.ty_series .series_txt p {
+  color: #666;
+}
+.brandstory_container section#collection.ty_series .pd_wrap {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+}
+.brandstory_container section#collection .tit_box {
+  position: relative;
+}
+.brandstory_container section#collection .txt_box h3:not(.no_cap) {
   text-transform: capitalize;
 }
-.brandstory_container section#collection article .txt_box h3 span {
+.brandstory_container section#collection .txt_box h3 span {
   font-family: "Oswald", sans-serif;
   line-height: 1.2;
   margin-bottom: 4px;
@@ -279,13 +325,13 @@ main {
   font-weight: 500;
   color: #c2c2c2;
 }
-.brandstory_container section#collection article .txt_box h3 a {
+.brandstory_container section#collection .txt_box h3 strong, .brandstory_container section#collection .txt_box h3 a {
   font-size: 18px;
   font-weight: 600;
   display: flex;
   align-items: flex-end;
 }
-.brandstory_container section#collection article .txt_box h3 a::after {
+.brandstory_container section#collection .txt_box h3 a::after {
   content: "";
   background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center/contain;
   display: block;
@@ -293,10 +339,21 @@ main {
   height: 20px;
   transform: translateY(-3px);
 }
-.brandstory_container section#collection article .txt_box p {
+.brandstory_container section#collection .txt_box p {
   margin-top: 8px;
   letter-spacing: -0.1px;
   color: #444;
+}
+.brandstory_container section#collection article {
+  position: relative;
+}
+.brandstory_container section#collection article + article {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+.brandstory_container section#collection article .txt_box {
+  margin-top: 20px;
 }
 .brandstory_container section {
   /* OFFLINE PLACE */
@@ -309,21 +366,8 @@ main {
   font-size: 12px;
   text-align: center;
 }
-.brandstory_container section#offline_place .intro_txt_box h3 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.brandstory_container section#offline_place .intro_txt_box h3::before, .brandstory_container section#offline_place .intro_txt_box h3::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-}
 .brandstory_container section#offline_place .intro_txt_box p {
-  margin: 16px 0 12px;
+  margin-bottom: 12px;
   font-size: 14px;
 }
 .brandstory_container section#offline_place .intro_txt_box ul {
@@ -355,6 +399,9 @@ main {
   color: #999;
   font-size: 12px;
   margin-top: 26px;
+}
+.brandstory_container section#offline_place .square_btn {
+  margin-top: 32px;
 }
 .brandstory_container section {
   /* BRAND_FEATURES */

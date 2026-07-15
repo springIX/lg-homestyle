@@ -399,6 +399,27 @@
   font-size: 15rem;
   color: #444;
 }
+.show_off_my_space section#contents .schedule_info {
+  padding-bottom: 20rem;
+  text-align: center;
+}
+.show_off_my_space section#contents .schedule_info .tit_box {
+  padding: 60rem 0 10rem;
+}
+.show_off_my_space section#contents .schedule_info ul li {
+  text-align: center;
+  font-size: 14rem;
+  letter-spacing: -0.1rem;
+}
+.show_off_my_space section#contents .schedule_info ul li + li {
+  margin-top: 6rem;
+}
+.show_off_my_space section#contents .schedule_info ul li strong {
+  color: #333;
+}
+.show_off_my_space section#contents .schedule_info ul li p {
+  color: #666;
+}
 .show_off_my_space section#contents .cont_box {
   box-shadow: 0 0 20rem rgba(0, 0, 0, 0.06);
   background-color: #fff;

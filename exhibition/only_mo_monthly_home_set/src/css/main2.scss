@@ -53,17 +53,7 @@
     justify-content: space-between;
     align-items: flex-end;
   }
-
-  /* WAVE */
-  .wave{ width: 100%; display: flex; overflow: hidden; 
-    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
-    @keyframes wave {
-      0%{ transform: translateX(0);}
-      100%{ transform: translateX(-100%);}
-    }
-
-    &.reverse > *{ animation-direction: reverse;}
-  }
+  .blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0;}
 
 
   @include screen("pc") {
@@ -151,9 +141,9 @@
     &.ty_cnt{ text-align: center;
       button{ justify-content: center; gap: 10rem;}
       .notice_cont{ text-align: left;
-        ul li{ display: block; padding: 0;
-          &::before{ position: relative; margin-right: 5rem;}
-        }
+        // ul li{ display: block; padding: 0;
+        //   &::before{ position: relative; margin-right: 5rem;}
+        // }
       }
     }
     &.ty_white button{ color: #ccc;
@@ -636,7 +626,7 @@
     &#special_brand{
       .eastern_edition{ background-color: #F4F2F2; padding-bottom: 60rem;}
       .special_brand_list{
-        > li{ border-radius: 16rem; overflow: hidden; display: flex; background-color: #fff;
+        > li{ border-radius: 16rem; overflow: hidden; display: flex;
           @include screen("mo") { display: block;}
           + li{ margin-top: 24rem;
             @include screen("mo") { margin-top: 20rem;}
@@ -646,7 +636,7 @@
             @include screen("mo") { width: 100%;}
             img{ width: 100%;}
           }
-          .txt_box{ padding: 40rem; display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative;
+          .txt_box{ padding: 40rem; display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; background-color: #fff;
             @include screen("mo") { padding: 16rem 20rem 20rem;}
             .brand_info{
               h3{font-size: 26rem; font-weight: 600;}

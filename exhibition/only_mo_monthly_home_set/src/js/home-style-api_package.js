@@ -50,8 +50,19 @@
       const response = await this.#request(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ goodsNos })
+        body: JSON.stringify({
+          goodsNos,
+          exhibitYn: "Y"
+        })
       });
+
+      console.log(
+        response?.data?.map(item => ({
+          goodsNo: item.goodsNo,
+          status: item.status,
+          soldOutYn: item.soldOutYn
+        }))
+      );
 
       return response && response.data ? response.data : null;
     }
@@ -313,7 +324,10 @@
     }
 
     #isSoldOut(data) {
-      return data.soldOutYn === 'Y';
+      return (
+        data.soldOutYn === 'Y' ||
+        data.status === 'TEMPORARILY_OUT_OF_STOCK'
+      );
     }
 
     #toggleSoldOutAccessibilityText(element, isSoldOut) {
