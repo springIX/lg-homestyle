@@ -141,14 +141,31 @@ main { background-color: #F9F9F9;}
     /* COLLECTION */
     &#collection{ 
       &.ty_series{ background-color: #B6C0C5;
-        .bg_series{ position: absolute; top: 0; left: 0; width: 100%;height: 750px; object-fit: cover; object-position: bottom center;
-          @include screen("mo") { height: 550px; min-height: 93vw;}
+        &.ty_white{
+          .tit_box *, .series_txt *{ color: #fff;}
         }
-        .series_txt{ text-align: center; position: relative; min-height: 450px; padding-bottom: 20px;
-          @include screen("mo") { min-height: 330px;}
+        .bg_series{ position: absolute; top: 0; left: 0; width: 100%;}
+        .series_txt{ text-align: center; position: relative; min-height: 600px; padding-bottom: 20px;
           p{ color: #666;}
+          @include screen("mo") { min-height: 90vw;}
         }
         .pd_wrap{ position: relative; padding: 20px; background-color: #fff;}
+        // @at-root .brandstory_container.plotica #collection.ty_series{ 
+        //   .bg_series{ height: 830px;
+        //     @include screen("mo") { height: 620px; min-height: 105vw;}
+        //   }
+        //   .series_txt{ min-height: 500px;
+        //     @include screen("mo") { min-height: 390px;}
+        //   }
+        // }
+        // @at-root .brandstory_container.simmons #collection.ty_series{ 
+        //   .bg_series{ height: 760px;
+        //     @include screen("mo") { height: 820px; min-height: 165vw;}
+        //   }
+        //   .series_txt{ min-height: 970px;
+        //     @include screen("mo") { min-height: 153vw;}
+        //   }
+        // }
       }
       .tit_box{ position: relative;}
       .txt_box{

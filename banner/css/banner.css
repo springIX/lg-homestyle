@@ -241,7 +241,6 @@ body {
   font-weight: 400;
 }
 .is-mobile .banner__btn {
-  width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
   padding: 7px 12px;

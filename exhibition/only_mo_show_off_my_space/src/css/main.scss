@@ -52,16 +52,7 @@
     align-items: flex-end;
   }
 
-  /* WAVE */
-  .wave{ width: 100%; display: flex; overflow: hidden; 
-    > *{ flex-shrink: 0; animation: wave 100s linear infinite;}
-    @keyframes wave {
-      0%{ transform: translateX(0);}
-      100%{ transform: translateX(-100%);}
-    }
-
-    &.reverse > *{ animation-direction: reverse;}
-  }
+  .blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0;}
 
   @include screen("pc") {
     .mo{ display: none !important;}
@@ -170,7 +161,7 @@
 
     &#contents{
       .tit_box{ text-align: center; padding: 40rem 0 28rem;
-        strong{ font-size: 26rem; display: block; margin-bottom: 2rem; line-height: 1.4;}
+        h2{ font-weight: 700; font-size: 26rem; display: block; margin-bottom: 2rem; line-height: 1.4;}
         p{ font-size: 15rem; color: #444;}
       }
       .schedule_info{ padding-bottom: 20rem; text-align: center;
@@ -277,7 +268,7 @@
                   }
                   &.ty_npay img{ transform: scale(.6);}
                 }
-                strong{ margin-top: 20rem; display: block; @include font-size(18rem);
+                h3{ font-weight: 700; margin-top: 20rem; display: block; @include font-size(18rem);
                   @include screen("mo") { margin-top: 10rem; @include font-size(15rem);}
                 }
                 p{ margin-top: 8rem; @include font-size(17rem); font-weight: 400; color: #333;

@@ -31,7 +31,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  
   .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  
+  .blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0;}
+
   .flex {
     display: flex;
     justify-content: space-between;
@@ -93,7 +97,7 @@
   .tit_box{ margin-bottom: 32rem; text-align: center;
     @include screen("mo") { margin-bottom: 28rem;}
     span{ letter-spacing: -.5rem; color: $ci; font-weight: 500;}
-    h3{ margin-top: 6rem; font-weight: 600; font-size: 28rem; letter-spacing: -1rem;
+    h2{ margin-top: 6rem; font-weight: 600; font-size: 28rem; letter-spacing: -1rem;
       @include screen("mo") { font-size: 22rem; margin-top: 4rem;}
     }
   }
@@ -128,7 +132,7 @@
           .txt_box{ color: #444; transition: .5s ease;
             @include screen("pc") { transform: translateY(-100rem); }
             @include screen("mo") { margin-top: 10rem; opacity: 0;}
-            span{ display: block; margin-bottom: 6rem; font-weight: 600;}
+            h3{ display: block; margin-bottom: 6rem; font-weight: 600;}
           }
         }
         .nav{ width: 600rem; position: absolute; left: 50%; top: 210rem; transform: translateX(-50%); z-index: 1;

@@ -276,34 +276,28 @@ main {
 .brandstory_container section#collection.ty_series {
   background-color: #B6C0C5;
 }
+.brandstory_container section#collection.ty_series.ty_white .tit_box *, .brandstory_container section#collection.ty_series.ty_white .series_txt * {
+  color: #fff;
+}
 .brandstory_container section#collection.ty_series .bg_series {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 750px;
-  object-fit: cover;
-  object-position: bottom center;
-}
-@media (max-width: 780px) {
-  .brandstory_container section#collection.ty_series .bg_series {
-    height: 550px;
-    min-height: 93vw;
-  }
 }
 .brandstory_container section#collection.ty_series .series_txt {
   text-align: center;
   position: relative;
-  min-height: 450px;
+  min-height: 600px;
   padding-bottom: 20px;
-}
-@media (max-width: 780px) {
-  .brandstory_container section#collection.ty_series .series_txt {
-    min-height: 330px;
-  }
 }
 .brandstory_container section#collection.ty_series .series_txt p {
   color: #666;
+}
+@media (max-width: 780px) {
+  .brandstory_container section#collection.ty_series .series_txt {
+    min-height: 90vw;
+  }
 }
 .brandstory_container section#collection.ty_series .pd_wrap {
   position: relative;
