@@ -1280,52 +1280,45 @@ $mo-width: 390;
  
   /* LLADRO */
   &.lladro {
-    .txt-box .txt2{ text-transform: none;}
     &.pc{
       > section{
-        a{ align-items: flex-start;}
-        img{ display: block;}
-        &:nth-child(1){ left: 90px; top: 57px;
+        &:nth-child(1){ left: 67px; top: 39px;
           a{
-            img{ width: 155px;}
-            .txt-box{ margin-left: 17px; top: 41px;}
+            .txt-box{ left: -130px; top: -58px;}
           }
         }
-        &:nth-child(2){ left: 526px; top: 117px;
-          a{
-            img{ width: 350px;}
-            .txt-box{ width: 126px; right: 444px; top: 43px; text-align: right;}
+        &:nth-child(2){ left: 452px; top:128px;
+          a{ align-items: flex-start;
+            img{ left: -70px;  top:40px;}
           }
         }
-        &:nth-child(3){ left: 128px; top: 318px;
+        &:nth-child(3){ left: 141px; top: 322px;
           a{
-            img{ width: 206px;}
-            .txt-box{ margin-left: 15px; top: 98px;}
+            .txt-box{ left: -90px; top: -10px;}
           }
         }
       }
     }
 
-    &.mo{ display: flex; flex-direction: column; min-height: mo(750);
+    &.mo{ display: flex; flex-direction: column; 
       > section{
-        a{ height: 100%; align-items: flex-start;}
         img{ display: block;}
-        &:nth-child(1){ order: 2; height: mo(169);
+        &:nth-child(1){ order: 2; margin: mo(18) 0 mo(30); left: mo(47);
           a{
-            img{ width: mo(119); margin-left: mo(33);}
-            .txt-box{ margin-left: mo(22); top: mo(66);}
+            img{ width: mo(231);}
+            .txt-box{ margin-left: mo(-75); top: mo(-30);}
           }
         }
-        &:nth-child(2){ order: 1; height: mo(351);
-          a{ flex-direction: row-reverse;
-            img{ width: mo(247); margin: mo(36) mo(15) 0 0;}
-            .txt-box{ width: mo(126); left: mo(12); top: mo(55); text-align: right;}
+        &:nth-child(2){ order: 1; padding-top: mo(53);
+          a{ align-items: flex-start;
+            img{ width: mo(246);}
+            .txt-box{ top: mo(5); left: mo(10);}
           }
         }
-        &:nth-child(3){ order: 3; height: mo(230);
-          a{ flex-direction: row-reverse;
-            img{ width: mo(160); margin: mo(15) mo(56) 0 0;}
-            .txt-box{ width: mo(111); left: mo(-29); top: mo(75); text-align: right;}
+        &:nth-child(3){ order: 3; left: mo(15);
+          a{ flex-direction: row-reverse; 
+            img{ width: mo(254); }
+            .txt-box{ width: mo(111); margin-right: mo(12); text-align: right; top: mo(-20);}
           }
         }
       }
@@ -1388,5 +1381,145 @@ $mo-width: 390;
   }
   /* //FLOS */ 
  
+  /* TOYO SASAKI */
+  &.toyo_sasaki {
+    img{ mix-blend-mode: darken;}
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 485px; top:116px;
+          a{
+            .txt-box{ position: absolute; top: 49px; left: -40px; text-align: right;}
+          }
+        }
+        &:nth-child(2){ left: 93px; top: 57px;
+          a{
+            .txt-box{ left: 60px; top: -40px;}
+          }
+        }
+        &:nth-child(3){ left: 103px; top: 243px;
+          a{
+            .txt-box{ left: -30px; top: -30px;}
+          }
+        }
+      }
+    }
 
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){margin-top: mo(-8rem);
+          a{
+            img{ width: mo(276);}
+            .txt-box{ margin-left: mo(-42); top: mo(-10);}
+          }
+        }
+        &:nth-child(2){ margin-bottom: mo(-20); left: mo(68);
+          a{ align-items: flex-start;
+            img{ width: mo(107);}
+            .txt-box{ top: mo(50); left: mo(45);}
+          }
+        }
+        &:nth-child(3){ right: mo(26);
+          a{ flex-direction: row-reverse; 
+            img{ width: mo(175); }
+            .txt-box{ margin-right: mo(45); text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  /* //TOYO SASAKI */
+
+  /* STANDARD A */
+  &.standard_a {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 433px; top:95px;
+          a{
+            .txt-box{ position: absolute; top: 15px; left: 90px;}
+          }
+        }
+        &:nth-child(2){ left: 48px; top:67px;
+          a{
+            .txt-box{ left: 11px; top: -60px;}
+          }
+        }
+        &:nth-child(3){ left: 87px; top: 285px;
+          a{
+            .txt-box{ left: -10px; top: -30px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ padding-top: mo(26); left: mo(38);
+          a{
+            img{ width: mo(340);}
+            .txt-box{ position: absolute; left: mo(35); top: mo(65);}
+          }
+        }
+        &:nth-child(2){ margin-bottom: mo(8); left: mo(37);
+          a{
+            img{ width: mo(168);}
+            .txt-box{ top: mo(-15); left: mo(23);}
+          }
+        }
+        &:nth-child(3){ right: mo(42);
+          a{ flex-direction: row-reverse; 
+            img{ width: mo(192); }
+            .txt-box{  margin-right: mo(22); top: mo(-20);}
+          }
+        }
+      }
+    }
+  }
+  /* //STANDARD A */
+
+  /* VERSACE */
+  &.versace {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 465px; top:176px;
+          a{
+            .txt-box{ position: absolute; top: -7px; left: 68px;}
+          }
+        }
+        &:nth-child(2){ left: 56px; top:36px;
+          a{
+            .txt-box{ left: -10px; top: -50px;}
+          }
+        }
+        &:nth-child(3){ left: 59px; top: 310px;
+          a{ align-items: flex-start;
+            .txt-box{ left: -35px; top: -10px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ padding-top: mo(37); left: mo(29);
+          a{
+            img{ width: mo(331);}
+            .txt-box{ position: absolute; left: mo(0); top: mo(25);}
+          }
+        }
+        &:nth-child(2){ margin:mo(-10) 0 mo(23); left: mo(23);
+          a{ align-items: flex-start;
+            img{ width: mo(202);}
+            .txt-box{ top: mo(15); left: mo(-50);}
+          }
+        }
+        &:nth-child(3){ left: mo(103);
+          a{
+            img{ width: mo(276); }
+            .txt-box{ text-align: right; position: absolute; left: mo(-50); top: mo(-10);}
+          }
+        }
+      }
+    }
+  }
+  /* //VERSACE */
 }

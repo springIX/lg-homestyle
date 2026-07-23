@@ -436,7 +436,7 @@
               }
               .txt_box{
                 span{ color: #444;}
-                strong{ display: block; font-weight: 600; font-size: 20rem; margin: 4rem 0 8rem;
+                h3{ display: block; font-weight: 600; font-size: 20rem; margin: 4rem 0 8rem;
                   @include screen("mo") { font-size: 16rem; margin: 2rem 0;}
                 }
                 p{opacity: .5;
@@ -460,7 +460,7 @@
               li{ border-radius: 0; background-color: #fff; min-height: 128rem; 
                 @include screen("mo") { min-height: 123rem; align-items: flex-start;}
                 .txt_box{
-                  strong{ margin: 0 0 8rem;
+                  h3{ margin: 0 0 8rem;
                     em{ color: #FD312E;}
                   }
                   p{opacity: 1; font-size: 15rem; color: #444; font-weight: 500;
@@ -835,6 +835,23 @@
             }
           }
         }
+        .how_to_apply_process{
+          ol{
+            li{ background-color: #fff; color: #111; padding: 20rem 16rem; counter-reset: how_to_apply; display: flex; align-items: center; gap: 8rem;
+              +li{ margin-top: 8rem;}
+              .icon{ width: 86rem;}
+              .txt_box{ font-weight: 600;
+                &:before {
+                  counter-increment: how_to_apply;
+                  content: "STEP 0"counter(how_to_apply);
+                  display: block; font-size: 12rem; color: #8f8f8f;
+                }
+                h3{ margin: 8rem 0 2rem; font-size: 17rem;}
+                p{ font-size: 13rem; color: #444; font-weight: 400;}
+              }
+            }
+          }
+        }
       }
 
       &.more_promotion{ padding: 100rem 0;
@@ -849,7 +866,7 @@
               .img_box{
                 img{ width: 100%;}
               }
-              strong{ display: block; margin: 12rem 0 4rem; font-size: 19rem; font-weight: 600; color: #000;
+              h3{ display: block; margin: 12rem 0 4rem; font-size: 19rem; font-weight: 600; color: #000;
                 @include screen("mo") { margin-bottom: 2rem; font-size: 15rem;}
               }
               p{ font-size: 16rem; color: #666;

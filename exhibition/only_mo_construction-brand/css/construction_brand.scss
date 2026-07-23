@@ -47,7 +47,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   }
   .p_r{ padding-right: 80rem;}
   .p_l{ padding-left: 80rem;}
-
+  .blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0;}
   .sticky-black-nav {
       position: sticky;
       top: 56rem;
@@ -158,7 +158,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     @include screen("mo") { padding-top: 60rem;}
     .tit-box{ text-align: center; padding: 0 20rem; margin-bottom: 60rem; font-weight: 400;
       @include screen("mo") { margin-bottom: 40rem;}
-      h3{ font-size: 70rem; font-weight: 500;
+      h2{ font-size: 70rem; font-weight: 500;
         @include screen("mo") { font-size: 40rem;}
       }
       p{ margin-top: 20rem; color: #111;
@@ -169,7 +169,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
       }
     }
     .txt-box{
-      h4{ font-size: 40rem; line-height: 1.4; font-weight: 700;
+      h3{ font-size: 40rem; line-height: 1.4; font-weight: 700;
         @include screen("mo") { font-size: 24rem;}
       }
       p{ margin-top: 20rem;
@@ -191,7 +191,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
       }
       .txt-box{ padding: 53rem 0; width: 475rem;
         @include screen("mo") { padding: 0; width: 100%;}
-        strong{ display: block; font-size: 30rem; font-weight: 700; padding: 40rem 0 20rem; letter-spacing: -.7rem;
+        h3{ display: block; font-size: 30rem; font-weight: 700; padding: 40rem 0 20rem; letter-spacing: -.7rem;
           @include screen("mo") { font-size: 20rem; padding: 20rem 0 12rem;}
         }
         .info{ color: #ccc; line-height: 1.6;
@@ -217,7 +217,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     .exmaple-cont + .exmaple-cont{ margin-top: 100rem;}
     .txt-box{ text-align: center; margin-bottom: 50rem; letter-spacing: -1rem;
       @include screen("mo") { margin-bottom: 40rem;}
-      h3{ font-weight: 500; font-size: 50rem;
+      h2{ font-weight: 500; font-size: 50rem;
         @include screen("mo") { font-size: 40rem;}
       }
       ul{ display: flex; justify-content: center; margin-top: 45rem;
@@ -474,7 +474,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   &.rastelli{
     .rastelli-txt-box{
       @include screen("mo") { padding: 20rem 20rem 0 !important; margin: 0 !important;}
-      strong{ display: block; font-size: 40rem; font-weight: 700; margin-bottom: 12rem;
+      strong, h3{ display: block; font-size: 40rem; font-weight: 700; margin-bottom: 12rem;
         @include screen("mo") { font-size: 26rem; margin-bottom: 8rem;}
       }
     }
@@ -514,7 +514,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     .example{ 
       .info-box{
         @include screen("mo") { padding: 20rem 20rem 40rem !important; margin: 0 !important; width: 100%;}
-        span{ font-size: 24rem; font-weight: 500;
+        h3{ font-size: 24rem; font-weight: 500;
           @include screen("mo") { font-size: 20rem;}
         }
         p{ color: #444; margin-top: 16rem;
@@ -565,7 +565,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   &.cucine-lube{
     .lube-txt-box{ line-height: 1;
       @include screen("mo") { padding: 20rem 20rem 40rem !important; margin: 0 !important;}
-      strong{ font-size: 30rem; font-weight: 700;
+      strong, h3{ font-size: 30rem; font-weight: 700;
         @include screen("mo") { font-size: 26rem;}
       }
       p{ margin-top: 16rem;
@@ -635,7 +635,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
         + .img-box{ margin-top: 80rem;
           @include screen("mo") { margin-top: 0 !important;}
         }
-        p{ padding-top: 24rem; font-size: 24rem;
+        h3{ padding-top: 24rem; font-size: 24rem;
           @include screen("mo") { font-size: 20rem; padding:20rem 20rem 50rem;}
         }
       }
@@ -664,6 +664,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     .footer{
       @include screen("mo") {padding: 130rem 20rem;}
       .bg{ opacity:unset}
+      .content-wrapper h2 { display: block; color: #fff; font-weight: 600;  font-size: 22px; margin-bottom: 32px; text-align: center;}
     }
     .showroom{
       .showroom-box {
@@ -757,7 +758,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
                   .floor {font-size: 24rem; color: rgba(17, 17, 17, 0.4); padding-bottom: 12rem; font-weight: 400;
                     @include screen("mo") {font-size: 20rem;}
                   }
-                  strong {font-size: 40rem; color: #111; padding-bottom: 6rem;
+                  h3 {font-size: 40rem; color: #111; padding:0 0 6rem;
                     @include screen("mo") {font-size: 26rem;}
                   }
                   .sub-tit {font-size: 22rem; color: #111; padding-bottom: 24rem; font-weight: 500;
@@ -811,7 +812,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
       span{ display: block; font-weight: 700; font-size: 20rem; margin-bottom: 10rem;
         @include screen("mo") { margin-bottom: 4rem;}
       }
-      strong{ font-size: 40rem; font-weight: 700;
+      h3{ font-size: 40rem; font-weight: 700;
         @include screen("mo") { font-size: 26rem;}
       }
       p{ margin-top: 20rem;

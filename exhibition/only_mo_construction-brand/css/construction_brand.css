@@ -55,6 +55,18 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 .construction-brand-container .p_l {
   padding-left: 80rem;
 }
+.construction-brand-container .blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 .construction-brand-container .sticky-black-nav {
   position: sticky;
   top: 56rem;
@@ -206,12 +218,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin-bottom: 40rem;
   }
 }
-.construction-brand-container .showroom .tit-box h3 {
+.construction-brand-container .showroom .tit-box h2 {
   font-size: 70rem;
   font-weight: 500;
 }
 @media (min-width: 1px) {
-  .construction-brand-container .showroom .tit-box h3 {
+  .construction-brand-container .showroom .tit-box h2 {
     font-size: 40rem;
   }
 }
@@ -235,13 +247,13 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin-bottom: 8rem;
   }
 }
-.construction-brand-container .showroom .txt-box h4 {
+.construction-brand-container .showroom .txt-box h3 {
   font-size: 40rem;
   line-height: 1.4;
   font-weight: 700;
 }
 @media (min-width: 1px) {
-  .construction-brand-container .showroom .txt-box h4 {
+  .construction-brand-container .showroom .txt-box h3 {
     font-size: 24rem;
   }
 }
@@ -307,7 +319,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     width: 100%;
   }
 }
-.construction-brand-container .a-tempo .col2 .txt-box strong {
+.construction-brand-container .a-tempo .col2 .txt-box h3 {
   display: block;
   font-size: 30rem;
   font-weight: 700;
@@ -315,7 +327,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   letter-spacing: -0.7rem;
 }
 @media (min-width: 1px) {
-  .construction-brand-container .a-tempo .col2 .txt-box strong {
+  .construction-brand-container .a-tempo .col2 .txt-box h3 {
     font-size: 20rem;
     padding: 20rem 0 12rem;
   }
@@ -387,12 +399,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin-bottom: 40rem;
   }
 }
-.construction-brand-container .example .txt-box h3 {
+.construction-brand-container .example .txt-box h2 {
   font-weight: 500;
   font-size: 50rem;
 }
 @media (min-width: 1px) {
-  .construction-brand-container .example .txt-box h3 {
+  .construction-brand-container .example .txt-box h2 {
     font-size: 40rem;
   }
 }
@@ -1035,14 +1047,14 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin: 0 !important;
   }
 }
-.construction-brand-container.rastelli .rastelli-txt-box strong {
+.construction-brand-container.rastelli .rastelli-txt-box strong, .construction-brand-container.rastelli .rastelli-txt-box h3 {
   display: block;
   font-size: 40rem;
   font-weight: 700;
   margin-bottom: 12rem;
 }
 @media (min-width: 1px) {
-  .construction-brand-container.rastelli .rastelli-txt-box strong {
+  .construction-brand-container.rastelli .rastelli-txt-box strong, .construction-brand-container.rastelli .rastelli-txt-box h3 {
     font-size: 26rem;
     margin-bottom: 8rem;
   }
@@ -1141,12 +1153,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     width: 100%;
   }
 }
-.construction-brand-container.rastelli .example .info-box span {
+.construction-brand-container.rastelli .example .info-box h3 {
   font-size: 24rem;
   font-weight: 500;
 }
 @media (min-width: 1px) {
-  .construction-brand-container.rastelli .example .info-box span {
+  .construction-brand-container.rastelli .example .info-box h3 {
     font-size: 20rem;
   }
 }
@@ -1252,12 +1264,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin: 0 !important;
   }
 }
-.construction-brand-container.cucine-lube .lube-txt-box strong {
+.construction-brand-container.cucine-lube .lube-txt-box strong, .construction-brand-container.cucine-lube .lube-txt-box h3 {
   font-size: 30rem;
   font-weight: 700;
 }
 @media (min-width: 1px) {
-  .construction-brand-container.cucine-lube .lube-txt-box strong {
+  .construction-brand-container.cucine-lube .lube-txt-box strong, .construction-brand-container.cucine-lube .lube-txt-box h3 {
     font-size: 26rem;
   }
 }
@@ -1423,12 +1435,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin-top: 0 !important;
   }
 }
-.construction-brand-container.cucine-lube .example .img-box p {
+.construction-brand-container.cucine-lube .example .img-box h3 {
   padding-top: 24rem;
   font-size: 24rem;
 }
 @media (min-width: 1px) {
-  .construction-brand-container.cucine-lube .example .img-box p {
+  .construction-brand-container.cucine-lube .example .img-box h3 {
     font-size: 20rem;
     padding: 20rem 20rem 50rem;
   }
@@ -1499,6 +1511,14 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 .construction-brand-container.kitchenbach .footer .bg {
   opacity: unset;
+}
+.construction-brand-container.kitchenbach .footer .content-wrapper h2 {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 32px;
+  text-align: center;
 }
 @media (max-width: 1px) {
   .construction-brand-container.kitchenbach .showroom .showroom-box.ty2 .box2 .img2 {
@@ -1685,13 +1705,13 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     font-size: 20rem;
   }
 }
-.construction-brand-container.sks .example .exmaple-cont .content-wrapper .img-box .flex_row.ty5 .lube-txt-box strong {
+.construction-brand-container.sks .example .exmaple-cont .content-wrapper .img-box .flex_row.ty5 .lube-txt-box h3 {
   font-size: 40rem;
   color: #111;
-  padding-bottom: 6rem;
+  padding: 0 0 6rem;
 }
 @media (min-width: 1px) {
-  .construction-brand-container.sks .example .exmaple-cont .content-wrapper .img-box .flex_row.ty5 .lube-txt-box strong {
+  .construction-brand-container.sks .example .exmaple-cont .content-wrapper .img-box .flex_row.ty5 .lube-txt-box h3 {
     font-size: 26rem;
   }
 }
@@ -1796,12 +1816,12 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
     margin-bottom: 4rem;
   }
 }
-.construction-brand-container.hanssem_rehouse .hs-txt-box strong {
+.construction-brand-container.hanssem_rehouse .hs-txt-box h3 {
   font-size: 40rem;
   font-weight: 700;
 }
 @media (min-width: 1px) {
-  .construction-brand-container.hanssem_rehouse .hs-txt-box strong {
+  .construction-brand-container.hanssem_rehouse .hs-txt-box h3 {
     font-size: 26rem;
   }
 }
