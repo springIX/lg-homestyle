@@ -2348,4 +2348,83 @@
 }
 .brand-story-banner-container {
   /* //VERSACE */
+  /* SIMMONS */
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(1) {
+  left: 404px;
+  top: 122px;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  text-align: right;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(2) {
+  left: 46px;
+  top: 82px;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(2) a {
+  align-items: flex-start;
+  gap: 12px;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(2) a .txt-box {
+  top: -2px;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(3) {
+  left: 64px;
+  top: 300px;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+.brand-story-banner-container.simmons.pc > section:nth-child(3) a .txt-box {
+  left: 100px;
+}
+.brand-story-banner-container.simmons.mo {
+  display: block;
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(1) {
+  padding-top: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(1) a img {
+  width: 100%;
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(39 / 390 * 100vw);
+  top: calc(25 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(2) {
+  margin: calc(-60 / 390 * 100vw) 0 calc(38 / 390 * 100vw);
+  left: calc(28 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(2) a {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: calc(13 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(2) a img {
+  width: calc(204 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(2) a .txt-box {
+  left: calc(118 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(3) {
+  right: calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(3) a img {
+  width: calc(273 / 390 * 100vw);
+}
+.brand-story-banner-container.simmons.mo > section:nth-child(3) a .txt-box {
+  right: calc(136 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //SIMMONS */
 }

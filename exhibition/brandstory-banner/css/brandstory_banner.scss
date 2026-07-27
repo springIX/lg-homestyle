@@ -1522,4 +1522,51 @@ $mo-width: 390;
     }
   }
   /* //VERSACE */
+
+  /* SIMMONS */
+  &.simmons {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 404px; top:122px;
+          a{ 
+            .txt-box{ position: absolute; top: 0px; left: 80px; text-align: right;}
+          }
+        }
+        &:nth-child(2){ left: 46px; top:82px; 
+          a{ align-items: flex-start; gap: 12px;
+            .txt-box{ top: -2px;}
+          }
+        }
+        &:nth-child(3){ left: 64px; top: 300px;
+          a{ flex-direction: column-reverse; gap: 4px;
+            .txt-box{ left: 100px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ padding-top: mo(5); 
+          a{
+            img{ width: 100%;}
+            .txt-box{ position: absolute; left: mo(39); top: mo(25);}
+          }
+        }
+        &:nth-child(2){ margin:mo(-60) 0 mo(38); left: mo(28);
+          a{ flex-direction: column-reverse; align-items: flex-start; gap: mo(13);
+            img{ width: mo(204);}
+            .txt-box{ left: mo(118);}
+          }
+        }
+        &:nth-child(3){ right: mo(14);
+          a{ flex-direction: column-reverse; align-items: flex-end;
+            img{ width: mo(273);}
+            .txt-box{ right: mo(136); text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  /* //SIMMONS */
 }
