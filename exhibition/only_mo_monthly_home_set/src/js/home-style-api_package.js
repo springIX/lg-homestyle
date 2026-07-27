@@ -737,6 +737,8 @@
             new Swiper(swiperEl, {
               slidesPerView: 1,
               speed: 800,
+              observer: true,
+              observeParents: true,
               scrollbar: {
                 el: swiperEl.querySelector('.scr_bar'),
                 draggable: true,
