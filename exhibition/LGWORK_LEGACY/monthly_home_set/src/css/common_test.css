@@ -41,6 +41,9 @@ html {
     display: none;
   }
 }
+.monthly_home_set ::-moz-placeholder {
+  color: #666;
+}
 .monthly_home_set ::placeholder {
   color: #666;
 }

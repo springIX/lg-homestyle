@@ -39,6 +39,9 @@ main {
 .interior_consultation_event ::-webkit-scrollbar {
   display: none;
 }
+.interior_consultation_event ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .interior_consultation_event ::placeholder {
   color: #d6d6d6;
 }

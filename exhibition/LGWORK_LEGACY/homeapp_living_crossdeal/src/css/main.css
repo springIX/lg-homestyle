@@ -52,7 +52,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .homeapp_living_crossdeal .flex {
   display: flex;
@@ -657,7 +658,8 @@
 .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .homeapp_living_crossdeal .c-product__list.ty_row .c-product__item .c-product__info-container {
   padding: 28rem;

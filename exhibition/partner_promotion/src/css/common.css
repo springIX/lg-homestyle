@@ -39,6 +39,9 @@ main {
 .partner_promotion ::-webkit-scrollbar {
   display: none;
 }
+.partner_promotion ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .partner_promotion ::placeholder {
   color: #d6d6d6;
 }

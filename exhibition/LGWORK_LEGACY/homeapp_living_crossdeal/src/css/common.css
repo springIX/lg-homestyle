@@ -44,6 +44,9 @@ html {
 .homeapp_living_crossdeal ::-webkit-scrollbar {
   display: none;
 }
+.homeapp_living_crossdeal ::-moz-placeholder {
+  color: #666;
+}
 .homeapp_living_crossdeal ::placeholder {
   color: #666;
 }

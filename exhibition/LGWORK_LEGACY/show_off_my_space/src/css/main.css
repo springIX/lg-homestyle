@@ -57,7 +57,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .show_off_my_space .flex {
   display: flex;
@@ -262,6 +263,7 @@
 }
 @media (max-width: 780px) {
   .show_off_my_space section#contents .cont_box.how_to_apply ol > li .info ul li .tag {
+    width: -moz-max-content;
     width: max-content;
     font-size: clamp(10px, 11rem, 9999rem);
     padding: 2rem 6rem;
@@ -357,7 +359,8 @@
 @media (max-width: 780px) {
   .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box img {
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box.ty_npay img {
@@ -452,6 +455,7 @@
   color: #000;
   font-weight: 500;
   display: block;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }

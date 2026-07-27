@@ -47,7 +47,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .brand_service_info .flex {
   display: flex;
@@ -808,7 +809,8 @@
 .brand_service_info section.download .download_wrap .vid_box video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20rem;
 }
 .brand_service_info section.download .download_wrap a {

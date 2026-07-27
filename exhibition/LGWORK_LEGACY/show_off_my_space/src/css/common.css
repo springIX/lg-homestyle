@@ -46,6 +46,9 @@ main {
 .show_off_my_space ::-webkit-scrollbar {
   display: none;
 }
+.show_off_my_space ::-moz-placeholder {
+  color: #444;
+}
 .show_off_my_space ::placeholder {
   color: #444;
 }

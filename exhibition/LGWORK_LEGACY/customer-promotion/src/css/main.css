@@ -47,7 +47,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .customer_promotion .flex {
   display: flex;
@@ -300,7 +301,8 @@
 .customer_promotion .cp_tab.ty_img ul li img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .customer_promotion .cp_tab.ty_img .nav span {
   top: 21rem;
@@ -974,7 +976,8 @@
   .customer_promotion section .pd_swiper .swiper-slide .img_box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .customer_promotion section .pd_swiper .swiper-slide .img_box .like_btn {

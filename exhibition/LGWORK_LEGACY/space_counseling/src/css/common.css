@@ -43,6 +43,9 @@ html {
 .space_counseling ::-webkit-scrollbar {
   display: none;
 }
+.space_counseling ::-moz-placeholder {
+  color: #444;
+}
 .space_counseling ::placeholder {
   color: #444;
 }

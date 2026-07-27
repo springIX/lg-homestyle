@@ -39,6 +39,9 @@ html {
 .combined_discount ::-webkit-scrollbar {
   display: none;
 }
+.combined_discount ::-moz-placeholder {
+  color: #444;
+}
 .combined_discount ::placeholder {
   color: #444;
 }

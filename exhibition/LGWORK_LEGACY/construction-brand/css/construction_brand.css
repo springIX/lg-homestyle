@@ -74,7 +74,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 .construction-brand-container .kv-main img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .construction-brand-container .sticky-black-nav {
   position: sticky;
@@ -608,7 +609,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 .construction-brand-container.pedini .brand-point .col2 .box2 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 767px) {
   .construction-brand-container.pedini .brand-point .col2 .box2 img {
@@ -639,7 +641,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 .construction-brand-container.pedini .brand-gallery .display-tablet .col2 div img {
   height: calc(50% - 20px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .construction-brand-container.pedini .brand-gallery .display-mobile img + img {
   margin-top: 32px;
@@ -1160,6 +1163,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 .construction-brand-container.rastelli .showroom .showroom-box2 .box1 .rastelli-txt-box {
   margin-left: auto;
+  width: -moz-max-content;
   width: max-content;
   padding: 0 81px 91px 0;
 }
@@ -1810,6 +1814,7 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
 }
 .construction-brand-container.sks .example .exmaple-cont .content-wrapper .img-box .flex_row.ty5.bottom-box > img {
   width: 48.8%;
+  height: -moz-fit-content;
   height: fit-content;
 }
 @media (max-width: 767px) {
@@ -2454,7 +2459,8 @@ abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, ca
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.25;
 }
 .construction-brand-container .footer .btn-wrap {

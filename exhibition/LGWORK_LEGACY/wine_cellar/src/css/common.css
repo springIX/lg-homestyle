@@ -43,6 +43,9 @@ html {
 .wine_cellar ::-webkit-scrollbar {
   display: none;
 }
+.wine_cellar ::-moz-placeholder {
+  color: #666;
+}
 .wine_cellar ::placeholder {
   color: #666;
 }

@@ -51,7 +51,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .lexon_jeffkoons .flex {
   display: flex;
@@ -493,8 +494,10 @@
   .lexon_jeffkoons section.designer_masterpiece_chkpoint .designer_masterpiece ul li.master_piece .img_box .char {
     width: 270rem;
     height: 302rem;
-    object-fit: cover;
-    object-position: left top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left top;
+       object-position: left top;
     right: 45rem;
   }
 }
@@ -530,7 +533,8 @@
 .lexon_jeffkoons section.designer_masterpiece_chkpoint .check_point .check_point_cont .swiper .swiper-wrapper * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .lexon_jeffkoons section.designer_masterpiece_chkpoint .check_point .check_point_cont .swiper .pagi {
   position: absolute;

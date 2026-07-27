@@ -40,7 +40,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .my_home_taste_challenge .flex {
   display: flex;
@@ -187,8 +188,10 @@
   overflow: hidden;
 }
 .my_home_taste_challenge section#mission ul li img {
-  object-fit: cover;
-  object-position: center top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 @media (max-width: 780px) {
   .my_home_taste_challenge section#mission ul li img {

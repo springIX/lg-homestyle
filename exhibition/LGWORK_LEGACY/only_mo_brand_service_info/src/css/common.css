@@ -40,6 +40,9 @@ html {
 .brand_service_info ::-webkit-scrollbar {
   display: none;
 }
+.brand_service_info ::-moz-placeholder {
+  color: #727780;
+}
 .brand_service_info ::placeholder {
   color: #727780;
 }

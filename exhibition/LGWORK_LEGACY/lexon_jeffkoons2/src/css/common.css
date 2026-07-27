@@ -40,6 +40,9 @@ main {
 .lexon_jeffkoons_container ::-webkit-scrollbar {
   display: none;
 }
+.lexon_jeffkoons_container ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .lexon_jeffkoons_container ::placeholder {
   color: #d6d6d6;
 }

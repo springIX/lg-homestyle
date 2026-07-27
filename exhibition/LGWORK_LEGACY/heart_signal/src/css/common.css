@@ -41,6 +41,9 @@ main {
 .heart_signal_container ::-webkit-scrollbar {
   display: none;
 }
+.heart_signal_container ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .heart_signal_container ::placeholder {
   color: #d6d6d6;
 }

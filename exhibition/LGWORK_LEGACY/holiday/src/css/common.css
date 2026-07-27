@@ -44,6 +44,9 @@ html {
 .holiday_container ::-webkit-scrollbar {
   display: none;
 }
+.holiday_container ::-moz-placeholder {
+  color: #444;
+}
 .holiday_container ::placeholder {
   color: #444;
 }

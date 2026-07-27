@@ -22,6 +22,7 @@
   text-decoration: none;
 }
 .brand-story-banner-container > section {
+  width: -moz-max-content;
   width: max-content;
   position: absolute;
 }
@@ -1108,7 +1109,8 @@
 .brand-story-banner-container.ligne_roset.pc > section:nth-child(3) a img {
   width: 363px;
   height: 223px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .brand-story-banner-container.ligne_roset.pc > section:nth-child(3) a .txt-box {
   margin-left: -10px;
@@ -1295,6 +1297,7 @@
   mix-blend-mode: darken;
 }
 .brand-story-banner-container.human_scale.mo > section:nth-child(3) a .txt-box {
+  width: -moz-max-content;
   width: max-content;
   display: block;
   margin: 0 0 8px auto;
@@ -2427,4 +2430,167 @@
 }
 .brand-story-banner-container {
   /* //SIMMONS */
+  /* PLOTICA */
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(1) {
+  left: 499px;
+  top: 122px;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  text-align: right;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(2) {
+  left: 59px;
+  top: 88px;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(2) a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(2) a .txt-box {
+  left: -65px;
+  top: -10px;
+  text-align: left;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(3) {
+  left: 96px;
+  top: 320px;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+.brand-story-banner-container.plotica.pc > section:nth-child(3) a .txt-box {
+  left: 120px;
+}
+.brand-story-banner-container.plotica.mo {
+  display: block;
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(1) {
+  padding-top: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(1) a img {
+  width: calc(313 / 390 * 100vw);
+  margin: 0 0 0 auto;
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(30 / 390 * 100vw);
+  top: calc(25 / 390 * 100vw);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(2) {
+  margin: calc(-60 / 390 * 100vw) 0 calc(0 / 390 * 100vw);
+  left: calc(34 / 390 * 100vw);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(2) a {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(2) a img {
+  width: calc(244 / 390 * 100vw);
+  transform: translateY(-20px);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(2) a .txt-box {
+  left: calc(180 / 390 * 100vw);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(3) {
+  right: calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(3) a img {
+  width: calc(245 / 390 * 100vw);
+}
+.brand-story-banner-container.plotica.mo > section:nth-child(3) a .txt-box {
+  right: calc(220 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //PLOTICA */
+  /* royal_copenhagen */
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(1) {
+  left: 439px;
+  top: 156px;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  top: -25px;
+  left: 100px;
+  text-align: right;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(2) {
+  left: 58px;
+  top: 46px;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(2) a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(2) a .txt-box {
+  left: 0px;
+  top: 35px;
+  text-align: left;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(3) {
+  left: 86px;
+  top: 300px;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+.brand-story-banner-container.royal_copenhagen.pc > section:nth-child(3) a .txt-box {
+  left: 170px;
+  top: 40px;
+}
+.brand-story-banner-container.royal_copenhagen.mo {
+  display: block;
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(1) {
+  padding-top: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(1) a img {
+  width: calc(338 / 390 * 100vw);
+  padding-top: calc(50 / 390 * 100vw);
+  margin: 0 0 0 auto;
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(30 / 390 * 100vw);
+  top: calc(25 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) {
+  margin: calc(30 / 390 * 100vw) 0 calc(38 / 390 * 100vw);
+  left: calc(28 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) a {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) a img {
+  width: calc(194 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) a .txt-box {
+  left: calc(220 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) {
+  right: calc(14 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) a img {
+  width: calc(194 / 390 * 100vw);
+}
+.brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) a .txt-box {
+  right: calc(220 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //royal_copenhagen */
 }

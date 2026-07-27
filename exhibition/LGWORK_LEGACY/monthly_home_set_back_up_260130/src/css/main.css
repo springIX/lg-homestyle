@@ -60,7 +60,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .monthly_home_set .flex {
   display: flex;
@@ -669,7 +670,8 @@
 .monthly_home_set .c-product__list.ty_row .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .monthly_home_set .c-product__list.ty_row .c-product__item .c-product__info-container {
   padding: 17rem 28rem;

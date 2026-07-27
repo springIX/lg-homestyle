@@ -39,6 +39,9 @@ main {
 .rareraw_container ::-webkit-scrollbar {
   display: none;
 }
+.rareraw_container ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .rareraw_container ::placeholder {
   color: #d6d6d6;
 }

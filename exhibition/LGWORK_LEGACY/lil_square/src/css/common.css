@@ -43,6 +43,9 @@ html {
 .lil_square ::-webkit-scrollbar {
   display: none;
 }
+.lil_square ::-moz-placeholder {
+  color: #444;
+}
 .lil_square ::placeholder {
   color: #444;
 }

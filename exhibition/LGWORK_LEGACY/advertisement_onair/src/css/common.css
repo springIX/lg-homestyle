@@ -43,6 +43,9 @@ html {
 .advertisement_onair_container ::-webkit-scrollbar {
   display: none;
 }
+.advertisement_onair_container ::-moz-placeholder {
+  color: #444;
+}
 .advertisement_onair_container ::placeholder {
   color: #444;
 }

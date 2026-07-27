@@ -44,6 +44,9 @@ html {
 .exclusive_product ::-webkit-scrollbar {
   display: none;
 }
+.exclusive_product ::-moz-placeholder {
+  color: #727780;
+}
 .exclusive_product ::placeholder {
   color: #727780;
 }

@@ -41,6 +41,9 @@ html {
 .event-benefit-template ::-webkit-scrollbar {
   display: none;
 }
+.event-benefit-template ::-moz-placeholder {
+  color: #444;
+}
 .event-benefit-template ::placeholder {
   color: #444;
 }
@@ -303,7 +306,8 @@ html {
 .event-benefit-template .c-product .c-product__list .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .event-benefit-template .c-product .c-product__list .c-product__item .c-product__info-container {
   padding: 28rem;

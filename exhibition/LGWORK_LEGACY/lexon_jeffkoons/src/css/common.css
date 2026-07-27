@@ -45,6 +45,9 @@ html {
 .lexon_jeffkoons ::-webkit-scrollbar {
   display: none;
 }
+.lexon_jeffkoons ::-moz-placeholder {
+  color: #666;
+}
 .lexon_jeffkoons ::placeholder {
   color: #666;
 }

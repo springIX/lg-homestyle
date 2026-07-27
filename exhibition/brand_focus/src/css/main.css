@@ -51,7 +51,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .brand_focus .flex {
   display: flex;
@@ -702,7 +703,8 @@
 .brand_focus section.brand_focus_list_ty2 .pd_list_wrap article .pd_list .c-product .c-product__list .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .brand_focus section.brand_focus_list_ty2 .pd_list_wrap article .pd_list .c-product .c-product__list .c-product__item > span .c-product__info-container {
   width: calc(100% - 88rem);

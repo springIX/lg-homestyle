@@ -41,6 +41,9 @@ main {
 .brand_focus ::-webkit-scrollbar {
   display: none;
 }
+.brand_focus ::-moz-placeholder {
+  color: #666;
+}
 .brand_focus ::placeholder {
   color: #666;
 }

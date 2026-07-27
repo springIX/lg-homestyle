@@ -65,13 +65,16 @@ main {
 @media (min-width: 790px) {
   .brandstory-container .kv-main img {
     max-height: 800px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .brandstory-container .kv-main.tit-btm img {
-    object-position: center bottom;
+    -o-object-position: center bottom;
+       object-position: center bottom;
   }
   .brandstory-container .kv-main.tit-top img {
-    object-position: center top;
+    -o-object-position: center top;
+       object-position: center top;
   }
 }
 @media (max-width: 1px) {
@@ -1425,7 +1428,8 @@ main {
 @media (min-width: 1px) {
   .brandstory-container .gallery-box img {
     height: 52vw;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .brandstory-container .gallery-box img + img {
@@ -1739,8 +1743,10 @@ main {
   .brandstory-container .director-type-c article .director-box img {
     height: 104vw;
     width: 117%;
-    object-fit: cover;
-    object-position: center bottom;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center bottom;
+       object-position: center bottom;
     position: relative;
     right: 12%;
     border: none !important;
@@ -1810,7 +1816,8 @@ main {
 .brandstory-container .director-type-c article .product-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .brandstory-container .director-type-c article .product-box a {
   box-sizing: border-box;
@@ -2246,7 +2253,8 @@ main {
 .brandstory-container .representative-type-b .content-wrapper .grid-img-wrapper > article video, .brandstory-container .representative-type-b .content-wrapper .grid-img-wrapper > article img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .brandstory-container .representative-type-b .content-wrapper .grid-img-wrapper > article:nth-child(even) {
   grid-template-columns: 1fr 2fr;

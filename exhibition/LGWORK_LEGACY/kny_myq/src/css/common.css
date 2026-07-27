@@ -39,6 +39,9 @@ main {
 .kny_myq_container ::-webkit-scrollbar {
   display: none;
 }
+.kny_myq_container ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .kny_myq_container ::placeholder {
   color: #d6d6d6;
 }

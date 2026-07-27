@@ -1569,4 +1569,104 @@ $mo-width: 390;
     }
   }
   /* //SIMMONS */
+
+  /* PLOTICA */
+  &.plotica {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 499px; top: 122px; 
+          a{ 
+            .txt-box{ position: absolute; top: 0px; left: -5px; text-align: right;}
+          }
+        }
+        &:nth-child(2){ left: 59px; top: 88px;
+          a{ align-items: flex-start; 
+            .txt-box{ left: -65px; top: -10px; text-align: left; }
+          }
+        }
+        &:nth-child(3){ left: 96px; top: 320px;
+          a{ flex-direction: column-reverse; gap: 4px;
+            .txt-box{ left: 120px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ padding-top: mo(5); 
+          a{
+            img{ width: mo(313); margin: 0 0 0 auto; }
+            .txt-box{ position: absolute; left: mo(30); top: mo(25);}
+          }
+        }
+        &:nth-child(2){ margin: mo(-60) 0 mo(0); left: mo(34);
+          a{ 
+            flex-direction: column-reverse; align-items: flex-start;
+
+            img{ width: mo(244); transform: translateY(-20px);}
+
+            .txt-box{ left: mo(180);}
+          }
+        }
+        &:nth-child(3){ right: mo(14); 
+          a{ flex-direction: column-reverse; align-items: flex-end;
+            img{ width: mo(245);}
+            .txt-box{ right: mo(220); text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  /* //PLOTICA */  
+
+  /* royal_copenhagen */
+  &.royal_copenhagen {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 439px; top: 156px; 
+          a{ 
+            .txt-box{ position: absolute; top: -25px; left: 100px; text-align: right;}
+          }
+        }
+        &:nth-child(2){ left: 58px; top: 46px;
+          a{ align-items: flex-start; 
+            .txt-box{ left: 0px; top: 35px; text-align: left; }
+          }
+        }
+        &:nth-child(3){ left: 86px; top: 300px;
+          a{ flex-direction: column-reverse; gap: 4px;
+            .txt-box{ left: 170px; top: 40px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ padding-top: mo(5); 
+          a{
+            img{ width: mo(338); padding-top: mo(50); margin: 0 0 0 auto;}
+            .txt-box{ position: absolute; left: mo(30); top: mo(25);}
+          }
+        }
+        &:nth-child(2){ margin:mo(30) 0 mo(38); left: mo(28);
+          a{ 
+            flex-direction: column-reverse; align-items: flex-start;
+
+            img{ width: mo(194);}
+
+            .txt-box{ left: mo(220);}
+          }
+        }
+        &:nth-child(3){ right: mo(14); 
+          a{ flex-direction: column-reverse; align-items: flex-end;
+            img{ width: mo(194);}
+            .txt-box{ right: mo(220); text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  /* //royal_copenhagen */    
 }

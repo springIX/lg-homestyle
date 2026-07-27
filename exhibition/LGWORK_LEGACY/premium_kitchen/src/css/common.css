@@ -33,6 +33,9 @@ html {
 .customer_promotion ::-webkit-scrollbar {
   display: none;
 }
+.customer_promotion ::-moz-placeholder {
+  color: #444;
+}
 .customer_promotion ::placeholder {
   color: #444;
 }
