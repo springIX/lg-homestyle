@@ -338,7 +338,7 @@
           }
         }
       }
-      a{ border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 2rem; font-size: 15px; font-weight: 600; color: #fff; padding: 10px 16rem; min-height: 48px; width: 444px; margin: 28rem auto 0; background-color: #111;
+      .square_box{ border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 2rem; font-size: 15px; font-weight: 600; color: #fff; padding: 10px 16rem; min-height: 48px; width: 444px; margin: 28rem auto 0; background-color: #111;
         @include screen("mo2") { width: 100%; margin-top: 20rem;}
         &:hover{ background-color: #373737; }
         img{ width: 20px;}
@@ -351,6 +351,17 @@
       .info_box2{ padding: 32rem 30rem;}
     
       .gallery_box{ background-color: #fff; margin-top: 60rem; padding: 20rem 0 60rem;}
+    
+      .btn_wrap{ margin-top: 20rem;
+        article{display: flex; align-items: center; @include font-size(16rem); padding-right: 24rem; border-radius: 8rem;
+          + article{ margin-top: 8rem;}
+          .banner_img{ width: 100rem;}
+          .txt_box{
+            span{ display: block; @include font-size(14rem); color: #444; margin-top: 2rem;}
+          }
+          .arr{ margin-left: auto; width: 20rem; filter: brightness(0);}
+        }
+      }
     }
   }
 }
