@@ -1650,19 +1650,19 @@ $mo-width: 390;
             .txt-box{ position: absolute; left: mo(30); top: mo(25);}
           }
         }
-        &:nth-child(2){ margin:mo(30) 0 mo(38); left: mo(28);
+        &:nth-child(2){ margin: mo(0) 0 mo(0); left: mo(28);
           a{ 
-            flex-direction: column-reverse; align-items: flex-start;
+            align-items: flex-start;
 
             img{ width: mo(194);}
 
-            .txt-box{ left: mo(220);}
+            .txt-box{ left: mo(20); top: 30px;}
           }
         }
-        &:nth-child(3){ right: mo(14); 
-          a{ flex-direction: column-reverse; align-items: flex-end;
-            img{ width: mo(194);}
-            .txt-box{ right: mo(220); text-align: right;}
+        &:nth-child(3){ right: mo(-60); 
+          a{ margin-top: mo(25);
+            img{ width: mo(194); margin: 0 0 0 auto;}
+            .txt-box{ left: mo(-305); top: mo(-20); text-align: right;}
           }
         }
       }

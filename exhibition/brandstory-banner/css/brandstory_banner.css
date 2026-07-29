@@ -2564,31 +2564,32 @@
   top: calc(25 / 390 * 100vw);
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) {
-  margin: calc(30 / 390 * 100vw) 0 calc(38 / 390 * 100vw);
+  margin: calc(0 / 390 * 100vw) 0 calc(0 / 390 * 100vw);
   left: calc(28 / 390 * 100vw);
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) a {
-  flex-direction: column-reverse;
   align-items: flex-start;
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) a img {
   width: calc(194 / 390 * 100vw);
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(2) a .txt-box {
-  left: calc(220 / 390 * 100vw);
+  left: calc(20 / 390 * 100vw);
+  top: 30px;
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) {
-  right: calc(14 / 390 * 100vw);
+  right: calc(-60 / 390 * 100vw);
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) a {
-  flex-direction: column-reverse;
-  align-items: flex-end;
+  margin-top: calc(25 / 390 * 100vw);
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) a img {
   width: calc(194 / 390 * 100vw);
+  margin: 0 0 0 auto;
 }
 .brand-story-banner-container.royal_copenhagen.mo > section:nth-child(3) a .txt-box {
-  right: calc(220 / 390 * 100vw);
+  left: calc(-305 / 390 * 100vw);
+  top: calc(-20 / 390 * 100vw);
   text-align: right;
 }
 .brand-story-banner-container {
