@@ -436,7 +436,6 @@ main {
   padding: 60px 20px;
 }
 .brandstory_container section#designer article:nth-child(even) {
-  text-align: right;
   background-color: #444;
 }
 .brandstory_container section#designer article .tit_box_ty2 h2 {

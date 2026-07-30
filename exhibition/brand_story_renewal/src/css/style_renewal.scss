@@ -221,7 +221,7 @@ main { background-color: #F9F9F9;}
     /* DESIGNER */
     &#designer{ padding: 0;
       article{ padding: 60px $pd;
-        &:nth-child(even){ text-align: right; background-color: #444;}
+        &:nth-child(even){ background-color: #444;}
 
         .tit_box_ty2 h2{ text-transform: uppercase;}
         .designer_img{ margin-top: 20px;
