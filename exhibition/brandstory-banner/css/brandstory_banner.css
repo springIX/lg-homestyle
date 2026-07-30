@@ -2594,4 +2594,161 @@
 }
 .brand-story-banner-container {
   /* //royal_copenhagen */
+  /* ago_lighting */
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(1) {
+  left: 520px;
+  top: 180px;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  text-align: right;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(2) {
+  left: 84px;
+  top: 96px;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(2) a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(2) a .txt-box {
+  left: 0px;
+  top: -15px;
+  text-align: left;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(3) {
+  left: 138px;
+  top: 311px;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  gap: 4px;
+}
+.brand-story-banner-container.ago_lighting.pc > section:nth-child(3) a .txt-box {
+  left: 140px;
+  top: 70px;
+}
+.brand-story-banner-container.ago_lighting.mo {
+  display: block;
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(1) a img {
+  width: calc(274 / 390 * 100vw);
+  left: calc(67 / 390 * 100vw);
+  top: calc(48 / 390 * 100vw);
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(53 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(2) {
+  margin-top: calc(60 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(2) a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(2) a img {
+  width: calc(190 / 390 * 100vw);
+  left: calc(33 / 390 * 100vw);
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(2) a .txt-box {
+  left: calc(50 / 390 * 100vw);
+  top: calc(20 / 390 * 100vw);
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(3) a {
+  flex-direction: column-reverse;
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(3) a img {
+  width: calc(170 / 390 * 100vw);
+  top: calc(-60 / 390 * 100vw);
+  margin: 0 calc(30 / 390 * 100vw) 0 auto;
+}
+.brand-story-banner-container.ago_lighting.mo > section:nth-child(3) a .txt-box {
+  left: calc(-100 / 390 * 100vw);
+  top: calc(10 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //ago_lighting */
+  /* tom_dixon */
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(1) {
+  left: 471px;
+  top: 165px;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 40px;
+  top: -25px;
+  text-align: right;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(2) {
+  left: 66px;
+  top: 54px;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(2) a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(2) a .txt-box {
+  left: 0px;
+  top: 25px;
+  text-align: left;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(3) {
+  left: 119px;
+  top: 311px;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(3) a {
+  flex-direction: column;
+}
+.brand-story-banner-container.tom_dixon.pc > section:nth-child(3) a .txt-box {
+  left: 120px;
+  top: -220px;
+}
+.brand-story-banner-container.tom_dixon.mo {
+  display: block;
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(1) a img {
+  width: calc(282 / 390 * 100vw);
+  left: calc(79 / 390 * 100vw);
+  top: calc(35 / 390 * 100vw);
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(53 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(2) {
+  margin-top: calc(60 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(2) a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(2) a img {
+  width: calc(162 / 390 * 100vw);
+  left: calc(33 / 390 * 100vw);
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(2) a .txt-box {
+  left: calc(60 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(3) a {
+  flex-direction: column-reverse;
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(3) a img {
+  width: calc(170 / 390 * 100vw);
+  top: calc(-20 / 390 * 100vw);
+  margin: 0 calc(30 / 390 * 100vw) 0 auto;
+}
+.brand-story-banner-container.tom_dixon.mo > section:nth-child(3) a .txt-box {
+  left: calc(-80 / 390 * 100vw);
+  top: calc(50 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //tom_dixon */
 }

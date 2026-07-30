@@ -1669,4 +1669,105 @@ $mo-width: 390;
     }
   }
   /* //royal_copenhagen */    
+
+  /* ago_lighting */
+  &.ago_lighting {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 520px; top: 180px; 
+          a{ 
+            .txt-box{ position: absolute; left: 10px; top: -10px; text-align: right;}
+          }
+        }
+        &:nth-child(2){ left: 84px; top: 96px;
+          a{ align-items: flex-start; 
+            .txt-box{ left: 0px; top: -15px; text-align: left; }
+          }
+        }
+        &:nth-child(3){ left: 138px; top: 311px;
+          a{ flex-direction: column-reverse; gap: 4px;
+            .txt-box{ left: 140px; top: 70px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ 
+          a{
+            img{ width: mo(274); left: mo(67); top: mo(48); }
+            .txt-box{ position: absolute; left: mo(53); top: mo(40);}
+          }
+        }
+        &:nth-child(2){ margin-top: mo(60); top: mo(0);
+          a{ 
+            align-items: flex-start;
+
+            img{ width: mo(190); left: mo(33);}
+
+            .txt-box{ left: mo(50); top: mo(20);}
+          }
+        }
+        &:nth-child(3){ 
+          a{ flex-direction: column-reverse; 
+            img{ width: mo(170); top: mo(-60); margin: 0 mo(30) 0 auto; }
+            .txt-box{ left: mo(-100); top: mo(10); text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  /* //ago_lighting */  
+
+  /* tom_dixon */
+  &.tom_dixon {
+    &.pc{
+      > section{
+        &:nth-child(1){ left: 471px; top: 165px; 
+          a{ 
+            .txt-box{ position: absolute; left: 40px; top: -25px; text-align: right;}
+          }
+        }
+        &:nth-child(2){ left: 66px; top: 54px;
+          a{ align-items: flex-start; 
+            .txt-box{ left: 0px; top: 25px; text-align: left; }
+          }
+        }
+        &:nth-child(3){ left: 119px; top: 311px;
+          a{ flex-direction: column;
+            .txt-box{ left: 120px; top: -220px;}
+          }
+        }
+      }
+    }
+
+    &.mo{ display: block;
+      > section{
+        &:nth-child(1){ 
+          a{
+            img{ width: mo(282); left: mo(79); top: mo(35);}
+            .txt-box{ position: absolute; left: mo(53); top: mo(40);}
+          }
+        }
+        &:nth-child(2){ margin-top: mo(60); top: mo(0);
+          a{ 
+            align-items: flex-start;
+
+            img{ width: mo(162); left: mo(33);}
+
+            .txt-box{ left: mo(60); top: mo(40);}
+          }
+        }
+        &:nth-child(3){ 
+          a{ flex-direction: column-reverse; 
+            img{ width: mo(170); top: mo(-20); margin: 0 mo(30) 0 auto; }
+            .txt-box{ left: mo(-80); top: mo(50); text-align: right;}
+          }
+        }
+      }
+    }
+  }
+  /* //tom_dixon */ 
+
 }
