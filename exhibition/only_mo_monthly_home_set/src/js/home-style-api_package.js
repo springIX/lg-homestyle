@@ -592,8 +592,9 @@
       const hasHowToApply = document.querySelector('#how_to_apply .swiper'); // ✅ 추가
       const hasAiHomeStyling = document.querySelector('#ai_home_styling .swiper'); // ✅ 추가
       const hasHowToBuy = document.querySelector('#how_to_buy .swiper'); // ✅ 추가
+      const hasBrandCollection = document.querySelector('#premium_brand_collection .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection) return;
 
       swiperInited = true;
 
@@ -756,6 +757,19 @@
           slidesPerView: 1,
           scrollbar: {
             el: '#how_to_buy .scr_bar',
+            draggable: true,
+          },
+        });
+      }
+
+      // 6) How to buy
+      if (hasBrandCollection) {
+        new Swiper('#premium_brand_collection .swiper', {
+          speed: 800,
+          spaceBetween: remToPx(10),
+          slidesPerView: 1.05,
+          scrollbar: {
+            el: '#premium_brand_collection .scr_bar',
             draggable: true,
           },
         });
