@@ -27,7 +27,7 @@ $mo-width: 390;
   > section{ width: max-content; position: absolute;
     &.reverse a{ flex-direction: row-reverse; text-align: right;}
     a{ display: flex; align-items: center;
-      img{ mix-blend-mode: multiply; position: relative; flex-shrink: 0;}
+      img{ position: relative; flex-shrink: 0;}
       .txt-box{ position: relative; line-height: 1.4; white-space: nowrap;
         > *{ display: block;}
         .txt1{color: #727780; font-size: 12px; font-weight: 400;}

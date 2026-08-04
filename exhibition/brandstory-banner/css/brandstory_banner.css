@@ -22,7 +22,6 @@
   text-decoration: none;
 }
 .brand-story-banner-container > section {
-  width: -moz-max-content;
   width: max-content;
   position: absolute;
 }
@@ -35,7 +34,6 @@
   align-items: center;
 }
 .brand-story-banner-container > section a img {
-  mix-blend-mode: multiply;
   position: relative;
   flex-shrink: 0;
 }
@@ -1109,8 +1107,7 @@
 .brand-story-banner-container.ligne_roset.pc > section:nth-child(3) a img {
   width: 363px;
   height: 223px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .brand-story-banner-container.ligne_roset.pc > section:nth-child(3) a .txt-box {
   margin-left: -10px;
@@ -1297,7 +1294,6 @@
   mix-blend-mode: darken;
 }
 .brand-story-banner-container.human_scale.mo > section:nth-child(3) a .txt-box {
-  width: -moz-max-content;
   width: max-content;
   display: block;
   margin: 0 0 8px auto;
