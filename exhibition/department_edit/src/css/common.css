@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1.3px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.department_edit {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Pretendard", sans-serif;
+  font-size: 13rem;
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.2px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.department_edit ::-webkit-scrollbar {
+  display: none;
+}
+.department_edit ::placeholder {
+  color: #d6d6d6;
+}
+.department_edit * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.department_edit h1,
+.department_edit h2,
+.department_edit h3,
+.department_edit h4,
+.department_edit h5,
+.department_edit h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.department_edit table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.department_edit ol,
+.department_edit ul {
+  list-style: none;
+}
+.department_edit a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.department_edit button,
+.department_edit input,
+.department_edit select,
+.department_edit textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.department_edit input[type=checkbox], .department_edit input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.department_edit label {
+  cursor: pointer;
+}
+.department_edit img,
+.department_edit video,
+.department_edit svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.department_edit option {
+  color: inherit;
+}
+.department_edit section {
+  position: relative;
+}
+.department_edit picture {
+  display: block;
+  width: 100%;
+}
+.department_edit span {
+  display: block;
+}
