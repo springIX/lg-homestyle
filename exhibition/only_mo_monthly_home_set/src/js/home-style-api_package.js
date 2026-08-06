@@ -567,10 +567,24 @@
         // 컨텐츠 on (직속자식 index 매칭)
         $contWrap.children().removeClass('on').eq(idx).addClass('on');
       });
-      $(document).off('click.dataToggle').on('click.dataToggle', '[data-toggle]', function (e) {
-        e.preventDefault();
-        $(this).toggleClass('on');
-      });
+
+      $(document)
+        .off('click.dataToggle')
+        .on('click.dataToggle', '[data-toggle]', function (e) {
+          e.preventDefault();
+
+          const $this = $(this);
+          const key = $this.attr('data-toggle');
+
+          // 자기 자신 토글
+          $this.toggleClass('on');
+
+          // 값이 있으면 연결된 컨텐츠도 동일하게 토글
+          if (key) {
+            $('[data-toggle-cont="' + key + '"]')
+              .toggleClass('on', $this.hasClass('on'));
+          }
+        });
     }
 
 
@@ -656,7 +670,7 @@
           },
         });
 
-        $(document).off('click.tabMo').on('click.tabMo', '.home_set_tab.mo button', function (e) {
+        $(document).off('click.tabMo').on('click.tabMo', '.home_set_tab button', function (e) {
           e.preventDefault();
           const $btn = $(this);
           const idx = $btn.index();
@@ -665,7 +679,7 @@
         });
 
         swiperBenefits.on('slideChange', function () {
-          $('.home_set_tab.mo button').eq(swiperBenefits.activeIndex).addClass('on').siblings().removeClass('on');
+          $('.home_set_tab button').eq(swiperBenefits.activeIndex).addClass('on').siblings().removeClass('on');
         });
       }
 

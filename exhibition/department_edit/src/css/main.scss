@@ -1,0 +1,103 @@
+@import "var";
+
+.department_edit{ 
+  
+  /* GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  @at-root .PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img{ max-width: unset;}
+  abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, samp, section, small, strike, summary, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, ul, var, video{ color: inherit; line-height: 1.4; font-size: inherit;}
+  /* //GENERAL GENERAL GENERAL GENERAL GENERAL GENERAL */
+  
+  /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  .inner{ width: 100%; position: relative;}
+  .f_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .p_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cover{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex_btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .blind { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0;}
+
+  @include screen("pc") {
+    .mo{ display: none !important;}
+  }
+  @include screen("mo") {
+    .pc{ display: none !important;}
+  }
+  .pd_btm{padding-bottom: 60rem;}
+  .tit{ text-align: center; margin-bottom: 28rem;
+    h2{ @include font-size(26rem); font-weight: 700;}
+    p{ @include font-size(15rem); color: #444; margin-top: 2rem;}
+  }
+  .btn{ width: 100%; height: 48rem; line-height: 48rem; background-color: #111; border-radius: 8rem; color: #fff; text-align: center; font-weight: 600; @include font-size(15rem);}
+  /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
+  
+  section{ position: relative; overflow: hidden; padding: 60rem $layout_pd 0;
+    &.navigation_tab { padding: 0; position: sticky; top: 0; background-color: #111111; color: #fff; font-size: 14rem; white-space: nowrap; font-weight: 400; z-index: 5; margin-bottom: -1px;
+      @include screen("mo") { top: 56px;}
+      nav{
+        ul{ display: flex; gap: 30rem; justify-content: flex-start; overflow-x: auto; scroll-behavior: smooth; padding: 0 20rem;
+          li{ padding:  14rem 0 12rem; border-bottom: 2px solid transparent;
+            &.on{ color: $ci;
+              border-bottom-color: $ci;
+            }
+          }
+        }
+      }
+    }
+
+    &#key_visual{ padding: 0;}
+    
+    &#introduce{ background-color: #000; color: #fff; padding: 40rem $layout_pd; text-align: center;
+      h2{ @include font-size(26rem); font-weight: 700;}
+      p{ margin-top: 8rem; @include font-size(16rem); color: #ddd;}
+    }
+
+    &.product_pavilion{
+      .floor_tag{ position: relative;
+        span{ font-weight: 600; color: #444; @include font-size(11rem);}
+      }
+      .tit_box{ text-align: center; margin: 10rem 0 28rem;
+        h2{ font-weight: 700; @include font-size(26rem);}
+        p{ @include font-size(15rem); color: #444; margin-top: 2rem;}
+      }
+      .home_set_tab{ display: flex; gap: 8rem; margin-bottom: 12rem; justify-content: center;
+        @include screen("mo") { flex-wrap: wrap; justify-content: flex-start; padding:0 20rem; overflow-x: auto;}
+        button{ padding: 8rem 14rem; background-color: #fff; border-radius: 999rem; color: #666; transition: .3s ease; border: 1px solid #ddd; white-space: nowrap;
+          &.on{ background-color: #111; color: #fff;}
+        }
+      }
+      .pd_list{
+        .c-product{
+          &:not(.on){ display: none;}
+        }
+      }
+    }
+  }
+}
