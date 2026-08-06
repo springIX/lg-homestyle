@@ -1,0 +1,359 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+html {
+  height: 100%;
+  font-size: 1.3px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+/* fag 시작 */
+.faq-page {
+  background-color: #ffffff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 13rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: 0;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 64px 40px 120px;
+}
+@media (max-width: 780px) {
+  .faq-page {
+    padding: 32px 16px;
+  }
+}
+.faq-page ::-webkit-scrollbar {
+  display: none;
+}
+.faq-page ::-moz-placeholder {
+  color: #d6d6d6;
+}
+.faq-page ::placeholder {
+  color: #d6d6d6;
+}
+.faq-page {
+  /* 공통 */
+}
+.faq-page * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.faq-page h1,
+.faq-page h2,
+.faq-page h3,
+.faq-page h4,
+.faq-page h5,
+.faq-page h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.faq-page table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.faq-page ol,
+.faq-page ul {
+  list-style: none;
+}
+.faq-page a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.faq-page button,
+.faq-page input,
+.faq-page select,
+.faq-page textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.faq-page input[type=checkbox], .faq-page input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.faq-page label {
+  cursor: pointer;
+}
+.faq-page img,
+.faq-page video,
+.faq-page svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.faq-page option {
+  color: inherit;
+}
+.faq-page section {
+  position: relative;
+}
+.faq-page picture {
+  display: block;
+  width: 100%;
+}
+.faq-page span {
+  display: block;
+}
+.PcPdpExhibitionDetailView_bannerArea__btHpF .combined_discount img {
+  max-width: unset;
+}
+
+.faq-page abbr, .faq-page acronym, .faq-page address, .faq-page applet, .faq-page article, .faq-page aside, .faq-page audio, .faq-page big, .faq-page blockquote, .faq-page body, .faq-page canvas, .faq-page caption, .faq-page center, .faq-page cite, .faq-page code, .faq-page dd, .faq-page details, .faq-page dfn, .faq-page div, .faq-page dl, .faq-page dt, .faq-page embed, .faq-page fieldset, .faq-page figcaption, .faq-page figure, .faq-page footer, .faq-page form, .faq-page h1, .faq-page h2, .faq-page h3, .faq-page h4, .faq-page h5, .faq-page h6, .faq-page header, .faq-page hgroup, .faq-page html, .faq-page iframe, .faq-page img, .faq-page ins, .faq-page kbd, .faq-page label, .faq-page legend, .faq-page li, .faq-page mark, .faq-page menu, .faq-page nav, .faq-page object, .faq-page ol, .faq-page output, .faq-page p, .faq-page pre, .faq-page q, .faq-page ruby, .faq-page samp, .faq-page section, .faq-page small, .faq-page strike, .faq-page summary, .faq-page table, .faq-page tbody, .faq-page td, .faq-page textarea, .faq-page tfoot, .faq-page th, .faq-page thead, .faq-page time, .faq-page tr, .faq-page tt, .faq-page ul, .faq-page var, .faq-page video {
+  color: inherit;
+  line-height: 1.4;
+  font-size: inherit;
+}
+.faq-page .faq-post .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.faq-page .faq-post__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+.faq-page .faq-post__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  padding-right: 40px;
+  line-height: 1.4;
+}
+.faq-page .faq-post .share-tooltip {
+  position: relative;
+}
+.faq-page .faq-post .share-tooltip__toggle {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/icon_share_new.svg") no-repeat 50% 50%/100%;
+  border: none;
+  cursor: pointer;
+}
+.faq-page .faq-post .share-tooltip__panel {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 220px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.faq-page .faq-post .share-tooltip__panel[hidden] {
+  display: none;
+}
+.faq-page .faq-post .share-tooltip__title {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.faq-page .faq-post .share-tooltip__list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.faq-page .faq-post .share-tooltip__btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #f5f4f1;
+}
+.faq-page .faq-post .share-tooltip__btn--facebook {
+  background-image: url("../images/fb.svg");
+}
+.faq-page .faq-post .share-tooltip__btn--kakao {
+  background-image: url("../images/kakao.svg");
+}
+.faq-page .faq-post .share-tooltip__btn--url {
+  background-image: url("../images/url.svg");
+}
+.faq-page .faq-post .share-tooltip__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url("../images/close.svg") no-repeat center/contain;
+  cursor: pointer;
+}
+.faq-page .faq-post__body .faq-section {
+  margin-bottom: 40px;
+}
+.faq-page .faq-post__body .faq-section__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  padding-left: 12px;
+  border-left: 4px solid #c4262e;
+}
+.faq-page .faq-post__body .faq-section__text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+.faq-page .faq-post__body .faq-list {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.faq-page .faq-post__body .faq-list__item {
+  position: relative;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+.faq-page .faq-post__body .faq-list__item:last-child {
+  margin-bottom: 0;
+}
+.faq-page .faq-post__body .faq-list__item::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #c4262e;
+  font-weight: 700;
+}
+.faq-page .faq-post__body .table-responsive {
+  overflow-x: auto;
+}
+.faq-page .faq-post__body .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+  min-width: 600px;
+}
+.faq-page .faq-post__body .data-table th, .faq-page .faq-post__body .data-table td {
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 780px) {
+  .faq-page .faq-post__body .data-table th, .faq-page .faq-post__body .data-table td {
+    text-align: left;
+  }
+}
+.faq-page .faq-post__body .data-table thead th {
+  background: #f5f4f1;
+  font-weight: 700;
+  color: #1a1a1a;
+  border-bottom: 2px solid #ddd;
+}
+.faq-page .faq-post__body .data-table__col-term {
+  width: 120px;
+  white-space: nowrap;
+}
+.faq-page .faq-post__body .data-table__cell-nowrap {
+  white-space: nowrap;
+}
+.faq-page .faq-post__body .data-table tbody th {
+  font-weight: 400;
+}
+.faq-page .faq-post__body .data-table tbody .data-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.faq-page .faq-post__body .data-table tbody .data-list__item {
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+.faq-page .faq-post__body .data-table tbody .data-list__item:last-child {
+  margin-bottom: 0;
+}
+.faq-page .faq-post__body .data-table tbody .data-list__item::before {
+  content: "·";
+  display: inline-block;
+  margin-right: 4px;
+  color: #000000;
+  font-weight: 700;
+}
+.faq-page .faq-post__body .text-link {
+  color: #c4262e;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.faq-page .faq-post__body .text-link:hover {
+  text-decoration: none;
+}
+.faq-page .faq-post .faq-nav {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 40px;
+}
+.faq-page .faq-post .faq-nav__link {
+  display: flex;
+  padding: 16px 8px;
+  text-decoration: none;
+  color: #333;
+}
+.faq-page .faq-post .faq-nav__link:hover {
+  background-color: #f9f9f9;
+}
+.faq-page .faq-post .faq-nav__link--next {
+  border-top: 1px solid #eee;
+}
+.faq-page .faq-post .faq-nav__label {
+  font-weight: 700;
+  min-width: 80px;
+  color: #1a1a1a;
+}
+
+/* //fag 끝 */
