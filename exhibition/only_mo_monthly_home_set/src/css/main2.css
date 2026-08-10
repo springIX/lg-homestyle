@@ -2630,6 +2630,11 @@
   gap: 16rem 30rem;
   text-align: center;
 }
+@media (max-width: 780px) {
+  .monthly_home_set.combined_discount section#view_all_brands .brand_list ul {
+    gap: 12rem 30rem;
+  }
+}
 .monthly_home_set.combined_discount section#view_all_brands .brand_list ul.on li:nth-child(n+13) {
   display: block;
 }
@@ -2641,6 +2646,12 @@
   color: #666;
   margin-top: 6rem;
   min-height: 51rem;
+}
+@media (max-width: 780px) {
+  .monthly_home_set.combined_discount section#view_all_brands .brand_list ul li p {
+    font-size: 14rem;
+    min-height: 36rem;
+  }
 }
 .monthly_home_set.combined_discount section#view_all_brands .brand_list .home_set_btn {
   border-color: #111;

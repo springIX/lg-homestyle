@@ -1082,10 +1082,13 @@
       &#view_all_brands{ background-color: #F6F6F6;
         .brand_list{
           ul{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 16rem 30rem; text-align: center; 
+            @include screen("mo2") { gap: 12rem 30rem;}
             &.on li:nth-child(n+13){ display: block;}
             li{
               &:nth-child(n+13){ display: none;}
-              p{font-weight: 600; color: #666; margin-top: 6rem; min-height: 51rem;}
+              p{font-weight: 600; color: #666; margin-top: 6rem; min-height: 51rem;
+                @include screen("mo2") { font-size: 14rem; min-height: 36rem;}
+              }
             }
           }
           .home_set_btn{ border-color: #111;
