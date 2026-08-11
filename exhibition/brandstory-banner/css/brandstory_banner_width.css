@@ -22,6 +22,7 @@
   text-decoration: none;
 }
 .brand-story-banner-container > section {
+  width: -moz-max-content;
   width: max-content;
   position: absolute;
 }

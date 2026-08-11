@@ -30,8 +30,9 @@ html {
   text-align: left;
   letter-spacing: 0;
   max-width: 1460px;
-  margin: 0 auto;
-  padding: 64px 40px 120px;
+  padding: 8px 0px 20px 0;
+  /* margin: 0 auto; */
+  /* padding: 64px 40px 120px; */
 }
 @media (max-width: 780px) {
   .faq-page {
@@ -145,21 +146,13 @@ html {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.faq-page .faq-post__header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 2px solid #1a1a1a;
-  padding-bottom: 20px;
-  margin-bottom: 32px;
-}
 .faq-page .faq-post__title {
   font-size: 22px;
   font-weight: 700;
   color: #1a1a1a;
-  margin: 0;
-  padding-right: 40px;
+  margin: 0 0 28px;
+  padding-left: 12px;
+  border-left: 4px solid #C4262E;
   line-height: 1.4;
 }
 .faq-page .faq-post .share-tooltip {
@@ -229,6 +222,9 @@ html {
 }
 .faq-page .faq-post__body .faq-section {
   margin-bottom: 40px;
+}
+.faq-page .faq-post__body .faq-section:last-child {
+  margin-bottom: 0;
 }
 .faq-page .faq-post__body .faq-section__title {
   font-size: 17px;

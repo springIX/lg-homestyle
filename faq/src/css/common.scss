@@ -27,8 +27,9 @@ html {
   text-align: left;
   letter-spacing: 0;
   max-width: 1460px;
-  margin: 0 auto;
-  padding: 64px 40px 120px; 
+  padding: 8px 0px 20px 0;
+    /* margin: 0 auto; */
+  /* padding: 64px 40px 120px; */
 
   @include screen("mo") {
     padding: 32px 16px;
@@ -126,20 +127,14 @@ html {
 
     // 헤더 영역
     &__header {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border-bottom: 2px solid #1a1a1a;
-      padding-bottom: 20px;
-      margin-bottom: 32px;
     }
     &__title {
       font-size: 22px;
       font-weight: 700;
       color: #1a1a1a;
-      margin: 0;
-      padding-right: 40px;
+      margin: 0 0 28px;
+      padding-left: 12px;
+      border-left: 4px solid #C4262E;
       line-height: 1.4;
     }
 
@@ -218,6 +213,10 @@ html {
       // 핵심요약
       .faq-section {
         margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         &__title {
           font-size: 17px;
