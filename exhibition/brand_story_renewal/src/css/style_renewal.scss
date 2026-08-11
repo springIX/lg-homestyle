@@ -245,4 +245,11 @@ main { background-color: #F9F9F9;}
 
   }
   /* //CONTENTS */
+
+  /* 브랜드 별 스타일링 */
+  &.foppapedretti{
+    #key_visual{
+      .kv_tit h1{ font-size: clamp(10px, 14.7vw, 60px); white-space: nowrap;}
+    }
+  }
 }

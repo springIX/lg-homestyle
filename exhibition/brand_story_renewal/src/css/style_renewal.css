@@ -482,4 +482,9 @@ main {
 }
 .brandstory_container {
   /* //CONTENTS */
+  /* 브랜드 별 스타일링 */
+}
+.brandstory_container.foppapedretti #key_visual .kv_tit h1 {
+  font-size: clamp(10px, 14.7vw, 60px);
+  white-space: nowrap;
 }

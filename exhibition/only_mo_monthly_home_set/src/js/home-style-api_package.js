@@ -326,7 +326,8 @@
     #isSoldOut(data) {
       return (
         data.soldOutYn === 'Y' ||
-        data.status === 'TEMPORARILY_OUT_OF_STOCK'
+        data.status === 'TEMPORARILY_OUT_OF_STOCK' ||
+        data.status === 'ENDED'
       );
     }
 

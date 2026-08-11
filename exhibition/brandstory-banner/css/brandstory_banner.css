@@ -2681,7 +2681,6 @@
   position: absolute;
   left: 6px;
   top: 5px;
-  width: 143px;
   text-align: right;
 }
 .brand-story-banner-container.engmodun.pc > section:nth-child(2) {
@@ -2695,7 +2694,6 @@
   position: absolute;
   left: 230px;
   top: 21px;
-  width: 169px;
 }
 .brand-story-banner-container.engmodun.pc > section:nth-child(3) {
   left: 80px;
@@ -2708,61 +2706,49 @@
   position: absolute;
   left: 255px;
   top: 10px;
-  width: 155px;
 }
 .brand-story-banner-container.engmodun.mo {
   min-height: calc(740 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  align-items: flex-start;
 }
-.brand-story-banner-container.engmodun.mo > section:nth-child(1) {
-  height: calc(316 / 390 * 100vw);
+.brand-story-banner-container.engmodun.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(1) a img {
-  position: absolute;
-  left: calc(74 / 390 * 100vw);
-  top: calc(40 / 390 * 100vw);
   width: calc(286 / 390 * 100vw);
+  right: calc(30 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(1) a .txt-box {
   position: absolute;
   left: calc(53 / 390 * 100vw);
   top: calc(40 / 390 * 100vw);
-  width: calc(213 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(2) {
-  height: calc(192 / 390 * 100vw);
+  margin: calc(30 / 390 * 100vw) 0 calc(4 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(2) a img {
-  position: absolute;
+  width: calc(188 / 390 * 100vw);
   left: calc(49 / 390 * 100vw);
   top: calc(18 / 390 * 100vw);
-  width: calc(188 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(2) a .txt-box {
-  position: absolute;
-  left: calc(220 / 390 * 100vw);
+  margin-left: calc(32 / 390 * 100vw);
   top: calc(22 / 390 * 100vw);
-  width: calc(143 / 390 * 100vw);
 }
-.brand-story-banner-container.engmodun.mo > section:nth-child(3) {
-  height: calc(232 / 390 * 100vw);
+.brand-story-banner-container.engmodun.mo > section:nth-child(3) a {
+  flex-direction: column-reverse;
+  gap: calc(4 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(3) a img {
-  position: absolute;
-  left: calc(114 / 390 * 100vw);
-  top: calc(31 / 390 * 100vw);
   width: calc(220 / 390 * 100vw);
+  margin-left: calc(114 / 390 * 100vw);
 }
 .brand-story-banner-container.engmodun.mo > section:nth-child(3) a .txt-box {
-  position: absolute;
-  left: calc(14 / 390 * 100vw);
-  top: calc(26 / 390 * 100vw);
-  width: calc(138 / 390 * 100vw);
+  margin-left: calc(14 / 390 * 100vw);
   text-align: right;
 }
 .brand-story-banner-container.foppapedretti.pc > section:nth-child(1) {
@@ -2776,7 +2762,6 @@
   position: absolute;
   left: 64px;
   top: -50px;
-  width: 196px;
   text-align: right;
 }
 .brand-story-banner-container.foppapedretti.pc > section:nth-child(2) {
@@ -2790,7 +2775,6 @@
   position: absolute;
   left: 229px;
   top: 13px;
-  width: 169px;
 }
 .brand-story-banner-container.foppapedretti.pc > section:nth-child(3) {
   left: 74px;
@@ -2803,60 +2787,49 @@
   position: absolute;
   left: 223px;
   top: 10px;
-  width: 155px;
 }
 .brand-story-banner-container.foppapedretti.mo {
   min-height: calc(753 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  align-items: flex-start;
 }
-.brand-story-banner-container.foppapedretti.mo > section:nth-child(1) {
-  height: calc(392 / 390 * 100vw);
+.brand-story-banner-container.foppapedretti.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(1) a img {
-  position: absolute;
-  left: calc(42 / 390 * 100vw);
-  top: calc(86 / 390 * 100vw);
   width: calc(320 / 390 * 100vw);
+  right: calc(28 / 390 * 100vw);
+  top: calc(86 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(1) a .txt-box {
   position: absolute;
   left: calc(53 / 390 * 100vw);
   top: calc(35 / 390 * 100vw);
-  width: calc(213 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(2) {
-  height: calc(192 / 390 * 100vw);
+  margin: calc(72 / 390 * 100vw) 0 calc(30 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(2) a img {
-  position: absolute;
+  width: calc(162 / 390 * 100vw);
   left: calc(33 / 390 * 100vw);
   top: calc(8 / 390 * 100vw);
-  width: calc(162 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(2) a .txt-box {
-  position: absolute;
-  left: calc(215 / 390 * 100vw);
+  margin-left: calc(53 / 390 * 100vw);
   top: calc(45 / 390 * 100vw);
-  width: calc(143 / 390 * 100vw);
 }
-.brand-story-banner-container.foppapedretti.mo > section:nth-child(3) {
-  height: calc(169 / 390 * 100vw);
+.brand-story-banner-container.foppapedretti.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+  gap: calc(5 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(3) a img {
-  position: absolute;
-  left: calc(197 / 390 * 100vw);
-  top: calc(-5 / 390 * 100vw);
   width: calc(166 / 390 * 100vw);
+  margin-right: calc(27 / 390 * 100vw);
+  top: calc(-5 / 390 * 100vw);
 }
 .brand-story-banner-container.foppapedretti.mo > section:nth-child(3) a .txt-box {
-  position: absolute;
-  left: calc(28 / 390 * 100vw);
   top: calc(46 / 390 * 100vw);
-  width: calc(164 / 390 * 100vw);
   text-align: right;
 }
