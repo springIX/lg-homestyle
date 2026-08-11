@@ -282,12 +282,7 @@ html {
           text-align: center;
           font-size: 14px;
           color: #333;
-          border-bottom: 1px solid #eee;
-
-          @include screen("mo") {
-            text-align: left;
-          }          
-
+          border-bottom: 1px solid #eee;       
         }
 
         thead th {

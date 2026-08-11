@@ -279,11 +279,6 @@ html {
   color: #333;
   border-bottom: 1px solid #eee;
 }
-@media (max-width: 780px) {
-  .faq-page .faq-post__body .data-table th, .faq-page .faq-post__body .data-table td {
-    text-align: left;
-  }
-}
 .faq-page .faq-post__body .data-table thead th {
   background: #f5f4f1;
   font-weight: 700;
