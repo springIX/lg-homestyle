@@ -1777,19 +1777,19 @@ $mo-width: 390;
         &:nth-child(1) { left: 465px; top: 131px;
           a {
             img { width: 406px; }
-            .txt-box { position: absolute; left: 6px; top: 5px; width: 143px; text-align: right; }
+            .txt-box { position: absolute; left: 6px; top: 5px; text-align: right; }
           }
         }
         &:nth-child(2) { left: 80px; top: 61px;
           a {
             img { width: 230px; }
-            .txt-box { position: absolute; left: 230px; top: 21px; width: 169px; }
+            .txt-box { position: absolute; left: 230px; top: 21px; }
           }
         }
         &:nth-child(3) { left: 80px; top: 308px;
           a {
             img { width: 270px; }
-            .txt-box { position: absolute; left: 255px; top: 10px; width: 155px; }
+            .txt-box { position: absolute; left: 255px; top: 10px; }
           }
         }
       }
@@ -1797,23 +1797,23 @@ $mo-width: 390;
 
     &.mo { min-height: mo(740);
       > section {
-        a { display: block; width: 100%; height: 100%; position: relative; }
-        &:nth-child(1) { height: mo(316);
-          a {
-            img { position: absolute; left: mo(74); top: mo(40); width: mo(286); }
-            .txt-box { position: absolute; left: mo(53); top: mo(40); width: mo(213); }
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(286); right: mo(30); top: mo(40); }
+            .txt-box { position: absolute; left: mo(53); top: mo(40); }
           }
         }
-        &:nth-child(2) { height: mo(192);
+        &:nth-child(2) { margin: mo(30) 0 mo(4);
           a {
-            img { position: absolute; left: mo(49); top: mo(18); width: mo(188); }
-            .txt-box { position: absolute; left: mo(220); top: mo(22); width: mo(143); }
+            img { width: mo(188); left: mo(49); top: mo(18); }
+            .txt-box { margin-left: mo(32); top: mo(22); }
           }
         }
-        &:nth-child(3) { height: mo(232);
-          a {
-            img { position: absolute; left: mo(114); top: mo(31); width: mo(220); }
-            .txt-box { position: absolute; left: mo(14); top: mo(26); width: mo(138); text-align: right; }
+        &:nth-child(3) {
+          a { flex-direction: column-reverse; gap: mo(4);
+            img { width: mo(220); margin-left: mo(114); }
+            .txt-box { margin-left: mo(14); text-align: right; }
           }
         }
       }
@@ -1828,19 +1828,19 @@ $mo-width: 390;
         &:nth-child(1) { left: 466px; top: 166px;
           a {
             img { width: 404px; }
-            .txt-box { position: absolute; left: 64px; top: -50px; width: 196px; text-align: right; }
+            .txt-box { position: absolute; left: 64px; top: -50px; text-align: right; }
           }
         }
         &:nth-child(2) { left: 68px; top: 63px;
           a {
             img { width: 206px; }
-            .txt-box { position: absolute; left: 229px; top: 13px; width: 169px; }
+            .txt-box { position: absolute; left: 229px; top: 13px; }
           }
         }
         &:nth-child(3) { left: 74px; top: 300px;
           a {
             img { width: 240px; }
-            .txt-box { position: absolute; left: 223px; top: 10px; width: 155px; }
+            .txt-box { position: absolute; left: 223px; top: 10px; }
           }
         }
       }
@@ -1848,23 +1848,23 @@ $mo-width: 390;
 
     &.mo { min-height: mo(753);
       > section {
-        a { display: block; width: 100%; height: 100%; position: relative; }
-        &:nth-child(1) { height: mo(392);
-          a {
-            img { position: absolute; left: mo(42); top: mo(86); width: mo(320); }
-            .txt-box { position: absolute; left: mo(53); top: mo(35); width: mo(213); }
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(320); right: mo(28); top: mo(86); }
+            .txt-box { position: absolute; left: mo(53); top: mo(35); }
           }
         }
-        &:nth-child(2) { height: mo(192);
+        &:nth-child(2) { margin: mo(72) 0 mo(30);
           a {
-            img { position: absolute; left: mo(33); top: mo(8); width: mo(162); }
-            .txt-box { position: absolute; left: mo(215); top: mo(45); width: mo(143); }
+            img { width: mo(162); left: mo(33); top: mo(8); }
+            .txt-box { margin-left: mo(53); top: mo(45); }
           }
         }
-        &:nth-child(3) { height: mo(169);
-          a {
-            img { position: absolute; left: mo(197); top: mo(-5); width: mo(166); }
-            .txt-box { position: absolute; left: mo(28); top: mo(46); width: mo(164); text-align: right; }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; gap: mo(5);
+            img { width: mo(166); margin-right: mo(27); top: mo(-5); }
+            .txt-box { top: mo(46); text-align: right; }
           }
         }
       }
