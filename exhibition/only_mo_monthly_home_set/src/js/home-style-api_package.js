@@ -90,7 +90,7 @@
       SOLD_OUT: 'c-product__item--sold-out',
     };
 
-    #useMockData = false;
+    #useMockData = false; /*G25070000656, G25070005743, G25070001706*/
     #productDataMap = new Map();
 
     constructor() {

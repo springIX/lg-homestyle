@@ -63,8 +63,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .flex {
   display: flex;
@@ -337,6 +336,12 @@
     top: -1rem;
   }
 }
+.monthly_home_set .notice_box .notice_cont ul li.ty_2dep {
+  padding-left: 10rem;
+}
+.monthly_home_set .notice_box .notice_cont ul li.ty_2dep::before {
+  display: none;
+}
 .monthly_home_set .notice_box.on button::after {
   transform: rotate(225deg) translate(-5rem, 5rem);
 }
@@ -374,6 +379,9 @@
   .monthly_home_set .pd_b {
     padding-bottom: 60rem;
   }
+}
+.monthly_home_set .mt_0 {
+  margin-top: 0 !important;
 }
 .monthly_home_set .cont_bg {
   background-color: #DCD3C6;
@@ -464,6 +472,9 @@
   display: inline-block;
   width: 20rem;
   transform: rotate(180deg);
+}
+.monthly_home_set .home_set_btn .arr.ty_2 {
+  transform: rotate(180deg) translate(3rem, -4rem);
 }
 .monthly_home_set .home_set_tab {
   display: flex;
@@ -759,8 +770,7 @@
 .monthly_home_set .c-product__list.ty_row .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .c-product__list.ty_row .c-product__item .c-product__info-container {
   padding: 0 0 0 8rem;
@@ -1159,6 +1169,12 @@
   .monthly_home_set section#benefits .benefits_coupon .coupon_box button + *, .monthly_home_set section#benefits .benefits_coupon .coupon_box a + * {
     margin-top: 8rem;
   }
+}
+.monthly_home_set section#benefits .benefits_info.ty_whtie {
+  background-color: #fff;
+}
+.monthly_home_set section#benefits .benefits_info.ty_whtie .swiper ul li {
+  background-color: #f6f6f6;
 }
 @media (min-width: 0px) {
   .monthly_home_set section#benefits .benefits_info .swiper {
@@ -1721,7 +1737,6 @@
   padding: 8rem 20rem;
   border: 1px solid #000;
   border-radius: 999rem;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20rem;
   transition: 0.3s ease;
@@ -2123,11 +2138,13 @@
 .monthly_home_set.combined_discount section#how_to_apply .process ol .swiper-slide .img_box .point.point3 {
   top: 147rem;
 }
+.monthly_home_set.combined_discount section#how_to_apply .how_to_apply_process ol {
+  counter-reset: how_to_apply;
+}
 .monthly_home_set.combined_discount section#how_to_apply .how_to_apply_process ol li {
   background-color: #fff;
   color: #111;
   padding: 20rem 16rem;
-  counter-reset: how_to_apply;
   display: flex;
   align-items: center;
   gap: 8rem;

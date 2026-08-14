@@ -130,6 +130,9 @@
           &::before{ content: '∙'; position: absolute; left: 0; top: 0;
             @include screen("mo") { top: -1rem;}
           }
+          &.ty_2dep{ padding-left: 10rem;
+            &::before{ display: none;}
+          }
         }
       }
     }
@@ -156,6 +159,7 @@
   .pd_b{ padding-bottom: 100rem;
     @include screen("mo") { padding-bottom: 60rem;}
   }
+  .mt_0{ margin-top: 0 !important;}
 
   .cont_bg{ background-color: $brown;}
 
@@ -182,7 +186,9 @@
     &.ty_black{ background-color: #111; color: #fff;
       .arr{filter: invert(1); }
     }
-    .arr{ display: inline-block; width: 20rem; transform: rotate(180deg);}
+    .arr{ display: inline-block; width: 20rem; transform: rotate(180deg);
+      &.ty_2{ transform: rotate(180deg) translate(3rem, -4rem);}
+    }
   }
 
   .home_set_tab{ display: flex; justify-content: center; gap: 16rem; margin-bottom: 20rem; flex-wrap: wrap;
@@ -418,6 +424,9 @@
         }
       }
       .benefits_info{
+        &.ty_whtie{ background-color: #fff;
+          .swiper ul li{ background-color: #f6f6f6;}
+        }
         .swiper{
           @include screen("mo") { overflow: visible;
             .home_set_tab{ overflow-x: auto; margin-left: -$layout_pd; width: calc(100% + $layout_pd*2); padding: 0 $layout_pd;}
@@ -846,8 +855,8 @@
           }
         }
         .how_to_apply_process{
-          ol{
-            li{ background-color: #fff; color: #111; padding: 20rem 16rem; counter-reset: how_to_apply; display: flex; align-items: center; gap: 8rem;
+          ol{ counter-reset: how_to_apply;
+            li{ background-color: #fff; color: #111; padding: 20rem 16rem; display: flex; align-items: center; gap: 8rem;
               +li{ margin-top: 8rem;}
               .icon{ width: 86rem;}
               .txt_box{ font-weight: 600;
