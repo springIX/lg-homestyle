@@ -1872,4 +1872,104 @@ $mo-width: 390;
   }
   /* //FOPPAPEDRETTI */
 
+  /* OSTO */
+  &.osto {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 466px; top: 135px;
+          a {
+            img { width: 390px; }
+            .txt-box { position: absolute; left: 21px; top: 0; }
+          }
+        }
+        &:nth-child(2) { left: 29px; top: 9px; 
+          a {
+            img { width: 346px; }
+            .txt-box { position: absolute; left: 254px; top: 68px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 54px; top: 292px;
+          a {
+            img { width: 313px; }
+            .txt-box { position: absolute; left: 220px; top: 34px; text-align: right; }
+          }
+        }
+      }
+    }
+    &.mo { min-height: mo(720);
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(300); height: mo(180); left: mo(-50); top: mo(100); object-fit: cover; }
+            .txt-box { position: absolute; left: mo(53); top: mo(35); }
+          }
+        }
+        &:nth-child(2) { margin: mo(72) 0 mo(30);
+          a {
+            img { width: mo(232); left: mo(10); top: mo(0); }
+            .txt-box { margin-left: mo(0); top: mo(100); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; gap: mo(5);
+            img { width: mo(212); margin-right: mo(0); top: mo(-30); }
+            .txt-box { top: mo(20); left: mo(30); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //OSTO */  
+
+  /* COMMUNE */
+  &.commune {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 430px; top: 85px;
+          a {
+            img { width: 463px; }
+            .txt-box { position: absolute; left: 40px; top: 70px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 106px; top: 124px; 
+          a {
+            img { width: 242px; }
+            .txt-box { position: absolute; left: 190px; top: -40px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 72px; top: 280px;
+          a {
+            img { width: 304px; }
+            .txt-box { position: absolute; left: 260px; top: 150px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo { min-height: mo(720);
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(360); height: mo(300); left: mo(-20); top: mo(30); object-fit: cover; }
+            .txt-box { position: absolute; left: mo(70); top: mo(35); }
+          }
+        }
+        &:nth-child(2) { margin: mo(50) 0 mo(30);
+          a {
+            img { width: mo(178); left: mo(25); top: mo(0); }
+            .txt-box { margin-left: mo(50); top: mo(25); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; gap: mo(5);
+            img { width: mo(232); margin-right: mo(20); top: mo(-30); }
+            .txt-box { top: mo(40); left: mo(30); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //COMMUNE */    
+
 }

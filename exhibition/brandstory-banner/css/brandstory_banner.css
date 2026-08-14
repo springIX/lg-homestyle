@@ -2921,4 +2921,187 @@
 }
 .brand-story-banner-container {
   /* //FOPPAPEDRETTI */
+  /* OSTO */
+}
+.brand-story-banner-container.osto.pc > section:nth-child(1) {
+  left: 466px;
+  top: 135px;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(1) a img {
+  width: 390px;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 21px;
+  top: 0;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(2) {
+  left: 29px;
+  top: 9px;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(2) a img {
+  width: 346px;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 254px;
+  top: 68px;
+  text-align: left;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(3) {
+  left: 54px;
+  top: 292px;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(3) a img {
+  width: 313px;
+}
+.brand-story-banner-container.osto.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 220px;
+  top: 34px;
+  text-align: right;
+}
+.brand-story-banner-container.osto.mo {
+  min-height: calc(720 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.osto.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.osto.mo > section:nth-child(1) a img {
+  width: calc(300 / 390 * 100vw);
+  height: calc(180 / 390 * 100vw);
+  left: calc(-50 / 390 * 100vw);
+  top: calc(100 / 390 * 100vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.brand-story-banner-container.osto.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(53 / 390 * 100vw);
+  top: calc(35 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section:nth-child(2) {
+  margin: calc(72 / 390 * 100vw) 0 calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section:nth-child(2) a img {
+  width: calc(232 / 390 * 100vw);
+  left: calc(10 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section:nth-child(2) a .txt-box {
+  margin-left: calc(0 / 390 * 100vw);
+  top: calc(100 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+  gap: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section:nth-child(3) a img {
+  width: calc(212 / 390 * 100vw);
+  margin-right: calc(0 / 390 * 100vw);
+  top: calc(-30 / 390 * 100vw);
+}
+.brand-story-banner-container.osto.mo > section:nth-child(3) a .txt-box {
+  top: calc(20 / 390 * 100vw);
+  left: calc(30 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //OSTO */
+  /* COMMUNE */
+}
+.brand-story-banner-container.commune.pc > section:nth-child(1) {
+  left: 430px;
+  top: 85px;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(1) a img {
+  width: 463px;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 40px;
+  top: 70px;
+  text-align: right;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(2) {
+  left: 106px;
+  top: 124px;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(2) a img {
+  width: 242px;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 190px;
+  top: -40px;
+  text-align: left;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(3) {
+  left: 72px;
+  top: 280px;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(3) a img {
+  width: 304px;
+}
+.brand-story-banner-container.commune.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 260px;
+  top: 150px;
+  text-align: left;
+}
+.brand-story-banner-container.commune.mo {
+  min-height: calc(720 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.commune.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.commune.mo > section:nth-child(1) a img {
+  width: calc(360 / 390 * 100vw);
+  height: calc(300 / 390 * 100vw);
+  left: calc(-20 / 390 * 100vw);
+  top: calc(30 / 390 * 100vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.brand-story-banner-container.commune.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(70 / 390 * 100vw);
+  top: calc(35 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(2) {
+  margin: calc(50 / 390 * 100vw) 0 calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(2) a img {
+  width: calc(178 / 390 * 100vw);
+  left: calc(25 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(2) a .txt-box {
+  margin-left: calc(50 / 390 * 100vw);
+  top: calc(25 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+  gap: calc(5 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(3) a img {
+  width: calc(232 / 390 * 100vw);
+  margin-right: calc(20 / 390 * 100vw);
+  top: calc(-30 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(3) a .txt-box {
+  top: calc(40 / 390 * 100vw);
+  left: calc(30 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //COMMUNE */
 }
