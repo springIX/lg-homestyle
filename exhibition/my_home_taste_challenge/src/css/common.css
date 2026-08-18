@@ -39,6 +39,9 @@ main {
 .my_home_taste_challenge ::-webkit-scrollbar {
   display: none;
 }
+.my_home_taste_challenge ::-moz-placeholder {
+  color: #d6d6d6;
+}
 .my_home_taste_challenge ::placeholder {
   color: #d6d6d6;
 }
