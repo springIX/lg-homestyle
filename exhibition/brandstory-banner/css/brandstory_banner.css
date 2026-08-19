@@ -3277,4 +3277,89 @@
 }
 .brand-story-banner-container {
   /* //ZANOTTA02 */
+  /* cane_collection */
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(1) {
+  left: 500px;
+  top: 110px;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(1) a img {
+  width: 440px;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  text-align: right;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(2) {
+  left: 80px;
+  top: 20px;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(2) a img {
+  width: 282px;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 210px;
+  top: 40px;
+  text-align: left;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(3) {
+  left: 96px;
+  top: 296px;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(3) a img {
+  width: 266px;
+}
+.brand-story-banner-container.cane_collection.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 230px;
+  top: 15px;
+  text-align: left;
+}
+.brand-story-banner-container.cane_collection.mo {
+  min-height: calc(720 / 390 * 100vw);
+}
+.brand-story-banner-container.cane_collection.mo > section a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(1) a img {
+  width: calc(300 / 390 * 100vw);
+  left: calc(-30 / 390 * 100vw);
+  top: calc(70 / 390 * 100vw);
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(70 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(2) a img {
+  width: calc(256 / 390 * 100vw);
+  left: calc(30 / 390 * 100vw);
+  top: calc(50 / 390 * 100vw);
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(2) a .txt-box {
+  left: calc(-45 / 390 * 100vw);
+  top: calc(90 / 390 * 100vw);
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(3) a img {
+  width: calc(216 / 390 * 100vw);
+  right: calc(20 / 390 * 100vw);
+  top: calc(-20 / 390 * 100vw);
+}
+.brand-story-banner-container.cane_collection.mo > section:nth-child(3) a .txt-box {
+  top: calc(60 / 390 * 100vw);
+  left: calc(-10 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //cane_collection */
 }

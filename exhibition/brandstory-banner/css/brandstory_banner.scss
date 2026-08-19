@@ -2070,6 +2070,56 @@ $mo-width: 390;
       }
     }
   }
-  /* //ZANOTTA02 */     
+  /* //ZANOTTA02 */    
+
+  /* cane_collection */
+  &.cane_collection {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 500px; top: 110px;
+          a {
+            img { width: 440px; }
+            .txt-box { position: absolute; left: 10px; top: 0px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 80px; top: 20px; 
+          a {
+            img { width: 282px; }
+            .txt-box { position: absolute; left: 210px; top: 40px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 96px; top: 296px;
+          a {
+            img { width: 266px; }
+            .txt-box { position: absolute; left: 230px; top: 15px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo { min-height: mo(720);
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(300); left: mo(-30); top: mo(70); }
+            .txt-box { position: absolute; left: mo(70); top: mo(40); }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            img { width: mo(256); left: mo(30); top: mo(50); }
+            .txt-box { left: mo(-45); top: mo(90); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; 
+            img { width: mo(216); right: mo(20); top: mo(-20); }
+            .txt-box { top: mo(60); left: mo(-10); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //cane_collection */   
 
 }
