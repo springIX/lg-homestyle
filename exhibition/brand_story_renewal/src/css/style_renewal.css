@@ -125,12 +125,12 @@ main {
   text-align: center;
   margin-bottom: 16px;
 }
-.brandstory_container .tit_box p {
+.brandstory_container .tit_box .sub_tit {
   font-weight: 500;
   font-size: 16px;
   color: #c2c2c2;
 }
-.brandstory_container .tit_box h2 {
+.brandstory_container .tit_box .tit {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 40px;
@@ -138,27 +138,27 @@ main {
 .brandstory_container .tit_box_ty2 {
   margin-bottom: 20px;
 }
-.brandstory_container .tit_box_ty2 p {
+.brandstory_container .tit_box_ty2 .sub_tit {
   color: #000;
   opacity: 0.7;
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 2px;
 }
-.brandstory_container .tit_box_ty2 h2 {
+.brandstory_container .tit_box_ty2 .tit {
   font-size: 24px;
   font-weight: 600;
   color: #000;
 }
-.brandstory_container .black_cont .tit_box p, .brandstory_container .black_cont .tit_box h2 {
+.brandstory_container .black_cont .tit_box .sub_tit, .brandstory_container .black_cont .tit_box .tit {
   color: #fff;
   opacity: 1;
 }
-.brandstory_container .black_cont .tit_box_ty2 p {
+.brandstory_container .black_cont .tit_box_ty2 .sub_tit {
   color: #c7c7cc;
   opacity: 1;
 }
-.brandstory_container .black_cont .tit_box_ty2 h2 {
+.brandstory_container .black_cont .tit_box_ty2 .tit {
   color: #fff;
 }
 .brandstory_container .gallery_box {
@@ -186,6 +186,9 @@ main {
 .brandstory_container .line_tit.ty_black::before, .brandstory_container .line_tit.ty_black::after {
   background-color: #666;
 }
+.brandstory_container .pd_0 {
+  padding-bottom: 0 !important;
+}
 .brandstory_container #oms_module_anchor {
   position: absolute;
   left: 0;
@@ -211,7 +214,7 @@ main {
   font-size: 16px;
   margin-bottom: 4px;
 }
-.brandstory_container #key_visual .kv_tit h1 {
+.brandstory_container #key_visual .kv_tit h2 {
   font-family: "Oswald", sans-serif;
   font-size: 60px;
 }
@@ -438,7 +441,7 @@ main {
 .brandstory_container section#designer article:nth-child(even) {
   background-color: #444;
 }
-.brandstory_container section#designer article .tit_box_ty2 h2 {
+.brandstory_container section#designer article .tit_box_ty2 .tit {
   text-transform: uppercase;
 }
 .brandstory_container section#designer article .designer_img {
@@ -471,7 +474,7 @@ main {
   position: absolute;
   left: 0;
 }
-.brandstory_container section#faq .faq_list li strong {
+.brandstory_container section#faq .faq_list li h3 {
   font-weight: 600;
 }
 .brandstory_container section#faq .faq_list li p {
@@ -484,7 +487,7 @@ main {
   /* //CONTENTS */
   /* 브랜드 별 스타일링 */
 }
-.brandstory_container.foppapedretti #key_visual .kv_tit h1 {
+.brandstory_container.foppapedretti #key_visual .kv_tit h2 {
   font-size: clamp(10px, 14.7vw, 60px);
   white-space: nowrap;
 }
