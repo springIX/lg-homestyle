@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("https://www.lge.co.kr/home_style_pages/common/css/swiper.min.css");
+@import url("https://www.lge.co.kr/home_style_pages/common/css/aos.css");
+@import url("main.css");
+html {
+  height: 100%;
+  font-size: 1.3px;
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.25641vw;
+  }
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.opinion_column {
+  background-color: #fff;
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: clamp(10px, 14rem, 9999rem);
+  font-weight: 400;
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: 0;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.opinion_column ::-webkit-scrollbar {
+  display: none;
+}
+.opinion_column ::placeholder {
+  color: #d6d6d6;
+}
+.opinion_column * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+.opinion_column h1,
+.opinion_column h2,
+.opinion_column h3,
+.opinion_column h4,
+.opinion_column h5,
+.opinion_column h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.opinion_column table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.opinion_column ol,
+.opinion_column ul {
+  list-style: none;
+}
+.opinion_column a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.opinion_column button,
+.opinion_column input,
+.opinion_column select,
+.opinion_column textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.opinion_column input[type=checkbox], .opinion_column input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.opinion_column label {
+  cursor: pointer;
+}
+.opinion_column img,
+.opinion_column video,
+.opinion_column svg {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: unset;
+}
+.opinion_column option {
+  color: inherit;
+}
+.opinion_column section {
+  position: relative;
+}
+.opinion_column picture {
+  display: block;
+  width: 100%;
+}
+.opinion_column span {
+  display: block;
+}
+
+@font-face {
+  font-family: "Lao MN";
+  src: url("../fonts/lao-mn.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lao MN";
+  src: url("../fonts/lao-mn-bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
