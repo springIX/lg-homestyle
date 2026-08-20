@@ -145,7 +145,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
 }
 .opinion_column .scr_bar {
   background-color: rgba(0, 0, 0, 0.08);
@@ -195,24 +195,30 @@
   overflow: hidden;
   /* MODULE MODULE MODULE MODULE MODULE MODULE */
 }
-.opinion_column section .product_list ul li {
+.opinion_column section .product_list ul .pd_slot {
   border-top: 1px solid #ddd;
+  min-height: 140rem;
+}
+.opinion_column section .pd_slot {
   display: flex;
   align-items: center;
   gap: 20rem;
-  min-height: 140rem;
 }
-.opinion_column section .product_list ul li .pd_img {
+.opinion_column section .pd_slot .pd_img {
   width: 100rem;
+  flex-shrink: 0;
 }
-.opinion_column section .product_list ul li .pd_txt span {
+.opinion_column section .pd_slot .pd_txt {
+  width: 100%;
+}
+.opinion_column section .pd_slot .pd_txt span {
   font-size: clamp(8px, 12rem, 9999rem);
   color: #444;
 }
-.opinion_column section .product_list ul li .pd_txt a {
+.opinion_column section .pd_slot .pd_txt a {
   font-weight: 700;
 }
-.opinion_column section .product_list ul li .pd_txt a::after {
+.opinion_column section .pd_slot .pd_txt a::after {
   content: "";
   display: inline-block;
   width: 16rem;
@@ -220,13 +226,67 @@
   background: url(../images/arr.png) no-repeat center center/contain;
   transform: translateY(3rem);
 }
-.opinion_column section .product_list ul li .pd_txt strong {
+.opinion_column section .pd_slot .pd_txt strong {
   font-size: clamp(8px, 12rem, 9999rem);
 }
-.opinion_column section .product_list ul li .pd_txt p {
+.opinion_column section .pd_slot .pd_txt p {
   margin-top: 4rem;
   font-size: clamp(8px, 12rem, 9999rem);
   color: #444;
+}
+.opinion_column section .pd_anchor {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  z-index: 3;
+  transform: scale(0);
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+.opinion_column section .pd_anchor > * {
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.25);
+}
+.opinion_column section .pd_anchor .pd_anchor_pin {
+  display: block;
+  width: 24rem;
+  height: 24rem;
+  background: url(../images/pd_pin.png) no-repeat center center/contain;
+  border-radius: 999rem;
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.opinion_column section .pd_anchor .pd_anchor_info {
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8rem);
+  transform: translate(-50%, -5rem);
+  padding: 8rem;
+  gap: 13rem;
+  min-width: 180rem;
+  transition: 0.3s ease;
+}
+.opinion_column section .pd_anchor .pd_anchor_info .pd_img {
+  width: 55rem;
+  background-color: #dfdfdf;
+}
+.opinion_column section .pd_anchor .pd_anchor_info .pd_txt a {
+  font-size: clamp(8px, 12rem, 9999rem);
+}
+.opinion_column section .pd_anchor .pd_anchor_info .pd_txt a::after {
+  transform: translateY(4rem);
+}
+.opinion_column section .pd_anchor:not(.on) .pd_anchor_info {
+  opacity: 0;
+  touch-action: none;
+  pointer-events: none;
+}
+.opinion_column section .pd_anchor.on .pd_anchor_pin {
+  transform: rotate(45deg);
+}
+.opinion_column section .pd_anchor.on .pd_anchor_info {
+  transform: translate(-50%, 0);
+}
+.opinion_column section .swiper-slide-active .pd_anchor {
+  transform: scale(1);
 }
 .opinion_column section {
   /* //MODULE MODULE MODULE MODULE MODULE MODULE  */
@@ -408,7 +468,12 @@
   --position: 50%;
   position: relative;
   overflow: hidden;
-  height: 367rem;
+  height: 370rem;
+}
+@media (max-width: 780px) {
+  .opinion_column section#construction_info .before_after .handle_box {
+    height: 234rem;
+  }
 }
 .opinion_column section#construction_info .before_after .handle_box .img_box {
   position: absolute;
@@ -508,6 +573,7 @@
   top: 0;
   width: auto;
   height: 100%;
+  border-left: 1px solid #ddd;
 }
 .opinion_column section#space_detail article h3 {
   font-size: clamp(8px, 30rem, 9999rem);
@@ -516,7 +582,7 @@
 }
 .opinion_column section#space_detail article .before_after {
   position: relative;
-  height: 200vh;
+  height: 200svh;
 }
 .opinion_column section#space_detail article .before_after .sticky_box {
   top: 106rem;
@@ -631,6 +697,23 @@
 }
 .opinion_column section#lg_home_solution .swiper {
   overflow: visible;
+}
+.opinion_column section#lg_home_solution .swiper .swiper_tab {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-bottom: 20rem;
+}
+.opinion_column section#lg_home_solution .swiper .swiper_tab button {
+  padding: 8rem 16rem;
+  border-radius: 999rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.opinion_column section#lg_home_solution .swiper .swiper_tab button.on {
+  background-color: #fff;
+  border-color: #fff;
+  color: #111;
+  font-weight: 700;
 }
 .opinion_column section#lg_home_solution .swiper .swiper-slide {
   background-color: #fff;

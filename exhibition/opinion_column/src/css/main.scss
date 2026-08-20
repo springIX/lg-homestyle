@@ -67,7 +67,7 @@
   .dqm{ display: block; width: 23rem; height: 18rem; background: url(../images/icon_dqm.png)no-repeat center center / contain;
     &.ty_white{filter: brightness(0);}
   }
-  .sticky_box{ position: sticky; left: 0; top: 0; width: 100%; height: 100vh;}
+  .sticky_box{ position: sticky; left: 0; top: 0; width: 100%; height: 100svh;}
   .scr_bar{ background-color: rgba($color: #000, $alpha: .08); width: 80rem; height: 3rem; margin: 27rem auto 0;
     .swiper-scrollbar-drag{ background-color: #000; border-radius: 0;}
     &.ty_white{ background-color: rgba($color: #fff, $alpha: .6);
@@ -84,21 +84,37 @@
   
   section{ position: relative; overflow: hidden;
     /* MODULE MODULE MODULE MODULE MODULE MODULE */
-    .product_list{
-      ul{
-        li{ border-top: 1px solid #ddd; display: flex; align-items: center; gap: 20rem; min-height: 140rem;
-          .pd_img{ width: 100rem;}
-          .pd_txt{
-            span{ @include font-size(12rem); color: #444;}
-            a{ font-weight: 700;
-              &::after{ content: ''; display: inline-block; width: 16rem; height: 16rem; background: url(../images/arr.png)no-repeat center center / contain; transform: translateY(3rem);}
-            }
-            strong{ @include font-size(12rem);}
-            p{ margin-top:4rem; @include font-size(12rem); color:#444}
-          }
+    .product_list ul .pd_slot{ border-top: 1px solid #ddd; min-height: 140rem;}
+    
+    .pd_slot{ display: flex; align-items: center; gap: 20rem;
+      .pd_img{ width: 100rem; flex-shrink: 0}
+      .pd_txt{ width: 100%;
+        span{ @include font-size(12rem); color: #444;}
+        a{ font-weight: 700;
+          &::after{ content: ''; display: inline-block; width: 16rem; height: 16rem; background: url(../images/arr.png)no-repeat center center / contain; transform: translateY(3rem);}
         }
+        strong{ @include font-size(12rem);}
+        p{ margin-top:4rem; @include font-size(12rem); color:#444}
       }
     }
+
+    .pd_anchor{  position: absolute; left: 40%; top: 20%; z-index: 3; transform: scale(0); transition: .5s $outback .3s;
+      > *{ box-shadow: 0 2rem 8rem rgba($color: #000, $alpha: .25); }
+      .pd_anchor_pin{ display: block; width: 24rem; height: 24rem; background: url(../images/pd_pin.png)no-repeat center center / contain;border-radius: 999rem; transition: .5s $outback;}
+      .pd_anchor_info{  background-color: #f5f5f5; position: absolute; left: 50%; top: calc(100% + 8rem); transform: translate(-50%, -5rem); padding: 8rem; gap: 13rem; min-width: 180rem; transition: .3s ease;
+        .pd_img{ width: 55rem; background-color: #dfdfdf;}
+        .pd_txt a{ @include font-size(12rem);
+          &::after{ transform: translateY(4rem);}
+        }
+      }
+      &:not(.on) .pd_anchor_info{  opacity: 0; touch-action: none; pointer-events: none;}
+      &.on{
+        .pd_anchor_pin{ transform: rotate(45deg);}
+        .pd_anchor_info{ transform: translate(-50%, 0);}
+      }
+    }
+  
+    .swiper-slide-active .pd_anchor{ transform: scale(1);}
     /* //MODULE MODULE MODULE MODULE MODULE MODULE  */
 
     &#key_visual{background-color: #EFF0F4; font-weight: 600; padding: 20rem 0 24rem;
@@ -169,7 +185,8 @@
         .info{ margin-top: 24rem;}
       }
       .before_after{
-        .handle_box { --position: 50%; position: relative; overflow: hidden; height: 367rem;
+        .handle_box { --position: 50%; position: relative; overflow: hidden; height: 370rem;
+          @include screen("mo") { height: 234rem;}
           .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%;
             &.before { position: absolute; inset: 0; clip-path: inset( 0 calc(100% - var(--position)) 0 0);
               p{ color: #666; left: 20rem; right: auto;}
@@ -198,10 +215,10 @@
         .space_type_tit{ width: 100%; height: 64rem; border-bottom: 1px solid #ddd; position: sticky; left: 0; top: 43rem; display: flex; align-items: center; background-color: #fff; z-index: 3;
           @include screen("mo") { top: calc(43rem + 56px);}
           h2{ font-weight: 400; @include font-size(24rem);}
-          .floor_plan{ position: absolute; right: 0; top: 0; width: auto; height: 100%;}
+          .floor_plan{ position: absolute; right: 0; top: 0; width: auto; height: 100%; border-left: 1px solid #ddd;}
         }
         h3{ @include font-size(30rem); padding: 60rem 0 32rem; font-weight: 600;}
-        .before_after{ position: relative; height: 200vh;
+        .before_after{ position: relative; height: 200svh;
           .sticky_box{ top: 106rem; height: auto;
             @include screen("mo") {  top: calc(106rem + 56px);}
             img{ @include m_full_layout(); }
@@ -263,6 +280,11 @@
 
     &#lg_home_solution{
       .swiper{ overflow: visible;
+        .swiper_tab{ display: flex; justify-content: center; gap: 8rem; margin-bottom: 20rem;
+          button{ padding: 8rem 16rem; border-radius: 999rem; border: 1px solid rgba($color: #fff, $alpha: .4);
+            &.on{ background-color: #fff; border-color: #fff; color: #111; font-weight: 700;}
+          }
+        }
         .swiper-slide{ background-color: #fff; border-radius: 12rem; overflow: hidden; height: 768rem; display: flex; flex-direction: column;
           @include screen("mo") { height: 560rem;}
           &.swiper-slide-active .visual_box{
