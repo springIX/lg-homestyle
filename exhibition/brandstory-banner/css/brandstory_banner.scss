@@ -1872,6 +1872,56 @@ $mo-width: 390;
   }
   /* //FOPPAPEDRETTI */
 
+  /* h_oeuvre01 */
+  &.h_oeuvre01 {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 413px; top: 93px;
+          a {
+            img { width: 438px; }
+            .txt-box { position: absolute; left: 10 0px; top: 50px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 81px; top: 64px; 
+          a {
+            img { width: 206px; }
+            .txt-box { position: absolute; left: 190px; top:  0px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 85px; top: 340px;
+          a {
+            img { width: 242px; }
+            .txt-box { position: absolute; left: 230px; top: -40px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(314); left: mo(-40); top: mo(30);}
+            .txt-box { position: absolute; left: mo(70); top: mo(35); }
+          }
+        }
+        &:nth-child(2) { margin: mo(50) 0 mo(30);
+          a {
+            img { width: mo(150); left: mo(50); top: mo(0); }
+            .txt-box { margin-left: mo(70); top: mo(30); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; gap: mo(5);
+            img { width: mo(154); margin-right: mo(55); top: mo(10); }
+            .txt-box { top: mo(40); left: mo(-35); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //h_oeuvre01 */    
+
   /* OSTO */
   &.osto {
     &.pc {
@@ -1896,7 +1946,7 @@ $mo-width: 390;
         }
       }
     }
-    &.mo { min-height: mo(720);
+    &.mo {
       > section {
         a { align-items: flex-start; }
         &:nth-child(1) {
@@ -1907,14 +1957,14 @@ $mo-width: 390;
         }
         &:nth-child(2) { margin: mo(72) 0 mo(30);
           a {
-            img { width: mo(232); left: mo(10); top: mo(0); }
-            .txt-box { margin-left: mo(0); top: mo(100); }
+            img { width: mo(232); left: mo(10); top: mo(10); }
+            .txt-box { margin-left: mo(0); top: mo(110); }
           }
         }
         &:nth-child(3) {
           a { flex-direction: row-reverse; gap: mo(5);
-            img { width: mo(212); margin-right: mo(0); top: mo(-30); }
-            .txt-box { top: mo(20); left: mo(30); text-align: right; }
+            img { width: mo(212); margin-right: mo(0); top: mo(-20); }
+            .txt-box { top: mo(35); left: mo(30); text-align: right; }
           }
         }
       }
@@ -1946,7 +1996,7 @@ $mo-width: 390;
         }
       }
     }
-    &.mo { min-height: mo(720);
+    &.mo { 
       > section {
         a { align-items: flex-start; }
         &:nth-child(1) {
@@ -1971,5 +2021,105 @@ $mo-width: 390;
     }
   }
   /* //COMMUNE */    
+
+  /* ZANOTTA02 */
+  &.zanotta02 {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 510px; top: 150px;
+          a {
+            img { width: 285px; object-fit: cover; }
+            .txt-box { position: absolute; left: 0px; top: 35px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 82px; top: 64px; 
+          a {
+            img { width: 246px; }
+            .txt-box { position: absolute; left: 190px; top: -10px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 77px; top: 303px;
+          a {
+            img { width: 276px; }
+            .txt-box { position: absolute; left: 280px; top: 60px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo { min-height: mo(720);
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(200); left: mo(-70); top: mo(80); object-fit: cover; }
+            .txt-box { position: absolute; left: mo(90); top: mo(40); }
+          }
+        }
+        &:nth-child(2) { margin: mo(50) 0 mo(30);
+          a {
+            img { width: mo(172); left: mo(60); top: mo(50); }
+            .txt-box { margin-left: mo(50); top: mo(100); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; gap: mo(5);
+            img { width: mo(220); margin-right: mo(10); top: mo(-0); }
+            .txt-box { top: mo(80); left: mo(0); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //ZANOTTA02 */    
+
+  /* cane_collection */
+  &.cane_collection {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 500px; top: 110px;
+          a {
+            img { width: 440px; }
+            .txt-box { position: absolute; left: 10px; top: 0px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 80px; top: 20px; 
+          a {
+            img { width: 282px; }
+            .txt-box { position: absolute; left: 210px; top: 40px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 96px; top: 296px;
+          a {
+            img { width: 266px; }
+            .txt-box { position: absolute; left: 230px; top: 15px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo { min-height: mo(720);
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(300); left: mo(-30); top: mo(70); }
+            .txt-box { position: absolute; left: mo(70); top: mo(40); }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            img { width: mo(256); left: mo(30); top: mo(50); }
+            .txt-box { left: mo(-45); top: mo(90); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; 
+            img { width: mo(216); right: mo(20); top: mo(-20); }
+            .txt-box { top: mo(60); left: mo(-10); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //cane_collection */   
 
 }
