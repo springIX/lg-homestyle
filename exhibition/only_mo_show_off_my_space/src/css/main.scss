@@ -258,9 +258,9 @@
               em{ font-weight: 700; color: #00AE44;}
             }
             &.ty2{ background-color: transparent; padding: 0;}
-            ul{ display: flex; gap: 12rem; text-align: center;
-              @include screen("mo") { gap: 10rem;}
-              li{ width: calc(50% - 5rem);
+            ul{ display: grid; grid-template-columns: 1fr 1fr; gap:  24rem 10rem; text-align: center;
+              li{ 
+                &.col2{ grid-column: span 2;}
                 .img_box{ background-color: #F6F6F6; border-radius: 8rem; overflow: hidden;
                   @include screen("mo") { height: 140rem;}
                   img{ width: 100%;

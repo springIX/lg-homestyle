@@ -5,10 +5,23 @@
   });
 
   /* SWIPER */
-  const remToPx = (rem) =>
-    rem * parseFloat(
-      getComputedStyle(document.documentElement).fontSize
+  const remToPx = (rem) => {
+    const isMobile = window.matchMedia(
+      '(max-width: 767px)'
+    ).matches;
+
+    if (isMobile) {
+      return rem * (
+        document.documentElement.clientWidth / 390
+      );
+    }
+
+    return rem * parseFloat(
+      getComputedStyle(
+        document.documentElement
+      ).fontSize
     );
+  };
 
   $('.common_swiper').each(function () {
     const $swiper = $(this);
@@ -26,7 +39,7 @@
     const slidesPerView =
       viewValue === 'auto'
         ? 'auto'
-        : parseFloat(viewValue) || 1.15;
+        : parseFloat(viewValue) || 1.1;
 
     const spaceBetween = Number.isNaN(spaceValue)
       ? remToPx(12)
@@ -383,13 +396,27 @@
 
   /* PRODUCTS ANCHER */
   $(document).on('click', function (e) {
-    const $anchor = $(e.target).closest('.pd_anchor');
+    const $target = $(e.target);
 
-    if ($anchor.length) {
-      $anchor.toggleClass('on');
-    } else {
-      $('.pd_anchor').removeClass('on');
+    // 상품 정보 영역 클릭 시 on 상태 유지
+    if ($target.closest('.pd_anchor_info').length) {
+      return;
     }
+
+    const $pin = $target.closest('.pd_anchor_pin');
+
+    // 핀 클릭 시 해당 앵커 토글
+    if ($pin.length) {
+      const $anchor = $pin.closest('.pd_anchor');
+
+      $('.pd_anchor').not($anchor).removeClass('on');
+      $anchor.toggleClass('on');
+
+      return;
+    }
+
+    // 그 외 영역 클릭 시 모두 닫기
+    $('.pd_anchor').removeClass('on');
   });
 
   /* AOS */

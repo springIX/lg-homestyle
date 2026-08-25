@@ -79,6 +79,7 @@
     .tit{ @include font-size(30rem); font-weight: 400;}
   }
   .bg_gray{ background-color: #F6F6F6;}
+  .swiper{overflow: visible;}
   #oms_module_anchor{ position: absolute; left: 0; bottom: 56px; height: 1px; width: 100%;}
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   
@@ -87,41 +88,61 @@
     .product_list ul .pd_slot{ border-top: 1px solid #ddd; min-height: 140rem;}
     
     .pd_slot{ display: flex; align-items: center; gap: 20rem;
-      .pd_img{ width: 100rem; flex-shrink: 0}
-      .pd_txt{ width: 100%;
+      .pd_img{ width: 100rem; flex-shrink: 0;}
+      .pd_txt{ width: 100%; flex: 1; min-width: 0;
         span{ @include font-size(12rem); color: #444;}
         a{ font-weight: 700;
           &::after{ content: ''; display: inline-block; width: 16rem; height: 16rem; background: url(../images/arr.png)no-repeat center center / contain; transform: translateY(3rem);}
         }
-        strong{ @include font-size(12rem);}
+        strong{ @include font-size(12rem); display: block;}
         p{ margin-top:4rem; @include font-size(12rem); color:#444}
       }
     }
 
-    .pd_anchor{  position: absolute; left: 40%; top: 20%; z-index: 3; transform: scale(0); transition: .5s $outback .3s;
+    .pd_anchor{  position: absolute; z-index: 3; transform: scale(0); transition: .5s $outback .3s;
       > *{ box-shadow: 0 2rem 8rem rgba($color: #000, $alpha: .25); }
-      .pd_anchor_pin{ display: block; width: 24rem; height: 24rem; background: url(../images/pd_pin.png)no-repeat center center / contain;border-radius: 999rem; transition: .5s $outback;}
-      .pd_anchor_info{  background-color: #f5f5f5; position: absolute; left: 50%; top: calc(100% + 8rem); transform: translate(-50%, -5rem); padding: 8rem; gap: 13rem; min-width: 180rem; transition: .3s ease;
-        .pd_img{ width: 55rem; background-color: #dfdfdf;}
-        .pd_txt a{ @include font-size(12rem);
-          &::after{ transform: translateY(4rem);}
+      .pd_anchor_pin{ display: block; width: 24rem; height: 24rem; background: url(../images/pd_pin.png)no-repeat center center / contain;border-radius: 999rem; transition: .5s $outback; cursor: pointer;
+        &::after{ content: ''; width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; animation: pd_pin_pulse 3s infinite; box-sizing: border-box;}
+        @keyframes pd_pin_pulse {
+          0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8), 0 0 0 0 rgba(255, 255, 255, 0.8);}
+          50% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.8);}
+          100% { box-shadow: 0 0 0 16px rgba(255, 255, 255, 0), 0 0 0 8px rgba(255, 255, 255, 0);}
+        }
+        &.ty_check{ background-image: url(../images/icon_check.png);  touch-action: none; pointer-events: none;
+          &::after{ display: none;}
+        }
+      }
+      .pd_anchor_info{  background-color: #f5f5f5; position: absolute; left: 50%; top: calc(100% + 8rem); transform: translate(-50%, -5rem); padding: 8rem; gap: 12rem; min-width: 180rem; transition: .3s ease; box-shadow: 0 4rem 20rem rgba($color: #000, $alpha: .25);
+        &.ty_l{ left: 277%;}
+        &.ty_r{ left: -177%;}
+        &.ty_t{ top: auto; bottom: calc(100% + 8rem); transform: translate(-50%, 5rem);}
+        .pd_img{ width: 56rem; background-color: #dfdfdf;}
+        .pd_txt{
+          a{@include font-size(8rem);
+            &::after{ transform: translateY(1rem); width: 8rem; height: 8rem}
+          }
+          span{ @include font-size(8rem); display: block; margin-top: 2rem;}
         }
       }
       &:not(.on) .pd_anchor_info{  opacity: 0; touch-action: none; pointer-events: none;}
-      &.on{
+      &.on{ z-index: 4;
         .pd_anchor_pin{ transform: rotate(45deg);}
         .pd_anchor_info{ transform: translate(-50%, 0);}
       }
     }
   
-    .swiper-slide-active .pd_anchor{ transform: scale(1);}
+    .swiper-slide-active .pd_anchor,
+    .pd_anchor.aos-animate{ transform: scale(1);}
     /* //MODULE MODULE MODULE MODULE MODULE MODULE  */
 
     &#key_visual{background-color: #EFF0F4; font-weight: 600; padding: 20rem 0 24rem;
       .tit_box{
         .ep_tag{
-          span{ @include font-size(16rem); }
           .logo{ width: 80rem;}
+          .tit_box{ display: flex; align-items: center; 
+            span{ padding-right: 4rem; margin-right: 4rem; border-right: 2px solid #8f8f8f; height: 10rem;line-height: 10rem;}
+            strong{ font-weight: 600}
+          }
         }
         h2{ @include font-size(24rem); margin: 24rem 0 32rem;}
       }
@@ -129,7 +150,7 @@
         img{ clip-path:  polygon(0 0, 0 0, 0 0); transition: 1.5s $inout}
         &.aos-animate img{ clip-path: polygon(0 0, 0 200% , 200% 0);}
       }
-      .info_box{ @include font-size(12rem); margin-top: 12rem;}
+      .address{ @include font-size(12rem); margin-top: 12rem;}
     }
 
     &#navigation_tab { position: sticky; top: 0; font-size: 14rem; white-space: nowrap; z-index: 5; margin-bottom: -1px; overflow: hidden;
@@ -181,13 +202,24 @@
         .tit_box{
           .tit{ margin-top: 12rem;}
         }
-        .const_details_img{ margin-top: 40rem; overflow: hidden;}
+        .const_details_img{ margin-top: 40rem; overflow: hidden; position: relative;
+          .lighting{mix-blend-mode: plus-lighter; opacity: 0;
+          }
+          .aos-animate + .lighting{animation: lighting 2s ease-in-out 1s infinite;
+            @keyframes lighting {
+              0%,100%{ opacity: 0;}
+              50%{ opacity: 1;}
+            }
+          }
+
+          .point_txt{ position: absolute; left: 0; bottom: 20rem; width: 100%; text-align: center; @include font-size(12rem); font-weight: 600; line-height: 1.6;}
+        }
         .info{ margin-top: 24rem;}
       }
       .before_after{
         .handle_box { --position: 50%; position: relative; overflow: hidden; height: 370rem;
           @include screen("mo") { height: 234rem;}
-          .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+          .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
             &.before { position: absolute; inset: 0; clip-path: inset( 0 calc(100% - var(--position)) 0 0);
               p{ color: #666; left: 20rem; right: auto;}
             }
@@ -295,8 +327,13 @@
             .tit{ text-align: center; z-index: 1; position: relative; @include font-size(30rem); padding-top: 20rem; font-weight: 400; transform: translateY(-100%); opacity: 0; transition: 1s ease .3s;}
             .cover{ transform: scale(1.05); transition: 1s ease;}
           }
-          .product_list{ flex-shrink: 0; color: #111;
-            ul li{ min-height: 104rem;}
+          .product_list{ color: #111;
+            ul li.pd_slot{ min-height: 104rem; gap: 12rem;
+              .pd_img{ width: 80rem;}
+              .pd_txt{
+                strong{ @include ellip();}
+              }
+            }
           }
         }
       }
