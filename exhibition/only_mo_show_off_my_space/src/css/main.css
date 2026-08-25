@@ -59,8 +59,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .show_off_my_space .flex {
   display: flex;
@@ -560,7 +559,6 @@
 }
 @media (min-width: 0px) {
   .show_off_my_space section#contents .cont_box.how_to_apply ol > li .info ul li .tag {
-    width: -moz-max-content;
     width: max-content;
     font-size: clamp(10px, 11rem, 9999rem);
     padding: 2rem 6rem;
@@ -649,17 +647,13 @@
   padding: 0;
 }
 .show_off_my_space section#contents .cont_box.prize_information .info_box ul {
-  display: flex;
-  gap: 12rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24rem 10rem;
   text-align: center;
 }
-@media (min-width: 0px) {
-  .show_off_my_space section#contents .cont_box.prize_information .info_box ul {
-    gap: 10rem;
-  }
-}
-.show_off_my_space section#contents .cont_box.prize_information .info_box ul li {
-  width: calc(50% - 5rem);
+.show_off_my_space section#contents .cont_box.prize_information .info_box ul li.col2 {
+  grid-column: span 2;
 }
 .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box {
   background-color: #F6F6F6;
@@ -677,8 +671,7 @@
 @media (min-width: 0px) {
   .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box img {
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box.ty_npay img {
@@ -774,7 +767,6 @@
   color: #000;
   font-weight: 500;
   display: block;
-  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
@@ -871,7 +863,6 @@
   }
 }
 .show_off_my_space section#contents .winner .winner_info .winner_list ul li {
-  width: -moz-max-content;
   width: max-content;
   font-size: clamp(10px, 14rem, 9999rem);
   font-weight: 500;
