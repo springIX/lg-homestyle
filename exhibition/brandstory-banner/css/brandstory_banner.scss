@@ -1976,45 +1976,45 @@ $mo-width: 390;
   &.commune {
     &.pc {
       > section {
-        &:nth-child(1) { left: 430px; top: 85px;
+        &:nth-child(1) { left: 450px; top: 180px;
           a {
-            img { width: 463px; }
-            .txt-box { position: absolute; left: 40px; top: 70px; text-align: right; }
+            img { width: 401px; }
+            .txt-box { position: absolute; left: 290px; top: -40px; text-align: right; }
           }
         }
-        &:nth-child(2) { left: 106px; top: 124px; 
+        &:nth-child(2) { left: 64px; top: 10px; 
           a {
-            img { width: 242px; }
-            .txt-box { position: absolute; left: 190px; top: -40px; text-align: left; }
+            img { width: 337px; }
+            .txt-box { position: absolute; left: 210px; top: 55px; text-align: left; }
           }
         }
-        &:nth-child(3) { left: 72px; top: 280px;
+        &:nth-child(3) { left: 52px; top: 388px;
           a {
-            img { width: 304px; }
-            .txt-box { position: absolute; left: 260px; top: 150px; text-align: left; }
+            img { width: 405px; }
+            .txt-box { position: absolute; left: 45px; top: -50px; text-align: left; }
           }
         }
       }
     }
-    &.mo { 
+    &.mo { min-height: mo(800);
       > section {
         a { align-items: flex-start; }
         &:nth-child(1) {
           a { position: relative; flex-direction: row-reverse;
-            img { width: mo(360); height: mo(300); left: mo(-20); top: mo(30); object-fit: cover; }
-            .txt-box { position: absolute; left: mo(70); top: mo(35); }
+            img { width: mo(327); left: mo(-20); top: mo(80); }
+            .txt-box { position: absolute; left: mo(70); top: mo(40); }
           }
         }
-        &:nth-child(2) { margin: mo(50) 0 mo(30);
+        &:nth-child(2) { margin: mo(70) 0 mo(30);
           a {
-            img { width: mo(178); left: mo(25); top: mo(0); }
-            .txt-box { margin-left: mo(50); top: mo(25); }
+            img { width: mo(257); left: mo(25); top: mo(0); }
+            .txt-box { margin-left: mo(-10); top: mo(25); }
           }
         }
-        &:nth-child(3) {
-          a { flex-direction: row-reverse; gap: mo(5);
-            img { width: mo(232); margin-right: mo(20); top: mo(-30); }
-            .txt-box { top: mo(40); left: mo(30); text-align: right; }
+        &:nth-child(3) { margin-top: mo(70);
+          a { flex-direction: row-reverse; gap: mo(0);
+            img { width: mo(334); margin-right: mo(0); top: mo(-10); }
+            .txt-box { top: mo(-50); left: mo(130); text-align: right; }
           }
         }
       }
@@ -2121,5 +2121,6 @@ $mo-width: 390;
     }
   }
   /* //cane_collection */   
+  
 
 }

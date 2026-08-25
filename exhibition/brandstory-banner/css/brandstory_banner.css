@@ -3098,43 +3098,46 @@
   /* COMMUNE */
 }
 .brand-story-banner-container.commune.pc > section:nth-child(1) {
-  left: 430px;
-  top: 85px;
+  left: 450px;
+  top: 180px;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(1) a img {
-  width: 463px;
+  width: 401px;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(1) a .txt-box {
   position: absolute;
-  left: 40px;
-  top: 70px;
+  left: 290px;
+  top: -40px;
   text-align: right;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(2) {
-  left: 106px;
-  top: 124px;
+  left: 64px;
+  top: 10px;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(2) a img {
-  width: 242px;
+  width: 337px;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(2) a .txt-box {
   position: absolute;
-  left: 190px;
-  top: -40px;
+  left: 210px;
+  top: 55px;
   text-align: left;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(3) {
-  left: 72px;
-  top: 280px;
+  left: 52px;
+  top: 388px;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(3) a img {
-  width: 304px;
+  width: 405px;
 }
 .brand-story-banner-container.commune.pc > section:nth-child(3) a .txt-box {
   position: absolute;
-  left: 260px;
-  top: 150px;
+  left: 45px;
+  top: -50px;
   text-align: left;
+}
+.brand-story-banner-container.commune.mo {
+  min-height: calc(800 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section a {
   align-items: flex-start;
@@ -3144,42 +3147,42 @@
   flex-direction: row-reverse;
 }
 .brand-story-banner-container.commune.mo > section:nth-child(1) a img {
-  width: calc(360 / 390 * 100vw);
-  height: calc(300 / 390 * 100vw);
+  width: calc(327 / 390 * 100vw);
   left: calc(-20 / 390 * 100vw);
-  top: calc(30 / 390 * 100vw);
-  -o-object-fit: cover;
-     object-fit: cover;
+  top: calc(80 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(1) a .txt-box {
   position: absolute;
   left: calc(70 / 390 * 100vw);
-  top: calc(35 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(2) {
-  margin: calc(50 / 390 * 100vw) 0 calc(30 / 390 * 100vw);
+  margin: calc(70 / 390 * 100vw) 0 calc(30 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(2) a img {
-  width: calc(178 / 390 * 100vw);
+  width: calc(257 / 390 * 100vw);
   left: calc(25 / 390 * 100vw);
   top: calc(0 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(2) a .txt-box {
-  margin-left: calc(50 / 390 * 100vw);
+  margin-left: calc(-10 / 390 * 100vw);
   top: calc(25 / 390 * 100vw);
+}
+.brand-story-banner-container.commune.mo > section:nth-child(3) {
+  margin-top: calc(70 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(3) a {
   flex-direction: row-reverse;
-  gap: calc(5 / 390 * 100vw);
+  gap: calc(0 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(3) a img {
-  width: calc(232 / 390 * 100vw);
-  margin-right: calc(20 / 390 * 100vw);
-  top: calc(-30 / 390 * 100vw);
+  width: calc(334 / 390 * 100vw);
+  margin-right: calc(0 / 390 * 100vw);
+  top: calc(-10 / 390 * 100vw);
 }
 .brand-story-banner-container.commune.mo > section:nth-child(3) a .txt-box {
-  top: calc(40 / 390 * 100vw);
-  left: calc(30 / 390 * 100vw);
+  top: calc(-50 / 390 * 100vw);
+  left: calc(130 / 390 * 100vw);
   text-align: right;
 }
 .brand-story-banner-container {
