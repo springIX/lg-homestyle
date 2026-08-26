@@ -46,7 +46,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .opinion_column .flex {
   display: flex;
@@ -467,7 +468,8 @@
 .opinion_column section#construction_bg .company img {
   width: 100%;
   height: 60rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .opinion_column section#construction_bg .company h2 {
   margin: 12rem 0 8rem;
@@ -600,7 +602,8 @@
 .opinion_column section#construction_info .before_after .handle_box .img_box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .opinion_column section#construction_info .before_after .handle_box .handle {
   position: absolute;
@@ -874,7 +877,8 @@
 .opinion_column section#consultation .visual_box .p_center {
   height: 25rem;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .opinion_column section#consultation .txt_box {
   text-align: center;
