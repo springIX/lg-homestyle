@@ -352,12 +352,15 @@
     
       .gallery_box{ background-color: #fff; margin-top: 60rem; padding: 20rem 0 60rem;}
     
-      .btn_wrap{ margin-top: 20rem;
-        article{display: flex; align-items: center; @include font-size(16rem); padding-right: 24rem; border-radius: 8rem;
-          + article{ margin-top: 8rem;}
-          .banner_img{ width: 100rem;}
+      .btn_wrap{ margin-top: 20rem; position: relative; 
+        article{display: flex; align-items: center; @include font-size(16rem); border-radius: 8rem; padding-right: 20rem;
+          + article{ margin-top: 8rem; }
+          .banner_img{ width: 100rem;
+            
+          }
           .txt_box{
-            span{ display: block; @include font-size(14rem); color: #444; margin-top: 2rem;}
+              strong {color: #000; letter-spacing: -0.72px; @include font-size(18rem); }
+              span{ display: block; color: #262626; margin-top: 2rem; letter-spacing: -0.42px; @include font-size(14rem); margin-top: 2px; }
           }
           .arr{ margin-left: auto; width: 20rem; filter: brightness(0);}
         }

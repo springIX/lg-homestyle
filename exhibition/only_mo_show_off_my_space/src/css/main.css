@@ -59,7 +59,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .show_off_my_space .flex {
   display: flex;
@@ -559,6 +560,7 @@
 }
 @media (min-width: 0px) {
   .show_off_my_space section#contents .cont_box.how_to_apply ol > li .info ul li .tag {
+    width: -moz-max-content;
     width: max-content;
     font-size: clamp(10px, 11rem, 9999rem);
     padding: 2rem 6rem;
@@ -671,7 +673,8 @@
 @media (min-width: 0px) {
   .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box img {
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .show_off_my_space section#contents .cont_box.prize_information .info_box ul li .img_box.ty_npay img {
@@ -767,6 +770,7 @@
   color: #000;
   font-weight: 500;
   display: block;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
@@ -863,6 +867,7 @@
   }
 }
 .show_off_my_space section#contents .winner .winner_info .winner_list ul li {
+  width: -moz-max-content;
   width: max-content;
   font-size: clamp(10px, 14rem, 9999rem);
   font-weight: 500;
@@ -963,13 +968,14 @@
 }
 .show_off_my_space section#contents .btn_wrap {
   margin-top: 20rem;
+  position: relative;
 }
 .show_off_my_space section#contents .btn_wrap article {
   display: flex;
   align-items: center;
   font-size: clamp(10px, 16rem, 9999rem);
-  padding-right: 24rem;
   border-radius: 8rem;
+  padding-right: 20rem;
 }
 .show_off_my_space section#contents .btn_wrap article + article {
   margin-top: 8rem;
@@ -977,11 +983,18 @@
 .show_off_my_space section#contents .btn_wrap article .banner_img {
   width: 100rem;
 }
+.show_off_my_space section#contents .btn_wrap article .txt_box strong {
+  color: #000;
+  letter-spacing: -0.72px;
+  font-size: clamp(10px, 18rem, 9999rem);
+}
 .show_off_my_space section#contents .btn_wrap article .txt_box span {
   display: block;
-  font-size: clamp(10px, 14rem, 9999rem);
-  color: #444;
+  color: #262626;
   margin-top: 2rem;
+  letter-spacing: -0.42px;
+  font-size: clamp(10px, 14rem, 9999rem);
+  margin-top: 2px;
 }
 .show_off_my_space section#contents .btn_wrap article .arr {
   margin-left: auto;
