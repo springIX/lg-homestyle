@@ -1976,7 +1976,7 @@ $mo-width: 390;
   &.commune {
     &.pc {
       > section {
-        &:nth-child(1) { left: 450px; top: 180px;
+        &:nth-child(1) { left: 450px; top: 130px;
           a {
             img { width: 401px; }
             .txt-box { position: absolute; left: 290px; top: -40px; text-align: right; }
@@ -1990,7 +1990,7 @@ $mo-width: 390;
         }
         &:nth-child(3) { left: 52px; top: 388px;
           a {
-            img { width: 405px; }
+            img { width: 475px; }
             .txt-box { position: absolute; left: 45px; top: -50px; text-align: left; }
           }
         }
@@ -2013,8 +2013,8 @@ $mo-width: 390;
         }
         &:nth-child(3) { margin-top: mo(70);
           a { flex-direction: row-reverse; gap: mo(0);
-            img { width: mo(334); margin-right: mo(0); top: mo(-10); }
-            .txt-box { top: mo(-50); left: mo(130); text-align: right; }
+            img { width: mo(347); margin-right: mo(0); top: mo(-10); }
+            .txt-box { top: mo(-50); left: mo(120); text-align: right; }
           }
         }
       }
@@ -2121,6 +2121,56 @@ $mo-width: 390;
     }
   }
   /* //cane_collection */   
+
+  /* epicurean */
+  &.epicurean {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 500px; top: 120px;
+          a {
+            img { width: 398px; }
+            .txt-box { position: absolute; left: -5px; top: -10px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 34px; top: 30px; 
+          a {
+            img { width: 270px; }
+            .txt-box { position: absolute; left: 230px; top: 25px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 32px; top: 298px;
+          a {
+            img { width: 270px; }
+            .txt-box { position: absolute; left: 230px; top: 25px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(324); left: mo(-30); top: mo(60); }
+            .txt-box { position: absolute; left: mo(70); top: mo(40); }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            img { width: mo(202); left: mo(30); top: mo(40); }
+            .txt-box { left: mo(10); top: mo(80); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; margin: mo(70) 0 0;
+            img { width: mo(202); right: mo(20); top: mo(-30); }
+            .txt-box { top: mo(15); left: mo(-10); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //epicurean */     
   
 
 }
