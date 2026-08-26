@@ -115,7 +115,10 @@ main { background-color: #F9F9F9;}
     }
   }
   .gallery_box{ display: grid; gap: 2px; grid-template-columns: 1fr 1fr; position: relative;
-    .only_badge{ position: absolute; right: 8px; top: 12px; background-color: #f5efea; padding: 4px 8px; display: flex; align-items:flex-start; gap: 2px; font-size: 8px; font-family: 'Lao MN', sans-serif; font-weight: 700; border-radius: 4px;}
+    .only_badge{ position: absolute; right: 8px; top: 12px; background-color: #f5efea; padding: 4px 8px; display: flex; align-items:center; gap: 2px; font-size: 12px; font-family: 'Lao MN', sans-serif; font-weight: 700; border-radius: 4px;
+      img{ width: 40px;}
+      span{ transform: translateY(2px);}
+    }
     img.col2{ grid-column: span 2;}
   }
   .line_tit{ display: flex; align-items: center; gap: 12px;font-weight: 700; white-space: nowrap; margin-bottom: 16px;
@@ -170,22 +173,6 @@ main { background-color: #F9F9F9;}
           @include screen("mo") { min-height: 90vw;}
         }
         .pd_wrap{ position: relative; padding: 20px; background-color: #fff;}
-        // @at-root .brandstory_container.plotica #collection.ty_series{ 
-        //   .bg_series{ height: 830px;
-        //     @include screen("mo") { height: 620px; min-height: 105vw;}
-        //   }
-        //   .series_txt{ min-height: 500px;
-        //     @include screen("mo") { min-height: 390px;}
-        //   }
-        // }
-        // @at-root .brandstory_container.simmons #collection.ty_series{ 
-        //   .bg_series{ height: 760px;
-        //     @include screen("mo") { height: 820px; min-height: 165vw;}
-        //   }
-        //   .series_txt{ min-height: 970px;
-        //     @include screen("mo") { min-height: 153vw;}
-        //   }
-        // }
       }
       .tit_box{ position: relative;}
       .txt_box{

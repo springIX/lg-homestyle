@@ -189,12 +189,18 @@ main {
   background-color: #f5efea;
   padding: 4px 8px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 2px;
-  font-size: 8px;
+  font-size: 12px;
   font-family: "Lao MN", sans-serif;
   font-weight: 700;
   border-radius: 4px;
+}
+.brandstory_container .gallery_box .only_badge img {
+  width: 40px;
+}
+.brandstory_container .gallery_box .only_badge span {
+  transform: translateY(2px);
 }
 .brandstory_container .gallery_box img.col2 {
   grid-column: span 2;
