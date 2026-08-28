@@ -661,27 +661,55 @@
 
       // 1) benefits
       if (hasBenefits) {
-        swiperBenefits = new Swiper('#benefits .benefits_info .swiper', {
-          speed: 800,
-          spaceBetween: remToPx(8),
-          slidesPerView: 1.1,
-          scrollbar: {
-            el: '#benefits .benefits_info .scr_bar',
-            draggable: true,
-          },
-        });
+        const $benefitsInfo =
+          $('#benefits .benefits_info');
 
-        $(document).off('click.tabMo').on('click.tabMo', '.home_set_tab button', function (e) {
-          e.preventDefault();
-          const $btn = $(this);
-          const idx = $btn.index();
-          $btn.addClass('on').siblings().removeClass('on');
-          swiperBenefits.slideTo(idx);
-        });
+        const $benefitTabs =
+          $benefitsInfo.find(
+            '.home_set_tab button'
+          );
 
-        swiperBenefits.on('slideChange', function () {
-          $('.home_set_tab button').eq(swiperBenefits.activeIndex).addClass('on').siblings().removeClass('on');
-        });
+        function setBenefitTab(index) {
+          $benefitTabs
+            .removeClass('on')
+            .eq(index)
+            .addClass('on');
+        }
+
+        swiperBenefits = new Swiper(
+          '#benefits .benefits_info .swiper',
+          {
+            speed: 800,
+            spaceBetween: remToPx(8),
+            slidesPerView: 1.1,
+
+            scrollbar: {
+              el: '#benefits .benefits_info .scr_bar',
+              draggable: true
+            },
+
+            on: {
+              init: function () {
+                setBenefitTab(this.activeIndex);
+              },
+
+              slideChange: function () {
+                setBenefitTab(this.activeIndex);
+              }
+            }
+          }
+        );
+
+        $benefitTabs
+          .off('click.benefitTab')
+          .on('click.benefitTab', function (e) {
+            e.preventDefault();
+
+            const index =
+              $benefitTabs.index(this);
+
+            swiperBenefits.slideTo(index);
+          });
       }
 
       // 2) crosssale

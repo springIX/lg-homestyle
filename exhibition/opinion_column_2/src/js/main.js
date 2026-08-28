@@ -1,9 +1,4 @@
 (() => {
-  gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.config({
-    ignoreMobileResize: true
-  });
-
   /* SWIPER */
   const remToPx = (rem) => {
     const isMobile = window.matchMedia(
@@ -131,12 +126,15 @@
   /* NAVIGATION TAB */
   function initScrollNavTab() {
     const $navWrap = $('#navigation_tab');
+
     if (!$navWrap.length) return;
+
     const $nav = $navWrap.find('nav');
     const $ul = $navWrap.find('ul');
     const $links = $navWrap.find('a');
     const $items = $navWrap.find('li');
     const ACTIVE_BUFFER = 2;
+
     if (!$links.length) return;
 
     let currentId = '';
@@ -155,7 +153,8 @@
      * 모바일: 탭 높이 + 고정 헤더 56px
      */
     function getContentOffset() {
-      const tabHeight = $navWrap.outerHeight() || 0;
+      const tabHeight =
+        $navWrap.outerHeight() || 0;
 
       const isMobile = window.matchMedia(
         '(max-width: 767px)'
@@ -194,7 +193,9 @@
 
     // 활성화된 탭의 가로 중앙 위치 계산
     function getMoveLeft($item) {
-      const container = getScrollContainer();
+      const container =
+        getScrollContainer();
+
       const item = $item.get(0);
 
       if (!container || !item) return 0;
@@ -229,7 +230,8 @@
     function centerTab($item) {
       if (!$item.length) return;
 
-      const container = getScrollContainer();
+      const container =
+        getScrollContainer();
 
       container.scrollLeft =
         getMoveLeft($item);
@@ -286,6 +288,7 @@
         if (!$section.length) return;
 
         const top = $section.offset().top;
+
         const bottom =
           top + $section.outerHeight();
 
@@ -369,47 +372,33 @@
     // 최초 실행
     syncActiveByScroll();
   }
+
   initScrollNavTab();
 
-  /* SPACE DETAILES : BEFORE AFTER */
-  $('#space_detail article .before_after').each(function () {
-    const $wrap = $(this);
-    const $after = $wrap.find('.after');
-    const $before = $wrap.find('.before');
-    $after.css({
-      transform: `translateY(${$before.outerHeight()}px)`
-    });
-
-    gsap.to($after, {
-      y: 0,
-      ease: 'none',
-
-      scrollTrigger: {
-        trigger: this,
-        start: 'top top',
-        end: '+=300',
-        scrub: true,
-        invalidateOnRefresh: true,
-      }
-    });
-  });
 
   /* PRODUCTS ANCHER */
   $(document).on('click', function (e) {
     const $target = $(e.target);
 
     // 상품 정보 영역 클릭 시 on 상태 유지
-    if ($target.closest('.pd_anchor_info').length) {
+    if (
+      $target.closest('.pd_anchor_info').length
+    ) {
       return;
     }
 
-    const $pin = $target.closest('.pd_anchor_pin');
+    const $pin =
+      $target.closest('.pd_anchor_pin');
 
     // 핀 클릭 시 해당 앵커 토글
     if ($pin.length) {
-      const $anchor = $pin.closest('.pd_anchor');
+      const $anchor =
+        $pin.closest('.pd_anchor');
 
-      $('.pd_anchor').not($anchor).removeClass('on');
+      $('.pd_anchor')
+        .not($anchor)
+        .removeClass('on');
+
       $anchor.toggleClass('on');
 
       return;
@@ -419,51 +408,13 @@
     $('.pd_anchor').removeClass('on');
   });
 
-  /* AOS */
-  function initAos() {
-    $('[data-aos-stragger]').each(function () {
-      const $parent = $(this);
-
-      const effect =
-        $parent.attr('data-aos-effect') ||
-        'fade-up';
-
-      const delayStep =
-        parseInt(
-          $parent.attr('data-aos-delay-step'),
-          10
-        ) || 50;
-
-      $parent.children().each(function (index) {
-        $(this).attr({
-          'data-aos': effect,
-          'data-aos-delay': index * delayStep
-        });
-      });
-    });
-
-    AOS.init({
-      duration: 1000,
-      offset: 50,
-      once: true
-    });
-  }
-
-  initAos();
-
-  // $(window).on('load pageshow', function () {
-  //   requestAnimationFrame(function () {
-  //     AOS.refreshHard();
-  //     ScrollTrigger.refresh();
-  //   });
-  // });
-
   function startLibraryRefresh() {
     let count = 0;
 
     const timer = setInterval(function () {
       $('.common_swiper').each(function () {
         const swiper = this.swiperInstance;
+
         if (!swiper) return;
 
         const spaceValue = parseFloat(
@@ -482,9 +433,6 @@
         swiper.updateSlides();
         swiper.update();
       });
-
-      AOS.refreshHard();
-      ScrollTrigger.refresh();
 
       if (++count === 3) {
         clearInterval(timer);

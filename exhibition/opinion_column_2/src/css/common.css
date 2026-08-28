@@ -3,7 +3,6 @@
 /* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
 /* Ellipsis */
 @import url("https://www.lge.co.kr/home_style_pages/common/css/swiper.min.css");
-@import url("https://www.lge.co.kr/home_style_pages/common/css/aos.css");
 @import url("main.css");
 html {
   height: 100%;
@@ -40,9 +39,6 @@ main {
 }
 .opinion_column ::-webkit-scrollbar {
   display: none;
-}
-.opinion_column ::-moz-placeholder {
-  color: #d6d6d6;
 }
 .opinion_column ::placeholder {
   color: #d6d6d6;
