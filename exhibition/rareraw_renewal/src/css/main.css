@@ -440,3 +440,60 @@
 .rareraw_container section#member_benefits .notice_box_wrap {
   padding: 0 20rem;
 }
+.rareraw_container section#contents {
+  background-color: #f5f5f5;
+  padding: 40rem 20rem 60rem 20rem;
+}
+.rareraw_container section#contents h2 {
+  font-weight: 700;
+  font-size: clamp(8px, 17rem, 9999rem);
+  text-align: center;
+}
+@media (max-width: 780px) {
+  .rareraw_container section#contents h2 {
+    font-size: clamp(8px, 26rem, 9999rem);
+  }
+}
+.rareraw_container section#contents .cont_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin-bottom: 20px;
+}
+.rareraw_container section#contents .cont_box:last-child {
+  margin-bottom: 0;
+}
+.rareraw_container section#contents .info_box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20rem 20rem 30rem 20rem;
+  font-size: clamp(8px, 13rem, 9999rem);
+}
+.rareraw_container section#contents .info_box:first-child {
+  margin-top: 20rem;
+}
+.rareraw_container section#contents .info_box .tit {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8rem;
+  letter-spacing: -0.4px;
+  line-height: 200%;
+}
+.rareraw_container section#contents .info_box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.rareraw_container section#contents .info_box ul li {
+  display: flex;
+  align-items: flex-start;
+  color: #666;
+  line-height: 138.462%;
+}
+.rareraw_container section#contents .info_box ul li::before {
+  content: "·";
+  display: inline-block;
+  margin-right: 4rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
