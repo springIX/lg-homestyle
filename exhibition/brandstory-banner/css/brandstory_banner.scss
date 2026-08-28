@@ -2171,6 +2171,106 @@ $mo-width: 390;
     }
   }
   /* //epicurean */     
+
+  /* iittala */
+  &.iittala {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 500px; top: 120px;
+          a {
+            img { width: 440px; }
+            .txt-box { position: absolute; left: 40px; top: 30px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 50px; top: 60px; 
+          a {
+            img { width: 228px; }
+            .txt-box { position: absolute; left: 225px; top: 0px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 40px; top: 270px;
+          a {
+            img { width: 318px; }
+            .txt-box { position: absolute; left: 260px; top: 30px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(344); left: mo(-30); top: mo(30); }
+            .txt-box { position: absolute; left: mo(60); top: mo(40); }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            img { width: mo(194); left: mo(30); top: mo(10); }
+            .txt-box { left: mo(30); top: mo(40); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; 
+            img { width: mo(302); right: mo(0); top: mo(0); }
+            .txt-box { top: mo(40); left: mo(110); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //iittala */     
+  
+  /* sidiz */
+  &.sidiz {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 425px; top: 31px;
+          a {
+            img { width: 379px;}
+            .txt-box { position: absolute; left: 85px; top: 95px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 100px; top: 18px; 
+          a {
+            img { width: 306px; }
+            .txt-box { position: absolute; left: 220px; top: 30px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 134px; top: 311px;
+          a {
+            img { width: 238px; }
+            .txt-box { position: absolute; left: 200px; top: 15px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(278); left: mo(-60); top: mo(0); }
+            .txt-box { position: absolute; left: mo(90); top: mo(40); }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            img { width: mo(228); left: mo(30); top: mo(-20); }
+            .txt-box { left: mo(0); top: mo(78); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; 
+            img { width: mo(198); right: mo(40); top: mo(-30); }
+            .txt-box { top: mo(45); left: mo(-40); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //sidiz */       
   
 
 }

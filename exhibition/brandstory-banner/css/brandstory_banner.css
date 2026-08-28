@@ -3448,4 +3448,168 @@
 }
 .brand-story-banner-container {
   /* //epicurean */
+  /* iittala */
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(1) {
+  left: 500px;
+  top: 120px;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(1) a img {
+  width: 440px;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  text-align: right;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(2) {
+  left: 50px;
+  top: 60px;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(2) a img {
+  width: 228px;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 225px;
+  top: 0px;
+  text-align: left;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(3) {
+  left: 40px;
+  top: 270px;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(3) a img {
+  width: 318px;
+}
+.brand-story-banner-container.iittala.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 260px;
+  top: 30px;
+  text-align: left;
+}
+.brand-story-banner-container.iittala.mo > section a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(1) a img {
+  width: calc(344 / 390 * 100vw);
+  left: calc(-30 / 390 * 100vw);
+  top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(60 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(2) a img {
+  width: calc(194 / 390 * 100vw);
+  left: calc(30 / 390 * 100vw);
+  top: calc(10 / 390 * 100vw);
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(2) a .txt-box {
+  left: calc(30 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(3) a img {
+  width: calc(302 / 390 * 100vw);
+  right: calc(0 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.iittala.mo > section:nth-child(3) a .txt-box {
+  top: calc(40 / 390 * 100vw);
+  left: calc(110 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //iittala */
+  /* sidiz */
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(1) {
+  left: 425px;
+  top: 31px;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(1) a img {
+  width: 379px;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: 85px;
+  top: 95px;
+  text-align: right;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(2) {
+  left: 100px;
+  top: 18px;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(2) a img {
+  width: 306px;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 220px;
+  top: 30px;
+  text-align: left;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(3) {
+  left: 134px;
+  top: 311px;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(3) a img {
+  width: 238px;
+}
+.brand-story-banner-container.sidiz.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 200px;
+  top: 15px;
+  text-align: left;
+}
+.brand-story-banner-container.sidiz.mo > section a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(1) a img {
+  width: calc(278 / 390 * 100vw);
+  left: calc(-60 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(90 / 390 * 100vw);
+  top: calc(40 / 390 * 100vw);
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(2) a img {
+  width: calc(228 / 390 * 100vw);
+  left: calc(30 / 390 * 100vw);
+  top: calc(-20 / 390 * 100vw);
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(2) a .txt-box {
+  left: calc(0 / 390 * 100vw);
+  top: calc(78 / 390 * 100vw);
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(3) a img {
+  width: calc(198 / 390 * 100vw);
+  right: calc(40 / 390 * 100vw);
+  top: calc(-30 / 390 * 100vw);
+}
+.brand-story-banner-container.sidiz.mo > section:nth-child(3) a .txt-box {
+  top: calc(45 / 390 * 100vw);
+  left: calc(-40 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //sidiz */
 }
