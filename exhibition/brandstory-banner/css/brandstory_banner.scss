@@ -2272,5 +2272,104 @@ $mo-width: 390;
   }
   /* //sidiz */       
   
+  /* baccarat */
+  &.baccarat {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 516px; top: 129px;
+          a {
+            img { width: 280px;}
+            .txt-box { position: absolute; left: -20px; top: -40px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 109px; top: 86px; 
+          a {
+            img { width: 237px; }
+            .txt-box { position: absolute; left: 160px; top: -40px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 116px; top: 345px;
+          a {
+            img { width: 225px; }
+            .txt-box { position: absolute; left: 165px; top: -50px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; padding-top: mo(60); }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(212); left: mo(-60); top: mo(0); }
+            .txt-box { position: absolute; left: mo(60); top: mo(30); }
+          }
+        }
+        &:nth-child(2) {
+          a { margin-top: mo(20);
+            img { width: mo(164); left: mo(50); top: mo(-20); }
+            .txt-box { left: mo(40); top: mo(-55); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; margin-top: mo(30);
+            img { width: mo(168); right: mo(75); top: mo(-40); }
+            .txt-box { left: mo(-15); top: mo(-90); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //baccarat */    
+
+  /* woodolens */
+  &.woodolens  {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 400px; top: 200px;
+          a {
+            img { width: 500px; object-fit: cover;}
+            .txt-box { position: absolute; right: 60px; top: -60px; text-align: left; }
+          }
+        }
+        &:nth-child(2) { left: 54px; top: 40px; 
+          a {
+            img { width: 354px; }
+            .txt-box { position: absolute; left: 240px; top: 20px; text-align: right; }
+          }
+        }
+        &:nth-child(3) { left: 60px; top: 352px;
+          a {
+            img { width: 357px; }
+            .txt-box { position: absolute; left: 30px; top: -40px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; padding-top: mo(90); }
+        &:nth-child(1) {
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(350); object-fit: cover; left: mo(-10); top: mo(0); }
+            .txt-box { position: absolute; left: mo(60); top: mo(30); }
+          }
+        }
+        &:nth-child(2) {
+          a { padding-top: mo(0); flex-direction: column-reverse;
+            img { width: mo(325); left: mo(30); top: mo(0); }
+            .txt-box { left: mo(160); top: mo(50); }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse;
+            img { width: mo(295); right: mo(0); top: mo(-40); }
+            .txt-box { left: mo(180); top: mo(-80); text-align: right; }
+          }
+        }
+      }
+    }
+  }
+  /* //woodolens */      
 
 }

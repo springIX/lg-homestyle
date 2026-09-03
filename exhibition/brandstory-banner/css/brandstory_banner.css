@@ -3612,4 +3612,182 @@
 }
 .brand-story-banner-container {
   /* //sidiz */
+  /* baccarat */
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(1) {
+  left: 516px;
+  top: 129px;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(1) a img {
+  width: 280px;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: -20px;
+  top: -40px;
+  text-align: right;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(2) {
+  left: 109px;
+  top: 86px;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(2) a img {
+  width: 237px;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 160px;
+  top: -40px;
+  text-align: left;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(3) {
+  left: 116px;
+  top: 345px;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(3) a img {
+  width: 225px;
+}
+.brand-story-banner-container.baccarat.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 165px;
+  top: -50px;
+  text-align: left;
+}
+.brand-story-banner-container.baccarat.mo > section a {
+  align-items: flex-start;
+  padding-top: calc(60 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(1) a img {
+  width: calc(212 / 390 * 100vw);
+  left: calc(-60 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(60 / 390 * 100vw);
+  top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(2) a {
+  margin-top: calc(20 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(2) a img {
+  width: calc(164 / 390 * 100vw);
+  left: calc(50 / 390 * 100vw);
+  top: calc(-20 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(2) a .txt-box {
+  left: calc(40 / 390 * 100vw);
+  top: calc(-55 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+  margin-top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(3) a img {
+  width: calc(168 / 390 * 100vw);
+  right: calc(75 / 390 * 100vw);
+  top: calc(-40 / 390 * 100vw);
+}
+.brand-story-banner-container.baccarat.mo > section:nth-child(3) a .txt-box {
+  left: calc(-15 / 390 * 100vw);
+  top: calc(-90 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //baccarat */
+  /* woodolens */
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(1) {
+  left: 400px;
+  top: 200px;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(1) a img {
+  width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  right: 60px;
+  top: -60px;
+  text-align: left;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(2) {
+  left: 54px;
+  top: 40px;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(2) a img {
+  width: 354px;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  left: 240px;
+  top: 20px;
+  text-align: right;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(3) {
+  left: 60px;
+  top: 352px;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(3) a img {
+  width: 357px;
+}
+.brand-story-banner-container.woodolens.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  left: 30px;
+  top: -40px;
+  text-align: left;
+}
+.brand-story-banner-container.woodolens.mo > section a {
+  align-items: flex-start;
+  padding-top: calc(90 / 390 * 100vw);
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(1) a img {
+  width: calc(350 / 390 * 100vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: calc(-10 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(60 / 390 * 100vw);
+  top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(2) a {
+  padding-top: calc(0 / 390 * 100vw);
+  flex-direction: column-reverse;
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(2) a img {
+  width: calc(325 / 390 * 100vw);
+  left: calc(30 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(2) a .txt-box {
+  left: calc(160 / 390 * 100vw);
+  top: calc(50 / 390 * 100vw);
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(3) a img {
+  width: calc(295 / 390 * 100vw);
+  right: calc(0 / 390 * 100vw);
+  top: calc(-40 / 390 * 100vw);
+}
+.brand-story-banner-container.woodolens.mo > section:nth-child(3) a .txt-box {
+  left: calc(180 / 390 * 100vw);
+  top: calc(-80 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container {
+  /* //woodolens */
 }
