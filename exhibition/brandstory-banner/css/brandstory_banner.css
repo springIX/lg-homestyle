@@ -3790,4 +3790,103 @@
 }
 .brand-story-banner-container {
   /* //woodolens */
+  /* mauviel */
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(1) {
+  left: 426px;
+  top: 93px;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(1) a img {
+  width: 422px;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(1) a .txt-box {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  text-align: right;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(2) {
+  left: 68px;
+  top: 14px;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(2) a img {
+  width: 310px;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(2) a .txt-box {
+  position: absolute;
+  right: -50px;
+  top: 55px;
+  text-align: right;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(3) {
+  left: 68px;
+  top: 264px;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(3) a img {
+  width: 310px;
+}
+.brand-story-banner-container.mauviel.pc > section:nth-child(3) a .txt-box {
+  position: absolute;
+  right: -50px;
+  top: 40px;
+  text-align: right;
+}
+.brand-story-banner-container.mauviel.mo > section a {
+  align-items: flex-start;
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(1) {
+  padding-top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(1) a {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(1) a img {
+  width: calc(342 / 390 * 100vw);
+  height: calc(250 / 390 * 100vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: calc(-20 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(1) a .txt-box {
+  position: absolute;
+  left: calc(70 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(2) a {
+  padding-top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(2) a img {
+  width: calc(292 / 390 * 100vw);
+  height: calc(130 / 390 * 100vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: calc(50 / 390 * 100vw);
+  top: calc(0 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(2) a .txt-box {
+  left: calc(-60 / 390 * 100vw);
+  top: calc(-10 / 390 * 100vw);
+  text-align: right;
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(3) a {
+  flex-direction: row-reverse;
+  padding-top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(3) a img {
+  width: calc(268 / 390 * 100vw);
+  height: calc(180 / 390 * 100vw);
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: calc(-40 / 390 * 100vw);
+  top: calc(30 / 390 * 100vw);
+}
+.brand-story-banner-container.mauviel.mo > section:nth-child(3) a .txt-box {
+  left: calc(40 / 390 * 100vw);
+  top: calc(20 / 390 * 100vw);
+  text-align: left;
+}
+.brand-story-banner-container {
+  /* //mauviel */
 }
