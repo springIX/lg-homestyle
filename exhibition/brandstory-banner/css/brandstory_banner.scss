@@ -2420,6 +2420,114 @@ $mo-width: 390;
       }
     }
   }
-  /* //mauviel */      
+  /* //mauviel */     
+  
+  /* jackson_chameleon */
+  &.jackson_chameleon {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 500px; top: 239px;
+          a {
+            img { width: 353px;}
+            .txt-box { position: absolute; left: -80px; top: 60px; text-align: right; }
+          }
+        }
+        &:nth-child(2) { left: 44px; top: 39px; 
+          a {
+            img { width: 481px; }
+            .txt-box { position: absolute; right: -80px; top: 80px; text-align: left; }
+          }
+        }
+        &:nth-child(3) { left: 96px; top: 386px;
+          a {
+            img { width: 375px; }
+            .txt-box { position: absolute; right: -70px; top: 75px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      display: flex; flex-direction: column;
+
+      > section {
+        a { align-items: flex-start; }
+
+        &:nth-child(1) {
+          order: 2; 
+          a { margin-top: mo(60); 
+            img { width: mo(294); left: mo(80); top: mo(0); }
+            .txt-box { left: mo(-230); bottom: mo(-130); text-align: right; }
+          }
+        }
+        
+        &:nth-child(2) { 
+          order: 1;
+          a { position: relative; flex-direction: row-reverse; margin-top: mo(50);
+            img { width: mo(333); left: mo(-50); top: mo(0); }
+            .txt-box { position: absolute; right: mo(60); bottom: mo(-10); }
+          }
+        }
+        
+        &:nth-child(3) {
+          order: 3;
+          a { flex-direction: row-reverse;
+            img { width: mo(328); left: mo(-65); top: mo(90); }
+            .txt-box { left: mo(280); top: mo(70);text-align: left; }
+          }
+        }
+      }
+    }
+  }
+  /* //jackson_chameleon */  
+  
+  /* solab */
+  &.solab {
+    &.pc {
+      > section {
+        &:nth-child(1) { left: 388px; top: 150px;
+          a {
+            img { width: 500px;}
+            .txt-box { position: absolute; right: 100px; top: -30px; text-align: left; }
+          }
+        }
+        &:nth-child(2) { left: 40px; top: 80px; 
+          a {
+            img { width: 360px; }
+            .txt-box { position: absolute; right: -80px; top: -20px; text-align: right; }
+          }
+        }
+        &:nth-child(3) { left: 65px; top: 370px;
+          a {
+            img { width: 320px; }
+            .txt-box { position: absolute; right: 100px; top: -70px; text-align: left; }
+          }
+        }
+      }
+    }
+    &.mo {
+      > section {
+        a { align-items: flex-start; }
+        &:nth-child(1) { padding-top: mo(70);
+          a { position: relative; flex-direction: row-reverse;
+            img { width: mo(378); left: mo(-20); top: mo(0); }
+            .txt-box { position: absolute; left: mo(60); top: mo(-40); }
+          }
+        }
+        &:nth-child(2) {
+          a { padding-top: mo(30); 
+            img { width: mo(288); left: mo(50); top: mo(0); }
+            .txt-box { left: mo(-110); top: mo(-30); text-align: right; }
+          }
+        }
+        &:nth-child(3) {
+          a { flex-direction: row-reverse; padding-top: mo(60);
+            img { width: mo(314); left: mo(-40); top: mo(0); }
+            .txt-box { left: mo(165); top: mo(-50); text-align: left; }
+          }
+        }
+      }
+    }
+  }
+  /* //solab */     
 
 }
