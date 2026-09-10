@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+@import "var";
+@import url("main.css");
+@import url("https://www.lge.co.kr/home_style_pages/common/css/swiper.min.css");
+html{ scroll-behavior: smooth;}
+#home-app-subscribe{ 
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.02em;
+  @include screen("mo") { font-size: 12px;}
+
+  ::-webkit-scrollbar{ display: none;}
+  ::placeholder{ color: #d6d6d6;}
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    outline: none !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: 0 none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    text-align: inherit;
+    line-height: inherit;
+  }
+  button{ letter-spacing: inherit; width: 100%; display: block;}
+  input[type=checkbox], input[type=radio]{ width: 0; height: 0; overflow: hidden; position: absolute; left: 0; top: 0;}
+  label{ cursor: pointer;}
+  img,
+  video,
+  svg { display: block; max-width: 100%;}
+  option {
+    color: inherit;
+  }
+  section {
+    position: relative;
+  }
+  picture {
+    display: block;
+    width: 100%;
+  }
+  span{ display: block;}
+}

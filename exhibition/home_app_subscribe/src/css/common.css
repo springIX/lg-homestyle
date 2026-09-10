@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* 색상 */
+/* Responsive */
+/* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
+/* Ellipsis */
+@import url("main.css");
+@import url("https://www.lge.co.kr/home_style_pages/common/css/swiper.min.css");
+html {
+  scroll-behavior: smooth;
+}
+
+#home-app-subscribe {
+  color: #111;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: keep-all;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe {
+    font-size: 12px;
+  }
+}
+#home-app-subscribe ::-webkit-scrollbar {
+  display: none;
+}
+#home-app-subscribe ::placeholder {
+  color: #d6d6d6;
+}
+#home-app-subscribe * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  outline: none !important;
+}
+#home-app-subscribe h1,
+#home-app-subscribe h2,
+#home-app-subscribe h3,
+#home-app-subscribe h4,
+#home-app-subscribe h5,
+#home-app-subscribe h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+#home-app-subscribe table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#home-app-subscribe ol,
+#home-app-subscribe ul {
+  list-style: none;
+}
+#home-app-subscribe button,
+#home-app-subscribe input,
+#home-app-subscribe select,
+#home-app-subscribe textarea {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  text-align: inherit;
+  line-height: inherit;
+}
+#home-app-subscribe button {
+  letter-spacing: inherit;
+  width: 100%;
+  display: block;
+}
+#home-app-subscribe input[type=checkbox], #home-app-subscribe input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#home-app-subscribe label {
+  cursor: pointer;
+}
+#home-app-subscribe img,
+#home-app-subscribe video,
+#home-app-subscribe svg {
+  display: block;
+  max-width: 100%;
+}
+#home-app-subscribe option {
+  color: inherit;
+}
+#home-app-subscribe section {
+  position: relative;
+}
+#home-app-subscribe picture {
+  display: block;
+  width: 100%;
+}
+#home-app-subscribe span {
+  display: block;
+}
