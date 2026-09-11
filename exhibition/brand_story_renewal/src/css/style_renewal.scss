@@ -160,6 +160,28 @@ main { background-color: #F9F9F9;}
     &#about_story{
       img{ margin: 16px 0;}
     }
+    
+    /* BRANS STORY */
+    &#benefit{
+      .benefit_box{ border: 2px solid #111; border-width: 2px 0; padding: 24px 0;
+        .txt_box{
+          h3{ font-size: 18px; font-weight: 700;}
+          p{ font-size: 15px; color: #444; margin-top: 8px;}
+        }
+        img{ margin-top: 20px;}
+      }
+      .card_benefit{ margin: 24px 0;
+        ul{ display: flex; gap: 6px;
+          li{ background-color: #fff; border-radius: 8px; width: 100%; padding: 16px;
+            span{ font-weight: 600;}
+            p{ font-size: 12px; color: #444; margin-top: 4px;}
+          }
+        }
+        .more_btn{ width: 100%; font-size: 15px; font-weight: 500; color: #444; display: flex; align-items: center; justify-content: center; margin-top: 20px; background-color: transparent; cursor: pointer;
+          &::after{content: ""; background: url(https://static-store.lge.co.kr/editor/304/2507300002304.png) no-repeat center center / contain; display: block; width: 20px; height: 20px;}
+        }
+      }
+    }
 
     /* COLLECTION */
     &#collection{ 
