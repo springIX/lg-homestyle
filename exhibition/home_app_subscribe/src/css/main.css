@@ -20,7 +20,7 @@
   position: relative;
 }
 #home-app-subscribe .layout-inner.ty-s {
-  max-width: 940px;
+  max-width: 980px;
 }
 #home-app-subscribe .layout-inner.ty-m {
   max-width: 1380px;
@@ -275,7 +275,7 @@
   color: #666;
 }
 #home-app-subscribe .table-box {
-  margin: 8px 0;
+  margin: 4px 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -302,7 +302,7 @@
   }
 }
 #home-app-subscribe .table-box table th, #home-app-subscribe .table-box table td {
-  padding: 12px;
+  padding: 6px;
   border: 1px solid #d1d1d1;
   vertical-align: middle;
   line-height: 1.4;
@@ -318,6 +318,7 @@
 }
 #home-app-subscribe .table-box table thead th {
   background-color: #ebebeb;
+  font-weight: 500;
 }
 #home-app-subscribe .table-box table .tb-tit th {
   font-weight: 700;
@@ -412,8 +413,10 @@
   margin: 0 auto;
   width: auto;
 }
-#home-app-subscribe section#kv .txt-box .kv-sub-tit {
-  width: 107px;
+@media (max-width: 767px) {
+  #home-app-subscribe section#kv .txt-box .kv-sub-tit {
+    width: 107px;
+  }
 }
 #home-app-subscribe section#kv .txt-box .kv-tit {
   margin: 24px 0;
@@ -793,12 +796,11 @@
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list {
-  overflow: visible;
-  margin-bottom: 56px;
+  padding-bottom: 56px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list {
-    margin-bottom: 26px;
+    padding-bottom: 26px;
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list .swiper-slide {
@@ -1199,8 +1201,9 @@
   width: 100%;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
-  padding-bottom: 28.3%;
   position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {

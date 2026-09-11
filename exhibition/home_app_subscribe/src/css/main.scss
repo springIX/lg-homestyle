@@ -7,7 +7,7 @@
 
   /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   .layout-inner{ max-width: 1240px; padding: 0 $layout_pd; margin: 0 auto; position: relative;
-    &.ty-s{max-width: 940px;}
+    &.ty-s{max-width: 980px;}
     &.ty-m{max-width: 1380px;}
     &.ty-l{max-width: 1504px;}
   }
@@ -119,17 +119,17 @@
     .ty-num{ color: #666;}
   }
 
-  .table-box{ margin: 8px 0; overflow-x: auto;  -webkit-overflow-scrolling: touch;
+  .table-box{ margin: 4px 0; overflow-x: auto;  -webkit-overflow-scrolling: touch;
     @include screen("mo") {  margin: 4px 0;
       &.ty-overflow table{ min-width: 600px;}
     }
     table { color: #222; width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; text-align: center; background-color: #fff;
       @include screen("mo") { font-size: 11px;}
-      th,td { padding: 12px; border: 1px solid #d1d1d1; vertical-align: middle; line-height: 1.4; font-weight: 400;
+      th,td { padding: 6px; border: 1px solid #d1d1d1; vertical-align: middle; line-height: 1.4; font-weight: 400;
         @include screen("mo") { padding: 4px;}
       }
       tbody tr:first-child > *{ border-top: 0; }
-      thead th { background-color: #ebebeb;}
+      thead th { background-color: #ebebeb; font-weight: 500;}
       .tb-tit th{ font-weight: 700; background-color: #D1D1D1;
         .sub-tit{ font-weight: 400;}
       }
@@ -165,7 +165,9 @@
       }
       .txt-box{z-index: 1; position: relative;
         img{ margin: 0 auto; width: auto;}
-        .kv-sub-tit{ width: 107px;}
+        @include screen("mo") { 
+          .kv-sub-tit{ width: 107px;}
+        }
         .kv-tit{ margin: 24px 0;
           @include screen("mo") { margin: 16px 0 20px; 
             img{width: 215px;}
@@ -293,8 +295,8 @@
     &#detail-affiliated-card{
       .slide-box{
         .swiper{ 
-          &.card-list{ overflow: visible; margin-bottom: 56px;
-            @include screen("mo") { margin-bottom: 26px;}
+          &.card-list{ padding-bottom: 56px;
+            @include screen("mo") { padding-bottom: 26px;}
             .swiper-slide{ cursor: pointer; width: 96px;
               @include screen("mo") { width: 86px;}
               p{ width: 100%; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background-color: #fff; font-weight: 500; border: 1px solid #dee1e5; text-align: center; line-height: 1; position: relative; overflow: hidden; transition: .5s ease;
@@ -411,7 +413,7 @@
             @include screen("mo") { flex-direction: column-reverse;}
           }
           > *{ width: 100%; }
-          .video-box{ padding-bottom: 28.3%; position: relative;
+          .video-box{ position: relative;  aspect-ratio: 16 / 9; overflow: hidden;
             @include screen("mo") { padding-bottom: 50%;}
             video, iframe{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
           }
