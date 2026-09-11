@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Color Icon/Write">
+<g id="&#236;&#152;&#129;&#236;&#151;&#173;">
+</g>
+<g id="&#236;&#149;&#132;&#236;&#157;&#180;&#236;&#189;&#152;">
+<path id="Union" d="M25.3242 8.62466L8.99609 24.9518H2.81152V18.7672L19.1396 2.44009L25.3242 8.62466Z" fill="url(#paint0_linear_0_168)"/>
+<path id="Union_2" d="M25.3242 8.62368L20.6855 13.2624L14.501 7.07778L19.1396 2.43911L25.3242 8.62368Z" fill="url(#paint1_linear_0_168)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_168" x1="19.696" y1="24.9518" x2="19.696" y2="-1.31187" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF5A52"/>
+<stop offset="1" stop-color="#FF5A52"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_168" x1="19.9126" y1="2.43911" x2="19.9126" y2="13.2624" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF9654"/>
+<stop offset="1" stop-color="#FF9654"/>
+</linearGradient>
+</defs>
+</svg>

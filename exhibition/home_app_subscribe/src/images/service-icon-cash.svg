@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Color Icon/Cash">
+<g id="&#236;&#152;&#129;&#236;&#151;&#173;">
+</g>
+<g id="&#8;&#236;&#149;&#132;&#236;&#157;&#180;&#236;&#189;&#152;">
+<path id="Union" d="M14 2.75C20.2132 2.75 25.25 7.7868 25.25 14C25.25 20.2132 20.2132 25.25 14 25.25C7.7868 25.25 2.75 20.2132 2.75 14C2.75 7.7868 7.7868 2.75 14 2.75Z" fill="url(#paint0_linear_0_157)"/>
+<path id="Won" d="M19.3251 12.3823H20.7938V14.3823H18.7675L17.6561 18.3657L17.452 19.0972H15.6542L15.4471 18.3706L14.0116 13.3335L12.5546 18.5903L12.3514 19.3228H10.5477L10.3436 18.5913L9.1698 14.3823H7.20593V12.3823H8.61218L7.8573 9.67627H9.93347L11.4462 15.1011L12.951 9.67627H15.0497L16.5419 14.9136L18.0038 9.67627H20.08L19.3251 12.3823Z" fill="white"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_157" x1="14" y1="2.75" x2="14" y2="25.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#10CF2D"/>
+<stop offset="1" stop-color="#10CF2D"/>
+</linearGradient>
+</defs>
+</svg>
