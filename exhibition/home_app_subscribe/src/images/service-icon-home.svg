@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Color Icon/Home">
+<g id="&#236;&#152;&#129;&#236;&#151;&#173;">
+</g>
+<g id="&#236;&#149;&#132;&#236;&#157;&#180;&#236;&#189;&#152;">
+<path id="Union" d="M16.5681 4.15848L27.4252 13.7578L27.7143 14.0145V27.7143H18.2857V21.7143C18.2857 20.4519 17.2624 19.4286 16 19.4286C14.7376 19.4286 13.7143 20.4519 13.7143 21.7143V27.7143H4.28571V14.0134L4.57478 13.7578L15.433 4.15848L16 3.65625L16.5681 4.15848Z" fill="url(#paint0_linear_0_89)"/>
+<path id="Union_2" d="M27.4252 12.615L27.7143 12.8717V17.9174L16 7.43527L4.28571 17.9174V12.8705L16 2.51339L27.4252 12.615Z" fill="url(#paint1_linear_0_89)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_89" x1="16" y1="3.65625" x2="16" y2="27.7143" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF9654"/>
+<stop offset="1" stop-color="#FF9654"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_89" x1="21.8571" y1="17.9174" x2="21.8571" y2="-0.0539429" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF5A52"/>
+<stop offset="1" stop-color="#FF5A52"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Color Icon/Basket">
+<g id="&#236;&#152;&#129;&#236;&#151;&#173;">
+</g>
+<g id="&#236;&#149;&#132;&#236;&#157;&#180;&#236;&#189;&#152;">
+<path id="Union" d="M24.25 24.25H3.75V3.75H24.25V24.25Z" fill="url(#paint0_linear_0_194)"/>
+<path id="Union_2" d="M11.5 9.5C11.5 10.8807 12.6193 12 14 12C15.3807 12 16.5 10.8807 16.5 9.5V8H18.5V9.5C18.5 11.9853 16.4853 14 14 14C11.5147 14 9.5 11.9853 9.5 9.5V8H11.5V9.5Z" fill="white"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_194" x1="19.125" y1="24.25" x2="19.125" y2="0.333334" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF5A52"/>
+<stop offset="1" stop-color="#FF5A52"/>
+</linearGradient>
+</defs>
+</svg>

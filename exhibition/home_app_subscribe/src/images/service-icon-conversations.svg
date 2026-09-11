@@ -1,0 +1,28 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Color Icon/Conversations">
+<g id="&#236;&#152;&#129;&#236;&#151;&#173;">
+</g>
+<g id="&#236;&#149;&#132;&#236;&#157;&#180;&#236;&#189;&#152;">
+<path id="Rectangle 3469303" d="M23.9998 21.6368V12.7003H17.6718H12.0788H10.2149V24.2254H10.6023L13.6208 21.6368H23.9998Z" fill="url(#paint0_linear_0_178)" stroke="url(#paint1_linear_0_178)" stroke-width="1.5"/>
+<path id="Rectangle 3469302" d="M17.7852 4H4.00025L4.00016 12.7003H14.3792L17.3977 15.2856H17.7851L17.7852 4Z" fill="url(#paint2_linear_0_178)" stroke="url(#paint3_linear_0_178)" stroke-width="1.5"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_178" x1="17.1073" y1="12.7003" x2="17.1073" y2="24.2254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AC9DFF"/>
+<stop offset="1" stop-color="#AC9DFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_178" x1="17.1073" y1="12.7003" x2="17.1073" y2="24.2254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AC9DFF"/>
+<stop offset="1" stop-color="#AC9DFF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_178" x1="10.8927" y1="4" x2="10.8927" y2="15.2856" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8873FF"/>
+<stop offset="1" stop-color="#8873FF"/>
+</linearGradient>
+<linearGradient id="paint3_linear_0_178" x1="10.8927" y1="4" x2="10.8927" y2="15.2856" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8873FF"/>
+<stop offset="1" stop-color="#8873FF"/>
+</linearGradient>
+</defs>
+</svg>

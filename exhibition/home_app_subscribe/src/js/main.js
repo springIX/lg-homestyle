@@ -163,3 +163,45 @@ $(function () {
     $contWrap.children().removeClass('on').eq(idx).addClass('on');
   });
 });
+
+/* benefit_service.html */
+$(function () {
+  const $servicePage = $('.service-page');
+
+  if (!$servicePage.length) return;
+
+  // 기존 아코디언 동작과 hidden 속성을 동기화해 보조기기에도 상태를 전달합니다.
+  $servicePage.on('click', '.accordion-btn', function () {
+    const $button = $(this);
+    const $content = $button.closest('.accordion').children('.accordion-cont');
+    const isExpanded = $button.attr('aria-expanded') === 'true';
+
+    $content.prop('hidden', !isExpanded);
+  });
+
+  // 제품별 케어 탭: 클릭과 방향키 탐색을 모두 지원합니다.
+  $servicePage.on('click keydown', '[data-service-tabs] [role="tab"]', function (event) {
+    const $tabs = $(this).parent().children('[role="tab"]');
+    let index = $tabs.index(this);
+
+    if (event.type === 'keydown') {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      if (event.key === 'Home') index = 0;
+      if (event.key === 'End') index = $tabs.length - 1;
+      if (event.key === 'ArrowLeft') index = (index - 1 + $tabs.length) % $tabs.length;
+      if (event.key === 'ArrowRight') index = (index + 1) % $tabs.length;
+      $tabs.eq(index).focus();
+    }
+
+    const $activeTab = $tabs.eq(index);
+    const panelId = $activeTab.attr('aria-controls');
+
+    $tabs.removeClass('is-active').attr({ 'aria-selected': 'false', tabindex: '-1' });
+    $activeTab.addClass('is-active').attr({ 'aria-selected': 'true', tabindex: '0' });
+    $activeTab.closest('.service-tabs').children('.service-tabs__panel').prop('hidden', true);
+    $('#' + panelId).prop('hidden', false);
+  });
+
+  $servicePage.find('[data-service-tabs] [role="tab"]').attr('tabindex', '-1').filter('[aria-selected="true"]').attr('tabindex', '0');
+});
