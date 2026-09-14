@@ -588,20 +588,75 @@
 
   // faq 아코디언 내부 리스트
   .service-care__faq {
-    > li {
-      &--bar {
-         
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &--bar {
+      &::before {
+        content: '-';
+        display: inline-block;
+        margin-right: 5px;
       }
+    }
 
+    &--dot {
+      &::before {
+        content: "";      
+        display: inline-block;
+        margin-right: 5px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #666;
+        vertical-align: middle;
+        margin-left: 10px;
+      }            
+      &:first-child {
+        margin-top: 3px;
+      }
+    }
+
+    > li {
+      color: #444;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; 
+      letter-spacing: -0.42px;
+
+      &.service-care__faq--dot {
+        &::before {
+          margin-left: 0 !important;          
+        }
+      }      
       > ul {
-        > li {
-          &--dot {
+        display: flex;
+        flex-direction: column;
+        gap: 3px; 
 
-          }
+        > li {
+          &.service-care__faq--bar {
+            margin-top: 3px !important;    
+
+            &::before {
+              margin-left: 10px !important;      
+            }  
+          }        
         }
       }
+    }    
 
-    }
+    .service-care__faq--link {
+      display: inline-block;
+      text-decoration: underline;
+      color: #111;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.42px;      
+    }    
   }
 
   // 탭 메뉴
@@ -1771,7 +1826,7 @@
       }
 
       &__inner {
-        padding: 20px 58px 20px 42px;
+        padding: 24px 70px 32px 30px;
       }
     }
 

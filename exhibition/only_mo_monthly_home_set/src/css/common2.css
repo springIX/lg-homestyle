@@ -39,6 +39,9 @@ html {
 .monthly_home_set ::-webkit-scrollbar {
   display: none;
 }
+.monthly_home_set ::-moz-placeholder {
+  color: #666;
+}
 .monthly_home_set ::placeholder {
   color: #666;
 }

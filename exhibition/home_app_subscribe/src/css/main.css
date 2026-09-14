@@ -1475,6 +1475,62 @@
   background: #666;
   vertical-align: middle;
 }
+#home-app-subscribe .service-care__faq {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#home-app-subscribe .service-care__faq--bar::before {
+  content: "-";
+  display: inline-block;
+  margin-right: 5px;
+}
+#home-app-subscribe .service-care__faq--dot::before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #666;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+#home-app-subscribe .service-care__faq--dot:first-child {
+  margin-top: 3px;
+}
+#home-app-subscribe .service-care__faq > li {
+  color: #444;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.42px;
+}
+#home-app-subscribe .service-care__faq > li.service-care__faq--dot::before {
+  margin-left: 0 !important;
+}
+#home-app-subscribe .service-care__faq > li > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#home-app-subscribe .service-care__faq > li > ul > li.service-care__faq--bar {
+  margin-top: 3px !important;
+}
+#home-app-subscribe .service-care__faq > li > ul > li.service-care__faq--bar::before {
+  margin-left: 10px !important;
+}
+#home-app-subscribe .service-care__faq .service-care__faq--link {
+  display: inline-block;
+  text-decoration: underline;
+  color: #111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.42px;
+}
 #home-app-subscribe .service-tabs__list {
   display: flex;
   align-items: center;
@@ -2482,7 +2538,7 @@
   display: none;
 }
 #home-app-subscribe .service-page__section--faq .faq-accordion__inner {
-  padding: 20px 58px 20px 42px;
+  padding: 24px 70px 32px 30px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe .service-page__section--faq .service-tabs .service-tabs__list {
@@ -2956,4 +3012,4 @@
     width: 18px;
     height: 18px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
