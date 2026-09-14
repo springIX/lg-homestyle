@@ -21,10 +21,18 @@
   ];
 
   const $tabs = $('[data-service-tabs]');
+
+  const $serviceTabs = $tabs.closest(
+    '.service-tabs'
+  );
+
   const $buttons = $tabs.find(
     '.service-tabs__button'
   );
-  const $panels = $('.service-tabs__panel');
+
+  const $panels = $serviceTabs.find(
+    '.service-tabs__panel'
+  );
 
   if (!$tabs.length || !$panels.length) {
     return;
