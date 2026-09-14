@@ -2239,6 +2239,18 @@
   #home-app-subscribe .service-page__section--care .service-care .service-care__item {
     padding: 10px 0;
   }
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(1) {
+    order: 1;
+  }
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(2) {
+    order: 3;
+  }
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(3) {
+    order: 2;
+  }
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(4) {
+    order: 4;
+  }
 }
 @media (max-width: 767px) {
   #home-app-subscribe .service-page__section--care .service-care {
@@ -2279,7 +2291,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe .service-page__section--care .service-tooltip__wrap {
-    font-size: 11px;
+    font-size: 11px !important;
   }
 }
 #home-app-subscribe .service-page__section--care .service-tooltip__btn {
@@ -2518,6 +2530,9 @@
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
+[aria-expanded=true] #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title::after {
+  transform: rotate(270deg);
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__desc {
   margin: 4px 0 0 16px;
   color: #444;
@@ -2580,7 +2595,7 @@
   border-radius: 12px;
   background-color: #fff;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion.is-open .service-accordion__button::after {
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion .service-accordion__button[aria-expanded=true]::after {
   transform: rotate(270deg);
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
@@ -2663,7 +2678,7 @@
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee {
   width: 100%;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee.is-open .service-cancel__return-fee-button::after {
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee .service-cancel__return-fee-button[aria-expanded=true]::after {
   transform: rotate(270deg);
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {

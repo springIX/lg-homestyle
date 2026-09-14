@@ -1418,6 +1418,13 @@
 
         @include screen("mo") {
           padding: 10px 0;
+
+          // 순서 변경
+          &:nth-child(1) { order: 1; }
+          &:nth-child(2) { order: 3; } 
+          &:nth-child(3) { order: 2; } 
+          &:nth-child(4) { order: 4; }
+
         }        
       }
 
@@ -1462,7 +1469,7 @@
       position: relative;
 
       @include screen("mo") {
-        font-size: 11px;
+        font-size: 11px !important;
       }
     }
 
@@ -1717,8 +1724,12 @@
             width: 20px;
             height: 20px;
             background: url(../images/icon_arr.png) no-repeat center center / contain;
-            transform: rotate(90deg); // 기본 상태 (아래 화살표)
+            transform: rotate(90deg); 
             transition: transform 0.3s ease;
+          }
+
+          [aria-expanded="true"] &::after {
+            transform: rotate(270deg); 
           }
         }
 
@@ -1797,8 +1808,8 @@
           border-radius: 12px;
           background-color: #fff;
 
-          &.is-open {
-            .service-accordion__button::after {
+          .service-accordion__button {
+            &[aria-expanded="true"]::after {
               transform: rotate(270deg);
             }
           }
@@ -1830,6 +1841,7 @@
             transform: rotate(90deg);
             transition: transform 0.3s ease;
           }
+          
         }
 
         .service-accordion__content {
@@ -1893,8 +1905,8 @@
         .service-cancel__return-fee {
           width: 100%;
 
-          &.is-open {
-            .service-cancel__return-fee-button::after {
+          .service-cancel__return-fee-button {
+            &[aria-expanded="true"]::after {
               transform: rotate(270deg);
             }
           }
