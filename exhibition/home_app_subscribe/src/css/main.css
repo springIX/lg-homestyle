@@ -1646,15 +1646,37 @@
   font-weight: 400;
   color: #888;
 }
-#home-app-subscribe .service-tabs__list {
+#home-app-subscribe .service-tabs {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-tabs .service-tabs__list--wrap {
+    position: relative;
+    width: 100%;
+  }
+  #home-app-subscribe .service-tabs .service-tabs__list--wrap::after {
+    content: "";
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(244, 244, 244, 0) 0%, rgb(244, 244, 244) 100%);
+    pointer-events: none;
+  }
+}
+#home-app-subscribe .service-tabs .service-tabs__list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
   padding: 8px 0 4px;
-  margin-bottom: 12px;
+  margin-bottom: 17px;
 }
-#home-app-subscribe .service-tabs__list .service-tabs__button {
+#home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1671,24 +1693,46 @@
   line-height: 18px;
   white-space: nowrap;
 }
-#home-app-subscribe .service-tabs__list .service-tabs__button.is-active, #home-app-subscribe .service-tabs__list .service-tabs__button[aria-selected=true] {
+#home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button.is-active, #home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button[aria-selected=true] {
   border-color: #111;
   background-color: #111;
   color: #fff;
   font-weight: 600;
 }
-#home-app-subscribe .service-tabs__list--radius .service-tabs__button {
+#home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button:last-child {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button {
+    flex: 0 0 auto;
+  }
+}
+#home-app-subscribe .service-tabs .service-tabs__list--radius .service-tabs__button {
   border-radius: 13px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-tabs__list {
+  #home-app-subscribe .service-tabs .service-tabs__list {
     margin-bottom: 8px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    gap: 4px;
+  }
+  #home-app-subscribe .service-tabs .service-tabs__list::-webkit-scrollbar {
+    display: none;
+  }
+  #home-app-subscribe .service-tabs .service-tabs__list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
-#home-app-subscribe .service-tabs__panel[hidden] {
+#home-app-subscribe .service-tabs .service-tabs__panel[hidden] {
   display: none;
 }
-#home-app-subscribe [data-service-notice][hidden] {
+#home-app-subscribe .service-tabs [data-service-notice][hidden] {
   display: none;
 }
 #home-app-subscribe .service-page__heading {
@@ -1813,6 +1857,11 @@
 }
 #home-app-subscribe .service-page__section--compare .service-compare__table .service-compare__label {
   width: 150px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--compare .service-compare__table .service-compare__label {
+    width: auto;
+  }
 }
 #home-app-subscribe .service-page__section--compare .service-compare__table th,
 #home-app-subscribe .service-page__section--compare .service-compare__table td {
@@ -2158,6 +2207,11 @@
   min-width: 0;
   padding-top: 4px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item > div {
+    padding-top: 0;
+  }
+}
 #home-app-subscribe .service-page__section--care .service-care .service-care__item > div > span {
   display: inline-flex;
   align-items: center;
@@ -2294,6 +2348,7 @@
   #home-app-subscribe .service-page__section--care .service-care {
     grid-template-columns: auto;
     padding: 0 12px;
+    border-radius: 16px;
   }
 }
 #home-app-subscribe .service-page__section--care .service-care__tag--supply {
@@ -2991,16 +3046,6 @@
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--faq .service-tabs {
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto;
-}
-#home-app-subscribe .service-page__section--faq .service-tabs .service-tabs__list {
-  gap: 8px;
-  margin-bottom: 32px;
-  padding: 0;
-}
 #home-app-subscribe .service-page__section--faq .faq-accordion {
   width: 100%;
   border-top: 1px solid #000;
@@ -3352,6 +3397,11 @@
   outline: 2px solid #111;
   outline-offset: 4px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--guide .service-guide__item {
+    gap: 12px;
+  }
+}
 #home-app-subscribe .service-page__section--guide .service-guide img {
   display: block;
   width: 100%;
@@ -3454,6 +3504,14 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact__item {
+    flex-direction: row;
+    min-height: auto;
+    padding: 16px;
+    align-items: center;
+  }
+}
 #home-app-subscribe .service-page__section--contact .service-contact__text {
   display: flex;
   flex-direction: column;
@@ -3467,11 +3525,26 @@
   font-weight: 600;
   line-height: 20px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact__text strong {
+    font-size: 16px;
+  }
+}
 #home-app-subscribe .service-page__section--contact .service-contact__text small {
   color: #8f8f8f;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact__text small {
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact__text {
+    gap: 4px;
+  }
 }
 #home-app-subscribe .service-page__section--contact .service-contact__ai {
   display: flex;
@@ -3498,14 +3571,29 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai > span {
-  background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact__ai > img {
+    width: 24px;
+    height: 24px;
+  }
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap {
+  color: #444;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.4;
+  display: flex;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
+  background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: block;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
+  display: block;
+  color: #444;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__ai::after {
   content: "";
@@ -3513,4 +3601,15 @@
   width: 20px;
   height: 20px;
   background: url(../images/icon_arr.png) no-repeat center center/contain;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact__ai {
+    margin: 20px auto 0;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-contact {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+  }
 }
