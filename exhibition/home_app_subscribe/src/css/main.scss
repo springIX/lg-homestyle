@@ -655,7 +655,8 @@
         &::before {
           margin-left: 0 !important;          
         }
-      }      
+      }  
+
       > ul {
         display: flex;
         flex-direction: column;
@@ -670,6 +671,13 @@
             }  
           }        
         }
+      }
+
+      @include screen("mo") {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.39px;
       }
     }    
 
@@ -737,6 +745,10 @@
       align-items: center;
       gap: 10px; 
       font-size: 16px;
+
+      @include screen("mo") {
+        font-size: 13px;
+      }
     }
 
     &__current {
@@ -773,7 +785,7 @@
       padding: 2px 10px;
       overflow: hidden;
       border: 1px solid #dee1e5;
-      border-radius: 10px;
+      border-radius: 100px;
       background-color: #fff;
       color: #111;
       font-size: 13px;
@@ -789,6 +801,12 @@
         font-weight: 600;
       }
     }
+
+    &--radius {
+      .service-tabs__button {
+        border-radius: 13px;
+      }
+    }    
 
     @include screen("mo") {
       margin-bottom: 8px;
@@ -1261,6 +1279,15 @@
 
       &--two {
         grid-template-columns: 1fr 1fr;
+        
+        @include screen("mo") {
+        
+          .service-care__item {
+            &:nth-child(1) {
+              border-bottom: 1px solid #eff0f2 !important;
+            }
+          }        
+        }     
       }
 
       &--single {
@@ -1279,6 +1306,10 @@
 
         &:only-child {
           padding: 50px 0; 
+          
+          @include screen("mo") {
+            padding: 20px 0;
+          }
         }
 
 
@@ -1361,6 +1392,10 @@
             background: url(../images/ic_info.png) no-repeat center center / contain;
             vertical-align: middle;
           }
+
+          @include screen("mo") {
+            align-items: flex-start;
+          }
         }
 
         img {
@@ -1421,6 +1456,7 @@
 
         @include screen("mo") {
           padding: 10px 0;
+          align-items: flex-start;
 
           // 순서 변경
           &:nth-child(1) { order: 1; }
@@ -1567,66 +1603,187 @@
     }
 
     .service-checklist {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      width: 100%;
-      max-width: 780px;
-      margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
 
-      &__item {
-        padding: 24px;
-        border-radius: 24px;
-        background-color: $gray;
-        text-align: left;
-      }
+    &__item {
+      padding: 24px;
+      border-radius: 20px;
+      background-color: $gray; 
+      border: 1px solid transparent;
+      text-align: left;
+      transition: all 0.3s ease;
 
-      &__header {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        padding: 0;
-        border: 0;
-        background-color: transparent;
-        color: #111;
-        text-align: left;
+      @include screen("mo") {
+        padding: 16px;
+        border-radius: 16px;
 
-        > span[aria-hidden="true"] {
-          display: inline-flex;
-          flex: 0 0 25px;
-          align-items: center;
-          justify-content: center;
-          width: 25px;
-          height: 25px;
-          border-radius: 50%;
-          background-color: #111;
-          color: #fff;
-          font-size: 14px;
-          font-weight: 700;
+        &:has(.service-checklist__button[aria-expanded="true"]) {
+          background-color: #f8f9fa;
+          border-color: #8F9298;
         }
       }
+    }
 
-      &__title {
-        flex: 1 1 auto;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 1.4;
-        letter-spacing: -0.27px;
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      color: #111;
+      text-align: left;
+      // pointer-events: none; 
+
+      .chk-icon {
+        display: inline-flex;
+        flex: 0 0 20px;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #111; 
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        transition: background-color 0.3s;
+      }
+
+      @include screen("mo") {
+        pointer-events: auto;
+        cursor: pointer;
+        position: relative;
+        padding-right: 30px; 
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-top: -8px;
+          width: 16px;
+          height: 16px;
+          background: url(../images/icon_arr.png) no-repeat center center / contain;
+          transform: rotate(90deg); 
+          transition: transform 0.3s ease;
+        }
+
+        // 닫힘 상태
+        &[aria-expanded="false"] {
+          .chk-icon { background-color: #a0a0a0; }
+          .service-checklist__title { font-weight: 500; }
+        }
+
+        // 열림 상태
+        &[aria-expanded="true"] {
+          .chk-icon { background-color: #111; }
+          .service-checklist__title { font-weight: 700; }
+          &::after { transform: rotate(270deg); }
+        }
+      }
+    }
+
+    &__title {
+      flex: 1 1 auto;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.27px;
+
+      @include screen("mo") {
+        font-size: 14px;
+      }
+    }
+
+    &__content {
+      padding-left: 32px; 
+      color: #444;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.32px;
+
+      p { margin-top: 5px; }
+
+      @include screen("mo") {
+        padding-top: 6px;
+        font-size: 12px;
+
+        p { margin-top: 0; }
+      }
+
+      // @include screen("mo") {
+      //   display: block !important; 
+      // }
+    }
+    }
+
+  }
+
+  /* 모바일 전용 배너 */
+  .promo-banner {
+    display: none;
+    
+    @include screen("mo") {
+      display: block;
+      width: 100%;
+      min-height: 109px;
+      overflow: hidden;
+      background: url('../images/mo_banner.jpg') no-repeat center right / cover;
+
+      &__link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        min-height: 109px;
+        box-sizing: border-box;
+        text-decoration: none;
       }
 
       &__content {
-        padding-left: 34px;
-        color: #444;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.4;
-        letter-spacing: -0.32px;
-
-        p {
-          margin-top: 5px;
-        }
+        display: flex;
+        flex-direction: column;
+        padding-left: 35px;
       }
+
+      &__title {
+        margin: 0;
+        color: #fff;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; 
+        letter-spacing: -0.2px;
+      }
+
+      &__desc {
+        margin: 0;
+        color: #fff;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        opacity: 0.7;
+        padding-top: 3px;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          background: url(../images/ic_right.png) no-repeat 0 0 / 100%;
+          width: 12px;
+          height: 12px;
+          vertical-align: middle;
+        }
+      }      
     }
   }
 
@@ -1660,6 +1817,10 @@
         width: 2px;
         background-color: #EFF0F2;
         content: "";
+
+        @include screen("mo") {
+          left: 17px;
+        }
       }
 
       &__step {
@@ -1670,6 +1831,10 @@
         column-gap: 4px;
         align-items: start;
 
+        @include screen("mo") {
+          grid-template-columns: 35px minmax(0, 1fr);
+        }
+
         > img {
           box-sizing: border-box;
           width: 48px;
@@ -1678,6 +1843,13 @@
           border-radius: 16px;
           background-color: #F3F5F7;
           object-fit: contain;
+
+          @include screen("mo") {
+            width: 36px;
+            height: 36px;
+            padding: 4px;
+            border-radius: 12px;
+          }
         }
 
         > div {
@@ -1695,6 +1867,10 @@
             font-weight: 600;
             line-height: 1.4;
             letter-spacing: -0.27px;
+
+            @include screen("mo") {
+              font-size: 16px;
+            }
           }
 
           > p {
@@ -1704,6 +1880,10 @@
             font-weight: 400;
             line-height: 1.4;
             letter-spacing: -0.3px;
+
+            @include screen("mo") {
+              font-size: 13px;
+            }            
 
             a {
               color: inherit;
@@ -1734,6 +1914,10 @@
           [aria-expanded="true"] &::after {
             transform: rotate(270deg); 
           }
+
+          @include screen("mo") {
+            font-size: 16px;
+          }
         }
 
         .service-accordion__desc {
@@ -1742,13 +1926,17 @@
           font-size: 15px;
           line-height: 1.4;
           font-weight: 400;
+
+          @include screen("mo") {
+            font-size: 13px;
+          }          
         }
 
         .service-accordion__content {
           margin-top: 8px;
 
           &[hidden] {
-            display: none;
+            display: none !important;
           }
         }
 
@@ -1805,6 +1993,11 @@
         width: 100%;
         margin-top: 12px;
 
+        @include screen("mo") {
+          margin-top: 8px;
+          gap: 8px;
+        }
+
         .service-accordion {
           overflow: hidden;
           border: 1px solid #ccd1d6; 
@@ -1845,6 +2038,10 @@
             transition: transform 0.3s ease;
           }
           
+          @include screen("mo") {
+            padding: 16px;
+            font-size: 13px;
+          }
         }
 
         .service-accordion__content {
@@ -1896,7 +2093,7 @@
 
           .service-fee-note {
             margin-top: 16px;
-            padding-top: 16px;
+            padding-top: 10px;
             border-top: 1px dashed #DEE1E5; 
             color: #444;
             font-size: 13px;
@@ -1942,6 +2139,11 @@
             transform: rotate(90deg);
             transition: transform 0.3s ease;
           }
+
+          @include screen("mo") {
+            padding-bottom: 0px;
+            padding-top: 0px;
+          }
         }
 
         .service-cancel__return-fee-content {
@@ -1971,6 +2173,11 @@
           letter-spacing: -0.36px;
           text-align: center;
 
+          @include screen("mo") {
+            margin-top: 8px;
+            min-width: auto;
+          }
+
           th,
           td {
             height: 32px;
@@ -1982,7 +2189,11 @@
             font-size: 12px;
             font-weight: 500;
             line-height: 140%;
-            letter-spacing: -0.36px;            
+            letter-spacing: -0.36px;    
+            
+            @include screen("mo") {
+              font-size: 10px;
+            }
           }
 
           th {
@@ -2060,6 +2271,11 @@
             transform: rotate(180deg);
           }
         }
+
+        @include screen("mo") {
+          padding: 18px 8px;
+          line-height: 20px;
+        }
       }
 
       &__q-mark {
@@ -2068,6 +2284,11 @@
         font-weight: 600;
         line-height: 1.4;
         letter-spacing: -0.2px;
+        
+        @include screen("mo") {
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
 
       &__title {
@@ -2077,8 +2298,13 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 1.4;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+
+        @include screen("mo") {
+          font-size: 14px;
+        }
+
       }
 
       &__icon {
@@ -2090,14 +2316,19 @@
 
         &::before {
           position: absolute;
-          top: 7px;
-          left: 7px;
+          top: 50%;
+          left: 50%;
           width: 8px;
           height: 8px;
           border-right: 1.5px solid #111;
           border-bottom: 1.5px solid #111;
           content: "";
-          transform: rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        @include screen("mo") {
+          width: 16px;
+          height: 16px;
         }
       }
 
@@ -2116,40 +2347,12 @@
 
       &__inner {
         padding: 24px 70px 32px 30px;
-      }
-    }
 
-    @include screen("mo") {
-      .service-tabs {
-        .service-tabs__list {
-          justify-content: flex-start;
-          margin-right: -$layout_pd;
-          margin-left: -$layout_pd;
-          padding: 0 $layout_pd;
-          overflow-x: auto;
-        }
-      }
-
-      .faq-accordion {
-        &__button {
-          align-items: start;
-          padding-right: 16px;
-          padding-left: 16px;
-        }
-
-        &__title {
-          overflow: visible;
-          text-overflow: clip;
-          white-space: normal;
-        }
-
-        &__inner {
-          padding-right: 48px;
-          padding-left: 36px;
+        @include screen("mo") {
+          padding: 18px 28px;
         }
       }
     }
-
   }
 
   /* 구독으로 시작하기 좋은 제품 */
@@ -2395,6 +2598,10 @@
       gap: 20px;
       width: 100%;
 
+      @include screen("mo") {
+        gap: 12px;
+      }
+
       &__item {
         display: flex;
         flex-direction: column;
@@ -2418,6 +2625,10 @@
         overflow: hidden;
         border-radius: 24px;
         object-fit: cover;
+
+        @include screen("mo") {
+          border-radius: 12px;
+        }
       }
 
       &:first-child img {
@@ -2439,6 +2650,12 @@
         font-size: 18px;
         font-weight: 400;
         line-height: 1.4;
+
+        @include screen("mo") {
+          font-size: 11px;
+          font-weight: 400;
+          line-height: 14px;
+        }
       }
 
       small {
@@ -2447,40 +2664,14 @@
         font-size: 24px;
         font-weight: 600;
         line-height: 1.4;
+
+        @include screen("mo") {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px; 
+        }
       }
     }
-
-    // @include screen("mo") {
-    //   .service-page__heading {
-    //     margin-bottom: 20px;
-
-    //     h2 {
-    //       font-size: 26px;
-    //       line-height: 36px;
-    //     }
-    //   }
-
-    //   .service-guides {
-    //     grid-template-columns: 1fr;
-    //     gap: 24px;
-
-    //     a {
-    //       gap: 12px;
-    //     }
-
-    //     img {
-    //       border-radius: 16px;
-    //     }
-
-    //     strong {
-    //       font-size: 15px;
-    //     }
-
-    //     small {
-    //       font-size: 19px;
-    //     }
-    //   }
-    // }
   }
 
   /* 혼자 고르기 어려우신가요? */
