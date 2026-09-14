@@ -2244,7 +2244,6 @@
   }
   #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(2) {
     order: 3;
-    border-bottom: 1px solid #eff0f2 !important;
   }
   #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(3) {
     order: 2;
