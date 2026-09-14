@@ -63,8 +63,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .flex {
   display: flex;
@@ -550,6 +549,39 @@
     padding-right: 0 !important;
   }
 }
+.monthly_home_set .img_tab {
+  margin-bottom: 18rem;
+  display: flex;
+  justify-content: center;
+}
+.monthly_home_set .img_tab button {
+  display: block;
+  opacity: 0.5;
+}
+.monthly_home_set .img_tab button .img_box {
+  width: 56rem;
+  height: 56rem;
+  border-radius: 50%;
+  position: relative;
+}
+.monthly_home_set .img_tab button .img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.monthly_home_set .img_tab button .img_box span {
+  text-align: center;
+  font-size: 13rem;
+  margin-top: 6rem;
+  white-space: nowrap;
+}
+.monthly_home_set .img_tab button.on {
+  opacity: 1;
+  font-weight: 600;
+}
+.monthly_home_set .img_tab button.on .img_box {
+  border: 2px solid #111;
+}
 .monthly_home_set .c-product__list:not(.ty_row, .ty_package) {
   margin-top: 16rem;
   display: grid;
@@ -771,8 +803,7 @@
 .monthly_home_set .c-product__list.ty_row .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .c-product__list.ty_row .c-product__item .c-product__info-container {
   padding: 0 0 0 8rem;
@@ -1032,6 +1063,32 @@
 }
 .monthly_home_set {
   /* //패키지 상품 */
+  /* 타임딜 상품 */
+}
+.monthly_home_set [data-role=time-deal-timer] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  font-size: 28rem;
+  line-height: 1.2;
+}
+.monthly_home_set [data-role=time-deal-timer][hidden] {
+  display: none !important;
+}
+.monthly_home_set [data-role=time-deal-timer] .time-deal-unit {
+  text-align: center;
+}
+.monthly_home_set [data-role=time-deal-timer] .time-deal-unit span {
+  color: #a0a0a0;
+  font-size: 10rem;
+  display: block;
+}
+.monthly_home_set [data-role=time-deal-timer] > i {
+  font-style: normal;
+}
+.monthly_home_set {
+  /* //타임딜 상품*/
 }
 .monthly_home_set .lge__item .c-product__info .c-product__model-id,
 .c-product__list .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__brand-name {
@@ -1739,7 +1796,6 @@
   padding: 8rem 20rem;
   border: 1px solid #000;
   border-radius: 999rem;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20rem;
   transition: 0.3s ease;
@@ -2684,6 +2740,12 @@
 }
 .monthly_home_set.combined_discount section#view_all_brands .brand_list .home_set_btn.on .arr {
   transform: rotate(90deg);
+}
+.monthly_home_set.combined_discount section#time_sale {
+  color: #fff;
+}
+.monthly_home_set.combined_discount section#time_sale .time_sale_cont .time_sale_list {
+  margin-top: 16rem;
 }
 .monthly_home_set {
   /* COMBINED DISCOUNT */

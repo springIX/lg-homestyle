@@ -213,6 +213,18 @@
     @include screen("pc2") { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;}
   }
 
+  .img_tab{ margin-bottom: 18rem; display: flex; justify-content: center;
+    button{ display: block; opacity: .5;
+      .img_box{ width: 56rem; height: 56rem; border-radius: 50%; position: relative; 
+        img{ width: 100%; height: 100%; object-fit: cover;}
+        span{ text-align: center; font-size: 13rem; margin-top: 6rem; white-space: nowrap;}
+      }
+      &.on{ opacity: 1; font-weight: 600;
+        .img_box{ border: 2px solid #111;}
+      }
+    }
+  }
+
   .c-product__list:not(.ty_row, .ty_package){ margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
     @include screen("mo") { margin-top: 8rem; gap:28rem 8rem; grid-template-columns: repeat(2, 1fr);}
     .c-product__item{ min-width: 0; position: relative;
@@ -366,6 +378,18 @@
     }
   }
   /* //패키지 상품 */
+
+  /* 타임딜 상품 */
+  [data-role="time-deal-timer"] { display: flex; align-items: flex-start; justify-content: center; gap: 12px; font-size: 28rem; line-height: 1.2; 
+    &[hidden] { display: none !important; }
+
+    .time-deal-unit { text-align: center;
+      span {color: #a0a0a0; font-size: 10rem; display: block;}
+    }
+
+    > i { font-style: normal; }
+  }
+  /* //타임딜 상품*/
 
   @at-root .monthly_home_set .lge__item .c-product__info .c-product__model-id,
   .c-product__list .c-product__item .c-product__info-container .inner > a .c-product__info .c-product__brand-name{ font-weight: 600; color: #444; font-size: 12rem;
@@ -1104,6 +1128,12 @@
             .arr{ transform: rotate(-90deg);}
             &.on .arr{  transform: rotate(90deg);}
           }
+        }
+      }
+
+      &#time_sale{ color: #fff;
+        .time_sale_cont{
+          .time_sale_list{margin-top: 16rem;}
         }
       }
     }

@@ -435,32 +435,90 @@
     }
 
     #renderTimeDealTimer(elItem, timeDealData) {
-      let timer = elItem.querySelector(
-        '[data-role="time-deal-timer"]'
-      );
+      const isTimeDeal = elItem.classList.contains('time_deal');
+      const targetClass = (elItem.dataset.timer || '')
+        .trim()
+        .replace(/^\./, '');
 
-      // 타임딜 상품이 아니면 기존 타이머 제거
-      if (!timeDealData?.endDate) {
-        timer?.remove();
+      let timer = targetClass
+        ? document.querySelector(`.${CSS.escape(targetClass)}`)
+        : elItem.querySelector('[data-role="time-deal-timer"]');
+
+      // time_deal 클래스가 없거나 종료일이 없으면 타이머 숨김
+      if (!isTimeDeal || !timeDealData?.endDate) {
+        if (timer && targetClass) {
+          timer.hidden = true;
+          timer.removeAttribute('data-end-date');
+          timer.removeAttribute('data-role');
+        } else {
+          timer?.remove();
+        }
+
         return;
       }
 
-      // 타이머 HTML이 없으면 자동 생성
-      if (!timer) {
-        timer = document.createElement('div');
-        timer.className = 'c-product__time-deal-timer';
-        timer.setAttribute('data-role', 'time-deal-timer');
-        timer.setAttribute('aria-live', 'polite');
+      // data-timer로 지정한 외부 박스를 찾지 못한 경우
+      if (targetClass && !timer) {
+        console.warn(
+          `[TimeDeal] .${targetClass} 타이머 박스를 찾을 수 없습니다.`
+        );
 
+        return;
+      }
+
+      // data-timer가 없으면 상품 내부에 기본 타이머 생성
+      if (!timer) {
         const info = elItem.querySelector(
           '.c-product__info-container .inner'
         );
 
-        info?.insertBefore(timer, info.firstChild);
+        if (!info) return;
+
+        timer = document.createElement('div');
+        timer.className = 'c-product__time-deal-timer';
+
+        info.insertBefore(timer, info.firstChild);
       }
 
+      timer.hidden = false;
+      timer.setAttribute('data-role', 'time-deal-timer');
+      timer.setAttribute('role', 'timer');
       timer.dataset.endDate = timeDealData.endDate;
+
+      this.#createTimerMarkup(timer);
       this.#refreshTimer(timer);
+    }
+
+    #createTimerMarkup(timer) {
+      if (timer.querySelector('[data-time-part]')) return;
+
+      timer.innerHTML = `
+    <span class="time-deal-unit">
+      <strong data-time-part="days">00</strong>
+      <span>DAY</span>
+    </span>
+
+    <i aria-hidden="true">:</i>
+
+    <span class="time-deal-unit">
+      <strong data-time-part="hours">00</strong>
+      <span>HRS</span>
+    </span>
+
+    <i aria-hidden="true">:</i>
+
+    <span class="time-deal-unit">
+      <strong data-time-part="minutes">00</strong>
+      <span>MIN</span>
+    </span>
+
+    <i aria-hidden="true">:</i>
+
+    <span class="time-deal-unit">
+      <strong data-time-part="seconds">00</strong>
+      <span>SEC</span>
+    </span>
+  `;
     }
 
     #parseApiDate(value) {
@@ -479,6 +537,8 @@
     }
 
     #refreshTimer(timer) {
+      this.#createTimerMarkup(timer);
+
       const endDate = this.#parseApiDate(
         timer.dataset.endDate
       );
@@ -487,38 +547,58 @@
         ? endDate.getTime() - Date.now()
         : 0;
 
+      const timeParts = {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      };
+
+      if (diff > 0) {
+        const totalSeconds = Math.floor(diff / 1000);
+
+        timeParts.days = Math.floor(
+          totalSeconds / 86400
+        );
+
+        timeParts.hours = Math.floor(
+          (totalSeconds % 86400) / 3600
+        );
+
+        timeParts.minutes = Math.floor(
+          (totalSeconds % 3600) / 60
+        );
+
+        timeParts.seconds =
+          totalSeconds % 60;
+      }
+
+      Object.entries(timeParts).forEach(
+        ([part, value]) => {
+          const element = timer.querySelector(
+            `[data-time-part="${part}"]`
+          );
+
+          if (element) {
+            element.textContent = String(value).padStart(2, '0');
+          }
+        }
+      );
+
       if (diff <= 0) {
-        timer.textContent = '타임딜 종료';
+        timer.setAttribute(
+          'aria-label',
+          '타임딜 종료'
+        );
+
         timer.classList.add('is-ended');
         return;
       }
 
-      const totalSeconds = Math.floor(diff / 1000);
-
-      const days = Math.floor(
-        totalSeconds / 86400
+      timer.setAttribute(
+        'aria-label',
+        `타임딜 종료까지 ${timeParts.days}일 ${timeParts.hours}시간 ${timeParts.minutes}분 ${timeParts.seconds}초`
       );
-
-      const hours = Math.floor(
-        (totalSeconds % 86400) / 3600
-      );
-
-      const minutes = Math.floor(
-        (totalSeconds % 3600) / 60
-      );
-
-      const seconds = totalSeconds % 60;
-
-      const time = [
-        hours,
-        minutes,
-        seconds
-      ]
-        .map((value) => String(value).padStart(2, '0'))
-        .join(':');
-
-      timer.textContent =
-        `타임딜 ${days > 0 ? `${days}일 ` : ''}${time}`;
 
       timer.classList.remove('is-ended');
     }
@@ -530,7 +610,9 @@
 
       const refresh = () => {
         document
-          .querySelectorAll('[data-role="time-deal-timer"]')
+          .querySelectorAll(
+            '[data-role="time-deal-timer"]'
+          )
           .forEach((timer) => {
             this.#refreshTimer(timer);
           });
@@ -755,8 +837,9 @@
       const hasAiHomeStyling = document.querySelector('#ai_home_styling .swiper'); // ✅ 추가
       const hasHowToBuy = document.querySelector('#how_to_buy .swiper'); // ✅ 추가
       const hasBrandCollection = document.querySelector('#premium_brand_collection .swiper'); // ✅ 추가
+      const hasTimeSale = document.querySelector('#time_sale .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale) return;
 
       swiperInited = true;
 
@@ -952,7 +1035,7 @@
         });
       }
 
-      // 6) How to buy
+      // 7) Premium brand collection
       if (hasBrandCollection) {
         new Swiper('#premium_brand_collection .swiper', {
           speed: 800,
@@ -960,6 +1043,19 @@
           slidesPerView: 1.05,
           scrollbar: {
             el: '#premium_brand_collection .scr_bar',
+            draggable: true,
+          },
+        });
+      }
+
+      // 8) Time sale
+      if (hasTimeSale) {
+        new Swiper('#time_sale .swiper', {
+          speed: 800,
+          spaceBetween: remToPx(6),
+          slidesPerView: 1,
+          scrollbar: {
+            el: '#time_sale .scr_bar',
             draggable: true,
           },
         });

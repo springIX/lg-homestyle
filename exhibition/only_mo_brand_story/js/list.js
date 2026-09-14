@@ -24,7 +24,7 @@
 
   // 🔽 리스트 영역
   const list = document.createElement('div');
-  list.style = 'display:none;max-height:60vh;overflow:auto;';
+  list.style = 'max-height:60vh;overflow:auto;';
 
   files.forEach((file, i) => {
     const a = document.createElement('a');
