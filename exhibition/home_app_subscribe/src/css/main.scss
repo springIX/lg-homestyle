@@ -8,7 +8,7 @@
   /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   .layout-inner{ max-width: 1240px; padding: 0 $layout_pd; margin: 0 auto; position: relative;
     &.ty-s{max-width: 940px;}
-    &.ty-m{max-width: 1380px;}
+    // &.ty-m{max-width: 1380px;}
     &.ty-l{max-width: 1504px;}
   }
   .inner{ width: 100%; position: relative;}
@@ -119,17 +119,17 @@
     .ty-num{ color: #666;}
   }
 
-  .table-box{ margin: 8px 0; overflow-x: auto;  -webkit-overflow-scrolling: touch;
+  .table-box{ margin: 4px 0; overflow-x: auto;  -webkit-overflow-scrolling: touch;
     @include screen("mo") {  margin: 4px 0;
       &.ty-overflow table{ min-width: 600px;}
     }
     table { color: #222; width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; text-align: center; background-color: #fff;
       @include screen("mo") { font-size: 11px;}
-      th,td { padding: 12px; border: 1px solid #d1d1d1; vertical-align: middle; line-height: 1.4; font-weight: 400;
+      th,td { padding: 6px; border: 1px solid #d1d1d1; vertical-align: middle; line-height: 1.4; font-weight: 400;
         @include screen("mo") { padding: 4px;}
       }
       tbody tr:first-child > *{ border-top: 0; }
-      thead th { background-color: #ebebeb;}
+      thead th { background-color: #ebebeb; font-weight: 500;}
       .tb-tit th{ font-weight: 700; background-color: #D1D1D1;
         .sub-tit{ font-weight: 400;}
       }
@@ -146,7 +146,9 @@
     }
   }
   
-  .tag{ width: max-content; padding: 2px 4px; font-size: 11px; border-radius: 4px;background: #FFF;  border: 1px solid #DEE1E5; color: #444;}
+  .tag{ width: max-content; padding: 2px 4px; font-size: 11px; border-radius: 4px;background: #FFF;  border: 1px solid #DEE1E5; color: #444;
+    @include screen("mo") { font-size: 9px;}
+  }
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
 
   /* 상단 1DEP메뉴 */
@@ -165,7 +167,9 @@
       }
       .txt-box{z-index: 1; position: relative;
         img{ margin: 0 auto; width: auto;}
-        .kv-sub-tit{ width: 107px;}
+        @include screen("mo") { 
+          .kv-sub-tit{ width: 107px;}
+        }
         .kv-tit{ margin: 24px 0;
           @include screen("mo") { margin: 16px 0 20px; 
             img{width: 215px;}
@@ -248,6 +252,9 @@
                   }
                 }
               }
+              @include screen("mo") { 
+                .table-box + .ty-imp{ margin-top: 10px;}
+              }
             }
           }
         }
@@ -259,7 +266,9 @@
         ul{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
           @include screen("mo") { grid-template-columns: 1fr;}
           li{ display: flex; align-items: flex-start; gap: 6px; padding: 28px 24px;
-            @include screen("mo") { padding: 18px 16px;}
+            @include screen("mo") { padding: 18px 14px; border: 1px solid transparent; transition: .3s ease;
+              &.on{ border-color: #727780;}
+            }
             .icon{ width: 32px; flex-shrink: 0;
               @include screen("mo") { width: 24px;}
             }
@@ -292,6 +301,11 @@
 
     &#detail-affiliated-card{
       .slide-box{
+        &::before, &::after{ content: ''; width: 30%; height: 800px; background: linear-gradient(270deg, rgba(243, 245, 247, 0.00) 0%, #F3F5F7 30%); position: absolute; left: 0; top: 0; z-index: 2; touch-action: none; pointer-events: none;
+          @include screen("tb") { width: 15%;}
+          @include screen("mo") { display: none;}
+        }
+        &::after{ left: auto; right: 0; transform: rotate(180deg);}
         .swiper{ 
           &.card-list{ overflow: visible; margin-bottom: 56px;
             @include screen("mo") { margin-bottom: 26px;}
@@ -302,7 +316,7 @@
                 &::before{ content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0); width: 100%; padding-top: 100%; background-color: #111; border-radius: 50%; transition: .5s ease;}
                 span{ position: relative;}
               }
-              img{ display: block; width: 100%; margin: 34px auto 0; transition: .5s ease; filter: brightness(.85); 
+              img{ display: block; width: 63px; margin: 34px auto 0; transition: .5s ease; filter: brightness(.85); 
                 @include screen("mo") { width: 51px; margin-top: 15px;}
               }
               &.swiper-slide-active{ cursor: default;
@@ -314,11 +328,6 @@
             }
           }
           &.card-info{ padding: 0 $layout_pd;
-            &::before, &::after{ content: ''; width: 30%; height: 400px; background: linear-gradient(270deg, rgba(243, 245, 247, 0.00) 0%, #F3F5F7 30%); position: absolute; left: 0; top: 0; z-index: 2; touch-action: none; pointer-events: none;
-              @include screen("tb") { width: 15%;}
-              @include screen("mo") { display: none;}
-            }
-            &::after{ left: auto; right: 0; transform: rotate(180deg);}
             .swiper-slide{ width: 480px;
               .round-box{ height: 385px; border: 1px solid #727780; overflow: hidden; padding: 24px 20px 14px; position: relative;
                 @include screen("mo") { height: 343px; padding: 16px 16px 20px;}
@@ -337,7 +346,7 @@
                         @include screen("mo") { padding: 0 38px 8px 32px;}
                       }
                       &:not(.t-head){ padding: 13px 5px;
-                        @include screen("mo") { padding: 12px 4px;}
+                        @include screen("mo") { padding: 12px 0;}
                         .monthly-spend{ font-size: 15px; font-weight: 500; display: flex; align-items: center;
                           @include screen("mo") { font-size: 13px;}
                           &::before{ content: ''; width: 19px; height: 19px; background: url(../images/icon_coin.png)no-repeat center center / contain; transform: translateY(-1px);}
@@ -373,6 +382,9 @@
               .notice{ transform: translateY(-10px); opacity: 0; transition: .8s ease .3s;
                 .accordion-cont{ width: 980px; position: relative; top: 0; left: 50%; transform: translateX(-50%); padding: 0 20px;
                   @include screen("tb") { width: 100vw;}
+                  .table-box table{
+                    th,td{ padding: 10px;}
+                  }
                 }
               }
               &.swiper-slide-active .notice{ transform: translateY(0); opacity: 1;}
@@ -411,8 +423,7 @@
             @include screen("mo") { flex-direction: column-reverse;}
           }
           > *{ width: 100%; }
-          .video-box{ padding-bottom: 28.3%; position: relative;
-            @include screen("mo") { padding-bottom: 50%;}
+          .video-box{ position: relative;  aspect-ratio: 16 / 9; overflow: hidden;
             video, iframe{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
           }
           .order-box{ font-size: 18px;
@@ -467,7 +478,7 @@
       }
     }
   }
-}
+} 
 
 /* 서비스 안내 페이지 */
 #home-app-subscribe {

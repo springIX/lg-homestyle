@@ -22,9 +22,6 @@
 #home-app-subscribe .layout-inner.ty-s {
   max-width: 940px;
 }
-#home-app-subscribe .layout-inner.ty-m {
-  max-width: 1380px;
-}
 #home-app-subscribe .layout-inner.ty-l {
   max-width: 1504px;
 }
@@ -50,8 +47,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -102,7 +98,6 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
-  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -277,7 +272,7 @@
   color: #666;
 }
 #home-app-subscribe .table-box {
-  margin: 8px 0;
+  margin: 4px 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -304,7 +299,7 @@
   }
 }
 #home-app-subscribe .table-box table th, #home-app-subscribe .table-box table td {
-  padding: 12px;
+  padding: 6px;
   border: 1px solid #d1d1d1;
   vertical-align: middle;
   line-height: 1.4;
@@ -320,6 +315,7 @@
 }
 #home-app-subscribe .table-box table thead th {
   background-color: #ebebeb;
+  font-weight: 500;
 }
 #home-app-subscribe .table-box table .tb-tit th {
   font-weight: 700;
@@ -349,7 +345,6 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
-  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -357,6 +352,11 @@
   background: #FFF;
   border: 1px solid #DEE1E5;
   color: #444;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .tag {
+    font-size: 9px;
+  }
 }
 #home-app-subscribe {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
@@ -400,8 +400,7 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -416,8 +415,10 @@
   margin: 0 auto;
   width: auto;
 }
-#home-app-subscribe section#kv .txt-box .kv-sub-tit {
-  width: 107px;
+@media (max-width: 767px) {
+  #home-app-subscribe section#kv .txt-box .kv-sub-tit {
+    width: 107px;
+  }
 }
 #home-app-subscribe section#kv .txt-box .kv-tit {
   margin: 24px 0;
@@ -525,7 +526,6 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
-  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -692,6 +692,11 @@
     margin-top: 2px;
   }
 }
+@media (max-width: 767px) {
+  #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-cont .info-txt-box .table-box + .ty-imp {
+    margin-top: 10px;
+  }
+}
 #home-app-subscribe section#card-recommendation .card-recommendation-list ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -710,7 +715,12 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#card-recommendation .card-recommendation-list ul li {
-    padding: 18px 16px;
+    padding: 18px 14px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+  }
+  #home-app-subscribe section#card-recommendation .card-recommendation-list ul li.on {
+    border-color: #727780;
   }
 }
 #home-app-subscribe section#card-recommendation .card-recommendation-list ul li .icon {
@@ -797,6 +807,33 @@
     margin-bottom: 6px;
   }
 }
+#home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
+  content: "";
+  width: 30%;
+  height: 800px;
+  background: linear-gradient(270deg, rgba(243, 245, 247, 0) 0%, #F3F5F7 30%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  touch-action: none;
+  pointer-events: none;
+}
+@media (max-width: 1080px) {
+  #home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
+    width: 15%;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
+    display: none;
+  }
+}
+#home-app-subscribe section#detail-affiliated-card .slide-box::after {
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list {
   overflow: visible;
   margin-bottom: 56px;
@@ -853,7 +890,7 @@
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 63px;
   margin: 34px auto 0;
   transition: 0.5s ease;
   filter: brightness(0.85);
@@ -879,33 +916,6 @@
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info {
   padding: 0 20px;
-}
-#home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::before, #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::after {
-  content: "";
-  width: 30%;
-  height: 400px;
-  background: linear-gradient(270deg, rgba(243, 245, 247, 0) 0%, #F3F5F7 30%);
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  touch-action: none;
-  pointer-events: none;
-}
-@media (max-width: 1080px) {
-  #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::before, #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::after {
-    width: 15%;
-  }
-}
-@media (max-width: 767px) {
-  #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::before, #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::after {
-    display: none;
-  }
-}
-#home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info::after {
-  left: auto;
-  right: 0;
-  transform: rotate(180deg);
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide {
   width: 480px;
@@ -971,7 +981,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .round-box .benefit-info .spending-benefit li:not(.t-head) {
-    padding: 12px 4px;
+    padding: 12px 0;
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .round-box .benefit-info .spending-benefit li:not(.t-head) .monthly-spend {
@@ -1089,6 +1099,9 @@
     width: 100vw;
   }
 }
+#home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .notice .accordion-cont .table-box table th, #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .notice .accordion-cont .table-box table td {
+  padding: 10px;
+}
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide.swiper-slide-active .notice {
   transform: translateY(0);
   opacity: 1;
@@ -1204,13 +1217,9 @@
   width: 100%;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
-  padding-bottom: 28.3%;
   position: relative;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
-    padding-bottom: 50%;
-  }
+  aspect-ratio: 16/9;
+  overflow: hidden;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box video, #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box iframe {
   position: absolute;
@@ -1218,8 +1227,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1680,8 +1688,7 @@
   width: 28px;
   height: 28px;
   margin-right: 6px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   vertical-align: top;
 }
 #home-app-subscribe .service-page__section--compare .service-compare__table tbody tr {
@@ -1834,8 +1841,7 @@
 #home-app-subscribe .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 48px;
-       column-gap: 48px;
+  column-gap: 48px;
   width: 100%;
   padding: 0px 20px;
   border: 1px solid #eff0f2;
@@ -1929,8 +1935,7 @@
   height: 88px;
   overflow: hidden;
   border-radius: 12px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p {
   display: flex;
@@ -2158,8 +2163,7 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   align-items: start;
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
@@ -2169,8 +2173,7 @@
   padding: 6px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > div {
   min-width: 0;
@@ -2642,8 +2645,7 @@
 #home-app-subscribe .service-page__section--products .service-products__image {
   width: 240px;
   height: 240px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #home-app-subscribe .service-page__section--products .service-products__info {
   display: flex;
@@ -2809,12 +2811,10 @@
   aspect-ratio: 380/240;
   overflow: hidden;
   border-radius: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe .service-page__section--guide .service-guide:first-child img {
-  -o-object-position: center 44%;
-     object-position: center 44%;
+  object-position: center 44%;
 }
 #home-app-subscribe .service-page__section--guide .service-guide__text {
   display: flex;
@@ -2908,8 +2908,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__text {
   display: flex;
@@ -2952,13 +2951,11 @@
   display: block;
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__ai > span {
   background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   font-size: 16px;
   font-weight: 700;
