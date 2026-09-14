@@ -4,34 +4,61 @@ $(function () {
   const mo_break_point = 767;
 
   // 아코디언 컨텐츠
+  // 아코디언 콘텐츠
   $('#home-app-subscribe').on('click', '.accordion-btn', function () {
     const $btn = $(this);
     const $accordion = $btn.closest('.accordion');
     const $content = $accordion.find('.accordion-cont');
     const isOpen = $accordion.hasClass('on');
 
+    const $otherAccordions = $accordion
+      .siblings('.accordion')
+      .filter('.on');
+
+    // 열려 있는 다른 아코디언 닫기
+    $otherAccordions
+      .removeClass('on')
+      .find('.accordion-btn')
+      .attr('aria-expanded', 'false');
+
+    $otherAccordions
+      .find('.accordion-cont')
+      .stop(true, true)
+      .slideUp(300);
+
+    // 선택한 아코디언 토글
     $accordion.toggleClass('on', !isOpen);
-    $btn.attr('aria-expanded', !isOpen);
-    $content.stop(true, true)[isOpen ? 'slideUp' : 'slideDown'](300);
+    $btn.attr('aria-expanded', String(!isOpen));
+
+    $content
+      .stop(true, true)
+    [isOpen ? 'slideUp' : 'slideDown'](300);
   });
 
-  // 한눈에 보는 구독 혜택 버튼이동
+  // 한눈에 보는 구독 혜택 버튼 이동
   $('.overview-list a[data-target]').on('click', function (e) {
     e.preventDefault();
 
-    const targetSelector = $(this).attr('data-target');
-    const $target = $(targetSelector);
+    const $target = $($(this).attr('data-target'));
 
     if (!$target.length) return;
 
-
+    // 대상 아코디언 열기
     if (!$target.hasClass('on')) {
-      $target.children('.accordion-btn').trigger('click');
+      $target
+        .children('.accordion-btn')
+        .trigger('click');
     }
-    window.scrollTo({
-      top: $target.offset().top - 80,
-      behavior: 'smooth'
-    });
+
+    // 다른 아코디언이 닫히고 대상이 열린 후 이동
+    $('#home-app-subscribe .accordion-cont')
+      .promise()
+      .done(function () {
+        window.scrollTo({
+          top: $target.offset().top - 80,
+          behavior: 'smooth'
+        });
+      });
   });
 
   //
