@@ -3,7 +3,14 @@ $(function () {
   let win_w = win.width();
   const mo_break_point = 767;
 
-  // 아코디언 컨텐츠
+  // 1DEP 헤더
+  $(window).on('scroll', function () {
+    $('.care-subcp-header-menu').toggleClass(
+      'on',
+      $(this).scrollTop() >= $('.care-subcp-header-wrap').offset().top
+    );
+  });
+
   // 아코디언 콘텐츠
   $('#home-app-subscribe').on('click', '.accordion-btn', function () {
     const $btn = $(this);

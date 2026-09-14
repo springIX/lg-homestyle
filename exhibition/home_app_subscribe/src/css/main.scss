@@ -1,6 +1,7 @@
 @import "var";
 
 #home-app-subscribe{ 
+  @include screen("mo") { top:46px;}
   /* RESET RESET RESET RESET RESET RESET RESET */
   blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, table, td, textarea, th, ul{ word-break: keep-all;}
   /* //RESET RESET RESET RESET RESET RESET RESET */
@@ -104,7 +105,9 @@
 
   .info-txt-box{ color: #222; counter-reset: dsc-list;
     .bold{ font-weight: 700;}
-    .mt18{margin-top: 18px;}
+    .mt18{margin-top: 18px;
+      @include screen("mo") { margin-top: 16px;}
+    }
     .depth{ padding-left: 10px;}
     .tit{ font-weight: 600; display: block; margin-bottom: 2px; color: #222;
       &.ty2{ line-height: 1.6; margin-bottom: 18px; font-size: 16px; font-weight: 500;
@@ -154,6 +157,7 @@
   /* 상단 1DEP메뉴 */
   .care-subcp-header-menu { border-bottom: 1px solid #e7e7e7; background: #fff;
     a{ display: flex !important;}
+    @include screen("mo") { z-index: 30; position: fixed; top:46px;}
   }
   /* //상단 1DEP메뉴 */
   
