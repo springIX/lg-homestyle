@@ -162,27 +162,38 @@
         <ul class="service-benefits">
           <li class="service-benefits__item">
             <img class="service-benefits__image" src="src/images/service-benefit-care.png" alt="" loading="lazy">
-            <div>
+            <div class="service-benefits__item--box01">
               <span class="service-benefits__tag">전문가 케어</span>
               <h3>전문가 방문 케어</h3>
               <p>정해진 주기에 케어 매니저가 방문해 분해·세척하고 성능을 점검합니다.</p>
             </div>
+            <div class="service-benefits__item--box02">
+              <p class="service-page__caption">세부 서비스와 방문 주기는 선택한 제품 및 요금제에 따라 다릅니다.</p>
+            </div>
           </li>
           <li class="service-benefits__item">
             <img class="service-benefits__image" src="src/images/service-benefit-supplies.png" alt="" loading="lazy">
-            <div>
+            <div class="service-benefits__item--box01">
               <span class="service-benefits__tag service-benefits__tag--blue">소모품 교체</span>
               <h3>정품 소모품 교체</h3>
               <p>필터·먼지봉투 등 정품 소모품을 주기에 맞춰 교체하거나 배송합니다.</p>
             </div>
+            <div class="service-benefits__item--box02">
+              <p class="service-page__caption">무상 A/S 기간과 적용 범위는 제품 및 계약 조건에 따라 다르며, 고객 과실로 인한 파손이나 일부 소모품은 제외될 수 있습니다.</p>
+            </div>            
           </li>
           <li class="service-benefits__item">
             <img class="service-benefits__image" src="src/images/service-benefit-support.png" alt="" loading="lazy">
-            <div>
+            <div class="service-benefits__item--box01">
               <span class="service-benefits__tag service-benefits__tag--yellow">무상 서비스</span>
               <h3>무상 수리 · 이전 설치</h3>
               <p>약정 기간 중 최대 6년 무상 수리, 이사 시 철거·재설치를 1회 무료로 제공합니다.</p>
             </div>
+            <div class="service-benefits__item--box02">
+              <p class="service-page__caption">철거/재설치 대상 제품: STEM 냉장고, 14인용 식기세척기, 전기레인지, 워시타워, 에어컨, 177cm이상 TV</p>
+              <p class="service-page__caption">무상 철거/재설치시 제품이동 서비스는 포함되어 있지 않습니다.</p>
+              <p class="service-page__caption">상업용 에어컨은 무상 철거/재설치 서비스 대상에서 제외됩니다.</p>              
+            </div>            
           </li>
         </ul>
         <ul class="service-page__notes" aria-label="구독 서비스 유의사항">
@@ -746,1369 +757,1686 @@
     <!-- //해지와 만료, 이렇게 진행돼요 -->  
 
     <!-- 가전 구독 자주 묻는 질문 -->
-      <!-- ==================== 1. 전체 패널 ==================== -->
-<section class="service-page__section service-page__section--faq" aria-labelledby="faq-title">
-  <div class="service-page__inner service-page__inner--narrow">
-    <div class="service-page__heading">
-      <h2 id="faq-title" class="title">가전 구독 자주 묻는 질문</h2>
-    </div>
-    <div class="service-tabs">
-      <div class="service-tabs__list" role="tablist" aria-label="자주 묻는 질문 카테고리" data-service-tabs>
-        <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-all" aria-selected="true" aria-controls="service-panel-all">전체</button>
-        <button type="button" class="service-tabs__button" role="tab" id="service-tab-pay" aria-selected="false" aria-controls="service-panel-pay" tabindex="-1">결제/요금</button>
-        <button type="button" class="service-tabs__button" role="tab" id="service-tab-discount" aria-selected="false" aria-controls="service-panel-discount" tabindex="-1">할인 혜택</button>
-        <button type="button" class="service-tabs__button" role="tab" id="service-tab-info" aria-selected="false" aria-controls="service-panel-info" tabindex="-1">계약 정보</button>
-        <button type="button" class="service-tabs__button" role="tab" id="service-tab-care" aria-selected="false" aria-controls="service-panel-care" tabindex="-1">관리/케어</button>
-      </div>
-
-      <!-- ==================== 1. 전체 패널 ==================== -->
-      <div id="service-panel-all" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-all" tabindex="0">
-        <div class="faq-accordion">
-
-
+    <section class="service-page__section service-page__section--faq" aria-labelledby="faq-title">
+      <div class="service-page__inner service-page__inner--narrow">
+        <div class="service-page__heading">
+          <h2 id="faq-title" class="title">가전 구독 자주 묻는 질문</h2>
         </div>
-      </div>
-
-      <!-- ==================== 2. 결제/요금 패널 ==================== -->
-      <div id="service-panel-pay" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-pay" tabindex="0" hidden>
-        <div class="faq-accordion">
-
-          <!-- FAQ Item 1 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-1">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 월 요금 외 발생 비용이 있나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-1" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>고객님의 가전 구독 계약 기간 중 아래와 같은 상황에서 요금 외 추가 비용이 발생할 수 있습니다.</li>
-                  <li>1. 설치 시: 기본 설치비는 면제이나, 특수 타공이 필요한 제품의 경우에는 추가 설치비가 발생할 수 있습니다.(제품군: 정수기, 식기세척기, 전기레인지, 에어컨)</li>
-                  <li>2. 이전 설치 시: 이전 설치 필요 시 철거비, 운송비, 재설치비가 발생할 수 있습니다.(제품마다 이전 설치 가능 여부 및 비용이 상이하므로 이전 설치 접수 시 콜센터로 문의 부탁드립니다) </li>
-                  <li>3. 계약 해지 시 </li>
-                  <li class="service-care__faq--bar">의무사용기간 이내 해지 시: 위약금 + 회수비 </li>
-                  <li class="service-care__faq--bar">계약기간 이내 해지 시: 회수비</li>
-                  <li class="service-care__faq--bar">위약금: 의무사용기간 내 고객 요청에 의한 임의 해지 시, 위약금이 부과됩니다.
-                    <ul>
-                      <li class="service-care__faq--dot">위약금 산정 시, 월요금은 할인되기 전의 기본요금을 기준으로 합니다. </li>
-                      <li class="service-care__faq--dot">1년 내 : 잔여 의무사용기간 내 총 요금의 30%</li>
-                      <li class="service-care__faq--dot">1년 경과 후 2년 경과 이전 : 잔여 의무사용기간 내 총 요금의 20%</li>
-                      <li class="service-care__faq--dot">2년 경과 후 의무사용기간 이전 : 잔여 의무사용기간 내 총 요금의 10%</li>
-                    </ul>
-                  </li>
-                  <li class="service-care__faq--bar">회수비 : 의무사용기간 경과 여부와 무관하게 총 계약기간 내 고객 요청에 의한 임의해지 시 회수비(인건비+운송비)가 부과됩니다.
-                    <ul>
-                      <li class="service-care__faq--dot">제품별 회수비 : 정수기/맥주제조기 50,000원, 공기청정기 35,000원, 스타일러 65,000원, 전기레인지 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음정수기냉장고 98,500원, 식물재배기 62,000원, 에어컨 100,000원 (23평 이상 2in1 150,000원), 노트북 35,000원, 세탁기 68,000원, A9청소기 50,000원</li>
-                      <li class="service-care__faq--dot">상기금액은 21년 11월 5일 계약부터의 회수비 금액, 이전 계약건의 회수비는 계약서에 명기 된 금액을 따름</li>
-                    </ul>
-                  </li>
-                  <li class="service-care__faq--bar">소모성 부품비용: 소모성 부품비용은 설치 받으신 제품의 소모성 부품(ex.필터)금액의 합입니다.
-                    <ul>
-                      <li class="service-care__faq--dot">계약 후 고객의 임의 해지 시 위약금, 회수비 외 사은품 비용 및 미납/연체 비용 등이 추가 부과될 수 있습니다. </li>
-                    </ul>
-                  </li>
-                  <li>추가 궁금하신 사항은 1:1 게시판 또는 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내 드리도록 하겠습니다.<br>(단, 설치 비용에 대한 문의는 판매처 혹은 담당 설치 기사에게 문의하세요)</li>
-                </ul>
-              </div>
-            </div>
+        <div class="service-tabs">
+          <div class="service-tabs__list" role="tablist" aria-label="자주 묻는 질문 카테고리" data-service-tabs>
+            <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-all" aria-selected="true" aria-controls="service-panel-all">전체</button>
+            <button type="button" class="service-tabs__button" role="tab" id="service-tab-pay" aria-selected="false" aria-controls="service-panel-pay" tabindex="-1">결제/요금</button>
+            <button type="button" class="service-tabs__button" role="tab" id="service-tab-discount" aria-selected="false" aria-controls="service-panel-discount" tabindex="-1">할인 혜택</button>
+            <button type="button" class="service-tabs__button" role="tab" id="service-tab-info" aria-selected="false" aria-controls="service-panel-info" tabindex="-1">계약 정보</button>
+            <button type="button" class="service-tabs__button" role="tab" id="service-tab-care" aria-selected="false" aria-controls="service-panel-care" tabindex="-1">관리/케어</button>
           </div>
 
-          <!-- FAQ Item 2 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-2">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">구독 월 요금 납부 방법이 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-2" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li class="service-care__faq--dot">가전/서비스(케어십 등) 구독 납부 방법은 계좌 이체와 카드 자동 결제 중 선택하실 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--bar">가전구독: 계좌 이체와 카드 결제 중 선택 가능 (단, 일부 카테고리에 한해서 계좌 이체 가능) </li>
-                      <li class="service-care__faq--bar">서비스(케어십): 계좌 이체와 카드 자동납부 중 선택 가능 (단, 납부 방법 변경 시 카드만 가능) </li>
-                      <li class="service-care__faq--bar">정기배송/회수관리: 신용 검증을 필요로 하여 '카드 결제'만 가능 </li>
+          <!--  1. 전체 패널  -->
+          <div id="service-panel-all" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-all" tabindex="0">
+            <div class="faq-accordion">
+              <!-- FAQ Item 1 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-1">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 월 요금 외 발생 비용이 있나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-1" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>고객님의 가전 구독 계약 기간 중 아래와 같은 상황에서 요금 외 추가 비용이 발생할 수 있습니다.</li>
+                      <li>1. 설치 시: 기본 설치비는 면제이나, 특수 타공이 필요한 제품의 경우에는 추가 설치비가 발생할 수 있습니다.(제품군: 정수기, 식기세척기, 전기레인지, 에어컨)</li>
+                      <li>2. 이전 설치 시: 이전 설치 필요 시 철거비, 운송비, 재설치비가 발생할 수 있습니다.(제품마다 이전 설치 가능 여부 및 비용이 상이하므로 이전 설치 접수 시 콜센터로 문의 부탁드립니다) </li>
+                      <li>3. 계약 해지 시 </li>
+                      <li class="service-care__faq--bar">의무사용기간 이내 해지 시: 위약금 + 회수비 </li>
+                      <li class="service-care__faq--bar">계약기간 이내 해지 시: 회수비</li>
+                      <li class="service-care__faq--bar">위약금: 의무사용기간 내 고객 요청에 의한 임의 해지 시, 위약금이 부과됩니다.
+                        <ul>
+                          <li class="service-care__faq--dot">위약금 산정 시, 월요금은 할인되기 전의 기본요금을 기준으로 합니다. </li>
+                          <li class="service-care__faq--dot">1년 내 : 잔여 의무사용기간 내 총 요금의 30%</li>
+                          <li class="service-care__faq--dot">1년 경과 후 2년 경과 이전 : 잔여 의무사용기간 내 총 요금의 20%</li>
+                          <li class="service-care__faq--dot">2년 경과 후 의무사용기간 이전 : 잔여 의무사용기간 내 총 요금의 10%</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--bar">회수비 : 의무사용기간 경과 여부와 무관하게 총 계약기간 내 고객 요청에 의한 임의해지 시 회수비(인건비+운송비)가 부과됩니다.
+                        <ul>
+                          <li class="service-care__faq--dot">제품별 회수비 : 정수기/맥주제조기 50,000원, 공기청정기 35,000원, 스타일러 65,000원, 전기레인지 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음정수기냉장고 98,500원, 식물재배기 62,000원, 에어컨 100,000원 (23평 이상 2in1 150,000원), 노트북 35,000원, 세탁기 68,000원, A9청소기 50,000원</li>
+                          <li class="service-care__faq--dot">상기금액은 21년 11월 5일 계약부터의 회수비 금액, 이전 계약건의 회수비는 계약서에 명기 된 금액을 따름</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--bar">소모성 부품비용: 소모성 부품비용은 설치 받으신 제품의 소모성 부품(ex.필터)금액의 합입니다.
+                        <ul>
+                          <li class="service-care__faq--dot">계약 후 고객의 임의 해지 시 위약금, 회수비 외 사은품 비용 및 미납/연체 비용 등이 추가 부과될 수 있습니다. </li>
+                        </ul>
+                      </li>
+                      <li>추가 궁금하신 사항은 1:1 게시판 또는 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내 드리도록 하겠습니다.<br>(단, 설치 비용에 대한 문의는 판매처 혹은 담당 설치 기사에게 문의하세요)</li>
                     </ul>
-                  </li>
-                  <li class="service-care__faq--dot">납부 방법은 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 납부정보 변경을 통하여 변경하실 수 있습니다.</li>
-                  <li class="service-care__faq--dot">첫 달 사용요금의 경우, 가전 구독은 계약일부터 월 기준 말일까지 사용일 수만큼 익월 10일 결제됩니다.(케어십의 경우 계약일과 무관하게 익월 정기 출금 일부터 월 요금이 결제됩니다.) </li>
-                  <li class="service-care__faq--dot">매월 출금일은 가전 구독은 매월 10일 / 케어십의 경우 매월 15일입니다. (21년 12월 17일 이전 케어십 계약건의 경우, 정기출금일은 매월 10일)
-                    <ul>
-                      <li class="service-care__faq--bar">회사 정책으로 인하여 출금일은 별도 통지 없이 변경될 수 있음</li>
-                    </ul>
-                  </li>
-                  <li class="service-care__faq--dot">정기출금일에 출금이 안되었다면 2~5일 내 등록된 납부계좌, 또는 등록된 카드에서 재출금 됩니다. </li>
-                </ul>
+                  </div>
+                </div>
               </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-2">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 월 요금 납부 방법이 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-2" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">가전/서비스(케어십 등) 구독 납부 방법은 계좌 이체와 카드 자동 결제 중 선택하실 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">가전구독: 계좌 이체와 카드 결제 중 선택 가능 (단, 일부 카테고리에 한해서 계좌 이체 가능) </li>
+                          <li class="service-care__faq--bar">서비스(케어십): 계좌 이체와 카드 자동납부 중 선택 가능 (단, 납부 방법 변경 시 카드만 가능) </li>
+                          <li class="service-care__faq--bar">정기배송/회수관리: 신용 검증을 필요로 하여 '카드 결제'만 가능 </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">납부 방법은 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 납부정보 변경을 통하여 변경하실 수 있습니다.</li>
+                      <li class="service-care__faq--dot">첫 달 사용요금의 경우, 가전 구독은 계약일부터 월 기준 말일까지 사용일 수만큼 익월 10일 결제됩니다.(케어십의 경우 계약일과 무관하게 익월 정기 출금 일부터 월 요금이 결제됩니다.) </li>
+                      <li class="service-care__faq--dot">매월 출금일은 가전 구독은 매월 10일 / 케어십의 경우 매월 15일입니다. (21년 12월 17일 이전 케어십 계약건의 경우, 정기출금일은 매월 10일)
+                        <ul>
+                          <li class="service-care__faq--bar">회사 정책으로 인하여 출금일은 별도 통지 없이 변경될 수 있음</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">정기출금일에 출금이 안되었다면 2~5일 내 등록된 납부계좌, 또는 등록된 카드에서 재출금 됩니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-3">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전/서비스[케어십 등] 구독 요금 납부방법이 변경 가능한지 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-3" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">설치 예정(청약 상태) 시 
+                        <ul>
+                          <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [쇼핑 관리] > [주문/배송/구독 조회] > [구독] > [청약 상세보기] > [납부 정보 변경] </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">설치 완료(계약 생성) 시 
+                        <ul>
+                          <li class="service-care__faq--bar">LG전자 멤버십앱 : 구독 > 구독 정보 수정하기 (앱 다운 : Play스토어 or APP스토어에서 'LG전자 멤버십' 다운)</li>
+                          <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [구독 관리] > [계약 관리] > [납부 정보 변경] </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">'정수기/식기세척기/전기레인지' 이외 제품군이 포함된 계약의 경우 또는 서비스구독 제품, 정기배송/회수관리 제품, UP가전2.0 제품일 경우 '계좌 이체'로 납부 방법 변경이 불가합니다. </li>
+                      <li class="service-care__faq--dot">일부 구독 계약의 경우 홈페이지에서 납부방법 변경이 불가할 수 있으며<br>
+                        이때, 고객센터(☎ 1544-7777)를 통해 계약자 동의 및 납부자 동의 인증 절차 진행 후 변경 가능합니다.
+                      </li>
+                      <li class="service-care__faq--dot">납부수단이 변경되었으나, 이미 청구가 진행 중일 경우 이전 납부수단이 적용될 수 있습니다. 변경된 납부정보는 익월 청구분부터 적용됩니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-4">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">정기배송 및 회수관리 서비스의 정기 결제일이 언제인지 확인하고 싶어요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-4" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">홈페이지를 통한 정기 결제일 확인 방법
+                        <ul>
+                          <li class="service-care__faq--bar">홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 확인하실 수 있습니다.</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">영업일이 아닌 경우에는 영업일 이후에 결제 청구됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">정기결제일 10일 선택 및 해당일이 주말 또는 공휴일인 경우, 돌아오는 영업일에 요금이 청구됩니다. </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">상품 주문일 기준 D+2일 이후로 정기결제일을 선택했을 경우에는 당월 요금 청구되며, 상품 주문일 기준 D+2일 이전 날짜로 정기결제일을 선택했을 경우에는 익월 요금 청구됩니다. 
+                        <ul>
+                          <li class="service-care__faq--bar">11월 10일 상품 주문 및 11월 12일로 정기결제일 선택 시 11월 12일부터 매 월 12일에 정기결제 </li>
+                          <li class="service-care__faq--bar">11월 10일 상품 주문 및 11월 11일로 정기결제일 선택 시 12월 11일부터 매 월 11일에 정기결제</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">추가 궁금하신 사항은 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내드리도록 하겠습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-5">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">반값 할인(프로모션)이 적용되는 기간과 이후 월 요금은 어떻게 확인하나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-5" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>반값 할인 프로모션은 제품 및 행사별로 상이하게 적용됩니다.<br>
+                      현재 기준으로 아래와 같이 적용됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">6개월 반값 할인: 1~6회차 반값 요금 적용, 7회차부터 정상 요금 적용</li>
+                          <li class="service-care__faq--bar">12개월 반값 할인: 1~12회차 반값 요금 적용, 13회차부터 정상 요금 적용 </li>
+                          <li class="service-care__faq--bar">4년 계약 + 12개월 반값 할인: 1~12회차 반값 요금 적용, 13회차부터 정상 요금 적용 </li>
+                        </ul>
+                      </li>
+                      <li>정확한 월 요금은 이용 중인 요금 안내 화면 또는 계약서를 통해 확인할 수 있습니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-6">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">계약기간 동안 할인 요금이 유지되나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-6" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독 신청 시 선택한 요금 할인은 계약 기간 동안 유지됩니다.<br>
+                          단, 할인 유형에 따라 적용 기간이 상이할 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">반값 할인 : 6개월 또는 12개월 동안 적용</li>
+                          <li class="service-care__faq--bar">결합 할인, 재구독 할인, 가전 연계 할인, 선납 할인 등 : 계약 기간 동안 적용 </li>
+                        </ul>
+                      </li>
+                      <li>적용 중인 할인 내역은 별도로 확인할 수 있습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-7">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">연차별 방문 시 드는 비용이 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-7" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>계약시 안내된 비용외 별도의 방문 비용은 추가 되지 않습니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-8">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 미납 요금은 어떻게 확인하고 납부할 수 있나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-8" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>미납 요금 관련 내용은 아래 경로에서 확인할 수 있습니다. 
+                        <ul>
+                          <li>확인경로 : 마이페이지 > 구독 관리 > 납부내역 조회</li>
+                        </ul>
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">납부내역 조회 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 9 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-9">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독료가 이중으로 출금된 것 같아요. 어떻게 처리되나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-9" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독료 이중 출금이 발생한 경우, 고객센터에서 고객님께 연락드려 확인 및 환불 절차를 진행합니다.<br>
+    고객 확인 및 이중 출금 사유를 확인한 뒤, 환불 계좌(계약자 또는 납부자 명의)를 접수해 주시면 영업일 기준 1~3일 내 환불이 진행됩니다.<br>
+    다만, 고객센터에서 연락드리기 전이라도 이중 출금으로 보이는 내역이 있으시다면 고객센터로 먼저 연락해 주세요. 확인 후 안내드리겠습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 10 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-10">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 선납 결제 카드 변경하고 싶어요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-10" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독 선납 결제 완료 후에는 결제 카드(종류 포함) 변경이 불가해요. 카드 변경이 필요하신 경우에는 주문을 취소하신 후, 원하시는 카드로 다시 구독 신청해 주세요.<br>
+                      배송/출고 상태는 마이페이지 > 주문/배송 조회에서 확인하실 수 있어요. 추가 도움이 필요하시면 고객센터(1544-7777)로 문의해 주세요. 
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- 페이지네이션 -->
+            <nav class="faq-pagination" aria-label="FAQ 페이지 탐색">
+              <!-- 이전 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--prev" aria-label="이전 페이지" disabled>
+                <img src="src/images/ic_prev.png" alt="" aria-hidden="true">
+              </button>
+              <!-- 페이지 표시 -->
+              <div class="faq-pagination__indicator" aria-hidden="true">
+                <span class="faq-pagination__current">1</span>
+                <span class="faq-pagination__separator">|</span>
+                <span class="faq-pagination__total">8</span>
+              </div>
+              <!-- 다음 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--next" aria-label="다음 페이지">
+                <img src="src/images/ic_next.png" alt="" aria-hidden="true">
+              </button>
+            </nav>
+            <!-- 페이지네이션 -->           
           </div>
 
-          <!-- FAQ Item 3 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-3">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전/서비스[케어십 등] 구독 요금 납부방법이 변경 가능한지 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-3" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li class="service-care__faq--dot">설치 예정(청약 상태) 시 
-                    <ul>
-                      <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [쇼핑 관리] > [주문/배송/구독 조회] > [구독] > [청약 상세보기] > [납부 정보 변경] </li>
+          <!--  2. 결제/요금 패널  -->
+          <div id="service-panel-pay" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-pay" tabindex="0" hidden>
+            <div class="faq-accordion">
+              <!-- FAQ Item 1 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-1">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 월 요금 외 발생 비용이 있나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-1" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>고객님의 가전 구독 계약 기간 중 아래와 같은 상황에서 요금 외 추가 비용이 발생할 수 있습니다.</li>
+                      <li>1. 설치 시: 기본 설치비는 면제이나, 특수 타공이 필요한 제품의 경우에는 추가 설치비가 발생할 수 있습니다.(제품군: 정수기, 식기세척기, 전기레인지, 에어컨)</li>
+                      <li>2. 이전 설치 시: 이전 설치 필요 시 철거비, 운송비, 재설치비가 발생할 수 있습니다.(제품마다 이전 설치 가능 여부 및 비용이 상이하므로 이전 설치 접수 시 콜센터로 문의 부탁드립니다) </li>
+                      <li>3. 계약 해지 시 </li>
+                      <li class="service-care__faq--bar">의무사용기간 이내 해지 시: 위약금 + 회수비 </li>
+                      <li class="service-care__faq--bar">계약기간 이내 해지 시: 회수비</li>
+                      <li class="service-care__faq--bar">위약금: 의무사용기간 내 고객 요청에 의한 임의 해지 시, 위약금이 부과됩니다.
+                        <ul>
+                          <li class="service-care__faq--dot">위약금 산정 시, 월요금은 할인되기 전의 기본요금을 기준으로 합니다. </li>
+                          <li class="service-care__faq--dot">1년 내 : 잔여 의무사용기간 내 총 요금의 30%</li>
+                          <li class="service-care__faq--dot">1년 경과 후 2년 경과 이전 : 잔여 의무사용기간 내 총 요금의 20%</li>
+                          <li class="service-care__faq--dot">2년 경과 후 의무사용기간 이전 : 잔여 의무사용기간 내 총 요금의 10%</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--bar">회수비 : 의무사용기간 경과 여부와 무관하게 총 계약기간 내 고객 요청에 의한 임의해지 시 회수비(인건비+운송비)가 부과됩니다.
+                        <ul>
+                          <li class="service-care__faq--dot">제품별 회수비 : 정수기/맥주제조기 50,000원, 공기청정기 35,000원, 스타일러 65,000원, 전기레인지 39,000원, 건조기 56,000원, 안마의자 144,000원, 식기세척기 39,000원, 얼음정수기냉장고 98,500원, 식물재배기 62,000원, 에어컨 100,000원 (23평 이상 2in1 150,000원), 노트북 35,000원, 세탁기 68,000원, A9청소기 50,000원</li>
+                          <li class="service-care__faq--dot">상기금액은 21년 11월 5일 계약부터의 회수비 금액, 이전 계약건의 회수비는 계약서에 명기 된 금액을 따름</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--bar">소모성 부품비용: 소모성 부품비용은 설치 받으신 제품의 소모성 부품(ex.필터)금액의 합입니다.
+                        <ul>
+                          <li class="service-care__faq--dot">계약 후 고객의 임의 해지 시 위약금, 회수비 외 사은품 비용 및 미납/연체 비용 등이 추가 부과될 수 있습니다. </li>
+                        </ul>
+                      </li>
+                      <li>추가 궁금하신 사항은 1:1 게시판 또는 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내 드리도록 하겠습니다.<br>(단, 설치 비용에 대한 문의는 판매처 혹은 담당 설치 기사에게 문의하세요)</li>
                     </ul>
-                  </li>
-                  <li class="service-care__faq--dot">설치 완료(계약 생성) 시 
-                    <ul>
-                      <li class="service-care__faq--bar">LG전자 멤버십앱 : 구독 > 구독 정보 수정하기 (앱 다운 : Play스토어 or APP스토어에서 'LG전자 멤버십' 다운)</li>
-                      <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [구독 관리] > [계약 관리] > [납부 정보 변경] </li>
-                    </ul>
-                  </li>
-                  <li class="service-care__faq--dot">'정수기/식기세척기/전기레인지' 이외 제품군이 포함된 계약의 경우 또는 서비스구독 제품, 정기배송/회수관리 제품, UP가전2.0 제품일 경우 '계좌 이체'로 납부 방법 변경이 불가합니다. </li>
-                  <li class="service-care__faq--dot">일부 구독 계약의 경우 홈페이지에서 납부방법 변경이 불가할 수 있으며<br>
-                    이때, 고객센터(☎ 1544-7777)를 통해 계약자 동의 및 납부자 동의 인증 절차 진행 후 변경 가능합니다.
-                  </li>
-                  <li class="service-care__faq--dot">납부수단이 변경되었으나, 이미 청구가 진행 중일 경우 이전 납부수단이 적용될 수 있습니다. 변경된 납부정보는 익월 청구분부터 적용됩니다. </li>
-                </ul>
+                  </div>
+                </div>
               </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-2">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 월 요금 납부 방법이 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-2" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">가전/서비스(케어십 등) 구독 납부 방법은 계좌 이체와 카드 자동 결제 중 선택하실 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">가전구독: 계좌 이체와 카드 결제 중 선택 가능 (단, 일부 카테고리에 한해서 계좌 이체 가능) </li>
+                          <li class="service-care__faq--bar">서비스(케어십): 계좌 이체와 카드 자동납부 중 선택 가능 (단, 납부 방법 변경 시 카드만 가능) </li>
+                          <li class="service-care__faq--bar">정기배송/회수관리: 신용 검증을 필요로 하여 '카드 결제'만 가능 </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">납부 방법은 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 납부정보 변경을 통하여 변경하실 수 있습니다.</li>
+                      <li class="service-care__faq--dot">첫 달 사용요금의 경우, 가전 구독은 계약일부터 월 기준 말일까지 사용일 수만큼 익월 10일 결제됩니다.(케어십의 경우 계약일과 무관하게 익월 정기 출금 일부터 월 요금이 결제됩니다.) </li>
+                      <li class="service-care__faq--dot">매월 출금일은 가전 구독은 매월 10일 / 케어십의 경우 매월 15일입니다. (21년 12월 17일 이전 케어십 계약건의 경우, 정기출금일은 매월 10일)
+                        <ul>
+                          <li class="service-care__faq--bar">회사 정책으로 인하여 출금일은 별도 통지 없이 변경될 수 있음</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">정기출금일에 출금이 안되었다면 2~5일 내 등록된 납부계좌, 또는 등록된 카드에서 재출금 됩니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-3">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전/서비스[케어십 등] 구독 요금 납부방법이 변경 가능한지 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-3" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">설치 예정(청약 상태) 시 
+                        <ul>
+                          <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [쇼핑 관리] > [주문/배송/구독 조회] > [구독] > [청약 상세보기] > [납부 정보 변경] </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">설치 완료(계약 생성) 시 
+                        <ul>
+                          <li class="service-care__faq--bar">LG전자 멤버십앱 : 구독 > 구독 정보 수정하기 (앱 다운 : Play스토어 or APP스토어에서 'LG전자 멤버십' 다운)</li>
+                          <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [구독 관리] > [계약 관리] > [납부 정보 변경] </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">'정수기/식기세척기/전기레인지' 이외 제품군이 포함된 계약의 경우 또는 서비스구독 제품, 정기배송/회수관리 제품, UP가전2.0 제품일 경우 '계좌 이체'로 납부 방법 변경이 불가합니다. </li>
+                      <li class="service-care__faq--dot">일부 구독 계약의 경우 홈페이지에서 납부방법 변경이 불가할 수 있으며<br>
+                        이때, 고객센터(☎ 1544-7777)를 통해 계약자 동의 및 납부자 동의 인증 절차 진행 후 변경 가능합니다.
+                      </li>
+                      <li class="service-care__faq--dot">납부수단이 변경되었으나, 이미 청구가 진행 중일 경우 이전 납부수단이 적용될 수 있습니다. 변경된 납부정보는 익월 청구분부터 적용됩니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-4">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">정기배송 및 회수관리 서비스의 정기 결제일이 언제인지 확인하고 싶어요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-4" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">홈페이지를 통한 정기 결제일 확인 방법
+                        <ul>
+                          <li class="service-care__faq--bar">홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 확인하실 수 있습니다.</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">영업일이 아닌 경우에는 영업일 이후에 결제 청구됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">정기결제일 10일 선택 및 해당일이 주말 또는 공휴일인 경우, 돌아오는 영업일에 요금이 청구됩니다. </li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">상품 주문일 기준 D+2일 이후로 정기결제일을 선택했을 경우에는 당월 요금 청구되며, 상품 주문일 기준 D+2일 이전 날짜로 정기결제일을 선택했을 경우에는 익월 요금 청구됩니다. 
+                        <ul>
+                          <li class="service-care__faq--bar">11월 10일 상품 주문 및 11월 12일로 정기결제일 선택 시 11월 12일부터 매 월 12일에 정기결제 </li>
+                          <li class="service-care__faq--bar">11월 10일 상품 주문 및 11월 11일로 정기결제일 선택 시 12월 11일부터 매 월 11일에 정기결제</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">추가 궁금하신 사항은 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내드리도록 하겠습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-5">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">반값 할인(프로모션)이 적용되는 기간과 이후 월 요금은 어떻게 확인하나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-5" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>반값 할인 프로모션은 제품 및 행사별로 상이하게 적용됩니다.<br>
+                      현재 기준으로 아래와 같이 적용됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">6개월 반값 할인: 1~6회차 반값 요금 적용, 7회차부터 정상 요금 적용</li>
+                          <li class="service-care__faq--bar">12개월 반값 할인: 1~12회차 반값 요금 적용, 13회차부터 정상 요금 적용 </li>
+                          <li class="service-care__faq--bar">4년 계약 + 12개월 반값 할인: 1~12회차 반값 요금 적용, 13회차부터 정상 요금 적용 </li>
+                        </ul>
+                      </li>
+                      <li>정확한 월 요금은 이용 중인 요금 안내 화면 또는 계약서를 통해 확인할 수 있습니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-6">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">계약기간 동안 할인 요금이 유지되나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-6" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독 신청 시 선택한 요금 할인은 계약 기간 동안 유지됩니다.<br>
+                          단, 할인 유형에 따라 적용 기간이 상이할 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">반값 할인 : 6개월 또는 12개월 동안 적용</li>
+                          <li class="service-care__faq--bar">결합 할인, 재구독 할인, 가전 연계 할인, 선납 할인 등 : 계약 기간 동안 적용 </li>
+                        </ul>
+                      </li>
+                      <li>적용 중인 할인 내역은 별도로 확인할 수 있습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-7">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">연차별 방문 시 드는 비용이 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-7" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>계약시 안내된 비용외 별도의 방문 비용은 추가 되지 않습니다. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-8">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 미납 요금은 어떻게 확인하고 납부할 수 있나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-8" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>미납 요금 관련 내용은 아래 경로에서 확인할 수 있습니다. 
+                        <ul>
+                          <li>확인경로 : 마이페이지 > 구독 관리 > 납부내역 조회</li>
+                        </ul>
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">납부내역 조회 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 9 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-9">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독료가 이중으로 출금된 것 같아요. 어떻게 처리되나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-9" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독료 이중 출금이 발생한 경우, 고객센터에서 고객님께 연락드려 확인 및 환불 절차를 진행합니다.<br>
+    고객 확인 및 이중 출금 사유를 확인한 뒤, 환불 계좌(계약자 또는 납부자 명의)를 접수해 주시면 영업일 기준 1~3일 내 환불이 진행됩니다.<br>
+    다만, 고객센터에서 연락드리기 전이라도 이중 출금으로 보이는 내역이 있으시다면 고객센터로 먼저 연락해 주세요. 확인 후 안내드리겠습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 10 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-10">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 선납 결제 카드 변경하고 싶어요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-pay-content-10" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독 선납 결제 완료 후에는 결제 카드(종류 포함) 변경이 불가해요. 카드 변경이 필요하신 경우에는 주문을 취소하신 후, 원하시는 카드로 다시 구독 신청해 주세요.<br>
+                      배송/출고 상태는 마이페이지 > 주문/배송 조회에서 확인하실 수 있어요. 추가 도움이 필요하시면 고객센터(1544-7777)로 문의해 주세요. 
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- 페이지네이션 -->
+            <nav class="faq-pagination" aria-label="FAQ 페이지 탐색">
+              <!-- 이전 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--prev" aria-label="이전 페이지" disabled>
+                <img src="src/images/ic_prev.png" alt="" aria-hidden="true">
+              </button>
+              <!-- 페이지 표시 -->
+              <div class="faq-pagination__indicator" aria-hidden="true">
+                <span class="faq-pagination__current">1</span>
+                <span class="faq-pagination__separator">|</span>
+                <span class="faq-pagination__total">8</span>
+              </div>
+              <!-- 다음 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--next" aria-label="다음 페이지">
+                <img src="src/images/ic_next.png" alt="" aria-hidden="true">
+              </button>
+            </nav>
+            <!-- 페이지네이션 -->                
           </div>
 
-          <!-- FAQ Item 4 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-4">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">정기배송 및 회수관리 서비스의 정기 결제일이 언제인지 확인하고 싶어요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-4" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li class="service-care__faq--dot">홈페이지를 통한 정기 결제일 확인 방법
-                    <ul>
-                      <li class="service-care__faq--bar">홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 확인하실 수 있습니다.</li>
+          <!--  3. 할인 혜택 패널  -->
+          <div id="service-panel-discount" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-discount" tabindex="0" hidden>
+            <div class="faq-accordion">
+              <!-- FAQ Item 1 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-1">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 월요금을 할인 받을 수 있는 제휴카드가 있는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-1" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>[제휴카드 발급 방법]</li>
+                      <li>1. 가전 구독 제품 구매 시점에 구매처(매장)에서 특정 제휴카드로 발급 신청하신 경우, 카드 발급 및 제품 설치 후 자동으로 납부 등록이 되며 전월 실적에 따라 청구 할인이 이루어집니다.
+                        <ul>
+                          <li class="service-care__faq--bar">매장: LG전자 베스트샵(하이프라자, LG전문점) </li>
+                          <li class="service-care__faq--bar">대상 카드 : 롯데/하나/현대 제휴카드 자동 발급 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.)</li>
+                        </ul>
+                      </li>
+                      <li>2. LG전자 홈페이지에서 구독 제휴카드 간편 발급 신청 가능합니다.
+                        <ul>
+                          <li class="service-care__faq--bar">대상 카드 : 롯데/하나/신한 제휴카드 간편 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.)</li>
+                          <li class="service-care__faq--bar">홈페이지 : 구독 제품 청약 신청 시 제휴카드 간편 신청 동의 후 제휴카드 선택이 가능합니다. </li>
+                          <li class="service-care__faq--bar">청약 완료 후 카드 고객센터에서 개별 연락드려 발급 상담이 진행되며, 발급 절차 완료 후 납부카드로 자동 등록됩니다. </li>
+                        </ul>
+                      </li>
+                      <li>3. 계약 이후에도 홈페이지에서 구독 제휴카드 간편 발급 신청 가능합니다. 
+                        <ul>
+                          <li class="service-care__faq--bar">대상 카드 : 롯데/하나/신한 제휴카드 간편 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.) </li>
+                          <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 제휴카드 발급 신청을 할 수 있습니다. </li>
+                          <li class="service-care__faq--bar">발급 신청 후 고객센터에서 개별 연락드려 발급 상담이 진행되며, 발급 절차 완료 후 납부 카드로 자동 등록됩니다.</li>
+                        </ul>
+                      </li>
+                      <li>4. 해당 카드사 홈페이지나 고객센터로 직접 전화하시어 제휴카드 발급신청도 가능합니다.<br>
+                      카드 발급 및 제품 설치 후, 반드시 LG전자 홈페이지 / LG전자 멤버십 앱 / 고객센터(☎ 1544-7777)를 통해 발급받은 카드로 납부 등록을 해야 청구 할인이 가능합니다.
+                      </li>
+                      <li>[개별 제휴카드 발급 시]<br>
+                      해당 카드사 홈페이지나 고객센터로 전화하시어, 개인적으로 제휴카드 발급 신청 가능합니다.<br>
+                      다만, 개인이 직접 카드를 발급한 경우에는 카드 발급 후 반드시 LG전자 홈페이지 / LG전자 멤버십 앱 / 고객센터(☎ 1544-7777)를 통해 발급받은 카드로 납부 등록을 해야 청구 할인이 가능합니다.
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">구독 제휴카드 알아보기</a></li>
                     </ul>
-                  </li>
-                  <li class="service-care__faq--dot">영업일이 아닌 경우에는 영업일 이후에 결제 청구됩니다.
-                    <ul>
-                      <li class="service-care__faq--bar">정기결제일 10일 선택 및 해당일이 주말 또는 공휴일인 경우, 돌아오는 영업일에 요금이 청구됩니다. </li>
-                    </ul>
-                  </li>
-                  <li class="service-care__faq--dot">상품 주문일 기준 D+2일 이후로 정기결제일을 선택했을 경우에는 당월 요금 청구되며, 상품 주문일 기준 D+2일 이전 날짜로 정기결제일을 선택했을 경우에는 익월 요금 청구됩니다. 
-                    <ul>
-                      <li class="service-care__faq--bar">11월 10일 상품 주문 및 11월 12일로 정기결제일 선택 시 11월 12일부터 매 월 12일에 정기결제 </li>
-                      <li class="service-care__faq--bar">11월 10일 상품 주문 및 11월 11일로 정기결제일 선택 시 12월 11일부터 매 월 11일에 정기결제</li>
-                    </ul>
-                  </li>
-                  <li class="service-care__faq--dot">추가 궁금하신 사항은 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내드리도록 하겠습니다.</li>
-                </ul>
+                  </div>
+                </div>
               </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-2">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 월 요금 할인이 안되었는데 어떻게 해야하는지 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-2" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>1. 제휴카드로 납부 등록 하셨나요?<br>
+    카드 발급 및 제품 설치 후, 반드시 LG전자 홈페이지 / LG전자 멤버십 앱 / 고객센터(☎ 1544-7777)를 통해 발급 받은 카드로 납부 등록을 해야 청구 할인이 가능합니다.<br>
+                      단, 영업일 기준, 첫 결제일 3일 전까지 제휴카드로 납부 등록을 해주셔야 하며, 월 요금은 설치일 또는 계약요청일 익월부터 정기출금일에 청구됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">매월 출금일은 가전 구독은 매월 10일 / 서비스 구독(케어십 등)의 경우 매월 15일입니다. (21년 12월 17일 이전 케어십 계약건의 경우, 정기출금일은 매월 10일) </li>
+                          <li class="service-care__faq--bar">구매처(매장)에서 특정 제휴카드로 발급신청하신 경우, 카드 발급 및 제품 설치 후 자동으로 납부 등록이 이루어집니다.</li>
+                          <li class="service-care__faq--bar">매장: LG전자 베스트샵(하이프라자, LG전문점)</li>
+                          <li class="service-care__faq--bar">대상 카드: 신한/롯데/하나 제휴카드 자동발급 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.) </li>  
+                        </ul>                           
+
+                      </li>            
+                      <li>2. 청구서 금액을 확인해보셨나요?<br>
+                      제휴카드 할인은 LG전자가 아닌 카드사에서 사용실적에 따라 할인해주는 '청구할인' 방식입니다.<br>
+                      따라서 가전 구독 월 요금 출금일에는 정상요금이 출금되고, 카드대금 청구 시점에 사용실적 기준이 충족되면 할인됩니다.
+                      </li>
+                      <li>3. 카드 전월 실적이 충족 되셨나요?<br>
+                      각 카드별 전월 실적 조건이 충족되어야 하며, 해당 내용은 카드사로 문의하시면 됩니다.
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">▶ 제휴카드사별 안내 보기</a></li>
+                      <li>4. 베스트샵 멤버십 포인트 차감에 "동의" 하셨나요?<br>
+    가전 구독 월 요금이 베스트샵 멥버십 포인트로 결제되고 있을 경우, 매월 9일 베스트샵 멤버십 포인트로 가전 구독 월 요금이 선 차감 된 후 나머지 금액안에서 제휴카드 청구할인 혜택을 받을 수 있습니다.                  
+                      </li>
+                      <li>5. 장기 할부 구매하시고 캐시백을 받으셨나요?<br>
+    해당 카드로 타제품을 장기 할부로 구매하고 캐시백 혜택을 받으신 경우, 동일한 카드로는 가전 구독 월 요금 할인 혜택을 받으실 수 없습니다. 
+                        <ul>
+                          <li class="service-care__faq--bar">해당 카드 : [광주/전북] 베스트케어 / [KB국민] LG전자 KB국민 / [NH농협] 올원 LG전자 BEST </li>
+                        </ul>                  
+                      </li>
+                      <li>6. 프로모션(반값할인 등)으로 구독하셨나요?<br>
+                      가전 구독을 반값할인 등 프로모션으로 가입하신 경우, 할인 혜택은 정해진 기간에 한해 적용됩니다.<br>
+                      따라서 프로모션 기간이 종료되면 별도 안내 없이 정상 구독료로 자동 전환되어 청구될 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-3">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">여러 대의 가전 구독 제품을 사용중인데, 모두 제휴카드 청구할인 혜택이 적용되는지 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-3" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>1. 하나의 제휴카드로 한가지 제품(계약)을 청구할인 받으실 수 있습니다.<br>
+                        제휴카드로는 여러 개의 가전 구독 제품(계약)의 중복 할인이 불가능하며, 한 개의 카드로 한 개의 제품(계약)만 할인 가능합니다.<br>
+                        두 제품 중 가전 구독 월요금 납부일이 빠른 계정(계약)이 할인됩니다.
+                      </li>
+                      <li>2. 청구수금그룹 (계약자 본인 명의로 된 두개 이상의 계약을 묶어 총 요금을 카드사에 한번에 청구하여 결제하는 방법)을 신청하시면 카드사별 적용 가능한 혜택이 자동 적용됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">청구수금그룹 신청은 해당 사무소에서 신청 가능합니다.</li>
+                        </ul>
+                      </li>
+                      <li>3. 다른 제휴카드를 하나 더 발급하셔서 추가 청구할인 받으실 수 있습니다.<br>
+                      현재 등록한 제휴카드 외에 다른 제휴카드를 하나 더 발급하고, 제품(계약)마다 해당카드로 납부 등록을 하는 것도 가능합니다. 각 카드별 실적 충족 시 각각 가전 구독 월요금이 할인됩니다.
+                    </li>
+                      <li><a href="#" class="service-care__faq--link">구독 제휴카드 알아보기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-4">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 월 요금 면제 행사때 가입하였는데, 제휴카드 청구할인 혜택을 받을 수 있을지 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-4" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 월 요금 면제 프로모션 시기의 경우, LG전자에서 가전 구독 월 요금을 청구하지 않으므로 청구할인이 불가능합니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-5">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품이 설치 전인데 제휴카드 신청이 따로 가능한지 궁금해요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-5" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>해당 카드사로 전화하여 개인적으로 제휴카드발급신청 가능합니다.<br>
+                        카드 발급 및 제품설치 후, 반드시 LG전자 홈페이지 또는 LG전자 멤버십 앱을 통해 발급 받은 카드로 납부 등록을 해야 청구 할인이 가능합니다.<br>
+                        단, 영업일 기준, 첫 결제일 3일 전까지 제휴카드로 납부 등록을 해주셔야 하며, 월요금은 설치일 또는 계약요청일 익월부터 정기출금일에 청구됩니다.
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">구독 제휴카드 알아보기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-6">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">결합 할인 적용이 안 돼요. </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-6" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>결합 할인은 다른 제품군인 경우에만 적용할 수 있습니다. (ex_정수기와 공기청정기 결합 시 할인) </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-7">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">제휴카드 할인 적용을 위한 전원 실적 기준은 무엇인가요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-7" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>제휴카드 전월 실적 기준은 카드사 및 카드 상품별로 상이합니다.<br>
+                      일반적으로 전월 이용금액에는 일반 결제 금액, 세금, 할부, 일부 생활요금 등이 포함될 수 있으나, 카드별 기준이 다를 수 있습니다.<br>
+                      정확한 기준은 카드사 홈페이지 또는 제휴카드 안내 페이지를 통해 확인해 주시기 바랍니다.
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">제휴카드 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-8">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">제휴카드 연회비는 얼마인가요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-8" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>제휴카드 연회비는 카드사 및 카드 상품에 따라 다르게 책정됩니다.<br>
+    정확한 연회비는 카드사 공식 홈페이지 또는 카드 안내 페이지에서 확인하실 수 있습니다.
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">제휴카드 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 9 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-9">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">동일 카드사의 제휴카드를 변경해도 혜택을 받을 수 있나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-9" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>제휴카드 혜택은 기본적으로 카드 상품 1종 기준으로 적용됩니다.<br>동일 카드사 내 다른 카드로 변경하는 경우, 카드 혜택 조건에 따라 할인 적용이 제한될 수 있습니다.<br>다른 제휴카드로 변경하는 경우 할인 적용은 유지될 수 있으나, 세부 혜택 조건은 변경될 수 있습니다.<br>카드 변경 전 혜택 조건을 확인해 주시기 바랍니다.
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">제휴카드 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 10 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-10">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">카드 혜택을 자세히 알고 싶어요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-10" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>제휴카드 혜택은 카드 상품별로 제공 조건 및 혜택이 다르게 적용됩니다.<br>
+                      자세한 내용은 카드사 홈페이지 또는 제휴카드 안내 페이지를 통해 확인하실 수 있습니다. 
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">제휴카드 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 11 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-11">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">정수기 가전 연계 할인은 무엇이며, 구독 요금에 어떻게 적용되나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-11" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>최근 1년 이내 LG전자 공식몰에서 30만원 이상 제품을 구매한 이력이 있는 경우, 신규 정수기 제품 구독 시 최근 1년 이내 결제 이력 기준으로 최대 3% 할인이 적용될 수 있습니다. </li>
+                      <li>적용 기준은 다음과 같습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">정수기 구독: 최근 1년 이내 결제 이력 기준 적용 </li>
+                        </ul>
+                      </li>
+                      <li>자세한 적용 기준 및 할인 여부는 혜택 안내 화면에서 확인하실 수 있습니다. </li>
+                      <li><a href="#" class="service-care__faq--link">정수기 가전 연계 할인 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 12 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-12">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">추가 구독 시 혜택이 있나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-12" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>현재 구독 중인 제품이 있는 경우, 추가 구독 시 추가 구독 건에 대해 할인 혜택이 적용될 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">재구독 할인: 월 이용요금 최대 5% 할인</li>
+                          <li class="service-care__faq--bar">기존 결합 할인: 월 이용요금 최대 3% 할인</li>
+                        </ul>
+                      </li>
+                      <li>단, 재구독 할인은 계약 만기 124일 전부터 만기 후 1년까지 계약을 보유 시 적용되는 할인 혜택입니다.<br>
+                      적용 가능 여부는 구독 상품 및 조건에 따라 달라질 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 13 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-13">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">제휴카드를 등록하려면 어떻게 해야 하나요? </span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-discount-content-13" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>1. 구독 청약 시 제휴카드 발급을 신청하신 경우<br>
+                        : 계약 생성 이후 담당자가 고객님께 연락드려 카드 발급을 도와드리며, 발급된 제휴카드는 다음 청구 전까지 자동 등록됩니다.
+                      </li>
+                      <li>2. 구독 청약 시 제휴카드 발급을 신청하지 않으셨다가 이후 추가 신청을 원하시는 경우<br>
+                        : 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] > [납부정보] 메뉴에서 ‘제휴카드 간편신청’을 통해 신청하실 수 있습니다.
+                      </li>
+                      <li>3. 구독 결제용 카드 변경을 원하시는 경우<br>
+                        : 홈페이지 [마이페이지] > [구독 관리] > [납부방법 변경] 메뉴에서 결제 카드를 변경하실 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- 페이지네이션 -->
+            <nav class="faq-pagination" aria-label="FAQ 페이지 탐색">
+              <!-- 이전 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--prev" aria-label="이전 페이지" disabled>
+                <img src="src/images/ic_prev.png" alt="" aria-hidden="true">
+              </button>
+              <!-- 페이지 표시 -->
+              <div class="faq-pagination__indicator" aria-hidden="true">
+                <span class="faq-pagination__current">1</span>
+                <span class="faq-pagination__separator">|</span>
+                <span class="faq-pagination__total">8</span>
+              </div>
+              <!-- 다음 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--next" aria-label="다음 페이지">
+                <img src="src/images/ic_next.png" alt="" aria-hidden="true">
+              </button>
+            </nav>
+            <!-- 페이지네이션 -->                
           </div>
 
-          <!-- FAQ Item 5 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-5">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">반값 할인(프로모션)이 적용되는 기간과 이후 월 요금은 어떻게 확인하나요? </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-5" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>반값 할인 프로모션은 제품 및 행사별로 상이하게 적용됩니다. </li>
-                  <li>현재 기준으로 아래와 같이 적용됩니다.
-                    <ul>
-                      <li class="service-care__faq--bar">6개월 반값 할인: 1~6회차 반값 요금 적용, 7회차부터 정상 요금 적용</li>
-                      <li class="service-care__faq--bar">12개월 반값 할인: 1~12회차 반값 요금 적용, 13회차부터 정상 요금 적용 </li>
-                      <li class="service-care__faq--bar">4년 계약 + 12개월 반값 할인: 1~12회차 반값 요금 적용, 13회차부터 정상 요금 적용 </li>
+          <!--  4. 계약 정보 패널  -->
+          <div id="service-panel-info" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-info" tabindex="0" hidden>
+            <div class="faq-accordion">
+              <!-- FAQ Item 1 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-1">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">계약자와 실사용자가 다른 경우 어떻게 변경할 수 있을지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-1" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 계약은 계약자 본인 명의로 신청하고, 주소는 실제 사용하는 주소로 설치할 수 있습니다.</li>
+                      <li>실사용자 주소로 제품 설치 후 익일부터 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 실사용자(인수자)의 성함, 연락처, 주소는 변경하실 수 있습니다. 또한 가전/서비스 구독 고객센터(☎ 1544-7777)로 연락하여 실사용자(인수자)의 정보 변경이 가능하며, 케어 매니저도 변경된 실사용자에게 연락드려 유지관리 서비스에 대한 방문 일정을 안내합니다.</li>
+                      <li class="service-care__faq--dot">확인사항
+                        <ul>
+                          <li>인수 정보만 변경되는 부분이며 계약기간 내 제품의 모든 책임과 의무는 <strong class="red">계약자</strong>에게 있으므로 계약자 성함을 변경해야 할 경우에는 명의변경으로 진행하셔야 합니다.</li>
+                          <li>계약 관련 모든 정보 안내 및 수정은 계약자 외 제3자(배우자 포함)에게 안내/상담/접수 등을 할 수 없어, 실사용자의 원활한 상담을 위해서는 LGE.COM 마이페이지 > 구독 > 계약 관리 메뉴에서 계약자 본인이 실사용자 등록 상담신청을 통해 실사용자 등록이 필요합니다. (실사용자 등록 후 실사용자가 계약 전반에 관한 모든 구독 정보 안내, 각종 서류 발송, 서비스 접수, 이전 설치 접수 등 상담 가능)</li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                  <li>정확한 월 요금은 이용 중인 요금 안내 화면 또는 계약서를 통해 확인할 수 있습니다. </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 6 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-6">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">계약기간 동안 할인 요금이 유지되나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-6" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>구독 신청 시 선택한 요금 할인은 계약 기간 동안 유지됩니다. </li>
-                  <li>단, 할인 유형에 따라 적용 기간이 상이할 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--bar">반값 할인 : 6개월 또는 12개월 동안 적용</li>
-                      <li class="service-care__faq--bar">결합 할인, 재구독 할인, 가전 연계 할인, 선납 할인 등 : 계약 기간 동안 적용 </li>
+              <!-- FAQ Item 2 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-2">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 계약 해지시 어떻게 되는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-2" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">가전 구독 계약 해지 방법
+                        <ul>
+                          <li>계약 해지를 원하실 경우 고객센터(☎ 1544-7777) 또는 홈페이지 [마이페이지] > [구독 관리] > [계약 관리]를 통해 해지상담 신청 및 상담 이후 해지 처리가 가능합니다.</li>
+                          <li class="service-care__faq--bar">의무사용기간이 경과한 경우: 당월 사용요금 및 회수비까지 완납이 되어야 해지 가능합니다.</li>
+                          <li class="service-care__faq--bar">의무사용기간 이내인 경우: 아래 기준에 따르는 해약금을 납부하셔야 해지 가능합니다.</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">해약금 정산기준(아래 항목들의 합계)
+                        <ul>
+                          <li class="service-care__faq--bar">해약금: 위약금 + 회수비(회수 불가 시 분실료) + 사은품 비용 + 미납/연체 비용 등</li>
+                        </ul>
+                      </li>
+                      <li>1. 위약금: 위약금 산정 시, 월 요금은 할인되기 전의 기본요금을 기준으로 함
+                        <ul>
+                          <li class="service-care__faq--bar">1년 경과 이전: 잔여 의무사용기간 내 총 요금의 30%</li>
+                          <li class="service-care__faq--bar">1년 경과 후 2년 경과 이전: 20% 부과</li>
+                          <li class="service-care__faq--bar">2년 경과 후 의무사용기간 이전: 10% 부과<br>
+                          (단, 계약기간 2년 상품의 경우 1년 경과 이전: 20%, 1년 경과 후 의무사용기간 이전: 10% 부과)
+                          </li>
+                        </ul>
+                      </li>
+                      <li>2. 회수비: 의무사용기간 경과 여부와 무관하게 회수비(인건비+운송비)가 부과됨 (회수가 불가능할 경우 분실료 부과)</li>
+                      <li>3. 사은품 비용: 해지접수 시점에 기 지급된 사은품이 있을 경우 해약금에 함께 청구함
+                      </li>
+                      <li class="service-care__faq--bar">비용 환수 기준<br>
+                        ① 가전/서비스(케어십 등) 구독 계약 성립 후 12개월 이내 고객 요청에 의한 해지 시, 기 지급받은 사은품에 해당하는 금액(전액)이 부과됩니다.<br>
+                        ② 현금성 사은품: 사은품 액면 금액 / 비현금성 사은품: LG전자 사은품 구매단가 기준 적용
+                      </li>                  
+                      <li>4. 미납/연체 비용: 해지(해제) 효력 발생 시점에 미납/연체 비용이 있을 경우 해약금에 함께 청구</li>
+                      <li>5. 잔여 비용 : 해약 시점까지 남은 가전 구독 월 요금 일할 계산함</li>
+                      <li>6. 제품 사용료 : 장기 미납 고객에 한정되어 적용됨</li>
+                      <li>7. 약정 할인 환불액 : 약정 할인 적용 시 할인받은 만큼의 가전 구독 월 요금 부과됨</li>
+                      <li>
+                        <ul>
+                          <li class="service-care__faq--bar">계약은 상품 인도/설치 후 성립되며, 의무사용기간 내 고객 요청에 의한 임의 해지 시 또는 고객의 귀책사유 및 비정상 거래 사유로 LG전자가 계약을 해지(해제) 할 경우 해약금이 부과됨</li>
+                          <li class="service-care__faq--bar">선납금 납부 유형 선택 시 선납금은 청약시점에 청구됩니다. 의무사용기간 내 계약이 해지되는 경우, 사용하신 기간 동안 할인받은 총금액을 제외한 나머지 금액이 있을 시 이를 고객에게 반환합니다.</li>
+                          <li class="service-care__faq--bar">선납금 정산 금액: 납부 선납금 - 실 사용 일수 x (월 요금 할인금액 ÷ 30일)</li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                  <li>적용 중인 할인 내역은 별도로 확인할 수 있습니다.</li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 7 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-7">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">연차별 방문 시 드는 비용이 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-7" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>계약시 안내된 비용외 별도의 방문 비용은 추가 되지 않습니다. </li>
-                </ul>
+              <!-- FAQ Item 3 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-3">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품을 설치 후 며칠까지 계약 취소 가능한지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-3" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 제품은 구매처에 따라 계약 취소(청약철회) 가능 기간이 다릅니다.</li>
+                      <li class="service-care__faq--dot">매장 및 온라인 구매<br>계약 성립일로부터 7일 이내 청약철회가 가능합니다
+                        <ul>
+                          <li class="service-care__faq--bar">매장: LG전자 베스트샵 (하이프라자, 전문점)</li>
+                        </ul>
+                      </li>
+                      <li>방문판매 구매
+                        <ul>
+                          <li class="service-care__faq--dot">계약 성립일로부터 14일 이내 청약철회가 가능합니다.</li>
+                        </ul>
+                      </li>
+                      <li>청약철회 시 상품 공급에 소요된 비용(소모성 부품 비용 및 설치비용)은 고객에게 청구되며, 지급된 사은품 상당액은 회수됩니다.<br>
+                      또한 냉장고·세탁기·에어컨 등 설치가 필요한 제품은 설치 과정에서 전문 인력과 부속자재가 사용되고, 사용·소비로 인한 가치 하락 우려가 있어 설치 완료 후에는 청약철회가 불가합니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 8 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-8">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 미납 요금은 어떻게 확인하고 납부할 수 있나요? </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-8" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>미납 요금 관련 내용은 아래 경로에서 확인할 수 있습니다. 
-                    <ul>
-                      <li>확인경로 : 마이페이지 > 구독 관리 > 납부내역 조회</li>
+              <!-- FAQ Item 4 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-4">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">케어십 계약기간과 해지에 따른 위약금은 없는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-4" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>케어십 계약기간은 계약이 성립한 날로부터 12개월(에어컨 24개월, 세탁기 48개월)이며,<br>
+                      계약기간 만료시까지 고객님께서 계약 해지 의사를 통보하지 않을 경우 계약은 1년(에어컨 2년, 세탁기 4년)단위로 자동 연장됩니다.<br>
+                      단, 정수기 케어십의 경우 자동연장에도 불구하고 계약이 성립한 날로부터 84개월이 경과하는 시점에 계약이 종료되며 그 이후 계약 연장이 불가합니다.<br>
+                      케어십의 경우 의무사용기간 및 위약금은 없지만, 만일 케어십 가입시 지급 된 사은품이 있을 경우 아래의 기준으로 사은품 대금이 청구됩니다.
+                      </li>
+                      <li class="service-care__faq--dot">기 지급 사은품에 대한, 비용 환수 기준<br>
+                        ① 가전/서비스(케어십 등) 구독 계약성립 후 12개월 이내 고객 요청에 의한 해지 시, 기 지급 받은 사은품에 해당하는 금액(전액)이 부과됩니다.<br>
+                        ② 현금성 사은품 : 사은품 액면 금액 / 비현금성 사은품 : LG전자 사은품 구매단가 기준 적용
+                      </li>
+                      <li>케어십을 해지하실 경우 고객님께서 필터 교체 등 직접 관리 하셔야 되는 번거로움이 있어 케어십 가입을 권장 드리고 있습니다.<br>
+                      해지 후 재가입을 할 경우에는 사용하셨던 필터는 전체 교체 후에 가입이 가능하므로 필터 교체 비용(제품별 초기화 비용)이 청구될 수 있습니다.
+                      </li>
                     </ul>
-                  </li>
-                  <li><a href="#" class="service-care__faq--link">납부내역 조회 확인하기</a></li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 9 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-9">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">구독료가 이중으로 출금된 것 같아요. 어떻게 처리되나요? </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-9" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>구독료 이중 출금이 발생한 경우, 고객센터에서 고객님께 연락드려 확인 및 환불 절차를 진행합니다. </li>
-                  <li>고객 확인 및 이중 출금 사유를 확인한 뒤, 환불 계좌(계약자 또는 납부자 명의)를 접수해 주시면 영업일 기준 1~3일 내 환불이 진행됩니다. </li>
-                  <li>다만, 고객센터에서 연락드리기 전이라도 이중 출금으로 보이는 내역이 있으시다면 고객센터로 먼저 연락해 주세요. 확인 후 안내드리겠습니다. </li>
-                </ul>
+              <!-- FAQ Item 5 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-5">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">명의는 어떻게 변경하는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-5" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>명의 변경은 계약자가 직접 신청해야 하며, 개인 고객은 별도의 서류가 필요하지 않습니다.<br>거래선(사업자) 고객의 경우 사업자등록증 서류 증빙이 필요합니다.<br>2014년 8월 7일 개인정보보호법 개정으로 인해 고객센터(1544-7777)를 통해 명의 변경이 가능합니다.<br>단, 설치일 기준 1년 이내에는 명의 변경이 불가합니다.<br>동일 고객/가족/실사용자 간의 명의 변경도 1년 이내에는 불가하며, "개인 → 사업자" 명의 이전도 1년 이내에는 불가능합니다.<br>동일 고객/가족/실사용자 간의 명의 변경도 1년 이내에는 불가하며, "개인 → 사업자" 명의 이전도 1년 이내에는 불가능합니다.<<br>명의 변경 가능 예외 사례는 다음과 같습니다:<br>개인 → 개인: 계약자 사망, 원수부적합, 해외이주, 도서지역 이사 시 명의 변경 가능<br>사업자 → 사업자: 대표가 동일하지만 사업 변경 등으로 사업자번호가 변경될 경우 명의 변경 가능<br>사업자 → 개인: 사업장 폐업으로 인한 개인 명의 변경 필요 시 가능<br>명의 변경 요청 시 회사의 신용심사 기준에 미달하는 경우 허용되지 않을 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 10 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-pay-content-10">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">구독 선납 결제 카드 변경하고 싶어요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-pay-content-10" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>구독 선납 결제 완료 후에는 결제 카드(종류 포함) 변경이 불가해요. 카드 변경이 필요하신 경우에는 주문을 취소하신 후, 원하시는 카드로 다시 구독 신청해 주세요. </li>
-                  <li>배송/출고 상태는 마이페이지 > 주문/배송 조회에서 확인하실 수 있어요. 추가 도움이 필요하시면 고객센터(1544-7777)로 문의해 주세요. </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ==================== 3. 할인 혜택 패널 ==================== -->
-      <div id="service-panel-discount" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-discount" tabindex="0" hidden>
-        <div class="faq-accordion">
-
-          <!-- FAQ Item 1 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-1">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 월요금을 할인 받을 수 있는 제휴카드가 있는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-1" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>[제휴카드 발급 방법]</li>
-                  <li>1. 가전 구독 제품 구매 시점에 구매처(매장)에서 특정 제휴카드로 발급 신청하신 경우, 카드 발급 및 제품 설치 후 자동으로 납부 등록이 되며 전월 실적에 따라 청구 할인이 이루어집니다.
-                    <ul>
-                      <li class="service-care__faq--bar">매장: LG전자 베스트샵(하이프라자, LG전문점) </li>
-                      <li class="service-care__faq--bar">대상 카드 : 롯데/하나/현대 제휴카드 자동 발급 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.)</li>
-                    </ul>
-                  </li>
-                  <li>2. LG전자 홈페이지에서 구독 제휴카드 간편 발급 신청 가능합니다.
-                    <ul>
-                      <li class="service-care__faq--bar">대상 카드 : 롯데/하나/신한 제휴카드 간편 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.)</li>
-                      <li class="service-care__faq--bar">홈페이지 : 구독 제품 청약 신청 시 제휴카드 간편 신청 동의 후 제휴카드 선택이 가능합니다. </li>
-                      <li class="service-care__faq--bar">청약 완료 후 카드 고객센터에서 개별 연락드려 발급 상담이 진행되며, 발급 절차 완료 후 납부카드로 자동 등록됩니다. </li>
-                    </ul>
-                  </li>
-                  <li>3. 계약 이후에도 홈페이지에서 구독 제휴카드 간편 발급 신청 가능합니다. 
-                    <ul>
-                      <li class="service-care__faq--bar">대상 카드 : 롯데/하나/신한 제휴카드 간편 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.) </li>
-                      <li class="service-care__faq--bar">홈페이지 : [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 제휴카드 발급 신청을 할 수 있습니다. </li>
-                      <li class="service-care__faq--bar">발급 신청 후 고객센터에서 개별 연락드려 발급 상담이 진행되며, 발급 절차 완료 후 납부 카드로 자동 등록됩니다.</li>
-                    </ul>
-                  </li>
-                  <li>4. 해당 카드사 홈페이지나 고객센터로 직접 전화하시어 제휴카드 발급신청도 가능합니다.</li>
-                  <li>카드 발급 및 제품 설치 후, 반드시 LG전자 홈페이지 / LG전자 멤버십 앱 / 고객센터(☎ 1544-7777)를 통해 발급받은 카드로 납부 등록을 해야 청구 할인이 가능합니다. </li>
-                  <li>[개별 제휴카드 발급 시]</li>
-                  <li>해당 카드사 홈페이지나 고객센터로 전화하시어, 개인적으로 제휴카드 발급 신청 가능합니다. </li>
-                  <li>다만, 개인이 직접 카드를 발급한 경우에는 카드 발급 후 반드시 LG전자 홈페이지 / LG전자 멤버십 앱 / 고객센터(☎ 1544-7777)를 통해 발급받은 카드로 납부 등록을 해야 청구 할인이 가능합니다. </li>
-                  <li><a href="#" class="service-care__faq--link">구독 제휴카드 알아보기</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 2 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-2">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 월 요금 할인이 안되었는데 어떻게 해야하는지 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-2" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>1. 제휴카드로 납부 등록 하셨나요?</li>
-                  <li>카드 발급 및 제품 설치 후, 반드시 LG전자 홈페이지 / LG전자 멤버십 앱 / 고객센터(☎ 1544-7777)를 통해 발급 받은 카드로 납부 등록을 해야 청구 할인이 가능합니다.<br>
-                  단, 영업일 기준, 첫 결제일 3일 전까지 제휴카드로 납부 등록을 해주셔야 하며, 월 요금은 설치일 또는 계약요청일 익월부터 정기출금일에 청구됩니다.
-                    <ul>
-                      <li class="service-care__faq--bar">매월 출금일은 가전 구독은 매월 10일 / 서비스 구독(케어십 등)의 경우 매월 15일입니다. (21년 12월 17일 이전 케어십 계약건의 경우, 정기출금일은 매월 10일) </li>
-                      <li class="service-care__faq--bar">구매처(매장)에서 특정 제휴카드로 발급신청하신 경우, 카드 발급 및 제품 설치 후 자동으로 납부 등록이 이루어집니다.</li>
-                      <li class="service-care__faq--bar">매장: LG전자 베스트샵(하이프라자, LG전문점)</li>
-                      <li class="service-care__faq--bar">대상 카드: 신한/롯데/하나 제휴카드 자동발급 신청 건 (단, 신청 시점에 따라 대상 제휴카드가 달라질 수 있습니다.) </li>  
-                    </ul>                  
-                  </li>               
-                  <li>2. 청구서 금액을 확인해보셨나요?<br>
-                  제휴카드 할인은 LG전자가 아닌 카드사에서 사용실적에 따라 할인해주는 '청구할인' 방식입니다.<br>
-                  따라서 가전 구독 월 요금 출금일에는 정상요금이 출금되고, 카드대금 청구 시점에 사용실적 기준이 충족되면 할인됩니다.
-                  </li>
-                  <li>3. 카드 전월 실적이 충족 되셨나요?<br>
-                  각 카드별 전월 실적 조건이 충족되어야 하며, 해당 내용은 카드사로 문의하시면 됩니다.
-                  </li>
-                  <li><a href="#" class="service-care__faq--link">▶ 제휴카드사별 안내 보기</a></li>
-                  <li>4. 베스트샵 멤버십 포인트 차감에 "동의" 하셨나요?</li>
-                  <li>가전 구독 월 요금이 베스트샵 멥버십 포인트로 결제되고 있을 경우, 매월 9일 베스트샵 멤버십 포인트로 가전 구독 월 요금이 선 차감 된 후 나머지 금액안에서 제휴카드 청구할인 혜택을 받을 수 있습니다.</li>
-                  <li>5. 장기 할부 구매하시고 캐시백을 받으셨나요?</li>
-                  <li>해당 카드로 타제품을 장기 할부로 구매하고 캐시백 혜택을 받으신 경우, 동일한 카드로는 가전 구독 월 요금 할인 혜택을 받으실 수 없습니다. 
-                    <ul>
-                      <li class="service-care__faq--dot">해당 카드 : [광주/전북] 베스트케어 / [KB국민] LG전자 KB국민 / [NH농협] 올원 LG전자 BEST </li>
-                    </ul>
-                  </li>
-                  <li>6. 프로모션(반값할인 등)으로 구독하셨나요?</li>
-                  <li>가전 구독을 반값할인 등 프로모션으로 가입하신 경우, 할인 혜택은 정해진 기간에 한해 적용됩니다. </li>
-                  <li>따라서 프로모션 기간이 종료되면 별도 안내 없이 정상 구독료로 자동 전환되어 청구될 수 있습니다. </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 3 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-3">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">여러 대의 가전 구독 제품을 사용중인데, 모두 제휴카드 청구할인 혜택이 적용되는지 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-3" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>1. 하나의 제휴카드로 한가지 제품(계약)을 청구할인 받으실 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">제휴카드로는 여러 개의 가전 구독 제품(계약)의 중복 할인이 불가능하며, 한 개의 카드로 한 개의 제품(계약)만 할인 가능합니다.</li>
-                      <li class="service-care__faq--dot">두 제품 중 가전 구독 월요금 납부일이 빠른 계정(계약)이 할인됩니다.</li>
-                    </ul>
-                  </li>
-                  <li>2. 청구수금그룹 (계약자 본인 명의로 된 두개 이상의 계약을 묶어 총 요금을 카드사에 한번에 청구하여 결제하는 방법)을 신청하시면 카드사별 적용 가능한 혜택이 자동 적용됩니다.
-                    <ul>
-                      <li class="service-care__faq--dot">청구수금그룹 신청은 해당 사무소에서 신청 가능합니다.</li>
-                    </ul>
-                  </li>
-                  <li>3. 다른 제휴카드를 하나 더 발급하셔서 추가 청구할인 받으실 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">현재 등록한 제휴카드 외에 다른 제휴카드를 하나 더 발급하고, 제품(계약)마다 해당카드로 납부 등록을 하는 것도 가능합니다. 각 카드별 실적 충족 시 각각 가전 구독 월요금이 할인됩니다.</li>
-                    </ul>
-                  </li>
-                  <li>구독 제휴카드 알아보기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 4 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-4">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 월 요금 면제 행사때 가입하였는데, 제휴카드 청구할인 혜택을 받을 수 있을지 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-4" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 월 요금 면제 프로모션 시기의 경우, LG전자에서 가전 구독 월 요금을 청구하지 않으므로 청구할인이 불가능합니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 5 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-5">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품이 설치 전인데 제휴카드 신청이 따로 가능한지 궁금해요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-5" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>해당 카드사로 전화하여 개인적으로 제휴카드발급신청 가능합니다.</li>
-                  <li>카드 발급 및 제품설치 후, 반드시 LG전자 홈페이지 또는 LG전자 멤버십 앱을 통해 발급 받은 카드로 납부 등록을 해야 청구 할인이 가능합니다. </li>
-                  <li>단, 영업일 기준, 첫 결제일 3일 전까지 제휴카드로 납부 등록을 해주셔야 하며, 월요금은 설치일 또는 계약요청일 익월부터 정기출금일에 청구됩니다.</li>
-                  <li>구독 제휴카드 알아보기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 6 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-6">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">결합 할인 적용이 안 돼요. </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-6" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>결합 할인은 다른 제품군인 경우에만 적용할 수 있습니다. (ex_정수기와 공기청정기 결합 시 할인) </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 7 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-7">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">제휴카드 할인 적용을 위한 전원 실적 기준은 무엇인가요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-7" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>제휴카드 전월 실적 기준은 카드사 및 카드 상품별로 상이합니다. </li>
-                  <li>일반적으로 전월 이용금액에는 일반 결제 금액, 세금, 할부, 일부 생활요금 등이 포함될 수 있으나, 카드별 기준이 다를 수 있습니다. </li>
-                  <li>정확한 기준은 카드사 홈페이지 또는 제휴카드 안내 페이지를 통해 확인해 주시기 바랍니다.</li>
-                  <li>제휴카드 확인하기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 8 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-8">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">제휴카드 연회비는 얼마인가요? </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-8" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>제휴카드 연회비는 카드사 및 카드 상품에 따라 다르게 책정됩니다. </li>
-                  <li>정확한 연회비는 카드사 공식 홈페이지 또는 카드 안내 페이지에서 확인하실 수 있습니다.</li>
-                  <li>제휴카드 확인하기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 9 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-9">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">동일 카드사의 제휴카드를 변경해도 혜택을 받을 수 있나요? </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-9" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>제휴카드 혜택은 기본적으로 카드 상품 1종 기준으로 적용됩니다.</li>
-                  <li>동일 카드사 내 다른 카드로 변경하는 경우, 카드 혜택 조건에 따라 할인 적용이 제한될 수 있습니다. </li>
-                  <li>다른 제휴카드로 변경하는 경우 할인 적용은 유지될 수 있으나, 세부 혜택 조건은 변경될 수 있습니다. </li>
-                  <li>카드 변경 전 혜택 조건을 확인해 주시기 바랍니다. </li>
-                  <li>제휴카드 확인하기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 10 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-10">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">카드 혜택을 자세히 알고 싶어요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-10" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>제휴카드 혜택은 카드 상품별로 제공 조건 및 혜택이 다르게 적용됩니다. </li>
-                  <li>자세한 내용은 카드사 홈페이지 또는 제휴카드 안내 페이지를 통해 확인하실 수 있습니다. </li>
-                  <li>제휴카드 확인하기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 11 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-11">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">정수기 가전 연계 할인은 무엇이며, 구독 요금에 어떻게 적용되나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-11" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>최근 1년 이내 LG전자 공식몰에서 30만원 이상 제품을 구매한 이력이 있는 경우, 신규 정수기 제품 구독 시 최근 1년 이내 결제 이력 기준으로 최대 3% 할인이 적용될 수 있습니다. </li>
-                  <li>적용 기준은 다음과 같습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">정수기 구독: 최근 1년 이내 결제 이력 기준 적용 </li>
-                    </ul>
-                  </li>
-                  <li>자세한 적용 기준 및 할인 여부는 혜택 안내 화면에서 확인하실 수 있습니다. </li>
-                  <li>정수기 가전 연계 할인 확인하기</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 12 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-12">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">추가 구독 시 혜택이 있나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-12" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>현재 구독 중인 제품이 있는 경우, 추가 구독 시 추가 구독 건에 대해 할인 혜택이 적용될 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">재구독 할인: 월 이용요금 최대 5% 할인</li>
-                      <li class="service-care__faq--dot">기존 결합 할인: 월 이용요금 최대 3% 할인</li>
-                    </ul>
-                  </li>
-                  <li>단, 재구독 할인은 계약 만기 124일 전부터 만기 후 1년까지 계약을 보유 시 적용되는 할인 혜택입니다. </li>
-                  <li>적용 가능 여부는 구독 상품 및 조건에 따라 달라질 수 있습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 13 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-discount-content-13">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">제휴카드를 등록하려면 어떻게 해야 하나요? </span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-discount-content-13" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>1. 구독 청약 시 제휴카드 발급을 신청하신 경우 
-                    <ul>
-                      <li class="service-care__faq--dot">: 계약 생성 이후 담당자가 고객님께 연락드려 카드 발급을 도와드리며, 발급된 제휴카드는 다음 청구 전까지 자동 등록됩니다.</li>
-                    </ul>
-                  </li>
-                  <li>2. 구독 청약 시 제휴카드 발급을 신청하지 않으셨다가 이후 추가 신청을 원하시는 경우
-                    <ul>
-                      <li class="service-care__faq--dot">: 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] > [납부정보] 메뉴에서 ‘제휴카드 간편신청’을 통해 신청하실 수 있습니다.</li>
-                    </ul>
-                  </li>
-                  <li>3. 구독 결제용 카드 변경을 원하시는 경우
-                    <ul>
-                      <li class="service-care__faq--dot">: 홈페이지 [마이페이지] > [구독 관리] > [납부방법 변경] 메뉴에서 결제 카드를 변경하실 수 있습니다. </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ==================== 4. 계약 정보 패널 ==================== -->
-      <div id="service-panel-info" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-info" tabindex="0" hidden>
-        <div class="faq-accordion">
-
-          <!-- FAQ Item 1 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-1">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">계약자와 실사용자가 다른 경우 어떻게 변경할 수 있을지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-1" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 계약은 계약자 본인 명의로 신청하고, 주소는 실제 사용하는 주소로 설치할 수 있습니다.</li>
-                  <li>실사용자 주소로 제품 설치 후 익일부터 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 실사용자(인수자)의 성함, 연락처, 주소는 변경하실 수 있습니다. 또한 가전/서비스 구독 고객센터(☎ 1544-7777)로 연락하여 실사용자(인수자)의 정보 변경이 가능하며, 케어 매니저도 변경된 실사용자에게 연락드려 유지관리 서비스에 대한 방문 일정을 안내합니다.</li>
-                  <li>확인사항
-                    <ul>
-                      <li class="service-care__faq--dot">인수 정보만 변경되는 부분이며 계약기간 내 제품의 모든 책임과 의무는 계약자에게 있으므로 계약자 성함을 변경해야 할 경우에는 명의변경으로 진행하셔야 합니다.</li>
-                      <li class="service-care__faq--dot">계약 관련 모든 정보 안내 및 수정은 계약자 외 제3자(배우자 포함)에게 안내/상담/접수 등을 할 수 없어, 실사용자의 원활한 상담을 위해서는 LGE.COM 마이페이지 > 구독 > 계약 관리 메뉴에서 계약자 본인이 실사용자 등록 상담신청을 통해 실사용자 등록이 필요합니다. (실사용자 등록 후 실사용자가 계약 전반에 관한 모든 구독 정보 안내, 각종 서류 발송, 서비스 접수, 이전 설치 접수 등 상담 가능)</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 2 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-2">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 계약 해지시 어떻게 되는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-2" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 계약 해지 방법
-                    <ul>
-                      <li class="service-care__faq--dot">계약 해지를 원하실 경우 고객센터(☎ 1544-7777) 또는 홈페이지 [마이페이지] > [구독 관리] > [계약 관리]를 통해 해지상담 신청 및 상담 이후 해지 처리가 가능합니다.</li>
-                      <li class="service-care__faq--bar">의무사용기간이 경과한 경우: 당월 사용요금 및 회수비까지 완납이 되어야 해지 가능합니다.</li>
-                      <li class="service-care__faq--bar">의무사용기간 이내인 경우: 아래 기준에 따르는 해약금을 납부하셔야 해지 가능합니다.</li>
-                    </ul>
-                  </li>
-                  <li>해약금 정산기준(아래 항목들의 합계)
-                    <ul>
-                      <li class="service-care__faq--dot">해약금: 위약금 + 회수비(회수 불가 시 분실료) + 사은품 비용 + 미납/연체 비용 등</li>
-                    </ul>
-                  </li>
-                  <li>1. 위약금: 위약금 산정 시, 월 요금은 할인되기 전의 기본요금을 기준으로 함
-                    <ul>
-                      <li class="service-care__faq--dot">1년 경과 이전: 잔여 의무사용기간 내 총 요금의 30%</li>
-                      <li class="service-care__faq--dot">1년 경과 후 2년 경과 이전: 20% 부과</li>
-                      <li class="service-care__faq--dot">2년 경과 후 의무사용기간 이전: 10% 부과</li>
-                      <li class="service-care__faq--dot">(단, 계약기간 2년 상품의 경우 1년 경과 이전: 20%, 1년 경과 후 의무사용기간 이전: 10% 부과)</li>
-                    </ul>
-                  </li>
-                  <li>2. 회수비: 의무사용기간 경과 여부와 무관하게 회수비(인건비+운송비)가 부과됨 (회수가 불가능할 경우 분실료 부과)</li>
-                  <li>3. 사은품 비용: 해지접수 시점에 기 지급된 사은품이 있을 경우 해약금에 함께 청구함
-                    <ul>
-                      <li class="service-care__faq--bar">비용 환수 기준</li>
-                      <li class="service-care__faq--dot">① 가전/서비스(케어십 등) 구독 계약 성립 후 12개월 이내 고객 요청에 의한 해지 시, 기 지급받은 사은품에 해당하는 금액(전액)이 부과됩니다.</li>
-                      <li class="service-care__faq--dot">② 현금성 사은품: 사은품 액면 금액 / 비현금성 사은품: LG전자 사은품 구매단가 기준 적용</li>
-                    </ul>
-                  </li>
-                  <li>4. 미납/연체 비용: 해지(해제) 효력 발생 시점에 미납/연체 비용이 있을 경우 해약금에 함께 청구</li>
-                  <li>5. 잔여 비용 : 해약 시점까지 남은 가전 구독 월 요금 일할 계산함</li>
-                  <li>6. 제품 사용료 : 장기 미납 고객에 한정되어 적용됨</li>
-                  <li>7. 약정 할인 환불액 : 약정 할인 적용 시 할인받은 만큼의 가전 구독 월 요금 부과됨</li>
-                  <li>계약은 상품 인도/설치 후 성립되며, 의무사용기간 내 고객 요청에 의한 임의 해지 시 또는 고객의 귀책사유 및 비정상 거래 사유로 LG전자가 계약을 해지(해제) 할 경우 해약금이 부과됨</li>
-                  <li>선납금 납부 유형 선택 시 선납금은 청약시점에 청구됩니다. 의무사용기간 내 계약이 해지되는 경우, 사용하신 기간 동안 할인받은 총금액을 제외한 나머지 금액이 있을 시 이를 고객에게 반환합니다.
-                    <ul>
-                      <li class="service-care__faq--dot">선납금 정산 금액: 납부 선납금 - 실 사용 일수 x (월 요금 할인금액 ÷ 30일)</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 3 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-3">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품을 설치 후 며칠까지 계약 취소 가능한지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-3" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 제품은 구매처에 따라 계약 취소(청약철회) 가능 기간이 다릅니다.</li>
-                  <li>매장 및 온라인 구매
-                    <ul>
-                      <li class="service-care__faq--dot">계약 성립일로부터 7일 이내 청약철회가 가능합니다</li>
-                      <li class="service-care__faq--dot">매장: LG전자 베스트샵 (하이프라자, 전문점)</li>
-                    </ul>
-                  </li>
-                  <li>방문판매 구매
-                    <ul>
-                      <li class="service-care__faq--dot">계약 성립일로부터 14일 이내 청약철회가 가능합니다.</li>
-                    </ul>
-                  </li>
-                  <li>청약철회 시 상품 공급에 소요된 비용(소모성 부품 비용 및 설치비용)은 고객에게 청구되며, 지급된 사은품 상당액은 회수됩니다.</li>
-                  <li>또한 냉장고·세탁기·에어컨 등 설치가 필요한 제품은 설치 과정에서 전문 인력과 부속자재가 사용되고, 사용·소비로 인한 가치 하락 우려가 있어 설치 완료 후에는 청약철회가 불가합니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 4 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-4">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">케어십 계약기간과 해지에 따른 위약금은 없는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-4" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>케어십 계약기간은 계약이 성립한 날로부터 12개월(에어컨 24개월, 세탁기 48개월)이며,</li>
-                  <li>계약기간 만료시까지 고객님께서 계약 해지 의사를 통보하지 않을 경우 계약은 1년(에어컨 2년, 세탁기 4년)단위로 자동 연장됩니다.
-                    <ul>
-                      <li class="service-care__faq--dot">단, 정수기 케어십의 경우 자동연장에도 불구하고 계약이 성립한 날로부터 84개월이 경과하는 시점에 계약이 종료되며 그 이후 계약 연장이 불가합니다.</li>
-                    </ul>
-                  </li>
-                  <li>케어십의 경우 의무사용기간 및 위약금은 없지만, 만일 케어십 가입시 지급 된 사은품이 있을 경우 아래의 기준으로 사은품 대금이 청구됩니다.</li>
-                  <li>기 지급 사은품에 대한, 비용 환수 기준
-                    <ul>
-                      <li class="service-care__faq--dot">① 가전/서비스(케어십 등) 구독 계약성립 후 12개월 이내 고객 요청에 의한 해지 시, 기 지급 받은 사은품에 해당하는 금액(전액)이 부과됩니다.</li>
-                      <li class="service-care__faq--dot">② 현금성 사은품 : 사은품 액면 금액 / 비현금성 사은품 : LG전자 사은품 구매단가 기준 적용</li>
-                    </ul>
-                  </li>
-                  <li>케어십을 해지하실 경우 고객님께서 필터 교체 등 직접 관리 하셔야 되는 번거로움이 있어 케어십 가입을 권장 드리고 있습니다.</li>
-                  <li>해지 후 재가입을 할 경우에는 사용하셨던 필터는 전체 교체 후에 가입이 가능하므로 필터 교체 비용(제품별 초기화 비용)이 청구될 수 있습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 5 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-5">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">명의는 어떻게 변경하는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-5" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>명의 변경은 계약자가 직접 신청해야 하며, 개인 고객은 별도의 서류가 필요하지 않습니다.</li>
-                  <li>거래선(사업자) 고객의 경우 사업자등록증 서류 증빙이 필요합니다.</li>
-                  <li>2014년 8월 7일 개인정보보호법 개정으로 인해 고객센터(1544-7777)를 통해 명의 변경이 가능합니다.</li>
-                  <li>단, 설치일 기준 1년 이내에는 명의 변경이 불가합니다.
-                    <ul>
-                      <li class="service-care__faq--dot">동일 고객/가족/실사용자 간의 명의 변경도 1년 이내에는 불가하며, "개인 → 사업자" 명의 이전도 1년 이내에는 불가능합니다.</li>
-                    </ul>
-                  </li>
-                  <li>명의 변경 가능 예외 사례는 다음과 같습니다:
-                    <ul>
-                      <li class="service-care__faq--bar">개인 → 개인: 계약자 사망, 원수부적합, 해외이주, 도서지역 이사 시 명의 변경 가능</li>
-                      <li class="service-care__faq--bar">사업자 → 사업자: 대표가 동일하지만 사업 변경 등으로 사업자번호가 변경될 경우 명의 변경 가능</li>
-                      <li class="service-care__faq--bar">사업자 → 개인: 사업장 폐업으로 인한 개인 명의 변경 필요 시 가능</li>
-                    </ul>
-                  </li>
-                  <li>명의 변경 요청 시 회사의 신용심사 기준에 미달하는 경우 허용되지 않을 수 있습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 6 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-6">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 계약기간은 어떻게 되는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-6" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 제품의 계약기간 및 의무사용기간은 최초 계약시 선택하는 계약 조건에 따라 달라지며, 현재 사용중인 제품의 계약기간 및 의무사용기간은 계약서 또는 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 확인하실 수 있습니다.</li>
-                  <li>의무사용기간 이내 고객님 사정으로 해지 시에는 제품 회수 및 해약금이 부과되며, 총 계약기간 내 해지 시에도 제품이 회수되며 회수비가 부과됩니다.
-                    <ul>
+              <!-- FAQ Item 6 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-6">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 계약기간은 어떻게 되는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-6" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 제품의 계약기간 및 의무사용기간은 최초 계약시 선택하는 계약 조건에 따라 달라지며, 현재 사용중인 제품의 계약기간 및 의무사용기간은 계약서 또는 홈페이지 [마이페이지] > [구독 관리] > [계약 관리] 메뉴에서 확인하실 수 있습니다.<br>
+                        의무사용기간 이내 고객님 사정으로 해지 시에는 제품 회수 및 해약금이 부과되며, 총 계약기간 내 해지 시에도 제품이 회수되며 회수비가 부과됩니다.
+                      </li>
                       <li class="service-care__faq--dot">해약금: 위약금+회수비+사은품비용+미납/연체비용 등</li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 7 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-7">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">개명으로 인한 고객명 변경은 어떻게 하는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-7" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>개명으로 인한 고객명 변경은 개명 시점에 따라 다음과 같이 달라집니다.</li>
-                  <li>계약진행 후 개명 시
-                    <ul>
-                      <li class="service-care__faq--dot">개명으로 인한 계약자 성함을 변경하셔야 하는 경우 별도 서류 확인 후 변경 가능합니다.</li>
-                      <li class="service-care__faq--dot">고객센터(☎ 1544-7777)로 연락 주시면 자세한 안내 및 변경 가능하십니다.</li>
+              <!-- FAQ Item 7 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-7">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">개명으로 인한 고객명 변경은 어떻게 하는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-7" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>개명으로 인한 고객명 변경은 개명 시점에 따라 다음과 같이 달라집니다.</li>
+                      <li class="service-care__faq--dot">계약진행 후 개명 시<br>개명으로 인한 계약자 성함을 변경하셔야 하는 경우 별도 서류 확인 후 변경 가능합니다.<br>고객센터(☎ 1544-7777)로 연락 주시면 자세한 안내 및 변경 가능하십니다.
+                      </li>
+                      <li class="service-care__faq--dot">계약진행 전 개명 시<br>
+                        개명 후 가전/서비스(케어십 등) 구독 가입 시 고객센터에서 인증이 불가한 경우에는 나이스신용정보에 실명등록(업데이트)을 하셔야 합니다.<br>
+                        실명등록이 완료 된 후 다시 가전/서비스(케어십 등) 구독 계약을 진행해주세요.
+                      </li>
                     </ul>
-                  </li>
-                  <li>계약진행 전 개명 시
-                    <ul>
-                      <li class="service-care__faq--dot">개명 후 가전/서비스(케어십 등) 구독 가입 시 고객센터에서 인증이 불가한 경우에는 나이스신용정보에 실명등록(업데이트)을 하셔야 합니다.</li>
-                      <li class="service-care__faq--dot">실명등록이 완료 된 후 다시 가전/서비스(케어십 등) 구독 계약을 진행해주세요.</li>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-8">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품의 소유권은 어떻게 되는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-8" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">소유권</li>
+                      <li>총 계약 기간 동안 상품의 소유권은 '회사'에게 있으나, 총 계약 기간 경과 후 관련 미납이 없을 경우 소유권은 '고객'에게 이전되며 고객은 월요금 납입 없이 제품을 사용할 수 있습니다.<br>
+                        단, 가전 구독 계약 종료 후 정기 방문서비스는 중단되며 정기 방문서비스를 원하는 경우는 별도로 케어십 서비스를 신청하셔야 합니다.</li>
+                      <li class="service-care__faq--bar">3년 약정 상품의 경우 소유권 이전의 조건이 별도 존재합니다. (문의 : 1544-777)</li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 8 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-8">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품의 소유권은 어떻게 되는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-8" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>소유권</li>
-                  <li>총 계약 기간 동안 상품의 소유권은 '회사'에게 있으나, 총 계약 기간 경과 후 관련 미납이 없을 경우 소유권은 '고객'에게 이전되며 고객은 월요금 납입 없이 제품을 사용할 수 있습니다.</li>
-                  <li>단, 가전 구독 계약 종료 후 정기 방문서비스는 중단되며 정기 방문서비스를 원하는 경우는 별도로 케어십 서비스를 신청하셔야 합니다.
-                    <ul>
-                      <li class="service-care__faq--dot">3년 약정 상품의 경우 소유권 이전의 조건이 별도 존재합니다. (문의 : 1544-777)</li>
+              <!-- FAQ Item 9 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-9">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">다른 신모델이 나오면 기존 가전 구독 제품을 바꿀 수 있는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-9" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>신모델이 출시되더라도, 기존 가전 구독 제품이 신모델로 변경 제공되지는 않습니다.</li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 9 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-9">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">다른 신모델이 나오면 기존 가전 구독 제품을 바꿀 수 있는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-9" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>신모델이 출시되더라도, 기존 가전 구독 제품이 신모델로 변경 제공되지는 않습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 10 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-10">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품과 일반 판매 제품은 어떤 차이가 있는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-10" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 제품과 일반 제품에는 차이가 없습니다.</li>
-                  <li>가전 구독 제품을 구매하시면 주기별로 유지관리 서비스를 받으실 수 있어 늘 새것처럼 사용하실 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">제품별로 제공되는 유지관리 서비스는 상이함</li>
+              <!-- FAQ Item 10 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-10">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품과 일반 판매 제품은 어떤 차이가 있는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-10" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 제품과 일반 제품에는 차이가 없습니다.</li>
+                      <li class="service-care__faq--dot">가전 구독 제품을 구매하시면 주기별로 유지관리 서비스를 받으실 수 있어 늘 새것처럼 사용하실 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">제품별로 제공되는 유지관리 서비스는 상이함</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">일반제품을 구입한 경우에도 케어십에 가입하면 가전 구독 제품과 동일한 제품 유지 관리 서비스를 받으실 수 있습니다.
+                        <ul>
+                          <li class="service-care__faq--bar">일부 케어십 제공 모델에 한함</li>
+                          <li><a href="#" class="service-care__faq--link">케어십 가능제품 알아보기</a></li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                  <li>일반제품을 구입한 경우에도 케어십에 가입하면 가전 구독 제품과 동일한 제품 유지 관리 서비스를 받으실 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">일부 케어십 제공 모델에 한함</li>
-                      <li class="service-care__faq--dot">케어십 가능제품 알아보기</li>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 11 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-11">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">정기배송 및 회수관리 서비스를 해지/환불하고 싶어요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-11" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">홈페이지(LGE.COM)를 통한 해지 상담 신청
+                        <ul>
+                          <li>서비스 해지를 원하실 경우 즉시 해지 처리는 할 수 없으며, 고객센터(☎ 1544-7777) 또는 "LGE.COM 마이페이지 > 구독관리 > 계약관리" 메뉴에서 해지 상담 신청 및 상담 이후 해지 처리가 가능합니다.</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--bar">요금 납부와 서비스(배송)를 제공받지 않은 경우에 한해 환불이 가능합니다.</li>
+                      <li class="service-care__faq--bar">3개월 주기 씨앗 배송 서비스를 선택하신 경우, 2회차까지 요금을 납부하고 서비스(배송) 미제공 상태에서 환불이 가능합니다.</li>
+                      <li>추가 궁금하신 사항은 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내 드리도록 하겠습니다.</li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 11 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-11">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">정기배송 및 회수관리 서비스를 해지/환불하고 싶어요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-11" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>홈페이지(LGE.COM)를 통한 해지 상담 신청
-                    <ul>
-                      <li class="service-care__faq--dot">서비스 해지를 원하실 경우 즉시 해지 처리는 할 수 없으며, 고객센터(☎ 1544-7777) 또는 "LGE.COM 마이페이지 > 구독관리 > 계약관리" 메뉴에서 해지 상담 신청 및 상담 이후 해지 처리가 가능합니다.</li>
+              <!-- FAQ Item 12 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-12">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품은 새 제품으로 설치되나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-12" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독으로 설치되는 제품은 모두 새 제품으로 제공됩니다.<br>
+                      또한 가전 구독 신청 시 폐가전 수거를 함께 신청하시면, 기존에 사용하시던 LG전자 제품은 무료로 회수해 드립니다.
+                      </li>
                     </ul>
-                  </li>
-                  <li>요금 납부와 서비스(배송)를 제공받지 않은 경우에 한해 환불이 가능합니다.
-                    <ul>
-                      <li class="service-care__faq--dot">3개월 주기 씨앗 배송 서비스를 선택하신 경우, 2회차까지 요금을 납부하고 서비스(배송) 미제공 상태에서 환불이 가능합니다.</li>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 13 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-13">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">계약기간이 얼마나 남았는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-13" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>계약기간은 마이페이지 내 구독 관리 메뉴에서 확인하실 수 있습니다.<br>
+                        확인 경로 : 마이페이지 > 구독 관리 > 계약관리
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">계약정보 확인하기</a></li>
                     </ul>
-                  </li>
-                  <li>추가 궁금하신 사항은 고객센터(☎ 1544-7777)로 문의 주시면 상세하게 안내 드리도록 하겠습니다.</li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 12 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-12">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품은 새 제품으로 설치되나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-12" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>구독으로 설치되는 제품은 모두 새 제품으로 제공됩니다.</li>
-                  <li>또한 가전 구독 신청 시 폐가전 수거를 함께 신청하시면, 기존에 사용하시던 LG전자 제품은 무료로 회수해 드립니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 13 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-13">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">계약기간이 얼마나 남았는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-13" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>계약기간은 마이페이지 내 구독 관리 메뉴에서 확인하실 수 있습니다.</li>
-                  <li>확인 경로 : 마이페이지 > 구독 관리 > 계약관리
-                    <ul>
-                      <li class="service-care__faq--dot">계약정보 확인하기</li>
+              <!-- FAQ Item 14 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-14">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 도중 구매(인수)로 전환할 수 있나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-14" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 이용 중에는 제품을 구매(인수)로 전환할 수 없습니다.<br>
+                      다만, 계약 기간이 종료된 이후에는 제품 소유권이 고객에게 이전됩니다.
+                      </li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- FAQ Item 14 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-14">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">구독 도중 구매(인수)로 전환할 수 있나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-14" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 이용 중에는 제품을 구매(인수)로 전환할 수 없습니다.</li>
-                  <li>다만, 계약 기간이 종료된 이후에는 제품 소유권이 고객에게 이전됩니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 15 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-15">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 계약에서 최\대 청약 가능 수량 초과로 나와요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-15" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독은 1인당 구독 가능한 수량이 제품 품목별로 제한되어 있습니다.</li>
-                  <li>1인 기준으로 최대 7개 제품까지 계약을 보유할 수 있습니다.</li>
-                  <li>자세한 내용은 고객센터(1544-7777)를 통해 문의해 주시기 바랍니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 16 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-16">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">케어십 등록이 아직 안 되었어요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-16" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>제품 구매 시 케어십 서비스를 신청하지 않은 경우 자동 등록이 제한될 수 있습니다.</li>
-                  <li>단, STEM 냉장고 등 일부 제품은 자동으로 케어십이 등록되며, 등록 시 사전에 안내가 제공됩니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 17 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-17">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">구독 중 제품 변경이 가능한가요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-17" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>구독 이용 중인 제품은 다른 제품으로 교체할 수 없습니다.</li>
-                  <li>다만, 계약 기간 중 다른 제품을 추가로 구독하시는 경우, 추가 구독 제품에 대해 월 이용요금 할인 혜택이 적용될 수 있습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 18 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-18">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">사업자몰 구독은 누가 신청할 수 있나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-info-content-18" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>사업자 구독은 개인사업자 대표자로 등록된 사업자몰 회원만 신청하실 수 있습니다.</li>
-                  <li>마이페이지의 사업자 정보 수정에서 사업자 구분, 대표자명을 확인할 수 있으며,
-                    <ul>
-                      <li class="service-care__faq--dot">법인사업자 혹은 대표자가 아닌 경우 구독 견적 문의를 통해 상담 접수를 진행하실 수 있습니다.</li>
-                      <li class="service-care__faq--dot">사업자 회원이라도 개인고객몰에서 구독신청하실 경우 사업자가 아닌 개인으로 구독계약이 진행되니 유의하시기 바랍니다.</li>
+              <!-- FAQ Item 15 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-15">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 계약에서 최대 청약 가능 수량 초과로 나와요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-15" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독은 1인당 구독 가능한 수량이 제품 품목별로 제한되어 있습니다.<br>1인 기준으로 최대 7개 제품까지 계약을 보유할 수 있습니다.<br>자세한 내용은 고객센터(1544-7777)를 통해 문의해 주시기 바랍니다.</li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
+
+              <!-- FAQ Item 16 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-16">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">케어십 등록이 아직 안 되었어요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-16" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>제품 구매 시 케어십 서비스를 신청하지 않은 경우 자동 등록이 제한될 수 있습니다.<br>
+                      단, STEM 냉장고 등 일부 제품은 자동으로 케어십이 등록되며, 등록 시 사전에 안내가 제공됩니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 17 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-17">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 중 제품 변경이 가능한가요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-17" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>구독 이용 중인 제품은 다른 제품으로 교체할 수 없습니다.<br>
+                      다만, 계약 기간 중 다른 제품을 추가로 구독하시는 경우, 추가 구독 제품에 대해 월 이용요금 할인 혜택이 적용될 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 18 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-info-content-18">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">사업자몰 구독은 누가 신청할 수 있나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-info-content-18" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>사업자 구독은 개인사업자 대표자로 등록된 사업자몰 회원만 신청하실 수 있습니다.<br>마이페이지의 사업자 정보 수정에서 사업자 구분, 대표자명을 확인할 수 있으며,<br>법인사업자 혹은 대표자가 아닌 경우 구독 견적 문의를 통해 상담 접수를 진행하실 수 있습니다.<br>사업자 회원이라도 개인고객몰에서 구독신청하실 경우 사업자가 아닌 개인으로 구독계약이 진행되니 유의하시기 바랍니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- 페이지네이션 -->
+            <nav class="faq-pagination" aria-label="FAQ 페이지 탐색">
+              <!-- 이전 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--prev" aria-label="이전 페이지" disabled>
+                <img src="src/images/ic_prev.png" alt="" aria-hidden="true">
+              </button>
+              <!-- 페이지 표시 -->
+              <div class="faq-pagination__indicator" aria-hidden="true">
+                <span class="faq-pagination__current">1</span>
+                <span class="faq-pagination__separator">|</span>
+                <span class="faq-pagination__total">8</span>
+              </div>
+              <!-- 다음 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--next" aria-label="다음 페이지">
+                <img src="src/images/ic_next.png" alt="" aria-hidden="true">
+              </button>
+            </nav>
+            <!-- 페이지네이션 -->                
+          </div>
+
+          <!--  5. 관리/케어 패널  -->
+          <div id="service-panel-care" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-care" tabindex="0" hidden>
+            <div class="faq-accordion">
+
+              <!-- FAQ Item 1 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-1">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품을 분실 또는 파손했을 땐 어떻게 해야 하는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-1" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>가전 구독 제품의 소유권은 계약 만기 전까지 LG전자에 있습니다. 분실 또는 파손 발생 시 아래와 같은 기준에 따라 보상을 하셔야 합니다.
+                      <br>1. 분실 : 제품 판매가 - [(제품 판매가 ÷ 총 계약기간(개월 수) × 사용 개월 수] 단, 제품 판매가는 일반 판매가 임
+                      <br>2. 파손 : 분실료의 50% 적용함
+                      <br>3. 압류 시 : 분실과 동일하게 적용함
+                      <br>4. 화재 시 : 천재지변에 준하는 사유만 무상 / 유상인 경우에는 분실 배상가의 50% 적용함 (단, 관할 경찰서, 소방서의 화재 사실 확인서 첨부 필요)                    
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-2">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">가전 구독 제품이 고장 났는데 비용을 지불해야 하는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-2" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">가전 구독 제품 고장
+                        <ul>
+                          <li>가전 구독 계약 기간 동안 제품 문제로 A/S 요청 시 무상으로 A/S서비스를 받으실 수 있습니다.<br>
+                          다만, 제품 불량이 아닌 고객 과실로 인한 제품 파손이나 외관 교체 요청은 일반 A/S 와 같이 유상 처리 됩니다.<br>
+                          제품을 사용하기 전에 반드시 사용설명서 내 [사용 전 주의사항]을 필독 하시고 사용하여주시기 바랍니다.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-3">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">유지관리는 어떻게 해주는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-3" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>LG전자를 통해 체계적인 교육을 이수한 가전 전문가가 주기적으로 고객님 댁에 방문하여 가전제품을 편리하고 안전하게 사용할 수 있도록 마음을 담아 케어해주는 LG전자만의 차원이 다른 가전 관리 서비스입니다.
+                        <ul>
+                          <li class="service-care__faq--bar">제품별로 제공되는 유지관리 서비스는 상이합니다.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-4">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">케어십에 가입하면 어떤 혜택이 있는지 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-4" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>케어십이란 제품을 이미 구입하여 사용하고 있거나 가전 구독 계약 기간이 끝난 고객이 신청할 수 있는 차원이 다른 가전 관리 서비스입니다.<br>
+                      가전 전문가가 주기적으로 고객님댁에 방문하여 제품 점검 서비스와 무상 필터 교환 등 다양한 서비스를 제공합니다.                 
+                      </li>
+                      <li class="service-care__faq--bar">제품별로 제공되는 케어십 서비스는 상이합니다.</li>
+                      <li><a href="#" class="service-care__faq--link">케어십 가능 제품 알아보기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-5">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">정기배송 및 회수관리의 서비스 주기와 서비스 제공 일이 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-5" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li class="service-care__faq--dot">서비스(배송) 주기<br>
+                        6개월 주기 상품인 경우, 매 월 요금을 납부(1~6회차)하게 되며 6회차 납부 월에 서비스가 제공 및 배송됩니다
+                        <ul>
+                          <li class="service-care__faq--bar">정기 결제일이 월 말인 경우 서비스 제공 및 배송일정이 차월로 넘어갈 수 있습니다.</li>
+                          <li class="service-care__faq--bar">서비스(배송) 주기는 최초 선택 이후 변경이 불가합니다.</li>
+                        </ul>
+                      </li>
+                      <li class="service-care__faq--dot">서비스(배송) 제공일<br>
+                        선택한 상품 주기(n개월)에 맞춰 매 달 정기 결제(n개월)가 모두 완료되면 마지막 납부 월에 서비스가 제공 및 배송됩니다.
+                        <ul>
+                          <li class="service-care__faq--bar">서비스(배송)주기 3개월 상품 선택 시, 상품 계약 및 11월 10일 정기결제일 선택하였다면 3회(11월~1월, 매 월 10일) 결제 완료 후 서비스 제공 및 배송됩니다.<br>
+                          ※정기배송 상품의 경우 2~7 영업일 내 배송 완료됩니다. (단, 택배사 사정에 따라 일정 차질이 발생할 수 있습니다.)
+                          </li>                   
+                        </ul>
+                      </li>
+                      <li>변경을 희망하시는 경우, 고객센터(☎1544-7777)로 문의 주시면 상세하게 안내드리도록 하겠습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-6">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">정기배송 및 회수관리 서비스의 제품 옵션을 변경하고 싶어요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-6" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>서비스(배송) 상품의 옵션은, 서비스(배송) 예정일 8일전까지 변경가능합니다.<br>홈페이지 [마이페이지] > [구독 관리] > [방문/정기배송 일정] 메뉴에서 변경하실 수 있습니다.<br>단, 이용요금이 동일한 옵션 내에서만 변경 가능하며, 이용요금이 상이한 옵션으로의 변경은 되지 않습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-7">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">구독 중 케어(방문/점검/관리)는 어떻게 진행되나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-7" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>케어 서비스는 제별 및 계약 조건에 따라 다르게 진행됩니다.
+                      </li>
+                      <li>방문관리: 케어 전문가가 정기적으로 고객님의 가정에 방문하여 제품 관리 및 성능 점검을 진행합니다.<br>자가관리: 고객이 제품을 스스로 관리할 수 있도록 제품 관리에 필요한 소모품을 정기적으로 배송합니다.<br>회수관리: 제품을 별도 회수하여 세척 및 제품 관리 후 배송해 드리는 서비스를 제공합니다.
+                      </li>
+                      <li>이용 중인 제품의 케어 서비스 일정 및 상세 내용은 아래 경로에서 확인할 수 있습니다.<br>
+                        확인 경로 : 마이페이지 > 구독 관리 > 방문/정기배송 일정
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">캐어 서비스 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-8">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">필터는 언제, 어떻게 교체되고 배송은 어떻게 진행되나요?</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-8" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>필터 교체 및 배송 주기는 가전 구독 신청 시 계약 내용 및 제품에 따라 다르게 적용됩니다.</li>
+                      <li>필터 교체 일정 및 배송 관련 내용은 아래 경로에서 확인할 수 있습니다.<br>
+                        확인경로 : 마이페이지 > 구독 관리 > 방문/정기배송 일정
+                      </li>
+                      <li><a href="#" class="service-care__faq--link">캐어 서비스 확인하기</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 9 -->
+              <div class="faq-accordion__item">
+                <h3 class="faq-accordion__heading">
+                  <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-9">
+                    <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
+                    <span class="faq-accordion__title">이사 및 이전설치가 필요할 때 신청 방법과 비용이 궁금해요.</span>
+                    <span class="faq-accordion__icon" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="faq-care-content-9" class="faq-accordion__content" hidden>
+                  <div class="faq-accordion__inner">
+                    <ul class="service-care__faq">
+                      <li>75인치 TV 등 일부 제품은 이전 설치 시 1회 무상으로 제공됩니다.<br>
+                      그 외 제품은 이전 설치 신청을 통해 진행되며, 이전 설치 시 비용이 발생할 수 있습니다.
+                      </li>
+                      <li>자세한 신청 방법 및 비용 기준은 고객센터(1544-7777)를 통해 확인해 주시기 바랍니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- 페이지네이션 -->
+            <nav class="faq-pagination" aria-label="FAQ 페이지 탐색">
+              <!-- 이전 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--prev" aria-label="이전 페이지" disabled>
+                <img src="src/images/ic_prev.png" alt="" aria-hidden="true">
+              </button>
+              <!-- 페이지 표시 -->
+              <div class="faq-pagination__indicator" aria-hidden="true">
+                <span class="faq-pagination__current">1</span>
+                <span class="faq-pagination__separator">|</span>
+                <span class="faq-pagination__total">8</span>
+              </div>
+              <!-- 다음 페이지 버튼 -->
+              <button type="button" class="faq-pagination__btn faq-pagination__btn--next" aria-label="다음 페이지">
+                <img src="src/images/ic_next.png" alt="" aria-hidden="true">
+              </button>
+            </nav>
+            <!-- 페이지네이션 -->                
           </div>
 
         </div>
       </div>
-
-      <!-- ==================== 5. 관리/케어 패널 ==================== -->
-      <div id="service-panel-care" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-care" tabindex="0" hidden>
-        <div class="faq-accordion">
-
-          <!-- FAQ Item 1 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-1">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품을 분실 또는 파손했을 땐 어떻게 해야 하는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-1" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 제품의 소유권은 계약 만기 전까지 LG전자에 있습니다. 분실 또는 파손 발생 시 아래와 같은 기준에 따라 보상을 하셔야 합니다.</li>
-                  <li>1. 분실 : 제품 판매가 - [(제품 판매가 ÷ 총 계약기간(개월 수) × 사용 개월 수] 단, 제품 판매가는 일반 판매가 임</li>
-                  <li>2. 파손 : 분실료의 50% 적용함</li>
-                  <li>3. 압류 시 : 분실과 동일하게 적용함</li>
-                  <li>4. 화재 시 : 천재지변에 준하는 사유만 무상 / 유상인 경우에는 분실 배상가의 50% 적용함 (단, 관할 경찰서, 소방서의 화재 사실 확인서 첨부 필요)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 2 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-2">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">가전 구독 제품이 고장 났는데 비용을 지불해야 하는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-2" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>가전 구독 제품 고장
-                    <ul>
-                      <li class="service-care__faq--dot">가전 구독 계약 기간 동안 제품 문제로 A/S 요청 시 무상으로 A/S서비스를 받으실 수 있습니다.</li>
-                      <li class="service-care__faq--dot">다만, 제품 불량이 아닌 고객 과실로 인한 제품 파손이나 외관 교체 요청은 일반 A/S 와 같이 유상 처리 됩니다.</li>
-                    </ul>
-                  </li>
-                  <li>제품을 사용하기 전에 반드시 사용설명서 내 [사용 전 주의사항]을 필독 하시고 사용하여주시기 바랍니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 3 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-3">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">유지관리는 어떻게 해주는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-3" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>LG전자를 통해 체계적인 교육을 이수한 가전 전문가가 주기적으로 고객님 댁에 방문하여 가전제품을 편리하고 안전하게 사용할 수 있도록 마음을 담아 케어해주는 LG전자만의 차원이 다른 가전 관리 서비스입니다.</li>
-                  <li>제품별로 제공되는 유지관리 서비스는 상이합니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 4 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-4">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">케어십에 가입하면 어떤 혜택이 있는지 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-4" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>케어십이란 제품을 이미 구입하여 사용하고 있거나 가전 구독 계약 기간이 끝난 고객이 신청할 수 있는 차원이 다른 가전 관리 서비스입니다.</li>
-                  <li>가전 전문가가 주기적으로 고객님댁에 방문하여 제품 점검 서비스와 무상 필터 교환 등 다양한 서비스를 제공합니다.</li>
-                  <li>제품별로 제공되는 케어십 서비스는 상이합니다.
-                    <ul>
-                      <li class="service-care__faq--dot">케어십 가능 제품 알아보기</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 5 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-5">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">정기배송 및 회수관리의 서비스 주기와 서비스 제공 일이 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-5" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>서비스(배송) 주기
-                    <ul>
-                      <li class="service-care__faq--dot">6개월 주기 상품인 경우, 매 월 요금을 납부(1~6회차)하게 되며 6회차 납부 월에 서비스가 제공 및 배송됩니다</li>
-                      <li class="service-care__faq--dot">정기 결제일이 월 말인 경우 서비스 제공 및 배송일정이 차월로 넘어갈 수 있습니다.</li>
-                      <li class="service-care__faq--dot">서비스(배송) 주기는 최초 선택 이후 변경이 불가합니다.</li>
-                    </ul>
-                  </li>
-                  <li>서비스(배송) 제공일
-                    <ul>
-                      <li class="service-care__faq--dot">선택한 상품 주기(n개월)에 맞춰 매 달 정기 결제(n개월)가 모두 완료되면 마지막 납부 월에 서비스가 제공 및 배송됩니다.</li>
-                      <li class="service-care__faq--dot">서비스(배송)주기 3개월 상품 선택 시, 상품 계약 및 11월 10일 정기결제일 선택하였다면 3회(11월~1월, 매 월 10일) 결제 완료 후 서비스 제공 및 배송됩니다.</li>
-                    </ul>
-                  </li>
-                  <li>※
-                    <ul>
-                      <li class="service-care__faq--dot">정기배송 상품의 경우 2~7 영업일 내 배송 완료됩니다. (단, 택배사 사정에 따라 일정 차질이 발생할 수 있습니다.)</li>
-                    </ul>
-                  </li>
-                  <li>변경을 희망하시는 경우, 고객센터(☎1544-7777)로 문의 주시면 상세하게 안내드리도록 하겠습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 6 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-6">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">정기배송 및 회수관리 서비스의 제품 옵션을 변경하고 싶어요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-6" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>서비스(배송) 상품의 옵션은, 서비스(배송) 예정일 8일전까지 변경가능합니다.</li>
-                  <li>홈페이지 [마이페이지] > [구독 관리] > [방문/정기배송 일정] 메뉴에서 변경하실 수 있습니다.</li>
-                  <li>단, 이용요금이 동일한 옵션 내에서만 변경 가능하며, 이용요금이 상이한 옵션으로의 변경은 되지 않습니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 7 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-7">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">구독 중 케어(방문/점검/관리)는 어떻게 진행되나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-7" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>케어 서비스는 제별 및 계약 조건에 따라 다르게 진행됩니다.
-                    <ul>
-                      <li class="service-care__faq--bar">방문관리: 케어 전문가가 정기적으로 고객님의 가정에 방문하여 제품 관리 및 성능 점검을 진행합니다.</li>
-                      <li class="service-care__faq--bar">자가관리: 고객이 제품을 스스로 관리할 수 있도록 제품 관리에 필요한 소모품을 정기적으로 배송합니다.</li>
-                      <li class="service-care__faq--bar">회수관리: 제품을 별도 회수하여 세척 및 제품 관리 후 배송해 드리는 서비스를 제공합니다.</li>
-                    </ul>
-                  </li>
-                  <li>이용 중인 제품의 케어 서비스 일정 및 상세 내용은 아래 경로에서 확인할 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">확인 경로 : 마이페이지 > 구독 관리 > 방문/정기배송 일정</li>
-                      <li class="service-care__faq--dot">캐어 서비스 확인하기</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 8 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-8">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">필터는 언제, 어떻게 교체되고 배송은 어떻게 진행되나요?</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-8" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>필터 교체 및 배송 주기는 가전 구독 신청 시 계약 내용 및 제품에 따라 다르게 적용됩니다.</li>
-                  <li>필터 교체 일정 및 배송 관련 내용은 아래 경로에서 확인할 수 있습니다.
-                    <ul>
-                      <li class="service-care__faq--dot">확인경로 : 마이페이지 > 구독 관리 > 방문/정기배송 일정</li>
-                      <li class="service-care__faq--dot">캐어 서비스 확인하기</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 9 -->
-          <div class="faq-accordion__item">
-            <h3 class="faq-accordion__heading">
-              <button type="button" class="faq-accordion__button" aria-expanded="false" aria-controls="faq-care-content-9">
-                <span class="faq-accordion__q-mark" aria-hidden="true">Q</span>
-                <span class="faq-accordion__title">이사 및 이전설치가 필요할 때 신청 방법과 비용이 궁금해요.</span>
-                <span class="faq-accordion__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div id="faq-care-content-9" class="faq-accordion__content" hidden>
-              <div class="faq-accordion__inner">
-                <ul class="service-care__faq">
-                  <li>75인치 TV 등 일부 제품은 이전 설치 시 1회 무상으로 제공됩니다.</li>
-                  <li>그 외 제품은 이전 설치 신청을 통해 진행되며, 이전 설치 시 비용이 발생할 수 있습니다.</li>
-                  <li>자세한 신청 방법 및 비용 기준은 고객센터(1544-7777)를 통해 확인해 주시기 바랍니다.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
     <!-- //가전 구독 자주 묻는 질문 -->
 
     <!-- 구독으로 시작하기 좋은 제품 -->

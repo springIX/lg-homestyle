@@ -47,7 +47,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -98,6 +99,7 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
+  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -345,6 +347,7 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
+  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -400,7 +403,8 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -526,6 +530,7 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -1227,7 +1232,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1431,6 +1437,12 @@
   background: #666;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__caption {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
 #home-app-subscribe .service-page__notes {
   display: flex;
   flex-direction: column;
@@ -1456,6 +1468,11 @@
   border-radius: 50%;
   background: #666;
   vertical-align: middle;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__notes {
+    display: none;
+  }
 }
 #home-app-subscribe .service-care__notes {
   display: flex;
@@ -1539,6 +1556,66 @@
   line-height: 140%;
   letter-spacing: -0.42px;
 }
+#home-app-subscribe .service-care__faq .red {
+  color: #FD312E;
+  font-weight: 400;
+}
+#home-app-subscribe .faq-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+#home-app-subscribe .faq-pagination__btn {
+  color: #777;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 36px;
+  background-color: #fff;
+  border: 1px solid #DEE1E5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+#home-app-subscribe .faq-pagination__btn img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home-app-subscribe .faq-pagination__btn:hover:not(:disabled) {
+  border-color: #222;
+}
+#home-app-subscribe .faq-pagination__btn:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+#home-app-subscribe .faq-pagination__indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+#home-app-subscribe .faq-pagination__current {
+  font-weight: 700;
+  color: #111;
+}
+#home-app-subscribe .faq-pagination__separator {
+  font-weight: 400;
+  color: #d9d9d9;
+}
+#home-app-subscribe .faq-pagination__total {
+  font-weight: 400;
+  color: #888;
+}
 #home-app-subscribe .service-tabs__list {
   display: flex;
   align-items: center;
@@ -1570,6 +1647,11 @@
   color: #fff;
   font-weight: 600;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-tabs__list {
+    margin-bottom: 8px;
+  }
+}
 #home-app-subscribe .service-tabs__panel[hidden] {
   display: none;
 }
@@ -1587,6 +1669,14 @@
   line-height: 48px;
   text-align: center;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1.04px;
+    line-height: 140%;
+  }
+}
 #home-app-subscribe .service-page__heading p {
   margin: 8px auto 0;
   color: #444;
@@ -1594,6 +1684,19 @@
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.2px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading p {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading {
+    margin-bottom: 20px;
+  }
 }
 #home-app-subscribe {
   /* KV */
@@ -1614,6 +1717,14 @@
   font-weight: 700;
   line-height: 48px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__intro .service-page__inner .service-page__title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -1.04px;
+  }
+}
 #home-app-subscribe .service-page__intro .service-page__inner .service-page__lead {
   margin-top: 12px;
   color: #444;
@@ -1621,6 +1732,13 @@
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.2px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__intro .service-page__inner .service-page__lead {
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    line-height: 20px;
+  }
 }
 #home-app-subscribe {
   /* 구독과 구매 무엇이 다를까요? */
@@ -1688,8 +1806,25 @@
   width: 28px;
   height: 28px;
   margin-right: 6px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   vertical-align: top;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--compare .service-compare__table thead th img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--compare .service-compare__table thead th {
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    padding: 12px 8px;
+  }
 }
 #home-app-subscribe .service-page__section--compare .service-compare__table tbody tr {
   border-bottom: 1px solid #dee1e5;
@@ -1718,6 +1853,11 @@
   line-height: normal;
   letter-spacing: -0.08px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--compare .service-compare__table tbody th {
+    font-size: 12px;
+  }
+}
 #home-app-subscribe .service-page__section--compare .service-compare__table tbody td {
   padding: 8px 24px;
   border: 0;
@@ -1730,6 +1870,12 @@
 #home-app-subscribe .service-page__section--compare .service-compare__table tbody td strong {
   color: #067f9d;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--compare .service-compare__table tbody td {
+    font-size: 12px;
+    padding: 8px 18px;
+  }
 }
 #home-app-subscribe .service-page__section--compare .service-compare__table .background {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #DEE1E5;
@@ -1758,20 +1904,24 @@
 }
 #home-app-subscribe .service-page__section--benefits .service-benefits__item {
   display: flex;
-  flex: 1 1 0;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  min-width: 0;
   padding: 24px;
   overflow: hidden;
   border: 1px solid #eff0f2;
   border-radius: 24px;
   background: linear-gradient(90deg, #fff 0%, #fff 100%);
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item > div {
+#home-app-subscribe .service-page__section--benefits .service-benefits__item .service-benefits__item--box01 {
   width: 100%;
   margin-top: 4px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item .service-benefits__item--box01 {
+    padding-bottom: 12px;
+    width: 100%;
+  }
 }
 #home-app-subscribe .service-page__section--benefits .service-benefits__item h3 {
   margin-top: 6px;
@@ -1781,6 +1931,14 @@
   line-height: 1.4;
   letter-spacing: -0.27px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.32px;
+    text-align: left;
+  }
+}
 #home-app-subscribe .service-page__section--benefits .service-benefits__item p {
   margin-top: 4px;
   color: #666;
@@ -1789,20 +1947,61 @@
   line-height: 1.4;
   letter-spacing: -0.32px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item p {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.156px;
+    text-align: left;
+  }
+}
 #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
   width: 88px;
   height: 88px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
+    width: 50px;
+    height: 50px;
+  }
 }
 #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
   width: 64px;
   height: 60px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
+    width: 50px;
+    height: 50px;
+  }
+}
 #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
   width: 74px;
   height: 63px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__item {
+    padding: 16px 16px 18px 16px;
+    align-items: flex-start;
+    flex: auto;
+    position: relative;
+  }
+}
 #home-app-subscribe .service-page__section--benefits .service-benefits__image {
   margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__image {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
 }
 #home-app-subscribe .service-page__section--benefits .service-benefits__tag {
   display: inline-flex;
@@ -1826,6 +2025,39 @@
   box-shadow: 0 0 2px #ab6226;
   color: #ab6226;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits__tag {
+    font-size: 9px;
+    padding: 2px 3px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    width: -moz-max-content;
+    width: max-content;
+    display: flex;
+  }
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits .service-benefits__item--box02 {
+  display: none;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits .service-benefits__item--box02 .service-page__caption {
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits .service-benefits__item--box02 {
+    display: block;
+    padding-top: 10px;
+    border-top: 1px dashed #DEE1E5;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--benefits .service-benefits {
+    flex-direction: column;
+  }
+}
 #home-app-subscribe {
   /* 대표 제품별 구독 서비스를 확인해보세요 */
 }
@@ -1841,7 +2073,8 @@
 #home-app-subscribe .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 48px;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
   width: 100%;
   padding: 0px 20px;
   border: 1px solid #eff0f2;
@@ -1871,6 +2104,9 @@
 #home-app-subscribe .service-page__section--care .service-care .service-care__item:only-child {
   padding: 50px 0;
 }
+#home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(3) {
+  border-bottom: 1px solid #eff0f2;
+}
 #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(2), #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(4) {
   border-top: 1px solid transparent;
 }
@@ -1894,6 +2130,12 @@
   letter-spacing: -0.11px;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item > div > span {
+    font-size: 9px;
+    padding: 2px 3px;
+  }
+}
 #home-app-subscribe .service-page__section--care .service-care .service-care__item h3 {
   display: inline;
   margin-left: 6px;
@@ -1903,6 +2145,13 @@
   line-height: 22.4px;
   letter-spacing: -0.24px;
   vertical-align: middle;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item h3 {
+    font-size: 13px;
+    line-height: 130%;
+    letter-spacing: -0.195px;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item p {
   margin-top: 4px;
@@ -1935,7 +2184,15 @@
   height: 88px;
   overflow: hidden;
   border-radius: 12px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item img {
+    flex: 0 0 103px;
+    width: 103px;
+    height: 58px;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p {
   display: flex;
@@ -1947,6 +2204,11 @@
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p:last-child {
   padding-bottom: 0;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p {
+    padding-left: 8px;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed h3 + p {
   margin-top: 6px;
@@ -1961,6 +2223,17 @@
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item--no-media {
   width: 100%;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care {
+    grid-template-columns: auto;
+    padding: 0 12px;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-care__tag--supply {
   box-shadow: 0 0 1.1px #067f9d !important;
@@ -1993,8 +2266,20 @@
 #home-app-subscribe .service-page__section--care .service-tooltip__wrap {
   position: relative;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-tooltip__wrap {
+    font-size: 11px;
+  }
+}
 #home-app-subscribe .service-page__section--care .service-tooltip__btn {
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-tooltip__btn {
+    font-size: 11px;
+    line-height: 140%;
+    letter-spacing: -0.22px;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-tooltip {
   position: absolute;
@@ -2163,7 +2448,8 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   align-items: start;
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
@@ -2173,7 +2459,8 @@
   padding: 6px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > div {
   min-width: 0;
@@ -2645,7 +2932,8 @@
 #home-app-subscribe .service-page__section--products .service-products__image {
   width: 240px;
   height: 240px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--products .service-products__info {
   display: flex;
@@ -2811,10 +3099,12 @@
   aspect-ratio: 380/240;
   overflow: hidden;
   border-radius: 24px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe .service-page__section--guide .service-guide:first-child img {
-  object-position: center 44%;
+  -o-object-position: center 44%;
+     object-position: center 44%;
 }
 #home-app-subscribe .service-page__section--guide .service-guide__text {
   display: flex;
@@ -2837,31 +3127,6 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.4;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--guide .service-page__heading {
-    margin-bottom: 20px;
-  }
-  #home-app-subscribe .service-page__section--guide .service-page__heading h2 {
-    font-size: 26px;
-    line-height: 36px;
-  }
-  #home-app-subscribe .service-page__section--guide .service-guides {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  #home-app-subscribe .service-page__section--guide .service-guides a {
-    gap: 12px;
-  }
-  #home-app-subscribe .service-page__section--guide .service-guides img {
-    border-radius: 16px;
-  }
-  #home-app-subscribe .service-page__section--guide .service-guides strong {
-    font-size: 15px;
-  }
-  #home-app-subscribe .service-page__section--guide .service-guides small {
-    font-size: 19px;
-  }
 }
 #home-app-subscribe {
   /* 혼자 고르기 어려우신가요? */
@@ -2908,7 +3173,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__text {
   display: flex;
@@ -2951,11 +3217,13 @@
   display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__ai > span {
   background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   font-size: 16px;
   font-weight: 700;
@@ -2967,46 +3235,4 @@
   width: 20px;
   height: 20px;
   background: url(../images/icon_arr.png) no-repeat center center/contain;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-page__heading {
-    margin-bottom: 20px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-page__heading h2,
-  #home-app-subscribe .service-page__section--contact .service-page__heading p {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact > a {
-    min-height: 116px;
-    padding: 20px;
-    border-radius: 16px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact > a strong {
-    font-size: 18px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact > a small {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact__ai {
-    height: 56px;
-    margin-top: 16px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact__ai > img {
-    width: 28px;
-    height: 28px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact__ai > span {
-    font-size: 14px;
-  }
-  #home-app-subscribe .service-page__section--contact .service-contact__ai::after {
-    flex-basis: 18px;
-    width: 18px;
-    height: 18px;
-  }
 }

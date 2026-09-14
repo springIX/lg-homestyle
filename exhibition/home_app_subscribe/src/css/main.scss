@@ -535,6 +535,11 @@
       background: #666;
       vertical-align: middle;
     }
+
+    @include screen("mo") {
+      margin-top: 10px;
+      text-align: left;
+    }
   }    
 
   //페이지 하단 리스트 1개 이상
@@ -564,6 +569,10 @@
         background: #666;
         vertical-align: middle;
       }
+    }
+
+    @include screen("mo") {
+      display: none;
     }
   } 
   
@@ -668,7 +677,77 @@
       line-height: 140%;
       letter-spacing: -0.42px;      
     }    
+
+    .red {
+      color: #FD312E;
+      font-weight: 400;
+    }
   }
+
+  // 페이지네이션
+  .faq-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; 
+    margin-top: 24px;
+
+    &__btn {
+      color: #777;
+      text-align: center;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px; 
+      height: 36px;
+      background-color: #fff;
+      border: 1px solid #DEE1E5; 
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.2s ease-in-out;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+
+      &:hover:not(:disabled) {
+        border-color: #222;
+      }
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.4;
+      }
+    }
+
+    &__indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px; 
+      font-size: 16px;
+    }
+
+    &__current {
+      font-weight: 700;
+      color: #111;
+    }
+
+    &__separator {
+      font-weight: 400;
+      color: #d9d9d9; 
+    }
+
+    &__total {
+      font-weight: 400;
+      color: #888;
+    }
+  }  
 
   // 탭 메뉴
   .service-tabs__list {
@@ -704,6 +783,10 @@
         font-weight: 600;
       }
     }
+
+    @include screen("mo") {
+      margin-bottom: 8px;
+    }
   }
   .service-tabs__panel[hidden] {
     display: none;
@@ -723,6 +806,13 @@
       font-weight: 700;
       line-height: 48px;
       text-align: center;
+
+      @include screen("mo") {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -1.04px;
+        line-height: 140%;
+      }
     }
 
     p {
@@ -732,6 +822,17 @@
       font-weight: 400;
       line-height: 28px;
       letter-spacing: -0.2px;
+
+      @include screen("mo") {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+        line-height: 20px;
+      }      
+    }
+
+    @include screen("mo") {
+      margin-bottom: 20px;
     }
   }
 
@@ -751,6 +852,13 @@
         font-size: 36px;
         font-weight: 700;
         line-height: 48px;
+
+        @include screen("mo") {
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 700;
+          letter-spacing: -1.04px;
+        }
       }
 
       .service-page__lead {
@@ -760,6 +868,12 @@
         font-weight: 400;
         line-height: 28px;
         letter-spacing: -0.2px;
+
+        @include screen("mo") {
+          font-size: 15px;
+          letter-spacing: -0.2px;
+          line-height: 20px;
+        }
       }      
     }
   }
@@ -837,6 +951,19 @@
               margin-right: 6px;
               object-fit: contain;
               vertical-align: top;
+              
+              @include screen("mo") {
+                width: 18px;
+                height: 18px;
+                vertical-align: middle;
+                object-fit: contain;
+              }
+            }
+            
+            @include screen("mo") {
+              font-size: 14px;
+              letter-spacing: -0.14px;
+              padding: 12px 8px;
             }
           }
         }
@@ -874,6 +1001,10 @@
             font-weight: 500;
             line-height: normal;
             letter-spacing: -0.08px;
+
+            @include screen("mo") {
+              font-size: 12px;
+            }
           }
 
           td {
@@ -889,6 +1020,11 @@
               color: #067f9d;
               font-weight: 600;
             }
+
+            @include screen("mo") {
+              font-size: 12px;
+              padding: 8px 18px;
+            }            
           }
         }
 
@@ -924,20 +1060,25 @@
 
       &__item {
         display: flex;
-        flex: 1 1 0;
+        // flex: 1 1 0;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        min-width: 0;
+        // min-width: 0;
         padding: 24px;
         overflow: hidden;
         border: 1px solid #eff0f2;
         border-radius: 24px;
         background: linear-gradient(90deg, #fff 0%, #fff 100%);
 
-        > div {
+        .service-benefits__item--box01 {
           width: 100%;
           margin-top: 4px;
+
+          @include screen("mo") {
+            padding-bottom: 12px;
+            width: 100%;
+          }
         }
 
         h3 {
@@ -947,6 +1088,13 @@
           font-weight: 600;
           line-height: 1.4;
           letter-spacing: -0.27px;
+
+          @include screen("mo") {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.32px;
+            text-align: left;
+          }
         }
 
         p {
@@ -956,24 +1104,59 @@
           font-weight: 500;
           line-height: 1.4;
           letter-spacing: -0.32px;
+
+          @include screen("mo") {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: -0.156px;
+            text-align: left;
+          }
         }
 
         &:nth-child(1) .service-benefits__image {
           width: 88px;
           height: 88px;
+
+          @include screen("mo") {
+            width: 50px;
+            height: 50px;
+          }
         }
         &:nth-child(2) .service-benefits__image {
           width: 64px;
           height: 60px;
+
+          @include screen("mo") {
+            width: 50px;
+            height: 50px;
+          }          
         }
         &:nth-child(3) .service-benefits__image {
           width: 74px;
           height: 63px;
-        }        
+
+          @include screen("mo") {
+            width: 50px;
+            height: 50px;
+          }          
+        } 
+        
+        @include screen("mo") {
+          padding: 16px 16px 18px 16px;
+          align-items: flex-start;
+          flex: auto;
+          position: relative;
+        }
       }
 
       &__image {
         margin-bottom: 10px;
+
+        @include screen("mo") {
+          position: absolute;
+          right: 16px;
+          top: 16px;
+        }
       }
 
       &__tag {
@@ -1002,7 +1185,40 @@
           box-shadow: 0 0 2px #ab6226;
           color: #ab6226;
         }
-      }       
+
+        @include screen("mo") {
+          font-size: 9px;
+          padding: 2px 3px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          text-align: left;
+          width: max-content;
+          display: flex;
+        }        
+      }  
+      
+      .service-benefits__item--box02 {
+        display: none;
+
+        .service-page__caption {
+          
+          @include screen("mo") {
+            text-align: left;
+          }
+        }
+
+        @include screen("mo") {
+          display: block;
+          padding-top: 10px;
+          border-top: 1px dashed #DEE1E5;
+          width: 100%;          
+          
+        }
+      }
+
+      @include screen("mo") {
+        flex-direction: column;
+      }
     }
   }
 
@@ -1059,6 +1275,10 @@
           padding: 50px 0; 
         }
 
+        &:nth-child(3) {
+          border-bottom: 1px solid #eff0f2;
+        }
+
         &:nth-child(2),
         &:nth-child(4) {
           border-top: 1px solid transparent;
@@ -1084,6 +1304,11 @@
           line-height: 14px;
           letter-spacing: -0.11px;
           vertical-align: middle;
+
+          @include screen("mo") {
+            font-size: 9px;
+            padding: 2px 3px;
+          }
         }
 
         h3 {
@@ -1095,6 +1320,12 @@
           line-height: 22.4px; 
           letter-spacing: -0.24px;
           vertical-align: middle;
+
+          @include screen("mo") {
+            font-size: 13px;
+            line-height: 130%; 
+            letter-spacing: -0.195px;
+          }
         }
 
         p {
@@ -1123,7 +1354,6 @@
             background: url(../images/ic_info.png) no-repeat center center / contain;
             vertical-align: middle;
           }
-
         }
 
         img {
@@ -1133,6 +1363,12 @@
           overflow: hidden;
           border-radius: 12px;
           object-fit: cover;
+
+          @include screen("mo") {
+            flex: 0 0 103px;
+            width: 103px;
+            height: 58px;
+          }
         }
 
         &--detailed {
@@ -1148,6 +1384,10 @@
           
           &:last-child {
             padding-bottom: 0;
+          }
+
+          @include screen("mo") {
+            padding-left: 8px;
           }
         }
 
@@ -1171,6 +1411,15 @@
         &--no-media {
           width: 100%;
         }
+
+        @include screen("mo") {
+          padding: 10px 0;
+        }        
+      }
+
+      @include screen("mo") {
+        grid-template-columns: auto;
+        padding: 0 12px;
       }
     }
 
@@ -1207,10 +1456,20 @@
     /* 툴팁 */
     .service-tooltip__wrap {
       position: relative;
+
+      @include screen("mo") {
+        font-size: 11px;
+      }
     }
 
     .service-tooltip__btn {
       cursor: pointer;
+
+      @include screen("mo") {
+        font-size: 11px;
+        line-height: 140%;
+        letter-spacing: -0.22px;        
+      }
     }
 
     .service-tooltip {
@@ -2172,37 +2431,37 @@
       }
     }
 
-    @include screen("mo") {
-      .service-page__heading {
-        margin-bottom: 20px;
+    // @include screen("mo") {
+    //   .service-page__heading {
+    //     margin-bottom: 20px;
 
-        h2 {
-          font-size: 26px;
-          line-height: 36px;
-        }
-      }
+    //     h2 {
+    //       font-size: 26px;
+    //       line-height: 36px;
+    //     }
+    //   }
 
-      .service-guides {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    //   .service-guides {
+    //     grid-template-columns: 1fr;
+    //     gap: 24px;
 
-        a {
-          gap: 12px;
-        }
+    //     a {
+    //       gap: 12px;
+    //     }
 
-        img {
-          border-radius: 16px;
-        }
+    //     img {
+    //       border-radius: 16px;
+    //     }
 
-        strong {
-          font-size: 15px;
-        }
+    //     strong {
+    //       font-size: 15px;
+    //     }
 
-        small {
-          font-size: 19px;
-        }
-      }
-    }
+    //     small {
+    //       font-size: 19px;
+    //     }
+    //   }
+    // }
   }
 
   /* 혼자 고르기 어려우신가요? */
@@ -2324,57 +2583,57 @@
       }      
     }
 
-    @include screen("mo") {
-      .service-page__heading {
-        margin-bottom: 20px;
+    // @include screen("mo") {
+    //   .service-page__heading {
+    //     margin-bottom: 20px;
 
-        h2,
-        p {
-          font-size: 24px;
-          line-height: 32px;
-        }
-      }
+    //     h2,
+    //     p {
+    //       font-size: 24px;
+    //       line-height: 32px;
+    //     }
+    //   }
 
-      .service-contact {
-        grid-template-columns: 1fr;
-        gap: 8px;
+    //   .service-contact {
+    //     grid-template-columns: 1fr;
+    //     gap: 8px;
 
-        > a {
-          min-height: 116px;
-          padding: 20px;
-          border-radius: 16px;
+    //     > a {
+    //       min-height: 116px;
+    //       padding: 20px;
+    //       border-radius: 16px;
 
-          strong {
-            font-size: 18px;
-          }
+    //       strong {
+    //         font-size: 18px;
+    //       }
 
-          small {
-            font-size: 14px;
-            line-height: 20px;
-          }
-        }
-      }
+    //       small {
+    //         font-size: 14px;
+    //         line-height: 20px;
+    //       }
+    //     }
+    //   }
 
-      .service-contact__ai {
-        height: 56px;
-        margin-top: 16px;
+    //   .service-contact__ai {
+    //     height: 56px;
+    //     margin-top: 16px;
 
-        > img {
-          width: 28px;
-          height: 28px;
-        }
+    //     > img {
+    //       width: 28px;
+    //       height: 28px;
+    //     }
 
-        > span {
-          font-size: 14px;
-        }
+    //     > span {
+    //       font-size: 14px;
+    //     }
 
-        &::after {
-          flex-basis: 18px;
-          width: 18px;
-          height: 18px;
-        }
-      }
-    }
+    //     &::after {
+    //       flex-basis: 18px;
+    //       width: 18px;
+    //       height: 18px;
+    //     }
+    //   }
+    // }
   }
 
 }
