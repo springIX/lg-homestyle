@@ -3,6 +3,11 @@
 /* Responsive */
 /* 모바일에서 레이아웃에 가둬진 박스의 너비가 풀로 가져가야 할때 */
 /* Ellipsis */
+@media (max-width: 767px) {
+  #home-app-subscribe {
+    top: 46px;
+  }
+}
 #home-app-subscribe {
   /* RESET RESET RESET RESET RESET RESET RESET */
 }
@@ -233,6 +238,11 @@
 #home-app-subscribe .info-txt-box .mt18 {
   margin-top: 18px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .info-txt-box .mt18 {
+    margin-top: 16px;
+  }
+}
 #home-app-subscribe .info-txt-box .depth {
   padding-left: 10px;
 }
@@ -368,6 +378,13 @@
 }
 #home-app-subscribe .care-subcp-header-menu a {
   display: flex !important;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .care-subcp-header-menu {
+    z-index: 30;
+    position: fixed;
+    top: 46px;
+  }
 }
 #home-app-subscribe {
   /* //상단 1DEP메뉴 */
