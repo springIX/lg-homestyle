@@ -81,8 +81,6 @@ $(function () {
     spaceBetween: 20,
     speed: 800,
     centeredSlides: true,
-    loop: true,
-    loopedSlides: 9,
     threshold: 30,
     noSwiping: true,
     noSwipingClass: 'table-box',
@@ -173,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
      1. 탭 (Tabs) 공통 제어
   ======================================================== */
   const tabButtons = document.querySelectorAll('[data-service-tabs] [role="tab"], .service-tabs__button');
-  
+
   // 초기화
   tabButtons.forEach(btn => {
     if (btn.getAttribute('aria-selected') !== 'true') btn.setAttribute('tabindex', '-1');
@@ -209,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
     if (!keys.includes(e.key)) return;
-    
+
     e.preventDefault();
     const tabList = tab.closest('.service-tabs');
     const allTabs = Array.from(tabList.querySelectorAll('[role="tab"], .service-tabs__button'));
@@ -230,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ======================================================== */
   document.addEventListener('click', function (e) {
     const btn = e.target.closest('.faq-accordion__button, .service-accordion__button, .service-cancel__return-fee-button');
-    
+
     if (!btn) return;
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
     const targetId = btn.getAttribute('aria-controls');
@@ -242,12 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isExpanded) {
       btn.setAttribute('aria-expanded', 'false');
       targetContent.hidden = true;
-    } 
+    }
     // 2. 닫혀있는 상태에서 클릭한 경우 (다른 항목 닫고 현재 항목 열기)
     else {
       // ✨ 추가된 부분: 열려있는 다른 아코디언 버튼을 모두 찾음
       const openButtons = document.querySelectorAll('.faq-accordion__button[aria-expanded="true"], .service-accordion__button[aria-expanded="true"], .service-cancel__return-fee-button[aria-expanded="true"]');
-      
+
       openButtons.forEach(function (openBtn) {
         openBtn.setAttribute('aria-expanded', 'false');
         const openContentId = openBtn.getAttribute('aria-controls');
@@ -285,8 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const myTooltip = btn.closest('.service-tooltip__wrap').querySelector('.service-tooltip');
       const isCurrentlyOpen = myTooltip && !myTooltip.hidden;
 
-      allTooltips.forEach(t => t.hidden = true); 
-      if (!isCurrentlyOpen && myTooltip) myTooltip.hidden = false; 
+      allTooltips.forEach(t => t.hidden = true);
+      if (!isCurrentlyOpen && myTooltip) myTooltip.hidden = false;
     }
   });
 

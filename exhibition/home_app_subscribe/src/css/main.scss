@@ -317,7 +317,7 @@
                 span{ position: relative;}
               }
               img{ display: block; width: 63px; margin: 34px auto 0; transition: .5s ease; filter: brightness(.85); 
-                @include screen("mo") { width: 51px; margin-top: 15px;}
+                @include screen("mo") { width: 33px; margin-top: 15px;}
               }
               &.swiper-slide-active{ cursor: default;
                 p{ color: #fff;
@@ -329,8 +329,8 @@
           }
           &.card-info{ padding: 0 $layout_pd;
             .swiper-slide{ width: 480px;
-              .round-box{ height: 385px; border: 1px solid #727780; overflow: hidden; padding: 24px 20px 14px; position: relative;
-                @include screen("mo") { height: 343px; padding: 16px 16px 20px;}
+              .round-box{ height: 385px; border: 1px solid #727780; overflow: hidden; padding: 24px 20px 14px; position: relative; white-space: nowrap;
+                @include screen("mo") { height: auto; padding: 16px 16px 20px;}
                 .tit{ text-align: center;
                   h3{ font-size: 18px; color: #444; font-weight: 600;
                     @include screen("mo") { font-size: 16px;}
@@ -374,8 +374,11 @@
                     }
                   }
                 }
-                .apply-btn{ display: flex; align-items: center; justify-content: center; gap: 4px; color: $ci; position: absolute; left: 0; bottom: 16px; width: 100%;
-                  @include screen("mo") { font-size: 14px;}
+                .apply-btn{ display: flex; align-items: center; justify-content: center; gap: 4px; color: $ci;
+                  @include screen("pc") { 
+                    position: absolute; left: 0; bottom: 16px; width: 100%;
+                  }
+                  @include screen("mo") { font-size: 14px; margin-top: 17px;}
                   &::after{ content: ''; width: 6px; height: 6px; border: 1px solid $ci; border-width: 1px 1px 0 0; transform: rotate(45deg) translateY(-1px);}
                 }
               }
@@ -393,11 +396,12 @@
         }
       }
      .slide-nav{ position: absolute; z-index: 5; left: 0; top: 610px; width: 100%; touch-action: none; pointer-events: none;
-      @include screen("mo") { top:184px;}
+      @include screen("mo") { top:194px;}
         .layout-inner{ display: flex; justify-content: space-between; padding: 0 $layout_pd;
-          span{ cursor: pointer; box-shadow: 0 0 1.462px 0 rgba(0, 0, 0, 0.24), 0 2.924px 11.696px 0 rgba(0, 0, 0, 0.06); border-radius: 50%; touch-action: auto; pointer-events: auto;
+          span{ cursor: pointer; box-shadow: 0 0 1.462px 0 rgba(0, 0, 0, 0.24), 0 2.924px 11.696px 0 rgba(0, 0, 0, 0.06); border-radius: 50%; touch-action: auto; pointer-events: auto; transition: .3s ease;
             @include screen("mo") { width: 24px;}
             &.prv{ transform: rotate(180deg);}
+            &.swiper-button-disabled{ opacity: .3; cursor: default;}
           }
         }
       }
