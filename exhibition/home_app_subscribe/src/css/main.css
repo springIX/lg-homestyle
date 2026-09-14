@@ -897,7 +897,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list .swiper-slide img {
-    width: 51px;
+    width: 33px;
     margin-top: 15px;
   }
 }
@@ -926,10 +926,11 @@
   overflow: hidden;
   padding: 24px 20px 14px;
   position: relative;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .round-box {
-    height: 343px;
+    height: auto;
     padding: 16px 16px 20px;
   }
 }
@@ -1063,14 +1064,19 @@
   justify-content: center;
   gap: 4px;
   color: #FD312E;
-  position: absolute;
-  left: 0;
-  bottom: 16px;
-  width: 100%;
+}
+@media (min-width: 768px) {
+  #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .round-box .apply-btn {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .round-box .apply-btn {
     font-size: 14px;
+    margin-top: 17px;
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .round-box .apply-btn::after {
@@ -1117,7 +1123,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-nav {
-    top: 184px;
+    top: 194px;
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-nav .layout-inner {
@@ -1131,6 +1137,7 @@
   border-radius: 50%;
   touch-action: auto;
   pointer-events: auto;
+  transition: 0.3s ease;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-nav .layout-inner span {
@@ -1139,6 +1146,10 @@
 }
 #home-app-subscribe section#detail-affiliated-card .slide-nav .layout-inner span.prv {
   transform: rotate(180deg);
+}
+#home-app-subscribe section#detail-affiliated-card .slide-nav .layout-inner span.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-tab {
   gap: 12px;
