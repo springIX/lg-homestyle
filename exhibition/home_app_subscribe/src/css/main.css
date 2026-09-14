@@ -52,7 +52,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -103,6 +104,7 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
+  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -355,6 +357,7 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
+  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -417,7 +420,8 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -543,6 +547,7 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -1256,7 +1261,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1574,6 +1580,14 @@
 #home-app-subscribe .service-care__faq > li > ul > li.service-care__faq--bar::before {
   margin-left: 10px !important;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-care__faq > li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.39px;
+  }
+}
 #home-app-subscribe .service-care__faq .service-care__faq--link {
   display: inline-block;
   text-decoration: underline;
@@ -1616,7 +1630,8 @@
 #home-app-subscribe .faq-pagination__btn img {
   width: 16px;
   height: 16px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .faq-pagination__btn:hover:not(:disabled) {
   border-color: #222;
@@ -1630,6 +1645,11 @@
   align-items: center;
   gap: 10px;
   font-size: 16px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .faq-pagination__indicator {
+    font-size: 13px;
+  }
 }
 #home-app-subscribe .faq-pagination__current {
   font-weight: 700;
@@ -1660,7 +1680,7 @@
   padding: 2px 10px;
   overflow: hidden;
   border: 1px solid #dee1e5;
-  border-radius: 10px;
+  border-radius: 100px;
   background-color: #fff;
   color: #111;
   font-size: 13px;
@@ -1673,6 +1693,9 @@
   background-color: #111;
   color: #fff;
   font-weight: 600;
+}
+#home-app-subscribe .service-tabs__list--radius .service-tabs__button {
+  border-radius: 13px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe .service-tabs__list {
@@ -1833,7 +1856,8 @@
   width: 28px;
   height: 28px;
   margin-right: 6px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   vertical-align: top;
 }
 @media (max-width: 767px) {
@@ -1841,7 +1865,8 @@
     width: 18px;
     height: 18px;
     vertical-align: middle;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -2057,6 +2082,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
+    width: -moz-max-content;
     width: max-content;
     display: flex;
   }
@@ -2097,7 +2123,8 @@
 #home-app-subscribe .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 48px;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
   width: 100%;
   padding: 0px 20px;
   border: 1px solid #eff0f2;
@@ -2110,6 +2137,11 @@
 }
 #home-app-subscribe .service-page__section--care .service-care--two {
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care--two .service-care__item:nth-child(1) {
+    border-bottom: 1px solid #eff0f2 !important;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-care--single {
   grid-template-columns: 1fr;
@@ -2126,6 +2158,11 @@
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item:only-child {
   padding: 50px 0;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item:only-child {
+    padding: 20px 0;
+  }
 }
 #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(3) {
   border-bottom: 1px solid #eff0f2;
@@ -2201,13 +2238,19 @@
   background: url(../images/ic_info.png) no-repeat center center/contain;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--care .service-care .service-care__item strong {
+    align-items: flex-start;
+  }
+}
 #home-app-subscribe .service-page__section--care .service-care .service-care__item img {
   flex: 0 0 132px;
   width: 132px;
   height: 88px;
   overflow: hidden;
   border-radius: 12px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe .service-page__section--care .service-care .service-care__item img {
@@ -2249,6 +2292,7 @@
 @media (max-width: 767px) {
   #home-app-subscribe .service-page__section--care .service-care .service-care__item {
     padding: 10px 0;
+    align-items: flex-start;
   }
   #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(1) {
     order: 1;
@@ -2399,9 +2443,21 @@
 }
 #home-app-subscribe .service-page__section--contract .service-checklist__item {
   padding: 24px;
-  border-radius: 24px;
+  border-radius: 20px;
   background-color: #f3f5f7;
+  border: 1px solid transparent;
   text-align: left;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contract .service-checklist__item {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__item:has(.service-checklist__button[aria-expanded=true]) {
+    background-color: #f8f9fa;
+    border-color: #8F9298;
+  }
 }
 #home-app-subscribe .service-page__section--contract .service-checklist__header {
   display: flex;
@@ -2414,18 +2470,54 @@
   color: #111;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__header > span[aria-hidden=true] {
+#home-app-subscribe .service-page__section--contract .service-checklist__header .chk-icon {
   display: inline-flex;
-  flex: 0 0 25px;
+  flex: 0 0 20px;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #111;
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
+  transition: background-color 0.3s;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contract .service-checklist__header {
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__header::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon_arr.png) no-repeat center center/contain;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=false] .chk-icon {
+    background-color: #a0a0a0;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=false] .service-checklist__title {
+    font-weight: 500;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=true] .chk-icon {
+    background-color: #111;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=true] .service-checklist__title {
+    font-weight: 700;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=true]::after {
+    transform: rotate(270deg);
+  }
 }
 #home-app-subscribe .service-page__section--contract .service-checklist__title {
   flex: 1 1 auto;
@@ -2434,8 +2526,13 @@
   line-height: 1.4;
   letter-spacing: -0.27px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contract .service-checklist__title {
+    font-size: 14px;
+  }
+}
 #home-app-subscribe .service-page__section--contract .service-checklist__content {
-  padding-left: 34px;
+  padding-left: 32px;
   color: #444;
   font-size: 16px;
   font-weight: 400;
@@ -2444,6 +2541,72 @@
 }
 #home-app-subscribe .service-page__section--contract .service-checklist__content p {
   margin-top: 5px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contract .service-checklist__content {
+    padding-top: 6px;
+    font-size: 12px;
+  }
+  #home-app-subscribe .service-page__section--contract .service-checklist__content p {
+    margin-top: 0;
+  }
+}
+#home-app-subscribe {
+  /* 모바일 전용 배너 */
+}
+#home-app-subscribe .promo-banner {
+  display: none;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .promo-banner {
+    display: block;
+    width: 100%;
+    min-height: 109px;
+    overflow: hidden;
+    background: url("../images/mo_banner.jpg") no-repeat center right/cover;
+  }
+  #home-app-subscribe .promo-banner__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 109px;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  #home-app-subscribe .promo-banner__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+  }
+  #home-app-subscribe .promo-banner__title {
+    margin: 0;
+    color: #fff;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+  }
+  #home-app-subscribe .promo-banner__desc {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    opacity: 0.7;
+    padding-top: 3px;
+  }
+  #home-app-subscribe .promo-banner__desc::after {
+    content: "";
+    display: inline-block;
+    background: url(../images/ic_right.png) no-repeat 0 0/100%;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+  }
 }
 #home-app-subscribe {
   /* 해지와 만료, 이렇게 진행돼요 */
@@ -2477,13 +2640,24 @@
   background-color: #EFF0F2;
   content: "";
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel::before {
+    left: 17px;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel__step {
   position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   align-items: start;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel__step {
+    grid-template-columns: 35px minmax(0, 1fr);
+  }
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
   box-sizing: border-box;
@@ -2492,7 +2666,16 @@
   padding: 6px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    border-radius: 12px;
+  }
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > div {
   min-width: 0;
@@ -2509,6 +2692,11 @@
   line-height: 1.4;
   letter-spacing: -0.27px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel__step > div > h3 {
+    font-size: 16px;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
   margin-top: 2px;
   color: #444;
@@ -2516,6 +2704,11 @@
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: -0.3px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
+    font-size: 13px;
+  }
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p a {
   color: inherit;
@@ -2542,6 +2735,11 @@
 [aria-expanded=true] #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title::after {
   transform: rotate(270deg);
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title {
+    font-size: 16px;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__desc {
   margin: 4px 0 0 16px;
   color: #444;
@@ -2549,11 +2747,16 @@
   line-height: 1.4;
   font-weight: 400;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__desc {
+    font-size: 13px;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__content {
   margin-top: 8px;
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__content[hidden] {
-  display: none;
+  display: none !important;
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list {
   display: flex;
@@ -2598,6 +2801,12 @@
   width: 100%;
   margin-top: 12px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees {
+    margin-top: 8px;
+    gap: 8px;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion {
   overflow: hidden;
   border: 1px solid #ccd1d6;
@@ -2632,6 +2841,12 @@
   content: "";
   transform: rotate(90deg);
   transition: transform 0.3s ease;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
+    padding: 16px;
+    font-size: 13px;
+  }
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content {
   padding: 0 20px 14px;
@@ -2677,7 +2892,7 @@
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-note {
   margin-top: 16px;
-  padding-top: 16px;
+  padding-top: 10px;
   border-top: 1px dashed #DEE1E5;
   color: #444;
   font-size: 13px;
@@ -2717,6 +2932,12 @@
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content {
   width: 100%;
   overflow: hidden;
@@ -2741,6 +2962,12 @@
   letter-spacing: -0.36px;
   text-align: center;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table {
+    margin-top: 8px;
+    min-width: auto;
+  }
+}
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
   height: 32px;
@@ -2753,6 +2980,12 @@
   font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.36px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
+  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
+    font-size: 10px;
+  }
 }
 #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th {
   padding-top: 4px;
@@ -2816,12 +3049,24 @@
 #home-app-subscribe .service-page__section--faq .faq-accordion__button[aria-expanded=true] .faq-accordion__icon {
   transform: rotate(180deg);
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--faq .faq-accordion__button {
+    padding: 18px 8px;
+    line-height: 20px;
+  }
+}
 #home-app-subscribe .service-page__section--faq .faq-accordion__q-mark {
   width: 12px;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.2px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--faq .faq-accordion__q-mark {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 #home-app-subscribe .service-page__section--faq .faq-accordion__title {
   min-width: 0;
@@ -2830,8 +3075,11 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--faq .faq-accordion__title {
+    font-size: 14px;
+  }
 }
 #home-app-subscribe .service-page__section--faq .faq-accordion__icon {
   position: relative;
@@ -2842,14 +3090,20 @@
 }
 #home-app-subscribe .service-page__section--faq .faq-accordion__icon::before {
   position: absolute;
-  top: 7px;
-  left: 7px;
+  top: 50%;
+  left: 50%;
   width: 8px;
   height: 8px;
   border-right: 1.5px solid #111;
   border-bottom: 1.5px solid #111;
   content: "";
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--faq .faq-accordion__icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 #home-app-subscribe .service-page__section--faq .faq-accordion__content {
   background-color: #f9fafb;
@@ -2866,26 +3120,8 @@
   padding: 24px 70px 32px 30px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--faq .service-tabs .service-tabs__list {
-    justify-content: flex-start;
-    margin-right: -20px;
-    margin-left: -20px;
-    padding: 0 20px;
-    overflow-x: auto;
-  }
-  #home-app-subscribe .service-page__section--faq .faq-accordion__button {
-    align-items: start;
-    padding-right: 16px;
-    padding-left: 16px;
-  }
-  #home-app-subscribe .service-page__section--faq .faq-accordion__title {
-    overflow: visible;
-    text-overflow: clip;
-    white-space: normal;
-  }
   #home-app-subscribe .service-page__section--faq .faq-accordion__inner {
-    padding-right: 48px;
-    padding-left: 36px;
+    padding: 18px 28px;
   }
 }
 #home-app-subscribe {
@@ -2967,7 +3203,8 @@
 #home-app-subscribe .service-page__section--products .service-products__image {
   width: 240px;
   height: 240px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--products .service-products__info {
   display: flex;
@@ -3113,6 +3350,11 @@
   gap: 20px;
   width: 100%;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--guide .service-guide {
+    gap: 12px;
+  }
+}
 #home-app-subscribe .service-page__section--guide .service-guide__item {
   display: flex;
   flex-direction: column;
@@ -3133,10 +3375,17 @@
   aspect-ratio: 380/240;
   overflow: hidden;
   border-radius: 24px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--guide .service-guide img {
+    border-radius: 12px;
+  }
 }
 #home-app-subscribe .service-page__section--guide .service-guide:first-child img {
-  object-position: center 44%;
+  -o-object-position: center 44%;
+     object-position: center 44%;
 }
 #home-app-subscribe .service-page__section--guide .service-guide__text {
   display: flex;
@@ -3153,12 +3402,26 @@
   font-weight: 400;
   line-height: 1.4;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--guide .service-guide strong {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
 #home-app-subscribe .service-page__section--guide .service-guide small {
   width: 100%;
   color: #111;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.4;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--guide .service-guide small {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
 }
 #home-app-subscribe {
   /* 혼자 고르기 어려우신가요? */
@@ -3205,7 +3468,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__text {
   display: flex;
@@ -3248,11 +3512,13 @@
   display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #home-app-subscribe .service-page__section--contact .service-contact__ai > span {
   background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   font-size: 16px;
   font-weight: 700;

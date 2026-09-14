@@ -220,7 +220,7 @@
           <p>제품에 따라 제공되는 케어 항목과 주기가 달라요. 구독하려는 제품을 선택해 확인해 보세요.</p>
         </div>
         <div class="service-tabs">
-          <div class="service-tabs__list" role="tablist" aria-label="제품 선택" data-service-tabs>
+          <div class="service-tabs__list service-tabs__list--radius" role="tablist" aria-label="제품 선택" data-service-tabs>
             <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-wash"
               aria-selected="true" aria-controls="service-panel-wash">워시타워</button>
             <button type="button" class="service-tabs__button" role="tab" id="service-tab-air" aria-selected="false"
@@ -299,7 +299,7 @@
                 <img src="src/images/service-wash04.png" alt="워시타워 무상 서비스" loading="lazy">
               </li>
             </ul>
-            <p class="service-page__caption">워시타워 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
+            <p class="service-page__caption">라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
           </div>
           <!-- 스탠드 에어컨 -->
           <div id="service-panel-air" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-air"
@@ -368,7 +368,7 @@
                 <img src="src/images/service-air04.png" alt="" loading="lazy">
               </li>
             </ul>
-            <p class="service-page__caption">워시타워 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
+            <p class="service-page__caption">프리미엄 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
           </div>
           <!-- STEM 얼음정수 냉장고 -->
           <div id="service-panel-fridge" class="service-tabs__panel" role="tabpanel"
@@ -425,7 +425,7 @@
                 <img src="src/images/service-stem04.png" alt="" loading="lazy">
               </li>
             </ul>
-            <p class="service-page__caption">워시타워 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
+            <p class="service-page__caption">프리미엄 · 라이트 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
           </div>
           <!-- 노트북 -->
           <div id="service-panel-laptop" class="service-tabs__panel" role="tabpanel"
@@ -446,7 +446,7 @@
                 <img src="src/images/service-laptop02.png" alt="" loading="lazy">
               </li>
             </ul>
-            <p class="service-page__caption">워시타워 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
+            <p class="service-page__caption">프리미엄 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
           </div>
           <!-- TV -->
           <div id="service-panel-tv" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-tv"
@@ -459,7 +459,7 @@
                 </div>
               </li>
             </ul>
-            <p class="service-page__caption">워시타워 · 라이트플러스 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
+            <p class="service-page__caption">베이직 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
           </div>
         </div>
         <div class="service-care__notice notice accordion">
@@ -544,29 +544,31 @@
         </div>
         <div class="service-checklist">
           <article class="service-checklist__item">
-            <div class="service-checklist__header">
-              <span aria-hidden="true">✓</span>
+            <button type="button" class="service-checklist__header service-checklist__button" aria-expanded="false" aria-controls="chk-content-1">
+              <span aria-hidden="true" class="chk-icon">✓</span>
               <span class="service-checklist__title">계약 만료 후 소유권 이전 조건을 확인했어요</span>
-            </div>
-            <div class="service-checklist__content">
+            </button>
+            <div id="chk-content-1" class="service-checklist__content" hidden>
               <p>가전 구독은 구독 대상으로 운영되는 제품만 신청할 수 있으며, 제품에 따라 구독 가능한 모델·색상·용량과 제공되는 요금제가 다를 수 있어요.</p>
             </div>
           </article>
           <article class="service-checklist__item">
-            <div class="service-checklist__header">
-              <span aria-hidden="true">✓</span>
+            <button type="button" class="service-checklist__header service-checklist__button" aria-expanded="false" aria-controls="chk-content-2">
+              <span aria-hidden="true" class="chk-icon">✓</span>
               <span class="service-checklist__title">케어서비스의 관리 범위와 방문 주기를 확인했어요</span>
-            </div>
-            <div class="service-checklist__content">
+            </button>
+            <div id="chk-content-2" class="service-checklist__content" hidden>
               <p>가전 구독은 구독 대상으로 운영되는 제품만 신청할 수 있으며, 제품에 따라 구독 가능한 모델·색상·용량과 제공되는 요금제가 다를 수 있어요.</p>
             </div>
           </article>
+
+          <!-- 아이템 3 (닫힘 상태) -->
           <article class="service-checklist__item">
-            <div class="service-checklist__header">
-              <span aria-hidden="true">✓</span>
+            <button type="button" class="service-checklist__header service-checklist__button" aria-expanded="false" aria-controls="chk-content-3">
+              <span aria-hidden="true" class="chk-icon">✓</span>
               <span class="service-checklist__title">중도 해지 시 위약금 구조를 확인했어요</span>
-            </div>
-            <div class="service-checklist__content">
+            </button>
+            <div id="chk-content-3" class="service-checklist__content" hidden>
               <p>가전 구독은 구독 대상으로 운영되는 제품만 신청할 수 있으며, 제품에 따라 구독 가능한 모델·색상·용량과 제공되는 요금제가 다를 수 있어요.</p>
             </div>
           </article>
@@ -593,6 +595,19 @@
       </div>
     </section>
     <!-- //계약 전에 꼭 확인해 주세요 -->
+
+    <!-- 모바일 전용 배너 -->
+    <aside class="promo-banner" aria-label="제휴카드 할인 및 구독 혜택 안내">
+      <a href="#" class="promo-banner__link">
+        <div class="promo-banner__content">
+          <h2 class="promo-banner__title">구독료 부담을 줄일 방법이 있어요</h2>
+          <p class="promo-banner__desc">
+            제휴카드 할인과 구독 혜택 확인하기
+          </p>
+        </div>
+      </a>
+    </aside>
+    <!--// 모바일 전용 배너 -->
 
     <!-- 해지와 만료, 이렇게 진행돼요 -->
     <section class="service-page__section service-page__section--cancel" aria-labelledby="cancel-title">
@@ -700,7 +715,7 @@
                             <td>1,400,000원</td>
                           </tr>
                           <tr>
-                            <td>STEM/생성형/문형냉장고</td>
+                            <td>STEM/상냉장/양문형냉장고</td>
                             <td>98,500원</td>
                           </tr>
                           <tr>
@@ -808,8 +823,7 @@
                   <button type="button" class="service-accordion__button" aria-expanded="false"
                     aria-controls="service-fee-gift">사은품 비용</button>
                   <div id="service-fee-gift" class="service-accordion__content" hidden>
-                    <p>구독 계약 성립 후 12개월 이내 고객 요청에 의한 해지 시, 기 지급받은 사은품에 해당하는 금액(전액)이 부과돼요. 다품목 구매 혜택이나 금액대별 멤버십 포인트 혜택을 받은
-                      후 일부 제품을 해지하면, 해당 제품으로 인해 지급된 혜택 상당액이 부과될 수 있습니다.</p>
+                    <p>구독 계약 성립 후 12개월 이내 고객 요청에 의한 해지 시, 기 지급받은 사은품에 해당하는 금액(전액)이 부과돼요. 다품목 구매 혜택이나 금액대별 멤버십 포인트 혜택을 받은 후 일부 제품을 해지하면, 해당 제품으로 인해 지급된 혜택 상당액이 부과될 수 있습니다.</p>
                     <ul class="service-fee-list">
                       <li>현금성 사은품: 사은품 액면금액 기준</li>
                       <li>비현금성 사은품: LG전자 사은품 구매단가 기준</li>
