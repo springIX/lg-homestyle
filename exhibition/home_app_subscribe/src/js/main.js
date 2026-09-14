@@ -164,44 +164,155 @@ $(function () {
   });
 });
 
-/* benefit_service.html */
-$(function () {
-  const $servicePage = $('.service-page');
 
-  if (!$servicePage.length) return;
 
-  // 기존 아코디언 동작과 hidden 속성을 동기화해 보조기기에도 상태를 전달합니다.
-  $servicePage.on('click', '.accordion-btn', function () {
-    const $button = $(this);
-    const $content = $button.closest('.accordion').children('.accordion-cont');
-    const isExpanded = $button.attr('aria-expanded') === 'true';
+/* service_info.html - JS */
+document.addEventListener('DOMContentLoaded', () => {
 
-    $content.prop('hidden', !isExpanded);
+  /* =======================================================
+     1. 탭 (Tabs) 공통 제어
+  ======================================================== */
+  const tabButtons = document.querySelectorAll('[data-service-tabs] [role="tab"], .service-tabs__button');
+  
+  // 초기화
+  tabButtons.forEach(btn => {
+    if (btn.getAttribute('aria-selected') !== 'true') btn.setAttribute('tabindex', '-1');
   });
 
-  // 제품별 케어 탭: 클릭과 방향키 탐색을 모두 지원합니다.
-  $servicePage.on('click keydown', '[data-service-tabs] [role="tab"]', function (event) {
-    const $tabs = $(this).parent().children('[role="tab"]');
-    let index = $tabs.index(this);
+  document.addEventListener('click', (e) => {
+    const tab = e.target.closest('[data-service-tabs] [role="tab"], .service-tabs__button');
+    if (!tab) return;
 
-    if (event.type === 'keydown') {
-      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-      event.preventDefault();
-      if (event.key === 'Home') index = 0;
-      if (event.key === 'End') index = $tabs.length - 1;
-      if (event.key === 'ArrowLeft') index = (index - 1 + $tabs.length) % $tabs.length;
-      if (event.key === 'ArrowRight') index = (index + 1) % $tabs.length;
-      $tabs.eq(index).focus();
+    const tabList = tab.closest('.service-tabs');
+    const panelId = tab.getAttribute('aria-controls');
+    const allTabs = tabList.querySelectorAll('[role="tab"], .service-tabs__button');
+    const allPanels = tabList.querySelectorAll('.service-tabs__panel');
+
+    // 탭 상태 초기화 후 클릭한 탭 활성화
+    allTabs.forEach(t => {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+      t.setAttribute('tabindex', '-1');
+    });
+    tab.classList.add('is-active');
+    tab.setAttribute('aria-selected', 'true');
+    tab.setAttribute('tabindex', '0');
+
+    allPanels.forEach(p => p.hidden = true);
+    if (panelId) document.getElementById(panelId).hidden = false;
+  });
+
+  // 탭 키보드(방향키) 접근성
+  document.addEventListener('keydown', (e) => {
+    const tab = e.target.closest('[data-service-tabs] [role="tab"], .service-tabs__button');
+    if (!tab) return;
+
+    const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
+    if (!keys.includes(e.key)) return;
+    
+    e.preventDefault();
+    const tabList = tab.closest('.service-tabs');
+    const allTabs = Array.from(tabList.querySelectorAll('[role="tab"], .service-tabs__button'));
+    let index = allTabs.indexOf(tab);
+
+    if (e.key === 'Home') index = 0;
+    if (e.key === 'End') index = allTabs.length - 1;
+    if (e.key === 'ArrowLeft') index = (index - 1 + allTabs.length) % allTabs.length;
+    if (e.key === 'ArrowRight') index = (index + 1) % allTabs.length;
+
+    allTabs[index].click();
+    allTabs[index].focus();
+  });
+
+
+  /* =======================================================
+     2. 아코디언 (Accordion) 공통 제어 - 덜컹거림 완벽 개선
+  ======================================================== */
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.faq-accordion__button, .service-accordion__button, .service-cancel__return-fee-button');
+    
+    if (!btn) return;
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    const targetId = btn.getAttribute('aria-controls');
+    const targetContent = document.getElementById(targetId);
+
+    if (!targetContent) return;
+
+    // 1. 이미 열려있는 상태에서 클릭한 경우 (현재 항목 닫기)
+    if (isExpanded) {
+      btn.setAttribute('aria-expanded', 'false');
+      targetContent.hidden = true;
+    } 
+    // 2. 닫혀있는 상태에서 클릭한 경우 (다른 항목 닫고 현재 항목 열기)
+    else {
+      // ✨ 추가된 부분: 열려있는 다른 아코디언 버튼을 모두 찾음
+      const openButtons = document.querySelectorAll('.faq-accordion__button[aria-expanded="true"], .service-accordion__button[aria-expanded="true"], .service-cancel__return-fee-button[aria-expanded="true"]');
+      
+      openButtons.forEach(function (openBtn) {
+        openBtn.setAttribute('aria-expanded', 'false');
+        const openContentId = openBtn.getAttribute('aria-controls');
+        const openContent = document.getElementById(openContentId);
+        if (openContent) {
+          openContent.hidden = true;
+        }
+      });
+
+      // 현재 클릭한 항목 열기
+      btn.setAttribute('aria-expanded', 'true');
+      targetContent.hidden = false;
+    }
+  });
+
+
+  /* =======================================================
+     3. 툴팁 (Tooltip) 제어
+  ======================================================== */
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.service-tooltip__btn');
+    const closeBtn = e.target.closest('.service-tooltip__close');
+    const isInsideTooltip = e.target.closest('.service-tooltip');
+    const allTooltips = document.querySelectorAll('.service-tooltip');
+
+    // X 버튼 클릭이거나, 툴팁 외부 영역 클릭 시 모두 닫기
+    if (closeBtn || (!btn && !isInsideTooltip)) {
+      allTooltips.forEach(t => t.hidden = true);
+      return;
     }
 
-    const $activeTab = $tabs.eq(index);
-    const panelId = $activeTab.attr('aria-controls');
+    // 툴팁 버튼 클릭 시
+    if (btn) {
+      e.stopPropagation();
+      const myTooltip = btn.closest('.service-tooltip__wrap').querySelector('.service-tooltip');
+      const isCurrentlyOpen = myTooltip && !myTooltip.hidden;
 
-    $tabs.removeClass('is-active').attr({ 'aria-selected': 'false', tabindex: '-1' });
-    $activeTab.addClass('is-active').attr({ 'aria-selected': 'true', tabindex: '0' });
-    $activeTab.closest('.service-tabs').children('.service-tabs__panel').prop('hidden', true);
-    $('#' + panelId).prop('hidden', false);
+      allTooltips.forEach(t => t.hidden = true); 
+      if (!isCurrentlyOpen && myTooltip) myTooltip.hidden = false; 
+    }
   });
 
-  $servicePage.find('[data-service-tabs] [role="tab"]').attr('tabindex', '-1').filter('[aria-selected="true"]').attr('tabindex', '0');
+
+  /* =======================================================
+     4. FAQ 카테고리 필터
+  ======================================================== */
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-service-faq-filter]');
+    if (!btn) return;
+
+    const selectedCategory = btn.getAttribute('data-service-faq-filter');
+    const filterButtons = document.querySelectorAll('[data-service-faq-filter]');
+    const faqItems = document.querySelectorAll('[data-service-faq-category]');
+
+    filterButtons.forEach(b => {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('is-active');
+    btn.setAttribute('aria-pressed', 'true');
+
+    faqItems.forEach(item => {
+      const itemCategory = item.getAttribute('data-service-faq-category');
+      item.hidden = !(selectedCategory === 'all' || itemCategory === selectedCategory);
+    });
+  });
+
 });

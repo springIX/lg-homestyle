@@ -20,7 +20,7 @@
   position: relative;
 }
 #home-app-subscribe .layout-inner.ty-s {
-  max-width: 980px;
+  max-width: 940px;
 }
 #home-app-subscribe .layout-inner.ty-m {
   max-width: 1380px;
@@ -50,7 +50,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -101,6 +102,7 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
+  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -261,7 +263,7 @@
   margin-top: 2px;
 }
 #home-app-subscribe .info-txt-box .dep1 > li + li {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe .info-txt-box .dep1 > li + li {
@@ -275,7 +277,7 @@
   color: #666;
 }
 #home-app-subscribe .table-box {
-  margin: 4px 0;
+  margin: 8px 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -302,7 +304,7 @@
   }
 }
 #home-app-subscribe .table-box table th, #home-app-subscribe .table-box table td {
-  padding: 6px;
+  padding: 12px;
   border: 1px solid #d1d1d1;
   vertical-align: middle;
   line-height: 1.4;
@@ -318,7 +320,6 @@
 }
 #home-app-subscribe .table-box table thead th {
   background-color: #ebebeb;
-  font-weight: 500;
 }
 #home-app-subscribe .table-box table .tb-tit th {
   font-weight: 700;
@@ -348,6 +349,7 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
+  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -398,7 +400,8 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -413,10 +416,8 @@
   margin: 0 auto;
   width: auto;
 }
-@media (max-width: 767px) {
-  #home-app-subscribe section#kv .txt-box .kv-sub-tit {
-    width: 107px;
-  }
+#home-app-subscribe section#kv .txt-box .kv-sub-tit {
+  width: 107px;
 }
 #home-app-subscribe section#kv .txt-box .kv-tit {
   margin: 24px 0;
@@ -524,6 +525,7 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -796,11 +798,12 @@
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list {
-  padding-bottom: 56px;
+  overflow: visible;
+  margin-bottom: 56px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list {
-    padding-bottom: 26px;
+    margin-bottom: 26px;
   }
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-list .swiper-slide {
@@ -1201,9 +1204,8 @@
   width: 100%;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
+  padding-bottom: 28.3%;
   position: relative;
-  aspect-ratio: 16/9;
-  overflow: hidden;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
@@ -1216,7 +1218,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1375,912 +1378,1582 @@
   }
 }
 
-/* benefit_service.html : Figma 4217-7533 / 4217-5285 */
-#home-app-subscribe.service-page {
-  --service-bg:#f3f5f7;
-  --service-text:#111;
-  --service-muted:#444;
-  --service-line:#dee1e5;
-  background: #fff;
-  color: var(--service-text);
+/* 서비스 안내 페이지 */
+#home-app-subscribe {
+  /* 공통 */
 }
-
-.service-page__skip {
-  position: fixed;
-  left: 12px;
-  top: -80px;
-  z-index: 10000;
-  padding: 12px 18px;
-  border-radius: 8px;
-  background: #111;
-  color: #fff;
-  text-decoration: none;
-}
-
-.service-page__skip:focus {
-  top: 12px;
-}
-
-.service-page__header {
-  position: relative;
-  z-index: 10;
-  background: #fff;
-}
-
-.service-page__inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.service-page__inner--narrow {
-  max-width: 820px;
-}
-
-.service-page__inner--table {
-  max-width: 980px;
-}
-
-.service-page__inner--wide {
-  max-width: 1240px;
-}
-
-.service-page__intro {
-  padding: 64px 0 72px;
-  text-align: center;
-}
-
-.service-page__title, .service-page__heading h2 {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: -1.2px;
-}
-
-.service-page__lead {
-  margin-top: 20px;
-  color: #444;
-  font-size: 18px;
-  line-height: 1.55;
-}
-
-.service-page__lead p + p {
-  margin-top: 2px;
-}
-
-.service-page__section {
-  padding: 72px 0 80px;
-  overflow: hidden;
-}
-
-.service-page__heading {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.service-page__heading p {
-  margin-top: 8px;
-  color: #444;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.service-page__section--compare {
-  padding-top: 40px;
-  background: #fff;
-}
-
-.service-page__section--benefits, .service-page__section--care, .service-page__section--cancel {
-  background: var(--service-bg);
-}
-
-.service-page__section--contract, .service-page__section--faq, .service-page__section--products, .service-page__section--guide, .service-page__section--contact {
-  background: #fff;
-}
-
-.service-compare {
-  overflow: hidden;
-  border: 2px solid #00a6a6;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.service-compare__table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  font-size: 15px;
-}
-
-.service-compare__label {
-  width: 150px;
-}
-
-.service-compare th, .service-compare td {
-  height: 56px;
-  padding: 12px 24px;
-  border-bottom: 1px solid #e4e7ea;
+#home-app-subscribe .notice {
+  margin-top: 32px;
   text-align: left;
+}
+#home-app-subscribe .notice .info-txt-box .tit {
+  margin-bottom: 4px;
+}
+#home-app-subscribe .notice .dsc-list-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#home-app-subscribe .notice .dsc-list-txt > li {
+  margin-top: 0;
+}
+#home-app-subscribe .notice .accordion-btn {
+  margin: 0 auto;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.48px;
+}
+#home-app-subscribe .service-page__caption {
+  margin-top: 16px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.42px;
+}
+#home-app-subscribe .service-page__caption::before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #666;
   vertical-align: middle;
 }
-
-.service-compare th + th, .service-compare td + td {
-  border-left: 1px solid #edf0f2;
-}
-
-.service-compare thead th {
-  background: #21373c;
-  color: #fff;
-  font-size: 17px;
-}
-
-.service-compare thead th:first-child {
-  color: transparent;
-}
-
-.service-compare tbody th {
-  background: #f9fafb;
-  font-weight: 600;
-}
-
-.service-compare tbody td:nth-child(2), .service-compare tbody td:nth-child(2) strong {
-  color: #007c83;
-}
-
-.service-compare tbody tr:last-child > * {
-  border-bottom: 0;
-}
-
-.service-page__caption {
-  position: relative;
-  margin-top: 14px;
-  padding-left: 18px;
-  color: #666;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.service-page__caption:before {
-  content: "ⓘ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #777;
-}
-
-.service-notice {
-  margin-top: 24px;
-  text-align: center;
-}
-
-.service-notice > .accordion-btn {
-  display: inline-flex !important;
-  width: auto !important;
-  gap: 4px;
-  align-items: center;
-  font-weight: 600;
-}
-
-.service-notice > .accordion-btn:after {
-  content: "⌄";
-  font-size: 18px;
-  transition: transform 0.25s;
-}
-
-.service-notice.on > .accordion-btn:after {
-  transform: rotate(180deg);
-}
-
-.service-notice > .accordion-cont {
-  max-width: 780px;
-  margin: 14px auto 0;
-  padding: 16px;
-  border-radius: 12px;
-  background: #f9fafb;
-  color: #555;
-  text-align: left;
-}
-
-.service-notice__list {
-  list-style: disc !important;
-  padding-left: 18px !important;
-}
-
-.service-benefits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.service-benefits__item {
-  min-height: 290px;
-  padding: 28px 24px;
-  border-radius: 18px;
-  background: #fff;
+#home-app-subscribe .service-page__notes {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.service-benefits__image {
-  width: 112px;
-  height: 112px;
-  object-fit: contain;
-  margin-bottom: 18px;
-}
-
-.service-benefits__tag {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 6px;
-  background: #fff0f2;
-  color: #e52d48;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.service-benefits__tag--blue {
-  background: #edf6ff;
-  color: #2766ba;
-}
-
-.service-benefits__tag--yellow {
-  background: #fff8df;
-  color: #956a00;
-}
-
-.service-benefits__item h3 {
-  margin-top: 8px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.service-benefits__item p {
-  margin-top: 8px;
-  color: #555;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.service-page__notes {
-  max-width: 900px;
-  margin: 18px auto 0;
+  gap: 2px;
+  margin-top: 16px;
   color: #666;
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.42px;
 }
-
-.service-page__notes li {
+#home-app-subscribe .service-page__notes li {
   position: relative;
   padding-left: 10px;
 }
-
-.service-page__notes li:before {
-  content: "·";
-  position: absolute;
-  left: 1px;
+#home-app-subscribe .service-page__notes li::before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #666;
+  vertical-align: middle;
 }
-
-.service-page__notes li + li {
-  margin-top: 2px;
-}
-
-.service-tabs__list {
+#home-app-subscribe .service-care__notes {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 8px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.42px;
+  text-align: left;
+}
+#home-app-subscribe .service-care__notes li {
+  position: relative;
+}
+#home-app-subscribe .service-care__notes li::before {
+  content: "";
+  margin-right: 5px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #666;
+  vertical-align: middle;
+}
+#home-app-subscribe .service-tabs__list {
+  display: flex;
+  align-items: center;
   justify-content: center;
   gap: 6px;
-  margin-bottom: 20px;
-  overflow-x: auto;
+  padding: 8px 0 4px;
+  margin-bottom: 12px;
 }
-
-.service-tabs__button {
-  width: auto !important;
-  flex: 0 0 auto;
-  padding: 8px 14px !important;
-  border: 1px solid #ccd1d6 !important;
-  border-radius: 999px !important;
-  background: #fff !important;
-  font-size: 14px !important;
-  text-align: center !important;
-}
-
-.service-tabs__button.is-active {
-  border-color: #111 !important;
-  background: #111 !important;
-  color: #fff !important;
-}
-
-.service-tabs__panel {
-  padding: 30px;
-  border-radius: 18px;
-  background: #fff;
-}
-
-.service-tabs__panel > p {
-  padding: 40px;
-  text-align: center;
-  color: #555;
-}
-
-.service-care {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 12px;
-}
-
-.service-care__item {
-  min-height: 178px;
-  padding: 22px;
-  border: 1px solid #e3e6e9;
-  border-radius: 14px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
+#home-app-subscribe .service-tabs__list .service-tabs__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 36px;
+  padding: 2px 10px;
   overflow: hidden;
+  border: 1px solid #dee1e5;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #111;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  white-space: nowrap;
 }
-
-.service-care__item:first-child {
-  grid-row: span 2;
-  min-height: 368px;
-}
-
-.service-care__item > div {
-  z-index: 1;
-}
-
-.service-care__item > img {
-  width: 42%;
-  height: 132px;
-  align-self: flex-end;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.service-care__item:first-child > img {
-  height: 250px;
-}
-
-.service-care__item span {
-  display: inline-block;
-  color: #e1324a;
-  font-size: 12px;
+#home-app-subscribe .service-tabs__list .service-tabs__button.is-active, #home-app-subscribe .service-tabs__list .service-tabs__button[aria-selected=true] {
+  border-color: #111;
+  background-color: #111;
+  color: #fff;
   font-weight: 600;
 }
-
-.service-care__item h3 {
-  margin: 6px 0 10px;
-  font-size: 18px;
-  font-weight: 700;
+#home-app-subscribe .service-tabs__panel[hidden] {
+  display: none;
 }
-
-.service-care__item p {
-  margin-top: 5px;
-  color: #555;
-  font-size: 13px;
+#home-app-subscribe [data-service-notice][hidden] {
+  display: none;
 }
-
-.service-care__item p strong {
-  display: inline-block;
-  margin-right: 5px;
+#home-app-subscribe .service-page__heading {
+  margin-bottom: 24px;
+}
+#home-app-subscribe .service-page__heading h2 {
+  margin: 0;
   color: #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
 }
-
-.service-checklist {
-  display: grid;
-  gap: 12px;
+#home-app-subscribe .service-page__heading p {
+  margin: 8px auto 0;
+  color: #444;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.2px;
 }
-
-.service-checklist__item {
-  padding: 18px 20px;
-  border-radius: 16px;
-  background: #f3f5f7;
+#home-app-subscribe {
+  /* KV */
 }
-
-.service-checklist__button {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
+#home-app-subscribe .service-page__intro {
+  background-color: #fff;
+  text-align: center;
 }
-
-.service-checklist__button > span {
-  display: grid !important;
-  width: 22px;
-  height: 22px;
-  place-items: center;
-  border-radius: 50%;
-  background: #111;
+#home-app-subscribe .service-page__intro .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__intro .service-page__inner .service-page__title {
+  margin: 0;
+  color: #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+}
+#home-app-subscribe .service-page__intro .service-page__inner .service-page__lead {
+  margin-top: 12px;
+  color: #444;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+#home-app-subscribe {
+  /* 구독과 구매 무엇이 다를까요? */
+}
+#home-app-subscribe .service-page__section--compare {
+  background-color: #fff;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--compare .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--compare .service-page__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+#home-app-subscribe .service-page__section--compare .service-compare {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2.5px solid #06D9B6;
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.36), 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: #111;
+  text-align: left;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table .service-compare__label {
+  width: 150px;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table th,
+#home-app-subscribe .service-page__section--compare .service-compare__table td {
+  height: 56px;
+  vertical-align: middle;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table thead {
   color: #fff;
+  background-color: #212731;
 }
-
-.service-checklist__button h3 {
-  flex: 1;
+#home-app-subscribe .service-page__section--compare .service-compare__table thead th {
+  padding: 12px 24px;
+  border: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table thead th:first-child {
+  color: transparent;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table thead th img {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 6px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: top;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr {
+  border-bottom: 1px solid #dee1e5;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:last-child {
+  border-bottom: 0;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(3), #home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(4) {
+  background-color: #f3f5f7;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(3) td, #home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(4) td {
+  color: #067f9d;
+  font-weight: 600;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:last-child td {
+  color: #067f9d;
+  font-weight: 600;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody th {
+  padding: 16px;
+  border: 0;
+  background-color: #dee1e5;
+  color: #444;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.08px;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody td {
+  padding: 8px 24px;
+  border: 0;
+  color: #111;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.16px;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table tbody td strong {
+  color: #067f9d;
+  font-weight: 600;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table .background {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #DEE1E5;
+}
+#home-app-subscribe .service-page__section--compare .service-compare__table .border {
+  border-bottom: 1px solid transparent !important;
+  border-top: 1px solid transparent !important;
+}
+#home-app-subscribe {
+  /* 구독하면 뭐가 좋은가요? */
+}
+#home-app-subscribe .service-page__section--benefits {
+  background-color: #f3f5f7;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--benefits .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #eff0f2;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #fff 0%, #fff 100%);
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item > div {
+  width: 100%;
+  margin-top: 4px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item h3 {
+  margin-top: 6px;
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.27px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item p {
+  margin-top: 4px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.32px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
+  width: 88px;
+  height: 88px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
+  width: 64px;
+  height: 60px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
+  width: 74px;
+  height: 63px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__image {
+  margin-bottom: 10px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #fd312e;
+  box-shadow: 0px 0px 2px #fd312e;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: -0.11px;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__tag--blue {
+  box-shadow: 0px 0px 2px #067f9d;
+  color: #067f9d;
+}
+#home-app-subscribe .service-page__section--benefits .service-benefits__tag--yellow {
+  box-shadow: 0 0 2px #ab6226;
+  color: #ab6226;
+}
+#home-app-subscribe {
+  /* 대표 제품별 구독 서비스를 확인해보세요 */
+}
+#home-app-subscribe .service-page__section--care {
+  background-color: #f3f5f7;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--care .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--care .service-care {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+  width: 100%;
+  padding: 0px 20px;
+  border: 1px solid #eff0f2;
+  border-radius: 24px;
+  background-color: #fff;
+  text-align: left;
+}
+#home-app-subscribe .service-page__section--care .service-care--four .service-care__item:nth-child(1), #home-app-subscribe .service-page__section--care .service-care--four .service-care__item:nth-child(2) {
+  border-bottom: 1px solid #eff0f2;
+}
+#home-app-subscribe .service-page__section--care .service-care--two {
+  grid-template-columns: 1fr 1fr;
+}
+#home-app-subscribe .service-page__section--care .service-care--single {
+  grid-template-columns: 1fr;
+}
+#home-app-subscribe .service-page__section--care .service-care--single .service-care__item {
+  justify-content: center;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 0;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item:only-child {
+  padding: 50px 0;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(2), #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(4) {
+  border-top: 1px solid transparent;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item > div {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 4px;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item > div > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  box-shadow: 0 0 1.1px #fd312e;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #fd312e;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: -0.11px;
+  vertical-align: middle;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item h3 {
+  display: inline;
+  margin-left: 6px;
+  color: #111;
   font-size: 16px;
   font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: -0.24px;
+  vertical-align: middle;
 }
-
-.service-checklist__button:after, .service-cancel__fees .accordion-btn:after, .service-faq__question:after {
-  content: "⌄";
-  margin-left: auto;
-  font-size: 18px;
-  transition: transform 0.25s;
-}
-
-.service-checklist__item.on .service-checklist__button:after, .service-cancel__fees .accordion.on > .accordion-btn:after, .service-faq__item.on .service-faq__question:after {
-  transform: rotate(180deg);
-}
-
-.service-checklist__content {
-  margin: 12px 0 0 30px;
-  color: #555;
+#home-app-subscribe .service-page__section--care .service-care .service-care__item p {
+  margin-top: 4px;
+  color: #444;
   font-size: 14px;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.28px;
 }
-
-.service-promo {
-  height: 134px;
+#home-app-subscribe .service-page__section--care .service-care .service-care__item strong {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1px;
+  margin-right: 3px;
+  font-weight: 600;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item strong::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background: url(../images/ic_info.png) no-repeat center center/contain;
+  vertical-align: middle;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item img {
+  flex: 0 0 132px;
+  width: 132px;
+  height: 88px;
   overflow: hidden;
-  background: #313131 url(../images/service-benefit-banner.png) no-repeat calc(50% + 260px) 42%/520px auto;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.service-promo__link {
+#home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p {
+  display: flex;
+  gap: 3px;
+  padding-left: 12px;
+  padding-bottom: 3px;
+  margin-top: 0;
+  border-left: 1px solid #DEE1E5;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p:last-child {
+  padding-bottom: 0;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed h3 + p {
+  margin-top: 6px;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item--supply {
+  border-color: #067f9d;
+  color: #067f9d;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item--free {
+  border-color: #ab6226;
+  color: #ab6226;
+}
+#home-app-subscribe .service-page__section--care .service-care .service-care__item--no-media {
+  width: 100%;
+}
+#home-app-subscribe .service-page__section--care .service-care__tag--supply {
+  box-shadow: 0 0 1.1px #067f9d !important;
+  color: #067f9d !important;
+}
+#home-app-subscribe .service-page__section--care .service-care__tag--free {
+  box-shadow: 0 0 1.1px #ab6226 !important;
+  color: #ab6226 !important;
+}
+#home-app-subscribe .service-page__section--care .service-care__notice {
+  margin-top: 32px;
+  text-align: left;
+}
+#home-app-subscribe .service-page__section--care .service-care__notice--button {
+  width: 100%;
+  min-height: 60px;
+  margin: 0 auto;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.48px;
+}
+#home-app-subscribe .service-page__section--care .service-care__notice-content {
+  margin-top: 8px;
+}
+#home-app-subscribe .service-page__section--care {
+  /* 툴팁 */
+}
+#home-app-subscribe .service-page__section--care .service-tooltip__wrap {
+  position: relative;
+}
+#home-app-subscribe .service-page__section--care .service-tooltip__btn {
+  cursor: pointer;
+}
+#home-app-subscribe .service-page__section--care .service-tooltip {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  z-index: 10;
+  width: 280px;
+  padding: 20px;
+  margin-top: 8px;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #eff0f2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+#home-app-subscribe .service-page__section--care .service-tooltip[hidden] {
+  display: none !important;
+}
+#home-app-subscribe .service-page__section--care .service-tooltip__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 820px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  color: #fff !important;
-  text-decoration: none;
+  align-items: flex-start;
+  margin-bottom: 12px;
 }
-
-.service-promo__link strong, .service-promo__link small {
+#home-app-subscribe .service-page__section--care .service-tooltip__title {
   display: block;
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.2px;
 }
-
-.service-promo__link strong {
-  font-size: 21px;
-}
-
-.service-promo__link small {
-  margin-top: 6px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-}
-
-.service-cancel {
+#home-app-subscribe .service-page__section--care .service-tooltip__close {
   position: relative;
-  max-width: 760px;
-  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
-
-.service-cancel:before {
+#home-app-subscribe .service-page__section--care .service-tooltip__close::before, #home-app-subscribe .service-page__section--care .service-tooltip__close::after {
   content: "";
   position: absolute;
-  left: 21px;
-  top: 22px;
-  bottom: 40px;
-  width: 2px;
-  background: #dce1e4;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 1.5px;
+  background-color: #111;
 }
-
-.service-cancel__step {
+#home-app-subscribe .service-page__section--care .service-tooltip__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#home-app-subscribe .service-page__section--care .service-tooltip__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#home-app-subscribe .service-page__section--care .service-tooltip__desc {
+  display: block;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+#home-app-subscribe {
+  /* 계약 전에 꼭 확인해 주세요 */
+}
+#home-app-subscribe .service-page__section--contract {
+  background-color: #fff;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--contract .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist__item {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #f3f5f7;
+  text-align: left;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: #111;
+  text-align: left;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist__header > span[aria-hidden=true] {
+  display: inline-flex;
+  flex: 0 0 25px;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist__title {
+  flex: 1 1 auto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.27px;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist__content {
+  padding-left: 34px;
+  color: #444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.32px;
+}
+#home-app-subscribe .service-page__section--contract .service-checklist__content p {
+  margin-top: 5px;
+}
+#home-app-subscribe {
+  /* 해지와 만료, 이렇게 진행돼요 */
+}
+#home-app-subscribe .service-page__section--cancel {
+  background-color: #f9fafb;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--cancel .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel {
   position: relative;
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 780px;
+  padding-top: 8px;
+  margin: 0 auto;
+  text-align: left;
 }
-
-.service-cancel__step + .service-cancel__step {
-  margin-top: 30px;
+#home-app-subscribe .service-page__section--cancel .service-cancel::before {
+  position: absolute;
+  top: 32px;
+  bottom: 32px;
+  left: 23px;
+  width: 2px;
+  background-color: #EFF0F2;
+  content: "";
 }
-
-.service-cancel__step > img {
+#home-app-subscribe .service-page__section--cancel .service-cancel__step {
+  position: relative;
   z-index: 1;
-  width: 44px;
-  height: 44px;
-  padding: 8px;
-  border-radius: 14px;
-  background: #fff;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  align-items: start;
 }
-
-.service-cancel__step h3 {
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  padding: 6px;
+  border-radius: 16px;
+  background-color: #F3F5F7;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > div {
+  min-width: 0;
+  padding-top: 4px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > h3,
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
+  margin-left: 16px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > h3 {
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.27px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
+  margin-top: 2px;
+  color: #444;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p a {
+  color: inherit;
+  text-decoration: none;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 16px;
+  color: #111;
   font-size: 18px;
   font-weight: 700;
 }
-
-.service-cancel__step > div > p {
-  margin-top: 4px;
-  color: #555;
-  font-size: 14px;
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
 }
-
-.service-cancel__fees {
-  display: grid;
-  gap: 8px;
-  margin-top: 14px;
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__desc {
+  margin: 4px 0 0 16px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
 }
-
-.service-cancel__fees article {
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__content {
+  margin-top: 8px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__content[hidden] {
+  display: none;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list li {
+  position: relative;
+  padding-left: 10px;
+  color: #444;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.39px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list li::before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #666;
+  vertical-align: middle;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list li:first-child {
+  margin-top: 0;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list .text-red {
+  color: #FD312E;
+  font-weight: 600;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel__step[data-service-accordion].is-open .service-accordion__title::after,
+#home-app-subscribe .service-page__section--cancel .service-cancel__step [data-service-accordion].is-open .service-accordion__title::after {
+  transform: rotate(270deg);
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 12px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion {
   overflow: hidden;
   border: 1px solid #ccd1d6;
   border-radius: 12px;
-  background: #fff;
+  background-color: #fff;
 }
-
-.service-cancel__fees .accordion-btn {
-  display: flex !important;
-  align-items: center !important;
-  padding: 14px 16px !important;
-  font-weight: 600;
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion.is-open .service-accordion__button::after {
+  transform: rotate(270deg);
 }
-
-.service-cancel__fees .accordion-cont {
-  padding: 0 16px 14px;
-  color: #555;
-  line-height: 1.5;
-}
-
-.service-faq {
-  border-top: 1px solid #bbb;
-}
-
-.service-faq__item {
-  border-bottom: 1px solid #ddd;
-}
-
-.service-faq__question {
-  display: flex !important;
-  align-items: center !important;
-  padding: 20px 4px !important;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.service-faq__question:before {
-  content: "Q";
-  margin-right: 12px;
-  font-weight: 700;
-}
-
-.service-faq__answer {
-  padding: 0 38px 20px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.service-products {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  overflow-x: auto;
-}
-
-.service-products li {
-  min-width: 180px;
-}
-
-.service-products a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.service-products img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  background: #f7f7f7;
-  border-radius: 12px;
-}
-
-.service-products strong, .service-products span {
-  display: block;
-}
-
-.service-products strong {
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.service-products span {
-  margin-top: 6px;
-  color: #e02b45;
-  font-size: 12px;
-}
-
-.service-guides {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.service-guides a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.service-guides img {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.service-guides strong, .service-guides small {
-  display: block;
-}
-
-.service-guides strong {
-  margin-top: 12px;
-  font-size: 16px;
-}
-
-.service-guides small {
-  margin-top: 3px;
-  color: #555;
-  font-size: 13px;
-}
-
-.service-page__section--contact {
-  padding-top: 50px;
-}
-
-.service-contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.service-contact > a {
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  color: inherit;
-  text-decoration: none;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 20px;
+  border: 0;
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+  cursor: pointer;
 }
-
-.service-contact > a > img {
-  width: 32px;
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button::after {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  content: "";
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
 }
-
-.service-contact strong, .service-contact small {
-  display: block;
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content {
+  padding: 0 20px 14px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
 }
-
-.service-contact strong {
-  font-size: 15px;
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content[hidden] {
+  display: none;
 }
-
-.service-contact small {
-  margin-top: 4px;
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.156px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list {
+  margin: 6px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.39px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list li::before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #444;
+  vertical-align: middle;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #DEE1E5;
+  color: #444;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: -0.39px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee {
+  width: 100%;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee.is-open .service-cancel__return-fee-button::after {
+  transform: rotate(270deg);
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 28px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  border: 0;
+  background-color: transparent;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.42px;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button::after {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  content: "";
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content {
+  width: 100%;
+  overflow: hidden;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content[hidden] {
+  display: none;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table {
+  width: 100%;
+  min-width: 560px;
+  table-layout: fixed;
+  border-collapse: collapse;
   color: #666;
   font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.36px;
+  text-align: center;
 }
-
-.service-contact__ai {
-  display: flex;
-  justify-content: center;
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
+  height: 32px;
+  padding: 3px 12px;
+  border: 1px solid #ebebeb;
+  vertical-align: middle;
+  color: #666;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.36px;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #ebebeb;
+  font-weight: 600;
+}
+#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
+  background-color: #fff;
+}
+#home-app-subscribe {
+  /* 가전 구독 자주 묻는 질문 */
+}
+#home-app-subscribe .service-page__section--faq {
+  background-color: #fff;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--faq .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--faq .service-tabs {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--faq .service-tabs .service-tabs__list {
+  gap: 8px;
+  margin-bottom: 32px;
+  padding: 0;
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion {
+  width: 100%;
+  border-top: 1px solid #000;
+  text-align: left;
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__heading {
+  margin: 0;
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__button {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) 40px;
   align-items: center;
-  gap: 6px;
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #fff0f1, #f2e9ff);
-  color: #b21778;
-  text-decoration: none;
+  width: 100%;
+  min-height: 65px;
+  padding: 20px 22px;
+  border: 0;
+  background-color: #fff;
+  color: #111;
+  cursor: pointer;
+  text-align: left;
 }
-
-.service-contact__ai img {
+#home-app-subscribe .service-page__section--faq .faq-accordion__button:focus-visible {
+  outline: 2px solid #111 !important;
+  outline-offset: -2px;
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__button[aria-expanded=true] .faq-accordion__icon {
+  transform: rotate(180deg);
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__q-mark {
+  width: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__title {
+  min-width: 0;
+  margin-left: 8px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#home-app-subscribe .service-page__section--faq .faq-accordion__icon {
+  position: relative;
+  justify-self: end;
   width: 24px;
   height: 24px;
-  object-fit: contain;
+  transition: transform 0.2s ease;
 }
-
-#home-app-subscribe .accordion-cont[hidden], #home-app-subscribe .service-tabs__panel[hidden] {
-  display: none !important;
+#home-app-subscribe .service-page__section--faq .faq-accordion__icon::before {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid #111;
+  border-bottom: 1.5px solid #111;
+  content: "";
+  transform: rotate(45deg);
 }
-
-#home-app-subscribe .accordion.on > .accordion-cont:not([hidden]) {
-  display: block;
+#home-app-subscribe .service-page__section--faq .faq-accordion__content {
+  background-color: #f9fafb;
+  color: #444;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
 }
-
-#home-app-subscribe a:focus-visible, #home-app-subscribe button:focus-visible {
-  outline: 3px solid #0b57d0 !important;
-  outline-offset: 3px !important;
+#home-app-subscribe .service-page__section--faq .faq-accordion__content[hidden] {
+  display: none;
 }
-
+#home-app-subscribe .service-page__section--faq .faq-accordion__inner {
+  padding: 20px 58px 20px 42px;
+}
 @media (max-width: 767px) {
-  .service-page__inner {
-    padding: 0 20px;
-  }
-  .service-page__intro {
-    padding: 40px 0 48px;
-  }
-  .service-page__title, .service-page__heading h2 {
-    font-size: 26px;
-    letter-spacing: -1px;
-  }
-  .service-page__lead {
-    margin-top: 14px;
-    font-size: 13px;
-  }
-  .service-page__section {
-    padding: 40px 0 48px;
-  }
-  .service-page__heading {
-    margin-bottom: 20px;
-  }
-  .service-page__heading p {
-    font-size: 13px;
-  }
-  .service-page__section--compare {
-    padding-top: 24px;
-  }
-  .service-compare {
-    margin: 0 -12px;
-    border-radius: 16px;
-  }
-  .service-compare__table {
-    font-size: 11px;
-  }
-  .service-compare__label {
-    width: 88px;
-  }
-  .service-compare th, .service-compare td {
-    height: 48px;
-    padding: 8px 7px;
-    text-align: center;
-  }
-  .service-compare thead th {
-    font-size: 12px;
-  }
-  .service-page__caption {
-    font-size: 11px;
-  }
-  .service-benefits {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .service-benefits__item {
-    min-height: 0;
-    padding: 16px;
-    flex-direction: row;
-    text-align: left;
-    gap: 14px;
-  }
-  .service-benefits__image {
-    width: 64px;
-    height: 64px;
-    margin: 0;
-  }
-  .service-benefits__item h3 {
-    margin-top: 5px;
-    font-size: 16px;
-  }
-  .service-benefits__item p {
-    margin-top: 3px;
-    font-size: 12px;
-  }
-  .service-page__notes {
-    font-size: 10px;
-  }
-  .service-tabs__list {
+  #home-app-subscribe .service-page__section--faq .service-tabs .service-tabs__list {
     justify-content: flex-start;
     margin-right: -20px;
+    margin-left: -20px;
+    padding: 0 20px;
+    overflow-x: auto;
   }
-  .service-tabs__button {
-    padding: 7px 11px !important;
-    font-size: 11px !important;
+  #home-app-subscribe .service-page__section--faq .faq-accordion__button {
+    align-items: start;
+    padding-right: 16px;
+    padding-left: 16px;
   }
-  .service-tabs__panel {
-    padding: 16px;
+  #home-app-subscribe .service-page__section--faq .faq-accordion__title {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
   }
-  .service-care {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .service-care__item, .service-care__item:first-child {
-    grid-row: auto;
-    min-height: 136px;
-    padding: 16px;
-  }
-  .service-care__item > img, .service-care__item:first-child > img {
-    width: 40%;
-    height: 104px;
-  }
-  .service-care__item h3 {
-    font-size: 15px;
-  }
-  .service-care__item p {
-    font-size: 11px;
-  }
-  .service-checklist__item {
-    padding: 16px;
-  }
-  .service-checklist__button h3 {
-    font-size: 14px;
-  }
-  .service-checklist__content {
-    font-size: 12px;
-  }
-  .service-promo {
-    height: 134px;
-    background-position: calc(50% + 150px) 40%;
-    background-size: 340px auto;
-  }
-  .service-promo__link strong {
-    font-size: 16px;
-  }
-  .service-promo__link small {
-    font-size: 11px;
-  }
-  .service-cancel:before {
-    left: 17px;
-  }
-  .service-cancel__step {
-    grid-template-columns: 36px 1fr;
-    gap: 12px;
-  }
-  .service-cancel__step > img {
-    width: 36px;
-    height: 36px;
-    padding: 6px;
-    border-radius: 12px;
-  }
-  .service-cancel__step h3 {
-    font-size: 16px;
-  }
-  .service-cancel__step > div > p {
-    font-size: 12px;
-  }
-  .service-cancel__fees .accordion-btn {
-    padding: 12px 14px !important;
-    font-size: 12px;
-  }
-  .service-cancel__fees .accordion-cont {
-    padding: 0 14px 12px;
-    font-size: 11px;
-  }
-  .service-faq__question {
-    padding: 16px 2px !important;
-    font-size: 13px;
-  }
-  .service-faq__answer {
-    padding: 0 28px 16px;
-    font-size: 12px;
-  }
-  .service-products {
-    margin-right: -20px;
-    grid-template-columns: repeat(5, 148px);
-    gap: 8px;
-  }
-  .service-products li {
-    min-width: 148px;
-  }
-  .service-guides {
-    gap: 10px;
-  }
-  .service-guides img {
-    height: 120px;
-  }
-  .service-guides strong {
-    font-size: 13px;
-  }
-  .service-guides small {
-    font-size: 11px;
-  }
-  .service-contact {
-    grid-template-columns: 1fr;
-  }
-  .service-page__section--contact {
-    padding-bottom: 88px;
+  #home-app-subscribe .service-page__section--faq .faq-accordion__inner {
+    padding-right: 48px;
+    padding-left: 36px;
   }
 }
+#home-app-subscribe {
+  /* 구독으로 시작하기 좋은 제품 */
+}
+#home-app-subscribe .service-page__section--products {
+  background-color: #fff;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--products .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 1380px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--products .service-products {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 260px));
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: service-product-ranking;
+  margin-top: 32px;
+}
+#home-app-subscribe .service-page__section--products .service-products__item {
+  position: relative;
+  min-width: 0;
+  counter-increment: service-product-ranking;
+}
+#home-app-subscribe .service-page__section--products .service-products__item::before {
+  content: counter(service-product-ranking);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e1e5eb;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+}
+#home-app-subscribe .service-page__section--products .service-products__item:nth-child(-n+3)::before {
+  border-color: #111;
+  background-color: #111;
+  color: #fff;
+}
+#home-app-subscribe .service-page__section--products .service-products__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 8px;
+  color: #111;
+  text-align: left;
+  text-decoration: none;
+}
+#home-app-subscribe .service-page__section--products .service-products__link:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
+}
+#home-app-subscribe .service-page__section--products .service-products__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+#home-app-subscribe .service-page__section--products .service-products__image {
+  width: 240px;
+  height: 240px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home-app-subscribe .service-page__section--products .service-products__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  padding-right: 16px;
+}
+#home-app-subscribe .service-page__section--products .service-products__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: unset;
+  display: -webkit-box;
+  /* autoprefixer: off */
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: 2;
+  width: 100%;
+  min-height: 44px;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+}
+#home-app-subscribe .service-page__section--products .service-products__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 22px;
+}
+#home-app-subscribe .service-page__section--products .service-products__model {
+  margin-right: 2px;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+#home-app-subscribe .service-page__section--products .service-products__spec {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 2px 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+  margin-right: 2px;
+}
+#home-app-subscribe .service-page__section--products .service-products__prices {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+#home-app-subscribe .service-page__section--products .service-products__price, #home-app-subscribe .service-page__section--products .service-products__benefit-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  white-space: nowrap;
+}
+#home-app-subscribe .service-page__section--products .service-products__price strong {
+  color: #111;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.4px;
+}
+#home-app-subscribe .service-page__section--products .service-products__price small {
+  margin-left: 1px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+}
+#home-app-subscribe .service-page__section--products .service-products__discount {
+  color: #fd312e;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.4px;
+}
+#home-app-subscribe .service-page__section--products .service-products__benefit-price {
+  color: #fd312e;
+}
+#home-app-subscribe .service-page__section--products .service-products__benefit-price > span {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+}
+#home-app-subscribe .service-page__section--products .service-products__benefit-price strong {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+}
+#home-app-subscribe .service-page__section--products .service-products__benefit-price small {
+  margin-left: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+#home-app-subscribe .service-page__section--products .service-products__note {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: -4px 0 0;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+#home-app-subscribe .service-page__section--products .service-products__note::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../images/ic_info.png) no-repeat center center/contain;
+}
+#home-app-subscribe {
+  /* 더 알아보면 좋은 이야기 */
+}
+#home-app-subscribe .service-page__section--guide {
+  background-color: #fff;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--guide .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--guide .service-guide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+#home-app-subscribe .service-page__section--guide .service-guide__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+#home-app-subscribe .service-page__section--guide .service-guide__item:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
+}
+#home-app-subscribe .service-page__section--guide .service-guide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 380/240;
+  overflow: hidden;
+  border-radius: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#home-app-subscribe .service-page__section--guide .service-guide:first-child img {
+  -o-object-position: center 44%;
+     object-position: center 44%;
+}
+#home-app-subscribe .service-page__section--guide .service-guide__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 0 6px;
+}
+#home-app-subscribe .service-page__section--guide .service-guide strong {
+  width: 100%;
+  color: #444;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+#home-app-subscribe .service-page__section--guide .service-guide small {
+  width: 100%;
+  color: #111;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--guide .service-page__heading {
+    margin-bottom: 20px;
+  }
+  #home-app-subscribe .service-page__section--guide .service-page__heading h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  #home-app-subscribe .service-page__section--guide .service-guides {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  #home-app-subscribe .service-page__section--guide .service-guides a {
+    gap: 12px;
+  }
+  #home-app-subscribe .service-page__section--guide .service-guides img {
+    border-radius: 16px;
+  }
+  #home-app-subscribe .service-page__section--guide .service-guides strong {
+    font-size: 15px;
+  }
+  #home-app-subscribe .service-page__section--guide .service-guides small {
+    font-size: 19px;
+  }
+}
+#home-app-subscribe {
+  /* 혼자 고르기 어려우신가요? */
+}
+#home-app-subscribe .service-page__section--contact {
+  background-color: #fff;
+  text-align: center;
+}
+#home-app-subscribe .service-page__section--contact .service-page__inner {
+  width: calc(100% - 40px);
+  max-width: 940px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--contact .service-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  min-width: 40px;
+  min-height: 136px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  background-color: #fff;
+  color: #111;
+  text-align: left;
+  text-decoration: none;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__item:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__item > img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__text strong {
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__text small {
+  color: #8f8f8f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  max-width: 780px;
+  height: 64px;
+  margin: 24px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(253, 49, 46, 0.08) 0%, rgba(249, 20, 235, 0.08) 50.481%, rgba(180, 50, 245, 0.08) 75%, rgba(130, 39, 255, 0.08) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 100%);
+  color: #444;
+  text-decoration: none;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai > img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai > span {
+  background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+#home-app-subscribe .service-page__section--contact .service-contact__ai::after {
+  content: "";
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_arr.png) no-repeat center center/contain;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__section--contact .service-page__heading {
+    margin-bottom: 20px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-page__heading h2,
+  #home-app-subscribe .service-page__section--contact .service-page__heading p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact > a {
+    min-height: 116px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact > a strong {
+    font-size: 18px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact > a small {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact__ai {
+    height: 56px;
+    margin-top: 16px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact__ai > img {
+    width: 28px;
+    height: 28px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact__ai > span {
+    font-size: 14px;
+  }
+  #home-app-subscribe .service-page__section--contact .service-contact__ai::after {
+    flex-basis: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=main.css.map */
