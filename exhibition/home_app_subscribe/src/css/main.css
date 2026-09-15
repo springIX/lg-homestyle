@@ -1425,35 +1425,27 @@
     left: 90px;
   }
 }
-
-/* 서비스 안내 페이지 */
 #home-app-subscribe {
+  /* 서비스 안내 페이지 시작 */
+}
+#home-app-subscribe.care-service {
   /* 공통 */
 }
-#home-app-subscribe .notice {
-  margin-top: 32px;
+#home-app-subscribe.care-service .notice {
   text-align: left;
 }
-#home-app-subscribe .notice .info-txt-box .tit {
+#home-app-subscribe.care-service .notice .info-txt-box .tit {
   margin-bottom: 4px;
 }
-#home-app-subscribe .notice .dsc-list-txt {
+#home-app-subscribe.care-service .notice .dsc-list-txt {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-#home-app-subscribe .notice .dsc-list-txt > li {
+#home-app-subscribe.care-service .notice .dsc-list-txt > li {
   margin-top: 0;
 }
-#home-app-subscribe .notice .accordion-btn {
-  margin: 0 auto;
-  color: #111;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: -0.48px;
-}
-#home-app-subscribe .service-page__caption {
+#home-app-subscribe.care-service .service-page__caption {
   margin-top: 16px;
   color: #666;
   font-size: 14px;
@@ -1461,7 +1453,7 @@
   line-height: 1.4;
   letter-spacing: -0.42px;
 }
-#home-app-subscribe .service-page__caption::before {
+#home-app-subscribe.care-service .service-page__caption::before {
   content: "";
   margin-right: 4px;
   display: inline-block;
@@ -1472,12 +1464,12 @@
   vertical-align: middle;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__caption {
+  #home-app-subscribe.care-service .service-page__caption {
     margin-top: 10px;
     text-align: left;
   }
 }
-#home-app-subscribe .service-page__notes {
+#home-app-subscribe.care-service .service-page__notes {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1489,11 +1481,11 @@
   line-height: 1.4;
   letter-spacing: -0.42px;
 }
-#home-app-subscribe .service-page__notes li {
+#home-app-subscribe.care-service .service-page__notes li {
   position: relative;
   padding-left: 10px;
 }
-#home-app-subscribe .service-page__notes li::before {
+#home-app-subscribe.care-service .service-page__notes li::before {
   content: "";
   margin-right: 4px;
   display: inline-block;
@@ -1504,11 +1496,11 @@
   vertical-align: middle;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__notes {
+  #home-app-subscribe.care-service .service-page__notes {
     display: none;
   }
 }
-#home-app-subscribe .service-care__notes {
+#home-app-subscribe.care-service .service-care__notes {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1521,10 +1513,10 @@
   letter-spacing: -0.42px;
   text-align: left;
 }
-#home-app-subscribe .service-care__notes li {
+#home-app-subscribe.care-service .service-care__notes li {
   position: relative;
 }
-#home-app-subscribe .service-care__notes li::before {
+#home-app-subscribe.care-service .service-care__notes li::before {
   content: "";
   margin-right: 5px;
   display: inline-block;
@@ -1534,17 +1526,22 @@
   background: #666;
   vertical-align: middle;
 }
-#home-app-subscribe .service-care__faq {
+#home-app-subscribe.care-service .service-care__notes--title::before {
+  margin-right: 0px !important;
+  width: 0px !important;
+  height: 0px !important;
+}
+#home-app-subscribe.care-service .service-care__faq {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-#home-app-subscribe .service-care__faq--bar::before {
+#home-app-subscribe.care-service .service-care__faq--bar::before {
   content: "-";
   display: inline-block;
   margin-right: 5px;
 }
-#home-app-subscribe .service-care__faq--dot::before {
+#home-app-subscribe.care-service .service-care__faq--dot::before {
   content: "";
   display: inline-block;
   margin-right: 5px;
@@ -1553,12 +1550,11 @@
   border-radius: 50%;
   background: #666;
   vertical-align: middle;
-  margin-left: 10px;
 }
-#home-app-subscribe .service-care__faq--dot:first-child {
+#home-app-subscribe.care-service .service-care__faq--dot:first-child {
   margin-top: 3px;
 }
-#home-app-subscribe .service-care__faq > li {
+#home-app-subscribe.care-service .service-care__faq > li {
   color: #444;
   font-size: 14px;
   font-style: normal;
@@ -1566,29 +1562,27 @@
   line-height: 140%;
   letter-spacing: -0.42px;
 }
-#home-app-subscribe .service-care__faq > li.service-care__faq--dot::before {
+#home-app-subscribe.care-service .service-care__faq > li.service-care__faq--dot::before {
   margin-left: 0 !important;
 }
-#home-app-subscribe .service-care__faq > li > ul {
+#home-app-subscribe.care-service .service-care__faq > li > ul {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+  margin-left: 10px;
 }
-#home-app-subscribe .service-care__faq > li > ul > li.service-care__faq--bar {
-  margin-top: 3px !important;
-}
-#home-app-subscribe .service-care__faq > li > ul > li.service-care__faq--bar::before {
-  margin-left: 10px !important;
+#home-app-subscribe.care-service .service-care__faq > li > ul > li:nth-child(1) {
+  margin-top: 4px !important;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-care__faq > li {
+  #home-app-subscribe.care-service .service-care__faq > li {
     font-size: 13px;
     font-weight: 400;
     line-height: 140%;
     letter-spacing: -0.39px;
   }
 }
-#home-app-subscribe .service-care__faq .service-care__faq--link {
+#home-app-subscribe.care-service .service-care__faq .service-care__faq--link {
   display: inline-block;
   text-decoration: underline;
   color: #111;
@@ -1598,18 +1592,18 @@
   line-height: 140%;
   letter-spacing: -0.42px;
 }
-#home-app-subscribe .service-care__faq .red {
+#home-app-subscribe.care-service .service-care__faq .red {
   color: #FD312E;
   font-weight: 400;
 }
-#home-app-subscribe .faq-pagination {
+#home-app-subscribe.care-service .faq-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
   margin-top: 24px;
 }
-#home-app-subscribe .faq-pagination__btn {
+#home-app-subscribe.care-service .faq-pagination__btn {
   color: #777;
   text-align: center;
   font-size: 13px;
@@ -1619,61 +1613,86 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 36px;
+  width: 48px;
+  height: 32px;
   background-color: #fff;
   border: 1px solid #DEE1E5;
   border-radius: 6px;
   cursor: pointer;
   transition: border-color 0.2s ease-in-out;
 }
-#home-app-subscribe .faq-pagination__btn img {
+#home-app-subscribe.care-service .faq-pagination__btn img {
   width: 16px;
   height: 16px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#home-app-subscribe .faq-pagination__btn:hover:not(:disabled) {
+#home-app-subscribe.care-service .faq-pagination__btn:hover:not(:disabled) {
   border-color: #222;
 }
-#home-app-subscribe .faq-pagination__btn:disabled {
+#home-app-subscribe.care-service .faq-pagination__btn:disabled {
   cursor: default;
   opacity: 0.4;
 }
-#home-app-subscribe .faq-pagination__indicator {
+#home-app-subscribe.care-service .faq-pagination__indicator {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 16px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .faq-pagination__indicator {
+  #home-app-subscribe.care-service .faq-pagination__indicator {
     font-size: 13px;
   }
 }
-#home-app-subscribe .faq-pagination__current {
+#home-app-subscribe.care-service .faq-pagination__current {
   font-weight: 700;
   color: #111;
 }
-#home-app-subscribe .faq-pagination__separator {
+#home-app-subscribe.care-service .faq-pagination__separator {
   font-weight: 400;
   color: #d9d9d9;
 }
-#home-app-subscribe .faq-pagination__total {
+#home-app-subscribe.care-service .faq-pagination__total {
   font-weight: 400;
   color: #888;
 }
-#home-app-subscribe .service-tabs {
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .faq-pagination {
+    margin-top: 20px;
+  }
+}
+#home-app-subscribe.care-service .service-care-tabs,
+#home-app-subscribe.care-service .service-faq-tabs,
+#home-app-subscribe.care-service .service-products-tabs {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+#home-app-subscribe.care-service .service-care-tabs .service-tabs__list,
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list,
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__list {
+  gap: 8px;
+  margin-bottom: 32px;
+  padding: 0;
+}
+#home-app-subscribe.care-service .service-care-tabs,
+#home-app-subscribe.care-service .service-faq-tabs,
+#home-app-subscribe.care-service .service-products-tabs {
   width: 100%;
   max-width: 780px;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-tabs .service-tabs__list--wrap {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list--wrap,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list--wrap,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list--wrap {
     position: relative;
     width: 100%;
   }
-  #home-app-subscribe .service-tabs .service-tabs__list--wrap::after {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list--wrap::after,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list--wrap::after,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list--wrap::after {
     content: "";
     z-index: 10;
     position: absolute;
@@ -1684,8 +1703,15 @@
     background: linear-gradient(to right, rgba(244, 244, 244, 0) 0%, rgb(244, 244, 244) 100%);
     pointer-events: none;
   }
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list--wrap.theme-white::after,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list--wrap.theme-white::after,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list--wrap.theme-white::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%) !important;
+  }
 }
-#home-app-subscribe .service-tabs .service-tabs__list {
+#home-app-subscribe.care-service .service-care-tabs .service-tabs__list,
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list,
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1693,7 +1719,9 @@
   padding: 8px 0 4px;
   margin-bottom: 17px;
 }
-#home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button {
+#home-app-subscribe.care-service .service-care-tabs .service-tabs__list .service-tabs__button,
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list .service-tabs__button,
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__list .service-tabs__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1710,25 +1738,39 @@
   line-height: 18px;
   white-space: nowrap;
 }
-#home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button.is-active, #home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button[aria-selected=true] {
+#home-app-subscribe.care-service .service-care-tabs .service-tabs__list .service-tabs__button.is-active, #home-app-subscribe.care-service .service-care-tabs .service-tabs__list .service-tabs__button[aria-selected=true],
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list .service-tabs__button.is-active,
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list .service-tabs__button[aria-selected=true],
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__list .service-tabs__button.is-active,
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__list .service-tabs__button[aria-selected=true] {
   border-color: #111;
   background-color: #111;
   color: #fff;
   font-weight: 600;
 }
-#home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button:last-child {
-  margin-right: 50px;
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list .service-tabs__button:last-child,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list .service-tabs__button:last-child,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list .service-tabs__button:last-child {
+    margin-right: 50px;
+  }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-tabs .service-tabs__list .service-tabs__button {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list .service-tabs__button,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list .service-tabs__button,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list .service-tabs__button {
     flex: 0 0 auto;
   }
 }
-#home-app-subscribe .service-tabs .service-tabs__list--radius .service-tabs__button {
+#home-app-subscribe.care-service .service-care-tabs .service-tabs__list--radius .service-tabs__button,
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list--radius .service-tabs__button,
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__list--radius .service-tabs__button {
   border-radius: 13px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-tabs .service-tabs__list {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list {
     margin-bottom: 8px;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -1738,24 +1780,32 @@
     scroll-behavior: smooth;
     gap: 4px;
   }
-  #home-app-subscribe .service-tabs .service-tabs__list::-webkit-scrollbar {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list::-webkit-scrollbar,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list::-webkit-scrollbar,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list::-webkit-scrollbar {
     display: none;
   }
-  #home-app-subscribe .service-tabs .service-tabs__list {
+  #home-app-subscribe.care-service .service-care-tabs .service-tabs__list,
+  #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list,
+  #home-app-subscribe.care-service .service-products-tabs .service-tabs__list {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
 }
-#home-app-subscribe .service-tabs .service-tabs__panel[hidden] {
+#home-app-subscribe.care-service .service-care-tabs .service-tabs__panel[hidden],
+#home-app-subscribe.care-service .service-faq-tabs .service-tabs__panel[hidden],
+#home-app-subscribe.care-service .service-products-tabs .service-tabs__panel[hidden] {
   display: none;
 }
-#home-app-subscribe .service-tabs [data-service-notice][hidden] {
+#home-app-subscribe.care-service .service-care-tabs [data-service-notice][hidden],
+#home-app-subscribe.care-service .service-faq-tabs [data-service-notice][hidden],
+#home-app-subscribe.care-service .service-products-tabs [data-service-notice][hidden] {
   display: none;
 }
-#home-app-subscribe .service-page__heading {
+#home-app-subscribe.care-service .service-page__heading {
   margin-bottom: 24px;
 }
-#home-app-subscribe .service-page__heading h2 {
+#home-app-subscribe.care-service .service-page__heading h2 {
   margin: 0;
   color: #111;
   font-size: 36px;
@@ -1764,14 +1814,23 @@
   text-align: center;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__heading h2 {
+  #home-app-subscribe.care-service .service-page__heading h2 {
     font-size: 26px;
     font-weight: 700;
     letter-spacing: -1.04px;
     line-height: 140%;
   }
 }
-#home-app-subscribe .service-page__heading p {
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__heading h2.contact-title__small {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+  }
+}
+#home-app-subscribe.care-service .service-page__heading p {
   margin: 8px auto 0;
   color: #444;
   font-size: 20px;
@@ -1780,7 +1839,7 @@
   letter-spacing: -0.2px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__heading p {
+  #home-app-subscribe.care-service .service-page__heading p {
     font-size: 15px;
     font-weight: 400;
     letter-spacing: -0.2px;
@@ -1788,23 +1847,23 @@
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__heading {
+  #home-app-subscribe.care-service .service-page__heading {
     margin-bottom: 20px;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* KV */
 }
-#home-app-subscribe .service-page__intro {
+#home-app-subscribe.care-service .service-page__intro {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__intro .service-page__inner {
+#home-app-subscribe.care-service .service-page__intro .service-page__inner {
   width: calc(100% - 40px);
   max-width: 1200px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__intro .service-page__inner .service-page__title {
+#home-app-subscribe.care-service .service-page__intro .service-page__inner .service-page__title {
   margin: 0;
   color: #111;
   font-size: 36px;
@@ -1812,14 +1871,14 @@
   line-height: 48px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__intro .service-page__inner .service-page__title {
+  #home-app-subscribe.care-service .service-page__intro .service-page__inner .service-page__title {
     font-size: 26px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: -1.04px;
   }
 }
-#home-app-subscribe .service-page__intro .service-page__inner .service-page__lead {
+#home-app-subscribe.care-service .service-page__intro .service-page__inner .service-page__lead {
   margin-top: 12px;
   color: #444;
   font-size: 20px;
@@ -1828,25 +1887,25 @@
   letter-spacing: -0.2px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__intro .service-page__inner .service-page__lead {
+  #home-app-subscribe.care-service .service-page__intro .service-page__inner .service-page__lead {
     font-size: 15px;
     letter-spacing: -0.2px;
     line-height: 20px;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 구독과 구매 무엇이 다를까요? */
 }
-#home-app-subscribe .service-page__section--compare {
+#home-app-subscribe.care-service .service-page__section--compare {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--compare .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--compare .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--compare .service-page__sr-only {
+#home-app-subscribe.care-service .service-page__section--compare .service-page__sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1855,7 +1914,7 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
-#home-app-subscribe .service-page__section--compare .service-compare {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare {
   width: 100%;
   max-width: 780px;
   margin: 0 auto;
@@ -1865,31 +1924,31 @@
   background-color: #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.36), 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
   color: #111;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table .service-compare__label {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table .service-compare__label {
   width: 150px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--compare .service-compare__table .service-compare__label {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table .service-compare__label {
     width: auto;
   }
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table th,
-#home-app-subscribe .service-page__section--compare .service-compare__table td {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table th,
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table td {
   height: 56px;
   vertical-align: middle;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table thead {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead {
   color: #fff;
   background-color: #212731;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table thead th {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th {
   padding: 12px 24px;
   border: 0;
   font-size: 20px;
@@ -1897,10 +1956,10 @@
   line-height: 28px;
   letter-spacing: -0.2px;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table thead th:first-child {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th:first-child {
   color: transparent;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table thead th img {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th img {
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -1910,7 +1969,7 @@
   vertical-align: top;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--compare .service-compare__table thead th img {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th img {
     width: 18px;
     height: 18px;
     vertical-align: middle;
@@ -1919,30 +1978,30 @@
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--compare .service-compare__table thead th {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th {
     font-size: 14px;
     letter-spacing: -0.14px;
     padding: 12px 8px;
   }
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr {
   border-bottom: 1px solid #dee1e5;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:last-child {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr:last-child {
   border-bottom: 0;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(3), #home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(4) {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr:nth-child(3), #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr:nth-child(4) {
   background-color: #f3f5f7;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(3) td, #home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:nth-child(4) td {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr:nth-child(3) td, #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr:nth-child(4) td {
   color: #067f9d;
   font-weight: 600;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody tr:last-child td {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr:last-child td {
   color: #067f9d;
   font-weight: 600;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody th {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
   padding: 16px;
   border: 0;
   background-color: #dee1e5;
@@ -1953,11 +2012,11 @@
   letter-spacing: -0.08px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--compare .service-compare__table tbody th {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
     font-size: 12px;
   }
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody td {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td {
   padding: 8px 24px;
   border: 0;
   color: #111;
@@ -1966,42 +2025,42 @@
   line-height: 1.3;
   letter-spacing: -0.16px;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table tbody td strong {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td strong {
   color: #067f9d;
   font-weight: 600;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--compare .service-compare__table tbody td {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td {
     font-size: 12px;
     padding: 8px 18px;
   }
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table .background {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table .background {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #DEE1E5;
 }
-#home-app-subscribe .service-page__section--compare .service-compare__table .border {
+#home-app-subscribe.care-service .service-page__section--compare .service-compare__table .border {
   border-bottom: 1px solid transparent !important;
   border-top: 1px solid transparent !important;
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 구독하면 뭐가 좋은가요? */
 }
-#home-app-subscribe .service-page__section--benefits {
+#home-app-subscribe.care-service .service-page__section--benefits {
   background-color: #f3f5f7;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--benefits .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--benefits .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits {
   display: flex;
   gap: 12px;
   width: 100%;
   margin: 0;
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2012,17 +2071,17 @@
   border-radius: 24px;
   background: linear-gradient(90deg, #fff 0%, #fff 100%);
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item .service-benefits__item--box01 {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item .service-benefits__item--box01 {
   width: 100%;
   margin-top: 4px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item .service-benefits__item--box01 {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item .service-benefits__item--box01 {
     padding-bottom: 12px;
     width: 100%;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item h3 {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item h3 {
   margin-top: 6px;
   color: #111;
   font-size: 18px;
@@ -2031,14 +2090,14 @@
   letter-spacing: -0.27px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item h3 {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item h3 {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.32px;
     text-align: left;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item p {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item p {
   margin-top: 4px;
   color: #666;
   font-size: 16px;
@@ -2047,62 +2106,62 @@
   letter-spacing: -0.32px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item p {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item p {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.156px;
     text-align: left;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
   width: 88px;
   height: 88px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
     width: 50px;
     height: 50px;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
   width: 64px;
   height: 60px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
     width: 50px;
     height: 50px;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
   width: 74px;
   height: 63px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
     width: 50px;
     height: 50px;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__item {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item {
     padding: 16px 16px 18px 16px;
     align-items: flex-start;
     flex: auto;
     position: relative;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__image {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__image {
   margin-bottom: 10px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__image {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__image {
     position: absolute;
     right: 16px;
     top: 16px;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__tag {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2116,16 +2175,16 @@
   line-height: 14px;
   letter-spacing: -0.11px;
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__tag--blue {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--blue {
   box-shadow: 0px 0px 2px #067f9d;
   color: #067f9d;
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits__tag--yellow {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--yellow {
   box-shadow: 0 0 2px #ab6226;
   color: #ab6226;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits__tag {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag {
     font-size: 9px;
     padding: 2px 3px;
     align-items: flex-start;
@@ -2136,16 +2195,16 @@
     display: flex;
   }
 }
-#home-app-subscribe .service-page__section--benefits .service-benefits .service-benefits__item--box02 {
+#home-app-subscribe.care-service .service-page__section--benefits .service-benefits .service-benefits__item--box02 {
   display: none;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits .service-benefits__item--box02 .service-page__caption {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits .service-benefits__item--box02 .service-page__caption {
     text-align: left;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits .service-benefits__item--box02 {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits .service-benefits__item--box02 {
     display: block;
     padding-top: 10px;
     border-top: 1px dashed #DEE1E5;
@@ -2153,23 +2212,23 @@
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--benefits .service-benefits {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits {
     flex-direction: column;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 대표 제품별 구독 서비스를 확인해보세요 */
 }
-#home-app-subscribe .service-page__section--care {
+#home-app-subscribe.care-service .service-page__section--care {
   background-color: #f3f5f7;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--care .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--care .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--care .service-care {
+#home-app-subscribe.care-service .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 48px;
@@ -2181,55 +2240,55 @@
   background-color: #fff;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--care .service-care--four .service-care__item:nth-child(1), #home-app-subscribe .service-page__section--care .service-care--four .service-care__item:nth-child(2) {
+#home-app-subscribe.care-service .service-page__section--care .service-care--four .service-care__item:nth-child(1), #home-app-subscribe.care-service .service-page__section--care .service-care--four .service-care__item:nth-child(2) {
   border-bottom: 1px solid #eff0f2;
 }
-#home-app-subscribe .service-page__section--care .service-care--two {
+#home-app-subscribe.care-service .service-page__section--care .service-care--two {
   grid-template-columns: 1fr 1fr;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care--two .service-care__item:nth-child(1) {
+  #home-app-subscribe.care-service .service-page__section--care .service-care--two .service-care__item:nth-child(1) {
     border-bottom: 1px solid #eff0f2 !important;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care--single {
+#home-app-subscribe.care-service .service-page__section--care .service-care--single {
   grid-template-columns: 1fr;
 }
-#home-app-subscribe .service-page__section--care .service-care--single .service-care__item {
+#home-app-subscribe.care-service .service-page__section--care .service-care--single .service-care__item {
   justify-content: center;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   padding: 20px 0;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item:only-child {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:only-child {
   padding: 50px 0;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item:only-child {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:only-child {
     padding: 20px 0;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(3) {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(3) {
   border-bottom: 1px solid #eff0f2;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(2), #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(4) {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(2), #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(4) {
   border-top: 1px solid transparent;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item > div {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item > div {
   flex: 1 1 auto;
   min-width: 0;
   padding-top: 4px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item > div {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item > div {
     padding-top: 0;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item > div > span {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item > div > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2245,12 +2304,13 @@
   vertical-align: middle;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item > div > span {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item > div > span {
     font-size: 9px;
     padding: 2px 3px;
+    margin-bottom: 3px;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item h3 {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item h3 {
   display: inline;
   margin-left: 6px;
   color: #111;
@@ -2261,13 +2321,13 @@
   vertical-align: middle;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item h3 {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item h3 {
     font-size: 13px;
     line-height: 130%;
     letter-spacing: -0.195px;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item p {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item p {
   margin-top: 4px;
   color: #444;
   font-size: 14px;
@@ -2275,7 +2335,7 @@
   line-height: 1.4;
   letter-spacing: -0.28px;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item strong {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item strong {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
@@ -2283,7 +2343,7 @@
   margin-right: 3px;
   font-weight: 600;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item strong::after {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item strong::after {
   content: "";
   display: inline-block;
   width: 16px;
@@ -2293,11 +2353,11 @@
   vertical-align: middle;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item strong {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item strong {
     align-items: flex-start;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item img {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item img {
   flex: 0 0 132px;
   width: 132px;
   height: 88px;
@@ -2307,82 +2367,75 @@
      object-fit: cover;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item img {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item img {
     flex: 0 0 103px;
     width: 103px;
     height: 58px;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--detailed p {
   display: flex;
   gap: 3px;
-  padding-left: 12px;
   padding-bottom: 3px;
   margin-top: 0;
-  border-left: 1px solid #DEE1E5;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p:last-child {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--detailed p:last-child {
   padding-bottom: 0;
 }
-@media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed p {
-    padding-left: 8px;
-  }
-}
-#home-app-subscribe .service-page__section--care .service-care .service-care__item--detailed h3 + p {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--detailed h3 + p {
   margin-top: 6px;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item--supply {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--supply {
   border-color: #067f9d;
   color: #067f9d;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item--free {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--free {
   border-color: #ab6226;
   color: #ab6226;
 }
-#home-app-subscribe .service-page__section--care .service-care .service-care__item--no-media {
+#home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--no-media {
   width: 100%;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item {
     padding: 10px 0;
     align-items: flex-start;
   }
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(1) {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(1) {
     order: 1;
   }
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(2) {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(2) {
     order: 3;
   }
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(3) {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(3) {
     order: 2;
   }
-  #home-app-subscribe .service-page__section--care .service-care .service-care__item:nth-child(4) {
+  #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item:nth-child(4) {
     order: 4;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-care {
+  #home-app-subscribe.care-service .service-page__section--care .service-care {
     grid-template-columns: auto;
     padding: 0 12px;
     border-radius: 16px;
   }
 }
-#home-app-subscribe .service-page__section--care .service-care__tag--supply {
+#home-app-subscribe.care-service .service-page__section--care .service-care__tag--supply {
   box-shadow: 0 0 1.1px #067f9d !important;
   color: #067f9d !important;
 }
-#home-app-subscribe .service-page__section--care .service-care__tag--free {
+#home-app-subscribe.care-service .service-page__section--care .service-care__tag--free {
   box-shadow: 0 0 1.1px #ab6226 !important;
   color: #ab6226 !important;
 }
-#home-app-subscribe .service-page__section--care .service-care__notice {
+#home-app-subscribe.care-service .service-page__section--care .service-care__notice {
   margin-top: 32px;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--care .service-care__notice--button {
+#home-app-subscribe.care-service .service-page__section--care .service-care__notice--button {
   width: 100%;
-  min-height: 60px;
+  min-height: 50px;
   margin: 0 auto;
   color: #111;
   font-size: 16px;
@@ -2390,31 +2443,36 @@
   line-height: 1.4;
   letter-spacing: -0.48px;
 }
-#home-app-subscribe .service-page__section--care .service-care__notice-content {
+#home-app-subscribe.care-service .service-page__section--care .service-care__notice-content {
   margin-top: 8px;
 }
-#home-app-subscribe .service-page__section--care {
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--care .service-care__notice {
+    margin-top: 0px;
+  }
+}
+#home-app-subscribe.care-service .service-page__section--care {
   /* 툴팁 */
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__wrap {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__wrap {
   position: relative;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-tooltip__wrap {
+  #home-app-subscribe.care-service .service-page__section--care .service-tooltip__wrap {
     font-size: 11px !important;
   }
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__btn {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__btn {
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--care .service-tooltip__btn {
+  #home-app-subscribe.care-service .service-page__section--care .service-tooltip__btn {
     font-size: 11px;
     line-height: 140%;
     letter-spacing: -0.22px;
   }
 }
-#home-app-subscribe .service-page__section--care .service-tooltip {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip {
   position: absolute;
   top: 70%;
   left: 0;
@@ -2428,16 +2486,16 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
-#home-app-subscribe .service-page__section--care .service-tooltip[hidden] {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip[hidden] {
   display: none !important;
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__header {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 12px;
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__title {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__title {
   display: block;
   color: #111;
   font-size: 16px;
@@ -2445,7 +2503,7 @@
   line-height: 20px;
   letter-spacing: -0.2px;
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__close {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__close {
   position: relative;
   width: 24px;
   height: 24px;
@@ -2454,7 +2512,7 @@
   border: none;
   cursor: pointer;
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__close::before, #home-app-subscribe .service-page__section--care .service-tooltip__close::after {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__close::before, #home-app-subscribe.care-service .service-page__section--care .service-tooltip__close::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2463,32 +2521,32 @@
   height: 1.5px;
   background-color: #111;
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__close::before {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__close::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__close::after {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-#home-app-subscribe .service-page__section--care .service-tooltip__desc {
+#home-app-subscribe.care-service .service-page__section--care .service-tooltip__desc {
   display: block;
   color: #444;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 계약 전에 꼭 확인해 주세요 */
 }
-#home-app-subscribe .service-page__section--contract {
+#home-app-subscribe.care-service .service-page__section--contract {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--contract .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--contract .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--contract .service-checklist {
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -2496,7 +2554,7 @@
   max-width: 780px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__item {
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__item {
   padding: 24px;
   border-radius: 20px;
   background-color: #f3f5f7;
@@ -2505,16 +2563,16 @@
   transition: all 0.3s ease;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contract .service-checklist__item {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__item {
     padding: 16px;
     border-radius: 16px;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__item:has(.service-checklist__button[aria-expanded=true]) {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__item:has(.service-checklist__button[aria-expanded=true]) {
     background-color: #f8f9fa;
     border-color: #8F9298;
   }
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__header {
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__header {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2524,8 +2582,9 @@
   background-color: transparent;
   color: #111;
   text-align: left;
+  pointer-events: none;
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__header .chk-icon {
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__header .chk-icon {
   display: inline-flex;
   flex: 0 0 20px;
   align-items: center;
@@ -2540,13 +2599,13 @@
   transition: background-color 0.3s;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contract .service-checklist__header {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header {
     pointer-events: auto;
     cursor: pointer;
     position: relative;
     padding-right: 30px;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__header::after {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -2558,23 +2617,23 @@
     transform: rotate(90deg);
     transition: transform 0.3s ease;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=false] .chk-icon {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=false] .chk-icon {
     background-color: #a0a0a0;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=false] .service-checklist__title {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=false] .service-checklist__title {
     font-weight: 500;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=true] .chk-icon {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=true] .chk-icon {
     background-color: #111;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=true] .service-checklist__title {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=true] .service-checklist__title {
     font-weight: 700;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__header[aria-expanded=true]::after {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=true]::after {
     transform: rotate(270deg);
   }
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__title {
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__title {
   flex: 1 1 auto;
   font-size: 18px;
   font-weight: 600;
@@ -2582,45 +2641,51 @@
   letter-spacing: -0.27px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contract .service-checklist__title {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__title {
     font-size: 14px;
   }
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__content {
-  padding-left: 32px;
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__content {
+  padding-left: 27px;
   color: #444;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: -0.32px;
 }
-#home-app-subscribe .service-page__section--contract .service-checklist__content p {
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__content p {
   margin-top: 5px;
 }
+@media (min-width: 768px) {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__content[hidden] {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contract .service-checklist__content {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__content {
     padding-top: 6px;
+    padding-left: 0px;
     font-size: 12px;
   }
-  #home-app-subscribe .service-page__section--contract .service-checklist__content p {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__content p {
     margin-top: 0;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 모바일 전용 배너 */
 }
-#home-app-subscribe .promo-banner {
+#home-app-subscribe.care-service .promo-banner {
   display: none;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .promo-banner {
+  #home-app-subscribe.care-service .promo-banner {
     display: block;
     width: 100%;
     min-height: 109px;
     overflow: hidden;
     background: url("../images/mo_banner.jpg") no-repeat center right/cover;
   }
-  #home-app-subscribe .promo-banner__link {
+  #home-app-subscribe.care-service .promo-banner__link {
     display: flex;
     align-items: center;
     width: 100%;
@@ -2629,12 +2694,12 @@
     box-sizing: border-box;
     text-decoration: none;
   }
-  #home-app-subscribe .promo-banner__content {
+  #home-app-subscribe.care-service .promo-banner__content {
     display: flex;
     flex-direction: column;
     padding-left: 35px;
   }
-  #home-app-subscribe .promo-banner__title {
+  #home-app-subscribe.care-service .promo-banner__title {
     margin: 0;
     color: #fff;
     font-family: Pretendard;
@@ -2644,7 +2709,7 @@
     line-height: 20px;
     letter-spacing: -0.2px;
   }
-  #home-app-subscribe .promo-banner__desc {
+  #home-app-subscribe.care-service .promo-banner__desc {
     margin: 0;
     color: #fff;
     font-size: 12px;
@@ -2654,7 +2719,7 @@
     opacity: 0.7;
     padding-top: 3px;
   }
-  #home-app-subscribe .promo-banner__desc::after {
+  #home-app-subscribe.care-service .promo-banner__desc::after {
     content: "";
     display: inline-block;
     background: url(../images/ic_right.png) no-repeat 0 0/100%;
@@ -2663,19 +2728,19 @@
     vertical-align: middle;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 해지와 만료, 이렇게 진행돼요 */
 }
-#home-app-subscribe .service-page__section--cancel {
+#home-app-subscribe.care-service .service-page__section--cancel {
   background-color: #f9fafb;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--cancel .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--cancel .service-page__inner {
   width: calc(100% - 40px);
   max-width: 1200px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2686,7 +2751,7 @@
   margin: 0 auto;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel::before {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel::before {
   position: absolute;
   top: 32px;
   bottom: 32px;
@@ -2696,11 +2761,11 @@
   content: "";
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel::before {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel::before {
     left: 17px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step {
   position: relative;
   z-index: 1;
   display: grid;
@@ -2710,11 +2775,11 @@
   align-items: start;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel__step {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step {
     grid-template-columns: 35px minmax(0, 1fr);
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > img {
   box-sizing: border-box;
   width: 48px;
   height: 48px;
@@ -2725,22 +2790,22 @@
      object-fit: contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel__step > img {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > img {
     width: 36px;
     height: 36px;
     padding: 4px;
     border-radius: 12px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > div {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div {
   min-width: 0;
   padding-top: 4px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > h3,
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > h3,
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > p {
   margin-left: 16px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > h3 {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > h3 {
   color: #111;
   font-size: 18px;
   font-weight: 600;
@@ -2748,11 +2813,11 @@
   letter-spacing: -0.27px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel__step > div > h3 {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > h3 {
     font-size: 16px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > p {
   margin-top: 2px;
   color: #444;
   font-size: 15px;
@@ -2761,15 +2826,15 @@
   letter-spacing: -0.3px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > p {
     font-size: 13px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step > div > p a {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > div > p a {
   color: inherit;
   text-decoration: none;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__title {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -2778,7 +2843,7 @@
   font-size: 18px;
   font-weight: 700;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title::after {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__title::after {
   content: "";
   display: inline-block;
   width: 20px;
@@ -2787,15 +2852,15 @@
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
-[aria-expanded=true] #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title::after {
-  transform: rotate(270deg);
-}
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__title {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__title {
     font-size: 16px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__desc {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__button[aria-expanded=true] .service-accordion__title::after {
+  transform: rotate(270deg);
+}
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__desc {
   margin: 4px 0 0 16px;
   color: #444;
   font-size: 15px;
@@ -2803,22 +2868,22 @@
   font-weight: 400;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__desc {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__desc {
     font-size: 13px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__content {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__content {
   margin-top: 8px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__content[hidden] {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__content[hidden] {
   display: none !important;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__list {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list li {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__list li {
   position: relative;
   padding-left: 10px;
   color: #444;
@@ -2828,7 +2893,7 @@
   line-height: 140%;
   letter-spacing: -0.39px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list li::before {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__list li::before {
   content: "";
   margin-right: 4px;
   display: inline-block;
@@ -2838,18 +2903,18 @@
   background: #666;
   vertical-align: middle;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list li:first-child {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__list li:first-child {
   margin-top: 0;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step .service-accordion__list .text-red {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step .service-accordion__list .text-red {
   color: #FD312E;
   font-weight: 600;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel__step[data-service-accordion].is-open .service-accordion__title::after,
-#home-app-subscribe .service-page__section--cancel .service-cancel__step [data-service-accordion].is-open .service-accordion__title::after {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step[data-service-accordion].is-open .service-accordion__title::after,
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step [data-service-accordion].is-open .service-accordion__title::after {
   transform: rotate(270deg);
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -2857,21 +2922,21 @@
   margin-top: 12px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees {
     margin-top: 8px;
     gap: 8px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion {
   overflow: hidden;
   border: 1px solid #ccd1d6;
   border-radius: 12px;
   background-color: #fff;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion .service-accordion__button[aria-expanded=true]::after {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion .service-accordion__button[aria-expanded=true]::after {
   transform: rotate(270deg);
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2881,14 +2946,14 @@
   padding: 14px 20px;
   border: 0;
   background-color: transparent;
-  color: #333;
+  color: #444;
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
   text-align: left;
   cursor: pointer;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button::after {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button::after {
   flex: 0 0 16px;
   width: 16px;
   height: 16px;
@@ -2898,35 +2963,35 @@
   transition: transform 0.3s ease;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__button {
     padding: 16px;
     font-size: 13px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content {
   padding: 0 20px 14px;
   color: #444;
   font-size: 14px;
   line-height: 1.6;
   letter-spacing: -0.3px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content[hidden] {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content[hidden] {
   display: none;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content p {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content p {
   font-size: 13px;
   font-weight: 400;
   line-height: 140%;
   letter-spacing: -0.156px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list {
   margin: 6px 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list li {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list li {
   position: relative;
   padding-left: 10px;
   font-size: 13px;
@@ -2935,7 +3000,7 @@
   line-height: 140%;
   letter-spacing: -0.39px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list li::before {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-list li::before {
   content: "";
   margin-right: 4px;
   display: inline-block;
@@ -2945,7 +3010,7 @@
   background: #444;
   vertical-align: middle;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-note {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-note {
   margin-top: 16px;
   padding-top: 10px;
   border-top: 1px dashed #DEE1E5;
@@ -2954,13 +3019,23 @@
   line-height: 140%;
   letter-spacing: -0.39px;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee {
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content .service-fee-note {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-accordion__content {
+    padding: 0 16px 16px 16px;
+  }
+}
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee {
   width: 100%;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee .service-cancel__return-fee-button[aria-expanded=true]::after {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee .service-cancel__return-fee-button[aria-expanded=true]::after {
   transform: rotate(270deg);
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2978,7 +3053,7 @@
   letter-spacing: -0.42px;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button::after {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button::after {
   flex: 0 0 16px;
   width: 16px;
   height: 16px;
@@ -2988,24 +3063,25 @@
   transition: transform 0.3s ease;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-button {
     padding-bottom: 0px;
     padding-top: 0px;
+    font-size: 12px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content {
   width: 100%;
   overflow: hidden;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content[hidden] {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-content[hidden] {
   display: none;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-scroll {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table {
   width: 100%;
   min-width: 560px;
   table-layout: fixed;
@@ -3018,13 +3094,13 @@
   text-align: center;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table {
     margin-top: 8px;
     min-width: auto;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
   height: 32px;
   padding: 3px 12px;
   border: 1px solid #ebebeb;
@@ -3037,44 +3113,44 @@
   letter-spacing: -0.36px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
-  #home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th,
+  #home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
     font-size: 10px;
   }
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table th {
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #ebebeb;
   font-weight: 600;
 }
-#home-app-subscribe .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
+#home-app-subscribe.care-service .service-page__section--cancel .service-cancel .service-cancel__fees .service-cancel__return-fee-table td {
   background-color: #fff;
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 가전 구독 자주 묻는 질문 */
 }
-#home-app-subscribe .service-page__section--faq {
+#home-app-subscribe.care-service .service-page__section--faq {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--faq .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--faq .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion {
   width: 100%;
   border-top: 1px solid #000;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__item {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__heading {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__heading {
   margin: 0;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__button {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__button {
   display: grid;
   grid-template-columns: 12px minmax(0, 1fr) 40px;
   align-items: center;
@@ -3087,20 +3163,20 @@
   cursor: pointer;
   text-align: left;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__button:focus-visible {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__button:focus-visible {
   outline: 2px solid #111 !important;
   outline-offset: -2px;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__button[aria-expanded=true] .faq-accordion__icon {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__button[aria-expanded=true] .faq-accordion__icon {
   transform: rotate(180deg);
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--faq .faq-accordion__button {
+  #home-app-subscribe.care-service .service-page__section--faq .faq-accordion__button {
     padding: 18px 8px;
     line-height: 20px;
   }
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__q-mark {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__q-mark {
   width: 12px;
   font-size: 18px;
   font-weight: 600;
@@ -3108,12 +3184,12 @@
   letter-spacing: -0.2px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--faq .faq-accordion__q-mark {
+  #home-app-subscribe.care-service .service-page__section--faq .faq-accordion__q-mark {
     font-size: 15px;
     line-height: 20px;
   }
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__title {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__title {
   min-width: 0;
   margin-left: 8px;
   overflow: hidden;
@@ -3122,18 +3198,18 @@
   line-height: 1.4;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--faq .faq-accordion__title {
+  #home-app-subscribe.care-service .service-page__section--faq .faq-accordion__title {
     font-size: 14px;
   }
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__icon {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__icon {
   position: relative;
   justify-self: end;
   width: 24px;
   height: 24px;
   transition: transform 0.2s ease;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__icon::before {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__icon::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3145,12 +3221,12 @@
   transform: translate(-50%, -50%) rotate(45deg);
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--faq .faq-accordion__icon {
+  #home-app-subscribe.care-service .service-page__section--faq .faq-accordion__icon {
     width: 16px;
     height: 16px;
   }
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__content {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__content {
   background-color: #f9fafb;
   color: #444;
   font-size: 15px;
@@ -3158,30 +3234,31 @@
   line-height: 1.4;
   letter-spacing: -0.3px;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__content[hidden] {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__content[hidden] {
   display: none;
 }
-#home-app-subscribe .service-page__section--faq .faq-accordion__inner {
+#home-app-subscribe.care-service .service-page__section--faq .faq-accordion__inner {
   padding: 24px 70px 32px 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--faq .faq-accordion__inner {
+  #home-app-subscribe.care-service .service-page__section--faq .faq-accordion__inner {
     padding: 18px 28px;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 구독으로 시작하기 좋은 제품 */
 }
-#home-app-subscribe .service-page__section--products {
+#home-app-subscribe.care-service .service-page__section--products {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--products .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--products .service-page__inner {
   width: calc(100% - 40px);
   max-width: 1380px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--products .service-products {
+#home-app-subscribe.care-service .service-page__section--products .service-products {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 260px));
   justify-content: center;
@@ -3193,12 +3270,12 @@
   counter-reset: service-product-ranking;
   margin-top: 32px;
 }
-#home-app-subscribe .service-page__section--products .service-products__item {
+#home-app-subscribe.care-service .service-page__section--products .service-products__item {
   position: relative;
   min-width: 0;
   counter-increment: service-product-ranking;
 }
-#home-app-subscribe .service-page__section--products .service-products__item::before {
+#home-app-subscribe.care-service .service-page__section--products .service-products__item::before {
   content: counter(service-product-ranking);
   position: absolute;
   top: 0;
@@ -3218,12 +3295,12 @@
   line-height: 22px;
   letter-spacing: -0.2px;
 }
-#home-app-subscribe .service-page__section--products .service-products__item:nth-child(-n+3)::before {
+#home-app-subscribe.care-service .service-page__section--products .service-products__item:nth-child(-n+3)::before {
   border-color: #111;
   background-color: #111;
   color: #fff;
 }
-#home-app-subscribe .service-page__section--products .service-products__link {
+#home-app-subscribe.care-service .service-page__section--products .service-products__link {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3233,11 +3310,11 @@
   text-align: left;
   text-decoration: none;
 }
-#home-app-subscribe .service-page__section--products .service-products__link:focus-visible {
+#home-app-subscribe.care-service .service-page__section--products .service-products__link:focus-visible {
   outline: 2px solid #111;
   outline-offset: 4px;
 }
-#home-app-subscribe .service-page__section--products .service-products__media {
+#home-app-subscribe.care-service .service-page__section--products .service-products__media {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3245,13 +3322,13 @@
   height: 260px;
   overflow: hidden;
 }
-#home-app-subscribe .service-page__section--products .service-products__image {
+#home-app-subscribe.care-service .service-page__section--products .service-products__image {
   width: 240px;
   height: 240px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#home-app-subscribe .service-page__section--products .service-products__info {
+#home-app-subscribe.care-service .service-page__section--products .service-products__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3259,7 +3336,7 @@
   width: 100%;
   padding-right: 16px;
 }
-#home-app-subscribe .service-page__section--products .service-products__title {
+#home-app-subscribe.care-service .service-page__section--products .service-products__title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: unset;
@@ -3277,20 +3354,20 @@
   line-height: 22px;
   letter-spacing: -0.2px;
 }
-#home-app-subscribe .service-page__section--products .service-products__meta {
+#home-app-subscribe.care-service .service-page__section--products .service-products__meta {
   display: flex;
   align-items: center;
   gap: 6px;
   min-height: 22px;
 }
-#home-app-subscribe .service-page__section--products .service-products__model {
+#home-app-subscribe.care-service .service-page__section--products .service-products__model {
   margin-right: 2px;
   color: #666;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
-#home-app-subscribe .service-page__section--products .service-products__spec {
+#home-app-subscribe.care-service .service-page__section--products .service-products__spec {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3306,62 +3383,62 @@
   white-space: nowrap;
   margin-right: 2px;
 }
-#home-app-subscribe .service-page__section--products .service-products__prices {
+#home-app-subscribe.care-service .service-page__section--products .service-products__prices {
   display: flex;
   flex-direction: column;
   gap: 2px;
   width: 100%;
 }
-#home-app-subscribe .service-page__section--products .service-products__price, #home-app-subscribe .service-page__section--products .service-products__benefit-price {
+#home-app-subscribe.care-service .service-page__section--products .service-products__price, #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price {
   display: flex;
   align-items: center;
   gap: 6px;
   margin: 0;
   white-space: nowrap;
 }
-#home-app-subscribe .service-page__section--products .service-products__price strong {
+#home-app-subscribe.care-service .service-page__section--products .service-products__price strong {
   color: #111;
   font-size: 19px;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.4px;
 }
-#home-app-subscribe .service-page__section--products .service-products__price small {
+#home-app-subscribe.care-service .service-page__section--products .service-products__price small {
   margin-left: 1px;
   font-size: 17px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.3px;
 }
-#home-app-subscribe .service-page__section--products .service-products__discount {
+#home-app-subscribe.care-service .service-page__section--products .service-products__discount {
   color: #fd312e;
   font-size: 19px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.4px;
 }
-#home-app-subscribe .service-page__section--products .service-products__benefit-price {
+#home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price {
   color: #fd312e;
 }
-#home-app-subscribe .service-page__section--products .service-products__benefit-price > span {
+#home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price > span {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -0.2px;
 }
-#home-app-subscribe .service-page__section--products .service-products__benefit-price strong {
+#home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price strong {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.3px;
 }
-#home-app-subscribe .service-page__section--products .service-products__benefit-price small {
+#home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price small {
   margin-left: 1px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
-#home-app-subscribe .service-page__section--products .service-products__note {
+#home-app-subscribe.care-service .service-page__section--products .service-products__note {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -3371,36 +3448,142 @@
   font-weight: 400;
   line-height: 16px;
 }
-#home-app-subscribe .service-page__section--products .service-products__note::after {
+#home-app-subscribe.care-service .service-page__section--products .service-products__note::after {
   content: "";
   width: 16px;
   height: 16px;
   background: url(../images/ic_info.png) no-repeat center center/contain;
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination {
+  display: none;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination {
+    position: relative;
+    display: none;
+    width: 80px;
+    height: 2px;
+    margin: 24px auto 0;
+    overflow: hidden;
+    background-color: #e1e1e1;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination.swiper-pagination-progressbar {
+    display: block;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination .swiper-pagination-progressbar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    transform-origin: left top;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: 24px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__item {
+    flex: 0 0 148px;
+    width: 148px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__link {
+    gap: 12px;
+    padding-top: 0;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__media {
+    height: 160px;
+    padding-top: 12px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__image {
+    width: 128px;
+    height: 128px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__info {
+    padding-right: 8px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__title {
+    min-height: 36px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__meta {
+    min-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__model {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__spec {
+    min-height: 18px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__price strong,
+  #home-app-subscribe.care-service .service-page__section--products .service-products__price small {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__discount {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price > span,
+  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price strong,
+  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price small {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products__item::before {
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+}
+#home-app-subscribe.care-service {
   /* 더 알아보면 좋은 이야기 */
 }
-#home-app-subscribe .service-page__section--guide {
+#home-app-subscribe.care-service .service-page__section--guide {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--guide .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--guide .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--guide .service-guide {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   width: 100%;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--guide .service-guide {
+  #home-app-subscribe.care-service .service-page__section--guide .service-guide {
     gap: 12px;
   }
 }
-#home-app-subscribe .service-page__section--guide .service-guide__item {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3410,16 +3593,16 @@
   text-align: left;
   text-decoration: none;
 }
-#home-app-subscribe .service-page__section--guide .service-guide__item:focus-visible {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide__item:focus-visible {
   outline: 2px solid #111;
   outline-offset: 4px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--guide .service-guide__item {
+  #home-app-subscribe.care-service .service-page__section--guide .service-guide__item {
     gap: 12px;
   }
 }
-#home-app-subscribe .service-page__section--guide .service-guide img {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide img {
   display: block;
   width: 100%;
   aspect-ratio: 380/240;
@@ -3429,15 +3612,15 @@
      object-fit: cover;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--guide .service-guide img {
+  #home-app-subscribe.care-service .service-page__section--guide .service-guide img {
     border-radius: 12px;
   }
 }
-#home-app-subscribe .service-page__section--guide .service-guide:first-child img {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide:first-child img {
   -o-object-position: center 44%;
      object-position: center 44%;
 }
-#home-app-subscribe .service-page__section--guide .service-guide__text {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3445,7 +3628,7 @@
   width: 100%;
   padding: 0 6px;
 }
-#home-app-subscribe .service-page__section--guide .service-guide strong {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide strong {
   width: 100%;
   color: #444;
   font-size: 18px;
@@ -3453,13 +3636,13 @@
   line-height: 1.4;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--guide .service-guide strong {
+  #home-app-subscribe.care-service .service-page__section--guide .service-guide strong {
     font-size: 11px;
     font-weight: 400;
     line-height: 14px;
   }
 }
-#home-app-subscribe .service-page__section--guide .service-guide small {
+#home-app-subscribe.care-service .service-page__section--guide .service-guide small {
   width: 100%;
   color: #111;
   font-size: 24px;
@@ -3467,25 +3650,25 @@
   line-height: 1.4;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--guide .service-guide small {
+  #home-app-subscribe.care-service .service-page__section--guide .service-guide small {
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
   }
 }
-#home-app-subscribe {
+#home-app-subscribe.care-service {
   /* 혼자 고르기 어려우신가요? */
 }
-#home-app-subscribe .service-page__section--contact {
+#home-app-subscribe.care-service .service-page__section--contact {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe .service-page__section--contact .service-page__inner {
+#home-app-subscribe.care-service .service-page__section--contact .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--contact .service-contact {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
@@ -3493,7 +3676,7 @@
   max-width: 780px;
   margin: 0 auto;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__item {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3510,11 +3693,11 @@
   text-align: left;
   text-decoration: none;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__item:focus-visible {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__item:focus-visible {
   outline: 2px solid #111;
   outline-offset: 3px;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__item > img {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__item > img {
   display: block;
   width: 32px;
   height: 32px;
@@ -3522,48 +3705,49 @@
      object-fit: contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact__item {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
     flex-direction: row;
     min-height: auto;
     padding: 16px;
     align-items: center;
+    border-radius: 16px;
   }
 }
-#home-app-subscribe .service-page__section--contact .service-contact__text {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
   width: 100%;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__text strong {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__text strong {
   color: #111;
   font-size: 20px;
   font-weight: 600;
   line-height: 20px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact__text strong {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__text strong {
     font-size: 16px;
   }
 }
-#home-app-subscribe .service-page__section--contact .service-contact__text small {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__text small {
   color: #8f8f8f;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact__text small {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__text small {
     font-size: 13px;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact__text {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__text {
     gap: 4px;
   }
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3577,11 +3761,11 @@
   color: #444;
   text-decoration: none;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai:focus-visible {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai:focus-visible {
   outline: 2px solid #111;
   outline-offset: 3px;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai > img {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
   display: block;
   width: 32px;
   height: 32px;
@@ -3589,30 +3773,44 @@
      object-fit: contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact__ai > img {
-    width: 24px;
-    height: 24px;
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
+    width: 20px;
+    height: 20px;
   }
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap {
   color: #444;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.4;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
   background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
   display: block;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
   display: block;
   color: #444;
 }
-#home-app-subscribe .service-page__section--contact .service-contact__ai::after {
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
+    font-size: 13px;
+    line-height: 23px;
+  }
+}
+#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai::after {
   content: "";
   flex: 0 0 20px;
   width: 20px;
@@ -3620,13 +3818,17 @@
   background: url(../images/icon_arr.png) no-repeat center center/contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact__ai {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai {
     margin: 20px auto 0;
+    height: 48px;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe .service-page__section--contact .service-contact {
+  #home-app-subscribe.care-service .service-page__section--contact .service-contact {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 10px;
   }
+}
+#home-app-subscribe {
+  /* 서비스 안내 페이지 끝 */
 }

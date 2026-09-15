@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* =======================================================
      1. 탭 (Tabs) 공통 제어
   ======================================================== */
-  const tabButtons = document.querySelectorAll('[data-service-tabs] [role="tab"], .service-tabs__button');
+  const tabButtons = document.querySelectorAll('[data-service-tabs] [role="tab"]');
 
   // 초기화
   tabButtons.forEach(btn => {
@@ -212,13 +212,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('click', (e) => {
-    const tab = e.target.closest('[data-service-tabs] [role="tab"], .service-tabs__button');
+    const tab = e.target.closest('[data-service-tabs] [role="tab"]');
     if (!tab) return;
 
-    const tabList = tab.closest('.service-tabs');
+    const tabRoot = tab.closest('[data-service-tabs-root]');
+    const tabList = tab.closest('[data-service-tabs]');
+
+    if (!tabRoot || !tabList) return;
+
     const panelId = tab.getAttribute('aria-controls');
-    const allTabs = tabList.querySelectorAll('[role="tab"], .service-tabs__button');
-    const allPanels = tabList.querySelectorAll('.service-tabs__panel');
+    const allTabs = tabList.querySelectorAll('[role="tab"]');
+    const allPanels = Array.from(tabRoot.children).filter(panel => panel.classList.contains('service-tabs__panel'));
+    const targetPanel = allPanels.find(panel => panel.id === panelId);
 
     // 탭 상태 초기화 후 클릭한 탭 활성화
     allTabs.forEach(t => {
@@ -231,20 +236,23 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.setAttribute('tabindex', '0');
 
     allPanels.forEach(p => p.hidden = true);
-    if (panelId) document.getElementById(panelId).hidden = false;
+    if (targetPanel) targetPanel.hidden = false;
   });
 
   // 탭 키보드(방향키) 접근성
   document.addEventListener('keydown', (e) => {
-    const tab = e.target.closest('[data-service-tabs] [role="tab"], .service-tabs__button');
+    const tab = e.target.closest('[data-service-tabs] [role="tab"]');
     if (!tab) return;
 
     const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
     if (!keys.includes(e.key)) return;
 
     e.preventDefault();
-    const tabList = tab.closest('.service-tabs');
-    const allTabs = Array.from(tabList.querySelectorAll('[role="tab"], .service-tabs__button'));
+    const tabList = tab.closest('[data-service-tabs]');
+
+    if (!tabList) return;
+
+    const allTabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
     let index = allTabs.indexOf(tab);
 
     if (e.key === 'Home') index = 0;
@@ -253,22 +261,65 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') index = (index + 1) % allTabs.length;
 
     allTabs[index].click();
-    allTabs[index].focus();
+    allTabs[index].focus({ preventScroll: true });
   });
+
+  const desktopChecklistMedia = window.matchMedia('(min-width: 768px)');
+
+  function syncChecklistAccordions() {
+    const checklistButtons = document.querySelectorAll('.service-checklist__button');
+
+    checklistButtons.forEach(button => {
+      const contentId = button.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+
+      if (!content) return;
+
+      if (desktopChecklistMedia.matches) {
+        button.setAttribute('aria-expanded', 'true');
+        button.setAttribute('aria-disabled', 'true');
+        button.setAttribute('tabindex', '-1');
+        content.hidden = false;
+        return;
+      }
+
+      button.setAttribute('aria-expanded', 'false');
+      button.removeAttribute('aria-disabled');
+      button.removeAttribute('tabindex');
+      content.hidden = true;
+    });
+  }
+
+  syncChecklistAccordions();
+
+  if (desktopChecklistMedia.addEventListener) {
+    desktopChecklistMedia.addEventListener('change', syncChecklistAccordions);
+  } else {
+    desktopChecklistMedia.addListener(syncChecklistAccordions);
+  }
 
 
   /* =======================================================
-     2. 아코디언 (Accordion) 공통 제어 - 덜컹거림 완벽 개선
+     2. 아코디언 (Accordion) 공통 제어
   ======================================================== */
   document.addEventListener('click', function (e) {
     const btn = e.target.closest('.faq-accordion__button, .service-accordion__button, .service-cancel__return-fee-button, .service-checklist__button');
 
     if (!btn) return;
+
+    if (btn.classList.contains('service-checklist__button') && desktopChecklistMedia.matches) return;
+
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
     const targetId = btn.getAttribute('aria-controls');
     const targetContent = document.getElementById(targetId);
 
     if (!targetContent) return;
+
+    if (btn.closest('.service-cancel__fees')) {
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      targetContent.hidden = isExpanded;
+      return;
+    }
 
     // 1. 이미 열려있는 상태에서 클릭한 경우 (현재 항목 닫기)
     if (isExpanded) {
@@ -279,6 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const openButtons = document.querySelectorAll('.faq-accordion__button[aria-expanded="true"], .service-accordion__button[aria-expanded="true"], .service-cancel__return-fee-button[aria-expanded="true"], .service-checklist__button[aria-expanded="true"]');
 
       openButtons.forEach(function (openBtn) {
+        if (openBtn.classList.contains('service-checklist__button') && desktopChecklistMedia.matches) return;
+        if (openBtn.closest('.service-cancel__fees')) return;
+
         openBtn.setAttribute('aria-expanded', 'false');
         const openContentId = openBtn.getAttribute('aria-controls');
         const openContent = document.getElementById(openContentId);
@@ -303,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isInsideTooltip = e.target.closest('.service-tooltip');
     const allTooltips = document.querySelectorAll('.service-tooltip');
 
-    // X 버튼 클릭이거나, 툴팁 외부 영역 클릭 시 모두 닫기
+    // X 버튼 클릭
     if (closeBtn || (!btn && !isInsideTooltip)) {
       allTooltips.forEach(t => t.hidden = true);
       return;
@@ -346,3 +400,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+
+// 테스트용 api 
+// 현재 접속한 환경이 로컬인지 확인
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+const baseUrl = isLocal ? 'https://www.lge.co.kr' : ''; 
+
+function fetchProducts(categoryId) {
+  const apiUrl = `${baseUrl}https://www.lge.co.kr/kr/home_app_subscribe/service_info.html=${categoryId}`;
+
+  fetch('https://apiv2.lge.co.kr/subscriptionsvc/ajax/v1/direct-subscription/best-ranking-list?displaySpaceId=DP_HOME_001&titleLinkUrl=subscribe&displayObjectLevel=2&viewCnt=5', {
+    method: 'GET',
+    headers: {
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    renderProducts(categoryId, data);
+  })
+  .catch(error => {
+    console.error('데이터를 불러오지 못했습니다:', error);
+  });
+}

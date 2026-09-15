@@ -10,6 +10,8 @@
 
   const PRODUCT_BASE_URL = 'https://www.lge.co.kr';
   const IMAGE_BASE_URL = 'https://static-store.lge.co.kr';
+  const MOBILE_BREAKPOINT = 767;
+  const productSwipers = new Map();
 
   /*
    * 설치비 별도 노출 상품
@@ -20,17 +22,19 @@
     'WD520VHT'
   ];
 
-  const $tabs = $('[data-service-tabs]');
+  const $serviceTabs = $(
+    '.service-products-tabs'
+  );
 
-  const $serviceTabs = $tabs.closest(
-    '.service-tabs'
+  const $tabs = $serviceTabs.find(
+    '[data-service-tabs]'
   );
 
   const $buttons = $tabs.find(
     '.service-tabs__button'
   );
 
-  const $panels = $serviceTabs.find(
+  const $panels = $serviceTabs.children(
     '.service-tabs__panel'
   );
 
@@ -282,6 +286,112 @@
   }
 
   /*
+   * 모바일 상품 스와이퍼
+   */
+  function destroyProductSwiper(container) {
+    const swiper = productSwipers.get(
+      container
+    );
+
+    if (swiper) {
+      swiper.destroy(true, true);
+      productSwipers.delete(container);
+    }
+
+    const $container = $(container);
+
+    $container.removeClass(
+      'swiper-container'
+    );
+
+    $container
+      .find('.service-products')
+      .removeClass('swiper-wrapper');
+
+    $container
+      .find('.service-products__item')
+      .removeClass('swiper-slide');
+  }
+
+  function initProductSwiper($panel) {
+    const container = $panel
+      .find('.service-products-swiper')
+      .get(0);
+
+    if (
+      !container
+      || window.innerWidth > MOBILE_BREAKPOINT
+      || typeof Swiper === 'undefined'
+    ) {
+      return;
+    }
+
+    const $container = $(container);
+    const $items = $container.find(
+      '.service-products__item'
+    );
+
+    if ($items.length < 2) {
+      return;
+    }
+
+    if (productSwipers.has(container)) {
+      productSwipers.get(container).update();
+      return;
+    }
+
+    $container.addClass('swiper-container');
+    $container
+      .find('.service-products')
+      .addClass('swiper-wrapper');
+    $items.addClass('swiper-slide');
+
+    const swiper = new Swiper(container, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      speed: 500,
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: $container
+          .find('.service-products-swiper__pagination')
+          .get(0),
+        type: 'progressbar'
+      }
+    });
+
+    productSwipers.set(
+      container,
+      swiper
+    );
+  }
+
+  function syncProductSwipers() {
+    const isMobile =
+      window.innerWidth <= MOBILE_BREAKPOINT;
+
+    $panels.each(function () {
+      const $panel = $(this);
+      const container = $panel
+        .find('.service-products-swiper')
+        .get(0);
+
+      if (!container) {
+        return;
+      }
+
+      if (!isMobile) {
+        destroyProductSwiper(container);
+        return;
+      }
+
+      if (!$panel.prop('hidden')) {
+        initProductSwiper($panel);
+      }
+    });
+  }
+
+  /*
    * API 카테고리와 HTML 패널 연결
    */
   function renderAllCategories(data) {
@@ -342,6 +452,10 @@
 
     $('#' + panelId)
       .prop('hidden', false);
+
+    window.requestAnimationFrame(
+      syncProductSwipers
+    );
   }
 
   /*
@@ -444,6 +558,8 @@
       renderAllCategories(
         response.data
       );
+
+      syncProductSwipers();
     })
     .fail(
       function (
@@ -473,4 +589,15 @@
         'is-loading'
       );
     });
+
+  let resizeTimer;
+
+  $(window).on('resize', function () {
+    window.clearTimeout(resizeTimer);
+
+    resizeTimer = window.setTimeout(
+      syncProductSwipers,
+      150
+    );
+  });
 })();

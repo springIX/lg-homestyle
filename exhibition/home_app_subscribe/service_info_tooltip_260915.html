@@ -229,8 +229,8 @@
                 aria-controls="service-panel-fridge" tabindex="-1">STEM 얼음정수 냉장고</button>
               <button type="button" class="service-tabs__button" role="tab" id="service-tab-laptop" aria-selected="false"
                 aria-controls="service-panel-laptop" tabindex="-1">노트북</button>
-              <!-- <button type="button" class="service-tabs__button" role="tab" id="service-tab-tv" aria-selected="false"
-                aria-controls="service-panel-tv" tabindex="-1">TV</button> -->
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-tv" aria-selected="false"
+                aria-controls="service-panel-tv" tabindex="-1">TV</button>
             </div>
           </div>
           <!-- 워시타워 -->
@@ -241,7 +241,39 @@
                 <div>
                   <span class="service-care__tag">전문가 케어</span>
                   <h3>위생 케어</h3>
-                  <p class="service-tooltip__wrap">직수/고압 세척, 스팀케어, UV 케어, 드럼 케어,  내시경 전/후 검사</p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">
+                      세척</strong> 직수/고압 세척
+                    <!-- 툴팁 (세척) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">세척</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">물이나 세정액을 사용해 제품에 쌓인 오염물을 말끔히 제거해요.</span>
+                    </span>
+                  </p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">클리닝</strong> 스팀 케어
+                    <!-- 툴팁 (클리닝) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">클리닝</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">전문 세정액을 사용해 오염물을 씻어내거나, 전용 도구로 먼지와 이물질을 털어내 제품을 쾌적하게
+                        유지해요.</span>
+                    </span>
+                  </p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">케어</strong> UV 케어, 드럼 케어, 내시경
+                    전/후 검사
+                    <!-- 툴팁 (케어) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">케어</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">UV 살균 등 제품에 꼭 맞는 방식으로 위생적인 사용 환경을 만들어드려요.</span>
+                    </span>
+                  </p>
                 </div>
                 <img src="src/images/service-wash01.png" alt="워시타워 위생 케어" loading="lazy">
               </li>
@@ -256,7 +288,7 @@
                 <div>
                   <span class="service-care__tag">전문가 케어</span>
                   <h3>성능 점검</h3>
-                  <p class="service-tooltip__wrap">제품 작동 상태와 주요 기능 점검</p>
+                  <p>제품 작동 상태와 주요 기능 점검</p>
                 </div>
                 <img src="src/images/service-wash03.png" alt="제품 성능 점검" loading="lazy">
               </li>
@@ -280,13 +312,6 @@
                   <li>방문 관리는 사전 안내드리고 있으며, 고객 요청에 의해 협의된 일정으로 변경하실 수 있습니다.</li>
                   <li>배수필터 교체는 24개월마다 제공합니다.</li>
                   <li>2중안심필터는 첫 방문시 1회 제공됩니다. </li>
-                  <li>직수/고압 세척은 ’26년 6월 출시된 WA2525**P6* 모델에 한해 제공됩니다.</li>
-                  <li>직수/고압 세척이 적용되는 모델은 방문 연차에 따라 제공되는 서비스가 다릅니다.</li>
-                  <li>홀수 연차 (12/36/60개월 차) : 드럼 케어, 스팀 케어, 필터 세척 및 교체</li>
-                  <li>짝수 연차 (24/48/72개월 차) : 직수/고압 세척, UV 케어, 내시경 카메라 점검, 제품 점검, 스팀 케어, 필터 세척 및 교체</li>
-                  <li>배수 필터 교체는 24개월 마다 제공합니다.</li>
-                  <li>무상 철거/재설치는 계약기간 내 1회, 2중안심필터 교체는 첫방문 1회, 웰컴서비스는 2개월 차 1회 제공됩니다.</li>                  
-                  <li>본 케어서비스는 가전 구독 고객에게만 제공되며, 일시불 구매 고객에게는 제공되지 않습니다. (서비스 구독 미운영)</li>
                 </ul>
               </div>
             </div>            
@@ -314,7 +339,39 @@
                 <div>
                   <span class="service-care__tag">전문가 케어</span>
                   <h3>위생 케어</h3>
-                  <p class="service-tooltip__wrap">고압 세척, 부품 클리닝, 스팀 케어, UV 케어, 피톤치드 케어</p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">
+                      세척</strong> 고압 세척
+                    <!-- 툴팁 (세척) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">세척</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">물이나 세정액을 사용해 제품에 쌓인 오염물을 말끔히 제거해요.</span>
+                    </span>
+                  </p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">클리닝</strong> 부품 클리닝
+                    <!-- 툴팁 (클리닝) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">클리닝</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">전문 세정액을 사용해 오염물을 씻어내거나, 전용 도구로 먼지와 이물질을 털어내 제품을 쾌적하게
+                        유지해요.</span>
+                    </span>
+                  </p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">케어</strong> 스팀 케어, UV 케어, 피톤치드
+                    케어
+                    <!-- 툴팁 (케어) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">케어</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">UV 살균 등 제품에 꼭 맞는 방식으로 위생적인 사용 환경을 만들어드려요.</span>
+                    </span>
+                  </p>
                 </div>
                 <img src="src/images/service-air03.png" alt="" loading="lazy">
               </li>
@@ -374,7 +431,27 @@
                 <div>
                   <span class="service-care__tag">전문가 케어</span>
                   <h3>위생 케어</h3>
-                  <p class="service-tooltip__wrap">부품 클리닝, 유로 고온살균</p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">클리닝</strong> 부품 클리닝
+                    <!-- 툴팁 (클리닝) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">클리닝</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">전문 세정액을 사용해 오염물을 씻어내거나, 전용 도구로 먼지와 이물질을 털어내 제품을 쾌적하게
+                        유지해요.</span>
+                    </span>
+                  </p>
+                  <p class="service-tooltip__wrap"><strong class="service-tooltip__btn">케어</strong> 유로 고온살균
+                    <!-- 툴팁 (케어) -->
+                    <span class="service-tooltip" hidden>
+                      <span class="service-tooltip__header">
+                        <span class="service-tooltip__title">케어</span>
+                        <button type="button" class="service-tooltip__close" aria-label="닫기"></button>
+                      </span>
+                      <span class="service-tooltip__desc">UV 살균 등 제품에 꼭 맞는 방식으로 위생적인 사용 환경을 만들어드려요.</span>
+                    </span>
+                  </p>
                 </div>
                 <img src="src/images/service-stem03.png" alt="" loading="lazy">
               </li>
@@ -451,7 +528,7 @@
             </div>              
           </div>
           <!-- TV -->
-          <!-- <div id="service-panel-tv" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-tv"
+          <div id="service-panel-tv" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-tv"
             tabindex="0" hidden>
             <ul class="service-care service-care--single">
               <li class="service-care__item service-care__item--no-media">
@@ -462,6 +539,7 @@
               </li>
             </ul>
             <p class="service-page__caption">베이직 요금제 기준이며, 제품과 요금제 조합에 따라 제공 항목과 주기가 달라집니다.</p>
+            <!-- TV 유의사항 -->
             <div class="service-care__notice notice accordion">
               <button type="button" class="service-care__notice--button accordion-btn" id="service-care-notice-button"
                 aria-expanded="false" aria-controls="service-care-notice-content">유의사항 확인하기</button>
@@ -482,7 +560,7 @@
                 </ul>
               </div>
             </div>              
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -499,19 +577,19 @@
           <article class="service-checklist__item">
             <button type="button" class="service-checklist__header service-checklist__button" aria-expanded="false" aria-controls="chk-content-1">
               <span aria-hidden="true" class="chk-icon">✓</span>
-              <span class="service-checklist__title">선택한 제품의 케어서비스 범위와 방문 주기를 확인해보세요.</span>
+              <span class="service-checklist__title">계약 만료 후 소유권 이전 조건을 확인했어요</span>
             </button>
             <div id="chk-content-1" class="service-checklist__content" hidden>
-              <p>케어서비스가 포함된 요금제는 전문가 케어와 소모품 교체, 무상 서비스 등의 관리를 받을 수 있습니다. 제공 항목과 방문 주기는 제품 및 요금제에 따라 다르며, 방문 일정은 사전에 조정할 수 있습니다.</p>
+              <p>가전 구독은 구독 대상으로 운영되는 제품만 신청할 수 있으며, 제품에 따라 구독 가능한 모델·색상·용량과 제공되는 요금제가 다를 수 있어요.</p>
             </div>
           </article>
           <article class="service-checklist__item">
             <button type="button" class="service-checklist__header service-checklist__button" aria-expanded="false" aria-controls="chk-content-2">
               <span aria-hidden="true" class="chk-icon">✓</span>
-              <span class="service-checklist__title">중도 해지 절차와 위약금 구조를 확인했어요.</span>
+              <span class="service-checklist__title">케어서비스의 관리 범위와 방문 주기를 확인했어요</span>
             </button>
             <div id="chk-content-2" class="service-checklist__content" hidden>
-              <p>약 기간이 남은 상태에서 해지하면 사용 기간과 남은 계약 기간에 따라 위약금이 발생합니다. 자세한 내용은 아래 '중도해지, 이렇게 진행돼요.' 에서 확인하세요</p>
+              <p>가전 구독은 구독 대상으로 운영되는 제품만 신청할 수 있으며, 제품에 따라 구독 가능한 모델·색상·용량과 제공되는 요금제가 다를 수 있어요.</p>
             </div>
           </article>
 
@@ -519,10 +597,10 @@
           <article class="service-checklist__item">
             <button type="button" class="service-checklist__header service-checklist__button" aria-expanded="false" aria-controls="chk-content-3">
               <span aria-hidden="true" class="chk-icon">✓</span>
-              <span class="service-checklist__title">계약이 끝나면 소유권이 고객에게 이전됩니다.</span>
+              <span class="service-checklist__title">중도 해지 시 위약금 구조를 확인했어요</span>
             </button>
             <div id="chk-content-3" class="service-checklist__content" hidden>
-              <p>계약 기간이 끝나면 계약 조건에 따라 고객에게 이전됩니다. 계약 만료 전까지 제품의 소유권은 LG전자에 있습니다. 중도 해지하는 경우에는 소유권이 이전되지 않고 제품이 회수될 수 있습니다.</p>
+              <p>가전 구독은 구독 대상으로 운영되는 제품만 신청할 수 있으며, 제품에 따라 구독 가능한 모델·색상·용량과 제공되는 요금제가 다를 수 있어요.</p>
             </div>
           </article>
         </div>
@@ -566,7 +644,7 @@
     <section class="service-page__section service-page__section--cancel" aria-labelledby="cancel-title">
       <div class="service-page__inner service-page__inner--narrow">
         <div class="service-page__heading">
-          <h2 id="cancel-title">중도 해지 신청시, 이렇게 진행돼요</h2>
+          <h2 id="cancel-title">해지와 만료, 이렇게 진행돼요</h2>
           <p>중도 해지는 가능하지만, 계약 상태에 따라 위약금이나 회수비 등 비용이 발생할 수 있습니다.</p>
         </div>
         <ol class="service-cancel">
@@ -827,7 +905,7 @@
               </button>
               <div id="cancel-step-1" class="service-accordion__content" hidden>
                 <ul class="service-accordion__list">
-                  <li>위약금이 발생하는 경우: 의무사용기간 안에 해지할 때</li>
+                  <li>위약금이 발생하는 경우: 의무사용기간(약정 <strong class="text-red">N</strong>년) 안에 해지할 때</li>
                   <li>위약금 없이 회수비만 발생하는 경우: 의무사용기간은 끝났지만 계약기간이 남았을 때</li>
                   <li>해지하지 않는 경우: 계약기간까지 지속 사용 시 만기 후 소유권이 이전되며, 고객이 원할 시 케어십에 가입하여 사용 가능합니다.</li>
                 </ul>
