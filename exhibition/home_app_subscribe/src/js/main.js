@@ -92,89 +92,252 @@ $(function () {
   });
 
   // 제휴카드별 상세 혜택 스와이퍼
-  const cardList = new Swiper('.card-list', {
-    slidesPerView: 'auto',
-    spaceBetween: 6,
-    centeredSlides: true,
-    slideToClickedSlide: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-    speed: 800,
-    threshold: 30,
-    breakpoints: {
-      [mo_break_point + 1]: {
-        spaceBetween: 42,
-        loop: true,
-        loopedSlides: 9,
+  // 제휴카드별 상세 혜택 스와이퍼
+  const $cardSection = $('#detail-affiliated-card');
+  const CARD_SPEED = 800;
+
+  const cardList = new Swiper(
+    '#detail-affiliated-card .card-list',
+    {
+      slidesPerView: 'auto',
+      spaceBetween: 6,
+      centeredSlides: true,
+      watchSlidesProgress: true,
+      speed: CARD_SPEED,
+      threshold: 30,
+
+      breakpoints: {
+        [mo_break_point + 1]: {
+          spaceBetween: 42
+        }
       }
     }
-  });
+  );
 
-  const cardInfo = new Swiper('.card-info', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    speed: 800,
-    centeredSlides: true,
-    threshold: 30,
-    noSwiping: true,
-    noSwipingClass: 'table-box',
-    navigation: {
-      nextEl: '#detail-affiliated-card .nxt',
-      prevEl: '#detail-affiliated-card .prv'
-    },
-    breakpoints: {
-      [mo_break_point + 1]: {
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-        loop: true,
-        loopedSlides: 9,
+  const cardInfo = new Swiper(
+    '#detail-affiliated-card .card-info',
+    {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      speed: CARD_SPEED,
+      threshold: 30,
+
+      noSwiping: true,
+      noSwipingClass: 'table-box',
+
+      navigation: {
+        nextEl: '#detail-affiliated-card .nxt',
+        prevEl: '#detail-affiliated-card .prv'
+      },
+
+      breakpoints: {
+        [mo_break_point + 1]: {
+          slidesPerView: 'auto',
+          spaceBetween: 32
+        }
       }
     }
-  });
+  );
 
+  let isCardSyncing = false;
+  let currentCardIndex = 0;
+
+  /*
+   * 썸네일 활성화
+   */
   function updateCardListActive(index) {
-    $('.card-list .swiper-slide')
+    $cardSection
+      .find('.card-list .swiper-slide')
       .removeClass('swiper-slide-thumb-active')
-      .filter(`[data-swiper-slide-index="${index}"]`)
+      .eq(index)
       .addClass('swiper-slide-thumb-active');
   }
 
-  function syncCard(index) {
-    $('.card-info .accordion.on').each(function () {
-      const $accordion = $(this);
+  /*
+   * 열린 카드 아코디언 닫기
+   */
+  function closeCardAccordions() {
+    const $accordions = $cardSection.find(
+      '.card-info .accordion.on'
+    );
 
-      $accordion
-        .removeClass('on')
-        .find('.accordion-cont')
-        .stop(true, false)
-        .slideUp(800);
+    $accordions
+      .removeClass('on')
+      .find('.accordion-btn')
+      .attr('aria-expanded', 'false');
 
-      $accordion
-        .find('.accordion-btn')
-        .attr('aria-expanded', 'false');
-    });
-
-    updateCardListActive(index);
-
-    if (cardList.realIndex !== index) {
-      cardList.slideToLoop(index);
-    }
-
-    if (cardInfo.realIndex !== index) {
-      cardInfo.slideToLoop(index);
-    }
+    $accordions
+      .find('.accordion-cont')
+      .stop(true, true)
+      .hide();
   }
 
+  /*
+   * card-list → card-info
+   */
+  function syncFromCardList(index) {
+    if (isCardSyncing) return;
+
+    isCardSyncing = true;
+    currentCardIndex = index;
+
+    updateCardListActive(index);
+    closeCardAccordions();
+
+    if (cardInfo.activeIndex !== index) {
+      cardInfo.slideTo(
+        index,
+        CARD_SPEED,
+        false
+      );
+    }
+
+    requestAnimationFrame(function () {
+      isCardSyncing = false;
+    });
+  }
+
+  /*
+   * card-info → card-list
+   */
+  function syncFromCardInfo(index) {
+    if (isCardSyncing) return;
+
+    isCardSyncing = true;
+    currentCardIndex = index;
+
+    updateCardListActive(index);
+    closeCardAccordions();
+
+    if (cardList.activeIndex !== index) {
+      cardList.slideTo(
+        index,
+        CARD_SPEED,
+        false
+      );
+    }
+
+    requestAnimationFrame(function () {
+      isCardSyncing = false;
+    });
+  }
+
+  /*
+   * card-list를 스와이프하면
+   * card-info 즉시 이동
+   */
   cardList.on('slideChange', function () {
-    syncCard(this.realIndex);
+    syncFromCardList(
+      this.activeIndex
+    );
   });
 
+  /*
+   * card-info를 스와이프하거나
+   * 네비게이션 버튼을 누르면
+   * card-list 즉시 이동
+   */
   cardInfo.on('slideChange', function () {
-    syncCard(this.realIndex);
+    syncFromCardInfo(
+      this.activeIndex
+    );
   });
 
-  // 최초 활성화
-  syncCard(cardList.realIndex);
+  /*
+   * 썸네일 클릭
+   */
+  cardList.on('tap', function () {
+    if (
+      !this.allowClick ||
+      this.clickedIndex == null
+    ) {
+      return;
+    }
+
+    const index = this.clickedIndex;
+
+    cardList.slideTo(
+      index,
+      CARD_SPEED
+    );
+
+    /*
+     * 이미 활성화된 썸네일을 클릭하면
+     * slideChange가 발생하지 않으므로 직접 동기화
+     */
+    if (cardList.activeIndex === index) {
+      syncFromCardList(index);
+    }
+  });
+
+  /*
+   * 최초 위치 동기화
+   */
+  currentCardIndex = cardInfo.activeIndex;
+
+  cardList.slideTo(
+    currentCardIndex,
+    0,
+    false
+  );
+
+  cardInfo.slideTo(
+    currentCardIndex,
+    0,
+    false
+  );
+
+  updateCardListActive(
+    currentCardIndex
+  );
+
+  /*
+   * 모바일 ↔ PC 전환 시 갱신
+   */
+  const cardMediaQuery = window.matchMedia(
+    `(min-width: ${mo_break_point + 1}px)`
+  );
+
+  function refreshCardSwiper() {
+    isCardSyncing = true;
+
+    setTimeout(function () {
+      cardList.update();
+      cardInfo.update();
+
+      cardList.slideTo(
+        currentCardIndex,
+        0,
+        false
+      );
+
+      cardInfo.slideTo(
+        currentCardIndex,
+        0,
+        false
+      );
+
+      updateCardListActive(
+        currentCardIndex
+      );
+
+      requestAnimationFrame(function () {
+        isCardSyncing = false;
+      });
+    }, 100);
+  }
+
+  if (cardMediaQuery.addEventListener) {
+    cardMediaQuery.addEventListener(
+      'change',
+      refreshCardSwiper
+    );
+  } else {
+    cardMediaQuery.addListener(
+      refreshCardSwiper
+    );
+  }
 
   $(document).on('click', '[data-tab-btn] > *', function (e) {
     e.preventDefault();
@@ -431,7 +594,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 현재 접속한 환경이 로컬인지 확인
 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
-const baseUrl = isLocal ? 'https://www.lge.co.kr' : ''; 
+const baseUrl = isLocal ? 'https://www.lge.co.kr' : '';
 
 function fetchProducts(categoryId) {
   const apiUrl = `${baseUrl}https://www.lge.co.kr/kr/home_app_subscribe/service_info.html=${categoryId}`;
@@ -441,11 +604,11 @@ function fetchProducts(categoryId) {
     headers: {
     }
   })
-  .then(response => response.json())
-  .then(data => {
-    renderProducts(categoryId, data);
-  })
-  .catch(error => {
-    console.error('데이터를 불러오지 못했습니다:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+      renderProducts(categoryId, data);
+    })
+    .catch(error => {
+      console.error('데이터를 불러오지 못했습니다:', error);
+    });
 }

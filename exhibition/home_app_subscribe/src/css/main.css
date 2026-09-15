@@ -173,7 +173,7 @@
   content: "";
   width: 16px;
   height: 16px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   transform: rotate(90deg);
   transition: 0.3s ease;
   position: relative;
@@ -506,29 +506,10 @@
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
-  padding: 4.5px 8px 4px;
-  background-color: #fff;
-  border-radius: 999px;
-  border: 2px solid #FD312E;
-  color: #FD312E;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 16px;
-  font-weight: 600;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only {
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-}
-#home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only .only {
-  width: auto;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only .only {
-    width: 22px;
+  #home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only img {
+    width: 82px;
   }
 }
 #home-app-subscribe section#overview-benefit .overview-list li a .icon {
@@ -559,7 +540,7 @@
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   position: absolute;
   left: 100%;
   top: 50%;
@@ -609,9 +590,10 @@
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   transform: rotate(90deg);
   transition: 0.3s ease;
+  flex-shrink: 0;
 }
 #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit {
   display: flex;
@@ -621,6 +603,14 @@
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit {
     gap: 6px;
+  }
+}
+#home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit .icon {
+  width: 48px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit .icon {
+    width: 40px;
   }
 }
 #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit .txt {
@@ -687,7 +677,7 @@
 }
 #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-cont {
   border-top: 1px dashed #DEE1E5;
-  padding-top: 14px;
+  padding: 14px 0 6px;
   margin-top: 14px;
 }
 @media (max-width: 767px) {
@@ -803,7 +793,7 @@
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   position: absolute;
   right: 4px;
   top: 50%;
@@ -824,6 +814,9 @@
     font-size: 12px;
     margin-bottom: 6px;
   }
+}
+#home-app-subscribe section#detail-affiliated-card {
+  scroll-margin-top: 86px;
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
   content: "";
@@ -1217,6 +1210,7 @@
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-tab button img {
   margin: 0 auto 2px;
+  width: 32px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#how-to-apply .how-to-apply-tab button img {
@@ -1590,6 +1584,72 @@
 #home-app-subscribe.care-service .service-care__faq .red {
   color: #FD312E;
   font-weight: 400;
+}
+#home-app-subscribe.care-service .faq-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+#home-app-subscribe.care-service .faq-pagination__btn {
+  color: #777;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #DEE1E5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+#home-app-subscribe.care-service .faq-pagination__btn img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#home-app-subscribe.care-service .faq-pagination__btn:hover:not(:disabled) {
+  border-color: #222;
+}
+#home-app-subscribe.care-service .faq-pagination__btn:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+#home-app-subscribe.care-service .faq-pagination__indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .faq-pagination__indicator {
+    font-size: 13px;
+  }
+}
+#home-app-subscribe.care-service .faq-pagination__current {
+  font-weight: 700;
+  color: #111;
+}
+#home-app-subscribe.care-service .faq-pagination__separator {
+  font-weight: 400;
+  color: #d9d9d9;
+}
+#home-app-subscribe.care-service .faq-pagination__total {
+  font-weight: 400;
+  color: #888;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .faq-pagination {
+    margin-top: 20px;
+  }
 }
 #home-app-subscribe.care-service .service-care-tabs,
 #home-app-subscribe.care-service .service-faq-tabs,
@@ -2592,7 +2652,7 @@
     margin-top: -8px;
     width: 16px;
     height: 16px;
-    background: url(../images/icon_arr.png) no-repeat center center/contain;
+    background: url(../images/icon_arr.svg) no-repeat center center/contain;
     transform: rotate(90deg);
     transition: transform 0.3s ease;
   }
@@ -2863,7 +2923,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
@@ -2975,7 +3035,7 @@
   flex: 0 0 16px;
   width: 16px;
   height: 16px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   content: "";
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -3083,7 +3143,7 @@
   flex: 0 0 16px;
   width: 16px;
   height: 16px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
   content: "";
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -3887,7 +3947,7 @@
   flex: 0 0 20px;
   width: 20px;
   height: 20px;
-  background: url(../images/icon_arr.png) no-repeat center center/contain;
+  background: url(../images/icon_arr.svg) no-repeat center center/contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai {
