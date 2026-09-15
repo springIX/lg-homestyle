@@ -711,7 +711,7 @@
       }
       .home_set_btn{ color: #ccc;}
     }
-    .bg_beige{ background-color: #EEEFEA;}
+    .bg_beige{ background-color: #F3F3F0;}
     .c-product__item:not(.not_badge) .c-product__badge-container{
       &::before{ content: '결합할인'; display: inline-block; font-size: 11rem; padding: 3rem 4rem; background-color: #F3F5F7; color: #444; font-weight: 500;
         @include screen("mo") { font-size: 10rem;}

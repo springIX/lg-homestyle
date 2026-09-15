@@ -1851,7 +1851,7 @@
   color: #ccc;
 }
 .monthly_home_set.combined_discount .bg_beige {
-  background-color: #EEEFEA;
+  background-color: #F3F3F0;
 }
 .monthly_home_set.combined_discount .c-product__item:not(.not_badge) .c-product__badge-container::before {
   content: "결합할인";
