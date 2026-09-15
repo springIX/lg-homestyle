@@ -1230,8 +1230,8 @@
             }
           }
           &:nth-child(2) .service-benefits__image {
-            width: 64px;
-            height: 60px;
+            width: 88px;
+            height: 88px;
 
             @include screen("mo") {
               width: 50px;
@@ -1239,8 +1239,8 @@
             }          
           }
           &:nth-child(3) .service-benefits__image {
-            width: 74px;
-            height: 63px;
+            width: 88px;
+            height: 88px;
 
             @include screen("mo") {
               width: 50px;
@@ -1257,7 +1257,6 @@
         }
 
         &__image {
-          margin-bottom: 10px;
 
           @include screen("mo") {
             position: absolute;
@@ -1273,7 +1272,6 @@
           padding: 3px 4px;
           border-radius: 4px;
           background-color: #fff;
-          // border: 0.55px solid #fd312e;
           color: #fd312e;
           box-shadow: 0px 0px 2px #fd312e;
           font-size: 11px;
@@ -1282,13 +1280,11 @@
           letter-spacing: -0.11px;
 
           &--blue {
-            // border-color: #067f9d;
             box-shadow: 0px 0px 2px #067f9d;
             color: #067f9d;
           }
 
           &--yellow {
-            // border-color: #ab6226;
             box-shadow: 0 0 2px #ab6226;
             color: #ab6226;
           }
@@ -1356,7 +1352,7 @@
             &:nth-child(1),
             &:nth-child(2) {
               border-bottom: 1px solid #eff0f2;
-            }
+            }          
           }
         }
 
@@ -1395,9 +1391,10 @@
             }
           }
 
-
           &:nth-child(3) {
-            border-bottom: 1px solid #eff0f2;
+            @include screen("mo") {
+              border-bottom: 1px solid #eff0f2;
+            }
           }
 
           &:nth-child(2),
