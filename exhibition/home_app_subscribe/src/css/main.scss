@@ -1156,7 +1156,8 @@
       }
 
       .service-benefits {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 12px;
         width: 100%;
         margin: 0;
@@ -1166,7 +1167,6 @@
           flex: 1 1 0;
           flex-direction: column;
           align-items: center;
-          justify-content: flex-end;
           padding: 24px;
           overflow: hidden;
           border: 1px solid #eff0f2;
@@ -1218,28 +1218,34 @@
           &:nth-child(1) .service-benefits__image {
             width: 88px;
             height: 88px;
+            padding: 5px;
 
             @include screen("mo") {
               width: 50px;
               height: 50px;
+              padding: 0;
             }
           }
           &:nth-child(2) .service-benefits__image {
             width: 88px;
             height: 88px;
+            padding: 12px;
 
             @include screen("mo") {
               width: 50px;
               height: 50px;
+              padding: 0;
             }          
           }
           &:nth-child(3) .service-benefits__image {
             width: 88px;
             height: 88px;
+            padding: 12px;
 
             @include screen("mo") {
               width: 50px;
               height: 50px;
+              padding: 0;
             }          
           } 
           
@@ -1315,7 +1321,7 @@
         }
 
         @include screen("mo") {
-          flex-direction: column;
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     }
