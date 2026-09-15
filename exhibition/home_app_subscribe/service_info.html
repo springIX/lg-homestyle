@@ -220,17 +220,19 @@
           <p>제품에 따라 제공되는 케어 항목과 주기가 달라요. 구독하려는 제품을 선택해 확인해 보세요.</p>
         </div>
         <div class="service-tabs">
-          <div class="service-tabs__list service-tabs__list--radius" role="tablist" aria-label="제품 선택" data-service-tabs>
-            <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-wash"
-              aria-selected="true" aria-controls="service-panel-wash">워시타워</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-air" aria-selected="false"
-              aria-controls="service-panel-air" tabindex="-1">스탠드 에어컨</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-fridge" aria-selected="false"
-              aria-controls="service-panel-fridge" tabindex="-1">STEM 얼음정수 냉장고</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-laptop" aria-selected="false"
-              aria-controls="service-panel-laptop" tabindex="-1">노트북</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-tv" aria-selected="false"
-              aria-controls="service-panel-tv" tabindex="-1">TV</button>
+          <div class="service-tabs__list--wrap">
+            <div class="service-tabs__list service-tabs__list--radius" role="tablist" aria-label="제품 선택" data-service-tabs>
+              <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-wash"
+                aria-selected="true" aria-controls="service-panel-wash">워시타워</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-air" aria-selected="false"
+                aria-controls="service-panel-air" tabindex="-1">스탠드 에어컨</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-fridge" aria-selected="false"
+                aria-controls="service-panel-fridge" tabindex="-1">STEM 얼음정수 냉장고</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-laptop" aria-selected="false"
+                aria-controls="service-panel-laptop" tabindex="-1">노트북</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-tv" aria-selected="false"
+                aria-controls="service-panel-tv" tabindex="-1">TV</button>
+            </div>
           </div>
           <!-- 워시타워 -->
           <div id="service-panel-wash" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-wash"
@@ -922,17 +924,19 @@
           <h2 id="faq-title" class="title">가전 구독 자주 묻는 질문</h2>
         </div>
         <div class="service-tabs">
-          <div class="service-tabs__list" role="tablist" aria-label="자주 묻는 질문 카테고리" data-service-tabs>
-            <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-all"
-              aria-selected="true" aria-controls="service-panel-all">전체</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-pay" aria-selected="false"
-              aria-controls="service-panel-pay" tabindex="-1">결제/요금</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-discount"
-              aria-selected="false" aria-controls="service-panel-discount" tabindex="-1">할인 혜택</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-info" aria-selected="false"
-              aria-controls="service-panel-info" tabindex="-1">계약 정보</button>
-            <button type="button" class="service-tabs__button" role="tab" id="service-tab-care" aria-selected="false"
-              aria-controls="service-panel-care" tabindex="-1">관리/케어</button>
+          <div class="service-tabs__list--wrap">
+            <div class="service-tabs__list" role="tablist" aria-label="자주 묻는 질문 카테고리" data-service-tabs>
+              <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-all"
+                aria-selected="true" aria-controls="service-panel-all">전체</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-pay" aria-selected="false"
+                aria-controls="service-panel-pay" tabindex="-1">결제/요금</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-discount"
+                aria-selected="false" aria-controls="service-panel-discount" tabindex="-1">할인 혜택</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-info" aria-selected="false"
+                aria-controls="service-panel-info" tabindex="-1">계약 정보</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-care" aria-selected="false"
+                aria-controls="service-panel-care" tabindex="-1">관리/케어</button>
+            </div>
           </div>
 
           <!--  1. 전체 패널  -->
@@ -2863,7 +2867,10 @@
         </div>
         <a href="https://www.lge.co.kr" class="service-contact__ai">
           <img src="src/images/service-ai.png" alt="">
-          <span>AI Chat에게 물어보기</span>
+          <span class="service-contact__ai--wrap">
+            <span class="colorful">AI Chat</span>
+            <span class="black">에게 물어보기</span>
+          </span>
         </a>
       </div>
     </section>
