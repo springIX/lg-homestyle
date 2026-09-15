@@ -1669,20 +1669,6 @@
   max-width: 780px;
   margin: 0 auto;
 }
-#home-app-subscribe.care-service .service-care-tabs .service-tabs__list,
-#home-app-subscribe.care-service .service-faq-tabs .service-tabs__list,
-#home-app-subscribe.care-service .service-products-tabs .service-tabs__list {
-  gap: 8px;
-  margin-bottom: 32px;
-  padding: 0;
-}
-#home-app-subscribe.care-service .service-care-tabs,
-#home-app-subscribe.care-service .service-faq-tabs,
-#home-app-subscribe.care-service .service-products-tabs {
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto;
-}
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-care-tabs .service-tabs__list--wrap,
   #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list--wrap,
