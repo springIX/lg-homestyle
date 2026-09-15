@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function syncChecklistAccordions() {
     const checklistButtons = document.querySelectorAll('.service-checklist__button');
 
-    checklistButtons.forEach(button => {
+    checklistButtons.forEach((button, index) => {
       const contentId = button.getAttribute('aria-controls');
       const content = document.getElementById(contentId);
 
@@ -442,14 +442,18 @@ document.addEventListener('DOMContentLoaded', () => {
         button.setAttribute('aria-expanded', 'true');
         button.setAttribute('aria-disabled', 'true');
         button.setAttribute('tabindex', '-1');
+        button.disabled = false;
         content.hidden = false;
         return;
       }
 
-      button.setAttribute('aria-expanded', 'true');
+      const isFirstItem = index === 0;
+
+      button.setAttribute('aria-expanded', String(isFirstItem));
+      button.disabled = false;
       button.removeAttribute('aria-disabled');
       button.removeAttribute('tabindex');
-      content.hidden = false;
+      content.hidden = !isFirstItem;
     });
   }
 
@@ -477,6 +481,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetContent = document.getElementById(targetId);
 
     if (!targetContent) return;
+
+    if (btn.classList.contains('service-checklist__button')) {
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      targetContent.hidden = isExpanded;
+      return;
+    }
 
     if (btn.closest('.service-page__section--cancel')) {
       btn.setAttribute('aria-expanded', String(!isExpanded));
