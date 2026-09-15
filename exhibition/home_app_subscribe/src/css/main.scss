@@ -488,86 +488,50 @@
       }
     }
   }
-} 
 
-/* 서비스 안내 페이지 */
-#home-app-subscribe {
-  
 
-  /* 공통 */
-  // 유의사항 
-  .notice {
-    margin-top: 32px;
-    text-align: left;
+  /* 서비스 안내 페이지 시작 */
+  &.care-service {
 
-    .info-txt-box {
-      .tit {
-        margin-bottom: 4px;
-      }
-    }
-
-    .dsc-list-txt {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      
-      > li {
-        margin-top: 0;
-      }
-    }
-
-    .accordion-btn {
-      margin: 0 auto;
-      color: #111;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 1.4;
-      letter-spacing: -0.48px;
-    }
-  } 
-
-  //페이지 하단 리스트 1개
-  .service-page__caption {
-    margin-top: 16px;
-    color: #666;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: -0.42px;
-
-    &::before {
-      content: "";      
-      margin-right: 4px;
-      display: inline-block;
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: #666;
-      vertical-align: middle;
-    }
-
-    @include screen("mo") {
-      margin-top: 10px;
+    /* 공통 */
+    // 유의사항 
+    .notice {
       text-align: left;
-    }
-  }    
 
-  //페이지 하단 리스트 1개 이상
-  .service-page__notes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    margin-top: 16px;
-    color: #666;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: -0.42px;
+      .info-txt-box {
+        .tit {
+          margin-bottom: 4px;
+        }
+      }
 
-    li {
-      position: relative;
-      padding-left: 10px;
+      .dsc-list-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        
+        > li {
+          margin-top: 0;
+        }
+      }
+
+      // .accordion-btn {
+      //   margin: 0 auto;
+      //   color: #111;
+      //   font-size: 16px;
+      //   font-weight: 500;
+      //   line-height: 1.4;
+      //   letter-spacing: -0.48px;
+      // }
+    } 
+
+    //페이지 하단 리스트 1개
+    .service-page__caption {
+      margin-top: 16px;
+      color: #666;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.42px;
 
       &::before {
         content: "";      
@@ -579,379 +543,384 @@
         background: #666;
         vertical-align: middle;
       }
-    }
 
-    @include screen("mo") {
-      display: none;
-    }
-  } 
-  
-  //아코디언 내부 리스트
-  .service-care__notes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    margin-top: 8px;
-    color: #222;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: -0.42px;
-    text-align: left;
-
-    li {
-      position: relative;
-
-      &::before {
-        content: "";      
-        margin-right: 5px;
-        display: inline-block;
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background: #666;
-        vertical-align: middle;
+      @include screen("mo") {
+        margin-top: 10px;
+        text-align: left;
       }
-    }
-  }
+    }    
 
-  // faq 아코디언 내부 리스트
-  .service-care__faq {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    &--bar {
-      &::before {
-        content: '-';
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-
-    &--dot {
-      &::before {
-        content: "";      
-        display: inline-block;
-        margin-right: 5px;
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background: #666;
-        vertical-align: middle;
-        margin-left: 10px;
-      }            
-      &:first-child {
-        margin-top: 3px;
-      }
-    }
-
-    > li {
-      color: #444;
+    //페이지 하단 리스트 1개 이상
+    .service-page__notes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: 16px;
+      color: #666;
       font-size: 14px;
-      font-style: normal;
       font-weight: 400;
-      line-height: 140%; 
+      line-height: 1.4;
       letter-spacing: -0.42px;
 
-      &.service-care__faq--dot {
-        &::before {
-          margin-left: 0 !important;          
-        }
-      }  
-
-      > ul {
-        display: flex;
-        flex-direction: column;
-        gap: 3px; 
-
-        > li {
-          &.service-care__faq--bar {
-            margin-top: 3px !important;    
-
-            &::before {
-              margin-left: 10px !important;      
-            }  
-          }        
-        }
-      }
-
-      @include screen("mo") {
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 140%;
-        letter-spacing: -0.39px;
-      }
-    }    
-
-    .service-care__faq--link {
-      display: inline-block;
-      text-decoration: underline;
-      color: #111;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%;
-      letter-spacing: -0.42px;      
-    }    
-
-    .red {
-      color: #FD312E;
-      font-weight: 400;
-    }
-  }
-
-  // 페이지네이션
-  .faq-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px; 
-    margin-top: 24px;
-
-    &__btn {
-      color: #777;
-      text-align: center;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 44px; 
-      height: 36px;
-      background-color: #fff;
-      border: 1px solid #DEE1E5; 
-      border-radius: 6px;
-      cursor: pointer;
-      transition: border-color 0.2s ease-in-out;
-
-      img {
-        width: 16px;
-        height: 16px;
-        object-fit: contain;
-      }
-
-      &:hover:not(:disabled) {
-        border-color: #222;
-      }
-
-      &:disabled {
-        cursor: default;
-        opacity: 0.4;
-      }
-    }
-
-    &__indicator {
-      display: flex;
-      align-items: center;
-      gap: 10px; 
-      font-size: 16px;
-
-      @include screen("mo") {
-        font-size: 13px;
-      }
-    }
-
-    &__current {
-      font-weight: 700;
-      color: #111;
-    }
-
-    &__separator {
-      font-weight: 400;
-      color: #d9d9d9; 
-    }
-
-    &__total {
-      font-weight: 400;
-      color: #888;
-    }
-  }  
-
-  // // 탭메뉴
-  // .service-tabs {
-  //   width: 100%;
-  //   max-width: 780px;
-  //   margin: 0 auto;
-
-  //   .service-tabs__list {
-  //     gap: 8px;
-  //     margin-bottom: 32px;
-  //     padding: 0;
-  //   }
-  // }
-
-  .service-tabs {
-    width: 100%;
-    max-width: 780px;
-    margin: 0 auto; 
-
-    .service-tabs__list--wrap {
-
-      @include screen("mo") {
+      li {
         position: relative;
-        width: 100%;     
-        
-        &::after {
-          content: "";
-          z-index: 10;
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 48px; 
-          height: 100%;
-          background: linear-gradient(to right, rgba(244, 244, 244, 0) 0%, rgba(244, 244, 244, 1) 100%);
-          pointer-events: none; 
-        }        
+        padding-left: 10px;
+
+        &::before {
+          content: "";      
+          margin-right: 4px;
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #666;
+          vertical-align: middle;
+        }
       }
+
+      @include screen("mo") {
+        display: none;
+      }
+    } 
+    
+    //아코디언 내부 리스트
+    .service-care__notes {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      margin-top: 8px;
+      color: #222;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.42px;
+      text-align: left;
+
+      li {
+        position: relative;
+
+        &::before {
+          content: "";      
+          margin-right: 5px;
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #666;
+          vertical-align: middle;
+        }
+      }
+
+      &--title {
+        &::before {
+          margin-right: 0px !important;
+          width: 0px !important;
+          height: 0px !important;
+        }
+      }    
     }
 
-    .service-tabs__list {
+    // faq 아코디언 내부 리스트
+    .service-care__faq {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 8px 0 4px;
-      margin-bottom: 17px;
+      flex-direction: column;
+      gap: 8px;
 
-      .service-tabs__button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: auto;
-        height: 36px;
-        padding: 2px 10px;
-        overflow: hidden;
-        border: 1px solid #dee1e5;
-        border-radius: 100px;
-        background-color: #fff;
-        color: #111;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 18px;
-        white-space: nowrap;
-
-        &.is-active,
-        &[aria-selected="true"] {
-          border-color: #111;
-          background-color: #111;
-          color: #fff;
-          font-weight: 600;
+      &--bar {
+        &::before {
+          content: '-';
+          display: inline-block;
+          margin-right: 5px;
         }
+      }
 
-        &:last-child {
-          margin-right: 50px;
+      &--dot {
+        &::before {
+          content: "";      
+          display: inline-block;
+          margin-right: 5px;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #666;
+          vertical-align: middle;
+        }            
+        &:first-child {
+          margin-top: 3px;
+        }
+      }
+
+      > li {
+        color: #444;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+        letter-spacing: -0.42px;
+
+        &.service-care__faq--dot {
+          &::before {
+            margin-left: 0 !important;          
+          }
+        }  
+
+        > ul {
+          display: flex;
+          flex-direction: column;
+          gap: 4px; 
+          margin-left: 10px;
+
+          > li {
+            &:nth-child(1) {
+              margin-top: 4px !important;        
+            }      
+          }
         }
 
         @include screen("mo") {
-          flex: 0 0 auto;
-        }        
-
-      }
-
-      &--radius {
-        .service-tabs__button {
-          border-radius: 13px;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 140%;
+          letter-spacing: -0.39px;
         }
       }    
 
-      @include screen("mo") {       
-        margin-bottom: 8px;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch; 
-        scroll-behavior: smooth;
-        gap: 4px; 
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-        -ms-overflow-style: none;
-        scrollbar-width: none; 
-      }
-
-    }
-    .service-tabs__panel[hidden] {
-      display: none;
-    }
-    [data-service-notice][hidden] {
-      display: none;
-    }
-  }
-
-  // 헤드
-  .service-page__heading {
-    margin-bottom: 24px;
-
-    h2 {
-      margin: 0;
-      color: #111;
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 48px;
-      text-align: center;
-
-      @include screen("mo") {
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: -1.04px;
-        line-height: 140%;
-      }
-    }
-
-    p {
-      margin: 8px auto 0;
-      color: #444;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: -0.2px;
-
-      @include screen("mo") {
-        font-size: 15px;
+      .service-care__faq--link {
+        display: inline-block;
+        text-decoration: underline;
+        color: #111;
+        font-size: 14px;
+        font-style: normal;
         font-weight: 400;
-        letter-spacing: -0.2px;
-        line-height: 20px;
-      }      
+        line-height: 140%;
+        letter-spacing: -0.42px;      
+      }    
+
+      .red {
+        color: #FD312E;
+        font-weight: 400;
+      }
     }
 
-    @include screen("mo") {
-      margin-bottom: 20px;
+    // 페이지네이션
+    .faq-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px; 
+      margin-top: 24px;
+
+      &__btn {
+        color: #777;
+        text-align: center;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px; 
+        height: 32px;
+        background-color: #fff;
+        border: 1px solid #DEE1E5; 
+        border-radius: 6px;
+        cursor: pointer;
+        transition: border-color 0.2s ease-in-out;
+
+        img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+
+        &:hover:not(:disabled) {
+          border-color: #222;
+        }
+
+        &:disabled {
+          cursor: default;
+          opacity: 0.4;
+        }
+      }
+
+      &__indicator {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        font-size: 16px;
+
+        @include screen("mo") {
+          font-size: 13px;
+        }
+      }
+
+      &__current {
+        font-weight: 700;
+        color: #111;
+      }
+
+      &__separator {
+        font-weight: 400;
+        color: #d9d9d9; 
+      }
+
+      &__total {
+        font-weight: 400;
+        color: #888;
+      }
+
+      @include screen("mo") {
+        margin-top: 20px;
+      }
+    }  
+
+    // 탭메뉴
+    .service-care-tabs,
+    .service-faq-tabs,
+    .service-products-tabs {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto; 
+
+      .service-tabs__list--wrap {
+
+        @include screen("mo") {
+          position: relative;
+          width: 100%;     
+          
+          &::after {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 48px; 
+            height: 100%;
+            background: linear-gradient(to right, rgba(244, 244, 244, 0) 0%, rgba(244, 244, 244, 1) 100%);
+            pointer-events: none; 
+          }   
+          
+          &.theme-white {
+            &::after {
+              background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%) !important;
+            }
+          } 
+
+        }
+      }
+
+      .service-tabs__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px 0 4px;
+        margin-bottom: 17px;
+
+        .service-tabs__button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: auto;
+          height: 36px;
+          padding: 2px 10px;
+          overflow: hidden;
+          border: 1px solid #dee1e5;
+          border-radius: 100px;
+          background-color: #fff;
+          color: #111;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 18px;
+          white-space: nowrap;
+
+          &.is-active,
+          &[aria-selected="true"] {
+            border-color: #111;
+            background-color: #111;
+            color: #fff;
+            font-weight: 600;
+          }
+
+          &:last-child {
+            @include screen("mo") {
+              margin-right: 50px;            
+            }
+          }
+
+          @include screen("mo") {
+            flex: 0 0 auto;
+          }        
+
+        }
+
+        &--radius {
+          .service-tabs__button {
+            border-radius: 13px;
+          }
+        }    
+
+        @include screen("mo") {       
+          margin-bottom: 8px;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch; 
+          scroll-behavior: smooth;
+          gap: 4px; 
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          -ms-overflow-style: none;
+          scrollbar-width: none; 
+        }
+
+      }
+      .service-tabs__panel[hidden] {
+        display: none;
+      }
+      [data-service-notice][hidden] {
+        display: none;
+      }
     }
-  }
 
-  /* KV */
-  .service-page__intro {
-    background-color: #fff;
-    text-align: center;
+    // 헤드
+    .service-page__heading {
+      margin-bottom: 24px;
 
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 1200px;
-      margin: 0 auto;
-
-      .service-page__title {
+      h2 {
         margin: 0;
         color: #111;
         font-size: 36px;
         font-weight: 700;
         line-height: 48px;
+        text-align: center;
 
         @include screen("mo") {
           font-size: 26px;
-          font-style: normal;
           font-weight: 700;
           letter-spacing: -1.04px;
-        }
+          line-height: 140%;
+        }      
+
+        &.contact-title__small {
+          @include screen("mo") {
+            text-align: center;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px; 
+            letter-spacing: -0.3px;
+          }
+        }      
       }
 
-      .service-page__lead {
-        margin-top: 12px;
+      p {
+        margin: 8px auto 0;
         color: #444;
         font-size: 20px;
         font-weight: 400;
@@ -960,982 +929,267 @@
 
         @include screen("mo") {
           font-size: 15px;
+          font-weight: 400;
           letter-spacing: -0.2px;
           line-height: 20px;
-        }
-      }      
-    }
-  }
+        }      
+      }
 
-  /* 구독과 구매 무엇이 다를까요? */
-  .service-page__section--compare {
-    background-color: #fff;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
+      @include screen("mo") {
+        margin-bottom: 20px;
+      }
     }
 
-    .service-page__sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-    }
-
-    .service-compare {
-      width: 100%;
-      max-width: 780px; 
-      margin: 0 auto;
-      overflow: hidden;
-      border: 2.5px solid #06D9B6;
-      border-radius: 24px;
+    /* KV */
+    .service-page__intro {
       background-color: #fff;
-      box-shadow:
-        0 0 1px rgba(0, 0, 0, 0.36),
-        0 2px 8px rgba(0, 0, 0, 0.08);
+      text-align: center;
 
-      &__table {
-        width: 100%;
-        table-layout: fixed;
-        border-collapse: collapse;
-        color: #111;
-        text-align: left;
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 1200px;
+        margin: 0 auto;
 
-        .service-compare__label {
-          width: 150px;
+        .service-page__title {
+          margin: 0;
+          color: #111;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 48px;
 
           @include screen("mo") {
-            width: auto;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: -1.04px;
           }
         }
 
-        th,
-        td {
-          height: 56px;
-          vertical-align: middle;
-        }
+        .service-page__lead {
+          margin-top: 12px;
+          color: #444;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: -0.2px;
 
-        thead {
-          color: #fff;
-          background-color: #212731;
-
-          th {
-            padding: 12px 24px;
-            border: 0;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 28px;
+          @include screen("mo") {
+            font-size: 15px;
             letter-spacing: -0.2px;
+            line-height: 20px;
+          }
+        }      
+      }
+    }
 
-            &:first-child {
-              color: transparent;
+    /* 구독과 구매 무엇이 다를까요? */
+    .service-page__section--compare {
+      background-color: #fff;
+      text-align: center;
+
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
+        margin: 0 auto;
+      }
+
+      .service-page__sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+
+      .service-compare {
+        width: 100%;
+        max-width: 780px; 
+        margin: 0 auto;
+        overflow: hidden;
+        border: 2.5px solid #06D9B6;
+        border-radius: 24px;
+        background-color: #fff;
+        box-shadow:
+          0 0 1px rgba(0, 0, 0, 0.36),
+          0 2px 8px rgba(0, 0, 0, 0.08);
+
+        &__table {
+          width: 100%;
+          table-layout: fixed;
+          border-collapse: collapse;
+          color: #111;
+          text-align: left;
+
+          .service-compare__label {
+            width: 150px;
+
+            @include screen("mo") {
+              width: auto;
             }
+          }
 
-            img {
-              display: inline-block;
-              width: 28px;
-              height: 28px;
-              margin-right: 6px;
-              object-fit: contain;
-              vertical-align: top;
+          th,
+          td {
+            height: 56px;
+            vertical-align: middle;
+          }
+
+          thead {
+            color: #fff;
+            background-color: #212731;
+
+            th {
+              padding: 12px 24px;
+              border: 0;
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 28px;
+              letter-spacing: -0.2px;
+
+              &:first-child {
+                color: transparent;
+              }
+
+              img {
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                margin-right: 6px;
+                object-fit: contain;
+                vertical-align: top;
+                
+                @include screen("mo") {
+                  width: 18px;
+                  height: 18px;
+                  vertical-align: middle;
+                  object-fit: contain;
+                }
+              }
               
               @include screen("mo") {
-                width: 18px;
-                height: 18px;
-                vertical-align: middle;
-                object-fit: contain;
+                font-size: 14px;
+                letter-spacing: -0.14px;
+                padding: 12px 8px;
               }
             }
-            
-            @include screen("mo") {
-              font-size: 14px;
-              letter-spacing: -0.14px;
-              padding: 12px 8px;
-            }
           }
-        }
 
-        tbody {
-          tr {
-            border-bottom: 1px solid #dee1e5;
+          tbody {
+            tr {
+              border-bottom: 1px solid #dee1e5;
 
-            &:last-child {
-              border-bottom: 0;
-            }
+              &:last-child {
+                border-bottom: 0;
+              }
 
-            &:nth-child(3),
-            &:nth-child(4) {
-              background-color: #f3f5f7;
+              &:nth-child(3),
+              &:nth-child(4) {
+                background-color: #f3f5f7;
 
-              td {
+                td {
+                  color: #067f9d;
+                  font-weight: 600;
+                }
+              }
+
+              &:last-child td {
                 color: #067f9d;
                 font-weight: 600;
               }
             }
 
-            &:last-child td {
-              color: #067f9d;
-              font-weight: 600;
+            th {
+              padding: 16px;
+              border: 0;
+              background-color: #dee1e5;
+              color: #444;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: -0.08px;
+
+              @include screen("mo") {
+                font-size: 12px;
+              }
+            }
+
+            td {
+              padding: 8px 24px;
+              border: 0;
+              color: #111;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 1.3;
+              letter-spacing: -0.16px;
+
+              strong {
+                color: #067f9d;
+                font-weight: 600;
+              }
+
+              @include screen("mo") {
+                font-size: 12px;
+                padding: 8px 18px;
+              }            
             }
           }
 
-          th {
-            padding: 16px;
-            border: 0;
-            background-color: #dee1e5;
-            color: #444;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: normal;
-            letter-spacing: -0.08px;
-
-            @include screen("mo") {
-              font-size: 12px;
-            }
+          .background {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #DEE1E5;
+          }    
+          
+          .border {
+            border-bottom: 1px solid transparent !important;
+            border-top: 1px solid transparent !important;
           }
-
-          td {
-            padding: 8px 24px;
-            border: 0;
-            color: #111;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.3;
-            letter-spacing: -0.16px;
-
-            strong {
-              color: #067f9d;
-              font-weight: 600;
-            }
-
-            @include screen("mo") {
-              font-size: 12px;
-              padding: 8px 18px;
-            }            
-          }
-        }
-
-        .background {
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), #DEE1E5;
-        }    
-        
-        .border {
-          border-bottom: 1px solid transparent !important;
-          border-top: 1px solid transparent !important;
-        }
-      }       
-    }
-    
-  }
-
-  /* 구독하면 뭐가 좋은가요? */
-  .service-page__section--benefits {
-    background-color: $gray;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
-    }
-
-    .service-benefits {
-      display: flex;
-      gap: 12px;
-      width: 100%;
-      margin: 0;
-
-      &__item {
-        display: flex;
-        // flex: 1 1 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        // min-width: 0;
-        padding: 24px;
-        overflow: hidden;
-        border: 1px solid #eff0f2;
-        border-radius: 24px;
-        background: linear-gradient(90deg, #fff 0%, #fff 100%);
-
-        .service-benefits__item--box01 {
-          width: 100%;
-          margin-top: 4px;
-
-          @include screen("mo") {
-            padding-bottom: 12px;
-            width: 100%;
-          }
-        }
-
-        h3 {
-          margin-top: 6px;
-          color: #111;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 1.4;
-          letter-spacing: -0.27px;
-
-          @include screen("mo") {
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: -0.32px;
-            text-align: left;
-          }
-        }
-
-        p {
-          margin-top: 4px;
-          color: #666;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 1.4;
-          letter-spacing: -0.32px;
-
-          @include screen("mo") {
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: -0.156px;
-            text-align: left;
-          }
-        }
-
-        &:nth-child(1) .service-benefits__image {
-          width: 88px;
-          height: 88px;
-
-          @include screen("mo") {
-            width: 50px;
-            height: 50px;
-          }
-        }
-        &:nth-child(2) .service-benefits__image {
-          width: 64px;
-          height: 60px;
-
-          @include screen("mo") {
-            width: 50px;
-            height: 50px;
-          }          
-        }
-        &:nth-child(3) .service-benefits__image {
-          width: 74px;
-          height: 63px;
-
-          @include screen("mo") {
-            width: 50px;
-            height: 50px;
-          }          
-        } 
-        
-        @include screen("mo") {
-          padding: 16px 16px 18px 16px;
-          align-items: flex-start;
-          flex: auto;
-          position: relative;
-        }
+        }       
       }
-
-      &__image {
-        margin-bottom: 10px;
-
-        @include screen("mo") {
-          position: absolute;
-          right: 16px;
-          top: 16px;
-        }
-      }
-
-      &__tag {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 3px 4px;
-        border-radius: 4px;
-        background-color: #fff;
-        // border: 0.55px solid #fd312e;
-        color: #fd312e;
-        box-shadow: 0px 0px 2px #fd312e;
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 14px;
-        letter-spacing: -0.11px;
-
-        &--blue {
-          // border-color: #067f9d;
-          box-shadow: 0px 0px 2px #067f9d;
-          color: #067f9d;
-        }
-
-        &--yellow {
-          // border-color: #ab6226;
-          box-shadow: 0 0 2px #ab6226;
-          color: #ab6226;
-        }
-
-        @include screen("mo") {
-          font-size: 9px;
-          padding: 2px 3px;
-          align-items: flex-start;
-          justify-content: flex-start;
-          text-align: left;
-          width: max-content;
-          display: flex;
-        }        
-      }  
       
-      .service-benefits__item--box02 {
-        display: none;
-
-        .service-page__caption {
-          
-          @include screen("mo") {
-            text-align: left;
-          }
-        }
-
-        @include screen("mo") {
-          display: block;
-          padding-top: 10px;
-          border-top: 1px dashed #DEE1E5;
-          width: 100%;          
-          
-        }
-      }
-
-      @include screen("mo") {
-        flex-direction: column;
-      }
-    }
-  }
-
-  /* 대표 제품별 구독 서비스를 확인해보세요 */
-  .service-page__section--care {
-    background-color: $gray;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
     }
 
-    .service-care {
-      display: grid;
-      grid-template-columns: 1fr 1fr; 
-      column-gap: 48px;
-      width: 100%;
-      padding: 0px 20px; 
-      border: 1px solid #eff0f2;
-      border-radius: 24px; 
-      background-color: #fff;
-      text-align: left;
-      
-      &--four {
-        .service-care__item {
-          &:nth-child(1),
-          &:nth-child(2) {
-            border-bottom: 1px solid #eff0f2;
-          }
-        }
-      }
+    /* 구독하면 뭐가 좋은가요? */
+    .service-page__section--benefits {
+      background-color: $gray;
+      text-align: center;
 
-      &--two {
-        grid-template-columns: 1fr 1fr;
-        
-        @include screen("mo") {
-        
-          .service-care__item {
-            &:nth-child(1) {
-              border-bottom: 1px solid #eff0f2 !important;
-            }
-          }        
-        }     
-      }
-
-      &--single {
-        grid-template-columns: 1fr;
-        .service-care__item {
-          justify-content: center;
-        }
-      }
-
-      .service-care__item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 20px 0;
-
-        &:only-child {
-          padding: 50px 0; 
-          
-          @include screen("mo") {
-            padding: 20px 0;
-          }
-        }
-
-
-        &:nth-child(3) {
-          border-bottom: 1px solid #eff0f2;
-        }
-
-        &:nth-child(2),
-        &:nth-child(4) {
-          border-top: 1px solid transparent;
-        }
-
-        > div {
-          flex: 1 1 auto;
-          min-width: 0;
-          padding-top: 4px;
-          
-          @include screen("mo") {
-            padding-top: 0;
-          }
-        }
-
-        > div > span {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 2px 4px;
-          box-shadow: 0 0 1.1px #fd312e;
-          border-radius: 4px;
-          background-color: #fff;
-          color: #fd312e;
-          font-size: 11px;
-          font-weight: 600;
-          line-height: 14px;
-          letter-spacing: -0.11px;
-          vertical-align: middle;
-
-          @include screen("mo") {
-            font-size: 9px;
-            padding: 2px 3px;
-          }
-        }
-
-        h3 {
-          display: inline;
-          margin-left: 6px;
-          color: #111;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 22.4px; 
-          letter-spacing: -0.24px;
-          vertical-align: middle;
-
-          @include screen("mo") {
-            font-size: 13px;
-            line-height: 130%; 
-            letter-spacing: -0.195px;
-          }
-        }
-
-        p {
-          margin-top: 4px;
-          color: #444;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.4;
-          letter-spacing: -0.28px;
-        }
-
-        strong {
-          display: inline-flex;
-          flex: 0 0 auto;
-          align-items: center;
-          gap: 1px;
-          margin-right: 3px;
-          font-weight: 600;
-
-          &::after {
-            content: "";;
-            display: inline-block;
-            width: 16px;
-            height: 16px; 
-            line-height: 16px;
-            background: url(../images/ic_info.png) no-repeat center center / contain;
-            vertical-align: middle;
-          }
-
-          @include screen("mo") {
-            align-items: flex-start;
-          }
-        }
-
-        img {
-          flex: 0 0 132px;
-          width: 132px;
-          height: 88px;
-          overflow: hidden;
-          border-radius: 12px;
-          object-fit: cover;
-
-          @include screen("mo") {
-            flex: 0 0 103px;
-            width: 103px;
-            height: 58px;
-          }
-        }
-
-        &--detailed {
-          // min-height: 136px;
-
-        p {
-          display: flex;
-          gap: 3px;
-          padding-left: 12px; 
-          padding-bottom: 3px; 
-          margin-top: 0; 
-          border-left: 1px solid #DEE1E5;
-          
-          &:last-child {
-            padding-bottom: 0;
-          }
-
-          @include screen("mo") {
-            padding-left: 8px;
-          }
-        }
-
-          h3 + p {
-            margin-top: 6px;
-          }
-        }
-
-        // 파란색 (소모품 교체)
-        &--supply {
-          border-color: #067f9d;
-          color: #067f9d;
-        }
-
-        // 갈색 (무상 서비스)
-        &--free {
-          border-color: #ab6226;
-          color: #ab6226;
-        }
-
-        &--no-media {
-          width: 100%;
-        }
-
-        @include screen("mo") {
-          padding: 10px 0;
-          align-items: flex-start;
-
-          // 순서 변경
-          &:nth-child(1) { order: 1; }
-          &:nth-child(2) { order: 3; } 
-          &:nth-child(3) { order: 2; } 
-          &:nth-child(4) { order: 4; }
-
-        }        
-      }
-
-      @include screen("mo") {
-        grid-template-columns: auto;
-        padding: 0 12px;
-        border-radius: 16px;
-      }
-    }
-
-    .service-care__tag--supply {
-      box-shadow: 0 0 1.1px #067f9d !important;
-      color: #067f9d !important;
-    }
-
-    .service-care__tag--free {
-      box-shadow: 0 0 1.1px #ab6226 !important;
-      color: #ab6226 !important;
-    }
-
-    .service-care__notice {
-      margin-top: 32px;
-      text-align: left;
-
-      &--button {
-        width: 100%;
-        min-height: 60px;
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
         margin: 0 auto;
-        color: #111;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.4;
-        letter-spacing: -0.48px;
       }
 
-      &-content {
-        margin-top: 8px;
-      }
-    }
-
-    /* 툴팁 */
-    .service-tooltip__wrap {
-      position: relative;
-
-      @include screen("mo") {
-        font-size: 11px !important;
-      }
-    }
-
-    .service-tooltip__btn {
-      cursor: pointer;
-
-      @include screen("mo") {
-        font-size: 11px;
-        line-height: 140%;
-        letter-spacing: -0.22px;        
-      }
-    }
-
-    .service-tooltip {
-      position: absolute;
-      top: 70%; 
-      left: 0;
-      z-index: 10;
-      width: 280px;
-      padding: 20px;
-      margin-top: 8px; 
-      background-color: #fff;
-      border-radius: 16px;
-      border: 1px solid #eff0f2;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      box-sizing: border-box;
-
-      &[hidden] {
-        display: none !important;
-      }
-
-      &__header {
+      .service-benefits {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 12px;
-      }
-
-      &__title {
-        display: block;
-        color: #111;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 20px;
-        letter-spacing: -0.2px;
-      }
-
-      &__close {
-        position: relative;
-        width: 24px;
-        height: 24px;
-        padding: 0;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 16px;
-          height: 1.5px;
-          background-color: #111;
-        }
-
-        &::before { transform: translate(-50%, -50%) rotate(45deg); }
-        &::after { transform: translate(-50%, -50%) rotate(-45deg); }
-      }
-
-      &__desc {
-        display: block;
-        color: #444;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 18px;
-      }
-    }   
-
-  }
-
-  /* 계약 전에 꼭 확인해 주세요 */
-  .service-page__section--contract {
-    background-color: #fff;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
-    }
-
-    .service-checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    max-width: 780px;
-    margin: 0 auto;
-
-    &__item {
-      padding: 24px;
-      border-radius: 20px;
-      background-color: $gray; 
-      border: 1px solid transparent;
-      text-align: left;
-      transition: all 0.3s ease;
-
-      @include screen("mo") {
-        padding: 16px;
-        border-radius: 16px;
-
-        &:has(.service-checklist__button[aria-expanded="true"]) {
-          background-color: #f8f9fa;
-          border-color: #8F9298;
-        }
-      }
-    }
-
-    &__header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      background-color: transparent;
-      color: #111;
-      text-align: left;
-      // pointer-events: none; 
-
-      .chk-icon {
-        display: inline-flex;
-        flex: 0 0 20px;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #111; 
-        color: #fff;
-        font-size: 13px;
-        font-weight: 700;
-        transition: background-color 0.3s;
-      }
-
-      @include screen("mo") {
-        pointer-events: auto;
-        cursor: pointer;
-        position: relative;
-        padding-right: 30px; 
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 0;
-          margin-top: -8px;
-          width: 16px;
-          height: 16px;
-          background: url(../images/icon_arr.png) no-repeat center center / contain;
-          transform: rotate(90deg); 
-          transition: transform 0.3s ease;
-        }
-
-        // 닫힘 상태
-        &[aria-expanded="false"] {
-          .chk-icon { background-color: #a0a0a0; }
-          .service-checklist__title { font-weight: 500; }
-        }
-
-        // 열림 상태
-        &[aria-expanded="true"] {
-          .chk-icon { background-color: #111; }
-          .service-checklist__title { font-weight: 700; }
-          &::after { transform: rotate(270deg); }
-        }
-      }
-    }
-
-    &__title {
-      flex: 1 1 auto;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.4;
-      letter-spacing: -0.27px;
-
-      @include screen("mo") {
-        font-size: 14px;
-      }
-    }
-
-    &__content {
-      padding-left: 32px; 
-      color: #444;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.4;
-      letter-spacing: -0.32px;
-
-      p { margin-top: 5px; }
-
-      @include screen("mo") {
-        padding-top: 6px;
-        font-size: 12px;
-
-        p { margin-top: 0; }
-      }
-
-      // @include screen("mo") {
-      //   display: block !important; 
-      // }
-    }
-    }
-
-  }
-
-  /* 모바일 전용 배너 */
-  .promo-banner {
-    display: none;
-    
-    @include screen("mo") {
-      display: block;
-      width: 100%;
-      min-height: 109px;
-      overflow: hidden;
-      background: url('../images/mo_banner.jpg') no-repeat center right / cover;
-
-      &__link {
-        display: flex;
-        align-items: center;
+        gap: 12px;
         width: 100%;
-        height: 100%;
-        min-height: 109px;
-        box-sizing: border-box;
-        text-decoration: none;
-      }
-
-      &__content {
-        display: flex;
-        flex-direction: column;
-        padding-left: 35px;
-      }
-
-      &__title {
         margin: 0;
-        color: #fff;
-        font-family: Pretendard;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 20px; 
-        letter-spacing: -0.2px;
-      }
 
-      &__desc {
-        margin: 0;
-        color: #fff;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 16px;
-        opacity: 0.7;
-        padding-top: 3px;
+        &__item {
+          display: flex;
+          // flex: 1 1 0;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 24px;
+          overflow: hidden;
+          border: 1px solid #eff0f2;
+          border-radius: 24px;
+          background: linear-gradient(90deg, #fff 0%, #fff 100%);
 
-        &::after {
-          content: '';
-          display: inline-block;
-          background: url(../images/ic_right.png) no-repeat 0 0 / 100%;
-          width: 12px;
-          height: 12px;
-          vertical-align: middle;
-        }
-      }      
-    }
-  }
+          .service-benefits__item--box01 {
+            width: 100%;
+            margin-top: 4px;
 
-  /* 해지와 만료, 이렇게 진행돼요 */
-  .service-page__section--cancel {
-    background-color: #f9fafb;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .service-cancel {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      width: 100%;
-      max-width: 780px;
-      padding-top: 8px;
-      margin: 0 auto;
-      text-align: left;
-
-      &::before {
-        position: absolute;
-        top: 32px;
-        bottom: 32px;
-        left: 23px;
-        width: 2px;
-        background-color: #EFF0F2;
-        content: "";
-
-        @include screen("mo") {
-          left: 17px;
-        }
-      }
-
-      &__step {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: 48px minmax(0, 1fr);
-        column-gap: 4px;
-        align-items: start;
-
-        @include screen("mo") {
-          grid-template-columns: 35px minmax(0, 1fr);
-        }
-
-        > img {
-          box-sizing: border-box;
-          width: 48px;
-          height: 48px;
-          padding: 6px;
-          border-radius: 16px;
-          background-color: #F3F5F7;
-          object-fit: contain;
-
-          @include screen("mo") {
-            width: 36px;
-            height: 36px;
-            padding: 4px;
-            border-radius: 12px;
-          }
-        }
-
-        > div {
-          min-width: 0;
-          padding-top: 4px;
-
-          > h3,
-          > p {
-            margin-left: 16px;
+            @include screen("mo") {
+              padding-bottom: 12px;
+              width: 100%;
+            }
           }
 
-          > h3 {
+          h3 {
+            margin-top: 6px;
             color: #111;
             font-size: 18px;
             font-weight: 600;
@@ -1944,201 +1198,848 @@
 
             @include screen("mo") {
               font-size: 16px;
+              font-weight: 600;
+              letter-spacing: -0.32px;
+              text-align: left;
             }
           }
 
-          > p {
-            margin-top: 2px;
-            color: #444;
-            font-size: 15px;
-            font-weight: 400;
+          p {
+            margin-top: 4px;
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
             line-height: 1.4;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.32px;
 
             @include screen("mo") {
               font-size: 13px;
-            }            
-
-            a {
-              color: inherit;
-              text-decoration: none;
+              font-weight: 400;
+              letter-spacing: -0.156px;
+              text-align: left;
             }
           }
-        }
 
-        .service-accordion__title {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          margin-left: 16px;
-          color: #111;
-          font-size: 18px;
-          font-weight: 700;
+          &:nth-child(1) .service-benefits__image {
+            width: 88px;
+            height: 88px;
 
-          &::after {
-            content: "";
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background: url(../images/icon_arr.png) no-repeat center center / contain;
-            transform: rotate(90deg); 
-            transition: transform 0.3s ease;
+            @include screen("mo") {
+              width: 50px;
+              height: 50px;
+            }
           }
+          &:nth-child(2) .service-benefits__image {
+            width: 64px;
+            height: 60px;
 
-          [aria-expanded="true"] &::after {
-            transform: rotate(270deg); 
+            @include screen("mo") {
+              width: 50px;
+              height: 50px;
+            }          
           }
+          &:nth-child(3) .service-benefits__image {
+            width: 74px;
+            height: 63px;
 
+            @include screen("mo") {
+              width: 50px;
+              height: 50px;
+            }          
+          } 
+          
           @include screen("mo") {
-            font-size: 16px;
-          }
-        }
-
-        .service-accordion__desc {
-          margin: 4px 0 0 16px;
-          color: #444;
-          font-size: 15px;
-          line-height: 1.4;
-          font-weight: 400;
-
-          @include screen("mo") {
-            font-size: 13px;
-          }          
-        }
-
-        .service-accordion__content {
-          margin-top: 8px;
-
-          &[hidden] {
-            display: none !important;
-          }
-        }
-
-        .service-accordion__list {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-
-          li {
+            padding: 16px 16px 18px 16px;
+            align-items: flex-start;
+            flex: auto;
             position: relative;
-            padding-left: 10px;
-            color: #444;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%; 
-            letter-spacing: -0.39px;
-
-            &::before {
-              content: "";      
-              margin-right: 4px;
-              display: inline-block;
-              width: 3px;
-              height: 3px;
-              border-radius: 50%;
-              background: #666;
-              vertical-align: middle;
-            }
-
-            &:first-child {
-              margin-top: 0;
-            }
-          }
-
-          .text-red {
-            color: #FD312E; 
-            font-weight: 600;
           }
         }
 
-        &[data-service-accordion].is-open,
-        [data-service-accordion].is-open {
-          .service-accordion__title::after {
-            transform: rotate(270deg); 
+        &__image {
+          margin-bottom: 10px;
+
+          @include screen("mo") {
+            position: absolute;
+            right: 16px;
+            top: 16px;
           }
         }
 
-      }
+        &__tag {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 3px 4px;
+          border-radius: 4px;
+          background-color: #fff;
+          // border: 0.55px solid #fd312e;
+          color: #fd312e;
+          box-shadow: 0px 0px 2px #fd312e;
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 14px;
+          letter-spacing: -0.11px;
 
-      .service-cancel__fees {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        margin-top: 12px;
+          &--blue {
+            // border-color: #067f9d;
+            box-shadow: 0px 0px 2px #067f9d;
+            color: #067f9d;
+          }
+
+          &--yellow {
+            // border-color: #ab6226;
+            box-shadow: 0 0 2px #ab6226;
+            color: #ab6226;
+          }
+
+          @include screen("mo") {
+            font-size: 9px;
+            padding: 2px 3px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            width: max-content;
+            display: flex;
+          }        
+        }  
+        
+        .service-benefits__item--box02 {
+          display: none;
+
+          .service-page__caption {
+            
+            @include screen("mo") {
+              text-align: left;
+            }
+          }
+
+          @include screen("mo") {
+            display: block;
+            padding-top: 10px;
+            border-top: 1px dashed #DEE1E5;
+            width: 100%;          
+            
+          }
+        }
 
         @include screen("mo") {
-          margin-top: 8px;
-          gap: 8px;
+          flex-direction: column;
         }
+      }
+    }
 
-        .service-accordion {
-          overflow: hidden;
-          border: 1px solid #ccd1d6; 
-          border-radius: 12px;
-          background-color: #fff;
+    /* 대표 제품별 구독 서비스를 확인해보세요 */
+    .service-page__section--care {
+      background-color: $gray;
+      text-align: center;
 
-          .service-accordion__button {
-            &[aria-expanded="true"]::after {
-              transform: rotate(270deg);
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
+        margin: 0 auto;
+      }
+
+      .service-care {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        column-gap: 48px;
+        width: 100%;
+        padding: 0px 20px; 
+        border: 1px solid #eff0f2;
+        border-radius: 24px; 
+        background-color: #fff;
+        text-align: left;
+        
+        &--four {
+          .service-care__item {
+            &:nth-child(1),
+            &:nth-child(2) {
+              border-bottom: 1px solid #eff0f2;
             }
           }
         }
 
-        .service-accordion__button {
+        &--two {
+          grid-template-columns: 1fr 1fr;
+          
+          @include screen("mo") {
+          
+            .service-care__item {
+              &:nth-child(1) {
+                border-bottom: 1px solid #eff0f2 !important;
+              }
+            }        
+          }     
+        }
+
+        &--single {
+          grid-template-columns: 1fr;
+          .service-care__item {
+            justify-content: center;
+          }
+        }
+
+        .service-care__item {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 6px;
+          gap: 10px;
+          padding: 20px 0;
+
+          &:only-child {
+            padding: 50px 0; 
+            
+            @include screen("mo") {
+              padding: 20px 0;
+            }
+          }
+
+
+          &:nth-child(3) {
+            border-bottom: 1px solid #eff0f2;
+          }
+
+          &:nth-child(2),
+          &:nth-child(4) {
+            border-top: 1px solid transparent;
+          }
+
+          > div {
+            flex: 1 1 auto;
+            min-width: 0;
+            padding-top: 4px;
+            
+            @include screen("mo") {
+              padding-top: 0;
+            }
+          }
+
+          > div > span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 4px;
+            box-shadow: 0 0 1.1px #fd312e;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #fd312e;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 14px;
+            letter-spacing: -0.11px;
+            vertical-align: middle;
+
+            @include screen("mo") {
+              font-size: 9px;
+              padding: 2px 3px;
+              margin-bottom: 3px;
+            }
+          }
+
+          h3 {
+            display: inline;
+            margin-left: 3px;
+            color: #111;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px; 
+            letter-spacing: -0.24px;
+            vertical-align: middle;
+
+            @include screen("mo") {
+              font-size: 13px;
+              line-height: 130%; 
+              letter-spacing: -0.195px;
+            }
+          }
+
+          p {
+            margin-top: 4px;
+            color: #444;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: -0.28px;
+          }
+
+          strong {
+            display: inline-flex;
+            flex: 0 0 auto;
+            align-items: center;
+            gap: 1px;
+            margin-right: 3px;
+            font-weight: 600;
+
+            &::after {
+              content: "";;
+              display: inline-block;
+              width: 16px;
+              height: 16px; 
+              line-height: 16px;
+              background: url(../images/ic_info.png) no-repeat center center / contain;
+              vertical-align: middle;
+            }
+
+            @include screen("mo") {
+              align-items: flex-start;
+            }
+          }
+
+          img {
+            flex: 0 0 132px;
+            width: 132px;
+            height: 88px;
+            overflow: hidden;
+            border-radius: 12px;
+            object-fit: cover;
+
+            @include screen("mo") {
+              flex: 0 0 103px;
+              width: 103px;
+              height: 58px;
+            }
+          }
+
+          &--detailed {
+            // min-height: 136px;
+
+          p {
+            display: flex;
+            gap: 3px;
+            // padding-left: 12px; 
+            padding-bottom: 3px; 
+            margin-top: 0; 
+            // border-left: 1px solid #DEE1E5;
+            
+            &:last-child {
+              padding-bottom: 0;
+            }
+
+            @include screen("mo") {
+              // padding-left: 8px;
+            }
+          }
+
+            h3 + p {
+              margin-top: 6px;
+            }
+          }
+
+          // 파란색 (소모품 교체)
+          &--supply {
+            border-color: #067f9d;
+            color: #067f9d;
+          }
+
+          // 갈색 (무상 서비스)
+          &--free {
+            border-color: #ab6226;
+            color: #ab6226;
+          }
+
+          &--no-media {
+            width: 100%;
+          }
+
+          @include screen("mo") {
+            padding: 10px 0;
+            align-items: flex-start;
+
+            // 순서 변경
+            &:nth-child(1) { order: 1; }
+            &:nth-child(2) { order: 3; } 
+            &:nth-child(3) { order: 2; } 
+            &:nth-child(4) { order: 4; }
+
+          }        
+        }
+
+        @include screen("mo") {
+          grid-template-columns: auto;
+          padding: 0 12px;
+          border-radius: 16px;
+        }
+      }
+
+      .service-care__tag--supply {
+        box-shadow: 0 0 1.1px #067f9d !important;
+        color: #067f9d !important;
+      }
+
+      .service-care__tag--free {
+        box-shadow: 0 0 1.1px #ab6226 !important;
+        color: #ab6226 !important;
+      }
+
+      .service-care__notice {
+        margin-top: 32px;
+        text-align: left;
+
+        &--button {
           width: 100%;
-          min-height: 54px;
-          padding: 14px 20px;
-          border: 0;
-          background-color: transparent;
-          color: #333;
-          font-size: 14px;
+          min-height: 50px;
+          margin: 0 auto;
+          color: #111;
+          font-size: 16px;
           font-weight: 500;
-          line-height: 19.6px;
-          text-align: left;
+          line-height: 1.4;
+          letter-spacing: -0.48px;
+        }
+
+        &-content {
+          margin-top: 8px;
+        }
+        
+        @include screen("mo") {
+          margin-top: 0px;
+        }
+      }
+
+      /* 툴팁 */
+      .service-tooltip__wrap {
+        position: relative;
+
+        @include screen("mo") {
+          font-size: 11px !important;
+        }
+      }
+
+      .service-tooltip__btn {
+        cursor: pointer;
+
+        @include screen("mo") {
+          font-size: 11px;
+          line-height: 140%;
+          letter-spacing: -0.22px;        
+        }
+      }
+
+      .service-tooltip {
+        position: absolute;
+        top: 70%; 
+        left: 0;
+        z-index: 10;
+        width: 280px;
+        padding: 20px;
+        margin-top: 8px; 
+        background-color: #fff;
+        border-radius: 16px;
+        border: 1px solid #eff0f2;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+
+        &[hidden] {
+          display: none !important;
+        }
+
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 12px;
+        }
+
+        &__title {
+          display: block;
+          color: #111;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: -0.2px;
+        }
+
+        &__close {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          padding: 0;
+          background: transparent;
+          border: none;
           cursor: pointer;
 
+          &::before,
           &::after {
-            flex: 0 0 16px;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
             width: 16px;
-            height: 16px;
-            background: url(../images/icon_arr.png) no-repeat center center / contain;
-            content: "";
-            transform: rotate(90deg);
-            transition: transform 0.3s ease;
+            height: 1.5px;
+            background-color: #111;
           }
-          
+
+          &::before { transform: translate(-50%, -50%) rotate(45deg); }
+          &::after { transform: translate(-50%, -50%) rotate(-45deg); }
+        }
+
+        &__desc {
+          display: block;
+          color: #444;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }   
+
+    }
+
+    /* 계약 전에 꼭 확인해 주세요 */
+    .service-page__section--contract {
+      background-color: #fff;
+      text-align: center;
+
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
+        margin: 0 auto;
+      }
+
+      .service-checklist {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        max-width: 780px;
+        margin: 0 auto;
+
+        &__item {
+          padding: 24px;
+          border-radius: 20px;
+          background-color: $gray; 
+          border: 1px solid transparent;
+          text-align: left;
+          transition: all 0.3s ease;
+
           @include screen("mo") {
             padding: 16px;
-            font-size: 13px;
+            border-radius: 16px;
+
+            &:has(.service-checklist__button[aria-expanded="true"]) {
+              background-color: #f8f9fa;
+              border-color: #8F9298;
+            }
           }
         }
 
-        .service-accordion__content {
-          padding: 0 20px 14px;
-          color: #444;
-          font-size: 14px;
-          line-height: 1.6; 
-          letter-spacing: -0.3px;
+        &__header {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          padding: 0;
+          border: 0;
+          background-color: transparent;
+          color: #111;
+          text-align: left;
+          pointer-events: none;
 
-          &[hidden] {
-            display: none;
-          }
-          
-          p {
+          .chk-icon {
+            display: inline-flex;
+            flex: 0 0 20px;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #111; 
+            color: #fff;
             font-size: 13px;
-            font-weight: 400;
-            line-height: 140%;
-            letter-spacing: -0.156px;
+            font-weight: 700;
+            transition: background-color 0.3s;
           }
 
-          .service-fee-list {
-            margin: 6px 0 0 0;
-            padding: 0;
+          @include screen("mo") {
+            pointer-events: auto;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px; 
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 0;
+              margin-top: -8px;
+              width: 16px;
+              height: 16px;
+              background: url(../images/icon_arr.png) no-repeat center center / contain;
+              transform: rotate(90deg); 
+              transition: transform 0.3s ease;
+            }
+
+            // 닫힘 상태
+            &[aria-expanded="false"] {
+              .chk-icon { background-color: #a0a0a0; }
+              .service-checklist__title { font-weight: 500; }
+            }
+
+            // 열림 상태
+            &[aria-expanded="true"] {
+              .chk-icon { background-color: #111; }
+              .service-checklist__title { font-weight: 700; }
+              &::after { transform: rotate(270deg); }
+            }
+          }
+        }
+
+        &__title {
+          flex: 1 1 auto;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1.4;
+          letter-spacing: -0.27px;
+
+          @include screen("mo") {
+            font-size: 14px;
+          }
+        }
+
+        &__content {
+          padding-left: 27px; 
+          color: #444;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.4;
+          letter-spacing: -0.32px;
+
+          p { margin-top: 5px; }
+
+          @include screen("pc") {
+            &[hidden] {
+              display: block;
+            }
+          }
+
+          @include screen("mo") {
+            padding-top: 6px;
+            padding-left: 0px;
+            font-size: 12px;
+
+            p { margin-top: 0; }
+          }
+
+        }
+      }
+
+    }
+
+    /* 모바일 전용 배너 */
+    .promo-banner {
+      display: none;
+      
+      @include screen("mo") {
+        display: block;
+        width: 100%;
+        min-height: 109px;
+        overflow: hidden;
+        background: url('../images/mo_banner.jpg') no-repeat center right / cover;
+
+        &__link {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          min-height: 109px;
+          box-sizing: border-box;
+          text-decoration: none;
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          padding-left: 35px;
+        }
+
+        &__title {
+          margin: 0;
+          color: #fff;
+          font-family: Pretendard;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px; 
+          letter-spacing: -0.2px;
+        }
+
+        &__desc {
+          margin: 0;
+          color: #fff;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          opacity: 0.7;
+          padding-top: 3px;
+
+          &::after {
+            content: '';
+            display: inline-block;
+            background: url(../images/ic_right.png) no-repeat 0 0 / 100%;
+            width: 12px;
+            height: 12px;
+            vertical-align: middle;
+          }
+        }      
+      }
+    }
+
+    /* 해지와 만료, 이렇게 진행돼요 */
+    .service-page__section--cancel {
+      background-color: #f9fafb;
+      text-align: center;
+
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .service-cancel {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        max-width: 780px;
+        padding-top: 8px;
+        margin: 0 auto;
+        text-align: left;
+
+        &::before {
+          position: absolute;
+          top: 32px;
+          bottom: 32px;
+          left: 23px;
+          width: 2px;
+          background-color: #EFF0F2;
+          content: "";
+
+          @include screen("mo") {
+            left: 17px;
+          }
+        }
+
+        &__step {
+          position: relative;
+          z-index: 1;
+          display: grid;
+          grid-template-columns: 48px minmax(0, 1fr);
+          column-gap: 4px;
+          align-items: start;
+
+          @include screen("mo") {
+            grid-template-columns: 35px minmax(0, 1fr);
+          }
+
+          > img {
+            box-sizing: border-box;
+            width: 48px;
+            height: 48px;
+            padding: 6px;
+            border-radius: 16px;
+            background-color: #F3F5F7;
+            object-fit: contain;
+
+            @include screen("mo") {
+              width: 36px;
+              height: 36px;
+              padding: 4px;
+              border-radius: 12px;
+            }
+          }
+
+          > div {
+            min-width: 0;
+            padding-top: 4px;
+
+            > h3,
+            > p {
+              margin-left: 16px;
+            }
+
+            > h3 {
+              color: #111;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1.4;
+              letter-spacing: -0.27px;
+
+              @include screen("mo") {
+                font-size: 16px;
+              }
+            }
+
+            > p {
+              margin-top: 2px;
+              color: #444;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 1.4;
+              letter-spacing: -0.3px;
+
+              @include screen("mo") {
+                font-size: 13px;
+              }            
+
+              a {
+                color: inherit;
+                text-decoration: none;
+              }
+            }
+          }
+
+          .service-accordion__title {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 16px;
+            color: #111;
+            font-size: 18px;
+            font-weight: 700;
+
+            &::after {
+              content: "";
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background: url(../images/icon_arr.png) no-repeat center center / contain;
+              transform: rotate(90deg); 
+              transition: transform 0.3s ease;
+            }
+
+            @include screen("mo") {
+              font-size: 16px;
+            }
+          }
+
+          .service-accordion__button[aria-expanded="true"] {
+            .service-accordion__title::after {
+              transform: rotate(270deg);
+            }
+          }
+
+          .service-accordion__desc {
+            margin: 4px 0 0 16px;
+            color: #444;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 400;
+
+            @include screen("mo") {
+              font-size: 13px;
+            }          
+          }
+
+          .service-accordion__content {
+            margin-top: 8px;
+
+            &[hidden] {
+              display: none !important;
+            }
+          }
+
+          .service-accordion__list {
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -2146,6 +2047,7 @@
             li {
               position: relative;
               padding-left: 10px;
+              color: #444;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
@@ -2159,335 +2061,497 @@
                 width: 3px;
                 height: 3px;
                 border-radius: 50%;
-                background: #444;
+                background: #666;
                 vertical-align: middle;
+              }
+
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+
+            .text-red {
+              color: #FD312E; 
+              font-weight: 600;
+            }
+          }
+
+          &[data-service-accordion].is-open,
+          [data-service-accordion].is-open {
+            .service-accordion__title::after {
+              transform: rotate(270deg); 
+            }
+          }
+
+        }
+
+        .service-cancel__fees {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          margin-top: 12px;
+
+          @include screen("mo") {
+            margin-top: 8px;
+            gap: 8px;
+          }
+
+          .service-accordion {
+            overflow: hidden;
+            border: 1px solid #ccd1d6; 
+            border-radius: 12px;
+            background-color: #fff;
+
+            .service-accordion__button {
+              &[aria-expanded="true"]::after {
+                transform: rotate(270deg);
               }
             }
           }
 
-          .service-fee-note {
-            margin-top: 16px;
-            padding-top: 10px;
-            border-top: 1px dashed #DEE1E5; 
+          .service-accordion__button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            width: 100%;
+            min-height: 54px;
+            padding: 14px 20px;
+            border: 0;
+            background-color: transparent;
             color: #444;
-            font-size: 13px;
-            line-height: 140%;
-            letter-spacing: -0.39px;
-          }
-        }
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.6px;
+            text-align: left;
+            cursor: pointer;
 
-        .service-cancel__return-fee {
-          width: 100%;
+            &::after {
+              flex: 0 0 16px;
+              width: 16px;
+              height: 16px;
+              background: url(../images/icon_arr.png) no-repeat center center / contain;
+              content: "";
+              transform: rotate(90deg);
+              transition: transform 0.3s ease;
+            }
+            
+            @include screen("mo") {
+              padding: 16px;
+              font-size: 13px;
+            }
+          }
+
+          .service-accordion__content {
+            padding: 0 20px 14px;
+            color: #444;
+            font-size: 14px;
+            line-height: 1.6; 
+            letter-spacing: -0.3px;
+
+            &[hidden] {
+              display: none;
+            }
+            
+            p {
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 140%;
+              letter-spacing: -0.156px;
+            }
+
+            .service-fee-list {
+              margin: 6px 0 0 0;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+
+              li {
+                position: relative;
+                padding-left: 10px;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; 
+                letter-spacing: -0.39px;
+
+                &::before {
+                  content: "";      
+                  margin-right: 4px;
+                  display: inline-block;
+                  width: 3px;
+                  height: 3px;
+                  border-radius: 50%;
+                  background: #444;
+                  vertical-align: middle;
+                }
+              }
+            }
+
+            .service-fee-note {
+              margin-top: 16px;
+              padding-top: 10px;
+              border-top: 1px dashed #DEE1E5; 
+              color: #444;
+              font-size: 13px;
+              line-height: 140%;
+              letter-spacing: -0.39px;
+
+              @include screen("mo") {
+                margin-top: 10px;
+              }
+            }
+
+            @include screen("mo") {
+              padding: 0 16px 16px 16px;
+            }
+          }
+
+          .service-cancel__return-fee {
+            width: 100%;
+
+            .service-cancel__return-fee-button {
+              &[aria-expanded="true"]::after {
+                transform: rotate(270deg);
+              }
+            }
+          }
 
           .service-cancel__return-fee-button {
-            &[aria-expanded="true"]::after {
-              transform: rotate(270deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            width: 100%;
+            min-height: 28px;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            border: 0;
+            background-color: transparent;
+            color: #111;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: -0.42px;
+            text-align: center;
+
+            &::after {
+              flex: 0 0 16px;
+              width: 16px;
+              height: 16px;
+              background: url(../images/icon_arr.png) no-repeat center center / contain;
+              content: "";
+              transform: rotate(90deg);
+              transition: transform 0.3s ease;
+            }
+
+            @include screen("mo") {
+              padding-bottom: 0px;
+              padding-top: 0px;
+              font-size: 12px;
+            }
+          }
+
+          .service-cancel__return-fee-content {
+            width: 100%;
+            overflow: hidden;
+
+            &[hidden] {
+              display: none;
+            }
+          }
+
+          .service-cancel__return-fee-scroll {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .service-cancel__return-fee-table {
+            width: 100%;
+            min-width: 560px;
+            table-layout: fixed;
+            border-collapse: collapse;
+            color: #666;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: -0.36px;
+            text-align: center;
+
+            @include screen("mo") {
+              margin-top: 8px;
+              min-width: auto;
+            }
+
+            th,
+            td {
+              height: 32px;
+              padding: 3px 12px;
+              border: 1px solid #ebebeb;
+              vertical-align: middle;
+              color: #666;
+              text-align: center;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 140%;
+              letter-spacing: -0.36px;    
+              
+              @include screen("mo") {
+                font-size: 10px;
+              }
+            }
+
+            th {
+              padding-top: 4px;
+              padding-bottom: 4px;
+              background-color: #ebebeb;
+              font-weight: 600;
+            }
+
+            td {
+              background-color: #fff;
             }
           }
         }
 
-        .service-cancel__return-fee-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 4px;
-          width: 100%;
-          min-height: 28px;
-          padding-bottom: 10px;
-          padding-top: 5px;
-          border: 0;
-          background-color: transparent;
-          color: #111;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.4;
-          letter-spacing: -0.42px;
-          text-align: center;
+      }
+    }
 
-          &::after {
-            flex: 0 0 16px;
-            width: 16px;
-            height: 16px;
-            background: url(../images/icon_arr.png) no-repeat center center / contain;
-            content: "";
-            transform: rotate(90deg);
-            transition: transform 0.3s ease;
+    /* 가전 구독 자주 묻는 질문 */
+    .service-page__section--faq {
+      background-color: #fff;
+      text-align: center;
+
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
+        margin: 0 auto;
+      }
+
+      .faq-accordion {
+        width: 100%;
+        border-top: 1px solid #000;
+        text-align: left;
+
+        &__item {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        &__heading {
+          margin: 0;
+        }
+
+        &__button {
+          display: grid;
+          grid-template-columns: 12px minmax(0, 1fr) 40px;
+          align-items: center;
+          width: 100%;
+          min-height: 65px;
+          padding: 20px 22px;
+          border: 0;
+          background-color: #fff;
+          color: #111;
+          cursor: pointer;
+          text-align: left;
+
+          &:focus-visible {
+            outline: 2px solid #111 !important;
+            outline-offset: -2px;
+          }
+
+          &[aria-expanded="true"] {
+            .faq-accordion__icon {
+              transform: rotate(180deg);
+            }
           }
 
           @include screen("mo") {
-            padding-bottom: 0px;
-            padding-top: 0px;
+            padding: 18px 8px;
+            line-height: 20px;
           }
         }
 
-        .service-cancel__return-fee-content {
-          width: 100%;
+        &__q-mark {
+          width: 12px;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1.4;
+          letter-spacing: -0.2px;
+          
+          @include screen("mo") {
+            font-size: 15px;
+            line-height: 20px;
+          }
+        }
+
+        &__title {
+          min-width: 0;
+          margin-left: 8px;
           overflow: hidden;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.4;
+          // text-overflow: ellipsis;
+          // white-space: nowrap;
+
+          @include screen("mo") {
+            font-size: 14px;
+          }
+
+        }
+
+        &__icon {
+          position: relative;
+          justify-self: end;
+          width: 24px;
+          height: 24px;
+          transition: transform 0.2s ease;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            border-right: 1.5px solid #111;
+            border-bottom: 1.5px solid #111;
+            content: "";
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+
+          @include screen("mo") {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        &__content {
+          background-color: #f9fafb;
+          color: #444;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.4;
+          letter-spacing: -0.3px;
 
           &[hidden] {
             display: none;
           }
         }
 
-        .service-cancel__return-fee-scroll {
-          width: 100%;
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        .service-cancel__return-fee-table {
-          width: 100%;
-          min-width: 560px;
-          table-layout: fixed;
-          border-collapse: collapse;
-          color: #666;
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 1.4;
-          letter-spacing: -0.36px;
-          text-align: center;
+        &__inner {
+          padding: 24px 70px 32px 30px;
+          border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
 
           @include screen("mo") {
-            margin-top: 8px;
-            min-width: auto;
-          }
-
-          th,
-          td {
-            height: 32px;
-            padding: 3px 12px;
-            border: 1px solid #ebebeb;
-            vertical-align: middle;
-            color: #666;
-            text-align: center;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 140%;
-            letter-spacing: -0.36px;    
-            
-            @include screen("mo") {
-              font-size: 10px;
-            }
-          }
-
-          th {
-            padding-top: 4px;
-            padding-bottom: 4px;
-            background-color: #ebebeb;
-            font-weight: 600;
-          }
-
-          td {
-            background-color: #fff;
+            padding: 18px 28px;
           }
         }
       }
-
-    }
-  }
-
-  /* 가전 구독 자주 묻는 질문 */
-  .service-page__section--faq {
-    background-color: #fff;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
     }
 
-    // .service-tabs {
-    //   width: 100%;
-    //   max-width: 780px;
-    //   margin: 0 auto;
+    /* 구독으로 시작하기 좋은 제품 */
+    .service-page__section--products {
+      background-color: #fff;
+      text-align: center;
 
-    //   .service-tabs__list {
-    //     gap: 8px;
-    //     margin-bottom: 32px;
-    //     padding: 0;
-    //   }
-
-    //   @include screen("mo") {
-    //     position: relative;
-    //     width: 100%;
-
-    //     &::after {
-    //       content: "";
-    //       z-index: 10;
-    //       position: absolute;
-    //       top: 0;
-    //       right: 0;
-    //       width: 48px; 
-    //       height: 100%;
-    //       background:red;
-    //       pointer-events: none; 
-    //     }
-    //   }
-    // }
-
-    .faq-accordion {
-      width: 100%;
-      border-top: 1px solid #000;
-      text-align: left;
-
-      &__item {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 1380px;
+        margin: 0 auto;
       }
 
-      &__heading {
-        margin: 0;
-      }
-
-      &__button {
+      .service-products {
         display: grid;
-        grid-template-columns: 12px minmax(0, 1fr) 40px;
-        align-items: center;
+        grid-template-columns: repeat(5, minmax(0, 260px));
+        justify-content: center;
+        gap: 20px;
         width: 100%;
-        min-height: 65px;
-        padding: 20px 22px;
-        border: 0;
-        background-color: #fff;
-        color: #111;
-        cursor: pointer;
-        text-align: left;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: service-product-ranking;
+        margin-top: 32px;
 
-        &:focus-visible {
-          outline: 2px solid #111 !important;
-          outline-offset: -2px;
-        }
+        &__item {
+          position: relative;
+          min-width: 0;
+          counter-increment: service-product-ranking;
 
-        &[aria-expanded="true"] {
-          .faq-accordion__icon {
-            transform: rotate(180deg);
+          &::before {
+            content: counter(service-product-ranking);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #e1e5eb;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #111;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: -0.2px;
+          }
+
+          &:nth-child(-n + 3)::before {
+            border-color: #111;
+            background-color: #111;
+            color: #fff;
+          }
+        } 
+
+        &__link {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          padding-top: 8px;
+          color: #111;
+          text-align: left;
+          text-decoration: none;
+
+          &:focus-visible {
+            outline: 2px solid #111;
+            outline-offset: 4px;
           }
         }
 
-        @include screen("mo") {
-          padding: 18px 8px;
-          line-height: 20px;
-        }
-      }
-
-      &__q-mark {
-        width: 12px;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 1.4;
-        letter-spacing: -0.2px;
-        
-        @include screen("mo") {
-          font-size: 15px;
-          line-height: 20px;
-        }
-      }
-
-      &__title {
-        min-width: 0;
-        margin-left: 8px;
-        overflow: hidden;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.4;
-        // text-overflow: ellipsis;
-        // white-space: nowrap;
-
-        @include screen("mo") {
-          font-size: 14px;
-        }
-
-      }
-
-      &__icon {
-        position: relative;
-        justify-self: end;
-        width: 24px;
-        height: 24px;
-        transition: transform 0.2s ease;
-
-        &::before {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 8px;
-          height: 8px;
-          border-right: 1.5px solid #111;
-          border-bottom: 1.5px solid #111;
-          content: "";
-          transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        @include screen("mo") {
-          width: 16px;
-          height: 16px;
-        }
-      }
-
-      &__content {
-        background-color: #f9fafb;
-        color: #444;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 1.4;
-        letter-spacing: -0.3px;
-
-        &[hidden] {
-          display: none;
-        }
-      }
-
-      &__inner {
-        padding: 24px 70px 32px 30px;
-
-        @include screen("mo") {
-          padding: 18px 28px;
-        }
-      }
-    }
-  }
-
-  /* 구독으로 시작하기 좋은 제품 */
-  .service-page__section--products {
-    background-color: #fff;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 1380px;
-      margin: 0 auto;
-    }
-
-    .service-products {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 260px));
-      justify-content: center;
-      gap: 20px;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      counter-reset: service-product-ranking;
-      margin-top: 32px;
-
-      &__item {
-        position: relative;
-        min-width: 0;
-        counter-increment: service-product-ranking;
-
-        &::before {
-          content: counter(service-product-ranking);
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 1;
-          display: inline-flex;
+        &__media {
+          display: flex;
           align-items: center;
           justify-content: center;
-          width: 32px;
-          height: 32px;
-          border: 1px solid #e1e5eb;
-          border-radius: 10px;
-          background-color: #fff;
+          width: 100%;
+          height: 260px;
+          overflow: hidden;
+        }
+
+        &__image {
+          width: 240px;
+          height: 240px;
+          object-fit: contain;
+        }
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+          width: 100%;
+          padding-right: 16px;
+        }
+
+        &__title {
+          @include ellip(2); 
+          width: 100%;
+          min-height: 44px;
           color: #111;
           font-size: 16px;
           font-weight: 500;
@@ -2495,444 +2559,531 @@
           letter-spacing: -0.2px;
         }
 
-        &:nth-child(-n + 3)::before {
-          border-color: #111;
-          background-color: #111;
-          color: #fff;
+        &__meta {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          min-height: 22px;
         }
-      } 
 
-      &__link {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding-top: 8px;
-        color: #111;
-        text-align: left;
-        text-decoration: none;
-
-        &:focus-visible {
-          outline: 2px solid #111;
-          outline-offset: 4px;
+        &__model {
+          margin-right: 2px;
+          color: #666;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
         }
-      }
 
-      &__media {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 260px;
-        overflow: hidden;
-      }
+        &__spec {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 22px;
+          padding: 2px 6px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          background-color: #f3f3f3;
+          color: #000;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 18px;
+          white-space: nowrap;
+          margin-right: 2px;
+        }
 
-      &__image {
-        width: 240px;
-        height: 240px;
-        object-fit: contain;
-      }
+        &__prices {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          width: 100%;
+        }
 
-      &__info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        width: 100%;
-        padding-right: 16px;
-      }
+        &__price,
+        &__benefit-price {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin: 0;
+          white-space: nowrap;
+        }
 
-      &__title {
-        @include ellip(2); 
-        width: 100%;
-        min-height: 44px;
-        color: #111;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        letter-spacing: -0.2px;
-      }
+        &__price {
+          strong {
+            color: #111;
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 26px;
+            letter-spacing: -0.4px;
+          }
 
-      &__meta {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        min-height: 22px;
-      }
+          small {
+            margin-left: 1px;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.3px;
+          }
+        }
 
-      &__model {
-        margin-right: 2px;
-        color: #666;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-      }
-
-      &__spec {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 22px;
-        padding: 2px 6px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background-color: #f3f3f3;
-        color: #000;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 18px;
-        white-space: nowrap;
-        margin-right: 2px;
-      }
-
-      &__prices {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        width: 100%;
-      }
-
-      &__price,
-      &__benefit-price {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin: 0;
-        white-space: nowrap;
-      }
-
-      &__price {
-        strong {
-          color: #111;
+        &__discount {
+          color: #fd312e;
           font-size: 19px;
-          font-weight: 700;
+          font-weight: 400;
           line-height: 26px;
           letter-spacing: -0.4px;
         }
 
-        small {
-          margin-left: 1px;
-          font-size: 17px;
+        &__benefit-price {
+          color: #fd312e;
+
+          > span {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.2px;
+          }
+
+          strong {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: -0.3px;
+          }
+
+          small {
+            margin-left: 1px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+        }
+
+        &__note {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          margin: -4px 0 0;
+          color: #666;
+          font-size: 12px;
           font-weight: 400;
-          line-height: 24px;
-          letter-spacing: -0.3px;
+          line-height: 16px;
+
+          &::after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: url(../images/ic_info.png) no-repeat center center / contain;
+          }
         }
       }
 
-      &__discount {
-        color: #fd312e;
-        font-size: 19px;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: -0.4px;
+      .service-products-swiper__pagination {
+        display: none;
       }
-
-      &__benefit-price {
-        color: #fd312e;
-
-        > span {
-          font-size: 15px;
-          font-weight: 400;
-          line-height: 20px;
-          letter-spacing: -0.2px;
-        }
-
-        strong {
-          font-size: 17px;
-          font-weight: 700;
-          line-height: 24px;
-          letter-spacing: -0.3px;
-        }
-
-        small {
-          margin-left: 1px;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 20px;
-        }
-      }
-
-      &__note {
-        display: flex;
-        align-items: center;
-        gap: 2px;
-        margin: -4px 0 0;
-        color: #666;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-
-        &::after {
-          content: "";
-          width: 16px;
-          height: 16px;
-          background: url(../images/ic_info.png) no-repeat center center / contain;
-        }
-      }
-    }
-  }
-
-  /* 더 알아보면 좋은 이야기 */
-  .service-page__section--guide {
-    background-color: #fff;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
-    }
-
-    .service-guide {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      width: 100%;
 
       @include screen("mo") {
-        gap: 12px;
+        .service-products-swiper {
+          width: 100%;
+          overflow: hidden;
+
+          &__pagination {
+            position: relative;
+            display: none;
+            width: 80px;
+            height: 2px;
+            margin: 24px auto 0;
+            overflow: hidden;
+            background-color: #e1e1e1;
+
+            &.swiper-pagination-progressbar {
+              display: block;
+            }
+
+            .swiper-pagination-progressbar-fill {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #111;
+              transform-origin: left top;
+            }
+          }
+        }
+
+        .service-products {
+          display: flex;
+          justify-content: flex-start;
+          gap: 0;
+          margin-top: 24px;
+
+          &__item {
+            flex: 0 0 148px;
+            width: 148px;
+          }
+
+          &__link {
+            gap: 12px;
+            padding-top: 0;
+          }
+
+          &__media {
+            height: 160px;
+            padding-top: 12px;
+          }
+
+          &__image {
+            width: 128px;
+            height: 128px;
+          }
+
+          &__info {
+            padding-right: 8px;
+          }
+
+          &__title {
+            min-height: 36px;
+            font-size: 13px;
+            line-height: 18px;
+          }
+
+          &__meta {
+            min-height: 18px;
+          }
+
+          &__model {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+          }
+
+          &__spec {
+            min-height: 18px;
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+          }
+
+          &__price {
+            strong,
+            small {
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 18px;
+            }
+          }
+
+          &__discount {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 18px;
+          }
+
+          &__benefit-price {
+            > span,
+            strong,
+            small {
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 18px;
+            }
+          }
+
+          &__item::before {
+            top: 4px;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            border: 0;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+
+    /* 더 알아보면 좋은 이야기 */
+    .service-page__section--guide {
+      background-color: #fff;
+      text-align: center;
+
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
+        margin: 0 auto;
       }
 
-      &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        min-width: 0;
-        color: inherit;
-        text-align: left;
-        text-decoration: none;
-
-        &:focus-visible {
-          outline: 2px solid #111;
-          outline-offset: 4px;
-        }
+      .service-guide {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        width: 100%;
 
         @include screen("mo") {
           gap: 12px;
         }
-      }
 
-      img {
-        display: block;
-        width: 100%;
-        aspect-ratio: 380 / 240;
-        overflow: hidden;
-        border-radius: 24px;
-        object-fit: cover;
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          min-width: 0;
+          color: inherit;
+          text-align: left;
+          text-decoration: none;
 
-        @include screen("mo") {
-          border-radius: 12px;
-        }
-      }
-
-      &:first-child img {
-        object-position: center 44%;
-      }
-
-      &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        width: 100%;
-        padding: 0 6px;
-      }
-
-      strong {
-        width: 100%;
-        color: #444;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.4;
-
-        @include screen("mo") {
-          font-size: 11px;
-          font-weight: 400;
-          line-height: 14px;
-        }
-      }
-
-      small {
-        width: 100%;
-        color: #111;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 1.4;
-
-        @include screen("mo") {
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 20px; 
-        }
-      }
-    }
-  }
-
-  /* 혼자 고르기 어려우신가요? */
-  .service-page__section--contact {
-    background-color: #fff;
-    text-align: center;
-
-    .service-page__inner {
-      width: calc(100% - #{$layout_pd * 2});
-      max-width: 940px;
-      margin: 0 auto;
-    }
-
-    .service-contact {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      width: 100%;
-      max-width: 780px;
-      margin: 0 auto;
-
-      &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 12px;
-        min-width: 40px;
-        min-height: 136px;
-        padding: 24px;
-        overflow: hidden;
-        border: 1px solid #ccc;
-        border-radius: 24px;
-        background-color: #fff;
-        color: #111;
-        text-align: left;
-        text-decoration: none;
-
-        &:focus-visible {
-          outline: 2px solid #111;
-          outline-offset: 3px;
-        }
-
-        > img {
-          display: block;
-          width: 32px;
-          height: 32px;
-          object-fit: contain;
-        }
-
-        @include screen("mo") {
-          flex-direction: row;
-          min-height: auto;
-          padding: 16px;
-          align-items: center;
-        }
-
-      }
-
-      &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        width: 100%;
-
-        strong {
-          color: #111;
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 20px;
+          &:focus-visible {
+            outline: 2px solid #111;
+            outline-offset: 4px;
+          }
 
           @include screen("mo") {
-            font-size: 16px;
+            gap: 12px;
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 380 / 240;
+          overflow: hidden;
+          border-radius: 24px;
+          object-fit: cover;
+
+          @include screen("mo") {
+            border-radius: 12px;
+          }
+        }
+
+        &:first-child img {
+          object-position: center 44%;
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+          width: 100%;
+          padding: 0 6px;
+        }
+
+        strong {
+          width: 100%;
+          color: #444;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.4;
+
+          @include screen("mo") {
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 14px;
           }
         }
 
         small {
-          color: #8f8f8f;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 18px;
+          width: 100%;
+          color: #111;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 1.4;
 
           @include screen("mo") {
-            font-size: 13px;
-          }          
-        }   
-        
-        @include screen("mo") {
-          gap: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px; 
+          }
         }
-      }  
-      
-      &__ai {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
+      }
+    }
+
+    /* 혼자 고르기 어려우신가요? */
+    .service-page__section--contact {
+      background-color: #fff;
+      text-align: center;
+
+      .service-page__inner {
+        width: calc(100% - #{$layout_pd * 2});
+        max-width: 940px;
+        margin: 0 auto;
+      }
+
+      .service-contact {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
         width: 100%;
         max-width: 780px;
-        height: 64px;
-        margin: 24px auto 0;
-        border-radius: 999px;
-        background:
-          linear-gradient(90deg, rgba(253, 49, 46, 0.08) 0%, rgba(249, 20, 235, 0.08) 50.481%, rgba(180, 50, 245, 0.08) 75%, rgba(130, 39, 255, 0.08) 100%),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 100%);
-        color: #444;
-        text-decoration: none;
+        margin: 0 auto;
 
-        &:focus-visible {
-          outline: 2px solid #111;
-          outline-offset: 3px;
-        }
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 12px;
+          min-width: 40px;
+          min-height: 136px;
+          padding: 24px;
+          overflow: hidden;
+          border: 1px solid #ccc;
+          border-radius: 24px;
+          background-color: #fff;
+          color: #111;
+          text-align: left;
+          text-decoration: none;
 
-        > img {
-          display: block;
-          width: 32px;
-          height: 32px;
-          object-fit: contain;
+          &:focus-visible {
+            outline: 2px solid #111;
+            outline-offset: 3px;
+          }
+
+          > img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+          }
 
           @include screen("mo") {
-            width: 24px;
-            height: 24px;
+            flex-direction: row;
+            min-height: auto;
+            padding: 16px;
+            align-items: center;
+            border-radius: 16px;
           }
+
         }
 
-        .service-contact__ai--wrap {
-          color: #444;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 1.4;
+        &__text {
           display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+          width: 100%;
 
-          .colorful {
-            background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
-            -webkit-background-clip: text !important; 
-            background-clip: text !important;
-            color: transparent !important;
-            display: block;
+          strong {
+            color: #111;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 20px;
+
+            @include screen("mo") {
+              font-size: 16px;
+            }
           }
 
-          .black {
+          small {
+            color: #8f8f8f;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+
+            @include screen("mo") {
+              font-size: 13px;
+            }          
+          }   
+          
+          @include screen("mo") {
+            gap: 4px;
+          }
+        }  
+        
+        &__ai {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2px;
+          width: 100%;
+          max-width: 780px;
+          height: 64px;
+          margin: 24px auto 0;
+          border-radius: 999px;
+          background:
+            linear-gradient(90deg, rgba(253, 49, 46, 0.08) 0%, rgba(249, 20, 235, 0.08) 50.481%, rgba(180, 50, 245, 0.08) 75%, rgba(130, 39, 255, 0.08) 100%),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 100%);
+          color: #444;
+          text-decoration: none;
+
+          &:focus-visible {
+            outline: 2px solid #111;
+            outline-offset: 3px;
+          }
+
+          > img {
             display: block;
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+
+            @include screen("mo") {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .service-contact__ai--wrap {
             color: #444;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .colorful {
+              background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
+              -webkit-background-clip: text !important; 
+              background-clip: text !important;
+              color: transparent !important;
+              display: block;
+
+              @include screen("mo") {
+                font-size: 14px;
+                line-height: 20px; 
+              }
+            }
+
+            .black {
+              display: block;
+              color: #444;
+
+              @include screen("mo") {
+                font-size: 13px;
+                line-height: 23px; 
+              }            
+            }
           }
-        }
 
-        &::after {
-          content: "";
-          flex: 0 0 20px;
-          width: 20px;
-          height: 20px;
-          background: url(../images/icon_arr.png) no-repeat center center / contain;
-        }
+          &::after {
+            content: "";
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+            background: url(../images/icon_arr.png) no-repeat center center / contain;
+          }
 
+          @include screen("mo") {
+            margin: 20px auto 0;
+            height: 48px;
+          }
+        }  
+        
         @include screen("mo") {
-          margin: 20px auto 0;
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          gap: 10px;
         }
-      }  
-      
-      @include screen("mo") {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 10px;
+        
       }
-      
-    }
+    }    
   }
+  /* 서비스 안내 페이지 끝 */
 
-}
+} 
