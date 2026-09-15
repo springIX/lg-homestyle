@@ -283,10 +283,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-expanded', 'true');
       button.removeAttribute('aria-disabled');
       button.removeAttribute('tabindex');
-      content.hidden = true;
+      content.hidden = false;
     });
   }
 
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!targetContent) return;
 
-    if (btn.closest('.service-cancel__fees')) {
+    if (btn.closest('.service-page__section--cancel')) {
       btn.setAttribute('aria-expanded', String(!isExpanded));
       targetContent.hidden = isExpanded;
       return;
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       openButtons.forEach(function (openBtn) {
         if (openBtn.classList.contains('service-checklist__button') && desktopChecklistMedia.matches) return;
-        if (openBtn.closest('.service-cancel__fees')) return;
+        if (openBtn.closest('.service-page__section--cancel')) return;
 
         openBtn.setAttribute('aria-expanded', 'false');
         const openContentId = openBtn.getAttribute('aria-controls');
@@ -396,6 +396,30 @@ document.addEventListener('DOMContentLoaded', () => {
     faqItems.forEach(item => {
       const itemCategory = item.getAttribute('data-service-faq-category');
       item.hidden = !(selectedCategory === 'all' || itemCategory === selectedCategory);
+    });
+  });
+
+  const initialFaqItemCount = 10;
+  const faqPanels = document.querySelectorAll('.service-faq-tabs > .service-tabs__panel');
+
+  faqPanels.forEach(panel => {
+    const faqItems = Array.from(panel.querySelectorAll('.faq-accordion > .faq-accordion__item'));
+    const moreWrap = panel.querySelector('.faq-more');
+    const moreButton = panel.querySelector('.faq-more__button');
+
+    faqItems.slice(initialFaqItemCount).forEach(item => {
+      item.hidden = true;
+    });
+
+    if (!moreWrap || !moreButton) return;
+
+    moreButton.addEventListener('click', () => {
+      faqItems.slice(initialFaqItemCount).forEach(item => {
+        item.hidden = false;
+      });
+
+      moreButton.setAttribute('aria-expanded', 'true');
+      moreWrap.hidden = true;
     });
   });
 
