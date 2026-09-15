@@ -63,8 +63,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .flex {
   display: flex;
@@ -568,8 +567,7 @@
 .monthly_home_set .img_tab button .img_box img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .img_tab button .img_box span {
   text-align: center;
@@ -805,8 +803,7 @@
 .monthly_home_set .c-product__list.ty_row .c-product__item > span > a * {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .monthly_home_set .c-product__list.ty_row .c-product__item .c-product__info-container {
   padding: 0 0 0 8rem;
@@ -1799,7 +1796,6 @@
   padding: 8rem 20rem;
   border: 1px solid #000;
   border-radius: 999rem;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20rem;
   transition: 0.3s ease;
@@ -2551,6 +2547,49 @@
 }
 .monthly_home_set.combined_discount section#products_intro ol li.pd5 a .txt_box {
   padding: 20rem 0 0 33%;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd1 a {
+  width: 390rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd1 a .txt_box {
+  padding: 0 50rem 50rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd2 a {
+  margin: 40rem 0 60rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd2 a .pd_img {
+  width: 265rem;
+  margin: -80rem 0 0 auto;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd3 a {
+  text-align: right;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd3 a .pd_img {
+  width: 207rem;
+  margin-bottom: -150rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd4 a {
+  margin: 10rem 0 65rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd4 a .txt_box {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: -20rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd4 a .pd_img {
+  width: 365rem;
+  margin: 0 auto;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd5 a {
+  text-align: right;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd5 a .pd_img {
+  width: 207rem;
+  margin-top: -90rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd5 a .txt_box {
+  padding: 0 20rem 0 0;
 }
 .monthly_home_set.combined_discount section#premium_brand_collection .swiper {
   overflow: visible;

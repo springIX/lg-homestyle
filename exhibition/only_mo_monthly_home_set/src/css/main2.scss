@@ -1040,6 +1040,34 @@
             }
           }
         }
+
+        &.ty_unique{
+          ol{
+            li{
+              &.pd1 a{ width: 390rem;
+                .txt_box{ padding: 0 50rem 50rem;}
+              }
+            
+              &.pd2 a{ margin: 40rem 0 60rem;
+                .pd_img{ width: 265rem; margin:-80rem 0 0 auto;}
+              }
+              
+              &.pd3 a{ text-align: right;
+                .pd_img{ width: 207rem; margin-bottom: -150rem;}
+              }
+              
+              &.pd4 a{ margin: 10rem 0 65rem;
+                .txt_box{ position: relative; left: 0; top: 0; margin-top: -20rem;}
+                .pd_img{ width: 365rem; margin: 0 auto;}
+              }
+
+              &.pd5 a{  text-align: right;
+                .pd_img{ width: 207rem;margin-top: -90rem;}
+                .txt_box{ padding:0 20rem 0 0;}
+              }
+            }
+          }
+        }
       }
 
       &#premium_brand_collection{
