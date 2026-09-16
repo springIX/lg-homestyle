@@ -194,10 +194,9 @@
           &:hover{ transform: translateY(-5px);}
           a{ padding: 23px 18px; text-align: center; position: relative;
             @include screen("mo") { padding: 12px 8px;}
-            .dotcom-only{  position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); padding: 4.5px 8px 4px; background-color: #fff; border-radius: 999px; border: 2px solid $ci; color: $ci; display: flex; align-items: center; gap: 3px; font-size: 16px; font-weight: 600;
-              @include screen("mo") { font-size: 11px; padding: 3px 6px;}
-              .only{ width: auto;
-                @include screen("mo") { width: 22px;}
+            .dotcom-only{  position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%);
+              @include screen("mo") {
+                img{width: 82px;}
               }
             }
             .icon{ width: 80px; margin: 0 auto 14px;
@@ -224,11 +223,15 @@
           }
           + .accordion{ margin-top: 12px;}
           .accordion-btn{ display: flex; align-items: center; justify-content: space-between;
-            &::after{ content: ''; width: 24px; height: 24px; background: url(../images/icon_arr.svg)no-repeat center center / contain; transform: rotate(90deg); transition: .3s ease;}
+            &::after{ content: ''; width: 24px; height: 24px; background: url(../images/icon_arr.svg)no-repeat center center / contain; transform: rotate(90deg); transition: .3s ease; flex-shrink: 0;}
             .tit{ display: flex; align-items: center; gap: 8px;
               @include screen("mo") { gap: 6px;}
+              .icon{ width: 48px;
+                @include screen("mo") { width: 40px;}
+              }
               .txt{ display: flex; align-items: center; gap: 10px;
                 @include screen("mo") { display: block;}
+                
                 h3{ font-size: 18px; font-weight: 600; white-space: nowrap;
                   @include screen("mo") { font-size: 16px;}
                   em{ color: $ci;}
@@ -245,7 +248,7 @@
               }
             }
           }
-          .accordion-cont{ border-top: 1px dashed #DEE1E5; padding-top: 14px; margin-top: 14px;
+          .accordion-cont{ border-top: 1px dashed #DEE1E5; padding: 14px 0 6px; margin-top: 14px;
             @include screen("mo") { padding-top: 12px; margin-top: 12px;}
             .info-txt-box{color: #666;
               .tit{color: #444;}
@@ -303,7 +306,7 @@
       }
     }
 
-    &#detail-affiliated-card{
+    &#detail-affiliated-card{ scroll-margin-top: 86px;
       .slide-box{
         &::before, &::after{ content: ''; width: 30%; height: 800px; background: linear-gradient(270deg, rgba(243, 245, 247, 0.00) 0%, #F3F5F7 30%); position: absolute; left: 0; top: 0; z-index: 2; touch-action: none; pointer-events: none;
           @include screen("tb") { width: 15%;}
@@ -419,7 +422,7 @@
           .recommended_tag{ position: absolute; right: 13px; top: 13px; border-radius: 8px; padding: 5px 6px; color: $ci; background-color: #FEF1F1; font-size: 13px;
             @include screen("mo") { right: 8px; top: 8px; border-radius: 6px; font-size: 11px;}
           }
-          img{ margin:0 auto 2px;
+          img{ margin:0 auto 2px; width: 32px;
             @include screen("mo") { width: 24px;}
           }
           &.on{ font-weight: 600; color: #111; border-color: #727780; box-shadow: 0 0 1.812px 0 rgba(0, 0, 0, 0.36), 0 3.624px 14.496px 0 rgba(0, 0, 0, 0.08);}

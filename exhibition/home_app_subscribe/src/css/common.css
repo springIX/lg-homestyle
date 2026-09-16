@@ -33,9 +33,6 @@ html {
 #home-app-subscribe ::-webkit-scrollbar {
   display: none;
 }
-#home-app-subscribe ::-moz-placeholder {
-  color: #d6d6d6;
-}
 #home-app-subscribe ::placeholder {
   color: #d6d6d6;
 }

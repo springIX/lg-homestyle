@@ -52,8 +52,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -104,7 +103,6 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
-  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -357,7 +355,6 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
-  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -420,8 +417,7 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -510,29 +506,10 @@
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
-  padding: 4.5px 8px 4px;
-  background-color: #fff;
-  border-radius: 999px;
-  border: 2px solid #FD312E;
-  color: #FD312E;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 16px;
-  font-weight: 600;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only {
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-}
-#home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only .only {
-  width: auto;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only .only {
-    width: 22px;
+  #home-app-subscribe section#overview-benefit .overview-list li a .dotcom-only img {
+    width: 82px;
   }
 }
 #home-app-subscribe section#overview-benefit .overview-list li a .icon {
@@ -547,7 +524,6 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
-  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -617,6 +593,7 @@
   background: url(../images/icon_arr.svg) no-repeat center center/contain;
   transform: rotate(90deg);
   transition: 0.3s ease;
+  flex-shrink: 0;
 }
 #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit {
   display: flex;
@@ -626,6 +603,14 @@
 @media (max-width: 767px) {
   #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit {
     gap: 6px;
+  }
+}
+#home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit .icon {
+  width: 48px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit .icon {
+    width: 40px;
   }
 }
 #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-btn .tit .txt {
@@ -692,7 +677,7 @@
 }
 #home-app-subscribe section#detail-benefit .detail-list .accordion .accordion-cont {
   border-top: 1px dashed #DEE1E5;
-  padding-top: 14px;
+  padding: 14px 0 6px;
   margin-top: 14px;
 }
 @media (max-width: 767px) {
@@ -829,6 +814,9 @@
     font-size: 12px;
     margin-bottom: 6px;
   }
+}
+#home-app-subscribe section#detail-affiliated-card {
+  scroll-margin-top: 86px;
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
   content: "";
@@ -1222,6 +1210,7 @@
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-tab button img {
   margin: 0 auto 2px;
+  width: 32px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe section#how-to-apply .how-to-apply-tab button img {
@@ -1261,8 +1250,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1931,8 +1919,7 @@
   width: 28px;
   height: 28px;
   margin-right: 6px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   vertical-align: top;
 }
 @media (max-width: 767px) {
@@ -1940,8 +1927,7 @@
     width: 18px;
     height: 18px;
     vertical-align: middle;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -2177,7 +2163,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    width: -moz-max-content;
     width: max-content;
     display: flex;
   }
@@ -2218,8 +2203,7 @@
 #home-app-subscribe.care-service .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 48px;
-       column-gap: 48px;
+  column-gap: 48px;
   width: 100%;
   padding: 0px 20px;
   border: 1px solid #eff0f2;
@@ -2357,8 +2341,7 @@
   height: 88px;
   overflow: hidden;
   border-radius: 12px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item img {
@@ -2802,8 +2785,7 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   align-items: start;
 }
 @media (max-width: 767px) {
@@ -2818,8 +2800,7 @@
   padding: 6px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > img {
@@ -3418,8 +3399,7 @@
 #home-app-subscribe.care-service .service-page__section--products .service-products__image {
   width: 240px;
   height: 240px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__info {
   display: flex;
@@ -3701,8 +3681,7 @@
   aspect-ratio: 380/240;
   overflow: hidden;
   border-radius: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--guide .service-guide img {
@@ -3710,8 +3689,7 @@
   }
 }
 #home-app-subscribe.care-service .service-page__section--guide .service-guide:first-child img {
-  -o-object-position: center 44%;
-     object-position: center 44%;
+  object-position: center 44%;
 }
 #home-app-subscribe.care-service .service-page__section--guide .service-guide__text {
   display: flex;
@@ -3795,8 +3773,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
@@ -3863,8 +3840,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
