@@ -1164,7 +1164,7 @@
 
         &__item {
           display: flex;
-          flex: 1 1 0;
+          // flex: 1 1 0;
           flex-direction: column;
           align-items: center;
           padding: 24px;
@@ -1828,6 +1828,10 @@
           }
 
           @include screen("mo") {
+            &[hidden] {
+              display: none;
+            }
+
             padding-top: 6px;
             padding-left: 0px;
             font-size: 12px;
