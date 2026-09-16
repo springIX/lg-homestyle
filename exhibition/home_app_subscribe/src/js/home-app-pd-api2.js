@@ -64,30 +64,6 @@
   }
 
   /*
-   * 일반 구독료와 혜택가 차이로 할인율 계산
-   */
-  function getDiscountRate(
-    standardPrice,
-    benefitPrice
-  ) {
-    if (
-      !standardPrice ||
-      !benefitPrice ||
-      benefitPrice >= standardPrice
-    ) {
-      return 0;
-    }
-
-    return Math.round(
-      (
-        1
-        - benefitPrice / standardPrice
-      )
-      * 100
-    );
-  }
-
-  /*
    * 상품 HTML 생성
    */
   function createProductHTML(
@@ -104,20 +80,68 @@
       || product.modelName
       || '';
 
+    /*
+     * 할인 전 월 구독료
+     */
     const standardPrice = Number(
       product.subsMmStandardAmt || 0
     );
 
-    const benefitPrice = Number(
-      product.years1TotAmt
-      || standardPrice
+    /*
+     * API에서 내려주는 혜택가
+     */
+    const apiBenefitPrice = Number(
+      product.years1TotAmt || 0
     );
 
-    const discountRate =
-      getDiscountRate(
-        standardPrice,
-        benefitPrice
-      );
+    /*
+     * API 할인율
+     * 0.5 → 50%
+     * 0.12 → 12%
+     */
+    const discountRate = Number(
+      product.subsMmAmtDcRate || 0
+    );
+
+    const discountPercent = Math.round(
+      discountRate * 100
+    );
+
+    /*
+     * 할인율을 적용한 금액
+     * PDP와 동일하게 100원 단위 절사
+     */
+    const calculatedBenefitPrice =
+      discountRate > 0
+        ? Math.floor(
+          standardPrice
+          * (1 - discountRate)
+          / 100
+        ) * 100
+        : standardPrice;
+
+    /*
+     * API 혜택가가 원가보다 낮으면
+     * 계산한 금액과 비교해 더 낮은 금액 사용
+     *
+     * API 혜택가가 원가와 같다면
+     * 할인율로 계산한 금액 사용
+     */
+    const benefitPrice =
+      discountRate > 0
+        ? (
+          apiBenefitPrice > 0
+            && apiBenefitPrice < standardPrice
+            ? Math.min(
+              apiBenefitPrice,
+              calculatedBenefitPrice
+            )
+            : calculatedBenefitPrice
+        )
+        : (
+          apiBenefitPrice
+          || standardPrice
+        );
 
     const imagePath =
       product.largeImageAddr
@@ -158,12 +182,12 @@
      * 할인율
      */
     const discountHTML =
-      discountRate > 0
+      discountPercent > 0
         ? `
-          <span class="service-products__discount">
-            ${discountRate}%
-          </span>
-        `
+      <span class="service-products__discount">
+        ${discountPercent}%
+      </span>
+    `
         : '';
 
     /*
@@ -172,7 +196,7 @@
      */
     const benefitPriceHTML =
       benefitPrice > 0
-        && benefitPrice !== standardPrice
+        && benefitPrice < standardPrice
         ? `
           <p class="service-products__benefit-price">
             <span>최대혜택가</span>
