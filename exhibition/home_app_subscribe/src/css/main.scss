@@ -1015,6 +1015,10 @@
           color: #111;
           text-align: left;
 
+          @include screen("mo") {
+            table-layout: fixed;
+          }
+
           .service-compare__label {
             width: 150px;
 
@@ -1043,6 +1047,10 @@
 
               &:first-child {
                 color: transparent;
+
+                @include screen("mo") {
+                  width: 88px !important;
+                }
               }
 
               img {
@@ -1105,15 +1113,18 @@
               line-height: normal;
               letter-spacing: -0.08px;
 
-              @include screen("mo") {
-                font-size: 12px;
-                height: 50px;
-                padding: 0 16px;
-              }
+              &:first-child {
+                @include screen("mo") {
+                  width: 88px !important;
+                }
+              }              
 
               @include screen("mo") {
-                height: 50px !important;
+                font-size: 12px;
+                padding: 0 16px;
+                height: 50px !important;              
               }
+
             }
 
             td {
@@ -2614,6 +2625,41 @@
         margin: 0 auto;
       }
 
+      .service-products-swiper {
+        @include screen("mo") {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        &__pagination {
+          display: none;
+
+          @include screen("mo") {
+            position: relative;
+            display: none;
+            width: 80px;
+            height: 2px;
+            margin: 24px auto 0;
+            overflow: hidden;
+            background-color: #e1e1e1;
+
+            &.swiper-pagination-progressbar {
+              display: block;
+            }
+
+            .swiper-pagination-progressbar-fill {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #111;
+              transform-origin: left top;
+            }
+          }
+        }
+      }
+
       .service-products {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 260px));
@@ -2626,10 +2672,22 @@
         counter-reset: service-product-ranking;
         margin-top: 32px;
 
+        @include screen("mo") {
+          display: flex;
+          justify-content: flex-start;
+          gap: 0;
+          margin-top: 24px;
+        }
+
         &__item {
           position: relative;
           min-width: 0;
           counter-increment: service-product-ranking;
+
+          @include screen("mo") {
+            flex: 0 0 148px;
+            width: 148px;
+          }
 
           &::before {
             content: counter(service-product-ranking);
@@ -2650,6 +2708,17 @@
             font-weight: 500;
             line-height: 22px;
             letter-spacing: -0.2px;
+
+            @include screen("mo") {
+              top: 4px;
+              left: 4px;
+              width: 20px;
+              height: 20px;
+              border-radius: 4px;
+              font-size: 11px;
+              font-weight: 600;
+              line-height: 15px;
+            }
           }
 
           &:nth-child(-n + 3)::before {
@@ -2669,6 +2738,11 @@
           text-align: left;
           text-decoration: none;
 
+          @include screen("mo") {
+            gap: 12px;
+            padding-top: 0;
+          }
+
           &:focus-visible {
             outline: 2px solid #111;
             outline-offset: 4px;
@@ -2682,12 +2756,22 @@
           width: 100%;
           height: 260px;
           overflow: hidden;
+
+          @include screen("mo") {
+            height: 160px;
+            padding-top: 12px;
+          }
         }
 
         &__image {
           width: 240px;
           height: 240px;
           object-fit: contain;
+
+          @include screen("mo") {
+            width: 128px;
+            height: 128px;
+          }
         }
 
         &__info {
@@ -2697,6 +2781,10 @@
           gap: 6px;
           width: 100%;
           padding-right: 16px;
+
+          @include screen("mo") {
+            padding-right: 8px;
+          }
         }
 
         &__title {
@@ -2708,6 +2796,12 @@
           font-weight: 500;
           line-height: 22px;
           letter-spacing: -0.2px;
+
+          @include screen("mo") {
+            min-height: 36px;
+            font-size: 13px;
+            line-height: 18px;
+          }
         }
 
         &__meta {
@@ -2715,6 +2809,10 @@
           align-items: center;
           gap: 6px;
           min-height: 22px;
+
+          @include screen("mo") {
+            min-height: 18px;
+          }
         }
 
         &__model {
@@ -2723,6 +2821,12 @@
           font-size: 12px;
           font-weight: 400;
           line-height: 16px;
+
+          @include screen("mo") {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+          }
         }
 
         &__spec {
@@ -2740,6 +2844,16 @@
           line-height: 18px;
           white-space: nowrap;
           margin-right: 2px;
+
+          @include screen("mo") {
+            min-height: 18px;
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+          }
         }
 
         &__prices {
@@ -2774,6 +2888,15 @@
             line-height: 24px;
             letter-spacing: -0.3px;
           }
+
+          @include screen("mo") {
+            strong,
+            small {
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 18px;
+            }
+          }
         }
 
         &__discount {
@@ -2782,6 +2905,12 @@
           font-weight: 400;
           line-height: 26px;
           letter-spacing: -0.4px;
+
+          @include screen("mo") {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 18px;
+          }
         }
 
         &__benefit-price {
@@ -2807,6 +2936,16 @@
             font-weight: 400;
             line-height: 20px;
           }
+
+          @include screen("mo") {
+            > span,
+            strong,
+            small {
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 18px;
+            }
+          }
         }
 
         &__note {
@@ -2824,135 +2963,6 @@
             width: 16px;
             height: 16px;
             background: url(../images/ic_info.png) no-repeat center center / contain;
-          }
-        }
-      }
-
-      .service-products-swiper__pagination {
-        display: none;
-      }
-
-      @include screen("mo") {
-        .service-products-swiper {
-          width: 100%;
-          overflow: hidden;
-
-          &__pagination {
-            position: relative;
-            display: none;
-            width: 80px;
-            height: 2px;
-            margin: 24px auto 0;
-            overflow: hidden;
-            background-color: #e1e1e1;
-
-            &.swiper-pagination-progressbar {
-              display: block;
-            }
-
-            .swiper-pagination-progressbar-fill {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: #111;
-              transform-origin: left top;
-            }
-          }
-        }
-
-        .service-products {
-          display: flex;
-          justify-content: flex-start;
-          gap: 0;
-          margin-top: 24px;
-
-          &__item {
-            flex: 0 0 148px;
-            width: 148px;
-          }
-
-          &__link {
-            gap: 12px;
-            padding-top: 0;
-          }
-
-          &__media {
-            height: 160px;
-            padding-top: 12px;
-          }
-
-          &__image {
-            width: 128px;
-            height: 128px;
-          }
-
-          &__info {
-            padding-right: 8px;
-          }
-
-          &__title {
-            min-height: 36px;
-            font-size: 13px;
-            line-height: 18px;
-          }
-
-          &__meta {
-            min-height: 18px;
-          }
-
-          &__model {
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 18px;
-          }
-
-          &__spec {
-            min-height: 18px;
-            padding: 0;
-            border: 0;
-            background-color: transparent;
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 18px;
-          }
-
-          &__price {
-            strong,
-            small {
-              font-size: 13px;
-              font-weight: 600;
-              line-height: 18px;
-            }
-          }
-
-          &__discount {
-            font-size: 13px;
-            font-weight: 600;
-            line-height: 18px;
-          }
-
-          &__benefit-price {
-            > span,
-            strong,
-            small {
-              font-size: 13px;
-              font-weight: 500;
-              line-height: 18px;
-            }
-          }
-
-          &__item::before {
-            top: 4px;
-            left: 4px;
-            width: 20px;
-            height: 20px;
-            border: 0;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 600;
-            line-height: 15px;
           }
         }
       }

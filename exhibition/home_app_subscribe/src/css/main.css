@@ -1903,6 +1903,11 @@
   color: #111;
   text-align: left;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table {
+    table-layout: fixed;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table .service-compare__label {
   width: 150px;
 }
@@ -1930,6 +1935,11 @@
 }
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th:first-child {
   color: transparent;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th:first-child {
+    width: 88px !important;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th img {
   display: inline-block;
@@ -1985,14 +1995,14 @@
   letter-spacing: -0.08px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
-    font-size: 12px;
-    height: 50px;
-    padding: 0 16px;
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th:first-child {
+    width: 88px !important;
   }
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
+    font-size: 12px;
+    padding: 0 16px;
     height: 50px !important;
   }
 }
@@ -3393,6 +3403,38 @@
   max-width: 1380px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+#home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination {
+  display: none;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination {
+    position: relative;
+    display: none;
+    width: 80px;
+    height: 2px;
+    margin: 24px auto 0;
+    overflow: hidden;
+    background-color: #e1e1e1;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination.swiper-pagination-progressbar {
+    display: block;
+  }
+  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination .swiper-pagination-progressbar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    transform-origin: left top;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 260px));
@@ -3405,10 +3447,24 @@
   counter-reset: service-product-ranking;
   margin-top: 32px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: 24px;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__item {
   position: relative;
   min-width: 0;
   counter-increment: service-product-ranking;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__item {
+    flex: 0 0 148px;
+    width: 148px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__item::before {
   content: counter(service-product-ranking);
@@ -3430,6 +3486,18 @@
   line-height: 22px;
   letter-spacing: -0.2px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__item::before {
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__item:nth-child(-n+3)::before {
   border-color: #111;
   background-color: #111;
@@ -3445,6 +3513,12 @@
   text-align: left;
   text-decoration: none;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__link {
+    gap: 12px;
+    padding-top: 0;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__link:focus-visible {
   outline: 2px solid #111;
   outline-offset: 4px;
@@ -3457,11 +3531,23 @@
   height: 260px;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__media {
+    height: 160px;
+    padding-top: 12px;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__image {
   width: 240px;
   height: 240px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__image {
+    width: 128px;
+    height: 128px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__info {
   display: flex;
@@ -3470,6 +3556,11 @@
   gap: 6px;
   width: 100%;
   padding-right: 16px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__info {
+    padding-right: 8px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__title {
   overflow: hidden;
@@ -3489,11 +3580,23 @@
   line-height: 22px;
   letter-spacing: -0.2px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__title {
+    min-height: 36px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__meta {
   display: flex;
   align-items: center;
   gap: 6px;
   min-height: 22px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__meta {
+    min-height: 18px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__model {
   margin-right: 2px;
@@ -3501,6 +3604,13 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__model {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__spec {
   display: inline-flex;
@@ -3517,6 +3627,17 @@
   line-height: 18px;
   white-space: nowrap;
   margin-right: 2px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__spec {
+    min-height: 18px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__prices {
   display: flex;
@@ -3545,12 +3666,27 @@
   line-height: 24px;
   letter-spacing: -0.3px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__price strong,
+  #home-app-subscribe.care-service .service-page__section--products .service-products__price small {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__discount {
   color: #fd312e;
   font-size: 19px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.4px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__discount {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price {
   color: #fd312e;
@@ -3573,6 +3709,15 @@
   font-weight: 400;
   line-height: 20px;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price > span,
+  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price strong,
+  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price small {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}
 #home-app-subscribe.care-service .service-page__section--products .service-products__note {
   display: flex;
   align-items: center;
@@ -3588,112 +3733,6 @@
   width: 16px;
   height: 16px;
   background: url(../images/ic_info.png) no-repeat center center/contain;
-}
-#home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination {
-  display: none;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper {
-    width: 100%;
-    overflow: hidden;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination {
-    position: relative;
-    display: none;
-    width: 80px;
-    height: 2px;
-    margin: 24px auto 0;
-    overflow: hidden;
-    background-color: #e1e1e1;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination.swiper-pagination-progressbar {
-    display: block;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products-swiper__pagination .swiper-pagination-progressbar-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-    transform-origin: left top;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products {
-    display: flex;
-    justify-content: flex-start;
-    gap: 0;
-    margin-top: 24px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__item {
-    flex: 0 0 148px;
-    width: 148px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__link {
-    gap: 12px;
-    padding-top: 0;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__media {
-    height: 160px;
-    padding-top: 12px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__image {
-    width: 128px;
-    height: 128px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__info {
-    padding-right: 8px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__title {
-    min-height: 36px;
-    font-size: 13px;
-    line-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__meta {
-    min-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__model {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__spec {
-    min-height: 18px;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__price strong,
-  #home-app-subscribe.care-service .service-page__section--products .service-products__price small {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__discount {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price > span,
-  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price strong,
-  #home-app-subscribe.care-service .service-page__section--products .service-products__benefit-price small {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 18px;
-  }
-  #home-app-subscribe.care-service .service-page__section--products .service-products__item::before {
-    top: 4px;
-    left: 4px;
-    width: 20px;
-    height: 20px;
-    border: 0;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 15px;
-  }
 }
 #home-app-subscribe.care-service {
   /* 더 알아보면 좋은 이야기 */
