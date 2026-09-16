@@ -103,7 +103,8 @@ body {
   // Info 섹션 (--pdp-info-bg 로 배경색 교체)
   // ================================
   .pdp__info {
-    background: var(--pdp-info-bg, #daebcc) !important;
+    // background: var(--pdp-info-bg, #daebcc) !important;
+    background: var(--pdp-info-bg, #FFFFFF) !important;    
     padding: 7.69cqw 5.13cqw !important;
     color: $color-black !important;
 
