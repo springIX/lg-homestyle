@@ -1511,6 +1511,14 @@
 #home-app-subscribe.care-service .service-care__notes li {
   position: relative;
 }
+#home-app-subscribe.care-service .service-care__notes li.no-dot::before {
+  margin-right: 0;
+  width: 0;
+  height: 0;
+}
+#home-app-subscribe.care-service .service-care__notes li.no-dot-margin {
+  margin-top: 8px;
+}
 #home-app-subscribe.care-service .service-care__notes li::before {
   content: "";
   margin-right: 5px;
@@ -1734,6 +1742,9 @@
 #home-app-subscribe.care-service .service-products-tabs [data-service-notice][hidden] {
   display: none;
 }
+#home-app-subscribe.care-service .service-products-tabs {
+  max-width: 1380px;
+}
 #home-app-subscribe.care-service .service-page__heading {
   margin-bottom: 24px;
 }
@@ -1942,7 +1953,8 @@
   #home-app-subscribe.care-service .service-page__section--compare .service-compare__table thead th {
     font-size: 14px;
     letter-spacing: -0.14px;
-    padding: 12px 8px;
+    padding: 0;
+    height: 43px;
   }
 }
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody tr {
@@ -1975,6 +1987,13 @@
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
     font-size: 12px;
+    height: 50px;
+    padding: 0 16px;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
+    height: 50px !important;
   }
 }
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td {
@@ -2005,7 +2024,8 @@
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td {
     font-size: 12px;
-    padding: 8px 18px;
+    padding: 4px 18px;
+    height: 50px;
   }
 }
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table .background {
@@ -2038,16 +2058,21 @@
   margin: 0 auto;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   width: 100%;
   margin: 0;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--benefits .service-benefits {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
   padding: 24px;
   overflow: hidden;
   border: 1px solid #eff0f2;
@@ -2099,31 +2124,37 @@
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
   width: 88px;
   height: 88px;
+  padding: 5px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
     width: 50px;
     height: 50px;
+    padding: 0px;
   }
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
   width: 88px;
   height: 88px;
+  padding: 12px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
     width: 50px;
     height: 50px;
+    padding: 0px;
   }
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
   width: 88px;
   height: 88px;
+  padding: 12px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
     width: 50px;
     height: 50px;
+    padding: 0px;
   }
 }
 @media (max-width: 767px) {
@@ -2239,7 +2270,7 @@
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
   padding: 20px 0;
@@ -2319,7 +2350,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item p {
-    margin-top: 3px;
+    margin-top: 4px;
   }
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item strong {
@@ -2370,7 +2401,7 @@
   padding-bottom: 0;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--detailed h3 + p {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item--supply {
   border-color: #067f9d;
