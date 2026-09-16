@@ -52,8 +52,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -104,7 +103,6 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
-  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -357,7 +355,6 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
-  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -420,8 +417,7 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -528,7 +524,6 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
-  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -1255,8 +1250,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1688,6 +1682,7 @@
   #home-app-subscribe.care-service .service-faq-tabs .service-tabs__list .service-tabs__button,
   #home-app-subscribe.care-service .service-products-tabs .service-tabs__list .service-tabs__button {
     flex: 0 0 auto;
+    line-height: 36px;
     height: 36px;
     padding: 2px 14px;
     font-size: 12px;
@@ -1946,8 +1941,7 @@
   width: 28px;
   height: 28px;
   margin-right: 6px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   vertical-align: top;
 }
 @media (max-width: 767px) {
@@ -1955,8 +1949,7 @@
     width: 18px;
     height: 18px;
     vertical-align: middle;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -2002,8 +1995,9 @@
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody th {
     font-size: 12px;
-    padding: 0 16px;
+    padding: 0 14px;
     height: 50px !important;
+    word-break: normal !important;
   }
 }
 #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td {
@@ -2034,7 +2028,7 @@
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--compare .service-compare__table tbody td {
     font-size: 12px;
-    padding: 4px 18px;
+    padding: 4px 8px 4px 16px;
     height: 50px;
   }
 }
@@ -2193,8 +2187,9 @@
   box-shadow: 0px 0px 2px #fd312e;
   font-size: 11px;
   font-weight: 600;
-  line-height: 14px;
   letter-spacing: -0.11px;
+  height: 18px;
+  line-height: 18px;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--blue {
   box-shadow: 0px 0px 2px #067f9d;
@@ -2211,7 +2206,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    width: -moz-max-content;
     width: max-content;
     display: flex;
   }
@@ -2252,8 +2246,7 @@
 #home-app-subscribe.care-service .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 48px;
-       column-gap: 48px;
+  column-gap: 48px;
   width: 100%;
   padding: 0px 20px;
   border: 1px solid #eff0f2;
@@ -2316,7 +2309,7 @@
   align-items: center;
   justify-content: center;
   padding: 2px 4px;
-  box-shadow: 0 0 1.1px #fd312e;
+  box-shadow: 0 0 1.1px rgba(253, 49, 46, 0.8);
   border-radius: 4px;
   background-color: #fff;
   color: #fd312e;
@@ -2391,8 +2384,7 @@
   height: 88px;
   overflow: hidden;
   border-radius: 12px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item img {
@@ -2612,6 +2604,10 @@
     background-color: #f8f9fa;
     border-color: #8F9298;
   }
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__item:has(.service-checklist__button[aria-pressed=true]) {
+    background-color: #f8f9fa !important;
+    border-color: #8F9298 !important;
+  }
 }
 #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header {
   display: flex;
@@ -2626,25 +2622,31 @@
   pointer-events: none;
 }
 #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header .chk-icon {
-  display: inline-flex;
-  flex: 0 0 20px;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #111;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  transition: background-color 0.3s;
+  display: inline-block;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  background: url(../images/ic_chk_after.svg) no-repeat center center/contain;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header .chk-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+#home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-pressed=true] .chk-icon {
+  background-image: url(../images/ic_chk_after.svg);
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header {
     pointer-events: auto;
     cursor: pointer;
     position: relative;
-    padding-right: 30px;
+    padding-right: 3px;
+    gap: 0px;
+  }
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header .chk-icon {
+    background-image: url(../images/ic_chk_before.svg);
   }
   #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header::after {
     content: "";
@@ -2658,20 +2660,20 @@
     transform: rotate(90deg);
     transition: transform 0.3s ease;
   }
-  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=false] .chk-icon {
-    background-color: #a0a0a0;
-  }
   #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=false] .service-checklist__title {
     font-weight: 500;
-  }
-  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=true] .chk-icon {
-    background-color: #111;
   }
   #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=true] .service-checklist__title {
     font-weight: 700;
   }
   #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-expanded=true]::after {
     transform: rotate(270deg);
+  }
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-pressed=true] .chk-icon {
+    background-image: url(../images/ic_chk_after.svg);
+  }
+  #home-app-subscribe.care-service .service-page__section--contract .service-checklist__header[aria-pressed=true] .service-checklist__title {
+    font-weight: 700 !important;
   }
 }
 #home-app-subscribe.care-service .service-page__section--contract .service-checklist__title {
@@ -2844,8 +2846,7 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   align-items: start;
 }
 @media (max-width: 767px) {
@@ -2860,8 +2861,7 @@
   padding: 6px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > img {
@@ -3362,6 +3362,7 @@
   width: 320px;
   max-width: 100%;
   height: 48px;
+  line-height: 48px;
   padding: 0;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -3547,8 +3548,7 @@
   max-width: 240px;
   height: auto;
   aspect-ratio: 1/1;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--products .service-products__image {
@@ -3781,8 +3781,7 @@
   aspect-ratio: 380/240;
   overflow: hidden;
   border-radius: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--guide .service-guide img {
@@ -3790,8 +3789,7 @@
   }
 }
 #home-app-subscribe.care-service .service-page__section--guide .service-guide:first-child img {
-  -o-object-position: center 44%;
-     object-position: center 44%;
+  object-position: center 44%;
 }
 #home-app-subscribe.care-service .service-page__section--guide .service-guide__text {
   display: flex;
@@ -3875,8 +3873,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
@@ -3943,8 +3940,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
@@ -4006,3 +4002,5 @@
 #home-app-subscribe {
   /* 서비스 안내 페이지 끝 */
 }
+
+/*# sourceMappingURL=main.css.map */

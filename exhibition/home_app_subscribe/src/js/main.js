@@ -370,7 +370,6 @@ $(function () {
 });
 
 
-
 /* service_info.html - JS */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -493,8 +492,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!targetContent) return;
 
     if (btn.classList.contains('service-checklist__button')) {
-      btn.setAttribute('aria-expanded', String(!isExpanded));
-      targetContent.hidden = isExpanded;
+      if (isExpanded) {
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('aria-expanded', 'false');
+        targetContent.hidden = true;
+        return;
+      }
+
+      btn.setAttribute('aria-pressed', 'true');
+
+      const checklist = btn.closest('.service-checklist');
+
+      if (checklist) {
+        checklist.querySelectorAll('.service-checklist__button[aria-expanded="true"]').forEach(function (openButton) {
+          if (openButton === btn) return;
+
+          openButton.setAttribute('aria-expanded', 'false');
+          const openContent = document.getElementById(openButton.getAttribute('aria-controls'));
+
+          if (openContent) {
+            openContent.hidden = true;
+          }
+        });
+      }
+
+      btn.setAttribute('aria-expanded', 'true');
+      targetContent.hidden = false;
       return;
     }
 
@@ -529,7 +552,6 @@ document.addEventListener('DOMContentLoaded', () => {
       targetContent.hidden = false;
     }
   });
-
 
   /* =======================================================
      3. 툴팁 (Tooltip) 제어
