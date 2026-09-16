@@ -2030,8 +2030,7 @@
   margin: 0 auto;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 12px;
   width: 100%;
   margin: 0;
@@ -2040,6 +2039,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   padding: 24px;
   overflow: hidden;
   border: 1px solid #eff0f2;
@@ -2091,37 +2091,31 @@
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
   width: 88px;
   height: 88px;
-  padding: 5px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(1) .service-benefits__image {
     width: 50px;
     height: 50px;
-    padding: 0;
   }
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
   width: 88px;
   height: 88px;
-  padding: 12px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(2) .service-benefits__image {
     width: 50px;
     height: 50px;
-    padding: 0;
   }
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
   width: 88px;
   height: 88px;
-  padding: 12px;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__item:nth-child(3) .service-benefits__image {
     width: 50px;
     height: 50px;
-    padding: 0;
   }
 }
 @media (max-width: 767px) {
@@ -2190,7 +2184,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits {
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
   }
 }
 #home-app-subscribe.care-service {
