@@ -2672,6 +2672,11 @@
         counter-reset: service-product-ranking;
         margin-top: 32px;
 
+        @media screen and (max-width: 1400px) {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          padding: 0 16px;
+        }        
+
         @include screen("mo") {
           display: flex;
           justify-content: flex-start;
@@ -2733,7 +2738,6 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 16px;
-          padding-top: 8px;
           color: #111;
           text-align: left;
           text-decoration: none;
@@ -2764,8 +2768,10 @@
         }
 
         &__image {
-          width: 240px;
-          height: 240px;
+          width: 100%;
+          max-width: 240px;
+          height: auto;
+          aspect-ratio: 1 / 1;
           object-fit: contain;
 
           @include screen("mo") {
@@ -2778,7 +2784,7 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 6px;
+          // gap: 6px;
           width: 100%;
           padding-right: 16px;
 
@@ -2788,7 +2794,7 @@
         }
 
         &__title {
-          @include ellip(2); 
+          // @include ellip(2); 
           width: 100%;
           min-height: 44px;
           color: #111;
@@ -2821,6 +2827,7 @@
           font-size: 12px;
           font-weight: 400;
           line-height: 16px;
+          margin-top: 4px;
 
           @include screen("mo") {
             font-size: 13px;
@@ -2861,6 +2868,7 @@
           flex-direction: column;
           gap: 2px;
           width: 100%;
+          margin-top: 6px;
         }
 
         &__price,
