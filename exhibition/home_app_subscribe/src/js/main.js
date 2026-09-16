@@ -102,249 +102,251 @@ $(function () {
   // 제휴카드별 상세 혜택 스와이퍼
   // 제휴카드별 상세 혜택 스와이퍼
   const $cardSection = $('#detail-affiliated-card');
-  const CARD_SPEED = 800;
+  if ($cardSection.length) {
+    const CARD_SPEED = 800;
 
-  const cardList = new Swiper(
-    '#detail-affiliated-card .card-list',
-    {
-      slidesPerView: 'auto',
-      spaceBetween: 6,
-      centeredSlides: true,
-      watchSlidesProgress: true,
-      speed: CARD_SPEED,
-      threshold: 30,
+    const cardList = new Swiper(
+      '#detail-affiliated-card .card-list',
+      {
+        slidesPerView: 'auto',
+        spaceBetween: 6,
+        centeredSlides: true,
+        watchSlidesProgress: true,
+        speed: CARD_SPEED,
+        threshold: 30,
 
-      breakpoints: {
-        [mo_break_point + 1]: {
-          spaceBetween: 42
+        breakpoints: {
+          [mo_break_point + 1]: {
+            spaceBetween: 42
+          }
         }
       }
-    }
-  );
+    );
 
-  const cardInfo = new Swiper(
-    '#detail-affiliated-card .card-info',
-    {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      centeredSlides: true,
-      speed: CARD_SPEED,
-      threshold: 30,
+    const cardInfo = new Swiper(
+      '#detail-affiliated-card .card-info',
+      {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+        speed: CARD_SPEED,
+        threshold: 30,
 
-      noSwiping: true,
-      noSwipingClass: 'table-box',
+        noSwiping: true,
+        noSwipingClass: 'table-box',
 
-      navigation: {
-        nextEl: '#detail-affiliated-card .nxt',
-        prevEl: '#detail-affiliated-card .prv'
-      },
+        navigation: {
+          nextEl: '#detail-affiliated-card .nxt',
+          prevEl: '#detail-affiliated-card .prv'
+        },
 
-      breakpoints: {
-        [mo_break_point + 1]: {
-          slidesPerView: 'auto',
-          spaceBetween: 32
+        breakpoints: {
+          [mo_break_point + 1]: {
+            slidesPerView: 'auto',
+            spaceBetween: 32
+          }
         }
       }
-    }
-  );
-
-  let isCardSyncing = false;
-  let currentCardIndex = 0;
-
-  /*
-   * 썸네일 활성화
-   */
-  function updateCardListActive(index) {
-    $cardSection
-      .find('.card-list .swiper-slide')
-      .removeClass('swiper-slide-thumb-active')
-      .eq(index)
-      .addClass('swiper-slide-thumb-active');
-  }
-
-  /*
-   * 열린 카드 아코디언 닫기
-   */
-  function closeCardAccordions() {
-    const $accordions = $cardSection.find(
-      '.card-info .accordion.on'
     );
 
-    $accordions
-      .removeClass('on')
-      .find('.accordion-btn')
-      .attr('aria-expanded', 'false');
-
-    $accordions
-      .find('.accordion-cont')
-      .stop(true, true)
-      .hide();
-  }
-
-  /*
-   * card-list → card-info
-   */
-  function syncFromCardList(index) {
-    if (isCardSyncing) return;
-
-    isCardSyncing = true;
-    currentCardIndex = index;
-
-    updateCardListActive(index);
-    closeCardAccordions();
-
-    if (cardInfo.activeIndex !== index) {
-      cardInfo.slideTo(
-        index,
-        CARD_SPEED,
-        false
-      );
-    }
-
-    requestAnimationFrame(function () {
-      isCardSyncing = false;
-    });
-  }
-
-  /*
-   * card-info → card-list
-   */
-  function syncFromCardInfo(index) {
-    if (isCardSyncing) return;
-
-    isCardSyncing = true;
-    currentCardIndex = index;
-
-    updateCardListActive(index);
-    closeCardAccordions();
-
-    if (cardList.activeIndex !== index) {
-      cardList.slideTo(
-        index,
-        CARD_SPEED,
-        false
-      );
-    }
-
-    requestAnimationFrame(function () {
-      isCardSyncing = false;
-    });
-  }
-
-  /*
-   * card-list를 스와이프하면
-   * card-info 즉시 이동
-   */
-  cardList.on('slideChange', function () {
-    syncFromCardList(
-      this.activeIndex
-    );
-  });
-
-  /*
-   * card-info를 스와이프하거나
-   * 네비게이션 버튼을 누르면
-   * card-list 즉시 이동
-   */
-  cardInfo.on('slideChange', function () {
-    syncFromCardInfo(
-      this.activeIndex
-    );
-  });
-
-  /*
-   * 썸네일 클릭
-   */
-  cardList.on('tap', function () {
-    if (
-      !this.allowClick ||
-      this.clickedIndex == null
-    ) {
-      return;
-    }
-
-    const index = this.clickedIndex;
-
-    cardList.slideTo(
-      index,
-      CARD_SPEED
-    );
+    let isCardSyncing = false;
+    let currentCardIndex = 0;
 
     /*
-     * 이미 활성화된 썸네일을 클릭하면
-     * slideChange가 발생하지 않으므로 직접 동기화
-     */
-    if (cardList.activeIndex === index) {
-      syncFromCardList(index);
+    * 썸네일 활성화
+    */
+    function updateCardListActive(index) {
+      $cardSection
+        .find('.card-list .swiper-slide')
+        .removeClass('swiper-slide-thumb-active')
+        .eq(index)
+        .addClass('swiper-slide-thumb-active');
     }
-  });
 
-  /*
-   * 최초 위치 동기화
-   */
-  currentCardIndex = cardInfo.activeIndex;
-
-  cardList.slideTo(
-    currentCardIndex,
-    0,
-    false
-  );
-
-  cardInfo.slideTo(
-    currentCardIndex,
-    0,
-    false
-  );
-
-  updateCardListActive(
-    currentCardIndex
-  );
-
-  /*
-   * 모바일 ↔ PC 전환 시 갱신
-   */
-  const cardMediaQuery = window.matchMedia(
-    `(min-width: ${mo_break_point + 1}px)`
-  );
-
-  function refreshCardSwiper() {
-    isCardSyncing = true;
-
-    setTimeout(function () {
-      cardList.update();
-      cardInfo.update();
-
-      cardList.slideTo(
-        currentCardIndex,
-        0,
-        false
+    /*
+    * 열린 카드 아코디언 닫기
+    */
+    function closeCardAccordions() {
+      const $accordions = $cardSection.find(
+        '.card-info .accordion.on'
       );
 
-      cardInfo.slideTo(
-        currentCardIndex,
-        0,
-        false
-      );
+      $accordions
+        .removeClass('on')
+        .find('.accordion-btn')
+        .attr('aria-expanded', 'false');
 
-      updateCardListActive(
-        currentCardIndex
-      );
+      $accordions
+        .find('.accordion-cont')
+        .stop(true, true)
+        .hide();
+    }
+
+    /*
+    * card-list → card-info
+    */
+    function syncFromCardList(index) {
+      if (isCardSyncing) return;
+
+      isCardSyncing = true;
+      currentCardIndex = index;
+
+      updateCardListActive(index);
+      closeCardAccordions();
+
+      if (cardInfo.activeIndex !== index) {
+        cardInfo.slideTo(
+          index,
+          CARD_SPEED,
+          false
+        );
+      }
 
       requestAnimationFrame(function () {
         isCardSyncing = false;
       });
-    }, 100);
-  }
+    }
 
-  if (cardMediaQuery.addEventListener) {
-    cardMediaQuery.addEventListener(
-      'change',
-      refreshCardSwiper
+    /*
+    * card-info → card-list
+    */
+    function syncFromCardInfo(index) {
+      if (isCardSyncing) return;
+
+      isCardSyncing = true;
+      currentCardIndex = index;
+
+      updateCardListActive(index);
+      closeCardAccordions();
+
+      if (cardList.activeIndex !== index) {
+        cardList.slideTo(
+          index,
+          CARD_SPEED,
+          false
+        );
+      }
+
+      requestAnimationFrame(function () {
+        isCardSyncing = false;
+      });
+    }
+
+    /*
+    * card-list를 스와이프하면
+    * card-info 즉시 이동
+    */
+    cardList.on('slideChange', function () {
+      syncFromCardList(
+        this.activeIndex
+      );
+    });
+
+    /*
+    * card-info를 스와이프하거나
+    * 네비게이션 버튼을 누르면
+    * card-list 즉시 이동
+    */
+    cardInfo.on('slideChange', function () {
+      syncFromCardInfo(
+        this.activeIndex
+      );
+    });
+
+    /*
+    * 썸네일 클릭
+    */
+    cardList.on('tap', function () {
+      if (
+        !this.allowClick ||
+        this.clickedIndex == null
+      ) {
+        return;
+      }
+
+      const index = this.clickedIndex;
+
+      cardList.slideTo(
+        index,
+        CARD_SPEED
+      );
+
+      /*
+      * 이미 활성화된 썸네일을 클릭하면
+      * slideChange가 발생하지 않으므로 직접 동기화
+      */
+      if (cardList.activeIndex === index) {
+        syncFromCardList(index);
+      }
+    });
+
+    /*
+    * 최초 위치 동기화
+    */
+    currentCardIndex = cardInfo.activeIndex;
+
+    cardList.slideTo(
+      currentCardIndex,
+      0,
+      false
     );
-  } else {
-    cardMediaQuery.addListener(
-      refreshCardSwiper
+
+    cardInfo.slideTo(
+      currentCardIndex,
+      0,
+      false
     );
+
+    updateCardListActive(
+      currentCardIndex
+    );
+
+    /*
+    * 모바일 ↔ PC 전환 시 갱신
+    */
+    const cardMediaQuery = window.matchMedia(
+      `(min-width: ${mo_break_point + 1}px)`
+    );
+
+    function refreshCardSwiper() {
+      isCardSyncing = true;
+
+      setTimeout(function () {
+        cardList.update();
+        cardInfo.update();
+
+        cardList.slideTo(
+          currentCardIndex,
+          0,
+          false
+        );
+
+        cardInfo.slideTo(
+          currentCardIndex,
+          0,
+          false
+        );
+
+        updateCardListActive(
+          currentCardIndex
+        );
+
+        requestAnimationFrame(function () {
+          isCardSyncing = false;
+        });
+      }, 100);
+    }
+
+    if (cardMediaQuery.addEventListener) {
+      cardMediaQuery.addEventListener(
+        'change',
+        refreshCardSwiper
+      );
+    } else {
+      cardMediaQuery.addListener(
+        refreshCardSwiper
+      );
+    }
   }
 
   $(document).on('click', '[data-tab-btn] > *', function (e) {
