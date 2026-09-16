@@ -3,6 +3,14 @@ $(function () {
   let win_w = win.width();
   const mo_break_point = 767;
 
+  $(document).on('click', function () {
+    setTimeout(function () {
+      $('video:hidden').each(function () {
+        this.pause();
+      });
+    }, 0);
+  });
+
   // 1DEP 헤더
   $(window).on('scroll', function () {
     $('.care-subcp-header-menu').toggleClass(
