@@ -7,6 +7,9 @@
 @import url("https://www.lge.co.kr/home_style_pages/common/css/swiper.min.css");
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 #home-app-subscribe {
