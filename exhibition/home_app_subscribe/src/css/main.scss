@@ -782,7 +782,7 @@
 
           &:last-child {
             @include screen("mo") {
-              margin-right: 50px;            
+              margin-right: 10px;            
             }
           }
 
@@ -1108,13 +1108,13 @@
 
               .small {
                 color: #111;
-                font-size: 14px !important;
+                font-size: 14px;
                 font-weight: 400;
                 letter-spacing: -0.14px;
                 display: inline-block !important;
 
                 @include screen("mo") {
-                  font-size: 12px !important;
+                  font-size: 10px !important;
                 }
               }               
 
@@ -1147,6 +1147,8 @@
       text-align: center;
 
       &.service-page__section--benefits--mo {
+
+
         @include screen("mo") {
           padding: 40px 0 48px 0 !important;
         }
@@ -1924,7 +1926,11 @@
       text-align: center;
 
       &.service-page__section--cancel--mo {
-        padding: 40px 0 48px 0 !important;
+        padding-top: 108px;
+
+        @include screen("mo") {
+          padding: 40px 0 48px 0 !important;          
+        }
       }
 
       .service-page__inner {
@@ -2107,6 +2113,10 @@
               &:first-child {
                 margin-top: 0;
               }
+
+              @include screen("mo") {
+                font-size: 12px;
+              }
             }
 
             .text-red {
@@ -2235,6 +2245,10 @@
                   border-radius: 50%;
                   background: #444;
                   vertical-align: middle;
+                }
+
+                @include screen("mo") {
+                  font-size: 12px;
                 }
               }
             }
