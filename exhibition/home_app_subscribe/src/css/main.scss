@@ -605,6 +605,18 @@
       li {
         position: relative;
 
+        &.no-dot {
+          &::before {
+            margin-right: 0;
+            width: 0;
+            height: 0;
+          }
+        }
+
+        &.no-dot-margin {
+          margin-top: 8px;
+        }
+
         &::before {
           content: "";      
           margin-right: 5px;
@@ -833,6 +845,10 @@
       }
     }
 
+    .service-products-tabs {
+      max-width: 1380px;
+    }
+
     // 헤드
     .service-page__heading {
       margin-bottom: 24px;
@@ -1048,7 +1064,9 @@
               @include screen("mo") {
                 font-size: 14px;
                 letter-spacing: -0.14px;
-                padding: 12px 8px;
+                // padding: 12px 8px;
+                padding: 0;
+                height: 43px;
               }
             }
           }
@@ -1089,6 +1107,12 @@
 
               @include screen("mo") {
                 font-size: 12px;
+                height: 50px;
+                padding: 0 16px;
+              }
+
+              @include screen("mo") {
+                height: 50px !important;
               }
             }
 
@@ -1120,7 +1144,8 @@
 
               @include screen("mo") {
                 font-size: 12px;
-                padding: 8px 18px;
+                padding: 4px 18px;
+                height: 50px;
               }            
             }
           }
@@ -1388,7 +1413,7 @@
 
         .service-care__item {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: space-between;
           gap: 10px;
           padding: 20px 0;
@@ -1470,7 +1495,7 @@
             letter-spacing: -0.28px;
 
             @include screen("mo") {
-              margin-top: 3px;
+              margin-top: 4px;
             }
           }
 
@@ -1518,10 +1543,8 @@
           p {
             display: flex;
             gap: 3px;
-            // padding-left: 12px; 
             padding-bottom: 3px; 
             margin-top: 0; 
-            // border-left: 1px solid #DEE1E5;
             
             &:last-child {
               padding-bottom: 0;
@@ -1533,7 +1556,7 @@
           }
 
             h3 + p {
-              margin-top: 6px;
+              margin-top: 4px;
             }
           }
 
