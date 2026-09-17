@@ -1165,8 +1165,17 @@
       }
 
       &#timesale{ color: #fff;
-        .timesale_cont{
-          .timesale_list{margin-top: 16rem;}
+        .timesale_cont{ position: relative; padding: 0 16rem;
+          .more_btn{ display: flex; position: absolute; right: 16rem; top: 32rem;
+            img{ width: 16rem; filter: invert(1); transform: rotate(180deg) translateY(1rem);}
+          }
+          .timesale_list{margin-top: 16rem; padding: 10rem; background-color: #fff;
+            .swiper-slide{
+              .c-product__list{ grid-template-columns: 1fr; gap: 12rem;
+                 .c-product__item .c-product__info-container .c-product__info .c-product__name{ color: #444;}
+              }
+            }
+          }
         }
       }
 

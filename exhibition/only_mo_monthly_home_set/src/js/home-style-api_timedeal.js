@@ -1053,7 +1053,7 @@
         new Swiper('#timesale .swiper', {
           speed: 800,
           spaceBetween: remToPx(6),
-          slidesPerView: 1,
+          slidesPerView: 3,
           scrollbar: {
             el: '#timesale .scr_bar',
             draggable: true,
