@@ -11,35 +11,63 @@
 
   <!-- Preload critical CSS -->
 
-  <link rel="preload" href="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/css/common2.css"
-    as="style">
-  <link rel="stylesheet"
-    href="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/css/common2.css">
+  <link rel="preload" href="src/css/common2.css" as="style">
+  <link rel="stylesheet" href="src/css/common2.css">
 
 </head>
 
 <body style="padding: 0; margin: 0;">
   <div class="monthly_home_set combined_discount combined_discount_2603 combined_discount_2606 unique_homestyling">
     <section class="key_visual">
-      <img
-        src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/kv.jpg"
-        alt="">
+      <img src="src/images/unique_homestyling/kv.jpg" alt="">
       <h1 class="blind">lge.com 남다르게 홈스타일</h1>
     </section>
     <section class="navigation_tab">
       <nav>
         <ul>
-          <li><a href="#benefits">결제혜택</a></li>
+          <li><a href="#benefit">결제혜택</a></li>
           <li><a href="#coupon">쿠폰</a></li>
-          <li><a href="#time_sale">타임세일/브랜드 특가</a></li>
-          <li><a href="#brand_lg">카테고리</a></li>
-          <li><a href="#">프리미엄</a></li>
-          <li><a href="#">결합할인</a></li>
-          <li><a href="#">패키지 상품</a></li>
-          <li><a href="#">리뷰 이벤트</a></li>
+          <li><a href="#timesale">타임세일</a></li>
+          <li><a href="#brand_sale">브랜드 특가</a></li>
+          <li><a href="#category">카테고리</a></li>
+          <li><a href="#premium">프리미엄</a></li>
+          <li><a href="#combo">결합할인</a></li>
+          <li><a href="#package">패키지 상품</a></li>
+          <li><a href="#review_event">리뷰 이벤트</a></li>
         </ul>
       </nav>
     </section>
+
+    <section id="benefit">
+      <div class="layout_inner">
+        <div class="home_set_tit">
+          <h2>혜택도 남다르게</h2>
+          <p>한눈에 확인하는 남다르게 세일 혜택 모음</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="coupon">
+      <div class="layout_inner">
+        <div class="home_set_tit">
+          <h2>홈스타일 첫 구매 쿠폰</h2>
+          <p>홈스타일이 처음이라면 누구나</p>
+        </div>
+        <button class="coupon">
+          <img src="src/images/unique_homestyling/coupon.png" alt="">
+        </button>
+        <div class="notice_box ty_cnt ty_white">
+          <button type="button">쿠폰 유의사항 확인하기</button>
+          <div class="notice_cont">
+            <ul>
+              <li>쿠폰 유의사항 내용</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section id="benefits">
       <div class="benefits_info pd_b ty2 mt_0 ty_white">
@@ -66,9 +94,7 @@
                   <p class="txt2">(매월 1인당 누적 100만원, 횟수 제한 없음) </p>
                 </div>
                 <div class="img_box">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/benefits_info03.png"
-                    alt="">
+                  <img src="src/images/combined_discount_2603/benefits_info03.png" alt="">
                 </div>
               </li>
               <li class="swiper-slide"
@@ -79,9 +105,7 @@
                   <p class="txt2">(플러스 서비스 이용 시 10% 캐시백 적용) </p>
                 </div>
                 <div class="img_box">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/benefits_info01.png"
-                    alt="">
+                  <img src="src/images/combined_discount_2603/benefits_info01.png" alt="">
                 </div>
               </li>
               <li class="swiper-slide">
@@ -91,9 +115,7 @@
                   <p class="txt2">(플러스 서비스 이용 시 10% 캐시백 적용) </p>
                 </div>
                 <div class="img_box">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/benefits_info01.png"
-                    alt="">
+                  <img src="src/images/combined_discount_2603/benefits_info01.png" alt="">
                 </div>
               </li>
               <li class="swiper-slide">
@@ -103,9 +125,7 @@
                   <p class="txt2">(결제일 할인과 중복 적용 불가)</p>
                 </div>
                 <div class="img_box">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/benefits_info04.png"
-                    alt="">
+                  <img src="src/images/combined_discount_2603/benefits_info04.png" alt="">
                 </div>
               </li>
             </ul>
@@ -114,29 +134,6 @@
         </div>
       </div>
     </section>
-
-    <section id="coupon" class="pd_b">
-      <div class="layout_inner">
-        <div class="home_set_tit">
-          <h2>홈스타일 첫 구매 쿠폰</h2>
-          <p>홈스타일이 처음이라면 누구나</p>
-        </div>
-        <button class="coupon">
-          <img
-            src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/coupon.png"
-            alt="">
-        </button>
-        <div class="notice_box ty_cnt ty_white">
-          <button type="button">쿠폰 유의사항 확인하기</button>
-          <div class="notice_cont">
-            <ul>
-              <li>쿠폰 유의사항 내용</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="time_sale" class="bg_black pd_b">
       <div class="home_set_tit">
         <h2>Time Sale</h2>
@@ -205,41 +202,31 @@
         <div class="img_tab" data-tab-btn="A">
           <button class="on">
             <div class="img_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand_specials01.png"
-                alt="">
+              <img src="src/images/unique_homestyling/brand_specials01.png" alt="">
             </div>
             <span>책상</span>
           </button>
           <button>
             <div class="img_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand_specials01.png"
-                alt="">
+              <img src="src/images/unique_homestyling/brand_specials01.png" alt="">
             </div>
             <span>소파</span>
           </button>
           <button>
             <div class="img_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand_specials01.png"
-                alt="">
+              <img src="src/images/unique_homestyling/brand_specials01.png" alt="">
             </div>
             <span>침대</span>
           </button>
           <button>
             <div class="img_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand_specials01.png"
-                alt="">
+              <img src="src/images/unique_homestyling/brand_specials01.png" alt="">
             </div>
             <span>식탁/테이블</span>
           </button>
           <button>
             <div class="img_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand_specials01.png"
-                alt="">
+              <img src="src/images/unique_homestyling/brand_specials01.png" alt="">
             </div>
             <span>책장/수납장</span>
           </button>
@@ -282,9 +269,7 @@
           <p>필수 가전 상품 같이 구매하고 3% 결합할인 받으세요</p>
         </div>
         <div class="banner_box">
-          <img
-            src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/best_item_banner_mo.jpg"
-            alt="">
+          <img src="src/images/combined_discount_2603/best_item_banner_mo.jpg" alt="">
         </div>
         <div class="home_set_tab" data-tab-btn="B">
           <button class="on">BEST</button>
@@ -419,9 +404,7 @@
         <div class="pd_list" data-tab-cont="A">
           <div class="c-product c-product--home-style on">
             <div class="banner_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/lucciAIR_banner.jpg"
-                alt="Lucci AIR">
+              <img src="src/images/combined_discount_2607/lucciAIR_banner.jpg" alt="Lucci AIR">
               <h3 class="blind">Lucci AIR</h3>
             </div>
             <ul class="c-product__list">
@@ -439,9 +422,7 @@
           </div>
           <div class="c-product c-product--home-style">
             <div class="banner_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/alloso_banner.jpg"
-                alt="Alloso">
+              <img src="src/images/combined_discount_2607/alloso_banner.jpg" alt="Alloso">
               <h3 class="blind">Alloso</h3>
             </div>
             <ul class="c-product__list">
@@ -459,9 +440,7 @@
           </div>
           <div class="c-product c-product--home-style ">
             <div class="banner_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/iloom_banner.jpg"
-                alt="iloom">
+              <img src="src/images/combined_discount_2607/iloom_banner.jpg" alt="iloom">
               <h3 class="blind">iloom</h3>
             </div>
             <ul class="c-product__list">
@@ -479,9 +458,7 @@
           </div>
           <div class="c-product c-product--home-style ">
             <div class="banner_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/casamia_banner.jpg"
-                alt="casamia">
+              <img src="src/images/combined_discount_2607/casamia_banner.jpg" alt="casamia">
               <h3 class="blind">casamia</h3>
             </div>
             <ul class="c-product__list">
@@ -499,9 +476,7 @@
           </div>
           <div class="c-product c-product--home-style ">
             <div class="banner_box">
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/rareraw_banner.jpg"
-                alt="rareraw">
+              <img src="src/images/combined_discount_2607/rareraw_banner.jpg" alt="rareraw">
               <h3 class="blind">rareraw</h3>
             </div>
             <ul class="c-product__list">
@@ -524,9 +499,7 @@
           <article>
             <div class="img_box">
               <h3>LG전자 <i class="x"></i> 일룸</h3>
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2606/popular_combination02.jpg"
-                alt="">
+              <img src="src/images/combined_discount_2606/popular_combination02.jpg" alt="">
             </div>
             <div class="c-product c-product--home-style mixed__list" data-mixed-key="A">
               <ul class="c-product__list ty_row">
@@ -555,9 +528,7 @@
           <article>
             <div class="img_box">
               <h3>LG전자 <i class="x"></i> 까사미아</h3>
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/popular_combination01.png"
-                alt="">
+              <img src="src/images/combined_discount_2607/popular_combination01.png" alt="">
             </div>
             <div class="c-product c-product--home-style mixed__list" data-mixed-key="B">
               <ul class="c-product__list ty_row">
@@ -586,9 +557,7 @@
           <article>
             <div class="img_box">
               <h3>LG전자 <i class="x"></i> 레어로우</h3>
-              <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2607/popular_combination03.png"
-                alt="">
+              <img src="src/images/combined_discount_2607/popular_combination03.png" alt="">
             </div>
             <div class="c-product c-product--home-style mixed__list" data-mixed-key="C">
               <ul class="c-product__list ty_row">
@@ -642,19 +611,13 @@
             <div class="swiper">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/ai_home_styling01-1.jpg"
-                    alt="">
+                  <img src="src/images/pakage_promotion_2606/ai_home_styling01-1.jpg" alt="">
                 </li>
                 <li class="swiper-slide">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/ai_home_styling01-2.jpg"
-                    alt="">
+                  <img src="src/images/pakage_promotion_2606/ai_home_styling01-2.jpg" alt="">
                 </li>
                 <li class="swiper-slide">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/ai_home_styling01-3.jpg"
-                    alt="">
+                  <img src="src/images/pakage_promotion_2606/ai_home_styling01-3.jpg" alt="">
                 </li>
               </ul>
               <div class="scr_bar"></div>
@@ -674,14 +637,10 @@
             <div class="swiper">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/ai_home_styling02-1.jpg"
-                    alt="">
+                  <img src="src/images/pakage_promotion_2606/ai_home_styling02-1.jpg" alt="">
                 </li>
                 <li class="swiper-slide">
-                  <img
-                    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/pakage_promotion_2606/ai_home_styling02-2.jpg"
-                    alt="">
+                  <img src="src/images/pakage_promotion_2606/ai_home_styling02-2.jpg" alt="">
                 </li>
               </ul>
               <div class="scr_bar"></div>
@@ -706,7 +665,7 @@
 
   <!-- 1. jQuery -->
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/js/swiper.min.js"></script>
+  <script src="src/js/swiper.min.js"></script>
 
   <!-- 2. LG 공통 UI 스크립트 -->
   <script src="https://www.lge.co.kr/lg5-common/js/vcui.min.js"></script>
@@ -715,11 +674,8 @@
   <script src="https://www.lge.co.kr/lg5-common/js/app.common.min.js"></script>
 
   <!-- 3. 가전&가구제품 API -->
-  <script src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/js/product-api_badge.js"
-    defer></script>
-  <script
-    src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/js/home-style-api_timedeal.js"
-    defer></script>
+  <script src="src/js/product-api_badge.js" defer></script>
+  <script src="src/js/home-style-api_timedeal.js" defer></script>
 
   <!-- 4. 이벤트 공통 스크립트 (dblBtnChk, focusAlert 등) -->
   <script type="text/javascript" src="https://www.lge.co.kr/kr/event/common/event_validation.js"></script>

@@ -81,6 +81,17 @@
   .bg_gray{ background-color: #F6F6F6;}
   .swiper{overflow: visible;}
   #oms_module_anchor{ position: absolute; left: 0; bottom: 56px; height: 1px; width: 100%;}
+  .edge_cont{ position: relative;
+    &::before{ content: ''; display: block; width: 100%; height: 28rem; background: #111;clip-path: polygon(50% 0, 100% 100%, 0 100%);  margin-bottom: -1px; transition: .5s ease;}
+  }
+  .btn_wrap{
+    a{ background-color: #111; color: #fff; padding: 14rem; border-radius: 8rem; font-weight: 500; text-align: center;
+      + a{ margin-top: 8rem;}
+    }
+    &.ty_white{
+      a{ background-color: transparent; color: #444; border:1px solid #ccc;}
+    }
+  }
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   
   section{ position: relative; overflow: hidden;
@@ -132,6 +143,44 @@
     }
     .swiper-slide .pd_anchor{ transform: scale(0); transition: .5s $outback;}
     .swiper-slide-active .pd_anchor{ transform: scale(1); transition-delay: .5s;}
+
+    .before_after{
+      .handle_box { --position: 50%; position: relative; overflow: hidden; height: 370rem;
+        @include screen("mo") { height: 234rem;}
+        .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
+          &.before { position: absolute; inset: 0; clip-path: inset( 0 calc(100% - var(--position)) 0 0);
+            p{ color: #666; left: 20rem; right: auto;}
+          }
+          p{ position: absolute; right: 20rem; top: 50%; transform: translateY(-50%); @include font-size(12rem); z-index: 1;}
+          img{ width: 100%; height: 100%; object-fit: cover;}
+          
+        }
+        .handle { position: absolute; top: 50%; left: var(--position); z-index: 2; transform: translate(-50%, -50%); pointer-events: none; width: 40rem; height: 40rem; background: url(../images/handle.png)no-repeat center center / contain; border-radius: 50%; box-shadow: 0 4rem 4rem rgba($color: #000, $alpha: .25);}
+        input[type='range'] { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;
+        }
+      }
+      .txt_box{ margin-top: 40rem;
+        .tit{ font-size: 20rem; font-weight: 700;}
+        p{ margin-top: 20rem;}
+      }
+    }
+    .hashtag{ display: flex; justify-content: center; gap: 8rem 4rem; flex-wrap: wrap; color: #666;
+      li{ border-radius: 999rem; border: 1px solid #ddd; @include font-size(12rem); padding: 4rem 12rem;}
+      &.ty_white{ color: #ccc; border-color: #666;}
+      &.ty_left{ justify-content: flex-start;}
+    }
+    .interior_point{ overflow: hidden;
+      .swiper{ overflow: visible;
+        .swiper-slide{ overflow: hidden;
+          img{ transform: scale(1.05); transition: 1s ease;}
+          &.swiper-slide-active img{ transform: scale(1);}
+        }
+        .txt_box{  margin-top: 30rem;
+          h4{ @include font-size(16rem); font-weight: 700;}
+          p{ color: #444; margin-top: 8rem;}
+        }
+      }
+    }
     /* //MODULE MODULE MODULE MODULE MODULE MODULE  */
 
     &#key_visual{ font-weight: 600; padding: 20rem 0 24rem;
@@ -167,9 +216,7 @@
     &#construction_bg{
       .introduce{ padding: 40rem 0;
         p{ text-align: center;}
-        .hashtag{ margin-top: 20rem; display: flex; justify-content: center; gap: 8rem 4rem; flex-wrap: wrap;
-          li{ border-radius: 999rem; border: 1px solid #ddd; color: #666; @include font-size(12rem); padding: 4rem 12rem;}
-        }
+        .hashtag{ margin-top: 20rem;}
       }
       .company{ text-align: center; 
         img{ width: 100%; height: 60rem; object-fit: contain;}
@@ -189,8 +236,7 @@
       }
     }
 
-    &#construction_info{
-      &::before{ content: ''; display: block; width: 100%; height: 28rem; background: #111;clip-path: polygon(50% 0, 100% 100%, 0 100%);  margin-bottom: -1px; transition: .5s ease;}  
+    &#construction_info{  
       .tit{ @include font-size(20rem); font-weight: 700;}
       .info{ color: #ccc;}
       .const_details{
@@ -207,25 +253,6 @@
           .point_txt{ position: absolute; left: 0; bottom: 20rem; width: 100%; text-align: center; @include font-size(12rem); font-weight: 600; line-height: 1.6;}
         }
         .info{ margin-top: 24rem;}
-      }
-      .before_after{
-        .handle_box { --position: 50%; position: relative; overflow: hidden; height: 370rem;
-          @include screen("mo") { height: 234rem;}
-          .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
-            &.before { position: absolute; inset: 0; clip-path: inset( 0 calc(100% - var(--position)) 0 0);
-              p{ color: #666; left: 20rem; right: auto;}
-            }
-            p{ position: absolute; right: 20rem; top: 50%; transform: translateY(-50%); @include font-size(12rem); z-index: 1;}
-            img{ width: 100%; height: 100%; object-fit: cover;}
-            
-          }
-          .handle { position: absolute; top: 50%; left: var(--position); z-index: 2; transform: translate(-50%, -50%); pointer-events: none; width: 40rem; height: 40rem; background: url(../images/handle.png)no-repeat center center / contain; border-radius: 50%; box-shadow: 0 4rem 4rem rgba($color: #000, $alpha: .25);}
-          input[type='range'] { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;
-          }
-        }
-        .txt_box{ margin-top: 40rem;
-          p{ margin-top: 20rem;}
-        }
       }
     }
 
@@ -251,18 +278,6 @@
           img{ @include m_full_layout(); }
           p{ margin-top: 24rem; color: #444;}
         }
-        .interior_point{ overflow: hidden;
-          .swiper{ overflow: visible;
-            .swiper-slide{ overflow: hidden;
-              img{ transform: scale(1.05); transition: 1s ease;}
-              &.swiper-slide-active img{ transform: scale(1);}
-            }
-            .txt_box{  margin-top: 30rem;
-              h4{ @include font-size(16rem); font-weight: 700;}
-              p{ color: #444; margin-top: 8rem;}
-            }
-          }
-        }
         .expert_comment{ 
           .radius_box{
             p{ color: #444;}
@@ -284,6 +299,9 @@
           }
         }
         .product_list{ margin-top: 20rem;}
+      }
+      &.black_cont{
+        .txt_box p{ color: #ccc;}
       }
     }
 
@@ -337,15 +355,10 @@
         p{ @include font-size(13rem); line-height: 1.4; color: #444; padding: 32rem 0 24rem;
           strong{ font-weight: 600;}
         }
-        .btn_wrap{
-          a{ background-color: #111; color: #fff; @include font-size(15rem); padding: 13rem; border-radius: 8rem; font-weight: 600;
-            + a{ margin-top: 8rem;}
-          }
-        }
         span{ color: #8f8f8f; @include font-size(12rem); margin-top: 8rem;}
       }
-
     }
+
     &#recommended_contents{
       h2{ @include font-size(22rem); font-weight: 600; text-align: center; margin-bottom: 28rem;}
       .swiper{
@@ -357,6 +370,41 @@
           .txt_box{ padding: 20rem 16rem; line-height: 1.4;
             span{ @include font-size(12rem); color: #999;}
             h3{ margin-top: 4rem; @include font-size(16rem); font-weight: 500;}
+          }
+        }
+      }
+    }
+
+    &#space_story{
+      article{
+        &.ty_green{
+          &::before, .green_cont{ background-color: #DEE6E4;}
+          .txt_unique{ filter: brightness(.05);}
+        }
+        .before_after_info{ padding: 60rem 0;
+          .tit_box{ padding-bottom: 20rem; position: relative;
+            span{ color: #BD5753; font-size: 12rem; margin-bottom: 14rem;}
+            h2{ font-size: 30rem; font-weight: 600; line-height: 1.3;
+              .txt_unique{ width: 120rem; margin-bottom: 5rem;}
+            }
+            .logo{ width: 48rem; margin: 12rem 0 0 auto;}
+          }
+          .const_information{
+            .const_info_box{ 
+              li{ border: 1px solid rgba($color: #fff, $alpha: 12%); border-width: 1px 0; display: flex; padding: 10rem 0;
+                &:not(:last-child){ border-bottom: none;}
+                span{ font-weight: 600; color: #BD5753; width: 92rem; flex-shrink: 0;}
+                p{ width: 100%;}
+              }
+            }
+            .hashtag{ margin-top: 40rem; width: 58%;}
+            
+            &.ty_black{
+              .const_info_box li{ border-color: rgba($color: #111, $alpha: 12%);}
+              .hashtag{ 
+                li{ color: #444; border-color: rgba($color: #111, $alpha: 20%);}
+              }
+            }
           }
         }
       }
