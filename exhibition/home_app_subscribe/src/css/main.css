@@ -1500,16 +1500,19 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  margin-top: 16px;
+}
+#home-app-subscribe.care-service .service-care__notes.margin {
   margin-top: 8px;
-  color: #222;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: -0.42px;
-  text-align: left;
 }
 #home-app-subscribe.care-service .service-care__notes li {
   position: relative;
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.42px;
+  text-align: left;
 }
 #home-app-subscribe.care-service .service-care__notes li.no-dot::before {
   margin-right: 0;
@@ -1529,6 +1532,11 @@
   background: #666;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  #home-app-subscribe.care-service .service-care__notes li {
+    font-size: 12px;
+  }
+}
 #home-app-subscribe.care-service .service-care__notes--title::before {
   margin-right: 0px !important;
   width: 0px !important;
@@ -1536,7 +1544,7 @@
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-care__notes {
-    font-size: 12px;
+    margin-top: 10px;
   }
 }
 #home-app-subscribe.care-service .service-care__faq {
