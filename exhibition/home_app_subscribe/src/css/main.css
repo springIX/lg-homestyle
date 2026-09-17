@@ -52,7 +52,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe .flex {
   display: flex;
@@ -103,6 +104,7 @@
   padding: 6px 10px;
   border-radius: 999px;
   margin: 0 auto 14px;
+  width: -moz-max-content;
   width: max-content;
   line-height: 1;
 }
@@ -355,6 +357,7 @@
   font-weight: 700;
 }
 #home-app-subscribe .tag {
+  width: -moz-max-content;
   width: max-content;
   padding: 2px 4px;
   font-size: 11px;
@@ -417,7 +420,8 @@
   }
 }
 #home-app-subscribe section#kv .cover {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (max-width: 1400px) and (min-width: 768px) {
   #home-app-subscribe section#kv .cover {
@@ -524,6 +528,7 @@
 }
 #home-app-subscribe section#overview-benefit .overview-list li a p {
   display: block;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   font-size: 18px;
@@ -1250,7 +1255,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .order-box {
   font-size: 18px;
@@ -1941,7 +1947,8 @@
   width: 28px;
   height: 28px;
   margin-right: 6px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   vertical-align: top;
 }
 @media (max-width: 767px) {
@@ -1949,7 +1956,8 @@
     width: 18px;
     height: 18px;
     vertical-align: middle;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -2206,6 +2214,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
+    width: -moz-max-content;
     width: max-content;
     display: flex;
   }
@@ -2246,7 +2255,8 @@
 #home-app-subscribe.care-service .service-page__section--care .service-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 48px;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
   width: 100%;
   padding: 0px 20px;
   border: 1px solid #eff0f2;
@@ -2384,7 +2394,8 @@
   height: 88px;
   overflow: hidden;
   border-radius: 12px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--care .service-care .service-care__item img {
@@ -2846,7 +2857,8 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   align-items: start;
 }
 @media (max-width: 767px) {
@@ -2861,7 +2873,8 @@
   padding: 6px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--cancel .service-cancel__step > img {
@@ -3548,7 +3561,8 @@
   max-width: 240px;
   height: auto;
   aspect-ratio: 1/1;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--products .service-products__image {
@@ -3781,7 +3795,8 @@
   aspect-ratio: 380/240;
   overflow: hidden;
   border-radius: 24px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--guide .service-guide img {
@@ -3789,7 +3804,8 @@
   }
 }
 #home-app-subscribe.care-service .service-page__section--guide .service-guide:first-child img {
-  object-position: center 44%;
+  -o-object-position: center 44%;
+     object-position: center 44%;
 }
 #home-app-subscribe.care-service .service-page__section--guide .service-guide__text {
   display: flex;
@@ -3873,7 +3889,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
@@ -3940,7 +3957,8 @@
   display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 767px) {
   #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
@@ -4002,5 +4020,3 @@
 #home-app-subscribe {
   /* 서비스 안내 페이지 끝 */
 }
-
-/*# sourceMappingURL=main.css.map */
