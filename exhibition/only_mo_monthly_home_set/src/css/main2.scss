@@ -383,7 +383,7 @@
   /* //패키지 상품 */
 
   /* 타임딜 상품 */
-  [data-role="time-deal-timer"] { display: flex; align-items: flex-start; justify-content: center; gap: 12px; font-size: 28rem; line-height: 1.2; 
+  [data-role="time-deal-timer"] { display: flex; align-items: flex-start; justify-content: center; gap: 8rem; font-size: 28rem; line-height: 1.2; 
     &[hidden] { display: none !important; }
 
     .time-deal-unit { text-align: center;
