@@ -2205,7 +2205,7 @@
   font-weight: 600;
   letter-spacing: -0.11px;
   height: 18px;
-  line-height: 18px;
+  line-height: 17px;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--blue {
   box-shadow: 0px 0px 2px #067f9d;
@@ -2219,7 +2219,6 @@
   #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag {
     font-size: 9px;
     padding: 2px 3px;
-    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
     width: -moz-max-content;
@@ -2464,11 +2463,11 @@
   max-width: 940px;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care__tag--supply {
-  box-shadow: 0 0 1.1px #067f9d !important;
+  box-shadow: 0 0 2px #067f9d !important;
   color: #067f9d !important;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care__tag--free {
-  box-shadow: 0 0 1.1px #ab6226 !important;
+  box-shadow: 0 0 2px #ab6226 !important;
   color: #ab6226 !important;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care__notice {
