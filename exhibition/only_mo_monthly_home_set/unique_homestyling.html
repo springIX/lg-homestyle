@@ -15,7 +15,6 @@
     as="style">
   <link rel="stylesheet"
     href="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/css/common2.css">
-
 </head>
 
 <body style="padding: 0; margin: 0;">
@@ -29,14 +28,16 @@
     <section class="navigation_tab">
       <nav>
         <ul>
-          <li><a href="#benefit">결제혜택</a></li>
           <li><a href="#coupon">쿠폰</a></li>
+          <li><a href="#benefits">결제혜택</a></li>
           <li><a href="#timesale">타임세일</a></li>
-          <li><a href="#combo">결합할인</a></li>
           <li><a href="#premium">프리미엄</a></li>
+          <li><a href="#category">카테고리</a></li>
+          <li><a href="#combo">결합할인</a></li>
+          <li><a href="#package">패키지</a></li>
+          <li><a href="#styling">홈스타일링</a></li>
           <li><a href="#community">커뮤니티</a></li>
           <li><a href="#interior">인테리어</a></li>
-          <li><a href="#styling">홈스타일링</a></li>
         </ul>
       </nav>
     </section>
@@ -47,10 +48,10 @@
           <h2>혜택도 남다르게</h2>
           <p>한눈에 확인하는 남다르게 세일 혜택 모음</p>
         </div>
-        <div class="benefit_list" data-toggle>
+        <div class="benefit_list" data-toggle-cont="benefit">
           <ul>
             <li>
-              <a href="">
+              <a href="#coupon">
                 <h3>홈스타일 첫 구매 쿠폰팩 <br> <em>최대 30%</em></h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit01.png"
@@ -58,7 +59,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#benefits">
                 <h3><em>7%</em> 카드 청구할인 무이자 <br> 최대 12개월</h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit02.png"
@@ -66,7 +67,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#timesale">
                 <h3>가구부터 주방/패브릭까지 <br> <em>최대 70%</em></h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit03.png"
@@ -74,7 +75,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#popular_combination">
                 <h3>가전과 함께 사면 <br> <em>최대 10%</em> 추가할인</h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit04.png"
@@ -82,7 +83,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#premium">
                 <h3>백화점·하이엔드를 한번에 <br> <em>브랜드 SALE</em></h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit05.png"
@@ -90,7 +91,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#review_event">
                 <h3>커뮤니티에서 공간자랑하면 <br> 네이버페이 <em>10만원</em> 기회</h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit06.png"
@@ -98,7 +99,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#interior">
                 <h3>전문가에게 받는 <br> <em>무료</em> 인테리어상담</h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit07.png"
@@ -106,7 +107,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#styling">
                 <h3>공간 꾸미기가 고민되면? <br> <em>홈스타일링</em> 추천</h3>
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/benefit08.png"
@@ -114,11 +115,9 @@
               </a>
             </li>
           </ul>
-          <div data-tab-btn>
-            <button class="home_set_btn">혜택 더 보기 <img
-                src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg" alt=""
-                class="arr ty_down"></button>
-          </div>
+          <button class="home_set_btn" data-toggle="benefit">혜택 더 보기 <img
+              src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg" alt=""
+              class="arr ty_down"></button>
         </div>
       </div>
     </section>
@@ -155,7 +154,7 @@
           <div class="swiper">
             <div class="home_set_tab mo">
               <button class="on">7% 결제일 할인</button>
-              <button>7% 결제혜택</button>
+              <button>10% 결제혜택</button>
               <button>무이자 혜택</button>
               <button>네이버포인트 적립</button>
               <!-- <button>최대 50만원 캐시백</button>
@@ -226,7 +225,7 @@
       </div>
       <div class="timesale_cont">
         <div class="timesale_timer"></div>
-        <a href="" class="more_btn">전체보기 <img
+        <a href="https://homestyle.lge.co.kr/time-sale?category=all" class="more_btn">전체보기 <img
             src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg" alt=""></a>
         <div class="timesale_list swiper">
           <ul class="swiper-wrapper">
@@ -307,7 +306,7 @@
     </section>
 
     <section id="category_pd" class="layout_inner">
-      <article id="brand_sale">
+      <article id="brand_sale" style="display: none !important;">
         <div class="home_set_tit">
           <h2>브랜드 세일</h2>
           <p>이 주에 주목해야 할 브랜드 세일 혜택</p>
@@ -591,101 +590,116 @@
               <li class="c-product__item"><span data-home-style-product="G25070000186"></span></li>
             </ul>
           </div>
+          <a href="" class="home_set_btn ty_black">더 많은 브랜드 보기 <img
+              src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg" alt=""
+              class="arr ty_2"></a>
         </div>
       </article>
 
       <article id="brand_lg" class="pd_b">
-        <div class="home_set_tit" id="category">
-          <h2>카테고리 큐레이션</h2>
-          <p>필수 가전 상품 같이 구매하고 3% 결합할인 받으세요</p>
-        </div>
-        <div class="banner_box">
-          <img
-            src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/best_item_banner_mo.jpg"
-            alt="">
-        </div>
-        <div class="home_set_tab" data-tab-btn="B">
-          <button class="on">가구</button>
-          <button>키친</button>
-          <button>조명</button>
-          <button>패브릭</button>
-          <button>인테리어소품</button>
-        </div>
-        <div class="pd_list" data-tab-cont="B">
-          <ul class="c-product m_swiper_ty_col2 on">
-            <li class="c-product__item"><span data-home-style-product="G25120026325"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110024612"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040039073"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070000648"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110023340"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26030035462"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110023369"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25120026323"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110023201"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110023363"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070001816"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110024619"></span></li>
-          </ul>
-          <ul class="c-product m_swiper_ty_col2">
-            <li class="c-product__item"><span data-home-style-product="G26040038363"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26010030492"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26010030620"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25100021418"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25080008430"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040040287"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040040240"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25090015482"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26060042894"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26010031343"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25080007926"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25080008390"></span></li>
-          </ul>
-          <ul class="c-product m_swiper_ty_col2">
-            <li class="c-product__item"><span data-home-style-product="G25070000656"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26070047110"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070001875"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26060043941"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26070050325"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070000090"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070001706"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26080053243"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040038310"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26070047869"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26080053245"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070001874"></span></li>
-          </ul>
-          <ul class="c-product m_swiper_ty_col2">
-            <li class="c-product__item"><span data-home-style-product="G26040038589"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110024923"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040038510"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110024993"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110024921"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26060043239"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25090012697"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110024949"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040038718"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070002939"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25110025020"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040040311"></span></li>
-          </ul>
-          <ul class="c-product m_swiper_ty_col2">
-            <li class="c-product__item"><span data-home-style-product="G25070001796"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070000617"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25090019035"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26070047417"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070001390"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25080007909"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25070000618"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25080007905"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25090019033"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25090019028"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G26040040348"></span></li>
-            <li class="c-product__item"><span data-home-style-product="G25080010618"></span></li>
-          </ul>
-          <a href="https://homestyle.lge.co.kr/exhibition/detail?exhibitionId=2606001342"
-            class="home_set_btn ty_black">상품
-            더보기 <img src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg"
-              alt="" class="arr ty_2"></a>
+        <div id="category">
+          <div class="home_set_tit">
+            <h2>카테고리 큐레이션</h2>
+            <p>카테고리별로 보는 남다르게 세일 상품</p>
+          </div>
+          <div class="banner_box">
+            <img
+              src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/combined_discount_2603/best_item_banner_mo.jpg"
+              alt="">
+          </div>
+          <div class="home_set_tab" data-tab-btn="B">
+            <button class="on">가구</button>
+            <button>키친</button>
+            <button>조명</button>
+            <button>패브릭</button>
+            <button>인테리어소품</button>
+          </div>
+          <div class="pd_list" data-tab-cont="B">
+            <div class="c-product c-product--home-style m_swiper_ty_col2 on">
+              <ul class="c-product__list">
+                <li class="c-product__item"><span data-home-style-product="G25120026325"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110024612"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040039073"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070000648"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110023340"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26030035462"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110023369"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25120026323"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110023201"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110023363"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070001816"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110024619"></span></li>
+              </ul>
+            </div>
+            <div class="c-product c-product--home-style m_swiper_ty_col2">
+              <ul class="c-product__list">
+                <li class="c-product__item"><span data-home-style-product="G26040038363"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26010030492"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26010030620"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25100021418"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25080008430"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040040287"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040040240"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25090015482"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26060042894"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26010031343"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25080007926"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25080008390"></span></li>
+              </ul>
+            </div>
+            <div class="c-product c-product--home-style m_swiper_ty_col2">
+              <ul class="c-product__list">
+                <li class="c-product__item"><span data-home-style-product="G25070000656"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26070047110"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070001875"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26060043941"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26070050325"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070000090"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070001706"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26080053243"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040038310"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26070047869"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26080053245"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070001874"></span></li>
+              </ul>
+            </div>
+            <div class="c-product c-product--home-style m_swiper_ty_col2">
+              <ul class="c-product__list">
+                <li class="c-product__item"><span data-home-style-product="G26040038589"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110024923"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040038510"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110024993"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110024921"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26060043239"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25090012697"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110024949"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040038718"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070002939"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25110025020"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040040311"></span></li>
+              </ul>
+            </div>
+            <div class="c-product c-product--home-style m_swiper_ty_col2">
+              <ul class="c-product__list">
+                <li class="c-product__item"><span data-home-style-product="G25070001796"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070000617"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25090019035"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26070047417"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070001390"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25080007909"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25070000618"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25080007905"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25090019033"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25090019028"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G26040040348"></span></li>
+                <li class="c-product__item"><span data-home-style-product="G25080010618"></span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <a href="https://homestyle.lge.co.kr/exhibition/detail?exhibitionId=2606001342"
+            class="home_set_btn ty_black">더 많은 상품 보기 <img
+              src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg" alt=""
+              class="arr ty_2"></a> -->
           <div class="notice_box ty_cnt ty_black">
             <button type="button">유의사항</button>
             <div class="notice_cont">
@@ -694,6 +708,7 @@
               </ul>
             </div>
           </div>
+        </div>
       </article>
     </section>
 
@@ -963,8 +978,8 @@
         <p>홈스타일 구매 후기와 함께 <strong>내 공간 이미지</strong>를 올려주세요. <br>베스트 후기 <strong>10명</strong>에게 네이버페이
           <strong>5만P</strong>를 추가로 드립니다.
         </p>
-        <a href="https://homestyle.lge.co.kr/exhibition/detail?exhibitionId=2606001342" class="home_set_btn ty_black">상품
-          더보기 <img src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg"
+        <a href="https://homestyle.lge.co.kr/event/detail?eventId=E260900058" class="home_set_btn ty_black">내 공간 자랑하고
+          포인트 받기<img src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg"
             alt="" class="arr"></a>
         <a href="https://homestyle.lge.co.kr/exhibition/detail?exhibitionId=2609001753" class="banner_btn"
           id="interior">
@@ -983,14 +998,6 @@
         </div>
         <div class="brand_list">
           <ul data-toggle-cont="view_all_brands">
-            <li>
-              <a href="https://homestyle.lge.co.kr/brand/detail?brandId=2500000474">
-                <img
-                  src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand01.png"
-                  alt="">
-                <p>허먼밀러</p>
-              </a>
-            </li>
             <li>
               <a href="https://homestyle.lge.co.kr/brand/detail?brandId=2500000466">
                 <img
@@ -1068,7 +1075,7 @@
                 <img
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand11.png"
                   alt="">
-                <p>에이스 침대</p>
+                <p>에이스침대</p>
               </a>
             </li>
             <li>
@@ -1085,6 +1092,14 @@
                   src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand13.png"
                   alt="">
                 <p>루씨에어</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://homestyle.lge.co.kr/brand/detail?brandId=2600000835">
+                <img
+                  src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand17.png"
+                  alt="">
+                <p>에싸</p>
               </a>
             </li>
             <li>
@@ -1112,11 +1127,19 @@
               </a>
             </li>
             <li>
-              <a href="https://homestyle.lge.co.kr/brand/detail?brandId=2600000835">
+              <a href="https://homestyle.lge.co.kr/brand/detail?brandId=2500000474">
                 <img
-                  src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand17.png"
+                  src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand01.png"
                   alt="">
-                <p>에싸</p>
+                <p>허먼밀러</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://homestyle.lge.co.kr/brand/detail?brandId=2600000790">
+                <img
+                  src="https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/unique_homestyling/brand28.png"
+                  alt="">
+                <p>휴먼스케일</p>
               </a>
             </li>
             <li>
@@ -1208,7 +1231,7 @@
         </div>
       </div>
     </section>
-    <section class="more_promotion">
+    <section class="more_promotion" style="display: none !important;">
       <div class="layout_inner">
         <h2>더 많은 기획전 보러가기</h2>
         <ul class="more_promotion_list">

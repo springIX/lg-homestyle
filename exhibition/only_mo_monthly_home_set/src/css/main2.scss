@@ -192,7 +192,7 @@
     }
     &.ty_white{ background-color: #fff; color: #111 !important;}
   }
-  .on .home_set_btn .arr.ty_down{ transform: rotate(90deg) translateX(4rem);}
+  .on .home_set_btn .arr.ty_down{ transform: rotate(90deg);}
 
   .home_set_tab{ display: flex; justify-content: center; gap: 16rem; margin-bottom: 20rem; flex-wrap: wrap;
     @include screen("mo2") { flex-wrap: nowrap; justify-content: flex-start;}

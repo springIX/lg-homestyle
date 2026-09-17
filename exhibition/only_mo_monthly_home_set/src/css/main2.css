@@ -488,7 +488,7 @@
   color: #111 !important;
 }
 .monthly_home_set .on .home_set_btn .arr.ty_down {
-  transform: rotate(90deg) translateX(4rem);
+  transform: rotate(90deg);
 }
 .monthly_home_set .home_set_tab {
   display: flex;

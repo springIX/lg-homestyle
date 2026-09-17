@@ -1587,4 +1587,29 @@
     });
     domObserver.observe(document.body, { childList: true, subtree: true });
   })();
+
+  // URL 해시 영역으로 이동
+  function moveToHash() {
+    const id = decodeURIComponent(
+      window.location.hash.slice(1)
+    );
+
+    const target = document.getElementById(id);
+
+    if (!target) return;
+
+    setTimeout(function () {
+      $('html, body').scrollTop(
+        $(target).offset().top - 80
+      );
+    }, 300);
+  }
+
+  if (document.readyState === 'complete') {
+    moveToHash();
+  } else {
+    window.addEventListener('load', moveToHash);
+  }
+
+  window.addEventListener('hashchange', moveToHash);
 })();
