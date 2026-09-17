@@ -6,8 +6,8 @@
     + '?displaySpaceId=DP_HOME_001'
     + '&titleLinkUrl=subscribe'
     + '&displayObjectLevel=2'
-    + '&viewCnt=5';
 
+  const VIEW_COUNTS = [5, 4, 3];
   const PRODUCT_BASE_URL = 'https://www.lge.co.kr';
   const IMAGE_BASE_URL = 'https://static-store.lge.co.kr';
   const MOBILE_BREAKPOINT = 767;
@@ -418,22 +418,42 @@
   /*
    * API 카테고리와 HTML 패널 연결
    */
-  function renderAllCategories(data) {
-    const categoryList =
-      data.bestRankingCategoryList || [];
-
-    const rankingList =
-      data.bestRankingList || [];
-
+  /*
+   * 여러 API 응답을 합쳐서
+   * 카테고리별 상품이 가장 많은 결과 사용
+   */
+  function renderAllCategories(dataList) {
     const rankingMap = {};
 
-    categoryList.forEach(
-      function (category, index) {
-        rankingMap[
-          category.displayTargetId
-        ] = rankingList[index] || [];
-      }
-    );
+    dataList.forEach(function (data) {
+      const categoryList =
+        data.bestRankingCategoryList || [];
+
+      const rankingList =
+        data.bestRankingList || [];
+
+      categoryList.forEach(
+        function (category, index) {
+          const categoryId =
+            category.displayTargetId;
+
+          const products =
+            rankingList[index] || [];
+
+          /*
+           * 기존 결과보다 상품이 많을 때만 저장
+           */
+          if (
+            !rankingMap[categoryId]
+            || products.length
+            > rankingMap[categoryId].length
+          ) {
+            rankingMap[categoryId] =
+              products;
+          }
+        }
+      );
+    });
 
     $panels.each(function () {
       const $panel = $(this);
@@ -548,71 +568,88 @@
    */
   $panels.addClass('is-loading');
 
+  const rankingDataList = [];
+
+  let completedRequestCount = 0;
+  let successRequestCount = 0;
+
   /*
-   * API 호출
+   * 5개부터 1개까지 각각 요청
+   *
+   * 5개가 있는 카테고리 → 5개
+   * 3개만 있는 카테고리 → 3개
+   * 2개만 있는 카테고리 → 2개
+   * 1개만 있는 카테고리 → 1개
    */
-  $.ajax({
-    url: API_URL,
-    method: 'GET',
-    dataType: 'json'
-  })
-    .done(function (response) {
-      if (
-        response.status !== 200
-        || !response.data
-      ) {
-        console.error(
-          '[구독 추천 제품] API 응답 오류:',
-          response.message
-        );
-
-        $panels.each(function () {
-          $(this)
-            .find('.service-products')
-            .html(`
-              <li class="service-products__empty">
-                제품 정보를 불러오지 못했습니다.
-              </li>
-            `);
-        });
-
-        return;
-      }
-
-      renderAllCategories(
-        response.data
-      );
-
-      syncProductSwipers();
+  VIEW_COUNTS.forEach(function (viewCount) {
+    $.ajax({
+      url:
+        API_URL
+        + '&viewCnt='
+        + viewCount,
+      method: 'GET',
+      dataType: 'json'
     })
-    .fail(
-      function (
+      .done(function (response) {
+        if (
+          response.status === 200
+          && response.data
+        ) {
+          rankingDataList.push(
+            response.data
+          );
+
+          successRequestCount += 1;
+        }
+      })
+      .fail(function (
         xhr,
         status,
         error
       ) {
         console.error(
           '[구독 추천 제품] API 호출 실패:',
+          'viewCnt=' + viewCount,
           status,
           error
         );
+      })
+      .always(function () {
+        completedRequestCount += 1;
 
-        $panels.each(function () {
-          $(this)
-            .find('.service-products')
-            .html(`
+        /*
+         * 모든 요청이 끝난 후 한 번만 렌더링
+         */
+        if (
+          completedRequestCount
+          !== VIEW_COUNTS.length
+        ) {
+          return;
+        }
+
+        if (successRequestCount > 0) {
+          renderAllCategories(
+            rankingDataList
+          );
+
+          syncProductSwipers();
+        } else {
+          $panels.each(function () {
+            $(this)
+              .find('.service-products')
+              .html(`
               <li class="service-products__empty">
                 제품 정보를 불러오지 못했습니다.
               </li>
             `);
-        });
-      }
-    )
-    .always(function () {
-      $panels.removeClass(
-        'is-loading'
-      );
-    });
+          });
+        }
+
+        $panels.removeClass(
+          'is-loading'
+        );
+      });
+  });
 
   let resizeTimer;
 
