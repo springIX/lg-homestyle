@@ -837,7 +837,7 @@
       const hasAiHomeStyling = document.querySelector('#ai_home_styling .swiper'); // ✅ 추가
       const hasHowToBuy = document.querySelector('#how_to_buy .swiper'); // ✅ 추가
       const hasBrandCollection = document.querySelector('#premium_brand_collection .swiper'); // ✅ 추가
-      const hasTimeSale = document.querySelector('#time_sale .swiper'); // ✅ 추가
+      const hasTimeSale = document.querySelector('#timesale .swiper'); // ✅ 추가
 
       if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale) return;
 
@@ -1050,12 +1050,12 @@
 
       // 8) Time sale
       if (hasTimeSale) {
-        new Swiper('#time_sale .swiper', {
+        new Swiper('#timesale .swiper', {
           speed: 800,
           spaceBetween: remToPx(6),
           slidesPerView: 1,
           scrollbar: {
-            el: '#time_sale .scr_bar',
+            el: '#timesale .scr_bar',
             draggable: true,
           },
         });
