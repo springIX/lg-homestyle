@@ -397,7 +397,9 @@
                 p{ width: 100%;}
               }
             }
-            .hashtag{ margin-top: 40rem; width: 58%;}
+            .hashtag{ margin-top: 40rem; 
+              @include screen("pc") { width: 58%;}
+            }
             
             &.ty_black{
               .const_info_box li{ border-color: rgba($color: #111, $alpha: 12%);}

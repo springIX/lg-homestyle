@@ -1588,11 +1588,17 @@
     domObserver.observe(document.body, { childList: true, subtree: true });
   })();
 
-  // URL 해시 영역으로 이동
-  function moveToHash() {
-    const id = decodeURIComponent(
-      window.location.hash.slice(1)
-    );
+  // URL의 %23아이디 영역으로 이동
+  function moveToTarget() {
+    const exhibitionId = new URLSearchParams(
+      window.location.search
+    ).get('exhibitionId') || '';
+
+    const id =
+      window.location.hash.slice(1) ||
+      exhibitionId.split('#')[1];
+
+    if (!id) return;
 
     const target = document.getElementById(id);
 
@@ -1606,10 +1612,8 @@
   }
 
   if (document.readyState === 'complete') {
-    moveToHash();
+    moveToTarget();
   } else {
-    window.addEventListener('load', moveToHash);
+    window.addEventListener('load', moveToTarget);
   }
-
-  window.addEventListener('hashchange', moveToHash);
 })();
