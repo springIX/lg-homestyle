@@ -372,6 +372,9 @@
 .monthly_home_set .notice_box.ty_white button::after {
   filter: invert(0.9);
 }
+.monthly_home_set .pd_t {
+  padding-top: 60rem;
+}
 .monthly_home_set .pd_b {
   padding-bottom: 100rem;
 }
@@ -752,6 +755,7 @@
   white-space: nowrap;
   padding-top: 2rem;
   width: 100%;
+  min-height: 22rem;
 }
 .monthly_home_set .c-product__list:not(.ty_row, .ty_package) .c-product__item .c-product__info-container .c-product__badge-container > span {
   display: inline-block;
@@ -1889,6 +1893,9 @@
     font-size: 10rem;
   }
 }
+.monthly_home_set.combined_discount .not_badge_list .c-product__item .c-product__badge-container::before {
+  display: none !important;
+}
 .monthly_home_set.combined_discount section#benefits .brand_box {
   display: flex;
   gap: 12rem;
@@ -2836,6 +2843,20 @@
 }
 .monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list .swiper-slide .c-product__list .c-product__item .c-product__info-container .c-product__info .c-product__name {
   color: #444;
+}
+.monthly_home_set.combined_discount section #category .pd_list .swiper {
+  display: none;
+  overflow: visible;
+}
+.monthly_home_set.combined_discount section #category .pd_list .swiper.on {
+  display: block;
+}
+.monthly_home_set.combined_discount section #category .pd_list .swiper .swiper-slide {
+  display: block;
+}
+.monthly_home_set.combined_discount section #category .pd_list .swiper .swiper-slide .c-product__list {
+  grid-template-columns: 1fr;
+  gap: 20rem;
 }
 .monthly_home_set.combined_discount section#benefit .benefit_list.on ul li:nth-child(n+5) {
   display: block;

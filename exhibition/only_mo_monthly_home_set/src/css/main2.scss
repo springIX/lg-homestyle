@@ -155,7 +155,7 @@
       &::after{ filter: invert(0.9);}
     }
   }
-
+  .pd_t{ padding-top: 60rem;}
   .pd_b{ padding-bottom: 100rem;
     @include screen("mo") { padding-bottom: 60rem;}
   }
@@ -266,7 +266,7 @@
             }
           }
         }
-        .c-product__badge-container{ margin-left: 0; display: flex; gap: 4rem; white-space: nowrap; padding-top: 2rem; width: 100%;
+        .c-product__badge-container{ margin-left: 0; display: flex; gap: 4rem; white-space: nowrap; padding-top: 2rem; width: 100%; min-height: 22rem;
           > span{ display: inline-block; font-size: 11rem; padding: 3rem 4rem; background-color: #F3F5F7; color: #444444;
             @include screen("mo") { font-size: 10rem;}
           }
@@ -722,6 +722,9 @@
         @include screen("mo") { font-size: 10rem;}
       }
     }
+    .not_badge_list .c-product__item .c-product__badge-container{
+      &::before{ display: none !important;}
+    }
     section{
       &#benefits{
         .brand_box{display: flex; gap: 12rem;
@@ -1173,6 +1176,19 @@
             .swiper-slide{
               .c-product__list{ grid-template-columns: 1fr; gap: 12rem;
                  .c-product__item .c-product__info-container .c-product__info .c-product__name{ color: #444;}
+              }
+            }
+          }
+        }
+      }
+
+      #category{
+        .pd_list{
+          .swiper{ display: none; overflow: visible;
+            &.on{ display: block;}
+            .swiper-slide{ display: block;
+              .c-product__list{ grid-template-columns: 1fr; gap: 20rem;
+                .c-product__item{}
               }
             }
           }

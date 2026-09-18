@@ -72,7 +72,6 @@
       const url = `${this.baseUrl}${this.endpoints.timeDeals}`;
       const response = await this.#request(url);
 
-      if (!response) return null;
       return response?.data?.products || [];
     }
   }
@@ -103,8 +102,6 @@
     #productDataMap = new Map();
     #timeDealDataMap = new Map();
     #timerInterval = null;
-    #timeDealRefreshTimer = null;
-    #hasLoadedOnce = false;
 
     constructor() {
       this.apiService = new HomeStyleProductApi();
@@ -119,24 +116,12 @@
     }
 
     async #init() {
+      const elProductList = document.querySelector(HomeStyleProductUIController.SELECTORS.PRODUCT_WRAPPER);
+      if (!elProductList) return;
       await this.#updateProducts();
     }
 
     async #updateProducts() {
-      // 타임딜 목록을 먼저 받아 #timesale 상품 DOM을 자동 생성한다.
-      const timeDeals = this.#useMockData
-        ? []
-        : await this.apiService.fetchTimeDeals();
-
-      if (!this.#useMockData && Array.isArray(timeDeals)) {
-        this.#buildTimeDealItems(timeDeals);
-      }
-
-      const elProductList = document.querySelector(
-        HomeStyleProductUIController.SELECTORS.PRODUCT_WRAPPER
-      );
-      if (!elProductList) return;
-
       const elItems = document.querySelectorAll(HomeStyleProductUIController.SELECTORS.PRODUCT_ITEM);
       const productIds = [...document.querySelectorAll(HomeStyleProductUIController.SELECTORS.MAIN_SPAN)]
         .map(el => el.dataset.homeStyleProduct)
@@ -144,14 +129,10 @@
 
       if (productIds.length === 0) {
         console.log('[HomeStyleProductUIController.updateProducts] 업데이트할 상품 ID가 없습니다.');
-        this.#updateTimeSaleSwiper();
-        this.#scheduleTimeDealRefresh(timeDeals || []);
         return;
       }
 
-      if (!this.#hasLoadedOnce) {
-        elItems.forEach(elItem => this.#setLoadingState(elItem, true));
-      }
+      elItems.forEach(elItem => this.#setLoadingState(elItem, true));
 
       let productList = []; // ✅ 여기로 이동
 
@@ -162,13 +143,17 @@
           const normalProductIds = productIds.filter(id => id.startsWith('G'));
           const packageProductIds = productIds.filter(id => id.startsWith('P'));
 
-          const [normalProducts, packageProducts] = await Promise.all([
+          const [normalProducts, packageProducts, timeDeals] = await Promise.all([
             normalProductIds.length
               ? this.apiService.fetchProducts(normalProductIds)
               : [],
 
             packageProductIds.length
               ? this.apiService.fetchPackages(packageProductIds)
+              : [],
+
+            normalProductIds.length
+              ? this.apiService.fetchTimeDeals()
               : []
           ]);
 
@@ -198,9 +183,6 @@
           productList.forEach(item => this.#productDataMap.set(item.goodsNo, item));
           this.#renderProducts(elItems);
           this.#startTimers();
-          this.#updateTimeSaleSwiper();
-          this.#scheduleTimeDealRefresh(timeDeals || []);
-          this.#hasLoadedOnce = true;
 
           setTimeout(() => {
             $(window).trigger('scroll');
@@ -212,149 +194,7 @@
         console.error('제품 정보를 가져오는 데 실패했습니다:', error);
         console.error('[debug productList]', productList);
         elItems.forEach(elItem => this.#renderErrorState(elItem));
-        this.#scheduleTimeDealRefresh(timeDeals || []);
       }
-    }
-
-    #buildTimeDealItems(timeDeals) {
-      const wrapper = document.querySelector(
-        '#timesale .timesale_list > .swiper-wrapper'
-      );
-      if (!wrapper) return;
-
-      const now = Date.now();
-      const seen = new Set();
-
-      const activeDeals = timeDeals.filter((item) => {
-        const productId = String(item?.productId || '');
-        const startDate = this.#parseApiDate(item?.startDate);
-        const endDate = this.#parseApiDate(item?.endDate);
-
-        if (!productId || seen.has(productId) || !startDate || !endDate) {
-          return false;
-        }
-
-        const isActive =
-          startDate.getTime() <= now &&
-          now < endDate.getTime();
-
-        if (isActive) seen.add(productId);
-        return isActive;
-      });
-
-      this.#timeDealDataMap.clear();
-      activeDeals.forEach((item) => {
-        this.#timeDealDataMap.set(item.productId, item);
-      });
-
-      const currentIds = [...wrapper.querySelectorAll('[data-home-style-product]')]
-        .map(element => element.dataset.homeStyleProduct);
-      const nextIds = activeDeals.map(item => item.productId);
-      const hasSameProducts =
-        currentIds.length === nextIds.length &&
-        currentIds.every((id, index) => id === nextIds[index]);
-
-      const timer = document.querySelector('#timesale .timesale_timer');
-      if (timer && activeDeals.length === 0) {
-        timer.hidden = true;
-        timer.removeAttribute('data-end-date');
-        timer.removeAttribute('data-role');
-      }
-
-      this.#updateTimeSalePeriod(activeDeals);
-      if (hasSameProducts) return;
-
-      const slides = [];
-
-      for (let index = 0; index < activeDeals.length; index += 2) {
-        const pair = activeDeals.slice(index, index + 2);
-        const itemsHTML = pair.map((item, pairIndex) => {
-          const isFirstItem = index === 0 && pairIndex === 0;
-          const itemClass = isFirstItem ? ' time_deal' : '';
-          const timerAttribute = isFirstItem
-            ? ' data-timer="timesale_timer"'
-            : '';
-
-          return `
-            <li class="c-product__item homestyle_item${itemClass}"${timerAttribute}>
-              <span data-home-style-product="${item.productId}"></span>
-            </li>
-          `;
-        }).join('');
-
-        slides.push(`
-          <div class="swiper-slide c-product c-product--home-style">
-            <ul class="c-product__list">
-              ${itemsHTML}
-            </ul>
-          </div>
-        `);
-      }
-
-      wrapper.innerHTML = slides.join('');
-    }
-
-    #updateTimeSalePeriod(activeDeals) {
-      const period = document.querySelector('#timesale .home_set_tit p');
-      if (!period) return;
-      if (activeDeals.length === 0) {
-        period.textContent = '현재 진행 중인 타임딜이 없습니다.';
-        return;
-      }
-
-      const starts = activeDeals
-        .map(item => this.#parseApiDate(item.startDate))
-        .filter(Boolean);
-      const ends = activeDeals
-        .map(item => this.#parseApiDate(item.endDate))
-        .filter(Boolean);
-
-      if (!starts.length || !ends.length) return;
-
-      const start = new Date(Math.min(...starts.map(date => date.getTime())));
-      // API의 09:59:59 종료는 사용자에게 10시로 표시한다.
-      const end = new Date(Math.max(...ends.map(date => date.getTime())) + 1000);
-      const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
-      const format = date =>
-        `${date.getMonth() + 1}.${date.getDate()}(${weekdays[date.getDay()]}) ${date.getHours()}시`;
-
-      period.textContent = `${format(start)} ~ ${format(end)}`;
-    }
-
-    #updateTimeSaleSwiper() {
-      const swiperEl = document.querySelector('#timesale .timesale_list');
-      const swiper = swiperEl?.swiper;
-      if (!swiper) return;
-
-      swiper.update();
-      swiper.slideTo(0, 0);
-      swiper.scrollbar?.updateSize();
-    }
-
-    #scheduleTimeDealRefresh(timeDeals) {
-      if (this.#timeDealRefreshTimer) {
-        clearTimeout(this.#timeDealRefreshTimer);
-      }
-
-      const now = Date.now();
-      const changeTimes = timeDeals
-        .flatMap(item => [
-          this.#parseApiDate(item.startDate)?.getTime(),
-          this.#parseApiDate(item.endDate)?.getTime()
-        ])
-        .filter(time => time && time > now)
-        .sort((a, b) => a - b);
-
-      const nextBoundaryDelay = changeTimes.length
-        ? changeTimes[0] - now + 1500
-        : Infinity;
-
-      // API 편성 변경도 반영하도록 최대 5분마다 다시 확인한다.
-      const delay = Math.min(nextBoundaryDelay, 5 * 60 * 1000);
-
-      this.#timeDealRefreshTimer = setTimeout(() => {
-        this.#updateProducts();
-      }, delay);
     }
 
     #renderProducts(elItems) {
@@ -441,8 +281,6 @@
         const priceData = timeDealData
           ? {
             marketPrice: timeDealData.price?.originalPrice,
-            // currentPrice는 상품/쿠폰 할인가이며,
-            // 카드 할인까지 포함한 최대혜택가는 bestPrice이다.
             bestPrice: timeDealData.price?.bestPrice
           }
           : data.price;
@@ -1000,9 +838,8 @@
       const hasHowToBuy = document.querySelector('#how_to_buy .swiper'); // ✅ 추가
       const hasBrandCollection = document.querySelector('#premium_brand_collection .swiper'); // ✅ 추가
       const hasTimeSale = document.querySelector('#timesale .swiper'); // ✅ 추가
-      const hasCategory = document.querySelector('#category .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale && !hasCategory) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale) return;
 
       swiperInited = true;
 
@@ -1224,34 +1061,6 @@
         });
       }
 
-      // 9) Category 
-      if (hasCategory) {
-        $('#category .swiper').each(function () {
-          const swiperEl = this;
-          const scrollbarEl =
-            swiperEl.querySelector('.scr_bar');
-
-          // 중복 초기화 방지
-          if (swiperEl.swiper) return;
-
-          new Swiper(swiperEl, {
-            speed: 800,
-            spaceBetween: remToPx(6),
-            slidesPerView: 3,
-
-            // display:none인 탭 내부 Swiper 대응
-            observer: true,
-            observeParents: true,
-
-            scrollbar: {
-              // 각 Swiper 내부의 스크롤바만 연결
-              el: scrollbarEl,
-              draggable: true,
-            },
-          });
-        });
-      }
-
       console.log('[HomeStyle] Swipers initialized');
     }
 
@@ -1457,11 +1266,7 @@
       if (initialized) return;
 
       const targets = document.querySelectorAll('[data-home-style-product]');
-      const hasAutoTimeSale = document.querySelector(
-        '#timesale .timesale_list > .swiper-wrapper'
-      );
-
-      if (!targets.length && !hasAutoTimeSale) {
+      if (!targets.length) {
         console.log('[HomeStyle] product DOM not found yet');
         return;
       }
@@ -1783,146 +1588,22 @@
     domObserver.observe(document.body, { childList: true, subtree: true });
   })();
 
-  // URL의 #아이디 또는 %23아이디 영역으로 이동
-  // #category?tab_2 형식이면 카테고리 탭까지 자동 활성화
+  // URL의 %23아이디 영역으로 이동
   function moveToTarget() {
-    const exhibitionId =
-      new URLSearchParams(window.location.search)
-        .get('exhibitionId') || '';
+    const exhibitionId = new URLSearchParams(
+      window.location.search
+    ).get('exhibitionId') || '';
 
-    /**
-     * 일반적인 해시 주소
-     * #category?tab_2
-     */
-    const hashValue =
-      window.location.hash.slice(1);
+    const id =
+      window.location.hash.slice(1) ||
+      exhibitionId.split('#')[1];
 
-    /**
-     * exhibitionId 안으로 들어간 주소
-     * exhibitionId=2609001733%23category?tab_2
-     *
-     * URLSearchParams가 %23을 #으로 변환하므로
-     * category?tab_2 부분만 추출
-     */
-    const embeddedHash =
-      exhibitionId.includes('#')
-        ? exhibitionId.split('#').slice(1).join('#')
-        : '';
+    if (!id) return;
 
-    const targetValue =
-      hashValue || embeddedHash;
-
-    if (!targetValue) return;
-
-    /**
-     * category?tab_2
-     *
-     * targetId: category
-     * tabValue: tab_2
-     */
-    const targetParts =
-      targetValue.split('?');
-
-    const targetId =
-      targetParts[0];
-
-    const tabValue =
-      targetParts[1] || '';
-
-    const target =
-      document.getElementById(targetId);
+    const target = document.getElementById(id);
 
     if (!target) return;
 
-    /**
-     * #category인 경우 탭 활성화
-     */
-    if (targetId === 'category') {
-      const $category =
-        $('#category');
-
-      const $buttons =
-        $category.find(
-          '.home_set_tab[data-tab-btn="B"] > button'
-        );
-
-      const $swipers =
-        $category.find(
-          '.pd_list[data-tab-cont="B"] > .swiper'
-        );
-
-      /**
-       * 기본값은 첫 번째 탭
-       *
-       * tab_2 → index 1
-       * tab_3 → index 2
-       */
-      let tabIndex = 0;
-
-      const tabMatch =
-        tabValue.match(/^tab_(\d+)$/);
-
-      if (tabMatch) {
-        tabIndex =
-          Number(tabMatch[1]) - 1;
-      }
-
-      /**
-       * 존재하지 않는 탭 번호 방지
-       */
-      if (
-        tabIndex < 0 ||
-        tabIndex >= $buttons.length ||
-        tabIndex >= $swipers.length
-      ) {
-        tabIndex = 0;
-      }
-
-      /**
-       * 버튼 on 처리
-       */
-      $buttons
-        .removeClass('on')
-        .attr('aria-selected', 'false');
-
-      $buttons
-        .eq(tabIndex)
-        .addClass('on')
-        .attr('aria-selected', 'true');
-
-      /**
-       * Swiper 영역 on 처리
-       */
-      $swipers.removeClass('on');
-
-      const $activeSwiper =
-        $swipers
-          .eq(tabIndex)
-          .addClass('on');
-
-      /**
-       * display:none 상태였던 Swiper의
-       * 너비와 스크롤바 재계산
-       */
-      requestAnimationFrame(function () {
-        const swiperInstance =
-          $activeSwiper[0]?.swiper;
-
-        if (!swiperInstance) return;
-
-        swiperInstance.update();
-        swiperInstance.slideTo(0, 0);
-
-        if (swiperInstance.scrollbar) {
-          swiperInstance.scrollbar.updateSize();
-        }
-      });
-    }
-
-    /**
-     * 상품 API 및 이미지 렌더링 시간을 고려해
-     * 300ms 후 해당 영역으로 이동
-     */
     setTimeout(function () {
       $('html, body').scrollTop(
         $(target).offset().top - 80
@@ -1933,10 +1614,6 @@
   if (document.readyState === 'complete') {
     moveToTarget();
   } else {
-    window.addEventListener(
-      'load',
-      moveToTarget,
-      { once: true }
-    );
+    window.addEventListener('load', moveToTarget);
   }
 })();
