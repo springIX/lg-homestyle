@@ -145,20 +145,46 @@
     .swiper-slide-active .pd_anchor{ transform: scale(1); transition-delay: .5s;}
 
     .before_after{
-      .handle_box { --position: 50%; position: relative; overflow: hidden; height: 370rem;
-        @include screen("mo") { height: 234rem;}
-        .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
-          &.before { position: absolute; inset: 0; clip-path: inset( 0 calc(100% - var(--position)) 0 0);
-            p{ color: #666; left: 20rem; right: auto;}
-          }
-          p{ position: absolute; right: 20rem; top: 50%; transform: translateY(-50%); @include font-size(12rem); z-index: 1;}
-          img{ width: 100%; height: 100%; object-fit: cover;}
+      // .handle_box { --position: 50%; position: relative; overflow: hidden; height: 370rem;
+      //   @include screen("mo") { height: 234rem;}
+      //   .img_box{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
+      //     &.before { position: absolute; inset: 0; clip-path: inset( 0 calc(100% - var(--position)) 0 0);
+      //       p{ color: #666; left: 20rem; right: auto;}
+      //     }
+      //     p{ position: absolute; right: 20rem; top: 50%; transform: translateY(-50%); @include font-size(12rem); z-index: 1;}
+      //     img{ width: 100%; height: 100%; object-fit: cover;}
           
+      //   }
+      //   .handle { position: absolute; top: 50%; left: var(--position); z-index: 2; transform: translate(-50%, -50%); pointer-events: none; width: 40rem; height: 40rem; background: url(../images/handle.png)no-repeat center center / contain; border-radius: 50%; box-shadow: 0 4rem 4rem rgba($color: #000, $alpha: .25);}
+      //   input[type='range'] { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;
+      //   }
+      // }
+
+      .handle_box { 
+        --position: 50%; position: relative; overflow: hidden; width: 100%;
+        aspect-ratio: 3 / 2 ;
+
+        .img_box {
+          position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
+
+          &.before {
+            position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--position)) 0 0);
+
+            p { color: #666; left: 20rem; right: auto; }
+          }
+          
+          p { position: absolute; right: 20rem; top: 50%; transform: translateY(-50%); 
+            
+          @include font-size(12rem); z-index: 1; }
+          img { width: 100%; height: 100%; object-fit: cover; }
         }
-        .handle { position: absolute; top: 50%; left: var(--position); z-index: 2; transform: translate(-50%, -50%); pointer-events: none; width: 40rem; height: 40rem; background: url(../images/handle.png)no-repeat center center / contain; border-radius: 50%; box-shadow: 0 4rem 4rem rgba($color: #000, $alpha: .25);}
-        input[type='range'] { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;
+
+        .handle { position: absolute; top: 50%; left: var(--position); z-index: 2; transform: translate(-50%, -50%); pointer-events: none; width: 40rem; height: 40rem; background: url(../images/handle.png) no-repeat center center / contain; border-radius: 50%; box-shadow: 0 4rem 4rem rgba($color: #000, $alpha: .25);
         }
+
+        input[type='range'] { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
       }
+
       .txt_box{ margin-top: 40rem;
         .tit{ font-size: 20rem; font-weight: 700;}
         p{ margin-top: 20rem;}
