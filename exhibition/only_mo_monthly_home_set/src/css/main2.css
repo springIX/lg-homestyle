@@ -567,15 +567,15 @@
   }
 }
 .monthly_home_set .img_tab {
-  margin: 0 auto 18rem;
+  margin-bottom: 18rem;
   display: flex;
   justify-content: center;
-  max-width: 350rem;
+  align-items: flex-start;
+  gap: 10rem;
 }
 .monthly_home_set .img_tab button {
   display: block;
   opacity: 0.5;
-  width: 100%;
 }
 .monthly_home_set .img_tab button .img_box {
   width: 56rem;
@@ -584,6 +584,7 @@
   position: relative;
   border: 2rem solid transparent;
   margin: 0 auto;
+  overflow: hidden;
 }
 .monthly_home_set .img_tab button .img_box img {
   width: 100%;
@@ -1171,6 +1172,56 @@
 }
 .monthly_home_set .banner_btn {
   margin-top: 30rem;
+}
+.monthly_home_set .banner_box_list {
+  margin-top: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+.monthly_home_set .banner_box_list a {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+  padding-right: 20rem;
+  border-radius: 8rem;
+  overflow: hidden;
+  width: 100%;
+}
+.monthly_home_set .banner_box_list a::after {
+  content: "";
+  width: 16rem;
+  height: 16rem;
+  background: url(../images/arr.svg) no-repeat center center/contain;
+  transform: rotate(180deg);
+  flex-shrink: 0;
+}
+.monthly_home_set .banner_box_list a .thumb {
+  width: 100rem;
+  flex-shrink: 0;
+}
+.monthly_home_set .banner_box_list a .txt_box {
+  width: 100%;
+}
+.monthly_home_set .banner_box_list a .txt_box .tit {
+  font-size: 18rem;
+  font-weight: 600;
+}
+.monthly_home_set .banner_box_list a .txt_box .info {
+  font-size: 14rem;
+  font-weight: 500;
+  color: #262626;
+  opacity: 0.7;
+  margin-top: 2rem;
+}
+.monthly_home_set .banner_box_list a.red {
+  background-color: #EBD2CE;
+}
+.monthly_home_set .banner_box_list a.orange {
+  background-color: #EFDBCA;
+}
+.monthly_home_set .banner_box_list a.gray {
+  background-color: #E8DDDB;
 }
 .monthly_home_set {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */

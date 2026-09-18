@@ -1784,25 +1784,24 @@
   })();
 
   // URL의 #아이디 또는 %23아이디 영역으로 이동
-  // #category?tab_2 형식이면 카테고리 탭까지 자동 활성화
+  // ?tab_숫자가 있으면 해당 영역의 탭까지 자동 활성화
   function moveToTarget() {
     const exhibitionId =
       new URLSearchParams(window.location.search)
         .get('exhibitionId') || '';
 
     /**
-     * 일반적인 해시 주소
+     * 일반적인 주소
      * #category?tab_2
+     * #brand_sale?tab_3
      */
     const hashValue =
       window.location.hash.slice(1);
 
     /**
-     * exhibitionId 안으로 들어간 주소
+     * OMS에서 보정된 주소
      * exhibitionId=2609001733%23category?tab_2
-     *
-     * URLSearchParams가 %23을 #으로 변환하므로
-     * category?tab_2 부분만 추출
+     * exhibitionId=2609001733%23brand_sale?tab_3
      */
     const embeddedHash =
       exhibitionId.includes('#')
@@ -1815,10 +1814,10 @@
     if (!targetValue) return;
 
     /**
-     * category?tab_2
+     * brand_sale?tab_3
      *
-     * targetId: category
-     * tabValue: tab_2
+     * targetId: brand_sale
+     * tabValue: tab_3
      */
     const targetParts =
       targetValue.split('?');
@@ -1835,37 +1834,61 @@
     if (!target) return;
 
     /**
-     * #category인 경우 탭 활성화
+     * tab_1 → index 0
+     * tab_2 → index 1
+     * tab_3 → index 2
      */
-    if (targetId === 'category') {
-      const $category =
-        $('#category');
+    let tabIndex = 0;
+
+    const tabMatch =
+      tabValue.match(/^tab_(\d+)$/);
+
+    if (tabMatch) {
+      tabIndex =
+        Number(tabMatch[1]) - 1;
+    }
+
+    /**
+     * 탭 설정
+     */
+    const tabSettings = {
+      category: {
+        buttonSelector:
+          '.home_set_tab[data-tab-btn="B"] > button',
+
+        contentSelector:
+          '.pd_list[data-tab-cont="B"] > .swiper'
+      },
+
+      brand_sale: {
+        buttonSelector:
+          '.img_tab button',
+
+        contentSelector:
+          '.pd_list .c-product'
+      }
+    };
+
+    const tabSetting =
+      tabSettings[targetId];
+
+    /**
+     * category 또는 brand_sale인 경우
+     * URL에 맞춰 탭 활성화
+     */
+    if (tabSetting) {
+      const $target =
+        $('#' + targetId);
 
       const $buttons =
-        $category.find(
-          '.home_set_tab[data-tab-btn="B"] > button'
+        $target.find(
+          tabSetting.buttonSelector
         );
 
-      const $swipers =
-        $category.find(
-          '.pd_list[data-tab-cont="B"] > .swiper'
+      const $contents =
+        $target.find(
+          tabSetting.contentSelector
         );
-
-      /**
-       * 기본값은 첫 번째 탭
-       *
-       * tab_2 → index 1
-       * tab_3 → index 2
-       */
-      let tabIndex = 0;
-
-      const tabMatch =
-        tabValue.match(/^tab_(\d+)$/);
-
-      if (tabMatch) {
-        tabIndex =
-          Number(tabMatch[1]) - 1;
-      }
 
       /**
        * 존재하지 않는 탭 번호 방지
@@ -1873,13 +1896,13 @@
       if (
         tabIndex < 0 ||
         tabIndex >= $buttons.length ||
-        tabIndex >= $swipers.length
+        tabIndex >= $contents.length
       ) {
         tabIndex = 0;
       }
 
       /**
-       * 버튼 on 처리
+       * 탭 버튼 on 처리
        */
       $buttons
         .removeClass('on')
@@ -1891,22 +1914,42 @@
         .attr('aria-selected', 'true');
 
       /**
-       * Swiper 영역 on 처리
+       * 연결된 콘텐츠 on 처리
        */
-      $swipers.removeClass('on');
+      $contents.removeClass('on');
 
-      const $activeSwiper =
-        $swipers
+      const $activeContent =
+        $contents
           .eq(tabIndex)
           .addClass('on');
 
       /**
-       * display:none 상태였던 Swiper의
+       * 활성화된 콘텐츠가 Swiper라면
        * 너비와 스크롤바 재계산
        */
       requestAnimationFrame(function () {
-        const swiperInstance =
-          $activeSwiper[0]?.swiper;
+        let swiperInstance = null;
+
+        /**
+         * 활성 콘텐츠 자체가 Swiper인 경우
+         */
+        if ($activeContent[0]?.swiper) {
+          swiperInstance =
+            $activeContent[0].swiper;
+        }
+
+        /**
+         * 활성 콘텐츠 내부에 Swiper가 있는 경우
+         */
+        if (!swiperInstance) {
+          const swiperElement =
+            $activeContent
+              .find('.swiper')
+              .get(0);
+
+          swiperInstance =
+            swiperElement?.swiper;
+        }
 
         if (!swiperInstance) return;
 
