@@ -815,7 +815,7 @@
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
   content: "";
-  width: 28%;
+  width: 30%;
   height: 800px;
   background: linear-gradient(270deg, rgba(243, 245, 247, 0) 0%, #F3F5F7 30%);
   position: absolute;
@@ -1096,7 +1096,7 @@
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .notice {
   transform: translateY(-10px);
   opacity: 0;
-  transition: 0.8s ease;
+  transition: 0.8s ease 0.3s;
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .notice .accordion-cont {
   width: 980px;
