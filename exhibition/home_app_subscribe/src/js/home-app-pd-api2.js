@@ -1,6 +1,6 @@
 (function () {
   const API_URL =
-    'https://apiv2stg.lge.co.kr'
+    'https://apiv2.lge.co.kr'
     + '/subscriptionsvc/ajax/v1/direct-subscription'
     + '/best-ranking-list'
     + '?displaySpaceId=DP_HOME_001'

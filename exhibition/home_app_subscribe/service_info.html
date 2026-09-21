@@ -3832,74 +3832,32 @@
     <!-- 구독으로 시작하기 좋은 제품 -->
     <section class="service-page__section service-page__section--products" aria-labelledby="products-title">
       <div class="service-page__inner service-page__inner--wide">
+
         <div class="service-page__heading">
-          <h2 id="products-title">구독으로 시작하기 좋은 제품</h2>
+          <h2 id="products-title">
+            구독으로 시작하기 좋은 제품
+          </h2>
         </div>
-        <div class="service-products-tabs" data-service-tabs-root>
+
+        <div class="service-products-tabs is-loading" data-service-tabs-root>
+          <!-- 카테고리 탭 -->
           <div class="service-tabs__list--wrap theme-white">
             <div class="service-tabs__list" role="tablist" aria-label="제품 카테고리" data-service-tabs>
-              <button type="button" class="service-tabs__button is-active" role="tab" id="service-products-tab-water"
-                aria-selected="true" aria-controls="service-products-panel-water">정수기</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-air-purifier"
-                aria-selected="false" aria-controls="service-products-panel-air-purifier" tabindex="-1">공기청정기</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-air-conditioner"
-                aria-selected="false" aria-controls="service-products-panel-air-conditioner" tabindex="-1">에어컨</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-washing"
-                aria-selected="false" aria-controls="service-products-panel-washing" tabindex="-1">세탁기</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-tv"
-                aria-selected="false" aria-controls="service-products-panel-tv" tabindex="-1">TV</button>
+              <!-- API 카테고리 버튼 자동 생성 -->
             </div>
           </div>
 
-          <!-- 정수기 -->
-          <div id="service-products-panel-water" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-water" tabindex="0" data-category-id="CT50000175">
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="정수기 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
+          <!-- 카테고리별 상품 패널 -->
+          <div data-service-panels>
+            <p class="service-products__loading" role="status">
+              추천 제품을 불러오는 중입니다.
+            </p>
           </div>
-
-          <!-- 공기청정기 -->
-          <div id="service-products-panel-air-purifier" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-air-purifier" tabindex="0" data-category-id="CT50000177" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="공기청정기 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <!-- 에어컨 -->
-          <div id="service-products-panel-air-conditioner" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-air-conditioner" tabindex="0" data-category-id="CT50080000" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="에어컨 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <!-- 세탁기 -->
-          <div id="service-products-panel-washing" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-washing" tabindex="0" data-category-id="CT50136000" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="세탁기 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <!-- TV -->
-          <div id="service-products-panel-tv" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-tv" tabindex="0" data-category-id="CT50238002" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="TV 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
         </div>
+
       </div>
     </section>
-    <!-- //구독으로 시작하기 좋은 제품-->
+    <!-- //구독으로 시작하기 좋은 제품 -->
 
     <!-- 더 알아보면 좋은 이야기 -->
     <section class="service-page__section service-page__section--guide" aria-labelledby="guide-title">
@@ -3966,7 +3924,7 @@
 
   <script src="https://www.lge.co.kr/home_style_pages/common/js/jquery.js"></script>
   <script src="https://www.lge.co.kr/home_style_pages/common/js/swiper.min.js"></script>
-  <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/home-app-pd-api2.js" defer> </script>
+  <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/home-app-pd-api.js" defer> </script>
   <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/main.js" defer></script>
 </body>
 

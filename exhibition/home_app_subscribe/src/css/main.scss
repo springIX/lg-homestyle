@@ -773,7 +773,10 @@
         justify-content: center;
         gap: 6px;
         padding: 8px 0 4px;
-        margin-bottom: 17px;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto 17px;
+
 
         .service-tabs__button {
           display: inline-flex;
