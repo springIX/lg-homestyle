@@ -2909,6 +2909,11 @@
   grid-template-columns: 1fr;
   gap: 20rem;
 }
+@media (max-width: 780px) {
+  .monthly_home_set.combined_discount section #category .pd_list .swiper .swiper-slide .c-product__list .c-product__item {
+    min-height: 244rem;
+  }
+}
 .monthly_home_set.combined_discount section#benefit .benefit_list.on ul li:nth-child(n+5) {
   display: block;
 }

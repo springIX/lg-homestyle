@@ -1215,7 +1215,7 @@
       if (hasTimeSale) {
         new Swiper('#timesale .swiper', {
           speed: 800,
-          spaceBetween: remToPx(6),
+          spaceBetween: 6,
           slidesPerView: 3,
           scrollbar: {
             el: '#timesale .scr_bar',
@@ -1236,7 +1236,7 @@
 
           new Swiper(swiperEl, {
             speed: 800,
-            spaceBetween: remToPx(6),
+            spaceBetween: 6,
             slidesPerView: 3,
 
             // display:none인 탭 내부 Swiper 대응
