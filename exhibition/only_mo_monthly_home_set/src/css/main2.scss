@@ -1202,7 +1202,9 @@
             &.on{ display: block;}
             .swiper-slide{ display: block;
               .c-product__list{ grid-template-columns: 1fr; gap: 20rem;
-                .c-product__item{}
+                @include screen("mo2") { 
+                  .c-product__item{ min-height: 244rem;}
+                }
               }
             }
           }
