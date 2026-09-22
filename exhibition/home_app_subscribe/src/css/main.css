@@ -1236,14 +1236,8 @@
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
   position: relative;
-  aspect-ratio: 1/1;
+  aspect-ratio: 16/9;
   overflow: hidden;
-  flex-shrink: 0;
-}
-@media (min-width: 768px) {
-  #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
-    width: 400px;
-  }
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box video, #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box iframe {
   position: absolute;
@@ -2207,7 +2201,7 @@
   color: #067f9d;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--yellow {
-  box-shadow: 0 0 2px #ab6226;
+  box-shadow: 0 0 1.1px #ab6226;
   color: #ab6226;
 }
 @media (max-width: 767px) {
@@ -2455,11 +2449,11 @@
   max-width: 940px;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care__tag--supply {
-  box-shadow: 0 0 2px #067f9d !important;
+  box-shadow: 0 0 1.1px #067f9d !important;
   color: #067f9d !important;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care__tag--free {
-  box-shadow: 0 0 2px #ab6226 !important;
+  box-shadow: 0 0 1.1px #ab6226 !important;
   color: #ab6226 !important;
 }
 #home-app-subscribe.care-service .service-page__section--care .service-care__notice {
