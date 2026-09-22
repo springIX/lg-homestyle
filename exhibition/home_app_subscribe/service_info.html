@@ -13,7 +13,7 @@
 <body style="margin: 0;">
   <link rel="stylesheet" href="https://www.lge.co.kr/lg5-common/css/reset.min.css">
   <link rel="stylesheet" href="https://www.lge.co.kr/kr/caresolutions/css/rental-service-info.css">
-  <link rel="stylesheet" href="https://www.lge.co.kr/kr/home_app_subscribe/src/css/common.css">
+  <link rel="stylesheet" href="https://wwwstg.lge.co.kr/kr/home_app_subscribe/src/css/common.css">
   <!-- <link rel="stylesheet" href="https://www.lge.co.kr/kr/home_app_subscribe/src/css/common.css"> -->
   <script type="application/ld+json">
   {
@@ -53,6 +53,7 @@
         <ul>
           <li class="on"><a href="javascript:void(0)" aria-current="page">서비스 안내</a></li>
           <li><a href="/care-solutions/rentalService-benefits">혜택 안내</a></li>
+          <li><a href="/care-solutions/rentalService-campaigns">영상 가이드</a></li>
         </ul>
       </nav>
     </div>
@@ -274,6 +275,8 @@
                 aria-selected="false" aria-controls="service-panel-fridge" tabindex="-1">STEM 얼음정수 냉장고</button>
               <button type="button" class="service-tabs__button" role="tab" id="service-tab-laptop"
                 aria-selected="false" aria-controls="service-panel-laptop" tabindex="-1">노트북</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-purifier"
+                aria-selected="false" aria-controls="service-panel-purifier" tabindex="-1">냉동얼음정수기</button>
               <!-- <button type="button" class="service-tabs__button" role="tab" id="service-tab-tv" aria-selected="false"
                 aria-controls="service-panel-tv" tabindex="-1">TV</button> -->
             </div>
@@ -496,6 +499,57 @@
               <li>무상 A/S는 가전 구독 고객에 한하며, 고객 과실로 인한 제품 고장 및 배터리를 포함한 소모품 교체는 제외되며 별도로 비용이 발생할 수 있습니다.</li>
             </ul>
           </div>
+          <!-- 냉동얼음정수기 -->
+          <div id="service-panel-purifier" class="service-tabs__panel" role="tabpanel"
+            aria-labelledby="service-tab-purifier" tabindex="0" hidden>
+            <ul class="service-care service-care--four">
+              <li class="service-care__item">
+                <div>
+                  <span class="service-care__tag">전문가 케어</span>
+                  <h3>분해 케어</h3>
+                  <p class="service-tooltip__wrap">얼음 토출구 분해 케어</p>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier01.png"
+                  alt="제품을 분해하여 세척중인 이미지" loading="lazy">
+              </li>
+              <li class="service-care__item">
+                <div>
+                  <span class="service-care__tag service-care__tag--supply">소모품 교체</span>
+                  <h3>중금속9 흡착필터, 바이러스 클리어 필터</h3>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier02.png"
+                  alt="2명의 기사님이 공기청정필터를 교체하고 있는 이미지" loading="lazy">
+              </li>
+              <li class="service-care__item service-care__item--detailed">
+                <div>
+                  <span class="service-care__tag">위생 케어</span>
+                  <h3>위생 케어</h3>
+                  <p class="service-tooltip__wrap">냉동보관실 클리닝, 출수구 고온살균, 부품 클리닝</p>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier03.png"
+                  alt="2명의 기사님이 제품을 분해 및 조립하는 이미지" loading="lazy">
+              </li>
+              <li class="service-care__item">
+                <div>
+                  <span class="service-care__tag service-care__tag--free">무상 서비스</span>
+                  <h3>무상 A/S</h3>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier04.png"
+                  alt="기사님이 제품을 움직이고 있는 이미지" loading="lazy">
+              </li>
+            </ul>
+            <!-- 스탠드 에어컨 유의사항 -->
+            <ul class="service-care__notes">
+              <li>직수관 고온살균의 경우, 일주일에 한 번 자동으로 약 10분간 살균됩니다.</li>
+              <li>수질검사는 요청 시 검사합니다.</li>
+              <li>
+                국가공인 KOLAS 시험기관인 LG전자 물과학연구소에서 환경부의 ‘먹는물 수질공정시험기준’에 따라 건강에 영향을 끼칠 수 있는 중금속 등 10가지 항목과 칼슘, 마그네슘 등 미네랄 항목을
+                검사합니다.
+              </li>
+              <li>교체 주기는 필터 및 제품에 따라 상이할 수 있습니다. </li>
+              <li>무상 A/S는 가전구독 고객에 한하며, 고객 과실로 인한 제품 고장은 제외됩니다.</li>
+            </ul>
+          </div>
           <!-- TV -->
           <!-- <div id="service-panel-tv" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-tv"
             tabindex="0" hidden>
@@ -517,11 +571,11 @@
                   <li>무상 A/S는 가전 구독 고객에게 한하며, 고객 과실로 인한 제품 고장 및 배터리를 포함한 소모품 교체는 제외되며 별도 비용이 발생할 수 있습니다.</li>
                   <li>무상 A/S는 TV, 스탠바이미 등 TV 카테고리 내 전 제품에 제공해드립니다.</li>
                   <li class="service-care__notes--title"><strong>[무상 철거 및 재설치 / 원스톱 이전설치]</strong></li>
-                  <li>TV는 177cm 이상에 한하여 무상 철거/재설치 서비스를 제공해드립니다.</li>
-                  <li>단, 무상 재설치는 25년 3월 1일부터 제공됩니다.</li>
-                  <li>단, 무상 철거 서비스는 26년 1월 5일부터 설치된 제품 한해서 제공됩니다. (~26년 1월 4일 설치 제품 제외)</li>
+                  <li>TV는 177cm 이상에 한하여 무상 철거/재설치 서비스를 제공해드립니다.</li>
+                  <li>단, 무상 재설치는 25년 3월 1일부터 제공됩니다.</li>
+                  <li>단, 무상 철거 서비스는 26년 1월 5일부터 설치된 제품 한해서 제공됩니다. (~26년 1월 4일 설치 제품 제외)</li>
                   <li>스탠드에서 벽걸이/천장형으로 변경 시, 벽걸이/천장형 설치 자재비는 고객 부담입니다.</li>
-                  <li>가전 구독 고객에 한하여 계약기간 내 1회 무상 재설치(운송비 별도) 해드립니다.</li>
+                  <li>가전 구독 고객에 한하여 계약기간 내 1회 무상 재설치(운송비 별도) 해드립니다.</li>
                   <li>운송 서비스를 희망할 경우 유상 제공되며 비용은 고객 부담입니다.</li>
                   <li>제품 설치 환경에 따라 추가 비용이 발생할 수 있습니다.</li>
                   <li>추가 비용 관련 자세한 사항은 LG전자 고객센터(1544-7777)에 문의 바랍니다.</li>
@@ -893,7 +947,7 @@
             <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/ic_write.svg" alt="">
             <div>
               <h3>해지 신청</h3>
-              <p>홈페이지 [마이페이지] > 구독관리 > 계약관리에서 해지상담신청이 가능하며,<br>고객센터(1544-7777)에서 해지신청할 수 있습니다. </p>
+              <p>홈페이지 [마이페이지] > 구독관리 > 계약관리에서 해지상담신청이 가능하며,<br>고객센터(1544-7777)에서 해지신청할 수 있습니다. </p>
             </div>
           </li>
           <li class="service-cancel__step">
@@ -3832,74 +3886,32 @@
     <!-- 구독으로 시작하기 좋은 제품 -->
     <section class="service-page__section service-page__section--products" aria-labelledby="products-title">
       <div class="service-page__inner service-page__inner--wide">
+
         <div class="service-page__heading">
-          <h2 id="products-title">구독으로 시작하기 좋은 제품</h2>
+          <h2 id="products-title">
+            구독으로 시작하기 좋은 제품
+          </h2>
         </div>
-        <div class="service-products-tabs" data-service-tabs-root>
+
+        <div class="service-products-tabs is-loading" data-service-tabs-root>
+          <!-- 카테고리 탭 -->
           <div class="service-tabs__list--wrap theme-white">
             <div class="service-tabs__list" role="tablist" aria-label="제품 카테고리" data-service-tabs>
-              <button type="button" class="service-tabs__button is-active" role="tab" id="service-products-tab-water"
-                aria-selected="true" aria-controls="service-products-panel-water">정수기</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-air-purifier"
-                aria-selected="false" aria-controls="service-products-panel-air-purifier" tabindex="-1">공기청정기</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-air-conditioner"
-                aria-selected="false" aria-controls="service-products-panel-air-conditioner" tabindex="-1">에어컨</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-washing"
-                aria-selected="false" aria-controls="service-products-panel-washing" tabindex="-1">세탁기</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-products-tab-tv"
-                aria-selected="false" aria-controls="service-products-panel-tv" tabindex="-1">TV</button>
+              <!-- API 카테고리 버튼 자동 생성 -->
             </div>
           </div>
 
-          <!-- 정수기 -->
-          <div id="service-products-panel-water" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-water" tabindex="0" data-category-id="CT50000175">
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="정수기 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
+          <!-- 카테고리별 상품 패널 -->
+          <div data-service-panels>
+            <p class="service-products__loading" role="status">
+              추천 제품을 불러오는 중입니다.
+            </p>
           </div>
-
-          <!-- 공기청정기 -->
-          <div id="service-products-panel-air-purifier" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-air-purifier" tabindex="0" data-category-id="CT50000177" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="공기청정기 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <!-- 에어컨 -->
-          <div id="service-products-panel-air-conditioner" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-air-conditioner" tabindex="0" data-category-id="CT50080000" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="에어컨 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <!-- 세탁기 -->
-          <div id="service-products-panel-washing" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-washing" tabindex="0" data-category-id="CT50136000" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="세탁기 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <!-- TV -->
-          <div id="service-products-panel-tv" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-products-tab-tv" tabindex="0" data-category-id="CT50238002" hidden>
-            <div class="service-products-swiper">
-              <ol class="service-products" aria-label="TV 구독 추천 제품 순위" aria-live="polite"></ol>
-              <div class="service-products-swiper__pagination" aria-hidden="true"></div>
-            </div>
-          </div>
-
         </div>
+
       </div>
     </section>
-    <!-- //구독으로 시작하기 좋은 제품-->
+    <!-- //구독으로 시작하기 좋은 제품 -->
 
     <!-- 더 알아보면 좋은 이야기 -->
     <section class="service-page__section service-page__section--guide" aria-labelledby="guide-title">
@@ -3966,8 +3978,8 @@
 
   <script src="https://www.lge.co.kr/home_style_pages/common/js/jquery.js"></script>
   <script src="https://www.lge.co.kr/home_style_pages/common/js/swiper.min.js"></script>
-  <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/home-app-pd-api2.js" defer> </script>
-  <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/main.js" defer></script>
+  <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/home-app-pd-api.js" defer> </script>
+  <script src="https://wwwstg.lge.co.kr/kr/home_app_subscribe/src/js/main.js" defer></script>
 </body>
 
 </html>
