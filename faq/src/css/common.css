@@ -318,6 +318,7 @@ html {
   color: #c4262e;
   text-decoration: underline;
   text-underline-offset: 4px;
+  width: max-content;
 }
 .faq-page .faq-post .faq-nav {
   display: flex;
