@@ -815,7 +815,7 @@
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box::before, #home-app-subscribe section#detail-affiliated-card .slide-box::after {
   content: "";
-  width: 30%;
+  width: 28%;
   height: 800px;
   background: linear-gradient(270deg, rgba(243, 245, 247, 0) 0%, #F3F5F7 30%);
   position: absolute;
@@ -1096,7 +1096,7 @@
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .notice {
   transform: translateY(-10px);
   opacity: 0;
-  transition: 0.8s ease 0.3s;
+  transition: 0.8s ease;
 }
 #home-app-subscribe section#detail-affiliated-card .slide-box .swiper.card-info .swiper-slide .notice .accordion-cont {
   width: 980px;
@@ -1139,7 +1139,7 @@
 }
 #home-app-subscribe section#detail-affiliated-card .slide-nav .layout-inner span {
   cursor: pointer;
-  box-shadow: 0 0 1.462px 0 rgba(0, 0, 0, 0.24), 0 2.924px 11.696px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 1.5px 0 rgba(0, 0, 0, 0.24), 0 3px 12px 0 rgba(0, 0, 0, 0.06);
   border-radius: 50%;
   touch-action: auto;
   pointer-events: auto;
@@ -1216,7 +1216,7 @@
   font-weight: 600;
   color: #111;
   border-color: #727780;
-  box-shadow: 0 0 1.812px 0 rgba(0, 0, 0, 0.36), 0 3.624px 14.496px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 1.1px 0 rgba(0, 0, 0, 0.36), 0 4px 14.5px 0 rgba(0, 0, 0, 0.08);
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article {
   display: none;
@@ -2195,7 +2195,7 @@
   border-radius: 4px;
   background-color: #fff;
   color: #fd312e;
-  box-shadow: 0px 0px 2px #fd312e;
+  box-shadow: 0px 0px 1.1px #fd312e;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: -0.11px;
@@ -2203,7 +2203,7 @@
   line-height: 17px;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--blue {
-  box-shadow: 0px 0px 2px #067f9d;
+  box-shadow: 0px 0px 1.1px #067f9d;
   color: #067f9d;
 }
 #home-app-subscribe.care-service .service-page__section--benefits .service-benefits__tag--yellow {

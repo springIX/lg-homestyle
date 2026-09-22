@@ -13,7 +13,7 @@
 <body style="margin: 0;">
   <link rel="stylesheet" href="https://www.lge.co.kr/lg5-common/css/reset.min.css">
   <link rel="stylesheet" href="https://www.lge.co.kr/kr/caresolutions/css/rental-service-info.css">
-  <link rel="stylesheet" href="https://wwwstg.lge.co.kr/kr/home_app_subscribe/src/css/common.css">
+  <link rel="stylesheet" href="https://www.lge.co.kr/kr/home_app_subscribe/src/css/common.css">
   <!-- <link rel="stylesheet" href="https://www.lge.co.kr/kr/home_app_subscribe/src/css/common.css"> -->
   <script type="application/ld+json">
   {
@@ -64,8 +64,8 @@
       <div class="service-page__inner service-page__inner--narrow">
         <h2 id="service-title" class="service-page__title">LG전자 가전 구독은 무엇인가요?</h2>
         <div class="service-page__lead">
-          <p>LG전자 가전 구독은 가전을 사지 않고 매월 구독료를 내며 사용하는 방식입니다. <br>
-            가전 케어 전문가의 정기 방문과 정품 소모품 교체, 무상 서비스가 구독료에 함께 들어 있습니다. <br>
+          <p>LG전자 가전 구독은 가전을 사지 않고 <br class="mo">매월 구독료를 내며 사용하는 방식입니다. <br>
+            가전 케어 전문가의 정기 방문과 정품 소모품 교체, <br class="mo">무상 서비스가 구독료에 함께 들어 있습니다. <br>
             약정이 끝나면 제품은 고객님의 소유가 됩니다.</p>
         </div>
       </div>
@@ -163,7 +163,7 @@
               <ul class="dep1">
                 <li><strong class="tit">무상 철거/재설치</strong>
                   <ul class="dsc-list-txt ty-dot depth">
-                    <li>대상 제품: 에어컨(상업용 에어컨 제외), STEM 냉장고, 14인용 식기세척기, 전기레인지, 워시타워, TV(176cm 이상), 광파 오븐에 한하여 지원되며, 제품 이동
+                    <li>대상 제품: 에어컨(상업용 에어컨 제외), STEM 냉장고, 14인용 식기세척기, 전기레인지, 워시타워, TV(176cm 이상), 광파오븐에 한하여 지원되며, 제품 이동
                       서비스는 포함되어 있지 않습니다.
                     </li>
                     <li>가전 구독 계약기간 내 1회 제공됩니다.</li>
@@ -267,23 +267,75 @@
           <div class="service-tabs__list--wrap">
             <div class="service-tabs__list service-tabs__list--radius" role="tablist" aria-label="제품 선택"
               data-service-tabs>
-              <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-wash"
-                aria-selected="true" aria-controls="service-panel-wash">워시타워</button>
+              <button type="button" class="service-tabs__button is-active" role="tab" id="service-tab-purifier"
+                aria-selected="true" aria-controls="service-panel-purifier" tabindex="-1">냉동얼음정수기</button>
+              <button type="button" class="service-tabs__button" role="tab" id="service-tab-wash" aria-selected="false"
+                aria-controls="service-panel-wash">워시타워</button>
               <button type="button" class="service-tabs__button" role="tab" id="service-tab-air" aria-selected="false"
                 aria-controls="service-panel-air" tabindex="-1">스탠드 에어컨</button>
               <button type="button" class="service-tabs__button" role="tab" id="service-tab-fridge"
                 aria-selected="false" aria-controls="service-panel-fridge" tabindex="-1">STEM 얼음정수 냉장고</button>
               <button type="button" class="service-tabs__button" role="tab" id="service-tab-laptop"
                 aria-selected="false" aria-controls="service-panel-laptop" tabindex="-1">노트북</button>
-              <button type="button" class="service-tabs__button" role="tab" id="service-tab-purifier"
-                aria-selected="false" aria-controls="service-panel-purifier" tabindex="-1">냉동얼음정수기</button>
               <!-- <button type="button" class="service-tabs__button" role="tab" id="service-tab-tv" aria-selected="false"
                 aria-controls="service-panel-tv" tabindex="-1">TV</button> -->
             </div>
           </div>
+
+          <!-- 냉동얼음정수기 -->
+          <div id="service-panel-purifier" class="service-tabs__panel" role="tabpanel"
+            aria-labelledby="service-tab-purifier" tabindex="0">
+            <ul class="service-care service-care--four">
+              <li class="service-care__item">
+                <div>
+                  <span class="service-care__tag">전문가 케어</span>
+                  <h3>분해 케어</h3>
+                  <p class="service-tooltip__wrap">얼음 토출구 분해 케어</p>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier01.png"
+                  alt="제품을 분해하여 세척중인 이미지" loading="lazy">
+              </li>
+              <li class="service-care__item">
+                <div>
+                  <span class="service-care__tag service-care__tag--supply">소모품 교체</span>
+                  <h3>중금속9 흡착필터, 바이러스 클리어 필터</h3>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier02.png"
+                  alt="2명의 기사님이 공기청정필터를 교체하고 있는 이미지" loading="lazy">
+              </li>
+              <li class="service-care__item service-care__item--detailed">
+                <div>
+                  <span class="service-care__tag">전문가 케어</span>
+                  <h3>위생 케어</h3>
+                  <p class="service-tooltip__wrap">냉동보관실 클리닝, 출수구 고온살균, 부품 클리닝</p>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier03.png"
+                  alt="2명의 기사님이 제품을 분해 및 조립하는 이미지" loading="lazy">
+              </li>
+              <li class="service-care__item">
+                <div>
+                  <span class="service-care__tag service-care__tag--free">무상 서비스</span>
+                  <h3>무상 A/S</h3>
+                </div>
+                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier04.png"
+                  alt="기사님이 제품을 움직이고 있는 이미지" loading="lazy">
+              </li>
+            </ul>
+            <!-- 스탠드 에어컨 유의사항 -->
+            <ul class="service-care__notes">
+              <li>직수관 고온살균의 경우, 일주일에 한 번 자동으로 약 10분간 살균됩니다.</li>
+              <li>수질검사는 요청 시 검사합니다.</li>
+              <li>
+                국가공인 KOLAS 시험기관인 LG전자 물과학연구소에서 환경부의 ‘먹는물 수질공정시험기준’에 따라 건강에 영향을 끼칠 수 있는 중금속 등 10가지 항목과 칼슘, 마그네슘 등 미네랄 항목을
+                검사합니다.
+              </li>
+              <li>교체 주기는 필터 및 제품에 따라 상이할 수 있습니다. </li>
+              <li>무상 A/S는 가전구독 고객에 한하며, 고객 과실로 인한 제품 고장은 제외됩니다.</li>
+            </ul>
+          </div>
           <!-- 워시타워 -->
           <div id="service-panel-wash" class="service-tabs__panel" role="tabpanel" aria-labelledby="service-tab-wash"
-            tabindex="0">
+            tabindex="0" hidden>
             <ul class="service-care service-care--four">
               <li class="service-care__item service-care__item--detailed">
                 <div>
@@ -497,57 +549,6 @@
               <li>혜택 제공 내용은 요금제별 상이하며 키보드 교체는 프리미엄 요금제에서만 가능합니다.</li>
               <li>프리미엄 상품은 서비스 매니저 1회 방문 시 배터리와 키보드 모두 한 번에 교체해 드립니다(각각 다른 일정에 방문 및 교체 불가)</li>
               <li>무상 A/S는 가전 구독 고객에 한하며, 고객 과실로 인한 제품 고장 및 배터리를 포함한 소모품 교체는 제외되며 별도로 비용이 발생할 수 있습니다.</li>
-            </ul>
-          </div>
-          <!-- 냉동얼음정수기 -->
-          <div id="service-panel-purifier" class="service-tabs__panel" role="tabpanel"
-            aria-labelledby="service-tab-purifier" tabindex="0" hidden>
-            <ul class="service-care service-care--four">
-              <li class="service-care__item">
-                <div>
-                  <span class="service-care__tag">전문가 케어</span>
-                  <h3>분해 케어</h3>
-                  <p class="service-tooltip__wrap">얼음 토출구 분해 케어</p>
-                </div>
-                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier01.png"
-                  alt="제품을 분해하여 세척중인 이미지" loading="lazy">
-              </li>
-              <li class="service-care__item">
-                <div>
-                  <span class="service-care__tag service-care__tag--supply">소모품 교체</span>
-                  <h3>중금속9 흡착필터, 바이러스 클리어 필터</h3>
-                </div>
-                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier02.png"
-                  alt="2명의 기사님이 공기청정필터를 교체하고 있는 이미지" loading="lazy">
-              </li>
-              <li class="service-care__item service-care__item--detailed">
-                <div>
-                  <span class="service-care__tag">위생 케어</span>
-                  <h3>위생 케어</h3>
-                  <p class="service-tooltip__wrap">냉동보관실 클리닝, 출수구 고온살균, 부품 클리닝</p>
-                </div>
-                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier03.png"
-                  alt="2명의 기사님이 제품을 분해 및 조립하는 이미지" loading="lazy">
-              </li>
-              <li class="service-care__item">
-                <div>
-                  <span class="service-care__tag service-care__tag--free">무상 서비스</span>
-                  <h3>무상 A/S</h3>
-                </div>
-                <img src="https://www.lge.co.kr/kr/home_app_subscribe/src/images/service-purifier04.png"
-                  alt="기사님이 제품을 움직이고 있는 이미지" loading="lazy">
-              </li>
-            </ul>
-            <!-- 스탠드 에어컨 유의사항 -->
-            <ul class="service-care__notes">
-              <li>직수관 고온살균의 경우, 일주일에 한 번 자동으로 약 10분간 살균됩니다.</li>
-              <li>수질검사는 요청 시 검사합니다.</li>
-              <li>
-                국가공인 KOLAS 시험기관인 LG전자 물과학연구소에서 환경부의 ‘먹는물 수질공정시험기준’에 따라 건강에 영향을 끼칠 수 있는 중금속 등 10가지 항목과 칼슘, 마그네슘 등 미네랄 항목을
-                검사합니다.
-              </li>
-              <li>교체 주기는 필터 및 제품에 따라 상이할 수 있습니다. </li>
-              <li>무상 A/S는 가전구독 고객에 한하며, 고객 과실로 인한 제품 고장은 제외됩니다.</li>
             </ul>
           </div>
           <!-- TV -->
@@ -3979,7 +3980,7 @@
   <script src="https://www.lge.co.kr/home_style_pages/common/js/jquery.js"></script>
   <script src="https://www.lge.co.kr/home_style_pages/common/js/swiper.min.js"></script>
   <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/home-app-pd-api.js" defer> </script>
-  <script src="https://wwwstg.lge.co.kr/kr/home_app_subscribe/src/js/main.js" defer></script>
+  <script src="https://www.lge.co.kr/kr/home_app_subscribe/src/js/main.js" defer></script>
 </body>
 
 </html>
