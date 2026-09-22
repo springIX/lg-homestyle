@@ -1073,7 +1073,7 @@
           '#benefits .benefits_info .swiper',
           {
             speed: 800,
-            spaceBetween: remToPx(8),
+            spaceBetween: 8,
             slidesPerView: 1.1,
 
             scrollbar: {
@@ -1109,7 +1109,7 @@
       if (hasCrosssale) {
         new Swiper('#crosssale .nav_type.swiper', {
           speed: 800,
-          spaceBetween: remToPx(12),
+          spaceBetween: 12,
           slidesPerView: 1,
           autoHeight: true,
           scrollbar: {
@@ -1138,7 +1138,7 @@
       if (hasHomestyling) {
         new Swiper('#homestyling .swiper', {
           speed: 800,
-          spaceBetween: remToPx(10),
+          spaceBetween: 10,
           slidesPerView: 1,
           pagination: {
             el: '#homestyling .pagi',
@@ -1155,7 +1155,7 @@
       if (hasInterior) {
         new Swiper('#interior .swiper', {
           speed: 800,
-          spaceBetween: remToPx(12),
+          spaceBetween: 12,
           pagination: {
             el: '#interior .pagi',
             clickable: true,
@@ -1189,7 +1189,7 @@
       if (hasHowToBuy) {
         new Swiper('#how_to_buy .swiper', {
           speed: 800,
-          spaceBetween: remToPx(10),
+          spaceBetween: 10,
           slidesPerView: 1,
           scrollbar: {
             el: '#how_to_buy .scr_bar',
@@ -1202,7 +1202,7 @@
       if (hasBrandCollection) {
         new Swiper('#premium_brand_collection .swiper', {
           speed: 800,
-          spaceBetween: remToPx(10),
+          spaceBetween: 10,
           slidesPerView: 1.05,
           scrollbar: {
             el: '#premium_brand_collection .scr_bar',
@@ -1215,7 +1215,6 @@
       if (hasTimeSale) {
         new Swiper('#timesale .swiper', {
           speed: 800,
-          spaceBetween: 6,
           slidesPerView: 3,
           scrollbar: {
             el: '#timesale .scr_bar',

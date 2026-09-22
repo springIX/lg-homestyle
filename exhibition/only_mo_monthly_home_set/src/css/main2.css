@@ -573,6 +573,16 @@
   align-items: flex-start;
   gap: 10rem;
 }
+@media (max-width: 780px) {
+  .monthly_home_set .img_tab {
+    justify-content: flex-start;
+    margin-left: -20rem !important;
+    width: calc(100% + 40rem) !important;
+    padding-left: 20rem !important;
+    padding-right: 20rem !important;
+    overflow-x: auto;
+  }
+}
 .monthly_home_set .img_tab button {
   display: block;
   opacity: 0.5;
@@ -2885,7 +2895,15 @@
 }
 .monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list {
   margin-top: 16rem;
-  padding: 10rem;
+  padding: 14rem 7rem;
+  background-color: #fff;
+  overflow: visible;
+}
+.monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list .swiper-wrapper {
+  height: 480rem;
+}
+.monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list .swiper-slide {
+  padding: 6rem 3rem;
   background-color: #fff;
 }
 .monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list .swiper-slide .c-product__list {
@@ -2894,6 +2912,9 @@
 }
 .monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list .swiper-slide .c-product__list .c-product__item .c-product__info-container .c-product__info .c-product__name {
   color: #444;
+}
+.monthly_home_set.combined_discount section#timesale .timesale_cont .timesale_list .swiper-slide .c-product__list .c-product__item .c-product__info-container .c-product__price-area .c-product__price-item--member {
+  flex-wrap: nowrap;
 }
 .monthly_home_set.combined_discount section #category .pd_list .swiper {
   display: none;
