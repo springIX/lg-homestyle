@@ -433,7 +433,7 @@
             @include screen("mo") { flex-direction: column-reverse;}
           }
           > *{ width: 100%; }
-          .video-box{ position: relative;  aspect-ratio: 16/9; overflow: hidden;
+          .video-box{ position: relative;  aspect-ratio: 1/1; overflow: hidden;
             video, iframe{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover;}
           }
           .order-box{ font-size: 18px;
@@ -858,84 +858,6 @@
 
     .service-products-tabs {
       max-width: 1380px;
-    }
-
-    // 헤드
-    .service-page__heading {
-      margin-bottom: 24px;
-
-      h2 {
-        margin: 0;
-        color: #111;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 48px;
-        text-align: center;
-
-        @include screen("mo") {
-          font-size: 26px;
-          font-weight: 700;
-          letter-spacing: -1.04px;
-          line-height: 140%;
-        }    
-
-        &.care-title {
-          @include screen("mo") {
-            font-size: 17px;
-            font-weight: 600;
-            line-height: 24px; 
-            letter-spacing: -0.3px;        
-          }
-        }  
-
-        &.contact-title__small {
-          color: #111;
-          text-align: center;
-          font-size: 28px;
-          font-weight: 700;
-          line-height: 38px;   
-
-          @include screen("mo") {
-            text-align: center;
-            font-size: 17px;
-            font-weight: 600;
-            line-height: 24px; 
-            letter-spacing: -0.3px;
-          }
-        }      
-      }
-
-      p {
-        margin: 8px auto 0;
-        color: #444;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: -0.2px;
-
-        @include screen("mo") {
-          font-size: 15px;
-          font-weight: 400;
-          letter-spacing: -0.2px;
-          line-height: 20px;
-        }      
-
-        &.care-title-sub {
-          @include screen("mo") {
-            color: #666;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 140%;
-            letter-spacing: -0.26px;
-            margin: 4px auto 0;
-          }
-        }
-      }
-
-      @include screen("mo") {
-        margin-bottom: 20px;
-      }
     }
 
     /* KV */
@@ -3100,187 +3022,265 @@
       }
     }
 
-    /* 혼자 고르기 어려우신가요? */
-    .service-page__section--contact {
-      background-color: #fff;
-      text-align: center;
+  }
 
-      .service-page__inner {
-        width: calc(100% - #{$layout_pd * 2});
-        max-width: 940px;
-        margin: 0 auto;
-      }
+      // 헤드
+    .service-page__heading {
+      margin-bottom: 24px;
 
-      .service-contact {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        width: 100%;
-        max-width: 780px;
-        margin: 0 auto;
+      h2 {
+        margin: 0;
+        color: #111;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 48px;
+        text-align: center;
 
-        &__item {
-          cursor: pointer;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: center;
-          gap: 12px;
-          min-width: 40px;
-          min-height: 136px;
-          padding: 24px;
-          overflow: hidden;
-          border: 1px solid #ccc;
-          border-radius: 24px;
-          background-color: #fff;
+        @include screen("mo") {
+          font-size: 26px;
+          font-weight: 700;
+          letter-spacing: -1.04px;
+          line-height: 140%;
+        }    
+
+        &.care-title {
+          @include screen("mo") {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px; 
+            letter-spacing: -0.3px;        
+          }
+        }  
+
+        &.contact-title__small {
           color: #111;
-          text-align: left;
-          text-decoration: none;
-
-          &:focus-visible {
-            outline: 2px solid #111;
-            outline-offset: 3px;
-          }
-
-          > img {
-            display: block;
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-          }
+          text-align: center;
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 38px;   
 
           @include screen("mo") {
-            flex-direction: row;
-            min-height: auto;
-            padding: 16px;
-            align-items: center;
-            border-radius: 16px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px; 
+            letter-spacing: -0.3px;
           }
+        }      
+      }
 
+      p {
+        margin: 8px auto 0;
+        color: #444;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+
+        @include screen("mo") {
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: -0.2px;
+          line-height: 20px;
+        }      
+
+        &.care-title-sub {
+          @include screen("mo") {
+            color: #666;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 140%;
+            letter-spacing: -0.26px;
+            margin: 4px auto 0;
+          }
+        }
+      }
+
+      @include screen("mo") {
+        margin-bottom: 20px;
+      }
+    }
+  /* 혼자 고르기 어려우신가요? */
+  .service-page__section--contact {
+    background-color: #fff;
+    text-align: center;
+
+    .service-page__inner {
+      width: calc(100% - #{$layout_pd * 2});
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .service-contact {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+
+      &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
+        min-width: 40px;
+        min-height: 136px;
+        padding: 24px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 24px;
+        background-color: #fff;
+        color: #111;
+        text-align: left;
+        text-decoration: none;
+
+        &:focus-visible {
+          outline: 2px solid #111;
+          outline-offset: 3px;
         }
 
-        &__text {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 6px;
-          width: 100%;
+        > img {
+          display: block;
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+        }
 
-          strong {
-            color: #111;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 20px;
+        @include screen("mo") {
+          flex-direction: row;
+          min-height: auto;
+          padding: 16px;
+          align-items: center;
+          border-radius: 16px;
+        }
+
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        width: 100%;
+
+        strong {
+          color: #111;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 20px;
+
+          @include screen("mo") {
+            font-size: 16px;
+          }
+        }
+
+        small {
+          color: #8f8f8f;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 18px;
+
+          @include screen("mo") {
+            font-size: 13px;
+          }          
+        }   
+        
+        @include screen("mo") {
+          gap: 4px;
+        }
+      }  
+      
+      &__ai {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: 100%;
+        max-width: 780px;
+        height: 64px;
+        margin: 24px auto 0;
+        border-radius: 999px;
+        background:
+          linear-gradient(90deg, rgba(253, 49, 46, 0.08) 0%, rgba(249, 20, 235, 0.08) 50.481%, rgba(180, 50, 245, 0.08) 75%, rgba(130, 39, 255, 0.08) 100%),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 100%);
+        color: #444;
+        text-decoration: none;
+
+        &:focus-visible {
+          outline: 2px solid #111;
+          outline-offset: 3px;
+        }
+
+        > img {
+          display: block;
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+
+          @include screen("mo") {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .service-contact__ai--wrap {
+          color: #444;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .colorful {
+            background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
+            -webkit-background-clip: text !important; 
+            background-clip: text !important;
+            color: transparent !important;
+            display: block;
 
             @include screen("mo") {
-              font-size: 16px;
+              font-size: 14px;
+              line-height: 20px; 
             }
           }
 
-          small {
-            color: #8f8f8f;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 18px;
+          .black {
+            display: block;
+            color: #444;
 
             @include screen("mo") {
               font-size: 13px;
-            }          
-          }   
-          
-          @include screen("mo") {
-            gap: 4px;
+              line-height: 23px; 
+            }            
           }
-        }  
-        
-        &__ai {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 2px;
-          width: 100%;
-          max-width: 780px;
-          height: 64px;
-          margin: 24px auto 0;
-          border-radius: 999px;
-          background:
-            linear-gradient(90deg, rgba(253, 49, 46, 0.08) 0%, rgba(249, 20, 235, 0.08) 50.481%, rgba(180, 50, 245, 0.08) 75%, rgba(130, 39, 255, 0.08) 100%),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 100%);
-          color: #444;
-          text-decoration: none;
-
-          &:focus-visible {
-            outline: 2px solid #111;
-            outline-offset: 3px;
-          }
-
-          > img {
-            display: block;
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-
-            @include screen("mo") {
-              width: 20px;
-              height: 20px;
-            }
-          }
-
-          .service-contact__ai--wrap {
-            color: #444;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 1.4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .colorful {
-              background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
-              -webkit-background-clip: text !important; 
-              background-clip: text !important;
-              color: transparent !important;
-              display: block;
-
-              @include screen("mo") {
-                font-size: 14px;
-                line-height: 20px; 
-              }
-            }
-
-            .black {
-              display: block;
-              color: #444;
-
-              @include screen("mo") {
-                font-size: 13px;
-                line-height: 23px; 
-              }            
-            }
-          }
-
-          &::after {
-            content: "";
-            flex: 0 0 20px;
-            width: 20px;
-            height: 20px;
-            background: url(../images/icon_arr.svg) no-repeat center center / contain;
-          }
-
-          @include screen("mo") {
-            margin: 20px auto 0;
-            height: 48px;
-          }
-        }  
-        
-        @include screen("mo") {
-          grid-template-columns: repeat(1, minmax(0, 1fr));
-          gap: 10px;
         }
-        
+
+        &::after {
+          content: "";
+          flex: 0 0 20px;
+          width: 20px;
+          height: 20px;
+          background: url(../images/icon_arr.svg) no-repeat center center / contain;
+        }
+
+        @include screen("mo") {
+          margin: 20px auto 0;
+          height: 48px;
+        }
+      }  
+      
+      @include screen("mo") {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 10px;
       }
-    }    
-  }
+      
+    }
+  }    
   /* 서비스 안내 페이지 끝 */
 
 } 
