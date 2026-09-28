@@ -1236,7 +1236,7 @@
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box {
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
   overflow: hidden;
 }
 #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box video, #home-app-subscribe section#how-to-apply .how-to-apply-cont article .video-box iframe {
@@ -1744,81 +1744,6 @@
 }
 #home-app-subscribe.care-service .service-products-tabs {
   max-width: 1380px;
-}
-#home-app-subscribe.care-service .service-page__heading {
-  margin-bottom: 24px;
-}
-#home-app-subscribe.care-service .service-page__heading h2 {
-  margin: 0;
-  color: #111;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-  text-align: center;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__heading h2 {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -1.04px;
-    line-height: 140%;
-  }
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__heading h2.care-title {
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.3px;
-  }
-}
-#home-app-subscribe.care-service .service-page__heading h2.contact-title__small {
-  color: #111;
-  text-align: center;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 38px;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__heading h2.contact-title__small {
-    text-align: center;
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.3px;
-  }
-}
-#home-app-subscribe.care-service .service-page__heading p {
-  margin: 8px auto 0;
-  color: #444;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: -0.2px;
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__heading p {
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: -0.2px;
-    line-height: 20px;
-  }
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__heading p.care-title-sub {
-    color: #666;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 140%;
-    letter-spacing: -0.26px;
-    margin: 4px auto 0;
-  }
-}
-@media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__heading {
-    margin-bottom: 20px;
-  }
 }
 #home-app-subscribe.care-service {
   /* KV */
@@ -3831,19 +3756,94 @@
     line-height: 20px;
   }
 }
-#home-app-subscribe.care-service {
+#home-app-subscribe .service-page__heading {
+  margin-bottom: 24px;
+}
+#home-app-subscribe .service-page__heading h2 {
+  margin: 0;
+  color: #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -1.04px;
+    line-height: 140%;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading h2.care-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+  }
+}
+#home-app-subscribe .service-page__heading h2.contact-title__small {
+  color: #111;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading h2.contact-title__small {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+  }
+}
+#home-app-subscribe .service-page__heading p {
+  margin: 8px auto 0;
+  color: #444;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading p {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading p.care-title-sub {
+    color: #666;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.26px;
+    margin: 4px auto 0;
+  }
+}
+@media (max-width: 767px) {
+  #home-app-subscribe .service-page__heading {
+    margin-bottom: 20px;
+  }
+}
+#home-app-subscribe {
   /* 혼자 고르기 어려우신가요? */
 }
-#home-app-subscribe.care-service .service-page__section--contact {
+#home-app-subscribe .service-page__section--contact {
   background-color: #fff;
   text-align: center;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-page__inner {
+#home-app-subscribe .service-page__section--contact .service-page__inner {
   width: calc(100% - 40px);
   max-width: 940px;
   margin: 0 auto;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact {
+#home-app-subscribe .service-page__section--contact .service-contact {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
@@ -3851,7 +3851,7 @@
   max-width: 780px;
   margin: 0 auto;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
+#home-app-subscribe .service-page__section--contact .service-contact__item {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -3869,18 +3869,18 @@
   text-align: left;
   text-decoration: none;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__item:focus-visible {
+#home-app-subscribe .service-page__section--contact .service-contact__item:focus-visible {
   outline: 2px solid #111;
   outline-offset: 3px;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__item > img {
+#home-app-subscribe .service-page__section--contact .service-contact__item > img {
   display: block;
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__item {
+  #home-app-subscribe .service-page__section--contact .service-contact__item {
     flex-direction: row;
     min-height: auto;
     padding: 16px;
@@ -3888,41 +3888,41 @@
     border-radius: 16px;
   }
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__text {
+#home-app-subscribe .service-page__section--contact .service-contact__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
   width: 100%;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__text strong {
+#home-app-subscribe .service-page__section--contact .service-contact__text strong {
   color: #111;
   font-size: 20px;
   font-weight: 600;
   line-height: 20px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__text strong {
+  #home-app-subscribe .service-page__section--contact .service-contact__text strong {
     font-size: 16px;
   }
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__text small {
+#home-app-subscribe .service-page__section--contact .service-contact__text small {
   color: #8f8f8f;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__text small {
+  #home-app-subscribe .service-page__section--contact .service-contact__text small {
     font-size: 13px;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__text {
+  #home-app-subscribe .service-page__section--contact .service-contact__text {
     gap: 4px;
   }
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai {
+#home-app-subscribe .service-page__section--contact .service-contact__ai {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3936,23 +3936,23 @@
   color: #444;
   text-decoration: none;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai:focus-visible {
+#home-app-subscribe .service-page__section--contact .service-contact__ai:focus-visible {
   outline: 2px solid #111;
   outline-offset: 3px;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
+#home-app-subscribe .service-page__section--contact .service-contact__ai > img {
   display: block;
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai > img {
+  #home-app-subscribe .service-page__section--contact .service-contact__ai > img {
     width: 20px;
     height: 20px;
   }
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap {
+#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap {
   color: #444;
   font-size: 16px;
   font-weight: 700;
@@ -3961,7 +3961,7 @@
   justify-content: center;
   align-items: center;
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
+#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
   background: linear-gradient(90deg, #fd312e 0%, #f914eb 50.481%, #b432f5 75%, #8227ff 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
@@ -3969,22 +3969,22 @@
   display: block;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
+  #home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .colorful {
     font-size: 14px;
     line-height: 20px;
   }
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
+#home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
   display: block;
   color: #444;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
+  #home-app-subscribe .service-page__section--contact .service-contact__ai .service-contact__ai--wrap .black {
     font-size: 13px;
     line-height: 23px;
   }
 }
-#home-app-subscribe.care-service .service-page__section--contact .service-contact__ai::after {
+#home-app-subscribe .service-page__section--contact .service-contact__ai::after {
   content: "";
   flex: 0 0 20px;
   width: 20px;
@@ -3992,13 +3992,13 @@
   background: url(../images/icon_arr.svg) no-repeat center center/contain;
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact__ai {
+  #home-app-subscribe .service-page__section--contact .service-contact__ai {
     margin: 20px auto 0;
     height: 48px;
   }
 }
 @media (max-width: 767px) {
-  #home-app-subscribe.care-service .service-page__section--contact .service-contact {
+  #home-app-subscribe .service-page__section--contact .service-contact {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 10px;
   }

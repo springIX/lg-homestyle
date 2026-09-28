@@ -747,29 +747,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  $(document).on(
+    'click',
+    '.device_link',
+    function (e) {
+      e.preventDefault();
+
+      const isMobile =
+        window.innerWidth <= 767;
+
+      const href =
+        isMobile
+          ? $(this).attr('data-mo-href')
+          : $(this).attr('data-pc-href');
+
+      if (!href) return;
+
+      window.location.href = href;
+    }
+  );
+
 });
-
-
-
-// 테스트용 api
-// 현재 접속한 환경이 로컬인지 확인
-// const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-// const baseUrl = isLocal ? 'https://www.lge.co.kr' : '';
-
-// function fetchProducts(categoryId) {
-//   const apiUrl = `${baseUrl}https://www.lge.co.kr/kr/home_app_subscribe/service_info.html=${categoryId}`;
-
-//   fetch('https://apiv2.lge.co.kr/subscriptionsvc/ajax/v1/direct-subscription/best-ranking-list?displaySpaceId=DP_HOME_001&titleLinkUrl=subscribe&displayObjectLevel=2&viewCnt=5', {
-//     method: 'GET',
-//     headers: {
-//     }
-//   })
-//     .then(response => response.json())
-//     .then(data => {
-//       renderProducts(categoryId, data);
-//     })
-//     .catch(error => {
-//       console.error('데이터를 불러오지 못했습니다:', error);
-//     });
-// }

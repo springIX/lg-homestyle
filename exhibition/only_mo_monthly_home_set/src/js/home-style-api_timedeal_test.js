@@ -72,6 +72,7 @@
       const url = `${this.baseUrl}${this.endpoints.timeDeals}`;
       const response = await this.#request(url);
 
+      if (!response) return null;
       return response?.data?.products || [];
     }
   }
@@ -102,6 +103,8 @@
     #productDataMap = new Map();
     #timeDealDataMap = new Map();
     #timerInterval = null;
+    #timeDealRefreshTimer = null;
+    #hasLoadedOnce = false;
 
     constructor() {
       this.apiService = new HomeStyleProductApi();
@@ -116,12 +119,24 @@
     }
 
     async #init() {
-      const elProductList = document.querySelector(HomeStyleProductUIController.SELECTORS.PRODUCT_WRAPPER);
-      if (!elProductList) return;
       await this.#updateProducts();
     }
 
     async #updateProducts() {
+      // 타임딜 목록을 먼저 받아 #timesale 상품 DOM을 자동 생성한다.
+      const timeDeals = this.#useMockData
+        ? []
+        : await this.apiService.fetchTimeDeals();
+
+      if (!this.#useMockData && Array.isArray(timeDeals)) {
+        this.#buildTimeDealItems(timeDeals);
+      }
+
+      const elProductList = document.querySelector(
+        HomeStyleProductUIController.SELECTORS.PRODUCT_WRAPPER
+      );
+      if (!elProductList) return;
+
       const elItems = document.querySelectorAll(HomeStyleProductUIController.SELECTORS.PRODUCT_ITEM);
       const productIds = [...document.querySelectorAll(HomeStyleProductUIController.SELECTORS.MAIN_SPAN)]
         .map(el => el.dataset.homeStyleProduct)
@@ -129,10 +144,14 @@
 
       if (productIds.length === 0) {
         console.log('[HomeStyleProductUIController.updateProducts] 업데이트할 상품 ID가 없습니다.');
+        this.#updateTimeSaleSwiper();
+        this.#scheduleTimeDealRefresh(timeDeals || []);
         return;
       }
 
-      elItems.forEach(elItem => this.#setLoadingState(elItem, true));
+      if (!this.#hasLoadedOnce) {
+        elItems.forEach(elItem => this.#setLoadingState(elItem, true));
+      }
 
       let productList = []; // ✅ 여기로 이동
 
@@ -143,17 +162,13 @@
           const normalProductIds = productIds.filter(id => id.startsWith('G'));
           const packageProductIds = productIds.filter(id => id.startsWith('P'));
 
-          const [normalProducts, packageProducts, timeDeals] = await Promise.all([
+          const [normalProducts, packageProducts] = await Promise.all([
             normalProductIds.length
               ? this.apiService.fetchProducts(normalProductIds)
               : [],
 
             packageProductIds.length
               ? this.apiService.fetchPackages(packageProductIds)
-              : [],
-
-            normalProductIds.length
-              ? this.apiService.fetchTimeDeals()
               : []
           ]);
 
@@ -183,6 +198,9 @@
           productList.forEach(item => this.#productDataMap.set(item.goodsNo, item));
           this.#renderProducts(elItems);
           this.#startTimers();
+          this.#updateTimeSaleSwiper();
+          this.#scheduleTimeDealRefresh(timeDeals || []);
+          this.#hasLoadedOnce = true;
 
           setTimeout(() => {
             $(window).trigger('scroll');
@@ -194,7 +212,175 @@
         console.error('제품 정보를 가져오는 데 실패했습니다:', error);
         console.error('[debug productList]', productList);
         elItems.forEach(elItem => this.#renderErrorState(elItem));
+        this.#scheduleTimeDealRefresh(timeDeals || []);
       }
+    }
+
+    #buildTimeDealItems(timeDeals) {
+      const wrapper = document.querySelector(
+        '#timesale .timesale_list > .swiper-wrapper'
+      );
+      if (!wrapper) return;
+
+      const now = Date.now();
+      const seen = new Set();
+
+      const activeDeals = timeDeals.filter((item) => {
+        const productId = String(item?.productId || '');
+        const startDate = this.#parseApiDate(item?.startDate);
+        const endDate = this.#parseApiDate(item?.endDate);
+
+        if (!productId || seen.has(productId) || !startDate || !endDate) {
+          return false;
+        }
+
+        const isActive =
+          startDate.getTime() <= now &&
+          now < endDate.getTime();
+
+        if (isActive) seen.add(productId);
+        return isActive;
+      });
+
+      this.#timeDealDataMap.clear();
+      activeDeals.forEach((item) => {
+        this.#timeDealDataMap.set(item.productId, item);
+      });
+
+      const currentIds = [...wrapper.querySelectorAll('[data-home-style-product]')]
+        .map(element => element.dataset.homeStyleProduct);
+      const nextIds = activeDeals.map(item => item.productId);
+      const hasSameProducts =
+        currentIds.length === nextIds.length &&
+        currentIds.every((id, index) => id === nextIds[index]);
+
+      const timer =
+        document.querySelector(
+          '#timesale .timesale_timer'
+        );
+
+      if (
+        timer
+        && activeDeals.length === 0
+      ) {
+        timer.hidden = true;
+
+        timer.removeAttribute(
+          'data-start-date'
+        );
+
+        timer.removeAttribute(
+          'data-end-date'
+        );
+
+        timer.removeAttribute(
+          'data-role'
+        );
+
+        /**
+         * 진행 중인 타임딜이 없으면
+         * 진행바도 종료 상태로 처리
+         */
+        this.#refreshTimeSaleProgress(
+          null,
+          null
+        );
+      }
+
+      this.#updateTimeSalePeriod(activeDeals);
+      if (hasSameProducts) return;
+
+      const slides = [];
+
+      for (let index = 0; index < activeDeals.length; index += 2) {
+        const pair = activeDeals.slice(index, index + 2);
+        const itemsHTML = pair.map((item, pairIndex) => {
+          const isFirstItem = index === 0 && pairIndex === 0;
+          const itemClass = isFirstItem ? ' time_deal' : '';
+          const timerAttribute = isFirstItem
+            ? ' data-timer="timesale_timer"'
+            : '';
+
+          return `
+            <li class="c-product__item homestyle_item${itemClass}"${timerAttribute}>
+              <span data-home-style-product="${item.productId}"></span>
+            </li>
+          `;
+        }).join('');
+
+        slides.push(`
+          <div class="swiper-slide c-product c-product--home-style">
+            <ul class="c-product__list">
+              ${itemsHTML}
+            </ul>
+          </div>
+        `);
+      }
+
+      wrapper.innerHTML = slides.join('');
+    }
+
+    #updateTimeSalePeriod(activeDeals) {
+      const period = document.querySelector('#timesale .home_set_tit p');
+      if (!period) return;
+      if (activeDeals.length === 0) {
+        period.textContent = '현재 진행 중인 타임딜이 없습니다.';
+        return;
+      }
+
+      const starts = activeDeals
+        .map(item => this.#parseApiDate(item.startDate))
+        .filter(Boolean);
+      const ends = activeDeals
+        .map(item => this.#parseApiDate(item.endDate))
+        .filter(Boolean);
+
+      if (!starts.length || !ends.length) return;
+
+      const start = new Date(Math.min(...starts.map(date => date.getTime())));
+      // API의 09:59:59 종료는 사용자에게 10시로 표시한다.
+      const end = new Date(Math.max(...ends.map(date => date.getTime())) + 1000);
+      const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
+      const format = date =>
+        `${date.getMonth() + 1}.${date.getDate()}(${weekdays[date.getDay()]}) ${date.getHours()}시`;
+
+      period.textContent = `${format(start)} ~ ${format(end)}`;
+    }
+
+    #updateTimeSaleSwiper() {
+      const swiperEl = document.querySelector('#timesale .timesale_list');
+      const swiper = swiperEl?.swiper;
+      if (!swiper) return;
+
+      swiper.update();
+      swiper.slideTo(0, 0);
+      swiper.scrollbar?.updateSize();
+    }
+
+    #scheduleTimeDealRefresh(timeDeals) {
+      if (this.#timeDealRefreshTimer) {
+        clearTimeout(this.#timeDealRefreshTimer);
+      }
+
+      const now = Date.now();
+      const changeTimes = timeDeals
+        .flatMap(item => [
+          this.#parseApiDate(item.startDate)?.getTime(),
+          this.#parseApiDate(item.endDate)?.getTime()
+        ])
+        .filter(time => time && time > now)
+        .sort((a, b) => a - b);
+
+      const nextBoundaryDelay = changeTimes.length
+        ? changeTimes[0] - now + 1500
+        : Infinity;
+
+      // API 편성 변경도 반영하도록 최대 5분마다 다시 확인한다.
+      const delay = Math.min(nextBoundaryDelay, 5 * 60 * 1000);
+
+      this.#timeDealRefreshTimer = setTimeout(() => {
+        this.#updateProducts();
+      }, delay);
     }
 
     #renderProducts(elItems) {
@@ -281,6 +467,8 @@
         const priceData = timeDealData
           ? {
             marketPrice: timeDealData.price?.originalPrice,
+            // currentPrice는 상품/쿠폰 할인가이며,
+            // 카드 할인까지 포함한 최대혜택가는 bestPrice이다.
             bestPrice: timeDealData.price?.bestPrice
           }
           : data.price;
@@ -483,7 +671,11 @@
       timer.hidden = false;
       timer.setAttribute('data-role', 'time-deal-timer');
       timer.setAttribute('role', 'timer');
-      timer.dataset.endDate = timeDealData.endDate;
+      timer.dataset.startDate =
+        timeDealData.startDate;
+
+      timer.dataset.endDate =
+        timeDealData.endDate;
 
       this.#createTimerMarkup(timer);
       this.#refreshTimer(timer);
@@ -536,6 +728,113 @@
       );
     }
 
+    /**
+     * 타임세일 진행바 갱신
+     *
+     * 시작 시 scaleX(1)
+     * 종료 시 scaleX(0)
+     */
+    #refreshTimeSaleProgress(
+      startDateValue,
+      endDateValue
+    ) {
+      const progress =
+        document.querySelector(
+          '#timesale .timesale_progress'
+        );
+
+      const progressBar =
+        progress?.querySelector(':scope > i');
+
+      if (
+        !progress
+        || !progressBar
+      ) {
+        return;
+      }
+
+      const startDate =
+        this.#parseApiDate(
+          startDateValue
+        );
+
+      const endDate =
+        this.#parseApiDate(
+          endDateValue
+        );
+
+      /**
+       * 날짜 정보가 없으면
+       * 진행바를 종료 상태로 처리
+       */
+      if (
+        !startDate
+        || !endDate
+      ) {
+        progressBar.style.transform =
+          'scaleX(0)';
+
+        progress.classList.add(
+          'is-ended'
+        );
+
+        return;
+      }
+
+      const startTime =
+        startDate.getTime();
+
+      const endTime =
+        endDate.getTime();
+
+      const now =
+        Date.now();
+
+      const totalTime =
+        endTime - startTime;
+
+      /**
+       * 올바르지 않은 기간 방지
+       */
+      if (totalTime <= 0) {
+        progressBar.style.transform =
+          'scaleX(0)';
+
+        progress.classList.add(
+          'is-ended'
+        );
+
+        return;
+      }
+
+      /**
+       * 남은 시간 비율
+       *
+       * 시작 전: 1
+       * 진행 중: 1~0
+       * 종료 후: 0
+       */
+      const remainingRatio =
+        Math.max(
+          0,
+          Math.min(
+            1,
+            (
+              endTime - now
+            )
+            / totalTime
+          )
+        );
+
+      progressBar.style.transform =
+        `scaleX(${remainingRatio})`;
+
+      progress.classList.toggle(
+        'is-ended',
+        remainingRatio <= 0
+      );
+    }
+
     #refreshTimer(timer) {
       this.#createTimerMarkup(timer);
 
@@ -546,6 +845,11 @@
       const diff = endDate
         ? endDate.getTime() - Date.now()
         : 0;
+
+      this.#refreshTimeSaleProgress(
+        timer.dataset.startDate,
+        timer.dataset.endDate
+      );
 
       const timeParts = {
         days: 0,
@@ -838,8 +1142,9 @@
       const hasHowToBuy = document.querySelector('#how_to_buy .swiper'); // ✅ 추가
       const hasBrandCollection = document.querySelector('#premium_brand_collection .swiper'); // ✅ 추가
       const hasTimeSale = document.querySelector('#timesale .swiper'); // ✅ 추가
+      const hasCategory = document.querySelector('#category .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale && !hasCategory) return;
 
       swiperInited = true;
 
@@ -910,7 +1215,7 @@
           '#benefits .benefits_info .swiper',
           {
             speed: 800,
-            spaceBetween: remToPx(8),
+            spaceBetween: 8,
             slidesPerView: 1.1,
 
             scrollbar: {
@@ -946,7 +1251,7 @@
       if (hasCrosssale) {
         new Swiper('#crosssale .nav_type.swiper', {
           speed: 800,
-          spaceBetween: remToPx(12),
+          spaceBetween: 12,
           slidesPerView: 1,
           autoHeight: true,
           scrollbar: {
@@ -975,7 +1280,7 @@
       if (hasHomestyling) {
         new Swiper('#homestyling .swiper', {
           speed: 800,
-          spaceBetween: remToPx(10),
+          spaceBetween: 10,
           slidesPerView: 1,
           pagination: {
             el: '#homestyling .pagi',
@@ -992,7 +1297,7 @@
       if (hasInterior) {
         new Swiper('#interior .swiper', {
           speed: 800,
-          spaceBetween: remToPx(12),
+          spaceBetween: 12,
           pagination: {
             el: '#interior .pagi',
             clickable: true,
@@ -1026,7 +1331,7 @@
       if (hasHowToBuy) {
         new Swiper('#how_to_buy .swiper', {
           speed: 800,
-          spaceBetween: remToPx(10),
+          spaceBetween: 10,
           slidesPerView: 1,
           scrollbar: {
             el: '#how_to_buy .scr_bar',
@@ -1039,7 +1344,7 @@
       if (hasBrandCollection) {
         new Swiper('#premium_brand_collection .swiper', {
           speed: 800,
-          spaceBetween: remToPx(10),
+          spaceBetween: 10,
           slidesPerView: 1.05,
           scrollbar: {
             el: '#premium_brand_collection .scr_bar',
@@ -1052,12 +1357,39 @@
       if (hasTimeSale) {
         new Swiper('#timesale .swiper', {
           speed: 800,
-          spaceBetween: remToPx(6),
           slidesPerView: 3,
           scrollbar: {
             el: '#timesale .scr_bar',
             draggable: true,
           },
+        });
+      }
+
+      // 9) Category 
+      if (hasCategory) {
+        $('#category .swiper').each(function () {
+          const swiperEl = this;
+          const scrollbarEl =
+            swiperEl.querySelector('.scr_bar');
+
+          // 중복 초기화 방지
+          if (swiperEl.swiper) return;
+
+          new Swiper(swiperEl, {
+            speed: 800,
+            spaceBetween: 6,
+            slidesPerView: 3,
+
+            // display:none인 탭 내부 Swiper 대응
+            observer: true,
+            observeParents: true,
+
+            scrollbar: {
+              // 각 Swiper 내부의 스크롤바만 연결
+              el: scrollbarEl,
+              draggable: true,
+            },
+          });
         });
       }
 
@@ -1266,7 +1598,11 @@
       if (initialized) return;
 
       const targets = document.querySelectorAll('[data-home-style-product]');
-      if (!targets.length) {
+      const hasAutoTimeSale = document.querySelector(
+        '#timesale .timesale_list > .swiper-wrapper'
+      );
+
+      if (!targets.length && !hasAutoTimeSale) {
         console.log('[HomeStyle] product DOM not found yet');
         return;
       }
@@ -1588,22 +1924,189 @@
     domObserver.observe(document.body, { childList: true, subtree: true });
   })();
 
-  // URL의 %23아이디 영역으로 이동
+  // URL의 #아이디 또는 %23아이디 영역으로 이동
+  // ?tab_숫자가 있으면 해당 영역의 탭까지 자동 활성화
   function moveToTarget() {
-    const exhibitionId = new URLSearchParams(
-      window.location.search
-    ).get('exhibitionId') || '';
+    const exhibitionId =
+      new URLSearchParams(window.location.search)
+        .get('exhibitionId') || '';
 
-    const id =
-      window.location.hash.slice(1) ||
-      exhibitionId.split('#')[1];
+    /**
+     * 일반적인 주소
+     * #category?tab_2
+     * #brand_sale?tab_3
+     */
+    const hashValue =
+      window.location.hash.slice(1);
 
-    if (!id) return;
+    /**
+     * OMS에서 보정된 주소
+     * exhibitionId=2609001733%23category?tab_2
+     * exhibitionId=2609001733%23brand_sale?tab_3
+     */
+    const embeddedHash =
+      exhibitionId.includes('#')
+        ? exhibitionId.split('#').slice(1).join('#')
+        : '';
 
-    const target = document.getElementById(id);
+    const targetValue =
+      hashValue || embeddedHash;
+
+    if (!targetValue) return;
+
+    /**
+     * brand_sale?tab_3
+     *
+     * targetId: brand_sale
+     * tabValue: tab_3
+     */
+    const targetParts =
+      targetValue.split('?');
+
+    const targetId =
+      targetParts[0];
+
+    const tabValue =
+      targetParts[1] || '';
+
+    const target =
+      document.getElementById(targetId);
 
     if (!target) return;
 
+    /**
+     * tab_1 → index 0
+     * tab_2 → index 1
+     * tab_3 → index 2
+     */
+    let tabIndex = 0;
+
+    const tabMatch =
+      tabValue.match(/^tab_(\d+)$/);
+
+    if (tabMatch) {
+      tabIndex =
+        Number(tabMatch[1]) - 1;
+    }
+
+    /**
+     * 탭 설정
+     */
+    const tabSettings = {
+      category: {
+        buttonSelector:
+          '.home_set_tab[data-tab-btn="B"] > button',
+
+        contentSelector:
+          '.pd_list[data-tab-cont="B"] > .swiper'
+      },
+
+      brand_sale: {
+        buttonSelector:
+          '.img_tab button',
+
+        contentSelector:
+          '.pd_list .c-product'
+      }
+    };
+
+    const tabSetting =
+      tabSettings[targetId];
+
+    /**
+     * category 또는 brand_sale인 경우
+     * URL에 맞춰 탭 활성화
+     */
+    if (tabSetting) {
+      const $target =
+        $('#' + targetId);
+
+      const $buttons =
+        $target.find(
+          tabSetting.buttonSelector
+        );
+
+      const $contents =
+        $target.find(
+          tabSetting.contentSelector
+        );
+
+      /**
+       * 존재하지 않는 탭 번호 방지
+       */
+      if (
+        tabIndex < 0 ||
+        tabIndex >= $buttons.length ||
+        tabIndex >= $contents.length
+      ) {
+        tabIndex = 0;
+      }
+
+      /**
+       * 탭 버튼 on 처리
+       */
+      $buttons
+        .removeClass('on')
+        .attr('aria-selected', 'false');
+
+      $buttons
+        .eq(tabIndex)
+        .addClass('on')
+        .attr('aria-selected', 'true');
+
+      /**
+       * 연결된 콘텐츠 on 처리
+       */
+      $contents.removeClass('on');
+
+      const $activeContent =
+        $contents
+          .eq(tabIndex)
+          .addClass('on');
+
+      /**
+       * 활성화된 콘텐츠가 Swiper라면
+       * 너비와 스크롤바 재계산
+       */
+      requestAnimationFrame(function () {
+        let swiperInstance = null;
+
+        /**
+         * 활성 콘텐츠 자체가 Swiper인 경우
+         */
+        if ($activeContent[0]?.swiper) {
+          swiperInstance =
+            $activeContent[0].swiper;
+        }
+
+        /**
+         * 활성 콘텐츠 내부에 Swiper가 있는 경우
+         */
+        if (!swiperInstance) {
+          const swiperElement =
+            $activeContent
+              .find('.swiper')
+              .get(0);
+
+          swiperInstance =
+            swiperElement?.swiper;
+        }
+
+        if (!swiperInstance) return;
+
+        swiperInstance.update();
+        swiperInstance.slideTo(0, 0);
+
+        if (swiperInstance.scrollbar) {
+          swiperInstance.scrollbar.updateSize();
+        }
+      });
+    }
+
+    /**
+     * 상품 API 및 이미지 렌더링 시간을 고려해
+     * 300ms 후 해당 영역으로 이동
+     */
     setTimeout(function () {
       $('html, body').scrollTop(
         $(target).offset().top - 80
@@ -1614,6 +2117,10 @@
   if (document.readyState === 'complete') {
     moveToTarget();
   } else {
-    window.addEventListener('load', moveToTarget);
+    window.addEventListener(
+      'load',
+      moveToTarget,
+      { once: true }
+    );
   }
 })();
