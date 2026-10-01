@@ -31,6 +31,8 @@ html {
   letter-spacing: 0;
   max-width: 1460px;
   padding: 8px 24px 20px 24px;
+  /* margin: 0 auto; */
+  /* padding: 64px 40px 120px; */
 }
 @media (max-width: 780px) {
   .faq-page {
@@ -316,7 +318,6 @@ html {
   color: #c4262e;
   text-decoration: underline;
   text-underline-offset: 4px;
-  width: max-content;
 }
 .faq-page .faq-post .faq-nav {
   display: flex;
