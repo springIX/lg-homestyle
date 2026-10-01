@@ -578,6 +578,7 @@ main {
   font-size: 14px;
   line-height: 1.4;
   color: #444;
+  word-break: keep-all;
 }
 .brandstory_container {
   /* //CONTENTS */

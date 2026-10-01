@@ -266,7 +266,7 @@ main { background-color: #F9F9F9;}
           + li{ margin-top: 20px; border-top: 1px dashed #BBBBBB;}
           &:before { counter-increment:faq; content: "0"counter(faq)"."; font-weight: 600; position: absolute; left: 0;}
           h3{ font-weight: 600;}
-          p{ margin-top: 6px; font-size: 14px; line-height: 1.4; color: #444;}
+          p{ margin-top: 6px; font-size: 14px; line-height: 1.4; color: #444;   word-break: keep-all; }
         }
       }
     }
