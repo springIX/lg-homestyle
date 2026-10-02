@@ -107,6 +107,21 @@ main {
 .brandstory_container .square_btn.ty_white::after {
   filter: invert(1);
 }
+.brandstory_container .rounded_btn {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  min-width: 48px;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border: 1px solid #CCC;
+  background: #FFF;
+  border-radius: 8px;
+  margin-top: 24px;
+}
 .brandstory_container .gap_40 {
   display: flex;
   gap: 40px;
@@ -447,6 +462,9 @@ main {
 }
 .brandstory_container section#collection article .txt_box {
   margin-top: 20px;
+}
+.brandstory_container section#collection article:has(.rounded_btn) + article {
+  margin-top: 24px;
 }
 .brandstory_container section {
   /* OFFLINE PLACE */
