@@ -40,8 +40,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .interior_consultation_event .flex {
   display: flex;
@@ -101,15 +100,53 @@
   margin-top: 2rem;
 }
 .interior_consultation_event .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  white-space: nowrap;
   width: 100%;
   height: 48rem;
   line-height: 48rem;
   background-color: #111;
   border-radius: 8rem;
   color: #fff;
-  text-align: center;
   font-weight: 600;
   font-size: 15rem;
+}
+.interior_consultation_event .btn.ty_arr::after {
+  content: "";
+  width: 20rem;
+  height: 20rem;
+  background: url(../images/arr.png) no-repeat center center/contain;
+}
+.interior_consultation_event .round_box {
+  background-color: #fff;
+  border-radius: 12rem;
+  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.06);
+  padding: 30rem 20rem;
+}
+.interior_consultation_event .dot_dsc li {
+  position: relative;
+  padding-left: 6rem;
+  color: #666;
+  line-height: 18rem;
+  letter-spacing: 0;
+}
+.interior_consultation_event .dot_dsc li + li {
+  margin-top: 2rem;
+}
+.interior_consultation_event .dot_dsc li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.interior_consultation_event .black_cont {
+  background-color: #111;
+}
+.interior_consultation_event .black_cont .tit h2 {
+  color: #fff;
 }
 .interior_consultation_event {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
@@ -127,38 +164,45 @@
   border-radius: 12rem;
   padding: 0 20rem 20rem;
 }
-.interior_consultation_event section#benefit li {
+.interior_consultation_event section#benefit .benefit_step li {
   display: flex;
   align-items: center;
   gap: 12rem;
   padding: 20rem 0;
 }
-.interior_consultation_event section#benefit li + li {
+.interior_consultation_event section#benefit .benefit_step li + li {
   border-top: 1px dashed #ddd;
 }
-.interior_consultation_event section#benefit li:last-child {
+.interior_consultation_event section#benefit .benefit_step li:last-child {
   padding-bottom: 32rem;
 }
-.interior_consultation_event section#benefit li img {
+.interior_consultation_event section#benefit .benefit_step li .icon {
   width: 54rem;
   flex-shrink: 0;
 }
-.interior_consultation_event section#benefit li div {
+.interior_consultation_event section#benefit .benefit_step li .txt_box {
   width: 100%;
 }
-.interior_consultation_event section#benefit li div h3 {
+.interior_consultation_event section#benefit .benefit_step li .txt_box h3 {
   font-size: 17rem;
   font-weight: 600;
 }
-.interior_consultation_event section#benefit li div h3 b {
+.interior_consultation_event section#benefit .benefit_step li .txt_box h3 b {
   color: #FD312E;
   margin-right: 6rem;
   font-weight: 600;
 }
-.interior_consultation_event section#benefit li div p {
+.interior_consultation_event section#benefit .benefit_step li .txt_box p {
   font-size: 14rem;
   color: #444;
   margin-top: 6rem;
+}
+.interior_consultation_event section#benefit .dot_dsc {
+  color: #8f8f8f;
+  margin-top: 20rem;
+}
+.interior_consultation_event section#benefit.black_cont {
+  background-color: #111;
 }
 .interior_consultation_event section#partner ul {
   display: grid;
@@ -196,28 +240,6 @@
   padding-top: 40rem;
   padding-bottom: 40rem;
 }
-.interior_consultation_event section#notice ul {
-  background-color: #fff;
-  border-radius: 12rem;
-  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.06);
-  padding: 30rem 20rem;
-}
-.interior_consultation_event section#notice li {
-  position: relative;
-  padding-left: 6rem;
-  color: #666;
-  line-height: 18rem;
-  letter-spacing: 0;
-}
-.interior_consultation_event section#notice li + li {
-  margin-top: 2rem;
-}
-.interior_consultation_event section#notice li::before {
-  content: "·";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
 .interior_consultation_event section#end {
   padding: 0;
 }
@@ -229,4 +251,108 @@
 }
 .interior_consultation_event section#end .tit {
   margin-bottom: 0;
+}
+.interior_consultation_event section#point ol {
+  border-top: 2rem solid #111;
+  counter-reset: point;
+}
+.interior_consultation_event section#point ol li {
+  padding: 24rem 0;
+}
+.interior_consultation_event section#point ol li::before {
+  counter-increment: point;
+  content: "POINT 0" counter(point);
+  padding: 3rem 10rem;
+  background-color: #B6A288;
+  border-radius: 999rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 10rem;
+  display: inline-block;
+  letter-spacing: 0;
+}
+.interior_consultation_event section#point ol li + li {
+  border-top: 1px solid #ddd;
+}
+.interior_consultation_event section#point ol li h3 {
+  font-size: 18rem;
+  font-weight: 600;
+  margin-top: 4rem;
+}
+.interior_consultation_event section#point ol li p {
+  margin-top: 8rem;
+  font-size: 16rem;
+}
+.interior_consultation_event section.round_cont .round_box h3 {
+  font-size: 20rem;
+  font-weight: 600;
+  margin-bottom: 8rem;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box {
+  background-color: #f6f6f6;
+  border-radius: 8rem;
+  padding: 20rem;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box + .gray_box {
+  margin-top: 10rem;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box.info_box {
+  text-align: center;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box.info_box img {
+  margin: 0 auto 8rem;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box.info_box img.suit_case {
+  max-width: 234rem;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box.info_box img.gift_certificate {
+  max-width: 246rem;
+}
+.interior_consultation_event section.round_cont .round_box .gray_box.notice_box strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8rem;
+  color: #333;
+}
+.interior_consultation_event.lx_hausys {
+  background-color: #F1F3F2;
+}
+.interior_consultation_event.lx_hausys em {
+  color: #d31c1b;
+}
+.interior_consultation_event.lx_hausys .round_box {
+  padding: 32rem 30rem;
+}
+.interior_consultation_event.lx_hausys #key_visual {
+  background: url(../images/lx_hausys/kv_bg.jpg) no-repeat center center/cover;
+  text-align: center;
+  padding: 41rem 26rem 11rem;
+  font-weight: 500;
+}
+.interior_consultation_event.lx_hausys #key_visual .txt_box {
+  font-size: 14rem;
+}
+.interior_consultation_event.lx_hausys #key_visual .txt_box .collabo {
+  width: 212rem;
+  margin: 0 auto;
+}
+.interior_consultation_event.lx_hausys #key_visual .txt_box h1 {
+  font-size: 40rem;
+  font-weight: 700;
+  letter-spacing: -2rem;
+}
+.interior_consultation_event.lx_hausys #key_visual .txt_box p {
+  margin-top: 2rem;
+}
+.interior_consultation_event.lx_hausys #key_visual .txt_box span {
+  color: #333;
+  display: block;
+  margin-top: 8rem;
+}
+.interior_consultation_event.lx_hausys #key_visual .kv_img {
+  margin: 20rem 0 10rem;
+}
+.interior_consultation_event.lx_hausys #key_visual .dsc {
+  font-size: 10rem;
+  color: #fff;
 }

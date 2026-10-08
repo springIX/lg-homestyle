@@ -55,22 +55,39 @@
     h2{ @include font-size(26rem); font-weight: 700;}
     p{ @include font-size(15rem); color: #444; margin-top: 2rem;}
   }
-  .btn{ width: 100%; height: 48rem; line-height: 48rem; background-color: #111; border-radius: 8rem; color: #fff; text-align: center; font-weight: 600; @include font-size(15rem);}
+  .btn{ display: flex; align-items: center; justify-content: center; gap: 2rem; white-space: nowrap; width: 100%; height: 48rem; line-height: 48rem; background-color: #111; border-radius: 8rem; color: #fff; font-weight: 600; @include font-size(15rem);
+    &.ty_arr::after{ content: ''; width: 20rem; height: 20rem; background: url(../images/arr.png)no-repeat center center / contain;}
+  }
+  .round_box{background-color: #fff; border-radius: 12rem; box-shadow: 0 0 10rem rgba(0,0,0,.06); padding: 30rem 20rem;}
+  .dot_dsc{
+    li{ position: relative; padding-left: 6rem; color: #666; line-height: 18rem; letter-spacing: 0;
+      + li{ margin-top: 2rem;}
+      &::before{ content: "·"; position: absolute; left: 0; top: 0;}
+    }
+  }
+  .black_cont{ background-color: #111; 
+    .tit h2{ color: #fff;}
+  }
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   
   section{ position: relative; overflow: hidden; padding: 60rem $layout_pd 0;
     &#benefit{ background-color: #F1F3F2;
-      .benefit_step{ background-color: #fff; border-radius: 12rem; padding: 0 20rem 20rem;}
-      li{ display: flex; align-items: center; gap: 12rem; padding: 20rem 0;
-        + li{ border-top: 1px dashed #ddd;}
-        &:last-child{ padding-bottom: 32rem;}
-        img{ width: 54rem; flex-shrink: 0;}
-        div{ width: 100%;
-          h3{ @include font-size(17rem);font-weight: 600;
-            b{ color: #FD312E; margin-right: 6rem; font-weight: 600;}
+      .benefit_step{ background-color: #fff; border-radius: 12rem; padding: 0 20rem 20rem;
+        li{ display: flex; align-items: center; gap: 12rem; padding: 20rem 0;
+          + li{ border-top: 1px dashed #ddd;}
+          &:last-child{ padding-bottom: 32rem;}
+          .icon{ width: 54rem; flex-shrink: 0;}
+          .txt_box{ width: 100%;
+            h3{ @include font-size(17rem);font-weight: 600;
+              b{ color: #FD312E; margin-right: 6rem; font-weight: 600;}
+            }
+            p{ @include font-size(14rem); color: #444; margin-top: 6rem;}
           }
-          p{ @include font-size(14rem); color: #444; margin-top: 6rem;}
         }
+      }
+      .dot_dsc{ color: #8f8f8f; margin-top: 20rem;}
+      &.black_cont{ background-color: #111;
+        
       }
     }
 
@@ -87,17 +104,56 @@
       }
     }
 
-    &#notice{ background-color: #F1F3F2; padding-top: 40rem; padding-bottom: 40rem;
-      ul{ background-color: #fff; border-radius: 12rem; box-shadow: 0 0 10rem rgba(0,0,0,.06); padding: 30rem 20rem;}
-      li{ position: relative; padding-left: 6rem; color: #666; line-height: 18rem; letter-spacing: 0;
-        + li{ margin-top: 2rem;}
-        &::before{ content: "·"; position: absolute; left: 0; top: 0;}
-      }
-    }
+    &#notice{ background-color: #F1F3F2; padding-top: 40rem; padding-bottom: 40rem;}
 
     &#end{ padding: 0;
       .cover{ display: flex; flex-direction: column; justify-content: space-between; padding: 40rem $layout_pd;}
       .tit{ margin-bottom: 0;}
+    }
+
+    &#point{
+      ol{ border-top: 2rem solid #111; counter-reset: point; 
+        li{ padding: 24rem 0;
+          &::before{ counter-increment: point; content: "POINT 0"counter(point); padding: 3rem 10rem; background-color: #B6A288; border-radius: 999rem; color: #fff; font-weight: 500; @include font-size(10rem); display: inline-block; letter-spacing: 0;}
+          + li{ border-top: 1px solid #ddd}
+          h3{ @include font-size(18rem); font-weight: 600; margin-top: 4rem;}
+          p{ margin-top: 8rem; font-size: 16rem}
+        }
+      }
+    }
+
+    &.round_cont{
+      .round_box{ 
+        h3{ font-size: 20rem; font-weight: 600; margin-bottom: 8rem;}
+        .gray_box{ background-color: #f6f6f6; border-radius: 8rem; padding: 20rem;
+          + .gray_box{ margin-top: 10rem;}
+          &.info_box{ text-align: center;
+            img{ margin: 0 auto 8rem;
+              &.suit_case{ max-width: 234rem;}
+              &.gift_certificate{ max-width: 246rem;}
+            }
+          }
+          &.notice_box{
+            strong{ font-weight: 600; display: block; margin-bottom: 8rem; color: #333;}
+          }
+        }
+      }
+    }
+  }
+
+  &.lx_hausys{ background-color: #F1F3F2;
+    em{ color: #d31c1b;}
+    .round_box{padding: 32rem 30rem;}
+    #key_visual{ background: url(../images/lx_hausys/kv_bg.jpg)no-repeat center center / cover; text-align: center; padding: 41rem 26rem 11rem;font-weight: 500;
+      .txt_box{ font-size: 14rem;
+        .collabo{ width: 212rem; margin: 0 auto;}
+        h1{ font-size: 40rem; font-weight: 700; letter-spacing: -2rem;
+        }
+        p{ margin-top: 2rem;}
+        span{ color: #333; display: block; margin-top: 8rem;}
+      }
+      .kv_img{ margin: 20rem 0 10rem;}
+      .dsc{ font-size: 10rem; color: #fff;}
     }
   }
 }

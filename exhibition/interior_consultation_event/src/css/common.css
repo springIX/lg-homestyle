@@ -21,7 +21,7 @@ main {
   background-color: #ffffff;
   color: #000;
   font-family: "Pretendard", sans-serif;
-  font-size: 13px;
+  font-size: 13rem;
   font-weight: 400;
   line-height: 1.4;
   word-wrap: break-word;
@@ -32,15 +32,12 @@ main {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   text-align: left;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.2rem;
   max-width: 780px;
   margin: 0 auto;
 }
 .interior_consultation_event ::-webkit-scrollbar {
   display: none;
-}
-.interior_consultation_event ::-moz-placeholder {
-  color: #d6d6d6;
 }
 .interior_consultation_event ::placeholder {
   color: #d6d6d6;
