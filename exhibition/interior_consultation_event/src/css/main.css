@@ -314,6 +314,18 @@
   margin-bottom: 8rem;
   color: #333;
 }
+.interior_consultation_event section#introduce {
+  text-align: center;
+  padding: 40rem 20rem;
+}
+.interior_consultation_event section#introduce .tit {
+  margin-bottom: 8rem;
+}
+.interior_consultation_event section#introduce p {
+  font-size: 16rem;
+  font-weight: 500;
+  color: #ddd;
+}
 .interior_consultation_event.lx_hausys {
   background-color: #F1F3F2;
 }
@@ -343,6 +355,7 @@
 }
 .interior_consultation_event.lx_hausys #key_visual .txt_box p {
   margin-top: 2rem;
+  font-weight: 500;
 }
 .interior_consultation_event.lx_hausys #key_visual .txt_box span {
   color: #333;

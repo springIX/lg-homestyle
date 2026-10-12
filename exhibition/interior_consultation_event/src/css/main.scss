@@ -139,6 +139,11 @@
         }
       }
     }
+
+    &#introduce{ text-align: center; padding: 40rem 20rem;
+      .tit{ margin-bottom: 8rem;}
+      p{ font-size: 16rem; font-weight: 500; color: #ddd;}
+    }
   }
 
   &.lx_hausys{ background-color: #F1F3F2;
@@ -149,7 +154,7 @@
         .collabo{ width: 212rem; margin: 0 auto;}
         h1{ font-size: 40rem; font-weight: 700; letter-spacing: -2rem;
         }
-        p{ margin-top: 2rem;}
+        p{ margin-top: 2rem; font-weight: 500;}
         span{ color: #333; display: block; margin-top: 8rem;}
       }
       .kv_img{ margin: 20rem 0 10rem;}
