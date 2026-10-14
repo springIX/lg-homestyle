@@ -1001,8 +1001,9 @@
       const hasBrandCollection = document.querySelector('#premium_brand_collection .swiper'); // ✅ 추가
       const hasTimeSale = document.querySelector('#timesale .swiper'); // ✅ 추가
       const hasCategory = document.querySelector('#category .swiper'); // ✅ 추가
+      const hasExclusiveProduct = document.querySelector('#exclusive_product .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale && !hasCategory) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale && !hasCategory && !hasExclusiveProduct) return;
 
       swiperInited = true;
 
@@ -1248,6 +1249,20 @@
               draggable: true,
             },
           });
+        });
+      }
+
+      if (hasExclusiveProduct) {
+        new Swiper('#exclusive_product .swiper', {
+          scrollbar: {
+            el: '#exclusive_product .scr_bar',
+            draggable: true
+          },
+          speed: 1000,
+          slidesPerView: "auto",
+          centeredSlides: true,
+          loop: true,
+          loopedSlides: 5,
         });
       }
 
