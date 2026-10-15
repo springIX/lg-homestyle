@@ -3004,6 +3004,16 @@
   text-align: center;
   background-color: #F6F6F6;
 }
+.monthly_home_set.combined_discount section#exclusive_product .tit_box .tit {
+  position: relative;
+}
+.monthly_home_set.combined_discount section#exclusive_product .tit_box .tit h2 {
+  color: #fff;
+  width: 100%;
+}
+.monthly_home_set.combined_discount section#exclusive_product .tit_box p {
+  margin-top: 20rem;
+}
 .monthly_home_set.combined_discount section#exclusive_product .swiper {
   text-align: center;
 }
