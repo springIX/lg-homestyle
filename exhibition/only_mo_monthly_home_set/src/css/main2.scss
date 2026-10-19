@@ -1257,6 +1257,12 @@
       }
 
       &#exclusive_product{text-align: center; background-color: #F6F6F6;
+        .tit_box{
+          .tit{ position: relative;
+            h2{ color: #fff; width: 100%;}
+          }
+          p{ margin-top: 20rem;}
+        }
         .swiper{ text-align: center;
           .swiper-slide{ width: 500rem; opacity: 0; transition: 1s ease opacity; @include font-size(14rem);
             @include screen("mo") { width: 270rem;}
