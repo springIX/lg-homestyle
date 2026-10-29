@@ -248,7 +248,7 @@
 }
 @media (min-width: 0px) {
   .monthly_home_set .notice_box {
-    margin-top: 32rem;
+    margin-top: 12rem;
     padding-top: 16rem;
   }
 }
@@ -377,10 +377,10 @@
   }
 }
 .monthly_home_set .pd_t0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 .monthly_home_set .pd_b0 {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 .monthly_home_set .mt_0 {
   margin-top: 0 !important;
@@ -571,6 +571,8 @@
   justify-content: center;
   align-items: flex-start;
   gap: 10rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 @media (max-width: 780px) {
   .monthly_home_set .img_tab {
@@ -580,6 +582,7 @@
     padding-left: 20rem !important;
     padding-right: 20rem !important;
     overflow-x: auto;
+    flex-wrap: nowrap;
   }
 }
 .monthly_home_set .img_tab button {
@@ -614,14 +617,14 @@
 .monthly_home_set .img_tab button.on .img_box {
   border-color: #111;
 }
-.monthly_home_set .c-product__list:not(.ty_row, .ty_package) {
+.monthly_home_set .c-product__list:not(.ty_row, .ty_package):not(.ty_swiper) {
   margin-top: 16rem;
   display: grid;
   gap: 32rem 12rem;
   grid-template-columns: repeat(4, 1fr);
 }
 @media (min-width: 0px) {
-  .monthly_home_set .c-product__list:not(.ty_row, .ty_package) {
+  .monthly_home_set .c-product__list:not(.ty_row, .ty_package):not(.ty_swiper) {
     margin-top: 8rem;
     gap: 28rem 8rem;
     grid-template-columns: repeat(2, 1fr);
@@ -778,6 +781,9 @@
   .monthly_home_set .c-product__list:not(.ty_row, .ty_package) .c-product__item .c-product__info-container .c-product__badge-container > span {
     font-size: 10rem;
   }
+}
+.monthly_home_set .swiper-slide .c-product__item + .c-product__item .c-product__badge-container:empty {
+  display: none;
 }
 .monthly_home_set .c-product__list.ty_row {
   display: grid;
@@ -1234,6 +1240,24 @@
 }
 .monthly_home_set .banner_box_list a.gray2 {
   background-color: #e7e7e7;
+}
+.monthly_home_set .home_set_tit + .banner_box_list {
+  margin-top: 0;
+}
+.monthly_home_set .more_pd_btn::before {
+  content: "상품 접기";
+}
+.monthly_home_set .more_pd_btn .arr.ty_down {
+  transform: rotate(90deg) !important;
+}
+.monthly_home_set .short_list .more_pd_btn::before {
+  content: "더보기";
+}
+.monthly_home_set .short_list .more_pd_btn .arr.ty_down {
+  transform: rotate(-90deg) !important;
+}
+.monthly_home_set .short_list .c-product__item:nth-child(n+5) {
+  display: none;
 }
 .monthly_home_set {
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
@@ -2604,41 +2628,41 @@
   font-size: clamp(10px, 15rem, 9999rem);
   color: #444;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd1 a {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd1 a {
   width: 332rem;
   margin: 0 auto;
   text-align: right;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd1 a .txt_box {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd1 a .txt_box {
   padding: 0 50rem 12rem;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd2 a {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd2 a {
   margin: 6rem 0 10rem;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd2 a .pd_img {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd2 a .pd_img {
   width: 265rem;
   margin: -80rem 0 0 auto;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd3 a {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd3 a {
   text-align: right;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd3 a .pd_img {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd3 a .pd_img {
   width: 207rem;
   margin-top: -110rem;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd4 a {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd4 a {
   margin: -10rem 0 -60rem;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd4 a .txt_box {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd4 a .txt_box {
   position: absolute;
   left: 0;
   top: 26rem;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd4 a .pd_img {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd4 a .pd_img {
   width: 242rem;
   margin-left: auto;
 }
-.monthly_home_set.combined_discount section#products_intro ol li.pd5 a .txt_box {
+.monthly_home_set.combined_discount section#products_intro.ty_premium_brand ol li.pd5 a .txt_box {
   padding: 20rem 0 0 33%;
 }
 .monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd1 a {
@@ -2683,6 +2707,54 @@
 }
 .monthly_home_set.combined_discount section#products_intro.ty_unique ol li.pd5 a .txt_box {
   padding: 0 20rem 0 0;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd1 a .txt_box {
+  position: absolute;
+  left: 0;
+  bottom: 65rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd2 a {
+  margin-top: 30rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd2 a .txt_box {
+  position: absolute;
+  right: 0;
+  padding-right: 32rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd2 a .pd_img {
+  width: 314rem;
+  padding-top: 14rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd3 a .txt_box {
+  position: absolute;
+  left: 0;
+  top: 8rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd4 a {
+  text-align: right;
+  margin: -100rem 0 15rem;
+}
+@media (max-width: 780px) {
+  .monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd4 a {
+    margin-top: -60rem;
+  }
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd4 a .txt_box {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: -20rem;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd4 a .pd_img {
+  width: 365rem;
+  margin: -30rem auto 0;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd5 a {
+  text-align: center;
+}
+.monthly_home_set.combined_discount section#products_intro.ty_premium_benefits ol li.pd5 a .pd_img {
+  width: 364rem;
+  margin: -70rem auto 0;
 }
 .monthly_home_set.combined_discount section#premium_brand_collection .swiper {
   overflow: visible;
@@ -2856,6 +2928,9 @@
 .monthly_home_set.combined_discount section#view_all_brands .brand_list ul li:nth-child(n+13) {
   display: none;
 }
+.monthly_home_set.combined_discount section#view_all_brands .brand_list ul li img {
+  border-radius: 50%;
+}
 .monthly_home_set.combined_discount section#view_all_brands .brand_list ul li p {
   font-weight: 600;
   color: #666;
@@ -2937,7 +3012,10 @@
     min-height: 244rem;
   }
 }
-.monthly_home_set.combined_discount section#benefit .benefit_list.on ul li:nth-child(n+5) {
+.monthly_home_set.combined_discount section#benefit .benefit_list[data-toggle-cont] li:nth-child(n+5) {
+  display: none;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list[data-toggle-cont].on ul li:nth-child(n+5) {
   display: block;
 }
 .monthly_home_set.combined_discount section#benefit .benefit_list ul {
@@ -2948,24 +3026,45 @@
 .monthly_home_set.combined_discount section#benefit .benefit_list ul li + li {
   border-top: 1px dashed #ddd;
 }
-.monthly_home_set.combined_discount section#benefit .benefit_list ul li:nth-child(n+5) {
-  display: none;
-}
-.monthly_home_set.combined_discount section#benefit .benefit_list ul li a {
+.monthly_home_set.combined_discount section#benefit .benefit_list ul li a, .monthly_home_set.combined_discount section#benefit .benefit_list ul li span {
   padding: 16rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.monthly_home_set.combined_discount section#benefit .benefit_list ul li a h3 {
+.monthly_home_set.combined_discount section#benefit .benefit_list ul li a h3, .monthly_home_set.combined_discount section#benefit .benefit_list ul li span h3 {
   font-size: 16rem;
   font-weight: 600;
 }
-.monthly_home_set.combined_discount section#benefit .benefit_list ul li a h3 em {
+.monthly_home_set.combined_discount section#benefit .benefit_list ul li a h3 em, .monthly_home_set.combined_discount section#benefit .benefit_list ul li span h3 em {
   color: #F31E11;
 }
-.monthly_home_set.combined_discount section#benefit .benefit_list ul li a img {
+.monthly_home_set.combined_discount section#benefit .benefit_list ul li a img, .monthly_home_set.combined_discount section#benefit .benefit_list ul li span img {
   width: 54rem;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 16rem;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul li {
+  border: none;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul li:nth-child(n+4) {
+  border-top: 1px dashed #ddd;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul li a, .monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul li span {
+  flex-direction: column;
+  text-align: center;
+  gap: 8rem;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul li a h3, .monthly_home_set.combined_discount section#benefit .benefit_list.ty_col3 ul li span h3 {
+  font-size: 15rem;
+}
+.monthly_home_set.combined_discount section#benefit .benefit_list .dsc_txt {
+  margin-top: 20rem;
+  text-align: center;
+  color: #666;
 }
 .monthly_home_set.combined_discount section#review_event .review_event_img {
   margin-bottom: 24rem;
@@ -3102,6 +3201,76 @@
   top: 210rem;
   transform: translateX(-50%);
   z-index: 1;
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li + li {
+  margin-top: 36rem;
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .intro_box {
+  position: relative;
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .intro_box .cont_box {
+  position: absolute;
+  left: 20rem;
+  bottom: 20rem;
+  right: 20rem;
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .intro_box .cont_box .txt_box {
+  color: #F3F5F7;
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .intro_box .cont_box .txt_box h3 a {
+  font-size: clamp(10px, 22rem, 9999rem);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .intro_box .cont_box .txt_box h3 a::after {
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  border: 2px solid #fff;
+  border-width: 3px 3px 0 0;
+  transform: rotate(45deg) translateY(-1rem);
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .intro_box .cont_box .txt_box p {
+  margin-top: 4rem;
+  font-size: clamp(10px, 12rem, 9999rem);
+}
+.monthly_home_set.combined_discount section#brand_introduce .brand_intro_li > li .swiper {
+  margin-top: 24rem;
+}
+.monthly_home_set.combined_discount .brand_point {
+  margin-bottom: 28rem;
+}
+.monthly_home_set.combined_discount .brand_point ul {
+  display: flex;
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 8rem;
+  padding: 8rem 0;
+}
+.monthly_home_set.combined_discount .brand_point ul li {
+  width: 100%;
+  text-align: center;
+}
+.monthly_home_set.combined_discount .brand_point ul li + li {
+  border-left: 1px solid #ddd;
+}
+.monthly_home_set.combined_discount .brand_point ul li .icon {
+  max-width: 63rem;
+  margin: 0 auto;
+}
+.monthly_home_set.combined_discount .brand_point ul li .txt_box h3 {
+  font-weight: 600;
+  font-size: clamp(10px, 13rem, 9999rem);
+}
+.monthly_home_set.combined_discount .brand_point ul li .txt_box p {
+  font-size: clamp(10px, 10rem, 9999rem);
+  color: #8f8f8f;
+  font-weight: 500;
+}
+.monthly_home_set.combined_discount .home_set_tit + .brand_point {
+  margin-top: -20rem;
 }
 .monthly_home_set {
   /* COMBINED DISCOUNT */

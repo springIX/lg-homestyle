@@ -977,6 +977,12 @@
               .toggleClass('on', $this.hasClass('on'));
           }
         });
+
+      $(document).on('click', 'button.more_pd_btn', function () {
+        const $pd_list = $(this).closest('.c-product');
+        $pd_list.toggleClass('short_list');
+        window.scrollTo({ top: $pd_list.offset().top - 100, behavior: 'instant' });
+      });
     }
 
 
@@ -1002,8 +1008,9 @@
       const hasTimeSale = document.querySelector('#timesale .swiper'); // ✅ 추가
       const hasCategory = document.querySelector('#category .swiper'); // ✅ 추가
       const hasExclusiveProduct = document.querySelector('#exclusive_product .swiper'); // ✅ 추가
+      const hasBrandIntroduce = document.querySelector('#brand_introduce .swiper'); // ✅ 추가
 
-      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale && !hasCategory && !hasExclusiveProduct) return;
+      if (!hasBenefits && !hasCrosssale && !hasHomestyling && !hasInterior && !hasHowToApply && !hasAiHomeStyling && !hasHowToBuy && !hasBrandCollection && !hasTimeSale && !hasCategory && !hasExclusiveProduct && !hasBrandIntroduce) return;
 
       swiperInited = true;
 
@@ -1252,6 +1259,7 @@
         });
       }
 
+      // 10) Exclusive Product 
       if (hasExclusiveProduct) {
         new Swiper('#exclusive_product .swiper', {
           scrollbar: {
@@ -1263,6 +1271,25 @@
           centeredSlides: true,
           loop: true,
           loopedSlides: 5,
+        });
+      }
+
+      // 11) Brand Introduce
+      if (hasBrandIntroduce) {
+        document.querySelectorAll('#brand_introduce .swiper').forEach(swiperEl => {
+          if (!swiperEl.swiper) {
+            new Swiper(swiperEl, {
+              slidesPerView: 3,
+              spaceBetween: 6,
+              speed: 800,
+              observer: true,
+              observeParents: true,
+              scrollbar: {
+                el: swiperEl.querySelector('.scr_bar'),
+                draggable: true,
+              },
+            });
+          }
         });
       }
 
