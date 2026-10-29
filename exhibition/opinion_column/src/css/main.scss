@@ -8,7 +8,21 @@
   
   /* PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   .layout_inner{ padding-left: $layout_pd !important; padding-right: $layout_pd !important; position: relative;}
-  .inner{ width: 100%; position: relative;}
+  .inner{ 
+    width: 100%; position: relative;
+    @include screen("pc") {
+      .lao {
+        font-size: 15rem !important;
+      }
+      h2 {
+        font-size: 38rem !important;
+        
+        .txt_unique {
+          width: 150rem !important; margin-bottom: 10rem !important;
+        }
+      }
+    }
+  }
   .f_center {
     display: flex;
     justify-content: center;
@@ -55,12 +69,31 @@
   .pd_t{padding-top: 60rem;}
   .lao{ font-family: 'Lao MN', 'Pretendard', sans-serif; font-weight: 600;}
   .black_cont{ background-color: #111; color: #fff;}
+  .light_black_cont {
+    background: #181713; color: #fff;
+    .light_white {
+      color: #F4F4F4;
+    }
+  }
+  .brown_cont {background: #28231E; color: #fff;
+    .light_white {
+      color: #F4F4F4;
+    }
+  }
+  .pink_cont {
+    background: #F1E7E3; color: #111;
+    .gray {color: #444;}
+  } 
+  .yellow_cont {background: #F1EFE8; color: #111;
+    .gray {color: #444;}
+  }
   .radius_box{ border-radius: 12rem; padding: 24rem $layout_pd; background-color: #f6f6f6;
     &.ty_white{ background-color: #fff;}
     &.ty_dqm{ display: flex; gap: 20rem;
       .dqm{ filter: brightness(.9); flex-shrink: 0;}
       .txt_box{ width: 100%;
         .lao{ margin-top: 20rem; color: #999; font-weight: 400;}
+        .txt_gray {color: #444;}
       }
     }
   }
@@ -85,6 +118,8 @@
     &::before{ content: ''; display: block; width: 100%; height: 28rem; background: #111;clip-path: polygon(50% 0, 100% 100%, 0 100%);  margin-bottom: -1px; transition: .5s ease;}
   }
   .btn_wrap{
+    margin-top: 15rem;
+
     a{ background-color: #111; color: #fff; padding: 14rem; border-radius: 8rem; font-weight: 500; text-align: center;
       + a{ margin-top: 8rem;}
     }
@@ -102,7 +137,7 @@
       .pd_img{ width: 100rem; flex-shrink: 0;}
       .pd_txt{ width: 100%; flex: 1; min-width: 0;
         span{ @include font-size(12rem); color: #444;}
-        a{ font-weight: 700;
+        a{ font-weight: 700; color: #111;
           &::after{ content: ''; display: inline-block; width: 16rem; height: 16rem; background: url(../images/arr.png)no-repeat center center / contain; transform: translateY(3rem);}
         }
         strong{ @include font-size(12rem); display: block;}
@@ -194,6 +229,16 @@
       li{ border-radius: 999rem; border: 1px solid #ddd; @include font-size(12rem); padding: 4rem 12rem;}
       &.ty_white{ color: #ccc; border-color: #666;}
       &.ty_left{ justify-content: flex-start;}
+      &.ty_gray{ 
+        li {
+          color: #444; border: 1px solid rgba(17, 17, 17, 0.20);
+        }
+      }
+      &.ty_light_gray{ 
+        li {
+          color: #ccc; border: 1px solid #666;
+        }
+      }      
     }
     .interior_point{ overflow: hidden;
       .swiper{ overflow: visible;
@@ -408,9 +453,44 @@
           .txt_unique{ filter: brightness(.05);}
         }
         .before_after_info{ padding: 60rem 0;
+
+          &:has(.layout_bg) {
+            padding: 0 0 60rem 0;
+          }                 
+          
+          .layout_bg {
+            &.tit_box {
+              padding-bottom: 0;
+            }
+            .inner {
+              position: absolute; left: 20px; bottom: 55px; 
+
+              &.ty_bg {
+                h2 {
+                  color: #000;
+                }
+                .txt_unique {
+                  color: #000 !important; filter: brightness(0.05);
+                }
+              }
+
+            }
+          }    
+
           .tit_box{ padding-bottom: 20rem; position: relative;
-            span{ color: #BD5753; font-size: 12rem; margin-bottom: 14rem;}
-            h2{ font-size: 30rem; font-weight: 600; line-height: 1.3;
+            span{ 
+              color: #BD5753; font-size: 12rem; margin-bottom: 14rem;
+              &.yellow {
+                color: #FFD6A3;
+              }
+              &.green {
+                color: #647912;
+              }    
+              &.red {
+                color: #E93800;
+              }         
+            }
+            h2{ font-size: 30rem; font-weight: 600; line-height: 1.3; color: #fff;
               .txt_unique{ width: 120rem; margin-bottom: 5rem;}
             }
             .logo{ width: 48rem; margin: 12rem 0 0 auto;}
@@ -419,12 +499,28 @@
             .const_info_box{ 
               li{ border: 1px solid rgba($color: #fff, $alpha: 12%); border-width: 1px 0; display: flex; padding: 10rem 0;
                 &:not(:last-child){ border-bottom: none;}
-                span{ font-weight: 600; color: #BD5753; width: 92rem; flex-shrink: 0;}
+                span{ font-weight: 600; color: #BD5753; width: 92rem; flex-shrink: 0;
+                  &.yellow {
+                    color: #FFD6A3;
+                  }
+                  &.green {
+                    color: #647912;
+                  }
+                  &.red {
+                    color: #E93800;
+                  }                    
+                }
                 p{ width: 100%;}
+              }
+
+              &.bd_gray{
+                li{ 
+                  border-color:rgba(17, 17, 17, 0.12);
+                }
               }
             }
             .hashtag{ margin-top: 40rem; 
-              @include screen("pc") { width: 58%;}
+              @include screen("pc") { width: 60%;}
             }
             
             &.ty_black{
@@ -434,7 +530,7 @@
               }
             }
           }
-        }
+        }     
       }
     }
   }
