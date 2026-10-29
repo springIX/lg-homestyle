@@ -112,7 +112,7 @@
   /* //SWIPER */
 
   .notice_box{ margin-top: 60rem; padding-top: 16rem; border-top: 1px solid #e7e7e7; text-align: left;
-    @include screen("mo") { margin-top: 32rem; padding-top: 16rem;}
+    @include screen("mo") { margin-top: 12rem; padding-top: 16rem;}
     button{ font-size: 17rem; font-weight: 500; color: #777;
       @include screen("mo") { font-size: 13rem; width: 100%; display: flex; align-items: baseline; justify-content: space-between;}
       &::after{ content: ''; display: inline-block; width: 6rem; height: 6rem; border: 1px solid #111; border-width:0 2px 2px 0; transform: rotate(45deg) translate(2rem, -8rem); filter: invert(.5); 
@@ -159,8 +159,8 @@
   .pd_b{ padding-bottom: 100rem;
     @include screen("mo") { padding-bottom: 60rem;}
   }
-  .pd_t0{ padding-top: 0;}
-  .pd_b0{ padding-bottom: 0;}
+  .pd_t0{ padding-top: 0 !important;}
+  .pd_b0{ padding-bottom: 0 !important;}
   .mt_0{ margin-top: 0 !important;}
 
   .cont_bg{ background-color: $brown;}
@@ -218,8 +218,8 @@
     @include screen("pc2") { width: 100% !important; padding-left: 0 !important; padding-right: 0 !important;}
   }
 
-  .img_tab{ margin-bottom:18rem; display: flex; justify-content: center; align-items: flex-start; gap: 10rem;
-    @include screen("mo2") { justify-content: flex-start; @include m_full_layout(pd); overflow-x: auto;} 
+  .img_tab{ margin-bottom:18rem; display: flex; justify-content: center; align-items: flex-start; gap: 10rem; flex-wrap: wrap; margin: 0 auto;
+    @include screen("mo2") { justify-content: flex-start; @include m_full_layout(pd); overflow-x: auto; flex-wrap: nowrap;}
     button{ display: block; opacity: .5;
       .img_box{ width: 56rem; height: 56rem; border-radius: 50%; position: relative; border: 2rem solid transparent; margin: 0 auto; overflow: hidden;
         img{ width: 100%; height: 100%; object-fit: cover;}
@@ -231,8 +231,11 @@
     }
   }
 
-  .c-product__list:not(.ty_row, .ty_package){ margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
-    @include screen("mo") { margin-top: 8rem; gap:28rem 8rem; grid-template-columns: repeat(2, 1fr);}
+  .c-product__list:not(.ty_row, .ty_package){ 
+    &:not(.ty_swiper) {
+      margin-top: 16rem; display: grid; gap: 32rem 12rem; grid-template-columns: repeat(4, 1fr);
+      @include screen("mo") { margin-top: 8rem; gap:28rem 8rem; grid-template-columns: repeat(2, 1fr);}
+    }
     .c-product__item{ min-width: 0; position: relative;
       // 품절상품 & 제품조회실패는 SOLD OUT 처리
       &.c-product__item--error{ touch-action: none; pointer-events: none;
@@ -277,6 +280,7 @@
       }
     }
   }
+  .swiper-slide .c-product__item + .c-product__item .c-product__badge-container:empty{ display: none;}
 
   .c-product__list.ty_row{ display: grid; gap: 12rem;  grid-template-columns: 1fr 1fr; grid-template-rows: auto;
     @include screen("mo") { display: flex; flex-wrap: wrap; gap: 8rem;}
@@ -432,6 +436,19 @@
       &.gray{ background-color: #E8DDDB;}
       &.gray2{ background-color: #e7e7e7;}
     }
+  }
+  .home_set_tit + .banner_box_list{ margin-top: 0;}
+  
+  .more_pd_btn{
+    &::before{ content: '상품 접기';}
+    .arr.ty_down{ transform: rotate(90deg) !important;}
+  }
+  .short_list .more_pd_btn{
+    &::before{ content: '더보기';}
+    .arr.ty_down{ transform: rotate(-90deg) !important;}
+  }
+  .short_list{
+    .c-product__item:nth-child(n + 5){ display: none;}
   }
   /* //PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC */
   
@@ -1043,7 +1060,12 @@
               }
               .pd_img{}
             }
-            
+          
+          }
+        }
+
+        &.ty_premium_brand{
+          ol li{
             &.pd1 a{ width: 332rem; margin: 0 auto; text-align: right;
               .txt_box{ padding: 0 50rem 12rem;}
             }
@@ -1090,6 +1112,35 @@
               &.pd5 a{  text-align: right;
                 .pd_img{ width: 207rem;margin-top: -90rem;}
                 .txt_box{ padding:0 20rem 0 0;}
+              }
+            }
+          }
+        }
+        &.ty_premium_benefits{
+          ol{
+            li{
+              &.pd1 a{
+                .txt_box{ position: absolute; left: 0; bottom: 65rem;}
+              }
+            
+              &.pd2 a{ margin-top: 30rem;
+                .txt_box{ position: absolute; right: 0; padding-right: 32rem;}
+                .pd_img{ width: 314rem; padding-top: 14rem;}
+              }
+              
+              &.pd3 a{ 
+                .txt_box{ position: absolute; left: 0; top: 8rem;}
+                .pd_img{}
+              }
+              
+              &.pd4 a{  text-align: right; margin:-100rem 0 15rem;
+                @include screen("mo2") { margin-top: -60rem;}
+                .txt_box{ position: relative; left: 0; top: 0; margin-top: -20rem;}
+                .pd_img{ width: 365rem; margin: -30rem auto 0;}
+              }
+
+              &.pd5 a{  text-align: center;
+                .pd_img{ width: 364rem; margin:-70rem auto 0;}
               }
             }
           }
@@ -1173,6 +1224,7 @@
             &.on li:nth-child(n+13){ display: block;}
             li{
               &:nth-child(n+13){ display: none;}
+              img{ border-radius: 50%;}
               p{font-weight: 600; color: #666; margin-top: 6rem; min-height: 51rem;
                 @include screen("mo2") { font-size: 14rem; min-height: 36rem;}
               }
@@ -1221,12 +1273,12 @@
 
       &#benefit{
         .benefit_list{
-          &.on ul li:nth-child(n+5){ display: block; }
+          &[data-toggle-cont] li:nth-child(n+5){ display: none;}
+          &[data-toggle-cont].on ul li:nth-child(n+5){ display: block; }
           ul{ background-color: #fff; border-radius: 12rem;  padding: 0 28rem;
             li{
               + li{ border-top: 1px dashed #ddd;}
-              &:nth-child(n+5){ display: none;}
-              a{ padding: 16rem 0; display: flex; align-items: center; justify-content: space-between;
+              a, span{ padding: 16rem 0; display: flex; align-items: center; justify-content: space-between;
                 h3{font-size: 16rem; font-weight: 600;
                   em{ color: $ci;}
                 }
@@ -1235,6 +1287,17 @@
               }
             }
           } 
+          &.ty_col3{
+            ul{ display: grid; grid-template-columns: repeat(3, 1fr); padding:0 16rem;
+              li{ border: none;
+                &:nth-child(n+4){border-top: 1px dashed #ddd;}
+                a, span{ flex-direction: column; text-align: center; gap: 8rem;
+                  h3{ font-size: 15rem;}
+                }
+              }
+            }
+          }
+          .dsc_txt{ margin-top: 20rem; text-align: center; color: #666;}
         }
       }
       &#review_event{
@@ -1297,7 +1360,39 @@
           }
         }
       }
+
+      &#brand_introduce{
+        .brand_intro_li{
+          > li{
+            + li{ margin-top: 36rem;}
+            .intro_box{  position: relative;
+              .cont_box{ position: absolute; left: 20rem; bottom: 20rem; right: 20rem;
+                .txt_box{ color: #F3F5F7;
+                  h3 a{ @include font-size(22rem); font-weight: 600; display: flex; align-items: center; gap: 6rem;
+                    &::after{ content: ''; width: 8rem; height: 8rem; border: 2px solid #fff; border-width: 3px 3px 0 0; transform: rotate(45deg) translateY(-1rem);}
+                  }
+                  p{ margin-top: 4rem; @include font-size(12rem);}
+                }
+              }
+            }
+            .swiper{ margin-top: 24rem;}
+          }
+        }
+      }
     }
+    .brand_point{  margin-bottom: 28rem;
+      ul{ display: flex; text-align: center; background-color: #f6f6f6; border-radius: 8rem; padding: 8rem 0;
+        li{ width: 100%; text-align: center;
+          + li{ border-left: 1px solid #ddd;}
+          .icon{ max-width: 63rem; margin: 0 auto;}
+          .txt_box{
+            h3{ font-weight: 600; @include font-size(13rem);}
+            p{ @include font-size(10rem); color: #8f8f8f; font-weight: 500;}
+          }
+        }
+      }
+    }
+    .home_set_tit + .brand_point{ margin-top: -20rem;}
   }
 
   /* COMBINED DISCOUNT */

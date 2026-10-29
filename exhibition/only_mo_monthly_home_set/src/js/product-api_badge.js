@@ -73,7 +73,7 @@
      */
     static #FORCE_SOLD_OUT_MD_IDS = [];
 
-    #useMockData = false; // 로컬 API 테스트 용도. !! 주의 !! stg/prod 환경에서는 false로 설정해야 합니다.
+    #useMockData = false; // 로컬 API 테스트 용도. !! 주의 !! stg/prod 환경에서는 false로 설정해야 합니다. MD10411859
     #productDataMap = new Map();
 
     #CARE_SERVICE_DEFINITIONS = {
