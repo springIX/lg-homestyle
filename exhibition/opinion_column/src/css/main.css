@@ -28,6 +28,18 @@
   width: 100%;
   position: relative;
 }
+@media (min-width: 781px) {
+  .opinion_column .inner .lao {
+    font-size: 15rem !important;
+  }
+  .opinion_column .inner h2 {
+    font-size: 38rem !important;
+  }
+  .opinion_column .inner h2 .txt_unique {
+    width: 150rem !important;
+    margin-bottom: 10rem !important;
+  }
+}
 .opinion_column .f_center {
   display: flex;
   justify-content: center;
@@ -108,6 +120,34 @@
   background-color: #111;
   color: #fff;
 }
+.opinion_column .light_black_cont {
+  background: #181713;
+  color: #fff;
+}
+.opinion_column .light_black_cont .light_white {
+  color: #F4F4F4;
+}
+.opinion_column .brown_cont {
+  background: #28231E;
+  color: #fff;
+}
+.opinion_column .brown_cont .light_white {
+  color: #F4F4F4;
+}
+.opinion_column .pink_cont {
+  background: #F1E7E3;
+  color: #111;
+}
+.opinion_column .pink_cont .gray {
+  color: #444;
+}
+.opinion_column .yellow_cont {
+  background: #F1EFE8;
+  color: #111;
+}
+.opinion_column .yellow_cont .gray {
+  color: #444;
+}
 .opinion_column .radius_box {
   border-radius: 12rem;
   padding: 24rem 20rem;
@@ -131,6 +171,9 @@
   margin-top: 20rem;
   color: #999;
   font-weight: 400;
+}
+.opinion_column .radius_box.ty_dqm .txt_box .txt_gray {
+  color: #444;
 }
 .opinion_column .dqm {
   display: block;
@@ -204,6 +247,9 @@
   margin-bottom: -1px;
   transition: 0.5s ease;
 }
+.opinion_column .btn_wrap {
+  margin-top: 15rem;
+}
 .opinion_column .btn_wrap a {
   background-color: #111;
   color: #fff;
@@ -252,6 +298,7 @@
 }
 .opinion_column section .pd_slot .pd_txt a {
   font-weight: 700;
+  color: #111;
 }
 .opinion_column section .pd_slot .pd_txt a::after {
   content: "";
@@ -470,6 +517,14 @@
 }
 .opinion_column section .hashtag.ty_left {
   justify-content: flex-start;
+}
+.opinion_column section .hashtag.ty_gray li {
+  color: #444;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+}
+.opinion_column section .hashtag.ty_light_gray li {
+  color: #ccc;
+  border: 1px solid #666;
 }
 .opinion_column section .interior_point {
   overflow: hidden;
@@ -955,6 +1010,24 @@
 .opinion_column section#space_story article .before_after_info {
   padding: 60rem 0;
 }
+.opinion_column section#space_story article .before_after_info:has(.layout_bg) {
+  padding: 0 0 60rem 0;
+}
+.opinion_column section#space_story article .before_after_info .layout_bg.tit_box {
+  padding-bottom: 0;
+}
+.opinion_column section#space_story article .before_after_info .layout_bg .inner {
+  position: absolute;
+  left: 20px;
+  bottom: 55px;
+}
+.opinion_column section#space_story article .before_after_info .layout_bg .inner.ty_bg h2 {
+  color: #000;
+}
+.opinion_column section#space_story article .before_after_info .layout_bg .inner.ty_bg .txt_unique {
+  color: #000 !important;
+  filter: brightness(0.05);
+}
 .opinion_column section#space_story article .before_after_info .tit_box {
   padding-bottom: 20rem;
   position: relative;
@@ -964,10 +1037,20 @@
   font-size: 12rem;
   margin-bottom: 14rem;
 }
+.opinion_column section#space_story article .before_after_info .tit_box span.yellow {
+  color: #FFD6A3;
+}
+.opinion_column section#space_story article .before_after_info .tit_box span.green {
+  color: #647912;
+}
+.opinion_column section#space_story article .before_after_info .tit_box span.red {
+  color: #E93800;
+}
 .opinion_column section#space_story article .before_after_info .tit_box h2 {
   font-size: 30rem;
   font-weight: 600;
   line-height: 1.3;
+  color: #fff;
 }
 .opinion_column section#space_story article .before_after_info .tit_box h2 .txt_unique {
   width: 120rem;
@@ -992,15 +1075,27 @@
   width: 92rem;
   flex-shrink: 0;
 }
+.opinion_column section#space_story article .before_after_info .const_information .const_info_box li span.yellow {
+  color: #FFD6A3;
+}
+.opinion_column section#space_story article .before_after_info .const_information .const_info_box li span.green {
+  color: #647912;
+}
+.opinion_column section#space_story article .before_after_info .const_information .const_info_box li span.red {
+  color: #E93800;
+}
 .opinion_column section#space_story article .before_after_info .const_information .const_info_box li p {
   width: 100%;
+}
+.opinion_column section#space_story article .before_after_info .const_information .const_info_box.bd_gray li {
+  border-color: rgba(17, 17, 17, 0.12);
 }
 .opinion_column section#space_story article .before_after_info .const_information .hashtag {
   margin-top: 40rem;
 }
 @media (min-width: 781px) {
   .opinion_column section#space_story article .before_after_info .const_information .hashtag {
-    width: 58%;
+    width: 60%;
   }
 }
 .opinion_column section#space_story article .before_after_info .const_information.ty_black .const_info_box li {
