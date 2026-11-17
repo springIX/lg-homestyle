@@ -983,6 +983,13 @@
         $pd_list.toggleClass('short_list');
         window.scrollTo({ top: $pd_list.offset().top - 100, behavior: 'instant' });
       });
+
+      $(document).on('click', '.pd_anchor .pd_anchor_pin', function () {
+        const $pd_list = $(this).closest('.pd_anchor');
+
+        $('.pd_anchor').not($pd_list).removeClass('on');
+        $pd_list.toggleClass('on');
+      });
     }
 
 

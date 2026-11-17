@@ -314,7 +314,7 @@
                   @include screen("mo") { font-size: 9rem;}
                 }
               }
-              .c-product__price-item--member{ display: flex; align-items: center; line-height: 1.1; letter-spacing: -0.2rem;
+              .c-product__price-item--member{ display: flex; align-items: center; letter-spacing: -0.2rem;
                 &::before{ content: '최대혜택가'; font-weight: 500; margin-right: auto; font-size: 12rem; color: #FD312E; 
                   @include screen("mo") { font-size: 9rem; font-weight: 600;}
                 }
@@ -713,9 +713,10 @@
             @include screen("mo") { margin-top: 20rem;}
           }
           &:nth-child(even){ flex-direction: row-reverse;}
-          .img_box{ width: 630rem; flex-shrink: 0;
+          .img_box{ width: 630rem; flex-shrink: 0; position: relative;
             @include screen("mo") { width: 100%;}
             img{ width: 100%;}
+            h3{ position: absolute; left: 0; bottom: 0; padding: 24rem 20rem; font-size: 22rem; font-weight: 600; color: #fff;}
           }
           .txt_box{ padding: 40rem; display: flex; flex-direction: column; justify-content: space-between; width: 100%; position: relative; background-color: #fff;
             @include screen("mo") { padding: 16rem 20rem 20rem;}
@@ -734,6 +735,48 @@
                 .c-product__item{ padding: 0 !important;}
               }
             }
+          }
+        }
+
+        .pd_anchor{  position: absolute; z-index: 3;
+          > *{ box-shadow: 0 2rem 8rem rgba($color: #000, $alpha: .25); }
+          .pd_anchor_pin{ display: block; width: 24rem; height: 24rem; background: url(../images/pd_pin.png)no-repeat center center / contain;border-radius: 999rem; transition: .5s $outback; cursor: pointer; position: relative;
+            &::after{ content: ''; width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; animation: pd_pin_pulse 2s infinite; box-sizing: border-box;}
+            @keyframes pd_pin_pulse {
+              0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8), 0 0 0 0 rgba(255, 255, 255, 0.8);}
+              50% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.8);}
+              100% { box-shadow: 0 0 0 16px rgba(255, 255, 255, 0), 0 0 0 8px rgba(255, 255, 255, 0);}
+            }
+          }
+          .pd_anchor_info{ position: absolute; left: 50%; width: 180rem; transition: .3s ease; box-shadow: 0 4rem 20rem rgba($color: #000, $alpha: .25); border-radius: 8rem;
+             bottom: calc(100% + 8rem); transform: translate(-50%, 5rem);
+            &.ty_l{ left: 277%;}
+            &.ty_r{ left: -177%;}
+            &.ty_b{ bottom: auto;  top: calc(100% + 8rem); transform: translate(-50%, -5rem);}
+            .c-product__item{ padding: 0;
+              > span > a{ display: none;}
+              .c-product__info-container{ width: 100%;
+                *{ font-size: 12rem !important;}
+                .c-product__name{ margin-bottom: 2rem;}
+                .c-product__model-id, .c-product__brand-name{ display: flex;
+                  &::after{ content: ''; width: 13rem; height: 16rem; background: url(https://www.lge.co.kr/home_style_pages/2026/03/only_mo_monthly_home_set/src/images/arr.svg)no-repeat center center / contain; transform: rotate(180deg);}             
+                }
+                .c-product__badge-container{display: none !important;}
+              }
+            }
+          }
+          @include screen("pc2") { 
+            &:not(.on) .pd_anchor_info{  opacity: 0; touch-action: none; pointer-events: none;}
+            &.on{ z-index: 4;
+              .pd_anchor_info{ transform: translate(-50%, 0);}
+            }
+          }
+          @include screen("mo2") { 
+            &:not(:hover) .pd_anchor_info{  opacity: 0; touch-action: none; pointer-events: none;}
+            &:hover{ z-index: 4;
+              .pd_anchor_info{ transform: translate(-50%, 0);}
+            }
+
           }
         }
       }
