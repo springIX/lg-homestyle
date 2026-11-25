@@ -40,8 +40,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .interior_consultation_event .flex {
   display: flex;
@@ -369,4 +368,294 @@
 .interior_consultation_event.lx_hausys #key_visual .dsc {
   font-size: 10rem;
   color: #fff;
+}
+.interior_consultation_event.lx_261124 > section {
+  background: #F4F2F2;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  aspect-ratio: 390/540;
+  padding: 0;
+  overflow: hidden;
+  background: #d9d6d9;
+  color: #000;
+  text-align: center;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .kv_photo {
+  position: absolute;
+  inset: auto 0 0;
+  width: 100%;
+  height: 76.4815%;
+  overflow: hidden;
+  transform: none;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .kv_photo img {
+  position: absolute;
+  top: 0;
+  left: -103.0769%;
+  display: block;
+  width: 231.7949%;
+  height: auto;
+  max-width: none;
+  transform: none;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .kv_background {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 auto;
+  height: 75.641025641cqw;
+  background: linear-gradient(to bottom, #fff, transparent);
+  transform: none;
+  mix-blend-mode: soft-light;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 9.2307692308cqw 6.1538461538cqw 0;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box .kv_collabo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5384615385cqw;
+  height: 4.8717948718cqw;
+  color: #111;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box .kv_collabo strong {
+  font-size: 4.1025641026cqw;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.1230769231cqw;
+  white-space: nowrap;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box .kv_collabo img:first-of-type {
+  width: 2.5302076923cqw;
+  height: auto;
+  margin-inline: -0.1112576923cqw;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box .kv_collabo img:last-of-type {
+  width: 17cqw;
+  height: auto;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box h1 {
+  margin: 1.2820512821cqw 0 0;
+  color: #000;
+  font-size: 10.2564102564cqw;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.4102564103cqw;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box h1 em {
+  color: #d31b19;
+  font-style: normal;
+  letter-spacing: -0.1641025641cqw;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box .kv_summary {
+  margin: 1.5384615385cqw 0 0;
+  color: #333;
+  font-size: 3.5897435897cqw;
+  font-weight: 500;
+  line-height: 5.1282051282cqw;
+  letter-spacing: -0.0717948718cqw;
+}
+.interior_consultation_event.lx_261124 #key_visual.kv_261124 .txt_box .dsc {
+  position: static;
+  width: auto;
+  transform: none;
+  margin: 0.5128205128cqw 0 0;
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 2.5641025641cqw;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.0384615385cqw;
+}
+.interior_consultation_event.lx_261124 #introduce {
+  background: #111;
+}
+.interior_consultation_event.lx_261124 #introduce .kitchen_notice {
+  margin-top: 20rem;
+  color: #8f8f8f;
+  font-size: 12rem;
+  font-weight: 400;
+}
+.interior_consultation_event.lx_261124 #point .service_steps {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 100%;
+  margin-top: 16rem;
+}
+.interior_consultation_event.lx_261124 #point .service_steps div {
+  display: flex;
+  flex: 0 0 68rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-width: 0;
+  height: 76rem;
+  padding-top: 8rem;
+  border-radius: 5.333rem;
+  background: #fff;
+}
+.interior_consultation_event.lx_261124 #point .service_steps div img {
+  width: 36rem;
+  height: 36rem;
+}
+.interior_consultation_event.lx_261124 #point .service_steps div span {
+  padding-bottom: 8rem;
+  font-size: 13rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.195rem;
+  color: #000;
+}
+.interior_consultation_event.lx_261124 #point .service_steps .service_arrow {
+  align-self: flex-center;
+  flex: 0 0 20rem;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(-90deg);
+}
+.interior_consultation_event.lx_261124 #point .product_benefits {
+  margin-top: 8rem;
+}
+.interior_consultation_event.lx_261124 #point .product_benefits p {
+  display: flex;
+  gap: 8rem;
+  margin-top: 0;
+}
+.interior_consultation_event.lx_261124 #point .product_benefits strong {
+  flex-shrink: 0;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .gift_desc {
+  font-size: 16rem;
+  margin-bottom: 8rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .kitchen_gift_title {
+  margin-top: 24rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .kitchen_faucet {
+  width: 100%;
+  height: auto;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .info_box {
+  padding: 20rem 0;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .info_box strong {
+  display: block;
+  font-size: 13rem;
+  font-weight: 700;
+  line-height: 18rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .info_box p {
+  margin-top: 4rem;
+  font-size: 10rem;
+  line-height: 14rem;
+  letter-spacing: -0.6rem;
+  color: #666;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .suitcase_image {
+  position: relative;
+  width: 160rem;
+  height: 134rem;
+  margin: 0 auto 12rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .suitcase_image img {
+  position: absolute;
+  width: 189.358rem;
+  max-width: none;
+  height: auto;
+  left: -15rem;
+  top: -36rem;
+  clip-path: inset(39rem 0 0);
+  margin: 0;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_images {
+  position: relative;
+  width: 160rem;
+  height: 134rem;
+  margin: 0 auto 12rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_images div {
+  position: absolute;
+  overflow: hidden;
+  width: 140rem;
+  height: 65rem;
+  left: 10rem;
+  mix-blend-mode: multiply;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_images img {
+  position: absolute;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_top {
+  top: -4rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_top img {
+  top: -24rem;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_bottom {
+  top: 67rem;
+  height: 67rem !important;
+}
+.interior_consultation_event.lx_261124 #free_gift_benefits .faucet_bottom img {
+  top: -110rem;
+}
+.interior_consultation_event.lx_261124 #benefit .benefit_step .btn + .btn {
+  margin-top: 8rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery {
+  padding-bottom: 60rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery .tit {
+  margin-bottom: 16rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery .case_group + .case_group {
+  margin-top: 60rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery h3 {
+  font-size: 18rem;
+  font-weight: 600;
+  margin-bottom: 16rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery .case_images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery .case_images > img {
+  width: 100%;
+  aspect-ratio: 350/260;
+  object-fit: cover;
+}
+.interior_consultation_event.lx_261124 #case_gallery .case_pair {
+  display: flex;
+  gap: 2rem;
+}
+.interior_consultation_event.lx_261124 #case_gallery .case_pair img {
+  width: calc((100% - 2rem) / 2);
+  aspect-ratio: 174/154;
+  object-fit: cover;
+}
+.interior_consultation_event.lx_261124 #case_gallery .dot_dsc {
+  margin-top: 16rem;
+}
+.interior_consultation_event.lx_261124 #notice {
+  padding-bottom: 0;
+}
+.interior_consultation_event.lx_261124 #kitchen_event_notice {
+  padding-top: 40rem;
+  padding-bottom: 60rem;
 }

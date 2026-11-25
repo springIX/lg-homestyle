@@ -196,6 +196,11 @@
   }
   .on .home_set_btn .arr.ty_down{ transform: rotate(90deg);}
 
+  .home_sub_img { 
+    > img {
+      margin-bottom: 12rem; 
+    }
+  }  
   .home_set_tab{ display: flex; justify-content: center; gap: 16rem; margin-bottom: 20rem; flex-wrap: wrap;
     @include screen("mo2") { flex-wrap: nowrap; justify-content: flex-start;}
     @include screen("pc2") { width: 410rem !important;

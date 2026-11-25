@@ -161,4 +161,183 @@
       .dsc{ font-size: 10rem; color: #fff;}
     }
   }
+
+
+  // 26.11.24 LX하우시스
+  &.lx_261124 {
+
+    > section { background: #F4F2F2; }
+
+    #key_visual.kv_261124 {
+      position: relative;
+      isolation: isolate;
+      container-type: inline-size;
+      aspect-ratio: 390 / 540;
+      padding: 0;
+      overflow: hidden;
+      background: #d9d6d9;
+      color: #000;
+      text-align: center;
+
+      .kv_photo {
+        position: absolute;
+        inset: auto 0 0;
+        width: 100%;
+        height: 76.4815%;
+        overflow: hidden;
+        transform: none;
+
+        img { position: absolute; top: 0; left: -103.0769%; display: block; width: 231.7949%; height: auto; max-width: none; transform: none; }
+      }
+      .kv_background {
+        position: absolute;
+        z-index: 1;
+        inset: 0 0 auto;
+        height: calc(295 / 390 * 100cqw);
+        background: linear-gradient(to bottom, #fff, transparent);
+        transform: none;
+        mix-blend-mode: soft-light;
+        opacity: .4;
+        pointer-events: none;
+      }
+
+      .txt_box {
+        position: absolute; top: 0; left: 0; width: 100%;
+        z-index: 2;
+        padding: calc(36 / 390 * 100cqw) calc(24 / 390 * 100cqw) 0;
+
+        .kv_collabo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: calc(6 / 390 * 100cqw);
+          height: calc(19 / 390 * 100cqw);
+          color: #111;
+
+          strong { font-size: calc(16 / 390 * 100cqw); font-weight: 600; line-height: 1; letter-spacing: calc(-.48 / 390 * 100cqw); white-space: nowrap; }
+          img:first-of-type { width: calc(9.86781 / 390 * 100cqw); height: auto; margin-inline: calc(-.433905 / 390 * 100cqw); }
+          img:last-of-type { width: calc(66.3 / 390 * 100cqw); height: auto; }
+        }
+
+        h1 {
+          margin: calc(5 / 390 * 100cqw) 0 0;
+          color: #000;
+          font-size: calc(40 / 390 * 100cqw);
+          font-weight: 700;
+          line-height: 1.2;
+          letter-spacing: calc(-1.6 / 390 * 100cqw);
+
+          em { color: #d31b19; font-style: normal; letter-spacing: calc(-.64 / 390 * 100cqw); }
+        }
+
+        .kv_summary {
+          margin: calc(6 / 390 * 100cqw) 0 0;
+          color: #333;
+          font-size: calc(14 / 390 * 100cqw);
+          font-weight: 500;
+          line-height: calc(20 / 390 * 100cqw);
+          letter-spacing: calc(-.28 / 390 * 100cqw);
+        }
+
+        .dsc {
+          position: static; width: auto; transform: none;
+          margin: calc(2 / 390 * 100cqw) 0 0;
+          color: rgba(17, 17, 17, .5);
+          font-size: calc(10 / 390 * 100cqw);
+          font-weight: 500;
+          line-height: 1.4;
+          letter-spacing: calc(-.15 / 390 * 100cqw);
+        }
+      }
+    }
+
+    #introduce {
+      background: #111;
+
+      .kitchen_notice {
+        margin-top: 20rem; color: #8f8f8f; font-size: 12rem; font-weight: 400;
+      }
+    }
+
+    #point {
+      .service_steps {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 3rem;
+        width: 100%;
+        margin-top: 16rem;
+
+        div {
+          display: flex;
+          flex: 0 0 68rem;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          min-width: 0;
+          height: 76rem;
+          padding-top: 8rem;
+          border-radius: 5.333rem;
+          background: #fff;
+        }
+        div img { width: 36rem; height: 36rem; }
+        div span { padding-bottom: 8rem; font-size: 13rem; font-weight: 600; line-height: 1.4; letter-spacing: -.195rem; color: #000; }
+        .service_arrow { align-self: flex-center; flex: 0 0 20rem; width: 20rem; height: 20rem; transform: rotate(-90deg); }
+
+        // @include screen("mo") {
+        //   justify-content: space-between;
+        //   gap: 0;
+        // }
+      }
+
+      .product_benefits { margin-top: 8rem; }
+      .product_benefits p { display: flex; gap: 8rem; margin-top: 0; }
+      .product_benefits strong { flex-shrink: 0; }
+    }
+
+    #free_gift_benefits {
+      .gift_desc { font-size: 16rem; margin-bottom: 8rem; }
+      .kitchen_gift_title { margin-top: 24rem; }
+      .kitchen_faucet { width: 100%; height: auto; }
+      .info_box { padding: 20rem 0; }
+      .info_box strong { display: block; font-size: 13rem; font-weight: 700; line-height: 18rem; }
+      .info_box p { margin-top: 4rem; font-size: 10rem; line-height: 14rem; letter-spacing: -.6rem; color: #666; }
+      .suitcase_image { position: relative; width: 160rem; height: 134rem; margin: 0 auto 12rem; }
+      .suitcase_image img { position: absolute; width: 189.358rem; max-width: none; height: auto; left: -15rem; top: -36rem; clip-path: inset(39rem 0 0); margin: 0; }
+      .faucet_images { position: relative; width: 160rem; height: 134rem; margin: 0 auto 12rem; }
+      .faucet_images div { position: absolute; overflow: hidden; width: 140rem; height: 65rem; left: 10rem; mix-blend-mode: multiply; }
+      .faucet_images img { position: absolute; width: 100%; max-width: none; height: auto; margin: 0; }
+      .faucet_top { top: -4rem; }
+      .faucet_top img { top: -24rem; }
+      .faucet_bottom { top: 67rem; height: 67rem !important; }
+      .faucet_bottom img { top: -110rem; }
+    }
+
+    #benefit {
+      .benefit_step .btn + .btn { margin-top: 8rem; }
+    }
+    
+    #case_gallery {
+      padding-bottom: 60rem;
+
+      .tit { margin-bottom: 16rem; }
+      .case_group + .case_group { margin-top: 60rem; }
+      h3 { font-size: 18rem; font-weight: 600; margin-bottom: 16rem; }
+      .case_images { display: flex; flex-direction: column; gap: 2rem; }
+      .case_images > img { width: 100%; aspect-ratio: 350 / 260; object-fit: cover; }
+      .case_pair { display: flex; gap: 2rem; }
+      .case_pair img { width: calc((100% - 2rem) / 2); aspect-ratio: 174 / 154; object-fit: cover; }
+      .dot_dsc { margin-top: 16rem; }
+    }
+
+    #notice { padding-bottom: 0; }
+
+    #kitchen_event_notice {
+      padding-top: 40rem;
+      padding-bottom: 60rem;
+    }    
+  }
+
+  
 }

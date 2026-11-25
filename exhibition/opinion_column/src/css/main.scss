@@ -238,7 +238,10 @@
         li {
           color: #ccc; border: 1px solid #666;
         }
-      }      
+      } 
+      &.item-grid {
+        display: flex; flex-direction: row; justify-content: center; justify-items: center; gap: 8rem 4rem; max-width: 450px; margin: 0 auto;
+      }     
     }
     .interior_point{ overflow: hidden;
       .swiper{ overflow: visible;
@@ -336,9 +339,15 @@
           }
         }
         .space_type_tit{ width: 100%; height: 64rem; border-bottom: 1px solid #ddd; position: sticky; left: 0; top: 43rem; display: flex; align-items: center; background-color: #fff; z-index: 3;
+
+          &.bd_light_gray {border-bottom: 1px solid rgba(17, 17, 17, 0.20);
+}
+
           @include screen("mo") { top: calc(43rem + 56px);}
           h2{ font-weight: 400; @include font-size(24rem); letter-spacing: -2%;}
-          .floor_plan{ position: absolute; right: 0; top: 0; width: auto; height: 100%; border-left: 1px solid #ddd;}
+          .floor_plan{ position: absolute; right: 0; top: 0; width: auto; height: 99%; border-left: 1px solid #ddd;
+            &.bd_light_gray {border-left: 1px solid rgba(17, 17, 17, 0.20);}
+          }
         }
         h3{ @include font-size(30rem); padding: 60rem 0 32rem; font-weight: 600;}
         .before{ position: sticky; left: 0; top: 106rem; 
@@ -532,6 +541,53 @@
           }
         }     
       }
+    }
+  }
+}
+
+// EP12 전용: 시공 전후 라벨과 거실 전문가 코멘트
+.opinion_column.ep12 {
+  #space_detail article .before .ep12_before_label {
+    position: absolute;
+    left: 50%;
+    bottom: 10rem;
+    z-index: 1;
+    transform: translateX(-50%);
+    color: #666;
+    font-size: 12rem;
+    font-weight: 700;
+    letter-spacing: -0.12rem;
+    line-height: 1.5;
+  }
+  #living_room .expert_comment {
+    .radius_box { background: #f6f6f6; }
+    .dqm { width: 22rem; }
+    .txt_box .lao {
+      display: block;
+      margin-top: 20rem;
+      font-size: 12rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+    .txt_box strong {
+      display: block;
+      font-size: 14rem;
+      line-height: 1.5;
+    }
+  }
+  #living_room, #kitchen {
+    .after { position: relative; }
+    .ep12_after_label {
+      position: absolute;
+      top: 12rem;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 12rem;
+      font-weight: 700;
+      letter-spacing: -0.12rem;
+      line-height: 1.5;
     }
   }
 }
