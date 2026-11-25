@@ -1121,18 +1121,6 @@
   border-color: rgba(17, 17, 17, 0.2);
 }
 
-.opinion_column.ep12 #space_detail article .before .ep12_before_label {
-  position: absolute;
-  left: 50%;
-  bottom: 10rem;
-  z-index: 1;
-  transform: translateX(-50%);
-  color: #666;
-  font-size: 12rem;
-  font-weight: 700;
-  letter-spacing: -0.12rem;
-  line-height: 1.5;
-}
 .opinion_column.ep12 #living_room .expert_comment .radius_box {
   background: #f6f6f6;
 }
@@ -1151,18 +1139,19 @@
   font-size: 14rem;
   line-height: 1.5;
 }
-.opinion_column.ep12 #living_room .after, .opinion_column.ep12 #kitchen .after {
-  position: relative;
-}
-.opinion_column.ep12 #living_room .ep12_after_label, .opinion_column.ep12 #kitchen .ep12_after_label {
-  position: absolute;
-  top: 12rem;
-  left: 50%;
-  z-index: 1;
-  transform: translateX(-50%);
-  color: #fff;
-  font-size: 12rem;
-  font-weight: 700;
-  letter-spacing: -0.12rem;
+.opinion_column.ep12 .product_list .pd_txt .ep12_product_link {
+  display: block;
+  font-size: 14rem;
   line-height: 1.5;
+}
+.opinion_column.ep12 .product_list .pd_txt .ep12_product_link::after {
+  content: none;
+}
+.opinion_column.ep12 .product_list .pd_txt .ep12_product_link .ep12_product_arrow {
+  display: inline-block;
+  width: 16rem;
+  height: 16rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  vertical-align: middle;
 }
