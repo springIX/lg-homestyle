@@ -448,4 +448,31 @@
       startLibraryRefresh
     );
   }
+
+  // EP12 페이드인
+  document.querySelectorAll('.opinion_column.ep12 .const_details_img').forEach(function (box) {
+    var photo = box.querySelector('.ep12_const_photo');
+    if (!photo) return;
+    box.classList.add('ep12_const_pending');
+    var loaded = photo.complete;
+    var visible = false;
+    function reveal() {
+      if (loaded && visible) box.classList.remove('ep12_const_pending');
+    }
+    photo.addEventListener('load', function () { loaded = true; reveal(); });
+    photo.addEventListener('error', function () { loaded = true; reveal(); });
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting && entries[0].intersectionRatio >= 0.2;
+        if (visible) {
+          reveal();
+        } else {
+          box.classList.add('ep12_const_pending');
+        }
+      }, { threshold: 0.2 });
+      observer.observe(box);
+    } else { visible = true; reveal(); }
+  });
+
+
 })();
