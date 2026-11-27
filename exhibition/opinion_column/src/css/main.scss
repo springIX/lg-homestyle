@@ -548,37 +548,59 @@
 // EP12 전용
 .opinion_column.ep12 {
 
-  #key_visual .img_box img { clip-path: polygon(0 0, calc(100% - 57rem) 0, 100% 57rem, 100% 100%, 0 100%); }
-
-  .const_details_img { aspect-ratio: 350 / 360;
-    .ep12_const_photo { position: absolute; width: 100%; max-width: none; height: 100%; left: 0; top: 0; }
-    .ep12_const_overlay { position: absolute; inset: 0; opacity: 1; transition: opacity 1.2s ease .4s; }
-    &.ep12_const_pending .ep12_const_overlay { opacity: 0; transition: none; }
-    .ep12_const_shape, .ep12_const_marker { position: absolute; max-width: none; }
-    .ep12_const_shape {
-      &:nth-child(1) { left: 0; top: 61.94%; width: 29.71%; }
-      &:nth-child(2) { left: 24%; top: 72.22%; width: 53.14%; }
-      &:nth-child(3) { left: 67.1%; top: 23.89%; width: 34%; height: 61.2%; }
-    }
-    .ep12_const_marker { width: 11.43%;
-      &.one { left: 3.71%; top: 53.61%; }
-      &.two { left: 34.57%; top: 83.89%; }
-      &.three { left: 62%; top: 26.67%; }
-    }
-    .ep12_const_label { position: absolute; color: #fff; font-size: clamp(8px, 12rem, 9999rem); font-weight: 600; line-height: 1.5; letter-spacing: -.02em; text-shadow: 0 0 8px rgba(0,0,0,.4); white-space: nowrap;
-      &.one { left: 15.14%; top: 56.67%; }
-      &.two { left: 46%; top: 86.94%; }
-      &.three { left: 73.43%; top: 28.06%; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .ep12_const_overlay { transition: none; }
-      
+  #key_visual {
+   .img_box img { clip-path: polygon(0 0, calc(100% - 57rem) 0, 100% 57rem, 100% 100%, 0 100%); }
   }
 
-  #living_room {
+  #construction_info {
+
+    .const_details_img { 
+      aspect-ratio: 350 / 360;
+
+      .ep12_const_photo { position: absolute; width: 100%; max-width: none; height: 100%; left: 0; top: 0; }
+
+      .ep12_const_overlay { position: absolute; inset: 0; opacity: 1; transition: opacity 1.2s ease .4s; }
+
+      &.ep12_const_pending .ep12_const_overlay { opacity: 0; transition: none; }
+
+      .ep12_const_shape, .ep12_const_marker { position: absolute; max-width: none; }
+
+      .ep12_const_shape {
+        &:nth-child(1) { left: 0; top: 61.94%; width: 29.71%; }
+        &:nth-child(2) { left: 24%; top: 72.22%; width: 53.14%; }
+        &:nth-child(3) { left: 67.1%; top: 23.89%; width: 34%; height: 61.2%; }
+      }
+
+      .ep12_const_marker { 
+        width: 11.43%;
+
+        &.one { left: 3.71%; top: 53.61%; }
+        &.two { left: 34.57%; top: 83.89%; }
+        &.three { left: 62%; top: 26.67%; }
+      }
+
+      .ep12_const_label { 
+        position: absolute; color: #fff; font-size: clamp(8px, 12rem, 9999rem); font-weight: 600; line-height: 1.5; letter-spacing: -.02em; text-shadow: 0 0 8px rgba(0,0,0,.4); white-space: nowrap;
+        &.one { left: 15.14%; top: 56.67%; }
+        &.two { left: 46%; top: 86.94%; }
+        &.three { left: 73.43%; top: 28.06%; }
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        .ep12_const_overlay { transition: none; }
+      }
+
+    }
+  }
+
+  #space_detail {
+
     .expert_comment {
+
       .radius_box { background: #f6f6f6; }
+
       .dqm { width: 22rem; }
+
       .txt_box .lao {
         display: block;
         margin-top: 20rem;
@@ -586,6 +608,7 @@
         line-height: 1.5;
         font-weight: 400;
       }
+      
       .txt_box strong {
         display: block;
         font-size: 14rem;
@@ -593,24 +616,27 @@
       }
 
     }
-  }
-  .product_list {
-    .pd_txt {
-      .ep12_product_link {
-        display: block;
-        font-size: 14rem;
-        line-height: 1.5;
-        &::after { content: none; }
+    .product_list {
+      .pd_txt {
+        
+        .ep12_product_link {
+          display: block;
+          font-size: 14rem;
+          line-height: 1.5;
+          &::after { content: none; }
 
-        .ep12_product_arrow {
-          display: inline-block;
-          width: 16rem;
-          height: 16rem;
-          margin-left: 2rem;
-          margin-bottom: 2rem;
-          vertical-align: middle;
+          .ep12_product_arrow {
+            display: inline-block;
+            width: 16rem;
+            height: 16rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+            vertical-align: middle;
+          }
         }
+        
       }
-    }
-  }
+    }    
+  }  
+
 }
